@@ -1,34 +1,32 @@
-def compute_levenshtein(S, T):
+def levenshtein_distance(s, t):
+  rows = len(s) + 1
+  cols = len(t) + 1
 
-    return
+  # Khởi tạo ma trận zero với kích thước (rows x cols)
+  matrix = [[0] * cols for _ in range(rows)]
+
+  # Điền giá trị cho cột 0 và hàng 0
+  for i in range(rows):
+    matrix[i][0] = i
+  for j in range(cols):
+    matrix[0][j] = j
+
+  # Tính toán khoảng cách chỉnh sửa
+  for i in range(1, rows):
+    for j in range(1, cols):
+      if S[i - 1] == T[j - 1]:
+        matrix[i][j] = matrix[i - 1][j - 1]
+      else:
+        del_cost = matrix[i - 1][j]    # Chi phí xóa
+        ins_cost = matrix[i][j - 1]    # Chi phí chèn
+        sub_cost = matrix[i - 1][j - 1]  # Chi phí thay thế
+        matrix[i][j] = min(del_cost, ins_cost, sub_cost) + 1
+
+  # Giá trị ở góc dưới bên phải của ma trận là khoảng cách Levenshtein
+  return matrix[rows - 1][cols - 1]
 
 
+# Ví dụ sử dụng
 S = 'adceg'
 T = 'abcfg'
-matrix = []
-
-first_column_value = 1
-matrix.append([j for j in range(len(T) + 1)])
-for i in range(1, len(S) + 1):
-    row = []
-    for j in range(len(T) + 1):
-        if j == 0:
-            row.append(first_column_value)
-            first_column_value += 1
-        else:
-            row.append(0)
-    matrix.append(row)
-
-print(matrix)
-
-for i in range(1, len(S) + 1):
-    for j in range(1, len(T) + 1):
-        if (T[j - 1] == S[i - 1]):
-            matrix[i][j] = matrix[i - 1][j - 1]
-        else:
-            del_cost = matrix[i - 1][j]
-            ins_cost = matrix[i][j - 1]
-            sub_cost = matrix[i - 1][j - 1]
-            matrix[i][j] = min(del_cost, ins_cost, sub_cost) + 1
-
-print(matrix)
+print("Khoảng cách Levenshtein:", levenshtein_distance(S, T))
