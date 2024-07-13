@@ -30,3 +30,6 @@ def levenshtein_distance(s, t):
 S = 'adceg'
 T = 'abcfg'
 print("Khoảng cách Levenshtein:", levenshtein_distance(S, T))
+
+assert levenshtein_distance("hi", "hello") == 4
+print(levenshtein_distance("hola", "hello"))

@@ -1,5 +1,5 @@
 
-def count_chars(string):
+def character_count(string):
   my_dict = {}
   for char in string:
     if char in my_dict:
@@ -9,7 +9,5 @@ def count_chars(string):
   return my_dict
 
 
-string = 'Happiness'
-print(count_chars(string))
-string = 'smiles'
-print(count_chars(string))
+assert character_count("Baby") == {'B': 1, 'a': 1, 'b': 1, 'y': 1}
+print(character_count('smiles'))

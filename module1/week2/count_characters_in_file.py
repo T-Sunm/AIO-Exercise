@@ -5,15 +5,11 @@ gdown.download(url, output, quiet=False)
 
 def count_chars_many_lines(content):
   my_dict = {}
-  print(content)
   for line in content:
     vocabs = line.split()
     for vocab in vocabs:
       vocab = vocab.lower()
-      if vocab in my_dict:
-        my_dict[vocab] += 1
-      else:
-        my_dict[vocab] = 1
+      my_dict[vocab] = my_dict.get(vocab, 0) + 1
   return my_dict
 
 
@@ -23,4 +19,6 @@ with open(file_path, 'r', encoding='utf-8') as file:
   content = file.read().splitlines()
 
 
-print(count_chars_many_lines(content))
+result = count_chars_many_lines(content=content)
+assert result['who'] == 3
+print(result['man'])
