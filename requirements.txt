@@ -4,3 +4,7 @@ scikit-learn==1.6.0
 pandas==2.2.3
 openpyxl==3.1.5
 nltk==3.9.1
+datasets==3.2.0
+transformers==4.47.1
+evaluate==0.4.3
+wandb==0.19.1
