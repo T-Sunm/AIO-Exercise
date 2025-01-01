@@ -8,3 +8,5 @@ datasets==3.2.0
 transformers==4.47.1
 evaluate==0.4.3
 wandb==0.19.1
+spacy==3.8.3
+timm==1.0.12
