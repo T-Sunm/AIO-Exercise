@@ -11,3 +11,6 @@ wandb==0.19.1
 spacy==3.8.3
 timm==1.0.12
 opencv-python==4.10.0.84
+gdown==5.2.0
+torcheval==0.0.7
+torchaudio==2.5.1
