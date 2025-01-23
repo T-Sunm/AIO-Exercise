@@ -15,3 +15,5 @@ gdown==5.2.0
 torcheval==0.0.7
 torchaudio==2.5.1
 albumentations==2.0.0
+ultralytics==8.3.65
+loguru==0.7.3
