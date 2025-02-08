@@ -1,0 +1,173 @@
+T1	Age 2 13	56-year-old
+T2	Sex 14 17	man
+T3	Clinical_event 18 27	presented
+E1	Clinical_event:T3 
+T4	Duration 35 41	2-year
+E2	Duration:T4 
+T5	Sign_symptom 53 62	dysphagia
+E3	Sign_symptom:T5 
+T6	History 53 62	dysphagia
+T7	Disease_disorder 116 139	squamous cell carcinoma
+E4	Disease_disorder:T7 
+T8	Biological_structure 104 115	oesophageal
+T9	Biological_structure 88 103	middle thoracic
+R1	MODIFY Arg1:T8 Arg2:E4	
+R2	MODIFY Arg1:T9 Arg2:E4	
+T10	Diagnostic_procedure 150 161	gastroscopy
+E5	Diagnostic_procedure:T10 
+T11	Diagnostic_procedure 168 174	biopsy
+E6	Diagnostic_procedure:T11 
+T12	Diagnostic_procedure 184 203	computed tomography
+E7	Diagnostic_procedure:T12 
+T13	Diagnostic_procedure 205 207	CT
+E8	Diagnostic_procedure:T13 
+R3	IDENTICAL Arg1:E8 Arg2:E7	
+T14	Biological_structure 178 183	chest
+R4	MODIFY Arg1:T14 Arg2:E7	
+T15	Sign_symptom 224 232	enlarged
+E9	Sign_symptom:T15 
+T16	Biological_structure 233 244	azygos vein
+R5	MODIFY Arg1:T16 Arg2:E9	
+T17	Distance 260 266	2.5 cm
+R6	MODIFY Arg1:T17 Arg2:E9	
+T18	Biological_structure 299 302	IVC
+#1	AnnotatorNotes T18	inferior vena cava
+T19	Sign_symptom 279 291	continuation
+E10	Sign_symptom:T19 
+R7	MODIFY Arg1:E10 Arg2:E9	
+R8	MODIFY Arg1:T18 Arg2:E10	
+T20	Diagnostic_procedure 318 320	CT
+E11	Diagnostic_procedure:T20 
+T21	Biological_structure 333 340	abdomen
+R9	MODIFY Arg1:T21 Arg2:E11	
+T22	Sign_symptom 350 356	defect
+E12	Sign_symptom:T22 
+T23	Biological_structure 364 408	suprarenal segment of the inferior vena cava
+R10	MODIFY Arg1:T23 Arg2:E12	
+T24	Sign_symptom 420 428	drainage
+E13	Sign_symptom:T24 
+T25	Detailed_description 413 419	direct
+R11	MODIFY Arg1:T25 Arg2:E13	
+T26	Biological_structure 436 448	hepatic vein
+T27	Biological_structure 458 470	right atrium
+R12	MODIFY Arg1:T26 Arg2:E13	
+R13	MODIFY Arg1:T27 Arg2:E13	
+T28	Clinical_event 478 490	consultation
+E14	Clinical_event:T28 
+T29	Nonbiological_location 500 538	thoracic surgery department clinicians
+T30	Nonbiological_location 547 573	anaesthesiology department
+R14	MODIFY Arg1:T29 Arg2:E14	
+R15	MODIFY Arg1:T30 Arg2:E14	
+T31	Therapeutic_procedure 607 621	oesophagectomy
+E15	Therapeutic_procedure:T31 
+T32	Detailed_description 599 606	McKeown
+R16	MODIFY Arg1:T32 Arg2:E15	
+T33	Therapeutic_procedure 639 652	anaesthetised
+E16	Therapeutic_procedure:T33 
+R17	SUB_PROCEDURE Arg1:E16 Arg2:E15	
+T34	Detailed_description 660 677	double-lumen tube
+R18	MODIFY Arg1:T34 Arg2:E16	
+T35	Therapeutic_procedure 718 729	thoracotomy
+E17	Therapeutic_procedure:T35 
+T36	Detailed_description 733 757	traditional open surgery
+R19	MODIFY Arg1:T36 Arg2:E17	
+T37	Detailed_description 703 717	posterolateral
+T38	Detailed_description 694 702	standard
+R20	MODIFY Arg1:T37 Arg2:E17	
+R21	MODIFY Arg1:T38 Arg2:E17	
+R22	SUB_PROCEDURE Arg1:E17 Arg2:E15	
+T39	Therapeutic_procedure 841 859	veno-venous bypass
+E18	Therapeutic_procedure:T39 
+T40	Detailed_description 807 828	percutaneous puncture
+R23	MODIFY Arg1:T40 Arg2:E18	
+R24	SUB_PROCEDURE Arg1:E18 Arg2:E15	
+T41	Biological_structure 782 806	jugular and femoral vein
+R25	MODIFY Arg1:T41 Arg2:E18	
+T42	Therapeutic_procedure 883 905	pressure sensor system
+E19	Therapeutic_procedure:T42 
+R26	SUB_PROCEDURE Arg1:E19 Arg2:E18	
+T43	Diagnostic_procedure 1015 1030	Macroscopically
+E20	Diagnostic_procedure:T43 
+T44	Diagnostic_procedure 1036 1044	diameter
+E21	Diagnostic_procedure:T44 
+T45	Biological_structure 1052 1063	azygos arch
+T46	Distance 1082 1088	2.5 cm
+R27	MODIFY Arg1:T45 Arg2:E21	
+R28	MODIFY Arg1:T46 Arg2:E21	
+R29	SUB_PROCEDURE Arg1:E21 Arg2:E20	
+T47	Sign_symptom 1128 1134	tumour
+E22	Sign_symptom:T47 
+T48	Biological_structure 1158 1181	arch of the azygos vein
+R30	MODIFY Arg1:T48 Arg2:E22	
+T49	Detailed_description 1107 1120	superior edge
+R31	MODIFY Arg1:T49 Arg2:E22	
+T50	Therapeutic_procedure 1220 1226	pulled
+E23	Therapeutic_procedure:T50 
+T51	Detailed_description 1234 1245	rubber hose
+R32	MODIFY Arg1:T51 Arg2:E23	
+T52	Biological_structure 1192 1215	arch of the azygos vein
+R33	MODIFY Arg1:T52 Arg2:E23	
+T53	Coreference 1272 1281	carcinoma
+E24	Coreference:T53 
+R34	IDENTICAL Arg1:E24 Arg2:E22	
+T54	Diagnostic_procedure 1324 1332	pressure
+E25	Diagnostic_procedure:T54 
+T55	Biological_structure 1311 1323	femoral vein
+R35	MODIFY Arg1:T55 Arg2:E25	
+T56	Lab_value 1333 1342	increased
+R36	MODIFY Arg1:T56 Arg2:E25	
+T57	Lab_value 1346 1354	52 mmH2O
+R37	MODIFY Arg1:T57 Arg2:E25	
+T58	Lab_value 1383 1395	normal value
+R38	MODIFY Arg1:T58 Arg2:E25	
+T59	Coreference 1415 1421	bypass
+E26	Coreference:T59 
+R39	IDENTICAL Arg1:E26 Arg2:E18	
+R40	MODIFY Arg1:E26 Arg2:T58	
+T60	Disease_disorder 1521 1527	injury
+E27	Disease_disorder:T60 
+A1	POLARITY E27 NEG
+T61	Biological_structure 1535 1546	azygos vein
+R41	MODIFY Arg1:T61 Arg2:E27	
+T62	Diagnostic_procedure 1556 1578	postoperative recovery
+E28	Diagnostic_procedure:T62 
+T63	Lab_value 1583 1593	uneventful
+R42	MODIFY Arg1:T63 Arg2:E28	
+T64	Disease_disorder 1665 1688	squamous cell carcinoma
+E29	Disease_disorder:T64 
+T65	Lab_value 1643 1664	poorly differentiated
+R43	MODIFY Arg1:T65 Arg2:E29	
+T66	Diagnostic_procedure 1599 1608	pathology
+E30	Diagnostic_procedure:T66 
+T67	Detailed_description 1616 1633	resected specimen
+R44	MODIFY Arg1:T67 Arg2:E30	
+T68	Sign_symptom 1708 1718	malignancy
+E31	Sign_symptom:T68 
+A2	POLARITY E31 NEG
+T69	Biological_structure 1732 1743	lymph nodes
+R45	MODIFY Arg1:T69 Arg2:E31	
+T70	Lab_value 1722 1724	15
+R46	MODIFY Arg1:T70 Arg2:T69	
+T71	Duration 1751 1759	5 months
+E32	Duration:T71 
+T72	Clinical_event 1763 1772	follow-up
+E33	Clinical_event:T72 
+T73	Sign_symptom 1790 1802	asymptomatic
+E34	Sign_symptom:T73 
+T74	Disease_disorder 1824 1841	recurrent disease
+E35	Disease_disorder:T74 
+A3	POLARITY E35 NEG
+T75	Diagnostic_procedure 1866 1868	CT
+E36	Diagnostic_procedure:T75 
+*	OVERLAP E2 E3
+R47	BEFORE Arg1:E3 Arg2:E4	
+*	OVERLAP E4 E5 E6 E7 E9 E10 E11 E12 E13
+R48	BEFORE Arg1:E13 Arg2:E14	
+R49	BEFORE Arg1:E14 Arg2:E15	
+R50	BEFORE Arg1:E15 Arg2:E20	
+*	OVERLAP E20 E22 E23 E24 E25
+R51	BEFORE Arg1:E25 Arg2:E27	
+*	OVERLAP E27 E28 E30 E29 E31
+R52	BEFORE Arg1:E31 Arg2:E32	
+*	OVERLAP E32 E33 E34 E35 E36
+R53	AFTER Arg1:E1 Arg2:E2	

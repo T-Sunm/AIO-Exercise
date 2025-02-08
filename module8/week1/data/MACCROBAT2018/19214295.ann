@@ -1,0 +1,439 @@
+T1	Age 2 13	71-year-old
+T2	Sex 14 19	woman
+T3	Disease_disorder 41 65	congestive heart failure
+E1	Disease_disorder:T3 
+T4	Disease_disorder 66 71	(CHF)
+E2	Disease_disorder:T4 
+T5	Detailed_description 31 40	diastolic
+R1	MODIFY Arg1:T5 Arg2:E1	
+R2	IDENTICAL Arg1:E2 Arg2:E1	
+T6	Nonbiological_location 89 91	ER
+T7	Detailed_description 97 109	exacerbation
+T8	Disease_disorder 113 116	CHF
+E3	Disease_disorder:T8 
+R3	MODIFY Arg1:T7 Arg2:E3	
+T9	Sign_symptom 133 155	level of consciousness
+E4	Sign_symptom:T9 
+T10	Lab_value 123 132	decreased
+R4	MODIFY Arg1:T10 Arg2:E4	
+T11	Lab_value 202 212	55/40 mmHg
+T12	Sign_symptom 166 180	blood pressure
+E5	Sign_symptom:T12 
+T13	Sign_symptom 181 185	(BP)
+E6	Sign_symptom:T13 
+R5	IDENTICAL Arg1:E6 Arg2:E5	
+T14	Biological_structure 157 165	Brachial
+T15	Clinical_event 242 252	admissions
+E7	Clinical_event:T15 
+T16	Detailed_description 235 241	recent
+R6	MODIFY Arg1:T16 Arg2:E7	
+T17	Lab_value 230 234	four
+R7	MODIFY Arg1:T17 Arg2:E7	
+T19	Disease_disorder 335 344	hepatitis
+E8	Disease_disorder:T19 
+T20	Detailed_description 324 334	autoimmune
+R8	MODIFY Arg1:T20 Arg2:E8	
+T21	Diagnostic_procedure 360 374	liver function
+E9	Diagnostic_procedure:T21 
+T22	Detailed_description 350 359	preserved
+R9	MODIFY Arg1:T22 Arg2:E9	
+T24	Medication 434 456	corticosteroid therapy
+E11	Medication:T24 
+T25	Detailed_description 424 433	long-term
+R10	MODIFY Arg1:T25 Arg2:E11	
+T18	History 283 374	medical history was also significant for autoimmune hepatitis, but preserved liver function
+T26	History 376 418	esophageal varices with a bleeding episode
+T27	History 425 536	ong-term corticosteroid therapy complicated by adrenal insufficiency, type 2 diabetes mellitus and osteoporosis
+T28	Disease_disorder 495 519	type 2 diabetes mellitus
+E12	Disease_disorder:T28 
+T29	Disease_disorder 524 536	osteoporosis
+E13	Disease_disorder:T29 
+T30	Disease_disorder 472 493	adrenal insufficiency
+E14	Disease_disorder:T30 
+T23	Detailed_description 402 418	bleeding episode
+T32	Diagnostic_procedure 545 561	echocardiography
+E10	Diagnostic_procedure:T32 
+T34	Severity 575 583	moderate
+T35	Disease_disorder 612 623	hypertrophy
+E16	Disease_disorder:T35 
+T36	Detailed_description 584 594	concentric
+R13	MODIFY Arg1:T36 Arg2:E16	
+R14	MODIFY Arg1:T34 Arg2:E16	
+T37	Detailed_description 629 650	diastolic dysfunction
+R15	MODIFY Arg1:T37 Arg2:E16	
+T38	Disease_disorder 673 693	mitral regurgitation
+E17	Disease_disorder:T38 
+T39	Severity 656 660	mild
+T40	Severity 664 672	moderate
+R16	MODIFY Arg1:T40 Arg2:E17	
+R17	MODIFY Arg1:T39 Arg2:E17	
+R18	MODIFY Arg1:T14 Arg2:E5	
+T41	Clinical_event 731 740	admission
+E18	Clinical_event:T41 
+T43	Biological_structure 774 796	second diagonal artery
+T44	Biological_structure 831 854	other coronary arteries
+T45	Severity 803 807	mild
+T46	Detailed_description 808 815	diffuse
+T47	Coreference 816 823	disease
+E19	Coreference:T47 
+T48	Disease_disorder 758 766	stenosis
+E20	Disease_disorder:T48 
+T49	Lab_value 754 757	50%
+R20	MODIFY Arg1:T49 Arg2:E20	
+R21	IDENTICAL Arg1:E19 Arg2:E20	
+T50	Diagnostic_procedure 889 895	biopsy
+E21	Diagnostic_procedure:T50 
+T51	Detailed_description 856 888	Right ventricular endomyocardial
+R22	MODIFY Arg1:T51 Arg2:E21	
+T52	Disease_disorder 939 955	cardiomyopathies
+E22	Disease_disorder:T52 
+T53	Disease_disorder 910 921	myocarditis
+E23	Disease_disorder:T53 
+A1	POLARITY E22 NEG
+A2	POLARITY E23 NEG
+T54	Disease_disorder 969 991	ischemic microinfarcts
+E24	Disease_disorder:T54 
+T55	Disease_disorder 997 1009	atheroemboli
+E25	Disease_disorder:T55 
+T56	Detailed_description 961 968	healing
+R23	MODIFY Arg1:T56 Arg2:E24	
+T57	Sign_symptom 1034 1043	BP values
+E26	Sign_symptom:T57 
+T58	Lab_value 1054 1057	low
+R25	MODIFY Arg1:T58 Arg2:E26	
+T60	Sign_symptom 1059 1070	systolic BP
+E27	Sign_symptom:T60 
+T61	Lab_value 1083 1090	60 mmHg
+T62	Lab_value 1095 1102	65 mmHg
+R26	MODIFY Arg1:T61 Arg2:E27	
+R27	MODIFY Arg1:T62 Arg2:E27	
+T63	Sign_symptom 1108 1120	diastolic BP
+E28	Sign_symptom:T63 
+T64	Lab_value 1133 1140	40 mmHg
+T65	Lab_value 1145 1152	45 mmHg
+R28	MODIFY Arg1:T64 Arg2:E28	
+R29	MODIFY Arg1:T65 Arg2:E28	
+T66	Therapeutic_procedure 1164 1174	intubation
+E29	Therapeutic_procedure:T66 
+T68	Medication 1176 1184	dopamine
+E31	Medication:T68 
+T69	Medication 1252 1265	noradrenaline
+E32	Medication:T69 
+T70	Clinical_event 1238 1246	replaced
+E33	Clinical_event:T70 
+T72	Therapeutic_procedure 1201 1223	hypotension management
+E35	Therapeutic_procedure:T72 
+R30	SUB_PROCEDURE Arg1:E31 Arg2:E35	
+R31	SUB_PROCEDURE Arg1:E32 Arg2:E35	
+T71	Diagnostic_procedure 695 718	Cardiac catheterization
+E34	Diagnostic_procedure:T71 
+T73	Disease_disorder 1289 1303	atrial flutter
+E36	Disease_disorder:T73 
+T74	Diagnostic_procedure 1034 1043	BP values
+E37	Diagnostic_procedure:T74 
+T75	Diagnostic_procedure 1059 1070	systolic BP
+E38	Diagnostic_procedure:T75 
+T76	Diagnostic_procedure 1108 1120	diastolic BP
+E39	Diagnostic_procedure:T76 
+R32	SUB_PROCEDURE Arg1:E38 Arg2:E37	
+T77	Therapeutic_procedure 1371 1386	electric shocks
+E40	Therapeutic_procedure:T77 
+T78	Lab_value 1352 1355	two
+R34	MODIFY Arg1:T78 Arg2:E40	
+T79	Detailed_description 1356 1370	direct current
+R35	MODIFY Arg1:T79 Arg2:E40	
+T80	Sign_symptom 1334 1346	sinus rhythm
+E41	Sign_symptom:T80 
+T82	Clinical_event 1424 1433	admission
+E43	Clinical_event:T82 
+T81	Nonbiological_location 1441 1459	coronary care unit
+T83	Nonbiological_location 1460 1465	(CCU)
+R36	IDENTICAL Arg1:T83 Arg2:T81	
+T84	Diagnostic_procedure 1388 1411	Cardiology consultation
+E42	Diagnostic_procedure:T84 
+T85	Coreference 1470 1479	admission
+E44	Coreference:T85 
+T86	Biological_structure 1487 1490	CCU
+T88	Clinical_event 1321 1330	converted
+E46	Clinical_event:T88 
+T89	Sign_symptom 1492 1494	BP
+E47	Sign_symptom:T89 
+T90	Lab_value 1511 1521	56/36 mmHg
+T91	Biological_structure 1529 1537	left arm
+T92	Biological_structure 1568 1577	right arm
+T93	Lab_value 1546 1560	not detectable
+R37	MODIFY Arg1:T90 Arg2:E47	
+R38	MODIFY Arg1:T93 Arg2:E47	
+R39	MODIFY Arg1:T91 Arg2:T90	
+R40	MODIFY Arg1:T92 Arg2:T93	
+T94	Diagnostic_procedure 1492 1494	BP
+E48	Diagnostic_procedure:T94 
+T95	Diagnostic_procedure 1582 1595	arterial line
+E49	Diagnostic_procedure:T95 
+T96	Biological_structure 1617 1631	femoral artery
+T97	Sign_symptom 1637 1639	BP
+E50	Sign_symptom:T97 
+T98	Lab_value 1656 1667	191/92 mmHg
+T99	Diagnostic_procedure 1637 1639	BP
+E51	Diagnostic_procedure:T99 
+R41	SUB_PROCEDURE Arg1:E49 Arg2:E51	
+R42	MODIFY Arg1:T98 Arg2:E50	
+T101	Lab_value 1702 1708	higher
+T102	Severity 1697 1701	much
+T103	Detailed_description 1684 1696	consistently
+R43	MODIFY Arg1:T103 Arg2:T101	
+R44	MODIFY Arg1:T102 Arg2:T101	
+T104	Coreference 1721 1742	femoral arterial line
+E53	Coreference:T104 
+R47	IDENTICAL Arg1:E53 Arg2:E49	
+T107	Lab_value 1778 1784	higher
+T108	Biological_structure 1792 1800	left arm
+T109	Biological_structure 1813 1822	right arm
+T110	Detailed_description 1785 1822	in the left arm than in the right arm
+#1	AnnotatorNotes T110	Not sure how to tackle this type of comparison other than group everything into "Detailed description"
+R49	MODIFY Arg1:T110 Arg2:T107	
+T111	Date 1838 1873	on the first day post-CCU admission
+E55	Date:T111 
+T112	Sign_symptom 1875 1877	BP
+E56	Sign_symptom:T112 
+T113	Time 1878 1890	at one point
+E57	Time:T113 
+T114	Lab_value 1907 1918	170/80 mmHg
+T115	Coreference 1931 1944	arterial line
+E58	Coreference:T115 
+R50	MODIFY Arg1:T114 Arg2:E56	
+T116	Detailed_description 1709 1768	through the femoral arterial line than the cuff on the arms
+#2	AnnotatorNotes T116	Not sure how to tackle this type of comparison other than group everything in "Detailed description"
+R52	MODIFY Arg1:T116 Arg2:T101	
+T117	Coreference 1952 1965	cuff readings
+E59	Coreference:T117 
+T119	Lab_value 1983 1993	83/74 mmHg
+T120	Lab_value 2010 2020	60/39 mmHg
+T121	Biological_structure 2001 2005;2034 2037	left arm
+T122	Biological_structure 2028 2037	right arm
+R53	MODIFY Arg1:T121 Arg2:T119	
+R54	MODIFY Arg1:T122 Arg2:T120	
+T123	Diagnostic_procedure 1875 1877	BP
+E60	Diagnostic_procedure:T123 
+R57	MODIFY Arg1:T119 Arg2:E56	
+R58	MODIFY Arg1:T120 Arg2:E56	
+T124	Diagnostic_procedure 2114 2133;2139 2143	computed tomography scan
+E61	Diagnostic_procedure:T124 
+T125	Diagnostic_procedure 2134 2143	(CT) scan
+E62	Diagnostic_procedure:T125 
+R59	IDENTICAL Arg1:E62 Arg2:E61	
+T126	Sign_symptom 2101 2110	BP values
+E63	Sign_symptom:T126 
+T127	Biological_structure 2080 2088	brachial
+T128	Biological_structure 2093 2100	femoral
+R60	MODIFY Arg1:T128 Arg2:E63	
+R61	MODIFY Arg1:T127 Arg2:E63	
+T129	Biological_structure 2151 2157	thorax
+T130	Distance 2177 2184	1.25 mm
+T131	Diagnostic_procedure 2185 2191	slices
+E64	Diagnostic_procedure:T131 
+T132	Duration 3000 3085	during the eight months between discharge and the time the present report was written
+E65	Duration:T132 
+T133	Date 3032 3041	discharge
+E66	Date:T133 
+T134	Date 3050 3085	time the present report was written
+E67	Date:T134 
+T135	Disease_disorder 3119 3122	CHF
+E68	Disease_disorder:T135 
+A3	TREND E68 STAY
+T136	Clinical_event 3134 3143	ER visits
+E69	Clinical_event:T136 
+A4	POLARITY E69 NEG
+T137	Clinical_event 2984 2999	remained stable
+E70	Clinical_event:T137 
+T138	Clinical_event 2948 2958	discharged
+E71	Clinical_event:T138 
+T139	Diagnostic_procedure 2969 2978	condition
+E72	Diagnostic_procedure:T139 
+A5	TREND E70 STAY
+T140	Medication 2901 2919	BP-lowering agents
+E73	Medication:T140 
+T141	Medication 2887 2896	diuretics
+E74	Medication:T141 
+T142	Diagnostic_procedure 2870 2881	BP readings
+E75	Diagnostic_procedure:T142 
+T143	Detailed_description 2862 2869	femoral
+R62	MODIFY Arg1:T143 Arg2:E75	
+T144	Diagnostic_procedure 2827 2848	femoral arterial line
+E76	Diagnostic_procedure:T144 
+T145	Therapeutic_procedure 2777 2795	Further management
+E77	Therapeutic_procedure:T145 
+T146	Coreference 2367 2376	CT images
+E78	Coreference:T146 
+T147	Detailed_description 2348 2355	initial
+T148	Detailed_description 2356 2366	unenhanced
+R65	MODIFY Arg1:T148 Arg2:E78	
+R66	MODIFY Arg1:T147 Arg2:E78	
+T150	Sign_symptom 2402 2408	plaque
+E80	Sign_symptom:T150 
+T151	Sign_symptom 2412 2420	thrombus
+E81	Sign_symptom:T151 
+T152	Detailed_description 2392 2401	calcified
+T153	Severity 2384 2391	densely
+R67	MODIFY Arg1:T153 Arg2:T152	
+R68	MODIFY Arg1:T152 Arg2:E80	
+R69	MODIFY Arg1:T152 Arg2:E81	
+T154	Biological_structure 2428 2438;2444 2463	origins of subclavian arteries
+T155	Biological_structure 2428 2438;2472 2499	origins of right common carotid artery
+T156	Diagnostic_procedure 2505 2517	CT angiogram
+E82	Diagnostic_procedure:T156 
+T157	Sign_symptom 2536 2540	flow
+E83	Sign_symptom:T157 
+A6	POLARITY E83 NEG
+T159	Disease_disorder 2586 2594	stenosis
+E84	Disease_disorder:T159 
+T160	Detailed_description 2580 2585	tight
+T161	Severity 2575 2579	very
+R70	MODIFY Arg1:T161 Arg2:T160	
+R71	MODIFY Arg1:T160 Arg2:E84	
+T163	Disease_disorder 2651 2659	stenosis
+E85	Disease_disorder:T163 
+T164	Detailed_description 2645 2650	tight
+R72	MODIFY Arg1:T164 Arg2:E85	
+T167	Diagnostic_procedure 2227 2245	contrast injection
+E87	Diagnostic_procedure:T167 
+T168	Diagnostic_procedure 2295 2330	maximum-intensity projection images
+E88	Diagnostic_procedure:T168 
+T169	Detailed_description 2251 2291	sagittal and coronal planar reformatting
+R73	MODIFY Arg1:T169 Arg2:E88	
+T170	Administration 2215 2226	intravenous
+R74	MODIFY Arg1:T170 Arg2:E87	
+T172	Sign_symptom 2748 2755	calibre
+E89	Sign_symptom:T172 
+T173	Sign_symptom 2760 2764	flow
+E90	Sign_symptom:T173 
+T174	Lab_value 2741 2747	normal
+R75	MODIFY Arg1:T174 Arg2:E89	
+R76	MODIFY Arg1:T174 Arg2:E90	
+T171	Coreference 2710 2733	Both vertebral arteries
+E91	Coreference:T171 
+T158	Coreference 2548 2571	right subclavian artery
+E92	Coreference:T158 
+R77	CO-OCCURRENCE Arg1:E92 Arg2:T154	
+T162	Coreference 2602 2638	origin of the left subclavian artery
+E93	Coreference:T162 
+R78	CO-OCCURRENCE Arg1:E93 Arg2:T154	
+T165	Coreference 2667 2708	origin of the right common carotid artery
+E94	Coreference:T165 
+R79	CO-OCCURRENCE Arg1:E94 Arg2:T155	
+R80	CO-OCCURRENCE Arg1:E91 Arg2:E92	
+R81	CO-OCCURRENCE Arg1:E91 Arg2:E93	
+*	OVERLAP E4 E5 E3
+R84	MODIFY Arg1:T11 Arg2:E6	
+R85	BEFORE Arg1:E2 Arg2:E3	
+T176	Disease_disorder 274 277	CHF
+E95	Disease_disorder:T176 
+T177	Detailed_description 258 270	exacerbation
+R86	MODIFY Arg1:T177 Arg2:E95	
+*	OVERLAP E95 E7
+R87	AFTER Arg1:E6 Arg2:E7	
+T178	History 230 277	four recent admissions with exacerbation of CHF
+T31	Biological_structure 376 394	esophageal varices
+R11	MODIFY Arg1:T23 Arg2:T31	
+R88	AFTER Arg1:E95 Arg2:E8	
+*	OVERLAP E11 E14 E12 E13 E8 E9
+R89	BEFORE Arg1:E13 Arg2:E10	
+T33	Biological_structure 595 611	left ventricular
+R12	MODIFY Arg1:T33 Arg2:E16	
+R90	MODIFY Arg1:E16 Arg2:E10	
+R91	MODIFY Arg1:E17 Arg2:E10	
+*	OVERLAP E17 E34 E16 E10 E18
+R19	MODIFY Arg1:E20 Arg2:E34	
+R92	MODIFY Arg1:T43 Arg2:E20	
+R94	MODIFY Arg1:T44 Arg2:E19	
+*	OVERLAP E19 E21 E23 E22 E24 E25
+T42	Detailed_description 926 938	infiltrative
+R93	MODIFY Arg1:T42 Arg2:E22	
+R95	MODIFY Arg1:E23 Arg2:E21	
+R96	MODIFY Arg1:E22 Arg2:E21	
+R97	MODIFY Arg1:E17 Arg2:E10	
+R98	MODIFY Arg1:E24 Arg2:E21	
+R99	MODIFY Arg1:E25 Arg2:E21	
+R24	AFTER Arg1:E25 Arg2:E37	
+R33	SUB_PROCEDURE Arg1:E39 Arg2:E37	
+*	OVERLAP E38 E39
+R100	BEFORE Arg1:E39 Arg2:E29	
+R101	BEFORE Arg1:E29 Arg2:E31	
+R102	BEFORE Arg1:E31 Arg2:E33	
+*	OVERLAP E33 E32
+R103	BEFORE Arg1:E32 Arg2:E36	
+R104	BEFORE Arg1:E36 Arg2:E46	
+*	OVERLAP E46 E41
+R105	AFTER Arg1:E41 Arg2:E40	
+R106	BEFORE Arg1:E40 Arg2:E42	
+R107	BEFORE Arg1:E42 Arg2:E43	
+R108	MODIFY Arg1:T81 Arg2:E43	
+R109	MODIFY Arg1:T86 Arg2:E44	
+R110	IDENTICAL Arg1:E44 Arg2:E43	
+R111	BEFORE Arg1:E44 Arg2:E48	
+R112	BEFORE Arg1:E48 Arg2:E49	
+T59	Sign_symptom 1669 1678	BP values
+E15	Sign_symptom:T59 
+R113	MODIFY Arg1:T101 Arg2:E15	
+T67	Coreference 1752 1756	cuff
+E30	Coreference:T67 
+R46	IDENTICAL Arg1:E30 Arg2:E48	
+T87	Coreference 1760 1768	the arms
+E45	Coreference:T87 
+R116	MODIFY Arg1:T107 Arg2:E15	
+*	OVERLAP E55 E60 E57 E58 E59 E96
+T100	Diagnostic_procedure 1669 1678	BP values
+E52	Diagnostic_procedure:T100 
+R45	IDENTICAL Arg1:E45 Arg2:T91	
+R48	IDENTICAL Arg1:E45 Arg2:T92	
+#4	AnnotatorNotes R45	Combined coreference
+#5	AnnotatorNotes R48	Combined coreference
+R114	AFTER Arg1:E52 Arg2:E51	
+R115	AFTER Arg1:E52 Arg2:E55	
+T105	Lab_value 2962 2968	stable
+R117	MODIFY Arg1:T105 Arg2:E72	
+*	OVERLAP E70 E65 E68 E69
+T106	Detailed_description 3095 3115	further exacerbation
+R119	MODIFY Arg1:T106 Arg2:E68	
+*	OVERLAP E71 E72
+R118	BEFORE Arg1:E72 Arg2:E70	
+R120	AFTER Arg1:E77 Arg2:E76	
+R121	CAUSE Arg1:E75 Arg2:E77	
+*	OVERLAP E76 E75 E74 E73
+R63	BEFORE Arg1:E73 Arg2:E71	
+R64	MODIFY Arg1:E83 Arg2:E82	
+R122	MODIFY Arg1:E92 Arg2:E83	
+R123	MODIFY Arg1:E84 Arg2:E82	
+R124	MODIFY Arg1:E93 Arg2:E84	
+R125	MODIFY Arg1:E85 Arg2:E82	
+R126	MODIFY Arg1:E94 Arg2:E85	
+T118	Coreference 1969 1977	the arms
+E54	Coreference:T118 
+R51	MODIFY Arg1:E54 Arg2:E59	
+R55	IDENTICAL Arg1:E54 Arg2:E45	
+R56	IDENTICAL Arg1:E59 Arg2:E30	
+R127	IDENTICAL Arg1:E58 Arg2:E53	
+R128	MODIFY Arg1:E59 Arg2:T119	
+R129	MODIFY Arg1:E58 Arg2:T114	
+R130	MODIFY Arg1:E59 Arg2:T120	
+T179	Diagnostic_procedure 2101 2110	BP values
+E96	Diagnostic_procedure:T179 
+R131	BEFORE Arg1:E96 Arg2:E61	
+R132	MODIFY Arg1:T129 Arg2:E62	
+R133	MODIFY Arg1:T130 Arg2:E64	
+R134	SUB_PROCEDURE Arg1:E64 Arg2:E62	
+R135	BEFORE Arg1:E64 Arg2:E87	
+R136	AFTER Arg1:E64 Arg2:E87	
+R137	SUB_PROCEDURE Arg1:E87 Arg2:E62	
+R138	SUB_PROCEDURE Arg1:E88 Arg2:E62	
+R139	IDENTICAL Arg1:E78 Arg2:E88	
+R140	MODIFY Arg1:E80 Arg2:E78	
+*	OVERLAP E78 E80 E81 E84 E83 E82 E85
+R141	MODIFY Arg1:E81 Arg2:E78	
+R142	MODIFY Arg1:T155 Arg2:E80	
+R143	MODIFY Arg1:T155 Arg2:E81	
+R144	MODIFY Arg1:T154 Arg2:E80	
+R145	MODIFY Arg1:T154 Arg2:E81	
+R146	IDENTICAL Arg1:E93 Arg2:T154	
+R147	IDENTICAL Arg1:E92 Arg2:T154	
+R148	IDENTICAL Arg1:E94 Arg2:T155	

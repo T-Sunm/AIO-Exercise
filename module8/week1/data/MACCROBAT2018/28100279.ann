@@ -1,0 +1,296 @@
+T1	Age 2 13	39-year-old
+T2	Personal_background 14 20	Korean
+T3	Sex 21 25	male
+T4	Clinical_event 26 30	come
+E1	Clinical_event:T4 
+T5	Nonbiological_location 38 46	hospital
+R1	MODIFY Arg1:T5 Arg2:E1	
+T6	Sign_symptom 62 67	cough
+E2	Sign_symptom:T6 
+T7	Sign_symptom 69 76	myalgia
+E3	Sign_symptom:T7 
+T8	Sign_symptom 82 87	fever
+E4	Sign_symptom:T8 
+T9	Duration 97 114	lasted for 5 days
+E5	Duration:T9 
+T10	Occupation 125 139	company worker
+T11	History 192 206	current smoker
+T12	History 144 181	denied any previous medical histories
+T13	Diagnostic_procedure 249 260	vital signs
+E6	Diagnostic_procedure:T13 
+T14	Diagnostic_procedure 267 281	blood pressure
+E7	Diagnostic_procedure:T14 
+T15	Lab_value 283 294	100/60 mmHg
+R2	MODIFY Arg1:T15 Arg2:E7	
+T16	Diagnostic_procedure 296 306	heart rate
+E8	Diagnostic_procedure:T16 
+T17	Lab_value 308 315	100/min
+R3	MODIFY Arg1:T17 Arg2:E8	
+T18	Diagnostic_procedure 317 333	respiratory rate
+E9	Diagnostic_procedure:T18 
+T19	Lab_value 335 349	25 breaths/min
+R4	MODIFY Arg1:T19 Arg2:E9	
+T20	Diagnostic_procedure 355 371	body temperature
+E10	Diagnostic_procedure:T20 
+T21	Lab_value 373 378	39 °C
+R5	MODIFY Arg1:T21 Arg2:E10	
+R6	SUB_PROCEDURE Arg1:E7 Arg2:E6	
+R7	SUB_PROCEDURE Arg1:E8 Arg2:E6	
+R8	SUB_PROCEDURE Arg1:E9 Arg2:E6	
+R9	SUB_PROCEDURE Arg1:E10 Arg2:E6	
+T22	Diagnostic_procedure 387 407	physical examination
+E11	Diagnostic_procedure:T22 
+T23	Diagnostic_procedure 419 434	breathing sound
+E12	Diagnostic_procedure:T23 
+T24	Lab_value 409 418	decreased
+R10	MODIFY Arg1:T24 Arg2:E12	
+T25	Biological_structure 452 468	right lower lung
+R11	MODIFY Arg1:T25 Arg2:E12	
+R12	SUB_PROCEDURE Arg1:E12 Arg2:E11	
+T26	Diagnostic_procedure 470 486	Laboratory tests
+E13	Diagnostic_procedure:T26 
+T27	Diagnostic_procedure 498 516	c-reactive protein
+E14	Diagnostic_procedure:T27 
+T28	Diagnostic_procedure 518 521	CRP
+E15	Diagnostic_procedure:T28 
+R13	IDENTICAL Arg1:E15 Arg2:E14	
+T29	Lab_value 532 541	119 mg/dL
+R14	MODIFY Arg1:T29 Arg2:E14	
+T30	Diagnostic_procedure 545 560	total bilirubin
+E16	Diagnostic_procedure:T30 
+T31	Lab_value 570 579	1.8 mg/dL
+R15	MODIFY Arg1:T31 Arg2:E16	
+T32	Diagnostic_procedure 585 605	alanine transaminase
+E17	Diagnostic_procedure:T32 
+T33	Diagnostic_procedure 610 632	aspartate transaminase
+E18	Diagnostic_procedure:T33 
+T34	Lab_value 643 646	250
+R16	MODIFY Arg1:T34 Arg2:E17	
+T35	Lab_value 651 659	172 IU/L
+R17	MODIFY Arg1:T35 Arg2:E18	
+R18	SUB_PROCEDURE Arg1:E14 Arg2:E13	
+R19	SUB_PROCEDURE Arg1:E16 Arg2:E13	
+R20	SUB_PROCEDURE Arg1:E17 Arg2:E13	
+R21	SUB_PROCEDURE Arg1:E18 Arg2:E13	
+T36	Diagnostic_procedure 679 693	platelet count
+E19	Diagnostic_procedure:T36 
+T37	Lab_value 698 708	98,000/mm3
+R22	MODIFY Arg1:T37 Arg2:E19	
+T38	Diagnostic_procedure 720 736	white cell count
+E20	Diagnostic_procedure:T38 
+T39	Lab_value 741 749	8150/mm3
+T40	Lab_value 751 766	neutrophil: 85%
+R23	MODIFY Arg1:T39 Arg2:E20	
+R24	MODIFY Arg1:T40 Arg2:E20	
+T41	Diagnostic_procedure 776 803	arterial blood gas analysis
+E21	Diagnostic_procedure:T41 
+T42	Detailed_description 812 823	in room air
+R25	MODIFY Arg1:T42 Arg2:E21	
+T43	Diagnostic_procedure 825 827	pH
+E22	Diagnostic_procedure:T43 
+T44	Diagnostic_procedure 829 834	PaCO2
+E23	Diagnostic_procedure:T44 
+T45	Diagnostic_procedure 836 840	PaO2
+E24	Diagnostic_procedure:T45 
+T46	Diagnostic_procedure 842 853	bicarbonate
+E25	Diagnostic_procedure:T46 
+T47	Diagnostic_procedure 859 876	oxygen saturation
+E26	Diagnostic_procedure:T47 
+T48	Lab_value 889 893	7.50
+R26	MODIFY Arg1:T48 Arg2:E22	
+T49	Lab_value 895 902	34 mmHg
+R27	MODIFY Arg1:T49 Arg2:E23	
+T50	Lab_value 904 911	67 mmHg
+R28	MODIFY Arg1:T50 Arg2:E24	
+T51	Lab_value 913 924	26.5 mmol/L
+R29	MODIFY Arg1:T51 Arg2:E25	
+T52	Lab_value 930 933	95%
+R30	MODIFY Arg1:T52 Arg2:E26	
+T53	Diagnostic_procedure 951 992	test for the human immunodeficiency virus
+E27	Diagnostic_procedure:T53 
+T54	Lab_value 997 1005	negative
+R31	MODIFY Arg1:T54 Arg2:E27	
+T56	Diagnostic_procedure 1032 1042	antibodies
+E29	Diagnostic_procedure:T56 
+T57	Lab_value 1048 1056	negative
+T55	Detailed_description 1022 1031	Chlamydia
+T59	Detailed_description 1007 1017	Mycoplasma
+R32	MODIFY Arg1:T55 Arg2:E29	
+R33	MODIFY Arg1:T59 Arg2:E29	
+R34	MODIFY Arg1:T57 Arg2:E29	
+T58	Diagnostic_procedure 1087 1103	urinary antigens
+E28	Diagnostic_procedure:T58 
+T60	Detailed_description 1076 1086	Legionella
+T61	Detailed_description 1058 1071	Streptococcal
+R35	MODIFY Arg1:T60 Arg2:E28	
+R36	MODIFY Arg1:T61 Arg2:E28	
+T62	Lab_value 1109 1117	negative
+R37	MODIFY Arg1:T62 Arg2:E28	
+T63	Diagnostic_procedure 1154 1176	cytoplasmic antibodies
+E30	Diagnostic_procedure:T63 
+T64	Detailed_description 1136 1153	anti-neutrophilic
+T65	Detailed_description 1119 1131	Anti-nuclear
+R38	MODIFY Arg1:T64 Arg2:E30	
+R39	MODIFY Arg1:T65 Arg2:E30	
+T66	Lab_value 1187 1195	negative
+R40	MODIFY Arg1:T66 Arg2:E30	
+T67	Diagnostic_procedure 1205 1210	X-ray
+E31	Diagnostic_procedure:T67 
+T68	Biological_structure 1199 1204	chest
+R41	MODIFY Arg1:T68 Arg2:E31	
+T69	Sign_symptom 1218 1231	consolidation
+E32	Sign_symptom:T69 
+T70	Biological_structure 1239 1269	right mid to lower lung fields
+R42	MODIFY Arg1:T70 Arg2:E32	
+T71	Diagnostic_procedure 1277 1296	computed tomography
+E33	Diagnostic_procedure:T71 
+T72	Biological_structure 1271 1276	Chest
+R43	MODIFY Arg1:T72 Arg2:E33	
+T73	Sign_symptom 1304 1317	consolidation
+E34	Sign_symptom:T73 
+T74	Texture 1323 1355	surrounding ground glass opacity
+R44	MODIFY Arg1:T74 Arg2:E34	
+T75	Biological_structure 1363 1380	right middle lobe
+R45	MODIFY Arg1:T75 Arg2:E34	
+T76	Disease_disorder 1404 1420	pleural effusion
+E35	Disease_disorder:T76 
+T77	Severity 1388 1400	small amount
+R46	MODIFY Arg1:T77 Arg2:E35	
+T78	Biological_structure 1428 1444	right hemithorax
+R47	MODIFY Arg1:T78 Arg2:E35	
+T79	Diagnostic_procedure 1464 1474	sonography
+E36	Diagnostic_procedure:T79 
+T80	Biological_structure 1454 1463	Abdominal
+R48	MODIFY Arg1:T80 Arg2:E36	
+T81	Biological_structure 1511 1531	hepatobiliary system
+T82	Lab_value 1484 1503	no abnormal finding
+R49	MODIFY Arg1:T82 Arg2:E36	
+R50	MODIFY Arg1:T81 Arg2:T82	
+T83	Medication 1567 1573	oxygen
+E37	Medication:T83 
+T84	Administration 1574 1581	nasally
+T85	Dosage 1556 1563	4 L/min
+R51	MODIFY Arg1:T84 Arg2:E37	
+R52	MODIFY Arg1:T85 Arg2:E37	
+T86	Medication 1596 1607	antibiotics
+E38	Medication:T86 
+T87	Medication 1630 1643	cephalosporin
+E39	Medication:T87 
+T88	Medication 1648 1657	macrolide
+E40	Medication:T88 
+R53	SUB_PROCEDURE Arg1:E39 Arg2:E38	
+R54	SUB_PROCEDURE Arg1:E40 Arg2:E38	
+T89	Disease_disorder 1702 1711	pneumonia
+E41	Disease_disorder:T89 
+T90	Detailed_description 1683 1701	community-acquired
+R55	MODIFY Arg1:T90 Arg2:E41	
+T91	Sign_symptom 1762 1767	fever
+E42	Sign_symptom:T91 
+A1	TREND E42 STAY
+T92	Sign_symptom 1803 1810	dyspnea
+E43	Sign_symptom:T92 
+T93	Date 1720 1730	second day
+E44	Date:T93 
+T94	Sign_symptom 1816 1825	hypoxemia
+E45	Sign_symptom:T94 
+A2	TREND E45 INC
+T95	Medication 1874 1880	oxygen
+E46	Medication:T95 
+T96	Administration 1887 1898	simple mask
+T97	Dosage 1863 1870	7 L/min
+R56	MODIFY Arg1:T97 Arg2:E46	
+R57	MODIFY Arg1:T96 Arg2:E46	
+T98	Sign_symptom 1907 1920	consolidation
+E47	Sign_symptom:T98 
+A3	TREND E47 INC
+T99	Disease_disorder 1925 1941	pleural effusion
+E48	Disease_disorder:T99 
+A4	TREND E48 INC
+T100	Therapeutic_procedure 2006 2019	thoracentesis
+E49	Therapeutic_procedure:T100 
+T101	Diagnostic_procedure 1989 2001	bronchoscopy
+E50	Diagnostic_procedure:T101 
+T102	Diagnostic_procedure 2031 2088	real-time reverse transcriptase polymerase chain reaction
+E51	Diagnostic_procedure:T102 
+T103	Diagnostic_procedure 2090 2096	RT-PCR
+E52	Diagnostic_procedure:T103 
+R58	IDENTICAL Arg1:E52 Arg2:E51	
+T104	Detailed_description 2021 2030	Multiplex
+R59	MODIFY Arg1:T104 Arg2:E51	
+T105	Detailed_description 2098 2121	for respiratory viruses
+R60	MODIFY Arg1:T105 Arg2:E51	
+T106	Detailed_description 2122 2156	using bronchoalveolar lavage fluid
+R61	MODIFY Arg1:T106 Arg2:E51	
+T108	Diagnostic_procedure 2203 2226	microbiological studies
+E54	Diagnostic_procedure:T108 
+T110	Disease_disorder 2355 2375	adenovirus pneumonia
+E56	Disease_disorder:T110 
+T107	Lab_value 2161 2190	positive for human adenovirus
+T109	Diagnostic_procedure 2242 2255	Pleural fluid
+E53	Diagnostic_procedure:T109 
+T111	Lab_value 2260 2287	lymphocyte-dominant exudate
+T112	Lab_value 2301 2330	positive for human adenovirus
+R62	MODIFY Arg1:T111 Arg2:E53	
+R63	MODIFY Arg1:T112 Arg2:E53	
+R64	MODIFY Arg1:T107 Arg2:E51	
+T113	Medication 2388 2405	antiviral therapy
+E55	Medication:T113 
+T114	Medication 2416 2425	ribavirin
+E57	Medication:T114 
+T115	Administration 2411 2415	oral
+T116	Dosage 2426 2439	400 mg q 12 h
+R65	MODIFY Arg1:T116 Arg2:E57	
+R66	MODIFY Arg1:T115 Arg2:E57	
+T117	Medication 2458 2469	antibiotics
+E58	Medication:T117 
+T118	Date 2483 2488	day 4
+E59	Date:T118 
+T119	Sign_symptom 2494 2499	fever
+E60	Sign_symptom:T119 
+A5	POLARITY E60 NEG
+T120	Sign_symptom 2517 2525	symptoms
+E61	Sign_symptom:T120 
+A6	POLARITY E61 MAYBE_NEG
+T121	Diagnostic_procedure 2550 2562	transaminase
+E62	Diagnostic_procedure:T121 
+T122	Diagnostic_procedure 2571 2574	CRP
+E63	Diagnostic_procedure:T122 
+T123	Diagnostic_procedure 2579 2593	platelet count
+E64	Diagnostic_procedure:T123 
+T124	Lab_value 2605 2615	normalized
+R67	MODIFY Arg1:T124 Arg2:E64	
+R68	MODIFY Arg1:T124 Arg2:E63	
+R69	MODIFY Arg1:T124 Arg2:E62	
+T125	Diagnostic_procedure 2643 2648	X-ray
+E65	Diagnostic_procedure:T125 
+T126	Biological_structure 2637 2642	chest
+T127	Clinical_event 2627 2636	follow-up
+E66	Clinical_event:T127 
+R70	MODIFY Arg1:T126 Arg2:E65	
+T128	Lab_value 2653 2658	clear
+R71	MODIFY Arg1:T128 Arg2:E65	
+T129	Clinical_event 2679 2689	discharged
+E67	Clinical_event:T129 
+T130	Date 2702 2708	day 13
+E68	Date:T130 
+T131	Sign_symptom 2721 2734	complications
+E69	Sign_symptom:T131 
+A7	POLARITY E69 NEG
+R72	AFTER Arg1:E1 Arg2:E2	
+*	OVERLAP E2 E3 E4 E5
+R73	BEFORE Arg1:E5 Arg2:E6	
+*	OVERLAP E6 E11 E13 E19 E20 E21 E27 E29 E28 E30 E31 E32 E33 E34 E35 E36
+R74	BEFORE Arg1:E36 Arg2:E37	
+*	OVERLAP E37 E38 E41
+R75	BEFORE Arg1:E41 Arg2:E44	
+*	OVERLAP E44 E42 E43 E45 E46 E47 E48 E50 E49 E51 E54 E53 E56 E55 E58
+T132	Lab_value 2232 2240	negative
+R76	MODIFY Arg1:T132 Arg2:E54	
+R77	SUB_PROCEDURE Arg1:E57 Arg2:E55	
+R78	BEFORE Arg1:E58 Arg2:E59	
+*	OVERLAP E59 E60 E61 E62 E63 E64
+R79	BEFORE Arg1:E64 Arg2:E66	
+*	OVERLAP E66 E65
+R80	BEFORE Arg1:E65 Arg2:E67	
+*	OVERLAP E67 E68 E69
+T133	History 211 243	drank alcohol about once a month

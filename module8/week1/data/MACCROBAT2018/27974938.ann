@@ -1,0 +1,497 @@
+T1	Age 4 15	21-year-old
+T2	History 501 567	The patient did not have a medical history or a current medication
+T3	Occupation 578 585	student
+T4	History 587 638	He did not smoke and did not use recreational drugs
+T5	History 640 674	He only drank alcohol occasionally
+T6	Family_history 676 772	There was no family history of thromboembolism, cardiovascular problems, or hematologic diseases
+T7	Clinical_event 24 33	presented
+E1	Clinical_event:T7 
+T8	Nonbiological_location 41 69	closest emergency department
+R1	MODIFY Arg1:T8 Arg2:E1	
+T9	Time 73 77	8 PM
+E2	Time:T9 
+T10	Sign_symptom 82 88	nausea
+E3	Sign_symptom:T10 
+T11	Sign_symptom 90 98	numbness
+E4	Sign_symptom:T11 
+T12	Biological_structure 106 116	left limbs
+R2	MODIFY Arg1:T12 Arg2:E4	
+T13	Sign_symptom 118 143	incoordination of walking
+E5	Sign_symptom:T13 
+T14	Sign_symptom 148 158	dysarthria
+E6	Sign_symptom:T14 
+T15	Time 216 230	4 hours before
+E7	Time:T15 
+T16	Sign_symptom 169 183	symptomatology
+E8	Sign_symptom:T16 
+#1	AnnotatorNotes E8	i.e., the symptoms started and increased
+T17	Detailed_description 199 210	progressive
+R3	MODIFY Arg1:T17 Arg2:E8	
+T18	Time 293 297	4 PM
+E9	Time:T18 
+T19	Sign_symptom 249 255	nausea
+E10	Sign_symptom:T19 
+T20	Sign_symptom 307 315	headache
+E11	Sign_symptom:T20 
+A1	POLARITY E11 NEG
+T21	Sign_symptom 324 328	pain
+E12	Sign_symptom:T21 
+A2	POLARITY E12 NEG
+T22	Biological_structure 317 323	nuchal
+R4	MODIFY Arg1:T22 Arg2:E12	
+T23	Sign_symptom 333 338	vomit
+E13	Sign_symptom:T23 
+A3	POLARITY E13 NEG
+T24	Time 350 363	after 5.30 PM
+E14	Time:T24 
+T25	Sign_symptom 369 377	numbness
+E15	Sign_symptom:T25 
+T26	Biological_structure 385 395	left limbs
+R5	MODIFY Arg1:T26 Arg2:E15	
+T27	Sign_symptom 404 429	incoordination of walking
+E16	Sign_symptom:T27 
+T28	Time 437 441	7 PM
+E17	Time:T28 
+T29	Sign_symptom 442 452	dysarthria
+E18	Sign_symptom:T29 
+T30	Diagnostic_procedure 787 796	evaluated
+E19	Diagnostic_procedure:T30 
+T31	Nonbiological_location 802 814	neurosurgeon
+T32	Nonbiological_location 822 836	emergency unit
+R6	MODIFY Arg1:T31 Arg2:E19	
+R7	MODIFY Arg1:T32 Arg2:E19	
+T33	Diagnostic_procedure 853 855	CT
+E20	Diagnostic_procedure:T33 
+T34	Biological_structure 847 852	brain
+R8	MODIFY Arg1:T34 Arg2:E20	
+T35	Sign_symptom 895 906	hypodensity
+E21	Sign_symptom:T35 
+T36	Detailed_description 878 894	infracentimetric
+R9	MODIFY Arg1:T36 Arg2:E21	
+T37	Biological_structure 914 930	thalamic nucleus
+R10	MODIFY Arg1:T37 Arg2:E21	
+T38	Detailed_description 939 948	left side
+R11	MODIFY Arg1:T38 Arg2:E21	
+T39	Biological_structure 960 1000	level of the right cerebellar hemisphere
+R12	MODIFY Arg1:T39 Arg2:E21	
+T40	Biological_structure 1008 1022	PICA territory
+R13	MODIFY Arg1:T40 Arg2:E21	
+T41	Diagnostic_procedure 1041 1046	X-ray
+E22	Diagnostic_procedure:T41 
+T42	Biological_structure 1035 1040	chest
+R14	MODIFY Arg1:T42 Arg2:E22	
+T43	Sign_symptom 1063 1086	widened projection area
+E23	Sign_symptom:T43 
+T44	Biological_structure 1094 1110	right side hilum
+R15	MODIFY Arg1:T44 Arg2:E23	
+T45	Sign_symptom 1124 1151	other pathological findings
+E24	Sign_symptom:T45 
+A4	POLARITY E24 NEG
+T46	Clinical_event 1187 1191	sent
+E25	Clinical_event:T46 
+T47	Nonbiological_location 1199 1259	National Institute of Neurology and Cerebrovascular Diseases
+R16	MODIFY Arg1:T47 Arg2:E25	
+T48	Clinical_event 1264 1276	consultation
+E26	Clinical_event:T48 
+T49	Therapeutic_procedure 1281 1298	special treatment
+E27	Therapeutic_procedure:T49 
+T50	Clinical_event 1321 1335	transportation
+E28	Clinical_event:T50 
+T51	Detailed_description 1311 1320	ambulance
+R17	MODIFY Arg1:T51 Arg2:E28	
+T52	Sign_symptom 1365 1373	vomiting
+E29	Sign_symptom:T52 
+T53	Detailed_description 1344 1352	repeated
+R18	MODIFY Arg1:T53 Arg2:E29	
+T54	Diagnostic_procedure 1387 1407	physical examination
+E30	Diagnostic_procedure:T54 
+T55	Time 1412 1418	10 P.M
+E31	Time:T55 
+T56	Diagnostic_procedure 1434 1445	vital signs
+E32	Diagnostic_procedure:T56 
+T57	Lab_value 1427 1433	normal
+R19	MODIFY Arg1:T57 Arg2:E32	
+T58	Diagnostic_procedure 1447 1461	blood pressure
+E33	Diagnostic_procedure:T58 
+T59	Lab_value 1462 1473	130/ 80mmHg
+R20	MODIFY Arg1:T59 Arg2:E33	
+T60	Diagnostic_procedure 1475 1485	heart rate
+E34	Diagnostic_procedure:T60 
+T61	Lab_value 1486 1506	100 beats per minute
+R21	MODIFY Arg1:T61 Arg2:E34	
+T62	Diagnostic_procedure 1518 1534	body temperature
+E35	Diagnostic_procedure:T62 
+T63	Lab_value 1511 1517	normal
+R22	MODIFY Arg1:T63 Arg2:E35	
+T64	Lab_value 1535 1541	36,8°C
+R23	MODIFY Arg1:T64 Arg2:E35	
+T65	Diagnostic_procedure 1547 1567	cardiopulmonary exam
+E36	Diagnostic_procedure:T65 
+T66	Lab_value 1572 1578	normal
+R24	MODIFY Arg1:T66 Arg2:E36	
+T67	Sign_symptom 1583 1597	carotid bruits
+E37	Sign_symptom:T67 
+A5	POLARITY E37 NEG
+T68	Diagnostic_procedure 1619 1643	neurological examination
+E38	Diagnostic_procedure:T68 
+T69	Lab_value 1660 1678	normal orientation
+R25	MODIFY Arg1:T69 Arg2:E38	
+T70	Diagnostic_procedure 1712 1718	pupils
+E39	Diagnostic_procedure:T70 
+T71	Lab_value 1703 1711	reactive
+T72	Lab_value 1696 1701	equal
+R26	MODIFY Arg1:T71 Arg2:E39	
+R27	MODIFY Arg1:T72 Arg2:E39	
+T73	Sign_symptom 1730 1740	strabismus
+E40	Sign_symptom:T73 
+T74	Biological_structure 1748 1756	left eye
+R28	MODIFY Arg1:T74 Arg2:E40	
+T75	Detailed_description 1720 1729	divergent
+R29	MODIFY Arg1:T75 Arg2:E40	
+T76	Sign_symptom 1769 1778	nystagmus
+E41	Sign_symptom:T76 
+T77	Detailed_description 1758 1768	horizontal
+R30	MODIFY Arg1:T77 Arg2:E41	
+T78	Diagnostic_procedure 1787 1798	deglutition
+E42	Diagnostic_procedure:T78 
+R31	SUB_PROCEDURE Arg1:E33 Arg2:E32	
+R32	SUB_PROCEDURE Arg1:E34 Arg2:E32	
+R33	SUB_PROCEDURE Arg1:E35 Arg2:E32	
+T79	Disease_disorder 1805 1812	paresis
+E43	Disease_disorder:T79 
+T80	Severity 1800 1804	mild
+R34	MODIFY Arg1:T80 Arg2:E43	
+T81	Lab_value 1780 1786	normal
+R35	MODIFY Arg1:T81 Arg2:E42	
+T82	Biological_structure 1820 1828	left arm
+R36	MODIFY Arg1:T82 Arg2:E43	
+T83	Disease_disorder 1830 1836	ataxia
+E44	Disease_disorder:T83 
+T84	Biological_structure 1840 1849	all limbs
+R37	MODIFY Arg1:T84 Arg2:E44	
+T85	Biological_structure 1859 1889	accent on the left extremities
+R38	MODIFY Arg1:T85 Arg2:E44	
+T86	Sign_symptom 1891 1899	numbness
+E45	Sign_symptom:T86 
+T87	Biological_structure 1907 1917	left limbs
+R39	MODIFY Arg1:T87 Arg2:E45	
+T88	Diagnostic_procedure 1966 1972	reflex
+E46	Diagnostic_procedure:T88 
+T89	Lab_value 1919 1937	bilateral response
+R40	MODIFY Arg1:T89 Arg2:E46	
+T90	Biological_structure 1949 1965	all deep tendons
+R41	MODIFY Arg1:T90 Arg2:E46	
+T91	Sign_symptom 1974 1987	Babinski sign
+E47	Sign_symptom:T91 
+T92	Detailed_description 1995 2004	left side
+R42	MODIFY Arg1:T92 Arg2:E47	
+T93	Diagnostic_procedure 2020 2028	language
+E48	Diagnostic_procedure:T93 
+T94	Lab_value 2006 2019	stereotypical
+R43	MODIFY Arg1:T94 Arg2:E48	
+T95	Detailed_description 2046 2096	able to repeat a few words and fragment of phrases
+R44	MODIFY Arg1:T95 Arg2:T94	
+T96	Detailed_description 2104 2148	perform simple commands of medium complexity
+R45	MODIFY Arg1:T96 Arg2:T94	
+T97	Diagnostic_procedure 2154 2173	laboratory analysis
+E49	Diagnostic_procedure:T97 
+T98	Diagnostic_procedure 2195 2208	hemoleucogram
+E50	Diagnostic_procedure:T98 
+T99	Lab_value 2188 2194	normal
+R46	MODIFY Arg1:T99 Arg2:E50	
+R47	SUB_PROCEDURE Arg1:E50 Arg2:E49	
+T100	Diagnostic_procedure 2217 2230	blood glucose
+E51	Diagnostic_procedure:T100 
+T101	Lab_value 2210 2216	normal
+R48	MODIFY Arg1:T101 Arg2:E51	
+T102	Lab_value 2237 2249	9,11 mmol/ L
+R49	MODIFY Arg1:T102 Arg2:E51	
+R50	SUB_PROCEDURE Arg1:E51 Arg2:E49	
+T103	Diagnostic_procedure 2281 2297	serum creatinine
+E52	Diagnostic_procedure:T103 
+T104	Lab_value 2298 2309	0,69mmol/ L
+R51	MODIFY Arg1:T104 Arg2:E52	
+R52	SUB_PROCEDURE Arg1:E52 Arg2:E49	
+T105	Diagnostic_procedure 2334 2357	total serum cholesterol
+E53	Diagnostic_procedure:T105 
+T106	Lab_value 2358 2368	5,2mmol/ L
+R53	MODIFY Arg1:T106 Arg2:E53	
+R54	SUB_PROCEDURE Arg1:E53 Arg2:E49	
+T107	Diagnostic_procedure 2413 2426	thrombophilia
+E54	Diagnostic_procedure:T107 
+T108	Lab_value 2432 2440	negative
+R55	MODIFY Arg1:T108 Arg2:E54	
+T109	Diagnostic_procedure 2469 2481	sinus rhythm
+E55	Diagnostic_procedure:T109 
+T110	Detailed_description 2489 2492	ECG
+R56	MODIFY Arg1:T110 Arg2:E55	
+T111	Lab_value 2462 2468	normal
+R57	MODIFY Arg1:T111 Arg2:E55	
+T112	Diagnostic_procedure 2504 2506	CT
+E56	Diagnostic_procedure:T112 
+T113	Biological_structure 2498 2503	brain
+R58	MODIFY Arg1:T113 Arg2:E56	
+T114	Sign_symptom 2594 2605	hypodensity
+E57	Sign_symptom:T114 
+T115	Detailed_description 2577 2593	infracentimetric
+R59	MODIFY Arg1:T115 Arg2:E57	
+T116	Biological_structure 2613 2647	level of the left thalamic nucleus
+R60	MODIFY Arg1:T116 Arg2:E57	
+T117	Biological_structure 2659 2699	level of the right cerebellar hemisphere
+T118	Biological_structure 2707 2721	PICA territory
+R61	MODIFY Arg1:T117 Arg2:E57	
+R62	MODIFY Arg1:T118 Arg2:E57	
+T119	Diagnostic_procedure 2731 2741	ultrasound
+E58	Diagnostic_procedure:T119 
+T120	Detailed_description 2723 2730	Doppler
+R63	MODIFY Arg1:T120 Arg2:E58	
+T121	Biological_structure 2746 2781	cerebral and cervical blood vessels
+R64	MODIFY Arg1:T121 Arg2:E58	
+T122	Diagnostic_procedure 2818 2833	flow velocities
+E59	Diagnostic_procedure:T122 
+T123	Lab_value 2805 2810	frena
+R65	MODIFY Arg1:T123 Arg2:E59	
+T124	Biological_structure 2841 2881	V2 segment of the right vertebral artery
+R66	MODIFY Arg1:T124 Arg2:E59	
+T125	Diagnostic_procedure 2968 2972	flow
+E60	Diagnostic_procedure:T125 
+T126	Lab_value 2938 2960	complete disappearance
+R67	MODIFY Arg1:T126 Arg2:E60	
+T127	Biological_structure 2980 2990	V3 segment
+R68	MODIFY Arg1:T127 Arg2:E60	
+T128	Sign_symptom 3021 3028	lesions
+E61	Sign_symptom:T128 
+A6	POLARITY E61 NEG
+T129	Sign_symptom 2886 2904	accentuated aspect
+E62	Sign_symptom:T129 
+T130	Biological_structure 2912 2928	high V2 segments
+R69	MODIFY Arg1:T130 Arg2:E62	
+T131	Detailed_description 3008 3020	atheromatous
+R70	MODIFY Arg1:T131 Arg2:E61	
+T132	Biological_structure 3000 3007	carotid
+R71	MODIFY Arg1:T132 Arg2:E61	
+T133	Sign_symptom 3032 3089	modifications of the trajectories or the arterial caliber
+E63	Sign_symptom:T133 
+A7	POLARITY E63 NEG
+T134	Disease_disorder 3129 3139	dissection
+E64	Disease_disorder:T134 
+A8	POLARITY E64 UNCERTAIN
+T135	Biological_structure 3147 3169	right vertebral artery
+R72	MODIFY Arg1:T135 Arg2:E64	
+T136	Detailed_description 3177 3192	higher segments
+R73	MODIFY Arg1:T136 Arg2:T135	
+T137	Diagnostic_procedure 3231 3234	MRI
+E65	Diagnostic_procedure:T137 
+T138	Biological_structure 3225 3230	angio
+T139	Biological_structure 3212 3220	cerebral
+R74	MODIFY Arg1:T138 Arg2:E65	
+R75	MODIFY Arg1:T139 Arg2:E65	
+T140	Coreference 3255 3258	MRI
+E66	Coreference:T140 
+R76	IDENTICAL Arg1:E66 Arg2:E65	
+T141	Diagnostic_procedure 3282 3287	FLAIR
+E67	Diagnostic_procedure:T141 
+T142	Lab_value 3288 3299	hypersignal
+R77	MODIFY Arg1:T142 Arg2:E67	
+T143	Detailed_description 3278 3280	T2
+R78	MODIFY Arg1:T143 Arg2:E67	
+T144	Sign_symptom 3319 3343	restriction of diffusion
+E68	Sign_symptom:T144 
+T145	Diagnostic_procedure 3352 3355	ADC
+E69	Diagnostic_procedure:T145 
+#2	AnnotatorNotes E69	apparent diffusion coefficient
+T146	Lab_value 3348 3351	low
+R79	MODIFY Arg1:T146 Arg2:E69	
+T147	Biological_structure 3373 3428	right cerebellar area of the postero-inferior territory
+R80	MODIFY Arg1:T147 Arg2:T142	
+T148	Biological_structure 3430 3469	anterior bilateral cerebellar territory
+R81	MODIFY Arg1:T148 Arg2:T142	
+T149	Biological_structure 3471 3495	left cerebellar peduncle
+R82	MODIFY Arg1:T149 Arg2:T142	
+T150	Biological_structure 3497 3530	both right > left thalamic nuclei
+R83	MODIFY Arg1:T150 Arg2:T142	
+T151	Biological_structure 3543 3574	subcortical occipital bilateral
+R84	MODIFY Arg1:T151 Arg2:T142	
+T152	Sign_symptom 3584 3599	ischemic aspect
+E70	Sign_symptom:T152 
+T153	Biological_structure 3630 3662	in the vertebrobasilar territory
+R85	MODIFY Arg1:T153 Arg2:E70	
+T154	Diagnostic_procedure 3664 3669	T1 FS
+E71	Diagnostic_procedure:T154 
+R86	SUB_PROCEDURE Arg1:E67 Arg2:E66	
+R87	SUB_PROCEDURE Arg1:E71 Arg2:E66	
+T155	Lab_value 3670 3681	hypersignal
+R88	MODIFY Arg1:T155 Arg2:E71	
+T156	Biological_structure 3701 3758	entire intracranial segment of the right vertebral artery
+T157	Biological_structure 3767 3789	cranio-spinal junction
+R89	MODIFY Arg1:T156 Arg2:T155	
+R90	MODIFY Arg1:T157 Arg2:T155	
+T158	Diagnostic_procedure 3798 3810	angiographic
+E72	Diagnostic_procedure:T158 
+T159	Detailed_description 3811 3819	arterial
+R91	MODIFY Arg1:T159 Arg2:E72	
+T160	Detailed_description 3820 3822	3D
+T161	Detailed_description 3823 3826	TOF
+#3	AnnotatorNotes T161	time-of-flight
+R92	MODIFY Arg1:T160 Arg2:E72	
+R93	MODIFY Arg1:T161 Arg2:E72	
+T162	Diagnostic_procedure 3863 3867	flow
+E73	Diagnostic_procedure:T162 
+T163	Lab_value 3857 3862	rapid
+R94	MODIFY Arg1:T163 Arg2:E73	
+T164	Biological_structure 3875 3897	right vertebral artery
+R95	MODIFY Arg1:T164 Arg2:E73	
+T165	Biological_structure 3915 3935	up to the C2 segment
+R96	MODIFY Arg1:T165 Arg2:E73	
+T166	Sign_symptom 3967 3976	pinch out
+E74	Sign_symptom:T166 
+T167	Detailed_description 3955 3966	progressive
+R97	MODIFY Arg1:T167 Arg2:E74	
+T168	Shape 3995 4011	flute beak shape
+R98	MODIFY Arg1:T168 Arg2:E74	
+T169	Diagnostic_procedure 4063 4073	rapid flow
+E75	Diagnostic_procedure:T169 
+T170	Lab_value 4048 4055	absence
+R99	MODIFY Arg1:T170 Arg2:E75	
+T171	Biological_structure 4013 4033	Distal of this level
+R100	MODIFY Arg1:T171 Arg2:E75	
+T172	Biological_structure 4100 4110	right PICA
+#4	AnnotatorNotes T172	posterior inferior cerebellar artery
+T173	Diagnostic_procedure 4111 4124	visualization
+E76	Diagnostic_procedure:T173 
+T174	Lab_value 4092 4096	lack
+R101	MODIFY Arg1:T174 Arg2:E76	
+R102	MODIFY Arg1:T172 Arg2:E76	
+T175	Diagnostic_procedure 4130 4133	MRI
+E77	Diagnostic_procedure:T175 
+T176	Disease_disorder 4162 4172	dissection
+E78	Disease_disorder:T176 
+T177	Detailed_description 4153 4161	subacute
+R103	MODIFY Arg1:T177 Arg2:E78	
+T178	Biological_structure 4180 4202	right vertebral artery
+R104	MODIFY Arg1:T178 Arg2:E78	
+T179	Diagnostic_procedure 4247 4257	dimensions
+E79	Diagnostic_procedure:T179 
+T180	Diagnostic_procedure 4259 4264	shape
+E80	Diagnostic_procedure:T180 
+T181	Diagnostic_procedure 4270 4280	topography
+E81	Diagnostic_procedure:T181 
+T182	Biological_structure 4208 4235	cerebral ventricular system
+R105	MODIFY Arg1:T182 Arg2:E79	
+R106	MODIFY Arg1:T182 Arg2:E80	
+R107	MODIFY Arg1:T182 Arg2:E81	
+T183	Lab_value 4240 4246	normal
+R108	MODIFY Arg1:T183 Arg2:E79	
+R109	MODIFY Arg1:T183 Arg2:E80	
+R110	MODIFY Arg1:T183 Arg2:E81	
+T184	Medication 4510 4517	Heparin
+E82	Medication:T184 
+T185	Diagnostic_procedure 4622 4632	APTT value
+E83	Diagnostic_procedure:T185 
+#5	AnnotatorNotes E83	activated partial thromboplastin time
+T186	Lab_value 4649 4671	range of 50-70 seconds
+R111	MODIFY Arg1:T186 Arg2:E83	
+T187	Sign_symptom 4386 4393	lesions
+E84	Sign_symptom:T187 
+T188	Detailed_description 4377 4385	ischemic
+R112	MODIFY Arg1:T188 Arg2:E84	
+T189	Biological_structure 4422 4447	vertebrobasilar territory
+R113	MODIFY Arg1:T189 Arg2:E84	
+T190	Disease_disorder 4468 4478	dissection
+E85	Disease_disorder:T190 
+T191	Detailed_description 4459 4467	subacute
+R114	MODIFY Arg1:T191 Arg2:E85	
+T192	Biological_structure 4486 4508	right vertebral artery
+R115	MODIFY Arg1:T192 Arg2:E85	
+T193	Diagnostic_procedure 4286 4311	pericerebral fluid spaces
+E86	Diagnostic_procedure:T193 
+T194	Diagnostic_procedure 4320 4334	basal cisterns
+E87	Diagnostic_procedure:T194 
+T195	Lab_value 4340 4346	normal
+R116	MODIFY Arg1:T195 Arg2:E87	
+R117	MODIFY Arg1:T195 Arg2:E86	
+#6	AnnotatorNotes E86	labeled as a diagnostic because of the "normal" result
+T196	Therapeutic_procedure 4683 4703	prophylactic therapy
+E88	Therapeutic_procedure:T196 
+T197	Detailed_description 4708 4720	stress ulcer
+R118	MODIFY Arg1:T197 Arg2:E88	
+T198	Date 4736 4748	After 7 days
+E89	Date:T198 
+T199	Medication 4797 4809	acenocumarol
+E90	Medication:T199 
+T200	Diagnostic_procedure 4931 4934	INR
+E91	Diagnostic_procedure:T200 
+#7	AnnotatorNotes E91	International Normalized Ratio
+T201	Lab_value 4935 4946	therapeutic
+R119	MODIFY Arg1:T201 Arg2:E91	
+T202	Detailed_description 4954 4967	2-3 intervals
+R120	MODIFY Arg1:T202 Arg2:E91	
+T203	Medication 4860 4872	acenocumarol
+E92	Medication:T203 
+T204	Medication 4897 4904	heparin
+E93	Medication:T204 
+T205	Diagnostic_procedure 4973 4982	evolution
+E94	Diagnostic_procedure:T205 
+T206	Lab_value 4987 4996	favorable
+R121	MODIFY Arg1:T206 Arg2:E94	
+T207	Diagnostic_procedure 5024 5038	verbal fluency
+E95	Diagnostic_procedure:T207 
+T208	Lab_value 5010 5019	regaining
+R122	MODIFY Arg1:T208 Arg2:E95	
+T209	Sign_symptom 5060 5080	autonomy in movement
+E96	Sign_symptom:T209 
+T210	Disease_disorder 5086 5092	ataxia
+E97	Disease_disorder:T210 
+A9	TREND E97 DEC
+T211	Detailed_description 5097 5124	remitted at the right limbs
+R123	MODIFY Arg1:T211 Arg2:E97	
+T212	Detailed_description 5129 5162	persisted at the left extremities
+R124	MODIFY Arg1:T212 Arg2:E97	
+T213	Clinical_event 5217 5227	discharged
+E98	Clinical_event:T213 
+T214	Nonbiological_location 5228 5232	home
+R125	MODIFY Arg1:T214 Arg2:E98	
+T215	Other_entity 5242 5380	recommendation to continue the treatment with Acenocumarol for 6 months with clinical, paraclinical and treatment reevaluation at 6 months
+#8	AnnotatorNotes T215	Unlabeled as per next sentence - patient did not complete follow up
+T216	Clinical_event 5386 5395	follow up
+E99	Clinical_event:T216 
+A10	POLARITY E99 NEG
+T217	Date 5464 5478	after 6 months
+E100	Date:T217 
+T218	Clinical_event 5441 5447	return
+E101	Clinical_event:T218 
+A11	POLARITY E101 NEG
+T219	Nonbiological_location 5455 5463	hospital
+R126	MODIFY Arg1:T219 Arg2:E101	
+*	OVERLAP E1 E2 E3 E4 E5 E6
+R127	AFTER Arg1:E6 Arg2:E8	
+*	OVERLAP E8 E7 E10 E9 E11 E12 E13
+R128	BEFORE Arg1:E13 Arg2:E14	
+*	OVERLAP E14 E15 E16
+R129	BEFORE Arg1:E16 Arg2:E17	
+*	OVERLAP E17 E18
+R130	BEFORE Arg1:E18 Arg2:E19	
+*	OVERLAP E19 E20 E21 E22 E23 E24
+R131	BEFORE Arg1:E24 Arg2:E25	
+*	OVERLAP E25 E26 E27 E28 E29
+R132	BEFORE Arg1:E29 Arg2:E30	
+*	OVERLAP E30 E31 E32 E36 E37 E38 E39 E40 E41 E42 E43 E44 E45 E46 E47 E48 E49 E54 E55
+R133	AFTER Arg1:E55 Arg2:E56	
+*	OVERLAP E56 E57
+R134	BEFORE Arg1:E57 Arg2:E58	
+*	OVERLAP E58 E59 E62 E60 E61 E63 E64 E65 E66 E68 E70 E72 E73 E74 E75 E76 E77 E78 E79 E80 E81 E86 E87
+A12	POLARITY E78 MAYBE_POS
+R135	BEFORE Arg1:E87 Arg2:E84	
+*	OVERLAP E84 E85
+R136	BEFORE Arg1:E85 Arg2:E82	
+*	OVERLAP E82 E83 E88
+R137	BEFORE Arg1:E88 Arg2:E89	
+*	OVERLAP E89 E90 E92 E93
+R138	BEFORE Arg1:E93 Arg2:E91	
+R139	BEFORE Arg1:E91 Arg2:E94	
+*	OVERLAP E94 E95 E96 E97
+T220	Lab_value 5188 5199	improvement
+R140	MODIFY Arg1:T220 Arg2:E97	
+R141	BEFORE Arg1:E97 Arg2:E98	
+R142	BEFORE Arg1:E98 Arg2:E99	
+*	OVERLAP E99 E101 E100

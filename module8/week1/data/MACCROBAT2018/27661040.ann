@@ -1,0 +1,384 @@
+T1	Age 25 36	16-year-old
+T2	Sex 37 41	girl
+T3	Sign_symptom 88 92	pain
+E1	Sign_symptom:T3 
+T4	Biological_structure 78 87	abdominal
+T5	Severity 71 77	severe
+R1	MODIFY Arg1:T4 Arg2:E1	
+R2	MODIFY Arg1:T5 Arg2:E1	
+T6	Sign_symptom 94 110	loss of appetite
+E2	Sign_symptom:T6 
+T7	Sign_symptom 112 118	nausea
+E3	Sign_symptom:T7 
+T8	Sign_symptom 124 132	vomiting
+E4	Sign_symptom:T8 
+T9	Family_history 184 201	family of potters
+T10	Diagnostic_procedure 138 147	anamnesis
+E5	Diagnostic_procedure:T10 
+T11	Occupation 221 259	participated in the process of pottery
+T12	Family_history 265 322	father being diagnosed with lead poisoning 2 years before
+T13	Date 385 395	1 year ago
+E6	Date:T13 
+T14	Sign_symptom 432 436	pain
+E7	Sign_symptom:T14 
+T15	Biological_structure 422 431	abdominal
+T16	Severity 415 421	severe
+R3	MODIFY Arg1:T15 Arg2:E7	
+R4	MODIFY Arg1:T16 Arg2:E7	
+T17	Disease_disorder 465 477	appendicitis
+E8	Disease_disorder:T17 
+T18	Detailed_description 459 464	acute
+R5	MODIFY Arg1:T18 Arg2:E8	
+T19	Therapeutic_procedure 496 508	appendectomy
+E9	Therapeutic_procedure:T19 
+T20	Sign_symptom 518 522	pain
+E10	Sign_symptom:T20 
+T21	Detailed_description 523 532	persisted
+R6	MODIFY Arg1:T21 Arg2:E10	
+T22	Family_history 546 578	family history of lead poisoning
+T23	Disease_disorder 597 612	saturnine colic
+E11	Disease_disorder:T23 
+T24	Disease_disorder 646 660	lead poisoning
+E12	Disease_disorder:T24 
+T25	Diagnostic_procedure 662 674	urinary lead
+E13	Diagnostic_procedure:T25 
+T26	Lab_value 676 684	219 μg/L
+R7	MODIFY Arg1:T26 Arg2:E13	
+T27	Therapeutic_procedure 709 730	symptomatic treatment
+E14	Therapeutic_procedure:T27 
+T28	Date 746 760	3 weeks before
+E15	Date:T28 
+T29	Clinical_event 794 802	admitted
+E16	Clinical_event:T29 
+T30	Nonbiological_location 810 827	regional hospital
+R8	MODIFY Arg1:T30 Arg2:E16	
+T31	Disease_disorder 852 867	saturnine colic
+E17	Disease_disorder:T31 
+T32	Diagnostic_procedure 869 879	blood lead
+E18	Diagnostic_procedure:T32 
+T33	Lab_value 881 892	113.2 μg/dL
+R9	MODIFY Arg1:T33 Arg2:E18	
+T34	Medication 899 916	chelation therapy
+E19	Medication:T34 
+T36	Date 928 941	4 days before
+E20	Date:T36 
+T35	Medication 922 926	EDTA
+E21	Medication:T35 
+R10	SUB_PROCEDURE Arg1:E21 Arg2:E19	
+T37	Dosage 1001 1016	2 tablets daily
+R11	MODIFY Arg1:T37 Arg2:E19	
+T38	Dosage 1018 1059	one in the morning and one in the evening
+R12	MODIFY Arg1:T38 Arg2:E19	
+T39	Medication 1076 1095	calcium supplements
+E22	Medication:T39 
+T40	Diagnostic_procedure 1101 1121	clinical examination
+E23	Diagnostic_procedure:T40 
+T41	Sign_symptom 1203 1228	influenced general status
+E24	Sign_symptom:T41 
+T42	Sign_symptom 1230 1241	ailing face
+E25	Sign_symptom:T42 
+T43	Sign_symptom 1243 1251	jaundice
+E26	Sign_symptom:T43 
+T44	Biological_structure 1259 1265	sclera
+R13	MODIFY Arg1:T44 Arg2:E26	
+T45	Sign_symptom 1272 1284	pigmentation
+E27	Sign_symptom:T45 
+T46	Color 1267 1271	blue
+R14	MODIFY Arg1:T46 Arg2:E27	
+T47	Biological_structure 1292 1297	nails
+R15	MODIFY Arg1:T47 Arg2:E27	
+T48	Sign_symptom 1299 1306	painful
+E28	Sign_symptom:T48 
+T49	Biological_structure 1307 1314	abdomen
+R16	MODIFY Arg1:T49 Arg2:E28	
+T50	Detailed_description 1318 1327	palpation
+R17	MODIFY Arg1:T50 Arg2:E28	
+T51	Diagnostic_procedure 1333 1339	weight
+E29	Diagnostic_procedure:T51 
+T52	Lab_value 1341 1346	45 kg
+R18	MODIFY Arg1:T52 Arg2:E29	
+T53	Diagnostic_procedure 1352 1367	laboratory test
+E30	Diagnostic_procedure:T53 
+T54	Sign_symptom 1414 1420	anemia
+E31	Sign_symptom:T54 
+T55	Detailed_description 1402 1413	hypochromic
+R19	MODIFY Arg1:T55 Arg2:E31	
+T56	Diagnostic_procedure 1422 1432	hemoglobin
+E32	Diagnostic_procedure:T56 
+T57	Diagnostic_procedure 1434 1436	Hb
+E33	Diagnostic_procedure:T57 
+T58	Lab_value 1439 1448	10.9 g/dl
+R20	MODIFY Arg1:T58 Arg2:E32	
+R21	IDENTICAL Arg1:E33 Arg2:E32	
+R22	SUB_PROCEDURE Arg1:E32 Arg2:E30	
+T59	Diagnostic_procedure 1450 1460	hematocrit
+E34	Diagnostic_procedure:T59 
+T60	Diagnostic_procedure 1462 1465	Htc
+E35	Diagnostic_procedure:T60 
+T61	Lab_value 1468 1473	31.6%
+R23	IDENTICAL Arg1:E35 Arg2:E34	
+R24	MODIFY Arg1:T61 Arg2:E34	
+T62	Diagnostic_procedure 1475 1497	medium cellular volume
+E36	Diagnostic_procedure:T62 
+T63	Diagnostic_procedure 1499 1502	MCV
+E37	Diagnostic_procedure:T63 
+R25	IDENTICAL Arg1:E37 Arg2:E36	
+T64	Lab_value 1505 1512	77.6 fL
+R26	MODIFY Arg1:T64 Arg2:E36	
+R27	SUB_PROCEDURE Arg1:E36 Arg2:E30	
+T65	Diagnostic_procedure 1534 1553	liver transaminases
+E38	Diagnostic_procedure:T65 
+T66	Lab_value 1515 1524	increased
+R28	MODIFY Arg1:T66 Arg2:E38	
+R29	SUB_PROCEDURE Arg1:E38 Arg2:E30	
+T67	Diagnostic_procedure 1555 1579	alanine-aminotransferase
+E39	Diagnostic_procedure:T67 
+T68	Diagnostic_procedure 1581 1585	ALAT
+E40	Diagnostic_procedure:T68 
+R30	IDENTICAL Arg1:E40 Arg2:E39	
+T69	Lab_value 1588 1597	158.9 U/L
+R31	MODIFY Arg1:T69 Arg2:E39	
+T70	Diagnostic_procedure 1599 1625	aspartate-aminotransferase
+E41	Diagnostic_procedure:T70 
+T71	Diagnostic_procedure 1627 1631	ASAT
+E42	Diagnostic_procedure:T71 
+R32	IDENTICAL Arg1:E42 Arg2:E41	
+T72	Lab_value 1634 1640	63 U/L
+R33	MODIFY Arg1:T72 Arg2:E41	
+T73	Diagnostic_procedure 1642 1668	gamma-glutamyl-transferase
+E43	Diagnostic_procedure:T73 
+T74	Diagnostic_procedure 1670 1673	GGT
+E44	Diagnostic_procedure:T74 
+R34	IDENTICAL Arg1:E44 Arg2:E43	
+T75	Lab_value 1676 1683	128 U/L
+R35	MODIFY Arg1:T75 Arg2:E43	
+R36	SUB_PROCEDURE Arg1:E39 Arg2:E38	
+R37	SUB_PROCEDURE Arg1:E41 Arg2:E38	
+R38	SUB_PROCEDURE Arg1:E43 Arg2:E38	
+T76	Sign_symptom 1686 1715	conjugated hyperbilirubinemia
+E45	Sign_symptom:T76 
+T77	Diagnostic_procedure 1717 1733	direct bilirubin
+E46	Diagnostic_procedure:T77 
+T78	Diagnostic_procedure 1735 1738	DBi
+E47	Diagnostic_procedure:T78 
+R39	IDENTICAL Arg1:E47 Arg2:E46	
+T79	Lab_value 1741 1752	1.432 mg/dL
+R40	MODIFY Arg1:T79 Arg2:E46	
+R41	SUB_PROCEDURE Arg1:E46 Arg2:E30	
+T80	Sign_symptom 1755 1767	hyponatremia
+E48	Sign_symptom:T80 
+T81	Diagnostic_procedure 1769 1771	Na
+E49	Diagnostic_procedure:T81 
+T82	Lab_value 1773 1783	132 mmol/L
+R42	MODIFY Arg1:T82 Arg2:E49	
+T83	Sign_symptom 1790 1804	hypopotassemia
+E50	Sign_symptom:T83 
+T84	Diagnostic_procedure 1806 1807	K
+E51	Diagnostic_procedure:T84 
+T85	Lab_value 1809 1820	2.85 mmol/L
+R43	MODIFY Arg1:T85 Arg2:E51	
+T86	Diagnostic_procedure 1836 1853	arterial pressure
+E52	Diagnostic_procedure:T86 
+T87	Lab_value 1858 1867	156 mm Hg
+T88	Detailed_description 1827 1835	systolic
+R44	MODIFY Arg1:T88 Arg2:T87	
+T89	Lab_value 1891 1899	96 mm Hg
+T90	Detailed_description 1877 1886	diastolic
+R45	MODIFY Arg1:T90 Arg2:T89	
+R46	MODIFY Arg1:T87 Arg2:E52	
+R47	MODIFY Arg1:T89 Arg2:E52	
+T91	Diagnostic_procedure 1911 1915	lead
+E53	Diagnostic_procedure:T91 
+T92	Lab_value 1926 1937	66.28 μg/dL
+T93	Lab_value 1959 1969	419.7 μg/L
+T95	Diagnostic_procedure 2005 2030	delta-aminolevulinic acid
+E54	Diagnostic_procedure:T95 
+T96	Lab_value 2035 2044	7.66 mg/L
+R51	MODIFY Arg1:T96 Arg2:E54	
+T97	Diagnostic_procedure 2093 2103	ultrasound
+E55	Diagnostic_procedure:T97 
+T98	Biological_structure 2083 2092	abdominal
+R52	MODIFY Arg1:T98 Arg2:E55	
+T99	Sign_symptom 2121 2134	disappearance
+E56	Sign_symptom:T99 
+T100	Detailed_description 2142 2194	delimitation between the cortical and medullar parts
+R53	MODIFY Arg1:T100 Arg2:E56	
+T101	Biological_structure 2198 2210	both kidneys
+R54	MODIFY Arg1:T101 Arg2:T100	
+T102	Clinical_event 2225 2237	consultation
+E57	Clinical_event:T102 
+T103	Nonbiological_location 2246 2280	occupational healthcare specialist
+R55	MODIFY Arg1:T103 Arg2:E57	
+T104	Medication 2318 2335	chelation therapy
+E58	Medication:T104 
+T105	Medication 2341 2345	EDTA
+E59	Medication:T105 
+R56	SUB_PROCEDURE Arg1:E59 Arg2:E58	
+T106	Dosage 2370 2383	4 tablets/day
+R57	MODIFY Arg1:T106 Arg2:E58	
+T107	Clinical_event 2417 2429	consultation
+E60	Clinical_event:T107 
+T108	Detailed_description 2404 2416	neurological
+R58	MODIFY Arg1:T108 Arg2:E60	
+T109	Disease_disorder 2479 2499	behavioral disorders
+E61	Disease_disorder:T109 
+T110	Disease_disorder 2505 2515	depressive
+E62	Disease_disorder:T110 
+T111	Diagnostic_procedure 2542 2555	psychotherapy
+E63	Diagnostic_procedure:T111 
+A1	POLARITY E63 UNCERTAIN
+T112	Disease_disorder 2642 2656	lead poisoning
+E64	Disease_disorder:T112 
+T113	Medication 2687 2696	hydration
+E65	Medication:T113 
+T114	Administration 2682 2686	i.v.
+R59	MODIFY Arg1:T114 Arg2:E65	
+T115	Dosage 2747 2768	3 liters per 24 hours
+R60	MODIFY Arg1:T115 Arg2:E65	
+T116	Sign_symptom 2843 2848	vomit
+E66	Sign_symptom:T116 
+A2	POLARITY E66 NEG
+T117	Sign_symptom 2862 2885	able to consume liquids
+E67	Sign_symptom:T117 
+T118	Medication 2901 2910	diuretics
+E68	Medication:T118 
+T119	Medication 2922 2932	furosemide
+E69	Medication:T119 
+T120	Administration 2933 2940	by vein
+R61	MODIFY Arg1:T120 Arg2:E69	
+R62	SUB_PROCEDURE Arg1:E69 Arg2:E68	
+T121	Diagnostic_procedure 2964 2981	arterial pressure
+E70	Diagnostic_procedure:T121 
+T122	Lab_value 2992 3013	above the upper limit
+R63	MODIFY Arg1:T122 Arg2:E70	
+T123	Medication 3061 3100	angiotensin-converting enzyme inhibitor
+E71	Medication:T123 
+T124	Sign_symptom 3124 3145	arterial hypertension
+E72	Sign_symptom:T124 
+A3	TREND E72 DEC
+T125	Medication 3193 3204	amino acids
+E73	Medication:T125 
+T126	Administration 3205 3218	intravenously
+R64	MODIFY Arg1:T126 Arg2:E73	
+T127	Medication 3236 3252	liver protectors
+E74	Medication:T127 
+T128	Administration 3253 3261	by mouth
+R65	MODIFY Arg1:T128 Arg2:E74	
+T129	Medication 3284 3309	vitamins of the B complex
+E75	Medication:T129 
+T130	Diagnostic_procedure 3363 3372	evolution
+E76	Diagnostic_procedure:T130 
+T131	Lab_value 3377 3395	slightly favorable
+R66	MODIFY Arg1:T131 Arg2:E76	
+T132	Date 3410 3422	3 days after
+E77	Date:T132 
+T133	Sign_symptom 3488 3492	pain
+E78	Sign_symptom:T133 
+T134	Sign_symptom 3494 3502	vomiting
+E79	Sign_symptom:T134 
+T135	Sign_symptom 3531 3535	pain
+E80	Sign_symptom:T135 
+T136	Biological_structure 3478 3487	abdominal
+T137	Severity 3471 3477	severe
+R67	MODIFY Arg1:T136 Arg2:E78	
+R68	MODIFY Arg1:T137 Arg2:E78	
+T138	Biological_structure 3543 3554	lumbar area
+R69	MODIFY Arg1:T138 Arg2:E80	
+T139	Diagnostic_procedure 3564 3585	laboratory parameters
+E81	Diagnostic_procedure:T139 
+T140	Lab_value 3596 3609	normalization
+R70	MODIFY Arg1:T140 Arg2:E81	
+T141	Duration 3630 3651	approximately 10 days
+E82	Duration:T141 
+T142	Therapeutic_procedure 3655 3664	treatment
+E83	Therapeutic_procedure:T142 
+T143	Date 3673 3680	6th day
+E84	Date:T143 
+T144	Medication 3709 3726	chelation therapy
+E85	Medication:T144 
+T145	Medication 3732 3736	EDTA
+E86	Medication:T145 
+R71	SUB_PROCEDURE Arg1:E86 Arg2:E85	
+A4	POLARITY E85 NEG
+T146	Clinical_event 3865 3876	discharging
+E87	Clinical_event:T146 
+T147	Diagnostic_procedure 3777 3781	lead
+E88	Diagnostic_procedure:T147 
+T148	Biological_structure 3759 3764	blood
+T149	Biological_structure 3769 3776	urinary
+R72	MODIFY Arg1:T149 Arg2:E88	
+R73	MODIFY Arg1:T148 Arg2:E88	
+T94	Biological_structure 1905 1910	blood
+T150	Biological_structure 1943 1950	urinary
+R48	MODIFY Arg1:T150 Arg2:T93	
+R49	MODIFY Arg1:T94 Arg2:T92	
+R50	MODIFY Arg1:T92 Arg2:E53	
+R74	MODIFY Arg1:T93 Arg2:E53	
+T151	Lab_value 3810 3821	45.57 μg/dL
+T152	Lab_value 3847 3857	836.4 μg/L
+T153	Coreference 3800 3805	level
+E89	Coreference:T153 
+R75	IDENTICAL Arg1:E89 Arg2:E88	
+T154	Biological_structure 3794 3799	blood
+T155	Biological_structure 3831 3838	urinary
+R76	MODIFY Arg1:T154 Arg2:T151	
+R77	MODIFY Arg1:T155 Arg2:T152	
+R78	MODIFY Arg1:T152 Arg2:E89	
+R79	MODIFY Arg1:T151 Arg2:E89	
+T156	Diagnostic_procedure 3904 3914	ultrasound
+E90	Diagnostic_procedure:T156 
+T157	Biological_structure 3894 3903	abdominal
+R80	MODIFY Arg1:T157 Arg2:E90	
+T158	Sign_symptom 3940 3966	pathological modifications
+E91	Sign_symptom:T158 
+A5	POLARITY E91 NEG
+T159	Date 3968 3981	After 14 days
+E92	Date:T159 
+T160	Clinical_event 4012 4022	discharged
+E93	Clinical_event:T160 
+T161	Sign_symptom 4035 4045	complaints
+E94	Sign_symptom:T161 
+A6	POLARITY E94 NEG
+T162	Other_entity 4240 4428	Nevertheless, we intend to repeat the blood lead levels after 12 and 24 months, assessing also the renal (urea, creatinine, urinary exam) and hepatic functions (ASAT, ALAT, GGT, bilirubin)
+#1	AnnotatorNotes T162	Omitted as this is planned work
+T163	Other_entity 4047 4155;4156 4238	and we recommended no further exposure to lead, avoiding the contact and the working in the pottery process. The long-term outcome of this case depends on further exposure to this heavy metal
+#2	AnnotatorNotes T163	Omitted as this is recommendation only
+T164	Clinical_event 43 51	admitted
+E95	Clinical_event:T164 
+T165	Nonbiological_location 59 65	clinic
+R81	MODIFY Arg1:T165 Arg2:E95	
+*	OVERLAP E95 E1 E2 E3 E4 E5
+R82	AFTER Arg1:E5 Arg2:E6	
+*	OVERLAP E6 E7 E8 E9
+R83	BEFORE Arg1:E9 Arg2:E10	
+*	OVERLAP E10 E11 E12 E13 E14
+R84	BEFORE Arg1:E14 Arg2:E15	
+*	OVERLAP E15 E16 E17 E18
+R85	BEFORE Arg1:E18 Arg2:E19	
+*	OVERLAP E19 E20 E22
+R86	BEFORE Arg1:E22 Arg2:E23	
+*	OVERLAP E23 E24 E25 E26 E27 E28 E29 E30 E31 E45 E48 E50 E52 E53 E54 E55 E56
+R87	BEFORE Arg1:E56 Arg2:E57	
+*	OVERLAP E57 E58
+R88	BEFORE Arg1:E58 Arg2:E60	
+*	OVERLAP E60 E61 E62 E63
+R89	BEFORE Arg1:E63 Arg2:E64	
+R90	BEFORE Arg1:E64 Arg2:E65	
+R91	BEFORE Arg1:E65 Arg2:E66	
+*	OVERLAP E66 E67
+R92	BEFORE Arg1:E67 Arg2:E68	
+R93	BEFORE Arg1:E68 Arg2:E70	
+*	OVERLAP E70 E71
+R94	BEFORE Arg1:E71 Arg2:E72	
+*	OVERLAP E72 E73 E74 E75
+R95	BEFORE Arg1:E75 Arg2:E76	
+*	OVERLAP E76 E77 E78 E79 E80
+R96	BEFORE Arg1:E80 Arg2:E81	
+*	OVERLAP E81 E82 E83
+R97	AFTER Arg1:E83 Arg2:E84	
+*	OVERLAP E84 E85 E88 E89
+R98	BEFORE Arg1:E89 Arg2:E87	
+R99	AFTER Arg1:E87 Arg2:E90	
+*	OVERLAP E90 E91
+R100	BEFORE Arg1:E91 Arg2:E92	
+*	OVERLAP E92 E93 E94

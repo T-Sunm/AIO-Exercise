@@ -1,0 +1,300 @@
+T1	Age 2 9	newborn
+T2	Sex 10 13	boy
+T3	Family_history 17 50	healthy nonconsanguineous parents
+T4	Clinical_event 55 64	delivered
+E1	Clinical_event:T4 
+T5	Date 68 87	37 weeks’ gestation
+E2	Date:T5 
+T6	Therapeutic_procedure 91 107	cesarean section
+E3	Therapeutic_procedure:T6 
+T7	Subject 113 119	mother
+T8	Family_history 132 144	32 years old
+T9	Family_history 121 130	primipara
+T10	Clinical_event 155 163	admitted
+E4	Clinical_event:T10 
+T11	Nonbiological_location 171 179	hospital
+T12	Date 180 198	2 weeks previously
+E5	Date:T12 
+T13	Sign_symptom 218 246	fetal intrauterine movements
+E6	Sign_symptom:T13 
+T14	Lab_value 210 217	reduced
+R1	MODIFY Arg1:T14 Arg2:E6	
+T15	Sign_symptom 251 265	polyhydramnios
+E7	Sign_symptom:T15 
+T16	Diagnostic_procedure 279 290	birthweight
+E8	Diagnostic_procedure:T16 
+T17	Lab_value 295 302	2,330 g
+R2	MODIFY Arg1:T17 Arg2:E8	
+T18	Lab_value 304 320	<10th percentile
+R3	MODIFY Arg1:T18 Arg2:E8	
+T19	Diagnostic_procedure 323 329	length
+E9	Diagnostic_procedure:T19 
+T20	Lab_value 330 335	47 cm
+R4	MODIFY Arg1:T20 Arg2:E9	
+T21	Diagnostic_procedure 341 359	head circumference
+E10	Diagnostic_procedure:T21 
+T22	Lab_value 360 367	33.2 cm
+R5	MODIFY Arg1:T22 Arg2:E10	
+T23	Sign_symptom 394 406	low-set ears
+E11	Sign_symptom:T23 
+T24	Sign_symptom 411 429	bilateral clubfoot
+E12	Sign_symptom:T24 
+T25	Diagnostic_procedure 431 443	Apgar scores
+E13	Diagnostic_procedure:T25 
+T26	Time 464 465;477 484	1 minutes
+E14	Time:T26 
+T27	Time 474 484	10 minutes
+E15	Time:T27 
+T28	Time 467 468;477 484	5 minutes
+E16	Time:T28 
+T29	Lab_value 449 450	2
+T30	Lab_value 452 453	6
+T31	Lab_value 459 460	7
+R6	MODIFY Arg1:E14 Arg2:T29	
+R7	MODIFY Arg1:T29 Arg2:E13	
+R8	MODIFY Arg1:E16 Arg2:T30	
+R9	MODIFY Arg1:T30 Arg2:E13	
+R10	MODIFY Arg1:E15 Arg2:T31	
+R11	MODIFY Arg1:T31 Arg2:E13	
+T32	Sign_symptom 518 527	hypotonia
+E17	Sign_symptom:T32 
+T33	Severity 511 517	severe
+R12	MODIFY Arg1:T33 Arg2:E17	
+T34	Clinical_event 496 505	presented
+E18	Clinical_event:T34 
+T35	Sign_symptom 532 559	generalized muscle weakness
+E19	Sign_symptom:T35 
+T36	Therapeutic_procedure 571 593	ventilatory assistance
+E20	Therapeutic_procedure:T36 
+T37	Therapeutic_procedure 598 624	total parenteral nutrition
+E21	Therapeutic_procedure:T37 
+T38	Disease_disorder 689 709	respiratory acidosis
+E22	Disease_disorder:T38 
+T39	Sign_symptom 711 723	Hearing loss
+E23	Sign_symptom:T39 
+T40	Diagnostic_procedure 740 766	auditory evoked potentials
+E24	Diagnostic_procedure:T40 
+T41	Diagnostic_procedure 782 785	MRI
+E25	Diagnostic_procedure:T41 
+T42	Biological_structure 774 781	cranial
+R13	MODIFY Arg1:T42 Arg2:E25	
+T43	Lab_value 793 808	mildly enlarged
+T44	Biological_structure 809 819	ventricles
+R14	MODIFY Arg1:T43 Arg2:T44	
+R15	MODIFY Arg1:T44 Arg2:E25	
+T45	Biological_structure 824 837	liquor spaces
+R16	MODIFY Arg1:T43 Arg2:T45	
+R17	MODIFY Arg1:T45 Arg2:E25	
+T46	Date 839 859	Two days after birth
+E26	Date:T46 
+T47	Sign_symptom 894 914	abdominal distension
+E27	Sign_symptom:T47 
+T48	Severity 887 893	severe
+R18	MODIFY Arg1:T48 Arg2:E27	
+T49	Sign_symptom 922 938	hypoactive bowel
+E28	Sign_symptom:T49 
+T50	Diagnostic_procedure 940 943	MRI
+E29	Diagnostic_procedure:T50 
+T51	Sign_symptom 960 979	intestinal dilation
+E30	Sign_symptom:T51 
+T52	Severity 953 959	marked
+R19	MODIFY Arg1:T52 Arg2:E30	
+T53	Sign_symptom 988 1010	mechanical obstruction
+E31	Sign_symptom:T53 
+A1	POLARITY E31 NEG
+R20	MODIFY Arg1:E31 Arg2:E30	
+T54	Diagnostic_procedure 1012 1037	Laboratory investigations
+E32	Diagnostic_procedure:T54 
+T56	Lab_value 1059 1067	27 mg/dL
+T57	Sign_symptom 1070 1084	hypomagnesemia
+E33	Sign_symptom:T57 
+T55	Sign_symptom 1045 1057	hypoglycemia
+E34	Sign_symptom:T55 
+T58	Lab_value 1086 1097	0.58 mmol/L
+T59	Lab_value 1117 1127	2.4 mmol/L
+R21	MODIFY Arg1:T56 Arg2:E34	
+R22	MODIFY Arg1:T58 Arg2:E33	
+T60	Sign_symptom 1104 1115	hypokalemia
+E35	Sign_symptom:T60 
+R23	MODIFY Arg1:T59 Arg2:E35	
+R24	MODIFY Arg1:E34 Arg2:E32	
+R25	MODIFY Arg1:E33 Arg2:E32	
+R26	MODIFY Arg1:E35 Arg2:E32	
+T61	Diagnostic_procedure 1130 1143	Blood lactate
+E36	Diagnostic_procedure:T61 
+T62	Lab_value 1156 1166	1.3 mmol/L
+T63	Lab_value 1148 1154	normal
+T64	Diagnostic_procedure 1201 1214	liver enzymes
+E37	Diagnostic_procedure:T64 
+T65	Lab_value 1220 1232	unremarkable
+R27	MODIFY Arg1:T65 Arg2:E37	
+R28	MODIFY Arg1:T63 Arg2:E36	
+R29	MODIFY Arg1:T62 Arg2:E36	
+T66	Detailed_description 1168 1195	normal range 0.5–2.2 mmol/L
+R30	MODIFY Arg1:T66 Arg2:E36	
+T67	Diagnostic_procedure 1252 1258	biopsy
+E38	Diagnostic_procedure:T67 
+T68	Biological_structure 1236 1251	skeletal muscle
+R31	MODIFY Arg1:T68 Arg2:E38	
+T69	Disease_disorder 1419 1441	mitochondrial disorder
+E39	Disease_disorder:T69 
+A2	POLARITY E39 UNCERTAIN
+T70	Biological_structure 1382 1395	muscle fibers
+T71	Diagnostic_procedure 1308 1328	cytochrome c oxidase
+E40	Diagnostic_procedure:T71 
+T72	Diagnostic_procedure 1330 1333	COX
+E41	Diagnostic_procedure:T72 
+R32	IDENTICAL Arg1:E41 Arg2:E40	
+T73	Lab_value 1335 1344	deficient
+R33	MODIFY Arg1:T73 Arg2:E40	
+T74	Diagnostic_procedure 1349 1372	succinate dehydrogenase
+E42	Diagnostic_procedure:T74 
+T75	Lab_value 1373 1381	positive
+R34	MODIFY Arg1:T75 Arg2:E42	
+T76	Detailed_description 1284 1293	scattered
+R35	MODIFY Arg1:T76 Arg2:T70	
+T77	Detailed_description 1295 1307	hypertrophic
+R36	MODIFY Arg1:T77 Arg2:T70	
+R37	MODIFY Arg1:T70 Arg2:E40	
+R38	MODIFY Arg1:T70 Arg2:E42	
+T78	Diagnostic_procedure 1443 1468	Molecular genetic studies
+E43	Diagnostic_procedure:T78 
+T79	Sign_symptom 1485 1500	mtDNA depletion
+E44	Sign_symptom:T79 
+T80	Severity 1478 1484	marked
+R39	MODIFY Arg1:T80 Arg2:E44	
+T81	Lab_value 1512 1524	93% decrease
+R40	MODIFY Arg1:T81 Arg2:E44	
+T82	Detailed_description 1528 1560	compared to age-matched controls
+R41	MODIFY Arg1:T82 Arg2:T81	
+T83	Diagnostic_procedure 1571 1602	screen for mtDNA rearrangements
+E45	Diagnostic_procedure:T83 
+T84	Biological_structure 1610 1633;1652 1658	individual COX-positive fibers
+T85	Biological_structure 1638 1658	COX-deficient fibers
+T86	Lab_value 1664 1672	negative
+R42	MODIFY Arg1:T84 Arg2:E45	
+R43	MODIFY Arg1:T85 Arg2:E45	
+R44	MODIFY Arg1:T86 Arg2:E45	
+T87	Diagnostic_procedure 1677 1686	sequenced
+E46	Diagnostic_procedure:T87 
+T88	Biological_structure 1746 1756	POLG1 gene
+R45	MODIFY Arg1:T88 Arg2:E46	
+T89	Detailed_description 1691 1738	entire coding region and intron-exon boundaries
+R46	MODIFY Arg1:T89 Arg2:E46	
+T90	Sign_symptom 1783 1814	heterozygous missense mutations
+E47	Sign_symptom:T90 
+T91	Lab_value 1770 1773	two
+R47	MODIFY Arg1:T91 Arg2:E47	
+T92	Sign_symptom 1827 1854	c.679C>T predicting p.R227W
+E48	Sign_symptom:T92 
+R48	MODIFY Arg1:E48 Arg2:E47	
+T93	Sign_symptom 1859 1887	c.2542G>A predicting p.G848S
+E49	Sign_symptom:T93 
+R49	MODIFY Arg1:E49 Arg2:E47	
+T94	Diagnostic_procedure 1889 1919	Sequencing of parental samples
+E50	Diagnostic_procedure:T94 
+T95	Sign_symptom 1930 1951	recessive inheritance
+E51	Sign_symptom:T95 
+T96	Outcome 1964 1968	died
+E52	Outcome:T96 
+T97	Date 1972 1979	20 days
+E53	Date:T97 
+T98	Disease_disorder 1983 2002	respiratory failure
+E54	Disease_disorder:T98 
+T99	Diagnostic_procedure 2007 2014	autopsy
+E55	Diagnostic_procedure:T99 
+T100	Diagnostic_procedure 2061 2078	gross examination
+E56	Diagnostic_procedure:T100 
+T101	Sign_symptom 2039 2057	remarkable changes
+E57	Sign_symptom:T101 
+A3	POLARITY E57 NEG
+T102	Biological_structure 2020 2025	brain
+R50	MODIFY Arg1:T102 Arg2:E57	
+R51	SUB_PROCEDURE Arg1:E56 Arg2:E55	
+T103	Diagnostic_procedure 2080 2089	Histology
+E58	Diagnostic_procedure:T103 
+R52	SUB_PROCEDURE Arg1:E58 Arg2:E55	
+T104	Sign_symptom 2171 2186	neuronal damage
+E59	Sign_symptom:T104 
+A4	POLARITY E59 NEG
+T105	Biological_structure 2194 2205	spinal cord
+R53	MODIFY Arg1:T105 Arg2:E59	
+T106	Sign_symptom 2232 2243	cholestasis
+E60	Sign_symptom:T106 
+T107	Biological_structure 2211 2216	liver
+R54	MODIFY Arg1:T107 Arg2:E60	
+T108	Detailed_description 2224 2231	diffuse
+R55	MODIFY Arg1:T108 Arg2:E60	
+T109	Sign_symptom 2300 2309	steatosis
+E61	Sign_symptom:T109 
+A5	POLARITY E61 NEG
+T110	Sign_symptom 2311 2319	necrosis
+E62	Sign_symptom:T110 
+A6	POLARITY E62 NEG
+T111	Biological_structure 2289 2299	hepatocyte
+R56	MODIFY Arg1:T111 Arg2:E61	
+R57	MODIFY Arg1:T111 Arg2:E62	
+T112	Sign_symptom 2330 2338	fibrosis
+E63	Sign_symptom:T112 
+A7	POLARITY E63 NEG
+T113	Biological_structure 2324 2329	liver
+R58	MODIFY Arg1:T113 Arg2:E63	
+T114	Sign_symptom 2454 2462	dilation
+E64	Sign_symptom:T114 
+T115	Sign_symptom 2467 2475	thinning
+E65	Sign_symptom:T115 
+T116	Biological_structure 2483 2493	bowel wall
+R59	MODIFY Arg1:T116 Arg2:E65	
+R60	MODIFY Arg1:T116 Arg2:E64	
+T117	Sign_symptom 2587 2602	mtDNA depletion
+E66	Sign_symptom:T117 
+T118	Severity 2580 2586	severe
+R61	MODIFY Arg1:T118 Arg2:E66	
+T119	Lab_value 2604 2622	up to 94% decrease
+R62	MODIFY Arg1:T119 Arg2:E66	
+T120	Biological_structure 2533 2540;2559 2570	stomach homogenates
+T121	Biological_structure 2542 2547;2559 2570	ileum homogenates
+T122	Biological_structure 2553 2570	colon homogenates
+R63	MODIFY Arg1:T122 Arg2:E66	
+R64	MODIFY Arg1:T120 Arg2:E66	
+R65	MODIFY Arg1:T121 Arg2:E66	
+T123	Diagnostic_procedure 2684 2722	Laser capture microdissection analysis
+E67	Diagnostic_procedure:T123 
+T124	Coreference 2742 2757	mtDNA depletion
+E68	Coreference:T124 
+R66	IDENTICAL Arg1:E68 Arg2:E66	
+T125	Biological_structure 2778 2796	muscularis propria
+R67	MODIFY Arg1:T125 Arg2:E68	
+T126	Detailed_description 2826 2840	external layer
+R68	MODIFY Arg1:T126 Arg2:T125	
+T127	Coreference 2906 2921	mtDNA depletion
+E69	Coreference:T127 
+T128	Severity 2899 2905	milder
+R69	MODIFY Arg1:T128 Arg2:E69	
+R70	IDENTICAL Arg1:E69 Arg2:E66	
+T129	Biological_structure 2851 2865	Ganglion cells
+T130	Biological_structure 2875 2891	myenteric plexus
+R71	MODIFY Arg1:T129 Arg2:T130	
+R72	MODIFY Arg1:T130 Arg2:E69	
+T131	Biological_structure 2941 2956	small intestine
+R73	MODIFY Arg1:T131 Arg2:E69	
+T132	Sign_symptom 2980 2995	mtDNA depletion
+E70	Sign_symptom:T132 
+A8	POLARITY E70 NEG
+T133	Biological_structure 2999 3004	liver
+R74	MODIFY Arg1:T133 Arg2:E70	
+R75	MODIFY Arg1:T9 Arg2:T7	
+R76	MODIFY Arg1:T8 Arg2:T7	
+R77	MODIFY Arg1:T7 Arg2:E4	
+R78	MODIFY Arg1:T11 Arg2:E4	
+R79	AFTER Arg1:E3 Arg2:E4	
+*	OVERLAP E1 E2 E3
+*	OVERLAP E4 E5 E6 E7
+R80	BEFORE Arg1:E7 Arg2:E8	
+*	OVERLAP E8 E9 E10 E11 E12 E13 E18 E17 E19 E20 E21 E22 E23 E24 E25
+R81	BEFORE Arg1:E25 Arg2:E26	
+*	OVERLAP E26 E27 E28 E29 E30 E32 E36 E37 E38 E40 E42 E39 E43 E44 E45 E46 E47 E50 E51
+R82	BEFORE Arg1:E51 Arg2:E52	
+*	OVERLAP E52 E53 E54
+R83	BEFORE Arg1:E54 Arg2:E55	
+*	OVERLAP E55 E57 E59 E60 E61 E62 E63 E64 E65 E66 E67 E68 E69 E70

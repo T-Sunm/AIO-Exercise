@@ -1,0 +1,406 @@
+T1	Age 4 15	36-year-old
+T2	Sex 16 20	male
+T3	Disease_disorder 84 87	SSc
+E1	Disease_disorder:T3 
+#1	AnnotatorNotes E1	Systemic sclerosis
+T4	Biological_structure 74 83	cutaneous
+T5	Detailed_description 66 73	diffuse
+R1	MODIFY Arg1:T4 Arg2:E1	
+R2	MODIFY Arg1:T5 Arg2:E1	
+T6	Clinical_event 125 134	follow-up
+E2	Clinical_event:T6 
+A1	POLARITY E2 NEG
+T7	Medication 138 148	medication
+E3	Medication:T7 
+A2	POLARITY E3 NEG
+T8	History 66 87	diffuse cutaneous SSc
+T9	Duration 48 54	6-year
+E4	Duration:T9 
+T10	Sign_symptom 177 184	malaise
+E5	Sign_symptom:T10 
+T11	Sign_symptom 186 199	poor appetite
+E6	Sign_symptom:T11 
+T12	Sign_symptom 217 236	shortness of breath
+E7	Sign_symptom:T12 
+T13	Detailed_description 205 216	progressive
+R3	MODIFY Arg1:T13 Arg2:E7	
+T14	Duration 241 248	1 month
+E8	Duration:T14 
+T15	Sign_symptom 253 262	oligouria
+E9	Sign_symptom:T15 
+T16	Duration 267 273	3 days
+E10	Duration:T16 
+R4	MODIFY Arg1:E8 Arg2:E7	
+R5	MODIFY Arg1:E8 Arg2:E6	
+R6	MODIFY Arg1:E8 Arg2:E5	
+R7	MODIFY Arg1:E10 Arg2:E9	
+T17	Clinical_event 282 290	admitted
+E11	Clinical_event:T17 
+T18	Nonbiological_location 298 306	hospital
+R8	MODIFY Arg1:T18 Arg2:E11	
+T19	Disease_disorder 312 325	renal failure
+E12	Disease_disorder:T19 
+T20	Sign_symptom 340 345	edema
+E13	Sign_symptom:T20 
+T21	Biological_structure 330 339	pulmonary
+R9	MODIFY Arg1:T21 Arg2:E13	
+T22	Lab_value 434 447	174/127 mm Hg
+T23	Diagnostic_procedure 380 394	blood pressure
+E14	Diagnostic_procedure:T23 
+T24	Diagnostic_procedure 396 406	pulse rate
+E15	Diagnostic_procedure:T24 
+T25	Diagnostic_procedure 412 428	respiratory rate
+E16	Diagnostic_procedure:T25 
+T26	Lab_value 449 455	88/min
+R10	MODIFY Arg1:T22 Arg2:E14	
+R11	MODIFY Arg1:T26 Arg2:E15	
+T27	Lab_value 461 467	22/min
+R12	MODIFY Arg1:T27 Arg2:E16	
+T28	Diagnostic_procedure 483 502	Laboratory analysis
+E17	Diagnostic_procedure:T28 
+T29	Diagnostic_procedure 534 556	white blood cell count
+E18	Diagnostic_procedure:T29 
+T30	Diagnostic_procedure 584 594	hemoglobin
+E19	Diagnostic_procedure:T30 
+T31	Diagnostic_procedure 619 633	platelet count
+E20	Diagnostic_procedure:T31 
+T32	Diagnostic_procedure 666 685	blood urea nitrogen
+E21	Diagnostic_procedure:T32 
+T33	Diagnostic_procedure 710 720	creatinine
+E22	Diagnostic_procedure:T33 
+T34	Diagnostic_procedure 749 756	calcium
+E23	Diagnostic_procedure:T34 
+T35	Diagnostic_procedure 786 796	phosphorus
+E24	Diagnostic_procedure:T35 
+T36	Diagnostic_procedure 825 836	haptoglobin
+E25	Diagnostic_procedure:T36 
+T37	Diagnostic_procedure 870 891	lactate dehydrogenase
+E26	Diagnostic_procedure:T37 
+T38	Lab_value 893 900	547 U/L
+R13	MODIFY Arg1:T38 Arg2:E26	
+T39	Lab_value 838 849	<6.56 mg/dL
+R14	MODIFY Arg1:T39 Arg2:E25	
+T40	Lab_value 798 807	5.4 mg/dL
+R15	MODIFY Arg1:T40 Arg2:E24	
+T41	Lab_value 758 767	8.2 mg/dL
+R16	MODIFY Arg1:T41 Arg2:E23	
+T42	Lab_value 722 731	8.9 mg/dL
+R17	MODIFY Arg1:T42 Arg2:E22	
+T43	Lab_value 687 695	78 mg/dL
+R18	MODIFY Arg1:T43 Arg2:E21	
+T44	Lab_value 635 643	87000/μL
+R19	MODIFY Arg1:T44 Arg2:E20	
+T45	Lab_value 596 604	8.6 g/dL
+R20	MODIFY Arg1:T45 Arg2:E19	
+T46	Lab_value 558 565	7730/μL
+R21	MODIFY Arg1:T46 Arg2:E18	
+T47	Diagnostic_procedure 926 936	urinalysis
+E27	Diagnostic_procedure:T47 
+T48	Lab_value 948 971	proteinuria score of 2+
+T49	Lab_value 973 982	200 mg/dL
+R22	MODIFY Arg1:T48 Arg2:E27	
+R23	MODIFY Arg1:T49 Arg2:E27	
+T50	Diagnostic_procedure 985 1007	white blood cell count
+E28	Diagnostic_procedure:T50 
+T51	Diagnostic_procedure 1037 1057	red blood cell count
+E29	Diagnostic_procedure:T51 
+R24	SUB_PROCEDURE Arg1:E28 Arg2:E27	
+R25	SUB_PROCEDURE Arg1:E29 Arg2:E27	
+T52	Lab_value 1011 1031	3–5/high power field
+T53	Lab_value 1061 1083	25–50/high power field
+R26	MODIFY Arg1:T52 Arg2:E28	
+R27	MODIFY Arg1:T53 Arg2:E29	
+T54	Diagnostic_procedure 1089 1107	autoimmune profile
+E30	Diagnostic_procedure:T54 
+T55	Diagnostic_procedure 1121 1141	antinuclear antibody
+E31	Diagnostic_procedure:T55 
+R28	SUB_PROCEDURE Arg1:E31 Arg2:E30	
+T56	Lab_value 1151 1156	1:320
+R29	MODIFY Arg1:T56 Arg2:E31	
+T57	Lab_value 1158 1174	speckles; normal
+R30	MODIFY Arg1:T57 Arg2:E31	
+T58	Lab_value 1176 1181	<1:40
+R31	MODIFY Arg1:T58 Arg2:T57	
+T59	Diagnostic_procedure 1194 1204	anti-Scl70
+E32	Diagnostic_procedure:T59 
+T60	Diagnostic_procedure 1206 1230	anti-double-stranded DNA
+E33	Diagnostic_procedure:T60 
+T61	Diagnostic_procedure 1232 1239	anti-Ro
+E34	Diagnostic_procedure:T61 
+T62	Diagnostic_procedure 1241 1248	anti-La
+E35	Diagnostic_procedure:T62 
+T63	Diagnostic_procedure 1254 1280	anticardiolipin antibodies
+E36	Diagnostic_procedure:T63 
+T64	Lab_value 1290 1298	negative
+R32	MODIFY Arg1:T64 Arg2:E36	
+R33	MODIFY Arg1:T64 Arg2:E35	
+R34	MODIFY Arg1:T64 Arg2:E34	
+R35	MODIFY Arg1:T64 Arg2:E33	
+R36	MODIFY Arg1:T64 Arg2:E32	
+T65	Diagnostic_procedure 1307 1315	echogram
+E37	Diagnostic_procedure:T65 
+T66	Biological_structure 1300 1306	Kidney
+R37	MODIFY Arg1:T66 Arg2:E37	
+T67	Sign_symptom 1325 1356	decreased bilateral kidney size
+E38	Sign_symptom:T67 
+T68	Sign_symptom 1365 1379	hydronephrosis
+E39	Sign_symptom:T68 
+A3	POLARITY E39 NEG
+T69	Sign_symptom 1476 1481	edema
+E40	Sign_symptom:T69 
+T70	Biological_structure 1466 1475	pulmonary
+R38	MODIFY Arg1:T70 Arg2:E40	
+T71	Sign_symptom 1486 1495	oligouria
+E41	Sign_symptom:T71 
+T72	Date 1501 1514	3 days before
+E42	Date:T72 
+T73	Disease_disorder 1580 1593	renal failure
+E43	Disease_disorder:T73 
+T74	Detailed_description 1563 1579	acute-on-chronic
+R39	MODIFY Arg1:T74 Arg2:E43	
+T75	Disease_disorder 1627 1630	SRC
+E44	Disease_disorder:T75 
+#2	AnnotatorNotes E44	scleroderma renal crisis
+T76	Disease_disorder 1664 1677	renal failure
+E45	Disease_disorder:T76 
+T77	Sign_symptom 1710 1716	anemia
+E46	Sign_symptom:T77 
+T78	Detailed_description 1683 1699	microangiopathic
+T79	Detailed_description 1700 1709	hemolytic
+R40	MODIFY Arg1:T79 Arg2:E46	
+R41	MODIFY Arg1:T78 Arg2:E46	
+T80	Sign_symptom 1721 1733	hypertension
+E47	Sign_symptom:T80 
+T81	Sign_symptom 1799 1830	deterioration in renal function
+E48	Sign_symptom:T81 
+T82	Sign_symptom 1835 1841	anuria
+E49	Sign_symptom:T82 
+T83	Therapeutic_procedure 1879 1891	hemodialysis
+E50	Therapeutic_procedure:T83 
+T84	Detailed_description 1871 1878	regular
+R42	MODIFY Arg1:T84 Arg2:E50	
+T85	Date 1908 1920	After 3 days
+E51	Date:T85 
+T86	Medication 1922 1931	captopril
+E52	Medication:T86 
+A4	POLARITY E52 NEG
+T87	Medication 1947 1957	amlodipine
+E53	Medication:T87 
+T88	Sign_symptom 2010 2015	cough
+E54	Sign_symptom:T88 
+T89	Severity 1990 1996	severe
+T90	Detailed_description 1998 2009	intolerable
+R43	MODIFY Arg1:T90 Arg2:E54	
+R44	MODIFY Arg1:T89 Arg2:E54	
+T91	Diagnostic_procedure 2061 2084	systolic blood pressure
+E55	Diagnostic_procedure:T91 
+T92	Lab_value 2089 2099	controlled
+T93	Lab_value 2100 2125	between 140 and 180 mm Hg
+R45	MODIFY Arg1:T92 Arg2:E55	
+R46	MODIFY Arg1:T93 Arg2:E55	
+T94	Date 2144 2157	3 weeks after
+E56	Date:T94 
+T95	Coreference 2188 2200	hemodialysis
+E57	Coreference:T95 
+R47	IDENTICAL Arg1:E57 Arg2:E50	
+T96	Disease_disorder 2257 2273	seizure disorder
+E58	Disease_disorder:T96 
+T97	Detailed_description 2244 2256	tonic-clonic
+T98	Detailed_description 2232 2243	generalized
+R48	MODIFY Arg1:T97 Arg2:E58	
+R49	MODIFY Arg1:T98 Arg2:E58	
+T99	Diagnostic_procedure 2283 2302	computed tomography
+E59	Diagnostic_procedure:T99 
+T100	Diagnostic_procedure 2304 2306	CT
+E60	Diagnostic_procedure:T100 
+T101	Biological_structure 2277 2282	brain
+R50	MODIFY Arg1:T101 Arg2:E59	
+R51	IDENTICAL Arg1:E60 Arg2:E59	
+T102	Disease_disorder 2338 2345	infarct
+E61	Disease_disorder:T102 
+T103	Detailed_description 2330 2337	lacunar
+T104	Severity 2324 2329	small
+R52	MODIFY Arg1:T103 Arg2:E61	
+R53	MODIFY Arg1:T104 Arg2:E61	
+T105	Biological_structure 2355 2374	left basal ganglion
+R54	MODIFY Arg1:T105 Arg2:E61	
+T106	Disease_disorder 2396 2406	hemorrhage
+E62	Disease_disorder:T106 
+A5	POLARITY E62 NEG
+T107	Disease_disorder 2416 2423	infarct
+E63	Disease_disorder:T107 
+A6	POLARITY E63 NEG
+T108	Severity 2410 2415	large
+R55	MODIFY Arg1:T108 Arg2:E63	
+T109	Biological_structure 2383 2395	intracranial
+R56	MODIFY Arg1:T109 Arg2:E62	
+T110	Medication 2468 2483	anticonvulsants
+E64	Medication:T110 
+A7	POLARITY E64 NEG
+T111	Clinical_event 2513 2523	discharged
+E65	Clinical_event:T111 
+T112	Nonbiological_location 2524 2528	home
+R57	MODIFY Arg1:T112 Arg2:E65	
+T113	Frequency 2585 2598	thrice weekly
+T114	Therapeutic_procedure 2572 2584	hemodialysis
+E66	Therapeutic_procedure:T114 
+R58	MODIFY Arg1:T113 Arg2:E66	
+T115	Sign_symptom 2429 2436	seizure
+E67	Sign_symptom:T115 
+A8	POLARITY E67 NEG
+T116	Date 2612 2624	1 week after
+E68	Date:T116 
+T117	Sign_symptom 2673 2681	headache
+E69	Sign_symptom:T117 
+T118	Sign_symptom 2686 2694	vomiting
+E70	Sign_symptom:T118 
+T119	Sign_symptom 2700 2709	confusion
+E71	Sign_symptom:T119 
+T120	Sign_symptom 2757 2764	seizure
+E72	Sign_symptom:T120 
+T121	Detailed_description 2744 2756	tonic-clonic
+T122	Detailed_description 2732 2743	generalized
+R59	MODIFY Arg1:T121 Arg2:E72	
+R60	MODIFY Arg1:T122 Arg2:E72	
+T123	Detailed_description 2660 2672	sudden-onset
+R61	MODIFY Arg1:T123 Arg2:E69	
+T124	Clinical_event 2769 2778	presented
+E73	Clinical_event:T124 
+T125	Nonbiological_location 2786 2806	emergency department
+R62	MODIFY Arg1:T125 Arg2:E73	
+T126	Diagnostic_procedure 2814 2828	blood pressure
+E74	Diagnostic_procedure:T126 
+T127	Lab_value 2832 2845	183/100 mm Hg
+R63	MODIFY Arg1:T127 Arg2:E74	
+T128	Diagnostic_procedure 2847 2861	platelet count
+E75	Diagnostic_procedure:T128 
+T129	Lab_value 2865 2875	149,000/μL
+R64	MODIFY Arg1:T129 Arg2:E75	
+T130	Diagnostic_procedure 2877 2886	serum LDH
+E76	Diagnostic_procedure:T130 
+T131	Lab_value 2890 2897	332 U/L
+R65	MODIFY Arg1:T131 Arg2:E76	
+T132	Diagnostic_procedure 2905 2927	peripheral blood smear
+E77	Diagnostic_procedure:T132 
+T133	Lab_value 2928 2958	containing 2–3 schizocytes/HPF
+R66	MODIFY Arg1:T133 Arg2:E77	
+T134	Diagnostic_procedure 2974 2976	CT
+E78	Diagnostic_procedure:T134 
+T135	Biological_structure 2968 2973	Brain
+R67	MODIFY Arg1:T135 Arg2:E78	
+T136	Lab_value 2986 3004	no interval change
+R68	MODIFY Arg1:T136 Arg2:E78	
+T137	Diagnostic_procedure 3010 3025	lumbar puncture
+E79	Diagnostic_procedure:T137 
+T138	Lab_value 3035 3057	traumatic tapping only
+R69	MODIFY Arg1:T138 Arg2:E79	
+T139	Diagnostic_procedure 3073 3087	fluid cultures
+E80	Diagnostic_procedure:T139 
+T140	Biological_structure 3059 3072	Cerebrospinal
+R70	MODIFY Arg1:T140 Arg2:E80	
+T141	Lab_value 3093 3101	negative
+R71	MODIFY Arg1:T141 Arg2:E80	
+T142	Detailed_description 3106 3114	bacteria
+T143	Detailed_description 3116 3128	mycobacteria
+T144	Detailed_description 3134 3141	viruses
+R72	MODIFY Arg1:T142 Arg2:T141	
+R73	MODIFY Arg1:T143 Arg2:T141	
+R74	MODIFY Arg1:T144 Arg2:T141	
+T145	Diagnostic_procedure 3149 3175	magnetic resonance imaging
+E81	Diagnostic_procedure:T145 
+T146	Diagnostic_procedure 3177 3180	MRI
+E82	Diagnostic_procedure:T146 
+R75	IDENTICAL Arg1:E82 Arg2:E81	
+T147	Biological_structure 3143 3148	Brain
+R76	MODIFY Arg1:T147 Arg2:E81	
+T148	Sign_symptom 3199 3213	hyperintensity
+E83	Sign_symptom:T148 
+T149	Detailed_description 3189 3198	bilateral
+R77	MODIFY Arg1:T149 Arg2:E83	
+T150	Biological_structure 3221 3249	occipital and parietal lobes
+R78	MODIFY Arg1:T150 Arg2:E83	
+T151	Detailed_description 3255 3307	fluid-attenuated inversion recovery (FLAIR) sequence
+R79	MODIFY Arg1:T151 Arg2:E83	
+T152	Disease_disorder 3357 3361	PRES
+E84	Disease_disorder:T152 
+#3	AnnotatorNotes E84	Posterior reversible encephalopathy syndrome
+T153	Medication 3374 3383	captopril
+E85	Medication:T153 
+T154	Dosage 3405 3423	25 mg thrice daily
+R80	MODIFY Arg1:T154 Arg2:E85	
+T155	Diagnostic_procedure 3545 3558	mental status
+E86	Diagnostic_procedure:T155 
+T156	Lab_value 3571 3577	normal
+R81	MODIFY Arg1:T156 Arg2:E86	
+T157	Date 3585 3591	3 days
+E87	Date:T157 
+T158	Therapeutic_procedure 3610 3625	plasma exchange
+E88	Therapeutic_procedure:T158 
+A9	POLARITY E88 NEG
+T159	Diagnostic_procedure 3643 3646	MRI
+E89	Diagnostic_procedure:T159 
+T160	Biological_structure 3654 3659	brain
+R82	MODIFY Arg1:T160 Arg2:E89	
+T161	Date 3660 3674	2 months later
+E90	Date:T161 
+T162	Sign_symptom 3714 3719	edema
+E91	Sign_symptom:T162 
+T163	Biological_structure 3705 3713	cerebral
+R83	MODIFY Arg1:T163 Arg2:E91	
+A10	POLARITY E91 NEG
+T164	Disease_disorder 3752 3756	PRES
+E92	Disease_disorder:T164 
+T165	Detailed_description 3740 3751	SRC-related
+R84	MODIFY Arg1:T165 Arg2:E92	
+T166	Sign_symptom 3807 3831	full neurologic recovery
+E93	Sign_symptom:T166 
+T167	Diagnostic_procedure 3837 3851	renal function
+E94	Diagnostic_procedure:T167 
+T168	Lab_value 3852 3867	did not improve
+R85	MODIFY Arg1:T168 Arg2:E94	
+T169	Therapeutic_procedure 3884 3892	dialysis
+E95	Therapeutic_procedure:T169 
+T170	Detailed_description 3893 3902	dependent
+R86	MODIFY Arg1:T170 Arg2:E95	
+R87	MODIFY Arg1:E4 Arg2:E1	
+*	OVERLAP E4 E1 E2 E3
+R88	BEFORE Arg1:E3 Arg2:E5	
+*	OVERLAP E5 E6 E7 E8
+R89	BEFORE Arg1:E8 Arg2:E9	
+*	OVERLAP E9 E10
+R90	BEFORE Arg1:E10 Arg2:E11	
+*	OVERLAP E11 E12 E13 E14 E15 E16 E17 E27 E30 E32 E33 E34 E35 E36 E37 E38 E39
+R91	SUB_PROCEDURE Arg1:E18 Arg2:E17	
+R92	SUB_PROCEDURE Arg1:E19 Arg2:E17	
+R93	SUB_PROCEDURE Arg1:E20 Arg2:E17	
+R94	SUB_PROCEDURE Arg1:E21 Arg2:E17	
+R95	SUB_PROCEDURE Arg1:E22 Arg2:E17	
+R96	SUB_PROCEDURE Arg1:E23 Arg2:E17	
+R97	SUB_PROCEDURE Arg1:E24 Arg2:E17	
+R98	SUB_PROCEDURE Arg1:E25 Arg2:E17	
+R99	SUB_PROCEDURE Arg1:E26 Arg2:E17	
+R100	AFTER Arg1:E39 Arg2:E40	
+*	OVERLAP E40 E41 E42
+R101	BEFORE Arg1:E42 Arg2:E43	
+R102	BEFORE Arg1:E43 Arg2:E44	
+*	OVERLAP E44 E45 E46 E47 E96 E48 E49 E50
+T171	Medication 1766 1775	captopril
+E96	Medication:T171 
+R103	BEFORE Arg1:E50 Arg2:E51	
+*	OVERLAP E51 E52 E53 E54 E55
+R104	BEFORE Arg1:E55 Arg2:E56	
+*	OVERLAP E56 E57 E58 E59 E61 E62 E63 E67 E64
+R105	BEFORE Arg1:E64 Arg2:E65	
+*	OVERLAP E65 E66
+R106	BEFORE Arg1:E66 Arg2:E68	
+*	OVERLAP E68 E69 E70 E71 E72
+R107	BEFORE Arg1:E72 Arg2:E73	
+*	OVERLAP E73 E74 E75 E76 E77 E78 E79 E80 E81 E83
+R108	BEFORE Arg1:E83 Arg2:E84	
+*	OVERLAP E84 E85
+R109	BEFORE Arg1:E85 Arg2:E86	
+*	OVERLAP E86 E87 E88
+R110	BEFORE Arg1:E88 Arg2:E89	
+*	OVERLAP E89 E90 E91 E92
+R111	BEFORE Arg1:E92 Arg2:E93	
+*	OVERLAP E93 E94 E95

@@ -1,0 +1,303 @@
+T1	Age 2 11	36-yr-old
+T2	History 12 30	previously healthy
+T3	Personal_background 31 41	Sri Lankan
+T4	Sex 42 46	male
+T5	Occupation 51 72	takes care of a horse
+T6	Clinical_event 73 82	presented
+E1	Clinical_event:T6 
+T7	Nonbiological_location 90 111	medical casualty ward
+R1	MODIFY Arg1:T7 Arg2:E1	
+T8	Sign_symptom 117 122	fever
+E2	Sign_symptom:T8 
+T9	Sign_symptom 124 134	arthralgia
+E3	Sign_symptom:T9 
+T10	Sign_symptom 139 146	myalgia
+E4	Sign_symptom:T10 
+T11	Duration 151 158	one day
+E5	Duration:T11 
+T12	Sign_symptom 182 189	dysuria
+E6	Sign_symptom:T12 
+A1	POLARITY E6 UNCERTAIN
+T13	Severity 177 181	mild
+R2	MODIFY Arg1:T13 Arg2:E6	
+T14	Diagnostic_procedure 205 217	urine output
+E7	Diagnostic_procedure:T14 
+T15	Lab_value 198 204	normal
+R3	MODIFY Arg1:T15 Arg2:E7	
+T16	Sign_symptom 241 245	pain
+E8	Sign_symptom:T16 
+A2	POLARITY E8 NEG
+T17	Biological_structure 235 240	chest
+R4	MODIFY Arg1:T17 Arg2:E8	
+T18	Sign_symptom 249 268	shortness of breath
+E9	Sign_symptom:T18 
+A3	POLARITY E9 NEG
+T19	History 307 369	treated for leptospirosis during a febrile illness in the past
+#1	AnnotatorNotes T19	history because no time frame is specified
+T20	Diagnostic_procedure 374 385	examination
+E10	Diagnostic_procedure:T20 
+T21	Sign_symptom 399 407	afebrile
+E11	Sign_symptom:T21 
+T22	Sign_symptom 409 418	anicteric
+E12	Sign_symptom:T22 
+T23	Diagnostic_procedure 424 438	blood pressure
+E13	Diagnostic_procedure:T23 
+T24	Lab_value 443 453	90/60 mmHg
+R5	MODIFY Arg1:T24 Arg2:E13	
+T25	Diagnostic_procedure 458 468	pulse rate
+E14	Diagnostic_procedure:T25 
+T26	Lab_value 469 475	76 bpm
+R6	MODIFY Arg1:T26 Arg2:E14	
+T27	Diagnostic_procedure 489 500	examination
+E15	Diagnostic_procedure:T27 
+T28	Lab_value 505 517	unremarkable
+R7	MODIFY Arg1:T28 Arg2:E15	
+T29	Diagnostic_procedure 527 541	investigations
+E16	Diagnostic_procedure:T29 
+T30	Sign_symptom 596 608	leukocytosis
+E17	Sign_symptom:T30 
+T31	Biological_structure 585 595	neutrophil
+R8	MODIFY Arg1:T31 Arg2:E17	
+T32	Sign_symptom 615 632	thrombocytopaenia
+E18	Sign_symptom:T32 
+T33	Severity 610 614	mild
+R9	MODIFY Arg1:T33 Arg2:E18	
+T34	Sign_symptom 649 659	haematuria
+E19	Sign_symptom:T34 
+T35	Detailed_description 637 648	microscopic
+R10	MODIFY Arg1:T35 Arg2:E19	
+T36	Diagnostic_procedure 671 685	Renal function
+E20	Diagnostic_procedure:T36 
+T37	Diagnostic_procedure 690 703	liver enzymes
+E21	Diagnostic_procedure:T37 
+T38	Lab_value 709 729	within normal limits
+R11	MODIFY Arg1:T38 Arg2:E21	
+R12	MODIFY Arg1:T38 Arg2:E20	
+T39	Diagnostic_procedure 731 745	Urine analysis
+E22	Diagnostic_procedure:T39 
+T40	Lab_value 755 777	pus cells 05 – 06 /hpf
+T41	Lab_value 779 801	red cells 30 – 35 /hpf
+R13	MODIFY Arg1:T40 Arg2:E22	
+R14	MODIFY Arg1:T41 Arg2:E22	
+T42	Diagnostic_procedure 803 806	CRP
+E23	Diagnostic_procedure:T42 
+T43	Diagnostic_procedure 808 826	C-reactive protein
+E24	Diagnostic_procedure:T43 
+R15	IDENTICAL Arg1:E24 Arg2:E23	
+T44	Lab_value 832 840	75 mg/dl
+R16	MODIFY Arg1:T44 Arg2:E23	
+T45	Disease_disorder 866 879	leptospirosis
+E25	Disease_disorder:T45 
+T46	Medication 923 933	penicillin
+E26	Medication:T46 
+T47	Administration 911 922	intravenous
+R17	MODIFY Arg1:T47 Arg2:E26	
+T48	Therapeutic_procedure 958 967	hydration
+E27	Therapeutic_procedure:T48 
+T49	Date 976 986	second day
+E28	Date:T49 
+T50	Sign_symptom 1012 1023	hypotension
+E29	Sign_symptom:T50 
+T51	Sign_symptom 1029 1040	tachycardia
+E30	Sign_symptom:T51 
+T52	Sign_symptom 1045 1053	dyspnoea
+E31	Sign_symptom:T52 
+T53	Diagnostic_procedure 1055 1058	ECG
+E32	Diagnostic_procedure:T53 
+T54	Sign_symptom 1074 1085	tachycardia
+E33	Sign_symptom:T54 
+T55	Detailed_description 1068 1073	sinus
+R18	MODIFY Arg1:T55 Arg2:E33	
+T56	Detailed_description 1091 1121	ST depression in leads V4 – V6
+R19	MODIFY Arg1:T56 Arg2:E33	
+T59	Diagnostic_procedure 1138 1141	CXR
+E35	Diagnostic_procedure:T59 
+#2	AnnotatorNotes E35	Would normally annotate "chest" separately but there is an acronym used here
+T57	Diagnostic_procedure 1143 1154	chest x ray
+E34	Diagnostic_procedure:T57 
+R20	IDENTICAL Arg1:E34 Arg2:E35	
+T58	Disease_disorder 1169 1181	cardiomegaly
+E36	Disease_disorder:T58 
+T60	Detailed_description 1163 1168	gross
+R21	MODIFY Arg1:T60 Arg2:E36	
+T61	Sign_symptom 1206 1213	shadows
+E37	Sign_symptom:T61 
+T62	Biological_structure 1196 1205	pulmonary
+T63	Detailed_description 1186 1195	bilateral
+R22	MODIFY Arg1:T62 Arg2:E37	
+R23	MODIFY Arg1:T63 Arg2:E37	
+T64	Diagnostic_procedure 1231 1254	central venous pressure
+E38	Diagnostic_procedure:T64 
+T65	Diagnostic_procedure 1226 1229	CVP
+E39	Diagnostic_procedure:T65 
+R24	IDENTICAL Arg1:E38 Arg2:E39	
+T66	Lab_value 1260 1268	16 cmH2O
+R25	MODIFY Arg1:T66 Arg2:E39	
+T67	Diagnostic_procedure 1276 1290	echocardiogram
+E40	Diagnostic_procedure:T67 
+T68	Detailed_description 1273 1275	2D
+R26	MODIFY Arg1:T68 Arg2:E40	
+T69	Sign_symptom 1300 1310	dilatation
+E41	Sign_symptom:T69 
+#3	AnnotatorNotes E41	kind of (sp)
+T70	Biological_structure 1314 1331	all four chambers
+R27	MODIFY Arg1:T70 Arg2:E41	
+T71	Disease_disorder 1347 1358	hypokinesia
+E42	Disease_disorder:T71 
+T72	Detailed_description 1340 1346	global
+R28	MODIFY Arg1:T72 Arg2:E42	
+T73	Severity 1333 1339	severe
+R29	MODIFY Arg1:T73 Arg2:E42	
+T74	Diagnostic_procedure 1363 1380	ejection fraction
+E43	Diagnostic_procedure:T74 
+T75	Disease_disorder 1481 1492	myocarditis
+E44	Disease_disorder:T75 
+T76	Lab_value 1384 1387	20%
+R30	MODIFY Arg1:T76 Arg2:E43	
+T77	Detailed_description 1464 1469	early
+T78	Severity 1474 1480	severe
+R31	MODIFY Arg1:T78 Arg2:E44	
+R32	MODIFY Arg1:T77 Arg2:E44	
+T79	Clinical_event 1506 1517	transferred
+E45	Clinical_event:T79 
+T80	Nonbiological_location 1521 1524	ICU
+T81	Nonbiological_location 1526 1545	intensive care unit
+R33	IDENTICAL Arg1:T81 Arg2:T80	
+R34	MODIFY Arg1:T80 Arg2:E45	
+T82	Therapeutic_procedure 1560 1577	inotropic support
+E46	Therapeutic_procedure:T82 
+T83	Medication 1591 1602	antibiotics
+E47	Medication:T83 
+T84	Administration 1579 1590	Intravenous
+R35	MODIFY Arg1:T84 Arg2:E47	
+T85	Medication 1613 1623	penicillin
+E48	Medication:T85 
+T86	Medication 1625 1634	meropenem
+E49	Medication:T86 
+T87	Medication 1639 1651	levofloxacin
+E50	Medication:T87 
+R36	SUB_PROCEDURE Arg1:E48 Arg2:E47	
+R37	SUB_PROCEDURE Arg1:E49 Arg2:E47	
+R38	SUB_PROCEDURE Arg1:E50 Arg2:E47	
+T88	Therapeutic_procedure 1691 1701	ventilated
+E51	Therapeutic_procedure:T88 
+T89	Date 1709 1716	3rd day
+E52	Date:T89 
+T90	Disease_disorder 1742 1762	respiratory distress
+E53	Disease_disorder:T90 
+T91	Severity 1735 1741	severe
+R39	MODIFY Arg1:T91 Arg2:E53	
+T92	Disease_disorder 1800 1819	atrial fibrillation
+E54	Disease_disorder:T92 
+T93	Time 1771 1779	same day
+E55	Time:T93 
+T94	Detailed_description 1794 1799	rapid
+R40	MODIFY Arg1:T94 Arg2:E54	
+T95	Medication 1847 1854	digoxin
+E56	Medication:T95 
+T96	Medication 1871 1881	amiodarone
+E57	Medication:T96 
+T97	Administration 1859 1870	intravenous
+R41	MODIFY Arg1:T97 Arg2:E57	
+T98	Diagnostic_procedure 1883 1897	Platelet count
+E58	Diagnostic_procedure:T98 
+T99	Lab_value 1898 1905	dropped
+R42	MODIFY Arg1:T99 Arg2:E58	
+T100	Lab_value 1909 1921	10 × 103 μ/L
+R43	MODIFY Arg1:T100 Arg2:E58	
+T101	Therapeutic_procedure 1939 1960	platelet transfusions
+E59	Therapeutic_procedure:T101 
+T102	Medication 2015 2033	methylprednisolone
+E60	Medication:T102 
+T103	Administration 2003 2014	intravenous
+R44	MODIFY Arg1:T103 Arg2:E60	
+T104	Diagnostic_procedure 2157 2167	creatinine
+E61	Diagnostic_procedure:T104 
+T105	Biological_structure 2151 2156	serum
+R45	MODIFY Arg1:T105 Arg2:E61	
+T106	Lab_value 2168 2177	increased
+T107	Lab_value 2181 2192	362 μ mol/L
+R46	MODIFY Arg1:T107 Arg2:E61	
+R47	MODIFY Arg1:T106 Arg2:E61	
+T108	Date 2200 2207	5th day
+E62	Date:T108 
+T109	Diagnostic_procedure 2223 2226	ALT
+E63	Diagnostic_procedure:T109 
+T110	Diagnostic_procedure 2228 2248	alanine transaminase
+E64	Diagnostic_procedure:T110 
+R48	IDENTICAL Arg1:E64 Arg2:E63	
+T111	Diagnostic_procedure 2254 2257	AST
+E65	Diagnostic_procedure:T111 
+T112	Diagnostic_procedure 2259 2281	aspartate transaminase
+E66	Diagnostic_procedure:T112 
+R49	BEFORE Arg1:E66 Arg2:E65	
+T113	Lab_value 2297 2305	elevated
+R50	MODIFY Arg1:T113 Arg2:E65	
+R51	MODIFY Arg1:T113 Arg2:E63	
+T114	Lab_value 2312 2320	2726 U/l
+T115	Lab_value 2325 2333	7438 U/l
+R52	MODIFY Arg1:T114 Arg2:E63	
+R53	MODIFY Arg1:T115 Arg2:E65	
+T116	Disease_disorder 2370 2380	infections
+E67	Disease_disorder:T116 
+A4	POLARITY E67 NEG
+T117	Detailed_description 2359 2369	Mycoplasma
+T118	Detailed_description 2348 2354	Dengue
+R54	MODIFY Arg1:T117 Arg2:E67	
+R55	MODIFY Arg1:T118 Arg2:E67	
+T119	Diagnostic_procedure 2396 2410	Blood cultures
+E68	Diagnostic_procedure:T119 
+T120	Lab_value 2416 2424	negative
+R56	MODIFY Arg1:T120 Arg2:E68	
+T121	Diagnostic_procedure 2441 2449	antibody
+E69	Diagnostic_procedure:T121 
+T122	Detailed_description 2426 2440	Leptospira IgM
+R57	MODIFY Arg1:T122 Arg2:E69	
+T123	Date 2467 2474	5th day
+E70	Date:T123 
+T124	Diagnostic_procedure 2500 2503	IgG
+E71	Diagnostic_procedure:T124 
+T125	Lab_value 2504 2512	negative
+R58	MODIFY Arg1:T125 Arg2:E71	
+T126	Lab_value 2490 2498	positive
+R59	MODIFY Arg1:T126 Arg2:E69	
+T127	Disease_disorder 2533 2549	refractory shock
+E72	Disease_disorder:T127 
+T128	Clinical_event 2554 2558	died
+E73	Clinical_event:T128 
+T129	Sign_symptom 2585 2596	tachycardia
+E74	Sign_symptom:T129 
+T130	Biological_structure 2573 2584	ventricular
+T131	Detailed_description 2562 2572	persistent
+R60	MODIFY Arg1:T130 Arg2:E74	
+R61	MODIFY Arg1:T131 Arg2:E74	
+T132	Therapeutic_procedure 2613 2622	treatment
+E75	Therapeutic_procedure:T132 
+T133	Nonbiological_location 2630 2633	ICU
+R62	MODIFY Arg1:T133 Arg2:E75	
+T134	Detailed_description 2605 2612	optimal
+R63	MODIFY Arg1:T134 Arg2:E75	
+R64	AFTER Arg1:E1 Arg2:E2	
+*	OVERLAP E2 E3 E4 E5
+R65	BEFORE Arg1:E5 Arg2:E6	
+*	OVERLAP E6 E7 E8 E9 E10 E11 E12 E13 E14 E15 E16 E17 E18 E19 E20 E21 E22 E23 E25 E26 E27
+R66	BEFORE Arg1:E27 Arg2:E28	
+*	OVERLAP E28 E29 E30 E31 E32 E33 E35 E36 E37 E39 E40 E41 E42 E43 E76
+R67	BEFORE Arg1:E44 Arg2:E45	
+*	OVERLAP E45 E46 E47
+R68	BEFORE Arg1:E47 Arg2:E51	
+*	OVERLAP E51 E52 E53
+R69	BEFORE Arg1:E53 Arg2:E55	
+*	OVERLAP E55 E54 E56 E57
+R70	BEFORE Arg1:E57 Arg2:E58	
+*	OVERLAP E58 E59 E60
+R71	BEFORE Arg1:E60 Arg2:E61	
+*	OVERLAP E61 E62 E63 E65 E67 E68 E69 E70 E71
+R72	BEFORE Arg1:E71 Arg2:E72	
+*	OVERLAP E72 E73 E74 E75
+T135	Diagnostic_procedure 1389 1399	Troponin I
+E76	Diagnostic_procedure:T135 
+T136	Lab_value 1404 1415	12.77 ng/ml
+E77	Lab_value:T136 
+R73	MODIFY Arg1:E77 Arg2:E76	
+R74	BEFORE Arg1:E76 Arg2:E44	

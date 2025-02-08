@@ -1,0 +1,126 @@
+T1	Age 2 13	58-year-old
+T2	Sex 14 17	man
+T3	Sign_symptom 42 57	general fatigue
+E1	Sign_symptom:T3 
+T4	Sign_symptom 69 75	anemia
+E2	Sign_symptom:T4 
+T5	Severity 62 68	severe
+R1	MODIFY Arg1:T5 Arg2:E2	
+T6	Duration 80 94	several months
+E3	Duration:T6 
+T7	Diagnostic_procedure 100 117	hemoglobin levels
+E4	Diagnostic_procedure:T7 
+T8	Lab_value 123 131	6.6 g/dl
+R2	MODIFY Arg1:T8 Arg2:E4	
+T9	History 167 185	no medical history
+T10	History 190 215	did not take any medicine
+T11	Diagnostic_procedure 217 243	Esophagogastroduodenoscopy
+E5	Diagnostic_procedure:T11 
+T12	Diagnostic_procedure 248 259	colonoscopy
+E6	Diagnostic_procedure:T12 
+T13	Sign_symptom 291 299	bleeding
+E7	Sign_symptom:T13 
+A1	POLARITY E7 NEG
+T14	Diagnostic_procedure 311 330	computer tomography
+E8	Diagnostic_procedure:T14 
+T15	Biological_structure 301 310	Abdominal
+R3	MODIFY Arg1:T15 Arg2:E8	
+T16	Sign_symptom 361 366	tumor
+E9	Sign_symptom:T16 
+T17	Biological_structure 374 389	small intestine
+T18	Detailed_description 347 360	hypervascular
+T19	Distance 342 346	2-cm
+R4	MODIFY Arg1:T19 Arg2:E9	
+R5	MODIFY Arg1:T17 Arg2:E9	
+R6	MODIFY Arg1:T18 Arg2:E9	
+T20	Diagnostic_procedure 404 407	DBE
+E10	Diagnostic_procedure:T20 
+#1	AnnotatorNotes E10	Double Balloon Endoscopy
+T21	Sign_symptom 464 470	lesion
+E11	Sign_symptom:T21 
+T22	Detailed_description 453 463	tumor-like
+T23	Biological_structure 442 452	submucosal
+T24	Color 433 440	reddish
+T25	Distance 419 432	2-cm-diameter
+R7	MODIFY Arg1:T22 Arg2:E11	
+R8	MODIFY Arg1:T23 Arg2:E11	
+R9	MODIFY Arg1:T24 Arg2:E11	
+R10	MODIFY Arg1:T25 Arg2:E11	
+T26	Biological_structure 502 509	jejunum
+R11	MODIFY Arg1:T26 Arg2:E11	
+T27	Detailed_description 476 494	surface ulceration
+R12	MODIFY Arg1:T27 Arg2:E11	
+T28	Biological_structure 525 560	20 cm away from the Treitz ligament
+R13	MODIFY Arg1:T28 Arg2:E11	
+T29	Diagnostic_procedure 589 595	biopsy
+E12	Diagnostic_procedure:T29 
+A2	POLARITY E12 NEG
+T30	Therapeutic_procedure 838 847	resection
+E13	Therapeutic_procedure:T30 
+T31	Detailed_description 828 837	segmental
+T32	Detailed_description 806 827	laparoscopic-assisted
+R14	MODIFY Arg1:T31 Arg2:E13	
+R15	MODIFY Arg1:T32 Arg2:E13	
+T33	Biological_structure 855 862	jejunum
+T34	Detailed_description 872 897	dissection of lymph nodes
+R16	MODIFY Arg1:T34 Arg2:E13	
+R17	MODIFY Arg1:T33 Arg2:E13	
+T35	Disease_disorder 785 791	cancer
+E14	Disease_disorder:T35 
+A3	POLARITY E14 UNCERTAIN
+T36	Disease_disorder 762 780	malignant lymphoma
+E15	Disease_disorder:T36 
+A4	POLARITY E15 UNCERTAIN
+T37	Disease_disorder 723 753	gastrointestinal stromal tumor
+E16	Disease_disorder:T37 
+T38	Disease_disorder 704 721	small bowel tumor
+E17	Disease_disorder:T38 
+T39	Disease_disorder 755 759	GIST
+E18	Disease_disorder:T39 
+A5	POLARITY E18 UNCERTAIN
+R18	IDENTICAL Arg1:E18 Arg2:E16	
+A6	POLARITY E16 UNCERTAIN
+A7	POLARITY E17 UNCERTAIN
+T40	Area 957 967	19 × 16 mm
+T41	Sign_symptom 927 932	tumor
+E19	Sign_symptom:T41 
+T42	Detailed_description 918 926	resected
+R19	MODIFY Arg1:T42 Arg2:E19	
+R20	MODIFY Arg1:T40 Arg2:E19	
+T43	Diagnostic_procedure 989 998	Histology
+E20	Diagnostic_procedure:T43 
+T44	Diagnostic_procedure 899 910	Examination
+E21	Diagnostic_procedure:T44 
+R21	MODIFY Arg1:E19 Arg2:E21	
+T45	Disease_disorder 1097 1099	PG
+E22	Disease_disorder:T45 
+#2	AnnotatorNotes E22	pyogenic granuloma
+T46	Sign_symptom 1051 1069	granulation tissue
+E23	Sign_symptom:T46 
+T47	Sign_symptom 1012 1046	proliferation of blood capillaries
+E24	Sign_symptom:T47 
+R22	MODIFY Arg1:E24 Arg2:E20	
+R23	MODIFY Arg1:E23 Arg2:E20	
+T48	Clinical_event 1125 1135	discharged
+E25	Clinical_event:T48 
+T49	Date 1139 1158	postoperative day 9
+E26	Date:T49 
+T50	Sign_symptom 1167 1179	complication
+E27	Sign_symptom:T50 
+A8	POLARITY E27 NEG
+T51	Sign_symptom 1188 1194	anemia
+E28	Sign_symptom:T51 
+T52	Lab_value 1195 1203	improved
+R24	MODIFY Arg1:T52 Arg2:E28	
+T53	Medication 1235 1244	oral iron
+E29	Medication:T53 
+A9	POLARITY E29 NEG
+*	OVERLAP E1 E2 E3
+R25	BEFORE Arg1:E3 Arg2:E4	
+*	OVERLAP E4 E5 E6 E7 E8 E9 E10 E11 E12
+R26	BEFORE Arg1:E12 Arg2:E17	
+*	OVERLAP E17 E16 E15 E14 E13
+R27	BEFORE Arg1:E13 Arg2:E21	
+*	OVERLAP E21 E19 E20 E24 E23 E22
+R28	BEFORE Arg1:E22 Arg2:E25	
+*	OVERLAP E25 E26 E27 E28 E29

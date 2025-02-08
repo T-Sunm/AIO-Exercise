@@ -1,0 +1,318 @@
+T1	Age 2 15	36- year- old
+T2	Personal_background 16 21	white
+T3	Sex 22 27	woman
+T4	Clinical_event 56 64	admitted
+E1	Clinical_event:T4 
+T5	Nonbiological_location 70 92	local obstetric clinic
+R1	MODIFY Arg1:T5 Arg2:E1	
+T6	Clinical_event 42 51	gestation
+E2	Clinical_event:T6 
+T7	Lab_value 31 38	40 week
+R2	MODIFY Arg1:T7 Arg2:E2	
+T8	History 181 230	previous and current pregnancy were uncomplicated
+T9	Therapeutic_procedure 115 132	cesarean delivery
+E3	Therapeutic_procedure:T9 
+T10	Subject 165 170	fetus
+T11	Detailed_description 140 157	slanting position
+R3	MODIFY Arg1:T11 Arg2:T10	
+T12	Detailed_description 106 114	repeated
+T13	Detailed_description 97 105	elective
+R4	MODIFY Arg1:T12 Arg2:E3	
+R5	MODIFY Arg1:T13 Arg2:E3	
+T14	History 236 273	past medical history was unremarkable
+T15	Family_history 278 327	no family history of cardiac disease was reported
+T16	Therapeutic_procedure 333 351	caesarean delivery
+E4	Therapeutic_procedure:T16 
+T17	Medication 414 424	anesthesia
+E5	Medication:T17 
+T18	Biological_structure 407 413	spinal
+R6	MODIFY Arg1:T18 Arg2:E5	
+T19	Detailed_description 398 406	standard
+R7	MODIFY Arg1:T19 Arg2:E5	
+T20	Sign_symptom 460 471	hypotensive
+E6	Sign_symptom:T20 
+T21	Coreference 433 440	surgery
+E7	Coreference:T21 
+R8	IDENTICAL Arg1:E7 Arg2:E4	
+T22	Medication 476 485	ephedrine
+E8	Medication:T22 
+T23	Administration 490 498	injected
+R9	MODIFY Arg1:T23 Arg2:E8	
+T24	Subject 594 600	infant
+T25	Detailed_description 589 593	male
+T26	Detailed_description 581 588	healthy
+R10	MODIFY Arg1:T25 Arg2:T24	
+R11	MODIFY Arg1:T26 Arg2:T24	
+T27	Clinical_event 569 577	delivery
+E9	Clinical_event:T27 
+R12	MODIFY Arg1:T24 Arg2:E9	
+T28	Time 551 568	Three hours after
+E10	Time:T28 
+T29	Diagnostic_procedure 515 529	blood pressure
+E11	Diagnostic_procedure:T29 
+T30	Lab_value 537 549	normal range
+R13	MODIFY Arg1:T30 Arg2:E11	
+T31	Sign_symptom 628 634	nausea
+E12	Sign_symptom:T31 
+T32	Sign_symptom 647 655	dyspnoea
+E13	Sign_symptom:T32 
+T33	Sign_symptom 660 672	palpitations
+E14	Sign_symptom:T33 
+T34	Diagnostic_procedure 677 697	physical examination
+E15	Diagnostic_procedure:T34 
+T35	Sign_symptom 698 709	tachycardia
+E16	Sign_symptom:T35 
+T36	Sign_symptom 727 741	extra systoles
+E17	Sign_symptom:T36 
+T37	Sign_symptom 756 761	rales
+E18	Sign_symptom:T37 
+T38	Biological_structure 746 755	pulmonary
+R14	MODIFY Arg1:T38 Arg2:E18	
+T39	Biological_structure 715 726	ventricular
+R15	MODIFY Arg1:T39 Arg2:E17	
+T40	Diagnostic_procedure 781 795	blood pressure
+E19	Diagnostic_procedure:T40 
+T41	Lab_value 800 810	80/40 mmHg
+R16	MODIFY Arg1:T41 Arg2:E19	
+T42	Medication 846 862	inotropic agents
+E20	Medication:T42 
+T43	Medication 897 911	norepinephrine
+E21	Medication:T43 
+T44	Administration 874 893	continuous infusion
+R17	MODIFY Arg1:T44 Arg2:E21	
+T45	Dosage 912 920	0.5 mg/h
+R18	MODIFY Arg1:T45 Arg2:E21	
+T46	Medication 933 943	dobutamine
+E22	Medication:T46 
+T47	Dosage 944 955	7 μg/kg/min
+R19	MODIFY Arg1:T47 Arg2:E22	
+R20	SUB_PROCEDURE Arg1:E21 Arg2:E20	
+R21	SUB_PROCEDURE Arg1:E22 Arg2:E20	
+T48	Diagnostic_procedure 980 997	oxygen saturation
+E23	Diagnostic_procedure:T48 
+T49	Lab_value 967 976	worsening
+R22	MODIFY Arg1:T49 Arg2:E23	
+T50	Lab_value 998 1008	up to 70 %
+R23	MODIFY Arg1:T50 Arg2:E23	
+T51	Sign_symptom 1021 1051	deterioration of consciousness
+E24	Sign_symptom:T51 
+T52	Severity 1013 1020	gradual
+R24	MODIFY Arg1:T52 Arg2:E24	
+T53	Therapeutic_procedure 1053 1075	mechanical ventilation
+E25	Therapeutic_procedure:T53 
+T54	Clinical_event 1108 1119	transferred
+E26	Clinical_event:T54 
+T55	Nonbiological_location 1123 1142	intensive care unit
+R25	MODIFY Arg1:T55 Arg2:E26	
+T56	Diagnostic_procedure 1150 1155	X ray
+E27	Diagnostic_procedure:T56 
+T57	Biological_structure 1144 1149	Chest
+R26	MODIFY Arg1:T57 Arg2:E27	
+T58	Disease_disorder 1166 1186	pulmonary congestion
+E28	Disease_disorder:T58 
+#1	AnnotatorNotes E28	Note this is not just "congestion" as that may imply nasal congestion
+T59	Diagnostic_procedure 1198 1217	computer tomography
+E29	Diagnostic_procedure:T59 
+T60	Disease_disorder 1227 1252	pulmonary thromboembolism
+E30	Disease_disorder:T60 
+A1	POLARITY E30 NEG
+T61	Disease_disorder 1254 1256	PE
+E31	Disease_disorder:T61 
+R27	IDENTICAL Arg1:E31 Arg2:E30	
+T62	Disease_disorder 1279 1295	pulmonary oedema
+E32	Disease_disorder:T62 
+T63	Severity 1272 1278	severe
+R28	MODIFY Arg1:T63 Arg2:E32	
+T64	Detailed_description 1188 1197	Emergency
+R29	MODIFY Arg1:T64 Arg2:E29	
+T65	Medication 1326 1339	loop diuretic
+E33	Medication:T65 
+T66	Medication 1341 1351	furosemide
+E34	Medication:T66 
+R30	SUB_PROCEDURE Arg1:E34 Arg2:E33	
+T67	Dosage 1364 1380	daily dose 80 mg
+R31	MODIFY Arg1:T67 Arg2:E34	
+T68	Lab_value 1392 1413	progressively reduced
+R32	MODIFY Arg1:T68 Arg2:E34	
+T69	Coreference 1419 1427	diuretic
+E35	Coreference:T69 
+R33	IDENTICAL Arg1:E35 Arg2:E33	
+A2	POLARITY E35 NEG
+T70	Date 1445 1458	after 12 days
+E36	Date:T70 
+T71	Diagnostic_procedure 1477 1494	electrocardiogram
+E37	Diagnostic_procedure:T71 
+T72	Sign_symptom 1505 1522	sinus tachycardia
+E38	Sign_symptom:T72 
+T73	Sign_symptom 1528 1549	ST- segment elevation
+E39	Sign_symptom:T73 
+T74	Lab_value 1553 1559	1,5 mm
+R34	MODIFY Arg1:T74 Arg2:E39	
+T75	Sign_symptom 1565 1581	negative T waves
+E40	Sign_symptom:T75 
+T76	Diagnostic_procedure 1585 1588	aVL
+E41	Diagnostic_procedure:T76 
+R35	SUB_PROCEDURE Arg1:E41 Arg2:E37	
+T77	Sign_symptom 1593 1615	ST- segment depression
+E42	Sign_symptom:T77 
+T78	Lab_value 1619 1623	1 mm
+R36	MODIFY Arg1:T78 Arg2:E42	
+T79	Diagnostic_procedure 1641 1646	V5-V6
+E43	Diagnostic_procedure:T79 
+T80	Diagnostic_procedure 1636 1639	aVF
+E44	Diagnostic_procedure:T80 
+T81	Diagnostic_procedure 1631 1634	III
+E45	Diagnostic_procedure:T81 
+T82	Diagnostic_procedure 1627 1629	II
+E46	Diagnostic_procedure:T82 
+R37	SUB_PROCEDURE Arg1:E46 Arg2:E37	
+R38	SUB_PROCEDURE Arg1:E45 Arg2:E37	
+R39	SUB_PROCEDURE Arg1:E44 Arg2:E37	
+R40	SUB_PROCEDURE Arg1:E43 Arg2:E37	
+R41	MODIFY Arg1:E40 Arg2:E41	
+R42	MODIFY Arg1:E42 Arg2:E46	
+R43	MODIFY Arg1:E42 Arg2:E45	
+R44	MODIFY Arg1:E42 Arg2:E44	
+R45	MODIFY Arg1:E42 Arg2:E43	
+T83	Diagnostic_procedure 1656 1672	Laboratory tests
+E47	Diagnostic_procedure:T83 
+T84	Diagnostic_procedure 1689 1697	troponin
+E48	Diagnostic_procedure:T84 
+T85	Lab_value 1680 1688	elevated
+R46	MODIFY Arg1:T85 Arg2:E48	
+T86	Lab_value 1698 1713	up to 908 pg/ml
+R47	MODIFY Arg1:T86 Arg2:E48	
+T87	Diagnostic_procedure 1740 1751	NT- pro BNP
+E49	Diagnostic_procedure:T87 
+T88	Lab_value 1752 1762	6236 pg/ml
+R48	MODIFY Arg1:T88 Arg2:E49	
+R49	SUB_PROCEDURE Arg1:E48 Arg2:E47	
+R50	SUB_PROCEDURE Arg1:E49 Arg2:E47	
+T89	Diagnostic_procedure 1802 1832	transthoracic echocardiography
+E50	Diagnostic_procedure:T89 
+T90	Diagnostic_procedure 1834 1837	TTE
+E51	Diagnostic_procedure:T90 
+R51	IDENTICAL Arg1:E51 Arg2:E50	
+T91	Detailed_description 1794 1801	bedside
+R52	MODIFY Arg1:T91 Arg2:E50	
+T92	Biological_structure 1855 1871	left ventricular
+T93	Biological_structure 1873 1875	LV
+R53	IDENTICAL Arg1:T93 Arg2:T92	
+T94	Severity 1848 1854	severe
+T95	Disease_disorder 1877 1897	systolic dysfunction
+E52	Disease_disorder:T95 
+R54	MODIFY Arg1:T92 Arg2:E52	
+R55	MODIFY Arg1:T94 Arg2:E52	
+T96	Clinical_event 1925 1936	transferred
+E53	Clinical_event:T96 
+T97	Biological_structure 1940 1972	Intensive Cardiac Therapy Clinic
+R56	MODIFY Arg1:T97 Arg2:E53	
+T98	Diagnostic_procedure 1983 1986	TTE
+E54	Diagnostic_procedure:T98 
+T99	Diagnostic_procedure 1997 2014	ejection fraction
+E55	Diagnostic_procedure:T99 
+T100	Biological_structure 1994 1996	LV
+R57	MODIFY Arg1:T100 Arg2:E55	
+T101	Lab_value 2015 2019	30 %
+R58	MODIFY Arg1:T101 Arg2:E55	
+T102	Sign_symptom 2025 2036	hypokinesis
+E56	Sign_symptom:T102 
+T103	Biological_structure 2070 2106	posterior, anterior and lateral wall
+T104	Detailed_description 2044 2066	mid and basal segments
+R59	MODIFY Arg1:T104 Arg2:T103	
+R60	MODIFY Arg1:T103 Arg2:E56	
+T105	Diagnostic_procedure 2122 2135	contractility
+E57	Diagnostic_procedure:T105 
+T106	Lab_value 2112 2121	preserved
+R61	MODIFY Arg1:T106 Arg2:E57	
+T107	Biological_structure 2143 2158	apical segments
+R62	MODIFY Arg1:T107 Arg2:E57	
+T108	Diagnostic_procedure 2167 2187	coronary angiography
+E58	Diagnostic_procedure:T108 
+T109	Detailed_description 2160 2166	Urgent
+R63	MODIFY Arg1:T109 Arg2:E58	
+T110	Lab_value 2198 2204	normal
+T111	Biological_structure 2205 2222	coronary arteries
+R64	MODIFY Arg1:T111 Arg2:T110	
+R65	MODIFY Arg1:T110 Arg2:E58	
+T112	Disease_disorder 2266 2280	cardiomyopathy
+E59	Disease_disorder:T112 
+T113	Detailed_description 2250 2265	stress- induced
+T114	Detailed_description 2241 2249	inverted
+R66	MODIFY Arg1:T113 Arg2:E59	
+R67	MODIFY Arg1:T114 Arg2:E59	
+T115	Date 2321 2333	After 3 days
+E60	Date:T115 
+T116	Therapeutic_procedure 2362 2372	respirator
+E61	Therapeutic_procedure:T116 
+A3	POLARITY E61 NEG
+T117	Therapeutic_procedure 2377 2386	extubated
+E62	Therapeutic_procedure:T117 
+T118	Medication 2423 2439	inotropic agents
+E63	Medication:T118 
+A4	TREND E63 DEC
+T119	Diagnostic_procedure 2398 2409	hemodynamic
+E64	Diagnostic_procedure:T119 
+T120	Lab_value 2410 2421	improvement
+R68	MODIFY Arg1:T120 Arg2:E64	
+T121	Diagnostic_procedure 2469 2472	TTE
+E65	Diagnostic_procedure:T121 
+T122	Diagnostic_procedure 2477 2503	magnetic resonance imaging
+E66	Diagnostic_procedure:T122 
+T123	Date 2530 2546	on the fifth day
+E67	Date:T123 
+T124	Diagnostic_procedure 2575 2594	myocardial function
+E68	Diagnostic_procedure:T124 
+T125	Lab_value 2554 2571	complete recovery
+R69	MODIFY Arg1:T125 Arg2:E68	
+T126	Clinical_event 2612 2622	discharged
+E69	Clinical_event:T126 
+T127	Date 2623 2636	after 15 days
+E70	Date:T127 
+T128	Diagnostic_procedure 2645 2662	overall condition
+E71	Diagnostic_procedure:T128 
+T129	Lab_value 2640 2644	good
+R70	MODIFY Arg1:T129 Arg2:E71	
+T130	Clinical_event 2677 2687	follow- up
+E72	Clinical_event:T130 
+T131	Date 2667 2676	12- month
+E73	Date:T131 
+T132	Sign_symptom 2701 2713	asymptomatic
+E74	Sign_symptom:T132 
+T133	Sign_symptom 2722 2753	echocardiographic abnormalities
+E75	Sign_symptom:T133 
+A5	POLARITY E75 NEG
+*	OVERLAP E2 E1
+R71	BEFORE Arg1:E1 Arg2:E3	
+R72	CAUSE Arg1:T10 Arg2:E3	
+*	OVERLAP E3 E4
+R73	AFTER Arg1:E4 Arg2:E5	
+R74	BEFORE Arg1:E5 Arg2:E7	
+*	OVERLAP E7 E6 E8 E11
+R75	BEFORE Arg1:E11 Arg2:E10	
+R76	AFTER Arg1:E10 Arg2:E9	
+R77	BEFORE Arg1:E9 Arg2:E12	
+*	OVERLAP E12 E13 E14 E15 E16 E17 E18 E19
+R78	BEFORE Arg1:E19 Arg2:E20	
+R79	BEFORE Arg1:E20 Arg2:E23	
+*	OVERLAP E23 E24
+R80	BEFORE Arg1:E24 Arg2:E25	
+R81	BEFORE Arg1:E25 Arg2:E26	
+*	OVERLAP E26 E27 E28 E29 E30 E32
+R82	BEFORE Arg1:E32 Arg2:E33	
+R83	BEFORE Arg1:E33 Arg2:E35	
+*	OVERLAP E35 E36
+R84	AFTER Arg1:E36 Arg2:E37	
+*	OVERLAP E37 E38 E39 E40 E42 E47 E50 E52
+R85	BEFORE Arg1:E52 Arg2:E53	
+*	OVERLAP E53 E54 E55 E56 E57 E58 E59
+R86	BEFORE Arg1:E59 Arg2:E60	
+*	OVERLAP E60 E61 E62
+R87	BEFORE Arg1:E62 Arg2:E64	
+*	OVERLAP E64 E63
+R88	BEFORE Arg1:E63 Arg2:E65	
+*	OVERLAP E65 E66 E67 E68
+R89	BEFORE Arg1:E68 Arg2:E69	
+*	OVERLAP E69 E70 E71
+R90	BEFORE Arg1:E71 Arg2:E73	
+*	OVERLAP E73 E72 E74 E75

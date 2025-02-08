@@ -1,0 +1,284 @@
+T1	Age 18 29	18-year-old
+T2	Personal_background 30 33	Han
+T3	Sex 34 40	female
+T4	Clinical_event 41 49	admitted
+E1	Clinical_event:T4 
+T5	Nonbiological_location 53 90	Peking Union Medical College Hospital
+R1	MODIFY Arg1:T5 Arg2:E1	
+T6	Disease_disorder 126 135	pneumonia
+E2	Disease_disorder:T6 
+T7	Disease_disorder 98 112	adrenal crisis
+E3	Disease_disorder:T7 
+R2	CAUSE Arg1:E2 Arg2:E3	
+T8	Disease_disorder 177 187	infections
+E4	Disease_disorder:T8 
+T9	Biological_structure 165 176	respiratory
+T10	Detailed_description 155 164	recurrent
+R3	MODIFY Arg1:T9 Arg2:E4	
+R4	MODIFY Arg1:T10 Arg2:E4	
+T11	Date 194 199	age 5
+E5	Date:T11 
+T12	Medication 259 271	vaccinations
+E6	Medication:T12 
+T13	Detailed_description 226 234	multiple
+R5	MODIFY Arg1:T13 Arg2:E6	
+T14	Detailed_description 235 252	hepatitis B virus
+R6	MODIFY Arg1:T14 Arg2:E6	
+T15	Detailed_description 254 257	HBV
+R7	IDENTICAL Arg1:T15 Arg2:T14	
+T16	Diagnostic_procedure 287 295	cortisol
+E7	Diagnostic_procedure:T16 
+T17	Diagnostic_procedure 300 304	ACTH
+E8	Diagnostic_procedure:T17 
+T18	Detailed_description 281 286	serum
+R8	MODIFY Arg1:T18 Arg2:E7	
+R9	MODIFY Arg1:T18 Arg2:E8	
+T19	Lab_value 273 280	Reduced
+R10	MODIFY Arg1:T19 Arg2:E7	
+R11	MODIFY Arg1:T19 Arg2:E8	
+T20	Date 331 333	16
+E9	Date:T20 
+#1	AnnotatorNotes E9	Age 16
+T21	History 155 199	recurrent respiratory infections since age 5
+T22	History 205 271	failed to respond to multiple hepatitis B virus (HBV) vaccinations
+T23	History 273 333	Reduced serum cortisol and ACTH levels were discovered at 16
+T24	Medication 339 365	glucocorticoid replacement
+E10	Medication:T24 
+T25	History 339 365	glucocorticoid replacement
+T26	Sign_symptom 394 403	hair loss
+E11	Sign_symptom:T26 
+T27	Date 417 422	age 4
+E12	Date:T27 
+T28	History 394 422	hair loss started from age 4
+T29	Sign_symptom 428 462	absence of pubic and axillary hair
+E13	Sign_symptom:T29 
+T30	Other_event 481 516	development of regular menstruation
+E14	Other_event:T30 
+#2	AnnotatorNotes E14	Not a date, but relevant to observations in a temporal way
+T31	History 428 516	absence of pubic and axillary hair was noticed after development of regular menstruation
+T32	Disease_disorder 539 557	nephrotic syndrome
+E15	Disease_disorder:T32 
+T33	History 539 557	nephrotic syndrome
+T34	Disease_disorder 585 611	minimal change nephropathy
+E16	Disease_disorder:T34 
+T35	Diagnostic_procedure 621 627	biopsy
+E17	Diagnostic_procedure:T35 
+T36	Biological_structure 615 620	renal
+R12	MODIFY Arg1:T36 Arg2:E17	
+T37	History 585 627	minimal change nephropathy by renal biopsy
+T38	Diagnostic_procedure 629 649	Physical examination
+E18	Diagnostic_procedure:T38 
+T39	Disease_disorder 672 688	alopecia totalis
+E19	Disease_disorder:T39 
+T40	Disease_disorder 695 706	candidiasis
+E20	Disease_disorder:T40 
+T41	Biological_structure 690 694	oral
+R13	MODIFY Arg1:T41 Arg2:E20	
+T42	Disease_disorder 708 720	hypohidrosis
+E21	Disease_disorder:T42 
+T43	Sign_symptom 726 739	trachyonychia
+E22	Sign_symptom:T43 
+T44	Family_history 798 808	only child
+T45	Sign_symptom 758 771	abnormalities
+E23	Sign_symptom:T45 
+A1	POLARITY E23 NEG
+T46	Biological_structure 751 757	dental
+T47	Biological_structure 741 747	Facial
+R14	MODIFY Arg1:T46 Arg2:E23	
+R15	MODIFY Arg1:T47 Arg2:E23	
+T48	Family_history 824 920	Symptom and signs of the above disorders were not identified among her nonconsanguineous parents
+T49	Diagnostic_procedure 930 947	immunologic tests
+E24	Diagnostic_procedure:T49 
+T50	Sign_symptom 968 992	panhypogammaglobulinemia
+E25	Sign_symptom:T50 
+T51	Diagnostic_procedure 1005 1016	cell counts
+E26	Diagnostic_procedure:T51 
+R16	SUB_PROCEDURE Arg1:E26 Arg2:E24	
+T52	Lab_value 997 1004	reduced
+R17	MODIFY Arg1:T52 Arg2:E26	
+T53	Diagnostic_procedure 1020 1027	B cells
+E27	Diagnostic_procedure:T53 
+T54	Diagnostic_procedure 1029 1036	T cells
+E28	Diagnostic_procedure:T54 
+T55	Diagnostic_procedure 1042 1067	natural killer (NK) cells
+E29	Diagnostic_procedure:T55 
+R18	SUB_PROCEDURE Arg1:E27 Arg2:E26	
+R19	SUB_PROCEDURE Arg1:E28 Arg2:E26	
+R20	SUB_PROCEDURE Arg1:E29 Arg2:E26	
+T56	Diagnostic_procedure 1089 1102	CD4/CD8 ratio
+E30	Diagnostic_procedure:T56 
+T57	Diagnostic_procedure 1115 1132	expression levels
+E31	Diagnostic_procedure:T57 
+T58	Diagnostic_procedure 1144 1169	T-cell activation markers
+E32	Diagnostic_procedure:T58 
+R21	SUB_PROCEDURE Arg1:E32 Arg2:E31	
+T59	Lab_value 1178 1190	normal range
+R22	MODIFY Arg1:T59 Arg2:E32	
+T60	Diagnostic_procedure 1209 1242	proportion of CD8+/HLA-DR+ subset
+E33	Diagnostic_procedure:T60 
+T61	Lab_value 1199 1208	increased
+R23	MODIFY Arg1:T61 Arg2:E33	
+R24	SUB_PROCEDURE Arg1:E33 Arg2:E31	
+T62	Diagnostic_procedure 1244 1266	Antinuclear antibodies
+E34	Diagnostic_procedure:T62 
+T63	Diagnostic_procedure 1268 1271	ANA
+E35	Diagnostic_procedure:T63 
+T64	Diagnostic_procedure 1277 1314	antineutrophil cytoplasmic antibodies
+E36	Diagnostic_procedure:T64 
+T65	Diagnostic_procedure 1316 1320	ANCA
+E37	Diagnostic_procedure:T65 
+R25	IDENTICAL Arg1:E37 Arg2:E36	
+R26	IDENTICAL Arg1:E35 Arg2:E34	
+T66	Lab_value 1327 1335	negative
+R27	MODIFY Arg1:T66 Arg2:E36	
+R28	MODIFY Arg1:T66 Arg2:E34	
+T67	Medication 1350 1376	hydrocortisone replacement
+E38	Medication:T67 
+A2	POLARITY E38 NEG
+T68	Diagnostic_procedure 1410 1418	cortisol
+E39	Diagnostic_procedure:T68 
+T69	Detailed_description 1404 1409	serum
+R29	MODIFY Arg1:T69 Arg2:E39	
+T70	Time 1396 1403	8:00 am
+E40	Time:T70 
+R30	MODIFY Arg1:E40 Arg2:E39	
+T71	Lab_value 1435 1445	0.93 μg/dL
+R31	MODIFY Arg1:T71 Arg2:E39	
+T72	Diagnostic_procedure 1452 1456	ACTH
+E41	Diagnostic_procedure:T72 
+T73	Lab_value 1457 1468	<5.00 pg/mL
+R32	MODIFY Arg1:T73 Arg2:E41	
+T74	Diagnostic_procedure 1492 1519	anterior pituitary hormones
+E42	Diagnostic_procedure:T74 
+T75	Detailed_description 1470 1475	Serum
+R33	MODIFY Arg1:T75 Arg2:E42	
+T76	Diagnostic_procedure 1548 1558	osmolality
+E43	Diagnostic_procedure:T76 
+T77	Detailed_description 1532 1537	serum
+T78	Detailed_description 1542 1547	urine
+R34	MODIFY Arg1:T78 Arg2:E43	
+R35	MODIFY Arg1:T77 Arg2:E43	
+T79	Lab_value 1564 1586	within reference range
+R36	MODIFY Arg1:T79 Arg2:E42	
+R37	MODIFY Arg1:T79 Arg2:E43	
+T80	Diagnostic_procedure 1593 1616	antiperoxidase antibody
+E44	Diagnostic_procedure:T80 
+T81	Diagnostic_procedure 1621 1647	antithyroglobulin antibody
+E45	Diagnostic_procedure:T81 
+T82	Lab_value 1653 1661	negative
+R38	MODIFY Arg1:T82 Arg2:E45	
+R39	MODIFY Arg1:T82 Arg2:E44	
+T83	Diagnostic_procedure 1680 1721	antiprotein tyrosine phosphatase antibody
+E46	Diagnostic_procedure:T83 
+T84	Lab_value 1671 1679	positive
+R40	MODIFY Arg1:T84 Arg2:E46	
+T85	Diagnostic_procedure 1728 1749	fasting blood glucose
+E47	Diagnostic_procedure:T85 
+T86	Lab_value 1753 1763	5.9 mmol/L
+R41	MODIFY Arg1:T86 Arg2:E47	
+T87	Diagnostic_procedure 1765 1791	Magnetic resonance imaging
+E48	Diagnostic_procedure:T87 
+T88	Detailed_description 1797 1805	contrast
+R42	MODIFY Arg1:T88 Arg2:E48	
+T89	Diagnostic_procedure 1825 1834	pituitary
+E49	Diagnostic_procedure:T89 
+T90	Lab_value 1818 1824	normal
+R43	MODIFY Arg1:T90 Arg2:E49	
+T91	Disease_disorder 1859 1863	CVID
+E50	Disease_disorder:T91 
+#3	AnnotatorNotes E50	Common variable immune deficiency
+T92	Disease_disorder 1865 1889	isolated ACTH deficiency
+E51	Disease_disorder:T92 
+#4	AnnotatorNotes E51	isolated adrenocorticotropic hormone deficiency
+T93	Disease_disorder 1895 1915	ectodermal dysplasia
+E52	Disease_disorder:T93 
+T94	Sign_symptom 1929 1934	fever
+E53	Sign_symptom:T94 
+T95	Sign_symptom 1936 1941	cough
+E54	Sign_symptom:T95 
+T96	Sign_symptom 1947 1955	vomiting
+E55	Sign_symptom:T96 
+A3	POLARITY E55 NEG
+A4	POLARITY E54 NEG
+A5	POLARITY E53 NEG
+T97	Medication 1969 1980	antibiotics
+E56	Medication:T97 
+T98	Medication 1997 2011	hydrocortisone
+E57	Medication:T98 
+T99	Detailed_description 1985 1996	stress-dose
+R44	MODIFY Arg1:T99 Arg2:E57	
+T100	Medication 2023 2049	Intravenous immunoglobulin
+E58	Medication:T100 
+T101	Medication 2051 2055	IVIG
+E59	Medication:T101 
+R45	IDENTICAL Arg1:E59 Arg2:E58	
+A6	POLARITY E58 NEG
+T102	Clinical_event 2109 2118	follow-up
+E60	Clinical_event:T102 
+T103	Date 2119 2131	1 year after
+E61	Date:T103 
+T104	Disease_disorder 2163 2172	infection
+E62	Disease_disorder:T104 
+A7	POLARITY E62 NEG
+T105	Duration 2180 2204	during the previous year
+E63	Duration:T105 
+T106	Clinical_event 2212 2218	stayed
+E64	Clinical_event:T106 
+T107	Nonbiological_location 2222 2226	home
+R46	MODIFY Arg1:T107 Arg2:E64	
+T108	Activity 2239 2257	outdoor activities
+E65	Activity:T108 
+A8	POLARITY E65 NEG
+T109	Medication 2263 2289	glucocorticoid replacement
+E66	Medication:T109 
+A9	POLARITY E66 NEG
+T110	Date 2304 2318	4 months after
+E67	Date:T110 
+T111	Medication 2356 2384	traditional Chinese medicine
+E68	Medication:T111 
+T112	Diagnostic_procedure 2397 2420	Lymphocyte subsets test
+E69	Diagnostic_procedure:T112 
+T113	Diagnostic_procedure 2474 2481	B cells
+E70	Diagnostic_procedure:T113 
+T114	Diagnostic_procedure 2486 2493	T cells
+E71	Diagnostic_procedure:T114 
+T115	Lab_value 2454 2463	increased
+R47	MODIFY Arg1:T115 Arg2:E70	
+R48	MODIFY Arg1:T115 Arg2:E71	
+R49	SUB_PROCEDURE Arg1:E70 Arg2:E69	
+R50	SUB_PROCEDURE Arg1:E71 Arg2:E69	
+T116	Diagnostic_procedure 2501 2514	NK cell count
+E72	Diagnostic_procedure:T116 
+T117	Lab_value 2524 2542	below normal limit
+R51	MODIFY Arg1:T117 Arg2:E72	
+T118	Diagnostic_procedure 2578 2603	flow cytometric procedure
+E73	Diagnostic_procedure:T118 
+*	OVERLAP E1 E3
+R52	AFTER Arg1:E3 Arg2:E4	
+R54	BEFORE Arg1:E6 Arg2:E7	
+*	OVERLAP E7 E8 E9 E10
+*	OVERLAP E4 E5
+R53	BEFORE Arg1:E5 Arg2:E6	
+R55	AFTER Arg1:E10 Arg2:E11	
+*	OVERLAP E11 E12
+R56	BEFORE Arg1:E12 Arg2:E13	
+R57	AFTER Arg1:E13 Arg2:E14	
+R58	BEFORE Arg1:E14 Arg2:E15	
+*	OVERLAP E15 E16 E17
+R59	BEFORE Arg1:E17 Arg2:E18	
+*	OVERLAP E18 E19 E20 E21 E22 E23 E24 E25 E30 E31 E34 E36
+R60	BEFORE Arg1:E36 Arg2:E38	
+*	OVERLAP E38 E40 E39 E41 E42 E43 E44 E45 E46 E47 E48 E49
+R61	BEFORE Arg1:E49 Arg2:E50	
+*	OVERLAP E50 E51 E52
+R62	BEFORE Arg1:E52 Arg2:E53	
+*	OVERLAP E53 E54 E55 E56 E57
+R63	BEFORE Arg1:E57 Arg2:E58	
+R64	BEFORE Arg1:E58 Arg2:E60	
+*	OVERLAP E60 E61 E62
+R65	AFTER Arg1:E62 Arg2:E63	
+*	OVERLAP E63 E64 E65
+R66	BEFORE Arg1:E65 Arg2:E66	
+*	OVERLAP E66 E67 E68
+R67	BEFORE Arg1:E68 Arg2:E69	
+*	OVERLAP E69 E72 E73

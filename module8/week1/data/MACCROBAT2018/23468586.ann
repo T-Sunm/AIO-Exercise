@@ -1,0 +1,201 @@
+T1	Age 2 13	23-year-old
+T2	Sex 14 19	woman
+T3	Disease_disorder 38 58	carnitine deficiency
+E1	Disease_disorder:T3 
+T4	History 38 58	carnitine deficiency
+T5	Sign_symptom 85 92	dyspnea
+E2	Sign_symptom:T5 
+T6	Sign_symptom 97 104	fatigue
+E3	Sign_symptom:T6 
+T7	Detailed_description 74 84	exertional
+R1	MODIFY Arg1:T7 Arg2:E2	
+T8	Disease_disorder 147 161	cardiomyopathy
+E4	Disease_disorder:T8 
+T9	Age 165 177	age 10 years
+T10	Detailed_description 135 146	nonischemic
+R2	MODIFY Arg1:T10 Arg2:E4	
+T11	Disease_disorder 226 239	heart failure
+E5	Disease_disorder:T11 
+T12	Detailed_description 215 225	congestive
+R3	MODIFY Arg1:T12 Arg2:E5	
+T13	Diagnostic_procedure 244 274	transthoracic echocardiography
+E6	Diagnostic_procedure:T13 
+T14	Diagnostic_procedure 276 279	TTE
+E7	Diagnostic_procedure:T14 
+R4	IDENTICAL Arg1:E7 Arg2:E6	
+T16	Disease_disorder 315 317;319 330	LV dysfunction
+E8	Disease_disorder:T16 
+T15	Disease_disorder 297 313;319 330	left ventricular dysfunction
+E9	Disease_disorder:T15 
+R5	IDENTICAL Arg1:E8 Arg2:E9	
+T17	Severity 290 296	severe
+R6	MODIFY Arg1:T17 Arg2:E9	
+R7	MODIFY Arg1:E9 Arg2:E7	
+T18	Sign_symptom 203 211	symptoms
+E10	Sign_symptom:T18 
+R8	MODIFY Arg1:E5 Arg2:E10	
+T19	Diagnostic_procedure 350 371	total carnitine level
+E11	Diagnostic_procedure:T19 
+T20	Lab_value 376 385	<3 μmol/L
+R9	MODIFY Arg1:T20 Arg2:E11	
+T21	Diagnostic_procedure 424 444	free carnitine level
+E12	Diagnostic_procedure:T21 
+T22	Lab_value 449 458	<3 μmol/L
+R10	MODIFY Arg1:T22 Arg2:E12	
+*	OVERLAP E11 E8 E12 E15
+*	OVERLAP E5 E6
+T23	Date 165 177	age 10 years
+E13	Date:T23 
+*	OVERLAP E13 E10 E4
+T24	Disease_disorder 526 546	carnitine deficiency
+E14	Disease_disorder:T24 
+T25	Disease_disorder 493 507	cardiomyopathy
+E15	Disease_disorder:T25 
+R11	CAUSE Arg1:E14 Arg2:E15	
+T26	Duration 554 562	5 months
+E16	Duration:T26 
+T27	Medication 579 600	carnitine supplements
+E17	Medication:T27 
+*	OVERLAP E16 E17
+T28	Diagnostic_procedure 606 621;641 647	total carnitine levels
+E18	Diagnostic_procedure:T28 
+T29	Diagnostic_procedure 626 647	free carnitine levels
+E19	Diagnostic_procedure:T29 
+T30	Lab_value 665 674	86 μmol/L
+T31	Lab_value 679 688	48 μmol/L
+R12	MODIFY Arg1:T30 Arg2:E18	
+R13	MODIFY Arg1:T31 Arg2:E19	
+T32	Diagnostic_procedure 729 746	systolic function
+E20	Diagnostic_procedure:T32 
+T33	Biological_structure 712 728	left ventricular
+R14	MODIFY Arg1:T33 Arg2:E20	
+T34	Lab_value 793 798	34.7%
+T35	Medication 929 957	carnitine supplement regimen
+E21	Medication:T35 
+T36	Detailed_description 895 919	intermittently compliant
+R15	MODIFY Arg1:T36 Arg2:E21	
+T37	Date 983 1011	6 months before presentation
+E22	Date:T37 
+T38	Diagnostic_procedure 1037 1058	free carnitine levels
+E23	Diagnostic_procedure:T38 
+T39	Diagnostic_procedure 1017 1032;1052 1058	total carnitine levels
+E24	Diagnostic_procedure:T39 
+T40	Lab_value 1074 1083	18 μmol/L
+T41	Lab_value 1088 1097	17 μmol/L
+R16	MODIFY Arg1:T40 Arg2:E24	
+R17	MODIFY Arg1:T41 Arg2:E24	
+T42	Diagnostic_procedure 768 789	fractional shortening
+E25	Diagnostic_procedure:T42 
+T43	Lab_value 751 761	normalized
+R19	BEFORE Arg1:E17 Arg2:E18	
+*	OVERLAP E18 E19 E20
+R20	SUB_PROCEDURE Arg1:E25 Arg2:E20	
+R21	MODIFY Arg1:T43 Arg2:E20	
+R22	MODIFY Arg1:T34 Arg2:E25	
+T44	Duration 853 875	over the past 10 years
+E26	Duration:T44 
+*	OVERLAP E26 E21
+T46	Clinical_event 815 824	admission
+E28	Clinical_event:T46 
+T47	Diagnostic_procedure 1127 1130	TTE
+E29	Diagnostic_procedure:T47 
+T48	Diagnostic_procedure 1143 1169	cardiac magnetic resonance
+E30	Diagnostic_procedure:T48 
+T49	Diagnostic_procedure 1171 1174	CMR
+E31	Diagnostic_procedure:T49 
+R23	IDENTICAL Arg1:E31 Arg2:E30	
+R25	BEFORE Arg1:E29 Arg2:E30	
+T51	Diagnostic_procedure 1227 1238	LV function
+E32	Diagnostic_procedure:T51 
+T52	Diagnostic_procedure 1209 1212	TTE
+E33	Diagnostic_procedure:T52 
+T53	Lab_value 1220 1226	normal
+R26	MODIFY Arg1:T53 Arg2:E32	
+R27	SUB_PROCEDURE Arg1:E32 Arg2:E33	
+T54	Disease_disorder 1260 1274	LV hypertrophy
+E34	Disease_disorder:T54 
+T55	Detailed_description 1249 1259	concentric
+T56	Severity 1243 1247	mild
+R28	MODIFY Arg1:T56 Arg2:E34	
+R29	MODIFY Arg1:T55 Arg2:E34	
+R30	MODIFY Arg1:E34 Arg2:E33	
+T57	Diagnostic_procedure 1316 1323	LV size
+E35	Diagnostic_procedure:T57 
+T58	Lab_value 1309 1315	normal
+R32	MODIFY Arg1:T58 Arg2:E35	
+T59	Diagnostic_procedure 1316 1318;1328 1336	LV function
+E36	Diagnostic_procedure:T59 
+*	OVERLAP E36 E35 E37
+R33	MODIFY Arg1:T58 Arg2:E36	
+T60	Diagnostic_procedure 1364 1378	wall thickness
+E37	Diagnostic_procedure:T60 
+T61	Lab_value 1354 1363	increased
+R34	MODIFY Arg1:T61 Arg2:E37	
+T62	Biological_structure 1386 1391;1408 1412	basal wall
+T63	Biological_structure 1396 1412	mid lateral wall
+R35	MODIFY Arg1:T62 Arg2:E37	
+R36	MODIFY Arg1:T63 Arg2:E37	
+T64	Diagnostic_procedure 1414 1437	end-diastolic thickness
+E38	Diagnostic_procedure:T64 
+T65	Distance 1439 1445	1.6 cm
+R37	MODIFY Arg1:T65 Arg2:E38	
+T66	Diagnostic_procedure 1467 1497	delayed gadolinium enhancement
+E39	Diagnostic_procedure:T66 
+T67	Disease_disorder 1555 1575	sudden cardiac death
+E40	Disease_disorder:T67 
+T68	Family_history 1555 1575	sudden cardiac death
+T69	Diagnostic_procedure 1586 1606	myocardial structure
+E41	Diagnostic_procedure:T69 
+T70	Lab_value 1577 1585	abnormal
+R38	MODIFY Arg1:T70 Arg2:E41	
+T71	Family_history 1577 1606	abnormal myocardial structure
+T72	Disease_disorder 1612 1638	underlying disease process
+E42	Disease_disorder:T72 
+T73	Family_history 1612 1638	underlying disease process
+T74	Therapeutic_procedure 1655 1693	implantable cardioverter-defibrillator
+E43	Therapeutic_procedure:T74 
+T75	Detailed_description 1642 1654	dual-chamber
+R39	MODIFY Arg1:T75 Arg2:E43	
+T50	Diagnostic_procedure 1181 1203	gadolinium enhancement
+E44	Diagnostic_procedure:T50 
+R24	SUB_PROCEDURE Arg1:E44 Arg2:E31	
+R40	AFTER Arg1:E28 Arg2:E26	
+R41	BEFORE Arg1:E21 Arg2:E22	
+*	OVERLAP E22 E24 E23
+R42	BEFORE Arg1:E24 Arg2:E29	
+T76	History 135 161	nonischemic cardiomyopathy
+T77	History 203 211	symptoms
+T78	History 215 239	congestive heart failure
+T79	History 244 274	transthoracic echocardiography
+T80	History 290 330	severe left ventricular (LV) dysfunction
+T81	History 350 371	total carnitine level
+T82	History 424 444	free carnitine level
+*	OVERLAP E2 E3
+T83	History 493 507	cardiomyopathy
+T84	History 526 546	carnitine deficiency
+R18	BEFORE Arg1:E14 Arg2:E16	
+T85	History 579 600	carnitine supplements
+T86	History 606 621;641 647	total carnitine levels
+T87	History 626 647	free carnitine levels
+T88	History 712 746	left ventricular systolic function
+T89	History 768 789	fractional shortening
+T90	Detailed_description 1348 1353	focal
+R43	MODIFY Arg1:T90 Arg2:E37	
+R44	BEFORE Arg1:E25 Arg2:E28	
+T45	Diagnostic_procedure 1295 1298	CMR
+E27	Diagnostic_procedure:T45 
+#1	AnnotatorNotes E33	Should label as coreference if referring to previously mentioned TTE?
+R31	AFTER Arg1:E44 Arg2:E33	
+*	OVERLAP E33 E29
+R45	BEFORE Arg1:E33 Arg2:E27	
+*	OVERLAP E27 E31
+#2	AnnotatorNotes E27	Should label as coreference if refer to previous CMR?
+R46	SUB_PROCEDURE Arg1:E36 Arg2:E27	
+R47	SUB_PROCEDURE Arg1:E35 Arg2:E27	
+R48	SUB_PROCEDURE Arg1:E37 Arg2:E27	
+R49	SUB_PROCEDURE Arg1:E38 Arg2:E37	
+T91	Detailed_description 1460 1466	patchy
+R50	MODIFY Arg1:T91 Arg2:E39	
+R51	SUB_PROCEDURE Arg1:E39 Arg2:E37	
+R52	BEFORE Arg1:E39 Arg2:E43	
+R53	BEFORE Arg1:E1 Arg2:E2	

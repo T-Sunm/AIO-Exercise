@@ -1,0 +1,150 @@
+T1	Age 2 13	65-year-old
+T2	Sex 14 17	man
+T3	Clinical_event 22 30	referred
+E1	Clinical_event:T3 
+T4	Nonbiological_location 38 46	hospital
+R1	MODIFY Arg1:T4 Arg2:E1	
+T5	Sign_symptom 82 86	pain
+E2	Sign_symptom:T5 
+T6	Biological_structure 76 81	chest
+T7	Detailed_description 65 75	stuttering
+R2	MODIFY Arg1:T6 Arg2:E2	
+R3	MODIFY Arg1:T7 Arg2:E2	
+T8	Duration 91 98	10 days
+E3	Duration:T8 
+T9	Occupation 113 126	common worker
+T10	Diagnostic_procedure 176 196	physical examination
+E4	Diagnostic_procedure:T10 
+T11	Lab_value 138 157	no positive finding
+R4	MODIFY Arg1:T11 Arg2:E4	
+T12	History 205 274	no medical, family, and psychosocial history including co-morbidities
+T13	Diagnostic_procedure 314 331	electrocardiogram
+E5	Diagnostic_procedure:T13 
+T14	Sign_symptom 339 355	T-wave inversion
+E6	Sign_symptom:T14 
+T15	Detailed_description 361 375	leads V1 to V4
+R5	MODIFY Arg1:T15 Arg2:E6	
+T16	Diagnostic_procedure 389 409	Coronary angiography
+E7	Diagnostic_procedure:T16 
+T17	Sign_symptom 421 429	stenosis
+E8	Sign_symptom:T17 
+T18	Lab_value 417 420	90%
+R6	MODIFY Arg1:T18 Arg2:E8	
+T19	Biological_structure 437 481	mid-left anterior descending coronary artery
+T20	Biological_structure 483 486	LAD
+R7	IDENTICAL Arg1:T20 Arg2:T19	
+R8	MODIFY Arg1:T19 Arg2:E8	
+T21	Therapeutic_procedure 499 506	stented
+E9	Therapeutic_procedure:T21 
+T22	Clinical_event 638 648	discharged
+E10	Clinical_event:T22 
+T23	Therapeutic_procedure 572 606	percutaneous coronary intervention
+E11	Therapeutic_procedure:T23 
+T24	Therapeutic_procedure 608 611	PCI
+E12	Therapeutic_procedure:T24 
+R9	IDENTICAL Arg1:E12 Arg2:E11	
+T25	Sign_symptom 532 541	inversion
+E13	Sign_symptom:T25 
+T26	Detailed_description 519 525	T-wave
+R10	MODIFY Arg1:T26 Arg2:E13	
+T27	Detailed_description 547 561	leads V1 to V4
+R11	MODIFY Arg1:T27 Arg2:E13	
+T28	Date 666 672	5 days
+E14	Date:T28 
+T29	Clinical_event 677 686	recharged
+E15	Clinical_event:T29 
+T30	Nonbiological_location 694 702	hospital
+R12	MODIFY Arg1:T30 Arg2:E15	
+T31	Sign_symptom 716 725	palpation
+E16	Sign_symptom:T31 
+T32	Diagnostic_procedure 731 748	electrocardiogram
+E17	Diagnostic_procedure:T32 
+T33	Disease_disorder 762 785	ventricular tachycardia
+E18	Disease_disorder:T33 
+T34	Sign_symptom 810 822	hypertension
+E19	Sign_symptom:T34 
+T35	Severity 803 809	severe
+R13	MODIFY Arg1:T35 Arg2:E19	
+T36	Sign_symptom 835 861	blood pressure fluctuation
+E20	Sign_symptom:T36 
+T37	Lab_value 862 892	between 224/76 and 70/50 mm Hg
+R14	MODIFY Arg1:T37 Arg2:E20	
+T38	Medication 911 933	antihypertensive drugs
+E21	Medication:T38 
+T39	Disease_disorder 945 968	ventricular tachycardia
+E22	Disease_disorder:T39 
+T40	Detailed_description 995 1002	2 times
+R15	MODIFY Arg1:T40 Arg2:E22	
+T41	Disease_disorder 1109 1128	hypertension crisis
+E23	Disease_disorder:T41 
+T42	Sign_symptom 1037 1063	blood pressure fluctuation
+E24	Sign_symptom:T42 
+T43	Sign_symptom 1157 1161	pain
+E25	Sign_symptom:T43 
+T44	Biological_structure 1147 1156	abdominal
+R16	MODIFY Arg1:T44 Arg2:E25	
+T45	Diagnostic_procedure 1180 1190	ultrasound
+E26	Diagnostic_procedure:T45 
+T46	Biological_structure 1170 1179	abdominal
+R17	MODIFY Arg1:T46 Arg2:E26	
+T47	Sign_symptom 1229 1234	tumor
+E27	Sign_symptom:T47 
+T48	Biological_structure 1209 1228	right adrenal gland
+R18	MODIFY Arg1:T48 Arg2:E27	
+T49	Diagnostic_procedure 1245 1264	computed tomography
+E28	Diagnostic_procedure:T49 
+T50	Detailed_description 1236 1244	Enhanced
+R19	MODIFY Arg1:T50 Arg2:E28	
+T51	Biological_structure 1268 1281	adrenal gland
+R20	MODIFY Arg1:T51 Arg2:E28	
+T52	Sign_symptom 1309 1314	tumor
+E29	Sign_symptom:T52 
+T53	Biological_structure 1318 1337	right adrenal gland
+R21	MODIFY Arg1:T53 Arg2:E29	
+T54	Diagnostic_procedure 1371 1382	aldosterone
+E30	Diagnostic_procedure:T54 
+T55	Lab_value 1356 1361	upset
+R22	MODIFY Arg1:T55 Arg2:E30	
+T56	Therapeutic_procedure 1420 1431	laparoscope
+E31	Therapeutic_procedure:T56 
+T57	Therapeutic_procedure 1409 1416	removed
+E32	Therapeutic_procedure:T57 
+T58	Sign_symptom 1399 1404	tumor
+E33	Sign_symptom:T58 
+R23	SUB_PROCEDURE Arg1:E31 Arg2:E32	
+R24	MODIFY Arg1:E33 Arg2:E32	
+T59	Diagnostic_procedure 1437 1461	pathological examination
+E34	Diagnostic_procedure:T59 
+T60	Disease_disorder 1469 1485	pheochromocytoma
+E35	Disease_disorder:T60 
+T61	Coreference 1509 1516	surgery
+E36	Coreference:T61 
+R25	IDENTICAL Arg1:E36 Arg2:E32	
+T62	Diagnostic_procedure 1522 1536	blood pressure
+E37	Diagnostic_procedure:T62 
+T63	Lab_value 1544 1550	normal
+R26	MODIFY Arg1:T63 Arg2:E37	
+T64	Sign_symptom 1575 1591	T-wave inversion
+E38	Sign_symptom:T64 
+A1	POLARITY E38 NEG
+T65	Detailed_description 1595 1605	lead V1-V4
+R27	MODIFY Arg1:T65 Arg2:E38	
+R28	AFTER Arg1:E1 Arg2:E2	
+*	OVERLAP E2 E3
+R29	BEFORE Arg1:E3 Arg2:E4	
+*	OVERLAP E4 E5 E6 E7 E8
+R30	BEFORE Arg1:E8 Arg2:E9	
+#1	AnnotatorNotes E9	Newly or previously stented?
+R31	BEFORE Arg1:E9 Arg2:E13	
+R32	AFTER Arg1:E13 Arg2:E11	
+R33	BEFORE Arg1:E11 Arg2:E10	
+*	OVERLAP E10 E14
+R34	BEFORE Arg1:E14 Arg2:E15	
+*	OVERLAP E15 E16 E17 E18 E19 E20
+R35	BEFORE Arg1:E20 Arg2:E21	
+R36	BEFORE Arg1:E21 Arg2:E22	
+*	OVERLAP E22 E24 E23 E25 E26 E27 E28 E29 E30
+R37	BEFORE Arg1:E30 Arg2:E33	
+*	OVERLAP E33 E32 E34 E35
+R38	BEFORE Arg1:E35 Arg2:E36	
+*	OVERLAP E36 E37 E38

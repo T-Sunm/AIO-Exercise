@@ -1,0 +1,205 @@
+T1	Age 2 13	64-year-old
+T2	Sex 14 17	man
+T3	Clinical_event 22 30	admitted
+E1	Clinical_event:T3 
+T4	Nonbiological_location 38 68	Department of Gastroenterology
+T5	Nonbiological_location 76 150	Affiliated Hospital of Qingdao University Medical College (Qingdao, China)
+R1	MODIFY Arg1:T4 Arg2:T5	
+R2	MODIFY Arg1:T5 Arg2:E1	
+T6	Sign_symptom 169 174	pains
+E2	Sign_symptom:T6 
+T7	Biological_structure 158 168	epigastric
+R3	MODIFY Arg1:T7 Arg2:E2	
+T8	Diagnostic_procedure 176 196	Physical examination
+E3	Diagnostic_procedure:T8 
+T9	Sign_symptom 218 222	mass
+E4	Sign_symptom:T9 
+A1	POLARITY E4 NEG
+T10	Sign_symptom 224 239	lymphadenopathy
+E5	Sign_symptom:T10 
+A2	POLARITY E5 NEG
+T11	Sign_symptom 244 256	organomegaly
+E6	Sign_symptom:T11 
+A3	POLARITY E6 NEG
+T12	Diagnostic_procedure 261 270	endoscopy
+E7	Diagnostic_procedure:T12 
+T13	Sign_symptom 291 298	lesions
+E8	Sign_symptom:T13 
+T14	Detailed_description 272 279	several
+T15	Biological_structure 280 290	submucosal
+R4	MODIFY Arg1:T15 Arg2:E8	
+R5	MODIFY Arg1:T14 Arg2:E8	
+T16	Biological_structure 322 336	gastric antrum
+T17	Biological_structure 345 358	duodenal bulb
+R6	MODIFY Arg1:T16 Arg2:E8	
+R7	MODIFY Arg1:T17 Arg2:E8	
+T18	Diagnostic_procedure 368 394	Endoscopic ultrasonography
+E9	Diagnostic_procedure:T18 
+T19	Diagnostic_procedure 396 399	EUS
+E10	Diagnostic_procedure:T19 
+R8	IDENTICAL Arg1:E10 Arg2:E9	
+T20	Detailed_description 402 420	OLYMPUS EUS EU-ME2
+T21	Detailed_description 422 442	Miniprobe sonography
+R9	MODIFY Arg1:T20 Arg2:E9	
+R10	MODIFY Arg1:T21 Arg2:E9	
+T22	Sign_symptom 466 473	lesions
+E11	Sign_symptom:T22 
+T23	Distance 479 492	almost 0.5-cm
+T24	Detailed_description 507 517	hypoechoic
+T25	Sign_symptom 518 527	neoplasms
+E12	Sign_symptom:T25 
+R11	MODIFY Arg1:T24 Arg2:E12	
+R12	MODIFY Arg1:T23 Arg2:E12	
+T26	Biological_structure 549 564	submucous layer
+R13	MODIFY Arg1:T26 Arg2:E12	
+T27	Disease_disorder 613 634	neuroendocrine tumors
+E13	Disease_disorder:T27 
+T28	Biological_structure 603 612	digestive
+R14	MODIFY Arg1:T28 Arg2:E13	
+T29	Diagnostic_procedure 636 655	Computed tomography
+E14	Diagnostic_procedure:T29 
+T30	Sign_symptom 665 685	enlarged lymph nodes
+E15	Sign_symptom:T30 
+T31	Biological_structure 707 718	mediastinal
+T32	Biological_structure 720 735	retroperitoneal
+T33	Biological_structure 737 747	mesenteric
+T34	Biological_structure 753 761	inguinal
+R15	MODIFY Arg1:T31 Arg2:E15	
+R16	MODIFY Arg1:T32 Arg2:E15	
+R17	MODIFY Arg1:T33 Arg2:E15	
+R18	MODIFY Arg1:T34 Arg2:E15	
+T35	Sign_symptom 781 788	nodules
+E16	Sign_symptom:T35 
+T36	Detailed_description 767 780	intracavitary
+R19	MODIFY Arg1:T36 Arg2:E16	
+T37	Biological_structure 796 804	duodenum
+R20	MODIFY Arg1:T37 Arg2:E16	
+A4	POLARITY E13 MAYBE_POS
+T38	Diagnostic_procedure 868 871	EUS
+E17	Diagnostic_procedure:T38 
+T39	Diagnostic_procedure 876 882	biopsy
+E18	Diagnostic_procedure:T39 
+T40	Diagnostic_procedure 901 910	endoscopy
+E19	Diagnostic_procedure:T40 
+T41	Biological_structure 946 960	terminal ileum
+T42	Sign_symptom 923 938	columnar uplift
+E20	Sign_symptom:T42 
+T43	Area 914 922	2 × 1-cm
+R22	MODIFY Arg1:T43 Arg2:E20	
+T44	Sign_symptom 985 992	lesions
+E21	Sign_symptom:T44 
+T45	Biological_structure 1000 1006	rectum
+R23	MODIFY Arg1:T45 Arg2:E21	
+T46	Biological_structure 974 984	submucosal
+T47	Detailed_description 965 973	multiple
+R24	MODIFY Arg1:T46 Arg2:E21	
+R25	MODIFY Arg1:T47 Arg2:E21	
+T49	Sign_symptom 1054 1061	lesions
+E23	Sign_symptom:T49 
+T50	Biological_structure 1069 1083	terminal ileum
+R26	MODIFY Arg1:T50 Arg2:E23	
+R27	MODIFY Arg1:T41 Arg2:E20	
+T48	Diagnostic_procedure 1032 1035	EUS
+E22	Diagnostic_procedure:T48 
+R21	SUB_PROCEDURE Arg1:E19 Arg2:E17	
+T51	Area 1095 1107	1.6 × 1.2 cm
+R28	MODIFY Arg1:T51 Arg2:E23	
+T52	Sign_symptom 1116 1123	lesions
+E24	Sign_symptom:T52 
+T53	Biological_structure 1131 1137	rectum
+R29	MODIFY Arg1:T53 Arg2:E24	
+T54	Area 1156 1168	0.6 × 1.0 cm
+R30	MODIFY Arg1:T54 Arg2:E24	
+T55	Detailed_description 1184 1208	homogeneously hypoechoic
+T56	Detailed_description 1213 1256	originated from the muscularis mucosa layer
+R31	MODIFY Arg1:T55 Arg2:E24	
+R32	MODIFY Arg1:T56 Arg2:E24	
+T57	Diagnostic_procedure 1258 1282	Pathological examination
+E25	Diagnostic_procedure:T57 
+T58	Sign_symptom 1318 1325	lesions
+E26	Sign_symptom:T58 
+T59	Biological_structure 1333 1339	rectum
+R33	MODIFY Arg1:T59 Arg2:E26	
+T60	Detailed_description 1355 1381	lymphomatous proliferation
+R34	MODIFY Arg1:T60 Arg2:E26	
+T61	Detailed_description 1386 1404	dense infiltration
+R35	MODIFY Arg1:T61 Arg2:E26	
+T62	Biological_structure 1408 1471	monomorphic, small cleaved cells with irregularly shaped nuclei
+R36	MODIFY Arg1:T62 Arg2:T61	
+T63	Diagnostic_procedure 1484 1512	immunohistochemical analysis
+E27	Diagnostic_procedure:T63 
+T64	Diagnostic_procedure 1542 1551	cyclin D1
+E28	Diagnostic_procedure:T64 
+T65	Diagnostic_procedure 1553 1557	CD20
+E29	Diagnostic_procedure:T65 
+T66	Diagnostic_procedure 1559 1563	CD21
+E30	Diagnostic_procedure:T66 
+T67	Diagnostic_procedure 1565 1571	SOX-11
+E31	Diagnostic_procedure:T67 
+T68	Diagnostic_procedure 1577 1582	Bcl-2
+E32	Diagnostic_procedure:T68 
+T69	Diagnostic_procedure 1601 1604	CD3
+E33	Diagnostic_procedure:T69 
+T70	Diagnostic_procedure 1609 1613	CD10
+E34	Diagnostic_procedure:T70 
+T71	Lab_value 1529 1537	positive
+T72	Lab_value 1588 1596	negative
+T73	Disease_disorder 1658 1661	MCL
+E35	Disease_disorder:T73 
+#1	AnnotatorNotes E35	Mantle cell lymphoma
+R37	MODIFY Arg1:T71 Arg2:E28	
+R38	MODIFY Arg1:T71 Arg2:E29	
+R39	MODIFY Arg1:T71 Arg2:E30	
+R40	MODIFY Arg1:T71 Arg2:E31	
+R41	MODIFY Arg1:T71 Arg2:E32	
+R42	MODIFY Arg1:T72 Arg2:E33	
+R43	MODIFY Arg1:T72 Arg2:E34	
+R44	SUB_PROCEDURE Arg1:E28 Arg2:E27	
+R45	SUB_PROCEDURE Arg1:E29 Arg2:E27	
+R46	SUB_PROCEDURE Arg1:E30 Arg2:E27	
+R47	SUB_PROCEDURE Arg1:E31 Arg2:E27	
+R48	SUB_PROCEDURE Arg1:E32 Arg2:E27	
+R49	SUB_PROCEDURE Arg1:E33 Arg2:E27	
+R50	SUB_PROCEDURE Arg1:E34 Arg2:E27	
+T74	Diagnostic_procedure 1663 1677	Ki-67 staining
+E36	Diagnostic_procedure:T74 
+T75	Lab_value 1689 1715	proliferative index of 30%
+R51	MODIFY Arg1:T75 Arg2:E36	
+T76	Disease_disorder 1778 1781	MCL
+E37	Disease_disorder:T76 
+T77	Lab_value 1759 1777	Ann Arbor stage IV
+R52	MODIFY Arg1:T77 Arg2:E37	
+T78	Medication 1838 1850	chemotherapy
+E38	Medication:T78 
+T79	Medication 1856 1865	rituximab
+E39	Medication:T79 
+T80	Medication 1867 1883	cyclophosphamide
+E40	Medication:T80 
+T81	Medication 1885 1896	doxorubicin
+E41	Medication:T81 
+T82	Medication 1898 1909	vincristine
+E42	Medication:T82 
+T83	Medication 1915 1925	prednisone
+E43	Medication:T83 
+T84	Medication 1927 1941	R-CHOP regimen
+E44	Medication:T84 
+R53	SUB_PROCEDURE Arg1:E39 Arg2:E38	
+R54	SUB_PROCEDURE Arg1:E39 Arg2:E44	
+R55	SUB_PROCEDURE Arg1:E40 Arg2:E38	
+R56	SUB_PROCEDURE Arg1:E41 Arg2:E38	
+R57	SUB_PROCEDURE Arg1:E42 Arg2:E38	
+R58	SUB_PROCEDURE Arg1:E43 Arg2:E38	
+R59	SUB_PROCEDURE Arg1:E40 Arg2:E44	
+R60	SUB_PROCEDURE Arg1:E41 Arg2:E44	
+R61	SUB_PROCEDURE Arg1:E42 Arg2:E44	
+R62	SUB_PROCEDURE Arg1:E43 Arg2:E44	
+T85	Sign_symptom 1968 1977	remission
+E45	Sign_symptom:T85 
+*	OVERLAP E5 E6 E7 E8 E4 E3 E9 E11 E12 E13 E14 E15 E16
+R63	BEFORE Arg1:E2 Arg2:E3	
+R64	BEFORE Arg1:E16 Arg2:E17	
+T86	Detailed_description 861 867	repeat
+R65	MODIFY Arg1:T86 Arg2:E17	
+*	OVERLAP E17 E18 E20 E21 E22 E23 E24 E25 E26 E27 E35 E36 E37
+R66	BEFORE Arg1:E37 Arg2:E38	
+R67	BEFORE Arg1:E38 Arg2:E45	

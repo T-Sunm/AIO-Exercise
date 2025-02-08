@@ -1,0 +1,407 @@
+T1	Age 2 13	19-year-old
+T2	Sex 14 19	woman
+T3	Sign_symptom 37 41	lump
+E1	Sign_symptom:T3 
+T4	Biological_structure 49 61	right breast
+R1	MODIFY Arg1:T4 Arg2:E1	
+T5	Disease_disorder 71 83	macrocephaly
+E2	Disease_disorder:T5 
+T6	Sign_symptom 99 106	papules
+E3	Sign_symptom:T6 
+T7	Biological_attribute 88 98	milimetric
+T8	Biological_structure 114 120	tongue
+R2	MODIFY Arg1:T7 Arg2:E3	
+R3	MODIFY Arg1:T8 Arg2:E3	
+T9	Texture 130 142	cobble stone
+R4	MODIFY Arg1:T9 Arg2:E3	
+T10	Biological_structure 159 165	breast
+T11	Diagnostic_procedure 166 181	ultrasonography
+E4	Diagnostic_procedure:T11 
+T12	Diagnostic_procedure 183 185	US
+E5	Diagnostic_procedure:T12 
+R5	IDENTICAL Arg1:E5 Arg2:E4	
+R6	MODIFY Arg1:T10 Arg2:E4	
+T13	Lab_value 194 210	more than twenty
+T14	Disease_disorder 231 237	masses
+E6	Disease_disorder:T14 
+T15	Shape 226 230	oval
+T16	Detailed_description 211 224	circumscribed
+R7	MODIFY Arg1:T16 Arg2:E6	
+R8	MODIFY Arg1:T15 Arg2:E6	
+R9	MODIFY Arg1:T13 Arg2:E6	
+T17	Biological_structure 246 252	breast
+R10	MODIFY Arg1:T17 Arg2:E6	
+T18	Diagnostic_procedure 272 278	biopsy
+E7	Diagnostic_procedure:T18 
+T19	Detailed_description 257 271	US-guided core
+R11	MODIFY Arg1:T19 Arg2:E7	
+T20	Disease_disorder 310 316	masses
+E8	Disease_disorder:T20 
+T21	Detailed_description 301 309	palpable
+T22	Disease_disorder 350 363	fibroadenomas
+E9	Disease_disorder:T22 
+T23	Detailed_description 341 349	juvenile
+R12	MODIFY Arg1:T23 Arg2:E9	
+A1	POLARITY E9 POS
+R13	MODIFY Arg1:T21 Arg2:E8	
+T24	Diagnostic_procedure 392 394	US
+E10	Diagnostic_procedure:T24 
+T25	Biological_structure 385 391	breast
+R14	MODIFY Arg1:T25 Arg2:E10	
+T26	Frequency 417 437	every 6 or 12 months
+T27	Duration 442 449	3 years
+E11	Duration:T27 
+R16	MODIFY Arg1:T26 Arg2:E10	
+R17	MODIFY Arg1:E11 Arg2:E10	
+R18	BEFORE Arg1:E7 Arg2:E10	
+R19	MODIFY Arg1:E6 Arg2:E5	
+*	OVERLAP E6 E7
+R20	MODIFY Arg1:E8 Arg2:E7	
+R21	MODIFY Arg1:E9 Arg2:E7	
+T29	Diagnostic_procedure 488 496	biopsies
+E13	Diagnostic_procedure:T29 
+T30	Detailed_description 483 487	core
+R22	MODIFY Arg1:T30 Arg2:E13	
+T31	Quantitative_concept 512 521	six times
+T32	Diagnostic_procedure 566 582	needle excisions
+E14	Diagnostic_procedure:T32 
+T33	Diagnostic_procedure 586 604	surgical excisions
+E15	Diagnostic_procedure:T33 
+T34	Detailed_description 535 544	US-guided
+T35	Detailed_description 545 560	vacuum-assisted
+T36	Detailed_description 561 565	core
+R23	MODIFY Arg1:T34 Arg2:E14	
+R24	MODIFY Arg1:T35 Arg2:E14	
+R25	MODIFY Arg1:T36 Arg2:E14	
+R26	MODIFY Arg1:T34 Arg2:E15	
+R27	MODIFY Arg1:T35 Arg2:E15	
+R28	MODIFY Arg1:T36 Arg2:E15	
+T37	Disease_disorder 608 615	lesions
+E16	Disease_disorder:T37 
+T38	Lab_value 621 636	increased sizes
+R29	MODIFY Arg1:T38 Arg2:E16	
+R30	BEFORE Arg1:E13 Arg2:E14	
+T39	Disease_disorder 662 674	fibroadenoma
+E17	Disease_disorder:T39 
+T40	Disease_disorder 676 691	tubular adenoma
+E18	Disease_disorder:T40 
+T42	Disease_disorder 695 722	atypical ductal hyperplasia
+E19	Disease_disorder:T42 
+T43	Disease_disorder 724 727	ADH
+E20	Disease_disorder:T43 
+R32	IDENTICAL Arg1:E20 Arg2:E19	
+T45	Age 760 775	age of 19 years
+T46	Biological_structure 801 805	neck
+T47	Diagnostic_procedure 806 808	US
+E21	Diagnostic_procedure:T47 
+T48	Disease_disorder 824 828	mass
+E22	Disease_disorder:T48 
+T49	Biological_structure 836 845	left neck
+T50	Detailed_description 815 823	palpable
+R34	MODIFY Arg1:T50 Arg2:E22	
+R35	MODIFY Arg1:T49 Arg2:E22	
+R36	MODIFY Arg1:T46 Arg2:E21	
+R37	MODIFY Arg1:E22 Arg2:E21	
+T51	Sign_symptom 869 876	nodules
+E23	Sign_symptom:T51 
+T52	Detailed_description 855 868	indeterminate
+R38	MODIFY Arg1:T52 Arg2:E23	
+T53	Biological_structure 899 913	thyroid glands
+T54	Lab_value 894 898	both
+R39	MODIFY Arg1:T54 Arg2:T53	
+R40	MODIFY Arg1:T53 Arg2:E23	
+T55	Diagnostic_procedure 927 929	US
+E24	Diagnostic_procedure:T55 
+T56	Detailed_description 917 926	follow-up
+R41	MODIFY Arg1:T56 Arg2:E24	
+T28	Lab_value 966 983	increased in size
+T57	Lab_value 944 948	some
+T58	Sign_symptom 958 965	nodules
+E12	Sign_symptom:T58 
+R15	MODIFY Arg1:T28 Arg2:E12	
+R42	MODIFY Arg1:T57 Arg2:E12	
+R43	BEFORE Arg1:E12 Arg2:E24	
+T59	Therapeutic_procedure 1015 1028	thyroidectomy
+E25	Therapeutic_procedure:T59 
+T60	Detailed_description 1009 1014	total
+R44	MODIFY Arg1:T60 Arg2:E25	
+T61	Disease_disorder 1076 1096	follicular carcinoma
+E26	Disease_disorder:T61 
+T62	Detailed_description 1067 1075	invasive
+R45	MODIFY Arg1:T62 Arg2:E26	
+T63	Biological_structure 1104 1116	left thyroid
+R46	MODIFY Arg1:T63 Arg2:E26	
+T64	Disease_disorder 1121 1139	follicular adenoma
+E27	Disease_disorder:T64 
+T41	Biological_structure 1147 1160	right thyroid
+R31	MODIFY Arg1:T41 Arg2:E27	
+T66	Nonbiological_location 1211 1219	hospital
+T67	Biological_structure 1245 1255	left cheek
+T68	Sign_symptom 1229 1237	swelling
+E28	Sign_symptom:T68 
+R47	MODIFY Arg1:T67 Arg2:E28	
+T69	Clinical_event 1199 1206	visited
+E29	Clinical_event:T69 
+T70	Diagnostic_procedure 1271 1278	CT scan
+E30	Diagnostic_procedure:T70 
+T71	Biological_structure 1257 1261	Head
+T72	Biological_structure 1266 1270	neck
+R48	MODIFY Arg1:T71 Arg2:E30	
+R49	MODIFY Arg1:T72 Arg2:E30	
+T73	Disease_disorder 1299 1303	mass
+E31	Disease_disorder:T73 
+T74	Biological_structure 1290 1298	vascular
+R50	MODIFY Arg1:T74 Arg2:E31	
+T75	Biological_structure 1311 1329	left parotid gland
+R51	MODIFY Arg1:T75 Arg2:E31	
+T76	Biological_structure 1348 1361	left forehead
+R52	MODIFY Arg1:T76 Arg2:E31	
+T77	Diagnostic_procedure 1383 1394	angiography
+E32	Diagnostic_procedure:T77 
+T78	Biological_structure 1366 1382	external carotid
+R53	MODIFY Arg1:T78 Arg2:E32	
+T79	Biological_structure 1465 1495	left internal maxillary artery
+T81	Therapeutic_procedure 1626 1644	genetic counseling
+E34	Therapeutic_procedure:T81 
+T82	Disease_disorder 1671 1686	Cowden syndrome
+E35	Disease_disorder:T82 
+A2	POLARITY E35 UNCERTAIN
+T83	Diagnostic_procedure 1695 1699	PTEN
+E36	Diagnostic_procedure:T83 
+A3	POLARITY E36 UNCERTAIN
+T84	Diagnostic_procedure 1727 1739	blood sample
+E37	Diagnostic_procedure:T84 
+T85	Diagnostic_procedure 1700 1719	DNA sequencing test
+E38	Diagnostic_procedure:T85 
+R54	SUB_PROCEDURE Arg1:E37 Arg2:E38	
+R55	MODIFY Arg1:E35 Arg2:E38	
+R56	SUB_PROCEDURE Arg1:E36 Arg2:E38	
+T86	Diagnostic_procedure 1772 1781	c.301dupA
+E39	Diagnostic_procedure:T86 
+T87	Diagnostic_procedure 1783 1794	p.I101NfsX6
+E40	Diagnostic_procedure:T87 
+T88	Diagnostic_procedure 1751 1770	frameshift mutation
+E41	Diagnostic_procedure:T88 
+R57	IDENTICAL Arg1:E40 Arg2:E39	
+R58	MODIFY Arg1:E39 Arg2:E41	
+T90	Disease_disorder 1850 1854	mass
+E42	Disease_disorder:T90 
+T91	Lab_value 1860 1874	increased size
+T92	Biological_structure 1908 1919	left breast
+T93	Lab_value 1879 1900	increased vascularity
+R59	MODIFY Arg1:T91 Arg2:E42	
+R60	MODIFY Arg1:T93 Arg2:E42	
+R61	MODIFY Arg1:T92 Arg2:E42	
+T94	Diagnostic_procedure 1955 1970	needle excision
+E43	Diagnostic_procedure:T94 
+T95	Detailed_description 1924 1933	US-guided
+T96	Detailed_description 1934 1949	vacuum-assisted
+T97	Detailed_description 1950 1954	core
+R62	MODIFY Arg1:T95 Arg2:E43	
+R63	MODIFY Arg1:T96 Arg2:E43	
+R64	MODIFY Arg1:T97 Arg2:E43	
+T98	Disease_disorder 1982 2006	ductal carcinoma in situ
+E44	Disease_disorder:T98 
+T99	Disease_disorder 2008 2012	DCIS
+E45	Disease_disorder:T99 
+R65	IDENTICAL Arg1:E45 Arg2:E44	
+T100	Detailed_description 2017 2032	non-comedo type
+T101	Lab_value 2039 2048	low grade
+R66	MODIFY Arg1:T100 Arg2:E45	
+T102	Disease_disorder 2059 2071	fibroadenoma
+E46	Disease_disorder:T102 
+R67	MODIFY Arg1:T101 Arg2:E46	
+*	OVERLAP E45 E46 E47
+R68	MODIFY Arg1:E44 Arg2:E43	
+R69	MODIFY Arg1:E46 Arg2:E43	
+T103	Diagnostic_procedure 2111 2114	MRI
+E47	Diagnostic_procedure:T103 
+T104	Detailed_description 2086 2103	contrast-enhanced
+T105	Biological_structure 2104 2110	breast
+R70	MODIFY Arg1:T105 Arg2:E47	
+R71	MODIFY Arg1:T104 Arg2:E47	
+T106	Lab_value 2160 2168	multiple
+T107	Detailed_description 2170 2188	well-circumscribed
+T108	Disease_disorder 2200 2206	masses
+E48	Disease_disorder:T108 
+T109	Biological_structure 2215 2222	breasts
+T110	Lab_value 2210 2214	both
+R72	MODIFY Arg1:T110 Arg2:T109	
+R73	MODIFY Arg1:T109 Arg2:E48	
+R74	MODIFY Arg1:T107 Arg2:E48	
+R75	MODIFY Arg1:T106 Arg2:E48	
+T111	Lab_value 2190 2199	enhancing
+R76	MODIFY Arg1:T111 Arg2:E48	
+T112	Disease_disorder 2237 2243	masses
+E49	Disease_disorder:T112 
+T113	Lab_value 2233 2236	All
+R77	MODIFY Arg1:T113 Arg2:E49	
+T114	Diagnostic_procedure 2272 2288	signal intensity
+E50	Diagnostic_procedure:T114 
+T115	Diagnostic_procedure 2292 2310	T2-weighted images
+E51	Diagnostic_procedure:T115 
+T116	Severity 2251 2255	high
+T117	Severity 2259 2271	intermediate
+R78	SUB_PROCEDURE Arg1:E50 Arg2:E51	
+R79	MODIFY Arg1:E49 Arg2:E50	
+R80	MODIFY Arg1:T116 Arg2:E50	
+R81	MODIFY Arg1:T117 Arg2:E50	
+T118	Disease_disorder 2329 2335	masses
+E52	Disease_disorder:T118 
+T119	Lab_value 2321 2328	Several
+R82	MODIFY Arg1:T119 Arg2:E52	
+T120	Detailed_description 2346 2369	early rapid enhancement
+T121	Disease_disorder 2476 2486	malignancy
+E53	Disease_disorder:T121 
+A4	POLARITY E53 MAYBE_POS
+T122	Therapeutic_procedure 2522 2532	mastectomy
+E54	Therapeutic_procedure:T122 
+T123	Detailed_description 2499 2521	bilateral prophylactic
+R83	MODIFY Arg1:T123 Arg2:E54	
+T124	Therapeutic_procedure 2548 2569	breast reconstruction
+E55	Therapeutic_procedure:T124 
+T125	Detailed_description 2538 2547	immediate
+R84	MODIFY Arg1:T125 Arg2:E55	
+R85	SUB_PROCEDURE Arg1:E55 Arg2:E54	
+T126	Disease_disorder 2621 2627	masses
+E56	Disease_disorder:T126 
+T127	Biological_structure 2614 2620	breast
+T128	Lab_value 2595 2603	multiple
+T129	Detailed_description 2604 2613	bilateral
+R86	MODIFY Arg1:T127 Arg2:E56	
+R87	MODIFY Arg1:T129 Arg2:E56	
+R88	MODIFY Arg1:T128 Arg2:E56	
+T130	Diagnostic_procedure 2644 2660	kinetic features
+E57	Diagnostic_procedure:T130 
+T131	Detailed_description 2633 2643	suspicious
+R89	MODIFY Arg1:T131 Arg2:E57	
+T132	Diagnostic_procedure 2671 2674	MRI
+E58	Diagnostic_procedure:T132 
+T133	Biological_structure 2664 2670	breast
+R90	MODIFY Arg1:T133 Arg2:E58	
+R91	SUB_PROCEDURE Arg1:E58 Arg2:E57	
+T134	Disease_disorder 2695 2708	breast cancer
+E59	Disease_disorder:T134 
+A5	POLARITY E59 MAYBE_POS
+T135	Disease_disorder 2712 2727	Cowden syndrome
+E60	Disease_disorder:T135 
+R92	MODIFY Arg1:E60 Arg2:E59	
+T136	Disease_disorder 2766 2769	ADH
+E61	Disease_disorder:T136 
+T137	Disease_disorder 2780 2795	tubular adenoma
+E62	Disease_disorder:T137 
+T138	Disease_disorder 2968 2981	breast cancer
+E63	Disease_disorder:T138 
+A6	POLARITY E63 NEG
+T139	Family_history 2968 2981	breast cancer
+T140	Disease_disorder 2985 3000	Cowden syndrome
+E64	Disease_disorder:T140 
+A7	POLARITY E64 NEG
+T141	Family_history 2985 3000	Cowden syndrome
+T142	Biological_structure 2830 2841	left breast
+T143	Disease_disorder 2813 2822	carcinoma
+E65	Disease_disorder:T143 
+A8	POLARITY E65 NEG
+T144	Detailed_description 2804 2812	residual
+R93	MODIFY Arg1:T144 Arg2:E65	
+R94	MODIFY Arg1:E62 Arg2:E61	
+R95	MODIFY Arg1:E65 Arg2:E61	
+R96	MODIFY Arg1:T142 Arg2:E65	
+T145	Disease_disorder 2855 2871	tubular adenomas
+E66	Disease_disorder:T145 
+T146	Lab_value 2846 2854	multiple
+R97	MODIFY Arg1:T146 Arg2:E66	
+T147	Disease_disorder 2873 2886	fibroadenomas
+E67	Disease_disorder:T147 
+R98	MODIFY Arg1:T146 Arg2:E67	
+T148	Disease_disorder 2891 2913	intraductal papillomas
+E68	Disease_disorder:T148 
+T149	Biological_structure 2922 2929	breasts
+T150	Lab_value 2917 2921	both
+R99	MODIFY Arg1:T150 Arg2:T149	
+R100	MODIFY Arg1:T146 Arg2:E68	
+R101	MODIFY Arg1:T149 Arg2:E68	
+R102	MODIFY Arg1:T149 Arg2:E67	
+R103	MODIFY Arg1:T149 Arg2:E66	
+*	OVERLAP E66 E67 E68 E65
+T151	Diagnostic_procedure 2733 2756	surgical histopathology
+E69	Diagnostic_procedure:T151 
+R104	MODIFY Arg1:E61 Arg2:E69	
+*	OVERLAP E60 E69
+*	OVERLAP E58 E59
+*	OVERLAP E55 E56
+R105	MODIFY Arg1:E57 Arg2:E56	
+R106	MODIFY Arg1:T120 Arg2:E52	
+T152	Diagnostic_procedure 2375 2398	washout kinetic pattern
+E70	Diagnostic_procedure:T152 
+T153	Diagnostic_procedure 2402 2440	time-signal intensity curve evaluation
+E71	Diagnostic_procedure:T153 
+R107	MODIFY Arg1:E53 Arg2:E70	
+R108	SUB_PROCEDURE Arg1:E71 Arg2:E70	
+R109	MODIFY Arg1:E70 Arg2:E52	
+*	OVERLAP E53 E54
+*	OVERLAP E51 E52
+*	OVERLAP E48 E49
+R110	MODIFY Arg1:E48 Arg2:E47	
+*	OVERLAP E42 E43 E72
+R111	BEFORE Arg1:E40 Arg2:E72	
+T154	Date 1797 1819	At the age of 22 years
+E72	Date:T154 
+R112	SUB_PROCEDURE Arg1:E41 Arg2:E37	
+*	OVERLAP E34 E38 E75
+T80	Disease_disorder 1425 1428	AVM
+E33	Disease_disorder:T80 
+T155	Disease_disorder 1566 1569	AVM
+E73	Disease_disorder:T155 
+R113	MODIFY Arg1:E33 Arg2:E32	
+T156	Biological_structure 1434 1447	feeder vessel
+R114	MODIFY Arg1:T79 Arg2:T156	
+R115	MODIFY Arg1:T156 Arg2:E33	
+T157	Therapeutic_procedure 1516 1528	embolization
+E74	Therapeutic_procedure:T157 
+T158	Detailed_description 1508 1515	partial
+R116	MODIFY Arg1:T158 Arg2:E74	
+T159	Coreference 1583 1604	the patient's symptom
+E75	Coreference:T159 
+R117	IDENTICAL Arg1:E75 Arg2:E28	
+A9	POLARITY E75 NEG
+A10	TREND E75 DEC
+T160	Diagnostic_procedure 1543 1553	blood flow
+E76	Diagnostic_procedure:T160 
+T161	Lab_value 1529 1538	decreased
+A11	TREND E76 DEC
+R119	MODIFY Arg1:T161 Arg2:E76	
+R120	CAUSE Arg1:E74 Arg2:E76	
+R118	MODIFY Arg1:E73 Arg2:E76	
+R121	CAUSE Arg1:E76 Arg2:E75	
+T162	Date 1171 1193	At the age of 21 years
+E77	Date:T162 
+*	OVERLAP E77 E29 E28 E30
+R122	MODIFY Arg1:T66 Arg2:E29	
+R123	MODIFY Arg1:E31 Arg2:E30	
+*	OVERLAP E31 E32
+R124	BEFORE Arg1:E33 Arg2:E74	
+R125	BEFORE Arg1:E25 Arg2:E26	
+*	OVERLAP E26 E27
+R126	BEFORE Arg1:E27 Arg2:E77	
+*	OVERLAP E12 E25
+R127	BEFORE Arg1:E23 Arg2:E24	
+T163	Date 753 775	At the age of 19 years
+E78	Date:T163 
+*	OVERLAP E78 E21
+*	OVERLAP E22 E23
+T44	Disease_disorder 739 751	fibroadenoma
+E79	Disease_disorder:T44 
+R33	MODIFY Arg1:E79 Arg2:E20	
+R128	MODIFY Arg1:E16 Arg2:E15	
+R129	MODIFY Arg1:E16 Arg2:E14	
+*	OVERLAP E10 E13
+R130	MODIFY Arg1:T31 Arg2:E13	
+T164	Coreference 638 656	Pathologic results
+E80	Coreference:T164 
+R131	IDENTICAL Arg1:E80 Arg2:E13	
+R132	MODIFY Arg1:E17 Arg2:E80	
+R133	MODIFY Arg1:E18 Arg2:E80	
+R134	MODIFY Arg1:E19 Arg2:E80	
+R135	BEFORE Arg1:E79 Arg2:E78	
+*	OVERLAP E1 E2 E3 E4

@@ -1,0 +1,213 @@
+T1	Age 2 13	71-year-old
+T2	Personal_background 14 30	African-American
+T3	Sex 31 36	woman
+T4	Clinical_event 37 46	presented
+E1	Clinical_event:T4 
+T5	Sign_symptom 89 97	dyspnoea
+E2	Sign_symptom:T5 
+A1	TREND E2 INC
+T6	Detailed_description 78 88	exertional
+T7	Lab_value 68 77	worsening
+R1	MODIFY Arg1:T6 Arg2:E2	
+R2	MODIFY Arg1:T7 Arg2:E2	
+T8	Sign_symptom 114 124	orthopnoea
+E3	Sign_symptom:T8 
+T9	Sign_symptom 145 151	oedema
+E4	Sign_symptom:T9 
+T10	Biological_structure 129 144	lower extremity
+R3	MODIFY Arg1:T10 Arg2:E4	
+T11	Duration 156 163	3 weeks
+E5	Duration:T11 
+T12	History 200 212	hypertension
+T13	Sign_symptom 200 212	hypertension
+E6	Sign_symptom:T13 
+T14	Disease_disorder 228 243	G6PD deficiency
+E7	Disease_disorder:T14 
+T15	History 228 243	G6PD deficiency
+T16	Sign_symptom 267 277	haemolysis
+E8	Sign_symptom:T16 
+T17	History 289 312	former cigarette smoker
+T18	Family_history 341 356	G6PD deficiency
+T19	Subject 321 335	family members
+T20	Family_history 358 370	hypertension
+T21	Family_history 375 392	diabetes mellitus
+R4	MODIFY Arg1:T19 Arg2:T18	
+R5	MODIFY Arg1:T19 Arg2:T20	
+R6	MODIFY Arg1:T19 Arg2:T21	
+T22	Diagnostic_procedure 394 417	Vital signs measurement
+E9	Diagnostic_procedure:T22 
+T23	Diagnostic_procedure 429 443	blood pressure
+E10	Diagnostic_procedure:T23 
+R7	SUB_PROCEDURE Arg1:E10 Arg2:E9	
+T24	Lab_value 447 459	150/73 mm Hg
+R8	MODIFY Arg1:T24 Arg2:E10	
+T25	Diagnostic_procedure 461 471	pulse rate
+E11	Diagnostic_procedure:T25 
+T26	Lab_value 475 481	70 bpm
+R9	MODIFY Arg1:T26 Arg2:E11	
+T27	Diagnostic_procedure 483 499	respiratory rate
+E12	Diagnostic_procedure:T27 
+T28	Lab_value 503 517	24 breaths/min
+R10	MODIFY Arg1:T28 Arg2:E12	
+T29	Diagnostic_procedure 519 530	temperature
+E13	Diagnostic_procedure:T29 
+T30	Lab_value 534 540	36.6°C
+R11	MODIFY Arg1:T30 Arg2:E13	
+T31	Diagnostic_procedure 549 559	saturation
+E14	Diagnostic_procedure:T31 
+T32	Lab_value 545 548	97%
+R12	MODIFY Arg1:T32 Arg2:E14	
+T33	Detailed_description 563 572	room air.
+R13	MODIFY Arg1:T33 Arg2:E14	
+R14	SUB_PROCEDURE Arg1:E11 Arg2:E9	
+R15	SUB_PROCEDURE Arg1:E12 Arg2:E9	
+R16	SUB_PROCEDURE Arg1:E13 Arg2:E9	
+R17	SUB_PROCEDURE Arg1:E14 Arg2:E9	
+T34	Sign_symptom 581 592	comfortable
+E15	Sign_symptom:T34 
+T35	Detailed_description 596 600	rest
+R18	MODIFY Arg1:T35 Arg2:E15	
+T36	Diagnostic_procedure 606 626	physical examination
+E16	Diagnostic_procedure:T36 
+T37	Sign_symptom 634 643	distended
+E17	Sign_symptom:T37 
+T38	Biological_structure 644 657	jugular veins
+R19	MODIFY Arg1:T38 Arg2:E17	
+T39	Sign_symptom 671 679	crackles
+E18	Sign_symptom:T39 
+T40	Biological_structure 683 703	bilateral lung bases
+R20	MODIFY Arg1:T40 Arg2:E18	
+T41	Detailed_description 659 670	inspiratory
+R21	MODIFY Arg1:T41 Arg2:E18	
+T43	Diagnostic_procedure 727 741	apical impulse
+E20	Diagnostic_procedure:T43 
+T42	Lab_value 707 726	laterally displaced
+R22	MODIFY Arg1:T42 Arg2:E20	
+T44	Sign_symptom 754 760	oedema
+E19	Sign_symptom:T44 
+T45	Biological_structure 746 753	bipedal
+R23	MODIFY Arg1:T45 Arg2:E19	
+T46	Diagnostic_procedure 766 769	ECG
+E21	Diagnostic_procedure:T46 
+T47	Sign_symptom 794 805	hypertrophy
+E22	Sign_symptom:T47 
+T48	Biological_structure 777 793	left ventricular
+R24	MODIFY Arg1:T48 Arg2:E22	
+T49	Sign_symptom 824 841	T-wave inversions
+E23	Sign_symptom:T49 
+T50	Detailed_description 810 823	inferolateral
+R25	MODIFY Arg1:T50 Arg2:E23	
+T51	Diagnostic_procedure 849 860	radiography
+E24	Diagnostic_procedure:T51 
+T52	Biological_structure 843 848	Chest
+R26	MODIFY Arg1:T52 Arg2:E24	
+T53	Sign_symptom 870 882	cardiomegaly
+E25	Sign_symptom:T53 
+T54	Sign_symptom 902 908	oedema
+E26	Sign_symptom:T54 
+T55	Biological_structure 892 901	pulmonary
+R27	MODIFY Arg1:T55 Arg2:E26	
+T56	Severity 887 891	mild
+R28	MODIFY Arg1:T56 Arg2:E26	
+T57	Diagnostic_procedure 914 929	metabolic panel
+E27	Diagnostic_procedure:T57 
+T58	Diagnostic_procedure 934 942	troponin
+E28	Diagnostic_procedure:T58 
+T59	Lab_value 955 961	normal
+R29	MODIFY Arg1:T59 Arg2:E28	
+R30	MODIFY Arg1:T59 Arg2:E27	
+T60	Diagnostic_procedure 970 996	B-type natriuretic peptide
+E29	Diagnostic_procedure:T60 
+T61	Lab_value 1001 1010	increased
+T62	Lab_value 1014 1025	826.5 pg/mL
+R31	MODIFY Arg1:T61 Arg2:E29	
+R32	MODIFY Arg1:T62 Arg2:E29	
+T63	Diagnostic_procedure 1027 1043	Echocardiography
+E30	Diagnostic_procedure:T63 
+T64	Sign_symptom 1053 1060	dilated
+E31	Sign_symptom:T64 
+T65	Biological_structure 1061 1075	left ventricle
+R33	MODIFY Arg1:T65 Arg2:E31	
+T66	Diagnostic_procedure 1084 1101	ejection fraction
+E32	Diagnostic_procedure:T66 
+T67	Diagnostic_procedure 1103 1105	EF
+E33	Diagnostic_procedure:T67 
+R34	IDENTICAL Arg1:E33 Arg2:E32	
+T68	Lab_value 1110 1113	30%
+R35	MODIFY Arg1:T68 Arg2:E32	
+R36	MODIFY Arg1:T65 Arg2:E32	
+T69	Disease_disorder 1141 1161	systolic dysfunction
+E34	Disease_disorder:T69 
+T70	Biological_structure 1123 1140	right ventricular
+R37	MODIFY Arg1:T70 Arg2:E34	
+T71	Severity 1118 1122	mild
+R38	MODIFY Arg1:T71 Arg2:E34	
+T72	Therapeutic_procedure 1179 1194	catheterisation
+E35	Therapeutic_procedure:T72 
+T73	Biological_structure 1163 1178	Coronary artery
+R39	MODIFY Arg1:T73 Arg2:E35	
+T74	Diagnostic_procedure 1211 1231	coronary circulation
+E36	Diagnostic_procedure:T74 
+T75	Lab_value 1204 1210	normal
+R40	MODIFY Arg1:T75 Arg2:E36	
+T76	Medication 1233 1248	Ethacrynic acid
+E37	Medication:T76 
+T77	Dosage 1252 1263	50 mg daily
+R41	MODIFY Arg1:T77 Arg2:E37	
+T78	Sign_symptom 1293 1301	improved
+E38	Sign_symptom:T78 
+T79	Date 1302 1313	after a day
+E39	Date:T79 
+T80	Sign_symptom 1328 1336	dyspnoea
+E40	Sign_symptom:T80 
+T81	Medication 1350 1364	spironolactone
+E41	Medication:T81 
+T82	Medication 1380 1400	metoprolol succinate
+E42	Medication:T82 
+T83	Medication 1405 1413	losartan
+E43	Medication:T83 
+T84	Diagnostic_procedure 1457 1468	radiography
+E44	Diagnostic_procedure:T84 
+T85	Biological_structure 1451 1456	chest
+R42	MODIFY Arg1:T85 Arg2:E44	
+T86	Sign_symptom 1500 1506	oedema
+E45	Sign_symptom:T86 
+A2	POLARITY E45 NEG
+T87	Biological_structure 1490 1499	pulmonary
+R43	MODIFY Arg1:T87 Arg2:E45	
+T88	Diagnostic_procedure 1522 1540	laboratory results
+E46	Diagnostic_procedure:T88 
+T89	Sign_symptom 1588 1598	haemolysis
+E47	Sign_symptom:T89 
+A3	POLARITY E47 NEG
+T90	Sign_symptom 1603 1628	worsening kidney function
+E48	Sign_symptom:T90 
+A4	POLARITY E48 NEG
+T91	Sign_symptom 1650 1661	ototoxicity
+E49	Sign_symptom:T91 
+A5	POLARITY E49 NEG
+T92	Sign_symptom 1686 1698	asymptomatic
+E50	Sign_symptom:T92 
+T93	Clinical_event 1670 1680	discharged
+E51	Clinical_event:T93 
+T94	Nonbiological_location 1681 1685	home
+R44	MODIFY Arg1:T94 Arg2:E51	
+*	OVERLAP E1 E2
+R45	AFTER Arg1:E2 Arg2:E3	
+*	OVERLAP E3 E4 E5
+R46	AFTER Arg1:E5 Arg2:E6	
+*	OVERLAP E6 E7 E8
+R47	BEFORE Arg1:E8 Arg2:E9	
+*	OVERLAP E9 E15 E16 E17 E18 E20 E19 E21 E22 E23 E24 E25 E26 E27 E28 E29 E30 E31 E32 E34
+R48	BEFORE Arg1:E34 Arg2:E35	
+*	OVERLAP E35 E36
+R49	BEFORE Arg1:E36 Arg2:E37	
+R50	BEFORE Arg1:E37 Arg2:E38	
+*	OVERLAP E38 E39 E40
+R51	BEFORE Arg1:E40 Arg2:E41	
+R52	BEFORE Arg1:E41 Arg2:E42	
+*	OVERLAP E42 E43
+R53	BEFORE Arg1:E43 Arg2:E44	
+*	OVERLAP E44 E45 E46 E47 E48 E49
+R54	BEFORE Arg1:E49 Arg2:E51	
+*	OVERLAP E51 E50

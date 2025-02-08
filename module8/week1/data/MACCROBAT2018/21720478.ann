@@ -1,0 +1,436 @@
+T1	Age 20 31	77-year-old
+T2	Sex 32 35	man
+T3	Date 3 16	February 2010
+E1	Date:T3 
+T4	Disease_disorder 54 60	stroke
+E2	Disease_disorder:T4 
+T5	Disease_disorder 65 92	peripheral vascular disease
+E3	Disease_disorder:T5 
+T6	History 54 60	stroke
+T7	History 65 92	peripheral vascular disease
+T8	Clinical_event 93 102	presented
+E4	Clinical_event:T8 
+T9	Nonbiological_location 110 130	emergency department
+R1	MODIFY Arg1:T9 Arg2:E4	
+T10	Disease_disorder 141 156	pulmonary edema
+E5	Disease_disorder:T10 
+T11	Detailed_description 134 140	florid
+R2	MODIFY Arg1:T11 Arg2:E5	
+T12	History 186 215	worsening dyspnea on exertion
+T13	Duration 167 182	6-month history
+E6	Duration:T13 
+T14	Sign_symptom 196 203	dyspnea
+E7	Sign_symptom:T14 
+T15	Activity 207 215	exertion
+E8	Activity:T15 
+A1	TREND E7 INC
+R3	CAUSE Arg1:E8 Arg2:E7	
+T16	Sign_symptom 238 245	dyspnea
+E9	Sign_symptom:T16 
+T17	Detailed_description 228 237	nocturnal
+T18	Detailed_description 217 227	paroxysmal
+R4	MODIFY Arg1:T17 Arg2:E9	
+R5	MODIFY Arg1:T18 Arg2:E9	
+T19	Sign_symptom 255 260	edema
+E10	Sign_symptom:T19 
+T20	Biological_structure 251 254	leg
+R6	MODIFY Arg1:T20 Arg2:E10	
+T21	History 217 245	paroxysmal nocturnal dyspnea
+T22	History 251 260	leg edema
+T23	Diagnostic_procedure 267 287	physical examination
+E11	Diagnostic_procedure:T23 
+T24	Sign_symptom 304 309	rales
+E12	Sign_symptom:T24 
+T25	Sign_symptom 316 341	murmur of aortic stenosis
+E13	Sign_symptom:T25 
+T26	Detailed_description 296 303	diffuse
+R7	MODIFY Arg1:T26 Arg2:E12	
+T27	Diagnostic_procedure 381 395	echocardiogram
+E14	Diagnostic_procedure:T27 
+T28	Biological_structure 367 380	transthoracic
+R8	MODIFY Arg1:T28 Arg2:E14	
+T29	Detailed_description 345 366	2-dimensional Doppler
+R9	MODIFY Arg1:T29 Arg2:E14	
+T30	Disease_disorder 412 433	aortic valve stenosis
+E15	Disease_disorder:T30 
+T31	Severity 405 411	severe
+R10	MODIFY Arg1:T31 Arg2:E15	
+T32	Diagnostic_procedure 441 454	peak gradient
+E16	Diagnostic_procedure:T32 
+T33	Lab_value 458 465	70 mmHg
+E17	Lab_value:T33 
+R11	MODIFY Arg1:E17 Arg2:E16	
+T34	Diagnostic_procedure 472 485	mean gradient
+E18	Diagnostic_procedure:T34 
+T35	Lab_value 489 496	45 mmHg
+E19	Lab_value:T35 
+R12	MODIFY Arg1:E19 Arg2:E18	
+T36	Diagnostic_procedure 500 528	calculated aortic valve area
+E20	Diagnostic_procedure:T36 
+T37	Lab_value 532 539	0.7 cm2
+E21	Lab_value:T37 
+R13	MODIFY Arg1:E21 Arg2:E20	
+T38	Disease_disorder 548 568	mitral regurgitation
+E22	Disease_disorder:T38 
+T39	Severity 541 547	severe
+R14	MODIFY Arg1:T39 Arg2:E22	
+T40	Sign_symptom 585 592	dilated
+E23	Sign_symptom:T40 
+T41	Severity 576 584	severely
+R15	MODIFY Arg1:T41 Arg2:E23	
+T42	Biological_structure 593 607	left ventricle
+R16	MODIFY Arg1:T42 Arg2:E23	
+T43	Biological_structure 609 611	LV
+R17	IDENTICAL Arg1:T43 Arg2:T42	
+T44	Diagnostic_procedure 621 638	ejection fraction
+E24	Diagnostic_procedure:T44 
+T45	Lab_value 642 646	0.20
+E25	Lab_value:T45 
+R18	MODIFY Arg1:E25 Arg2:E24	
+T46	Disease_disorder 658 673	pulmonary edema
+E26	Disease_disorder:T46 
+A2	POLARITY E26 NEG
+T47	Diagnostic_procedure 688 711	cardiac catheterization
+E27	Diagnostic_procedure:T47 
+T48	Coreference 726 752	echocardiographic findings
+E28	Coreference:T48 
+R19	SUB_PROCEDURE Arg1:E28 Arg2:E14	
+R20	SUB_PROCEDURE Arg1:E16 Arg2:E14	
+R21	SUB_PROCEDURE Arg1:E18 Arg2:E14	
+R22	SUB_PROCEDURE Arg1:E20 Arg2:E14	
+T49	Disease_disorder 779 802	coronary artery disease
+E29	Disease_disorder:T49 
+T50	Detailed_description 764 778	nonobstructive
+R23	MODIFY Arg1:T50 Arg2:E29	
+T51	Therapeutic_procedure 893 910	surgical approach
+E30	Therapeutic_procedure:T51 
+T52	Detailed_description 874 892	minimally invasive
+R24	MODIFY Arg1:T52 Arg2:E30	
+T53	Therapeutic_procedure 942 957	supine position
+E31	Therapeutic_procedure:T53 
+T54	Medication 972 982	anesthetic
+E32	Medication:T54 
+T55	Therapeutic_procedure 997 1007	intubation
+E33	Therapeutic_procedure:T55 
+T56	Detailed_description 1015 1045	single-lumen endotracheal tube
+R25	MODIFY Arg1:T56 Arg2:E33	
+T57	Detailed_description 1052 1069	bronchial blocker
+R26	MODIFY Arg1:T57 Arg2:E33	
+T58	Diagnostic_procedure 1086 1118	transesophageal echocardiography
+E34	Diagnostic_procedure:T58 
+T59	Diagnostic_procedure 1120 1123	TEE
+E35	Diagnostic_procedure:T59 
+R27	IDENTICAL Arg1:E35 Arg2:E34	
+T60	Disease_disorder 1215 1234	significant disease
+E36	Disease_disorder:T60 
+A3	POLARITY E36 NEG
+T61	Biological_structure 1180 1201	mitral valve leaflets
+R28	MODIFY Arg1:T61 Arg2:E36	
+T62	Disease_disorder 1248 1268	mitral regurgitation
+E37	Disease_disorder:T62 
+T63	Biological_structure 1308 1320	mitral valve
+T64	Biological_structure 1287 1300	A2–P2 portion
+R29	MODIFY Arg1:T64 Arg2:T63	
+R30	MODIFY Arg1:T63 Arg2:E37	
+T65	Disease_disorder 1334 1354	mitral regurgitation
+E38	Disease_disorder:T65 
+T66	Detailed_description 1373 1383	functional
+R31	MODIFY Arg1:T66 Arg2:E38	
+T67	Sign_symptom 1395 1418	mitral annular dilation
+E39	Sign_symptom:T67 
+T68	Sign_symptom 1423 1432	tethering
+E40	Sign_symptom:T68 
+T69	Biological_structure 1440 1457	papillary muscles
+R32	MODIFY Arg1:T69 Arg2:E40	
+T70	Sign_symptom 1474 1481	dilated
+E41	Sign_symptom:T70 
+T71	Severity 1465 1473	severely
+R33	MODIFY Arg1:T71 Arg2:E41	
+T72	Biological_structure 1482 1484	LV
+R34	MODIFY Arg1:T72 Arg2:E41	
+R35	CAUSE Arg1:E41 Arg2:E40	
+R36	CAUSE Arg1:E40 Arg2:E38	
+R37	CAUSE Arg1:E39 Arg2:E38	
+T73	Therapeutic_procedure 1521 1527	repair
+E42	Therapeutic_procedure:T73 
+T74	Biological_structure 1535 1547	mitral valve
+R38	MODIFY Arg1:T74 Arg2:E42	
+T75	Detailed_description 1555 1575	transaortic approach
+R39	MODIFY Arg1:T75 Arg2:E42	
+T76	Therapeutic_procedure 1618 1640	cardiopulmonary bypass
+E43	Therapeutic_procedure:T76 
+T77	Therapeutic_procedure 1579 1595	femoral platform
+E44	Therapeutic_procedure:T77 
+R40	SUB_PROCEDURE Arg1:E44 Arg2:E43	
+T78	Therapeutic_procedure 1655 1663	incision
+E45	Therapeutic_procedure:T78 
+T79	Distance 1644 1654	2- to 3-cm
+R41	MODIFY Arg1:T79 Arg2:E45	
+T80	Biological_structure 1680 1700	left inguinal crease
+R42	MODIFY Arg1:T80 Arg2:E45	
+T81	Therapeutic_procedure 1729 1735	suture
+E46	Therapeutic_procedure:T81 
+T82	Detailed_description 1704 1728	5–0 Prolene purse-string
+R43	MODIFY Arg1:T82 Arg2:E46	
+T84	Detailed_description 1737 1794	Ethicon Inc., a Johnson & Johnson company; Somerville, NJ
+R45	MODIFY Arg1:T84 Arg2:E46	
+T85	Biological_structure 1814 1837	femoral artery and vein
+R46	MODIFY Arg1:T85 Arg2:E46	
+T86	Therapeutic_procedure 1867 1877	cannulated
+E47	Therapeutic_procedure:T86 
+T87	Biological_structure 1843 1862	left femoral artery
+R47	MODIFY Arg1:T87 Arg2:E47	
+T88	Detailed_description 1885 1909	16F–18F arterial cannula
+R48	MODIFY Arg1:T88 Arg2:E47	
+T89	Therapeutic_procedure 1937 1947	cannulated
+E48	Therapeutic_procedure:T89 
+T90	Biological_structure 1915 1932	left femoral vein
+R49	MODIFY Arg1:T90 Arg2:E48	
+T91	Detailed_description 1996 2030	Medtronic, Inc.; Minneapolis, Minn
+R50	MODIFY Arg1:T91 Arg2:E48	
+T92	Detailed_description 1955 1994	25F Bio-Medicus® femoral venous cannula
+R51	MODIFY Arg1:T92 Arg2:E48	
+T83	Biological_structure 2057 2075	superior vena cava
+R44	MODIFY Arg1:T83 Arg2:E48	
+T93	Diagnostic_procedure 2092 2095	TEE
+E49	Diagnostic_procedure:T93 
+T94	Therapeutic_procedure 2146 2154	incision
+E50	Therapeutic_procedure:T94 
+T95	Detailed_description 2123 2145	transverse parasternal
+R52	MODIFY Arg1:T95 Arg2:E50	
+T96	Distance 2112 2122	4- to 5-cm
+R53	MODIFY Arg1:T96 Arg2:E50	
+T97	Biological_structure 2164 2185	3rd intercostal space
+R54	MODIFY Arg1:T97 Arg2:E50	
+T98	Biological_structure 2205 2232	4th costochondral cartilage
+R55	MODIFY Arg1:T98 Arg2:E50	
+T99	Therapeutic_procedure 2252 2260	exposure
+E51	Therapeutic_procedure:T99 
+R56	SUB_PROCEDURE Arg1:E50 Arg2:E51	
+T100	Biological_structure 2268 2273	aorta
+R57	MODIFY Arg1:T100 Arg2:E51	
+T101	Therapeutic_procedure 2378 2384	opened
+E52	Therapeutic_procedure:T101 
+T102	Biological_structure 2362 2373	pericardium
+R58	MODIFY Arg1:T102 Arg2:E52	
+T103	Biological_structure 2385 2408	above the phrenic nerve
+T104	Biological_structure 2413 2427	over the aorta
+T105	Therapeutic_procedure 2442 2450	exposure
+E53	Therapeutic_procedure:T105 
+R59	SUB_PROCEDURE Arg1:E52 Arg2:E53	
+R60	MODIFY Arg1:T103 Arg2:E52	
+R61	MODIFY Arg1:T104 Arg2:E52	
+T106	Therapeutic_procedure 2480 2488	catheter
+E54	Therapeutic_procedure:T106 
+T107	Biological_structure 2465 2479	coronary sinus
+R62	MODIFY Arg1:T107 Arg2:E54	
+T108	Detailed_description 2454 2464	retrograde
+R63	MODIFY Arg1:T108 Arg2:E54	
+T109	Therapeutic_procedure 2523 2531	incision
+E55	Therapeutic_procedure:T109 
+T110	Therapeutic_procedure 2552 2558	suture
+E56	Therapeutic_procedure:T110 
+T111	Detailed_description 2539 2551	purse-string
+R64	MODIFY Arg1:T111 Arg2:E56	
+T112	Biological_structure 2577 2589	right atrium
+R65	MODIFY Arg1:T112 Arg2:E56	
+T113	Therapeutic_procedure 2596 2600	vent
+E57	Therapeutic_procedure:T113 
+T114	Therapeutic_procedure 2633 2639	suture
+E58	Therapeutic_procedure:T114 
+T115	Detailed_description 2620 2632	purse-string
+R66	MODIFY Arg1:T115 Arg2:E58	
+T116	Biological_structure 2593 2595	LV
+R67	MODIFY Arg1:T116 Arg2:E57	
+T117	Biological_structure 2647 2676	right superior pulmonary vein
+R68	MODIFY Arg1:T117 Arg2:E58	
+T118	Therapeutic_procedure 2691 2700	aortotomy
+E59	Therapeutic_procedure:T118 
+T119	Detailed_description 2680 2690	transverse
+R69	MODIFY Arg1:T119 Arg2:E59	
+T120	Therapeutic_procedure 2718 2724	expose
+E60	Therapeutic_procedure:T120 
+R70	SUB_PROCEDURE Arg1:E59 Arg2:E60	
+T121	Biological_structure 2729 2741	aortic valve
+R71	MODIFY Arg1:T121 Arg2:E60	
+T122	Therapeutic_procedure 2753 2760	removed
+E61	Therapeutic_procedure:T122 
+T123	Diagnostic_procedure 2767 2780	direct vision
+E62	Diagnostic_procedure:T123 
+R72	MODIFY Arg1:T121 Arg2:E61	
+T124	Sign_symptom 3944 3956	asymptomatic
+E63	Sign_symptom:T124 
+T125	Diagnostic_procedure 3962 3978	echocardiography
+E64	Diagnostic_procedure:T125 
+T126	Clinical_event 3901 3910	follow-up
+E65	Clinical_event:T126 
+T127	Date 3925 3935	March 2011
+E66	Date:T127 
+T128	Disease_disorder 3995 4015	mitral regurgitation
+E67	Disease_disorder:T128 
+T129	Lab_value 3986 3994	grade 1+
+E68	Lab_value:T129 
+R73	MODIFY Arg1:E68 Arg2:E67	
+T130	Sign_symptom 3802 3821	shortness of breath
+E69	Sign_symptom:T130 
+A4	POLARITY E69 NEG
+T131	Sign_symptom 3788 3796	did well
+E70	Sign_symptom:T131 
+T132	Clinical_event 3843 3853	discharged
+E71	Clinical_event:T132 
+T133	Nonbiological_location 3863 3871	hospital
+R74	MODIFY Arg1:T133 Arg2:E71	
+T134	Date 3875 3894	postoperative day 6
+E72	Date:T134 
+T135	Diagnostic_procedure 2830 2840	identified
+E73	Diagnostic_procedure:T135 
+T136	Biological_structure 2812 2824	mitral valve
+T137	Biological_structure 2786 2804	A2 and P2 segments
+R75	MODIFY Arg1:T137 Arg2:T136	
+R76	MODIFY Arg1:T136 Arg2:E73	
+T138	Therapeutic_procedure 2862 2868	repair
+E74	Therapeutic_procedure:T138 
+T139	Detailed_description 2849 2861	edge-to-edge
+R77	MODIFY Arg1:T139 Arg2:E74	
+T140	Detailed_description 1508 1520	edge-to-edge
+R78	MODIFY Arg1:T140 Arg2:E42	
+T141	Therapeutic_procedure 2913 2919	suture
+E75	Therapeutic_procedure:T141 
+T142	Detailed_description 2892 2912	5–0 Prolene mattress
+R79	MODIFY Arg1:T142 Arg2:E75	
+T143	Detailed_description 2929 2965	reinforced with pericardial pledgets
+R80	MODIFY Arg1:T143 Arg2:E75	
+T144	Biological_structure 2997 3009	mitral valve
+R81	MODIFY Arg1:T144 Arg2:E75	
+T145	Biological_structure 2973 2989	ventricular side
+R82	MODIFY Arg1:T145 Arg2:T144	
+R83	SUB_PROCEDURE Arg1:E75 Arg2:E74	
+T146	Therapeutic_procedure 3045 3071	bioprosthetic aortic valve
+E76	Therapeutic_procedure:T146 
+T147	Detailed_description 3073 3082	Medtronic
+R84	MODIFY Arg1:T147 Arg2:E76	
+T148	Detailed_description 3027 3044	27-mm Hancock® II
+R85	MODIFY Arg1:T148 Arg2:E76	
+T149	Detailed_description 3108 3127	standard techniques
+R86	MODIFY Arg1:T149 Arg2:E78	
+T150	Therapeutic_procedure 3133 3142	aortotomy
+E77	Therapeutic_procedure:T150 
+T151	Therapeutic_procedure 3088 3097	implanted
+E78	Therapeutic_procedure:T151 
+R87	SUB_PROCEDURE Arg1:E78 Arg2:E76	
+T152	Therapeutic_procedure 3147 3153	closed
+E79	Therapeutic_procedure:T152 
+R88	SUB_PROCEDURE Arg1:E79 Arg2:E77	
+T153	Detailed_description 3157 3172	2-layer fashion
+R89	MODIFY Arg1:T153 Arg2:E79	
+T154	Therapeutic_procedure 3206 3228	cardiopulmonary bypass
+E80	Therapeutic_procedure:T154 
+A5	POLARITY E80 NEG
+T155	Therapeutic_procedure 3253 3263	reattached
+E81	Therapeutic_procedure:T155 
+T156	Biological_structure 3245 3248	rib
+R90	MODIFY Arg1:T156 Arg2:E81	
+T157	Biological_structure 3271 3278	sternum
+R91	MODIFY Arg1:T157 Arg2:E81	
+T158	Detailed_description 3286 3302	1-cm metal plate
+T159	Detailed_description 3304 3335	Synthes, Inc.; West Chester, Pa
+R92	MODIFY Arg1:T158 Arg2:E81	
+R93	MODIFY Arg1:T159 Arg2:E81	
+T160	Therapeutic_procedure 3442 3453	thoracotomy
+E82	Therapeutic_procedure:T160 
+T161	Therapeutic_procedure 3458 3464	closed
+E83	Therapeutic_procedure:T161 
+R94	SUB_PROCEDURE Arg1:E83 Arg2:E82	
+T162	Detailed_description 3468 3483	routine fashion
+R95	MODIFY Arg1:T162 Arg2:E83	
+T163	Therapeutic_procedure 3359 3365	placed
+E84	Therapeutic_procedure:T163 
+T164	Detailed_description 3344 3354	fiber wire
+R96	MODIFY Arg1:T164 Arg2:E84	
+R97	SUB_PROCEDURE Arg1:E84 Arg2:E81	
+T165	Detailed_description 3369 3385	figure-8 fashion
+R98	MODIFY Arg1:T165 Arg2:E84	
+T166	Therapeutic_procedure 3411 3415	left
+E85	Therapeutic_procedure:T166 
+T167	Biological_structure 3423 3436	pleural space
+R99	MODIFY Arg1:T167 Arg2:E85	
+T168	Detailed_description 3396 3406	chest tube
+R100	MODIFY Arg1:T168 Arg2:E85	
+T169	Quantitative_concept 3389 3395	single
+R101	MODIFY Arg1:T169 Arg2:T168	
+T170	Disease_disorder 3513 3533	mitral regurgitation
+E86	Disease_disorder:T170 
+A6	POLARITY E86 NEG
+T171	Diagnostic_procedure 3499 3502	TEE
+E87	Diagnostic_procedure:T171 
+T172	Therapeutic_procedure 3767 3774	surgery
+E88	Therapeutic_procedure:T172 
+T173	Therapeutic_procedure 3745 3751	repair
+E89	Therapeutic_procedure:T173 
+T174	Detailed_description 3732 3744	edge-to-edge
+R102	MODIFY Arg1:T174 Arg2:E89	
+T175	Sign_symptom 3681 3695	double-orifice
+E90	Sign_symptom:T175 
+T176	Biological_structure 3696 3708	mitral valve
+R103	MODIFY Arg1:T176 Arg2:E90	
+T177	Sign_symptom 3544 3552	elbowing
+E91	Sign_symptom:T177 
+T178	Biological_structure 3561 3577	anterior leaflet
+R104	MODIFY Arg1:T178 Arg2:E91	
+T179	Sign_symptom 3605 3614	tethering
+E92	Sign_symptom:T179 
+T180	Biological_structure 3622 3638	anterior leaflet
+T181	Biological_structure 3646 3663	posterior leaflet
+R105	CAUSE Arg1:E89 Arg2:E90	
+R106	MODIFY Arg1:T181 Arg2:E92	
+R107	MODIFY Arg1:T180 Arg2:E92	
+R108	CAUSE Arg1:E92 Arg2:E91	
+R109	AFTER Arg1:E1 Arg2:E2	
+*	OVERLAP E2 E3
+R110	BEFORE Arg1:E3 Arg2:E4	
+*	OVERLAP E4 E5
+R111	AFTER Arg1:E5 Arg2:E6	
+*	OVERLAP E6 E7 E8 E9 E10
+R112	BEFORE Arg1:E10 Arg2:E11	
+*	OVERLAP E11 E12 E13 E14 E15 E22 E23 E24
+R113	BEFORE Arg1:E24 Arg2:E26	
+R114	BEFORE Arg1:E26 Arg2:E27	
+*	OVERLAP E27 E28 E29
+R115	BEFORE Arg1:E29 Arg2:E30	
+R116	SUB_PROCEDURE Arg1:E31 Arg2:E30	
+R117	SUB_PROCEDURE Arg1:E33 Arg2:E30	
+R118	SUB_PROCEDURE Arg1:E32 Arg2:E30	
+*	OVERLAP E30 E34 E36 E37 E38 E39 E40 E41 E42
+R119	SUB_PROCEDURE Arg1:E44 Arg2:E42	
+R120	SUB_PROCEDURE Arg1:E45 Arg2:E42	
+R121	SUB_PROCEDURE Arg1:E46 Arg2:E42	
+R122	SUB_PROCEDURE Arg1:E47 Arg2:E42	
+R123	SUB_PROCEDURE Arg1:E48 Arg2:E42	
+R124	SUB_PROCEDURE Arg1:E51 Arg2:E42	
+R125	SUB_PROCEDURE Arg1:E53 Arg2:E42	
+R126	SUB_PROCEDURE Arg1:E55 Arg2:E54	
+R127	SUB_PROCEDURE Arg1:E54 Arg2:E42	
+R128	SUB_PROCEDURE Arg1:E56 Arg2:E42	
+R129	SUB_PROCEDURE Arg1:E57 Arg2:E42	
+R130	SUB_PROCEDURE Arg1:E58 Arg2:E42	
+R131	SUB_PROCEDURE Arg1:E60 Arg2:E42	
+R132	SUB_PROCEDURE Arg1:E61 Arg2:E42	
+R133	SUB_PROCEDURE Arg1:E49 Arg2:E42	
+R134	SUB_PROCEDURE Arg1:E62 Arg2:E61	
+R135	SUB_PROCEDURE Arg1:E73 Arg2:E42	
+R136	IDENTICAL Arg1:E74 Arg2:E42	
+R137	BEFORE Arg1:E42 Arg2:E76	
+*	OVERLAP E76 E77
+R138	BEFORE Arg1:E77 Arg2:E80	
+R139	BEFORE Arg1:E80 Arg2:E81	
+*	OVERLAP E81 E85
+R140	AFTER Arg1:E85 Arg2:E82	
+R141	BEFORE Arg1:E82 Arg2:E87	
+*	OVERLAP E87 E86 E91 E90
+R142	AFTER Arg1:E90 Arg2:E88	
+R143	BEFORE Arg1:E88 Arg2:E70	
+*	OVERLAP E70 E69
+R144	BEFORE Arg1:E69 Arg2:E71	
+*	OVERLAP E71 E72
+R145	BEFORE Arg1:E72 Arg2:E65	
+*	OVERLAP E65 E66 E63 E64 E67

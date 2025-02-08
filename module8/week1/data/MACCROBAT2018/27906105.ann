@@ -1,0 +1,223 @@
+T1	Age 22 33	58-year-old
+T2	Personal_background 34 39	white
+T3	Personal_background 40 48	Hispanic
+T4	Sex 49 54	woman
+T5	History 62 104	history of uveal melanoma in her right eye
+T6	Clinical_event 122 130	admitted
+E1	Clinical_event:T6 
+T7	Sign_symptom 152 160	jaundice
+E2	Sign_symptom:T7 
+T8	Sign_symptom 175 179	pain
+E3	Sign_symptom:T8 
+T9	Biological_structure 165 174	abdominal
+R1	MODIFY Arg1:T9 Arg2:E3	
+T10	Duration 184 191	10 days
+E4	Duration:T10 
+T11	Diagnostic_procedure 207 223	laboratory tests
+E5	Diagnostic_procedure:T11 
+T12	Diagnostic_procedure 241 261	complete blood count
+E6	Diagnostic_procedure:T12 
+T13	Diagnostic_procedure 288 295	amylase
+E7	Diagnostic_procedure:T13 
+T14	Diagnostic_procedure 306 321	total bilirubin
+E8	Diagnostic_procedure:T14 
+R2	SUB_PROCEDURE Arg1:E6 Arg2:E5	
+R3	SUB_PROCEDURE Arg1:E7 Arg2:E5	
+R4	SUB_PROCEDURE Arg1:E8 Arg2:E5	
+T15	Lab_value 266 286	within normal limits
+R5	MODIFY Arg1:T15 Arg2:E6	
+T16	Lab_value 297 304	136 U/L
+R6	MODIFY Arg1:T16 Arg2:E7	
+T17	Lab_value 323 333	6.37 mg/dL
+T18	Diagnostic_procedure 341 356	direct fraction
+E9	Diagnostic_procedure:T18 
+R7	SUB_PROCEDURE Arg1:E9 Arg2:E8	
+T19	Lab_value 360 370	5.30 mg/dL
+R8	MODIFY Arg1:T19 Arg2:E9	
+T20	Diagnostic_procedure 400 419	computed tomography
+E10	Diagnostic_procedure:T20 
+T21	Diagnostic_procedure 421 423	CT
+E11	Diagnostic_procedure:T21 
+R9	IDENTICAL Arg1:E11 Arg2:E10	
+T22	Biological_structure 390 399	abdominal
+T23	Detailed_description 373 388	Cross-sectional
+R10	MODIFY Arg1:T22 Arg2:E10	
+R11	MODIFY Arg1:T23 Arg2:E10	
+T24	Detailed_description 425 438	with contrast
+R12	MODIFY Arg1:T24 Arg2:E10	
+T25	Sign_symptom 465 471	lesion
+E12	Sign_symptom:T25 
+T26	Detailed_description 449 464	low-attenuating
+R13	MODIFY Arg1:T26 Arg2:E12	
+T27	Biological_structure 489 504	pancreatic head
+T28	Area 516 524	4 × 3 cm
+R14	MODIFY Arg1:T27 Arg2:E12	
+R15	MODIFY Arg1:T28 Arg2:E12	
+T29	Biological_structure 532 571	thinner section of the distal bile duct
+R16	MODIFY Arg1:T29 Arg2:E12	
+T30	Diagnostic_procedure 666 673	EUS-FNA
+E13	Diagnostic_procedure:T30 
+#1	AnnotatorNotes E13	Endoscopic ultrasound fine needle aspiration biopsy
+T31	Clinical_event 609 634	multidisciplinary meeting
+E14	Clinical_event:T31 
+T32	Coreference 675 678	EUS
+E15	Coreference:T32 
+R17	IDENTICAL Arg1:E15 Arg2:E13	
+T33	Sign_symptom 887 918	vascular or lymph node invasion
+E16	Sign_symptom:T33 
+A1	POLARITY E16 NEG
+T34	Coreference 931 938	EUS-FNA
+E17	Coreference:T34 
+R18	IDENTICAL Arg1:E17 Arg2:E13	
+T35	Sign_symptom 758 764	lesion
+E18	Sign_symptom:T35 
+T36	Detailed_description 688 693	solid
+T37	Detailed_description 695 707	heteroechoic
+T38	Detailed_description 713 743	predominantly hypoechoic areas
+T39	Detailed_description 745 757	well-defined
+R19	MODIFY Arg1:T39 Arg2:E18	
+R20	MODIFY Arg1:T38 Arg2:E18	
+R21	MODIFY Arg1:T37 Arg2:E18	
+R22	MODIFY Arg1:T36 Arg2:E18	
+T40	Texture 770 786	regular contours
+R23	MODIFY Arg1:T40 Arg2:E18	
+T41	Area 798 810	3.1 × 2.6 cm
+R24	MODIFY Arg1:T41 Arg2:E18	
+T42	Biological_structure 823 864	between the head and neck of the pancreas
+R25	MODIFY Arg1:T42 Arg2:E18	
+T43	Detailed_description 953 970	with a 22G needle
+T44	Detailed_description 971 998	using the fanning technique
+R26	MODIFY Arg1:T43 Arg2:E17	
+R27	MODIFY Arg1:T44 Arg2:E17	
+T45	Diagnostic_procedure 1007 1025	cytology specimens
+E19	Diagnostic_procedure:T45 
+T46	Lab_value 1062 1091	discohesive dispersed pattern
+R28	MODIFY Arg1:T46 Arg2:E19	
+T47	Lab_value 1105 1132	variation in size and shape
+T48	Shape 1143 1154	epithelioid
+T49	Shape 1159 1173	spindle-shaped
+T50	Biological_structure 1039 1044	cells
+T51	Biological_structure 1174 1179	cells
+T52	Shape 1185 1197	plasmacytoid
+T53	Shape 1202 1207	round
+T54	Biological_structure 1208 1214	nuclei
+R29	MODIFY Arg1:T53 Arg2:T54	
+R30	MODIFY Arg1:T52 Arg2:T54	
+R31	MODIFY Arg1:T54 Arg2:T51	
+R32	MODIFY Arg1:T49 Arg2:T51	
+R33	MODIFY Arg1:T48 Arg2:T51	
+R34	MODIFY Arg1:T46 Arg2:T50	
+R35	MODIFY Arg1:T47 Arg2:T51	
+R36	MODIFY Arg1:T50 Arg2:E19	
+R37	MODIFY Arg1:T51 Arg2:E19	
+T55	Sign_symptom 1453 1461	necrosis
+E20	Sign_symptom:T55 
+T56	Sign_symptom 1466 1476	hemorrhage
+E21	Sign_symptom:T56 
+T57	Diagnostic_procedure 1220 1237	nuclear chromatin
+E22	Diagnostic_procedure:T57 
+T58	Lab_value 1241 1249	clumping
+T59	Lab_value 1254 1263	irregular
+T60	Lab_value 1269 1301	excessive parachromatin clearing
+T61	Biological_structure 1332 1345	macronucleoli
+T62	Detailed_description 1323 1331	multiple
+T63	Detailed_description 1313 1319	single
+R38	MODIFY Arg1:T62 Arg2:T61	
+R39	MODIFY Arg1:T63 Arg2:T61	
+T64	Biological_structure 1360 1369	cytoplasm
+T65	Detailed_description 1351 1359	abundant
+R40	MODIFY Arg1:T65 Arg2:T64	
+T66	Lab_value 1375 1403	deep brownish-black granules
+R41	MODIFY Arg1:T58 Arg2:E22	
+R42	MODIFY Arg1:T59 Arg2:E22	
+R43	MODIFY Arg1:T60 Arg2:E22	
+R44	MODIFY Arg1:T61 Arg2:E22	
+R45	MODIFY Arg1:T64 Arg2:E22	
+R46	MODIFY Arg1:T66 Arg2:E22	
+T67	Therapeutic_procedure 1514 1526	exenteration
+E23	Therapeutic_procedure:T67 
+T68	Therapeutic_procedure 1543 1564	duodenopancreatectomy
+E24	Therapeutic_procedure:T68 
+T69	Detailed_description 1570 1587	Whipple procedure
+R47	MODIFY Arg1:T69 Arg2:E24	
+T70	Biological_structure 1500 1513	right orbital
+R48	MODIFY Arg1:T70 Arg2:E23	
+T71	Sign_symptom 1602 1615	complications
+E25	Sign_symptom:T71 
+A2	POLARITY E25 NEG
+T72	Diagnostic_procedure 1629 1646	surgical specimen
+E26	Diagnostic_procedure:T72 
+T73	Biological_structure 1671 1676	cells
+T74	Detailed_description 1654 1670	undifferentiated
+R49	MODIFY Arg1:T74 Arg2:T73	
+R50	MODIFY Arg1:T73 Arg2:E26	
+T75	Lab_value 1683 1720	extended disposition of brown pigment
+T76	Biological_structure 1739 1747	pancreas
+T77	Biological_structure 1756 1783	serosa of the duodenal wall
+T78	Sign_symptom 1722 1734	infiltrating
+E27	Sign_symptom:T78 
+R51	MODIFY Arg1:T76 Arg2:E27	
+R52	MODIFY Arg1:T77 Arg2:E27	
+R53	MODIFY Arg1:T75 Arg2:E26	
+R54	MODIFY Arg1:E27 Arg2:T73	
+T79	Diagnostic_procedure 1785 1805	Immunohistochemistry
+E28	Diagnostic_procedure:T79 
+T80	Diagnostic_procedure 1823 1830	Melan-A
+E29	Diagnostic_procedure:T80 
+T81	Diagnostic_procedure 1832 1837	HMB45
+E30	Diagnostic_procedure:T81 
+T82	Diagnostic_procedure 1839 1847	vimentin
+E31	Diagnostic_procedure:T82 
+T83	Diagnostic_procedure 1849 1862	S-100 protein
+E32	Diagnostic_procedure:T83 
+T84	Diagnostic_procedure 1880 1891	cytokeratin
+E33	Diagnostic_procedure:T84 
+T85	Disease_disorder 1934 1942	melanoma
+E34	Disease_disorder:T85 
+T86	Detailed_description 1924 1933	malignant
+R55	MODIFY Arg1:T86 Arg2:E34	
+T87	Detailed_description 1913 1923	metastatic
+R56	MODIFY Arg1:T87 Arg2:E34	
+T88	Lab_value 1867 1875	negative
+T89	Lab_value 1810 1818	positive
+R57	SUB_PROCEDURE Arg1:E29 Arg2:E28	
+R58	SUB_PROCEDURE Arg1:E30 Arg2:E28	
+R59	SUB_PROCEDURE Arg1:E31 Arg2:E28	
+R60	SUB_PROCEDURE Arg1:E32 Arg2:E28	
+R61	MODIFY Arg1:T88 Arg2:E33	
+R62	MODIFY Arg1:T89 Arg2:E29	
+R63	MODIFY Arg1:T89 Arg2:E30	
+R64	MODIFY Arg1:T89 Arg2:E31	
+R65	MODIFY Arg1:T89 Arg2:E32	
+T90	Medication 1993 2005	chemotherapy
+E35	Medication:T90 
+T91	Detailed_description 1984 1992	adjuvant
+R66	MODIFY Arg1:T91 Arg2:E35	
+T92	Date 1944 1957	At the moment
+E36	Date:T92 
+T93	Nonbiological_location 2012 2035	outside oncology clinic
+R67	MODIFY Arg1:T93 Arg2:E35	
+*	OVERLAP E1 E2 E3 E4
+R68	MODIFY Arg1:E4 Arg2:E3	
+R69	MODIFY Arg1:E4 Arg2:E2	
+R70	BEFORE Arg1:E4 Arg2:E5	
+R71	BEFORE Arg1:E5 Arg2:E10	
+*	OVERLAP E10 E12
+R72	BEFORE Arg1:E12 Arg2:E14	
+R73	BEFORE Arg1:E14 Arg2:E13	
+*	OVERLAP E13 E18 E16
+R74	BEFORE Arg1:E16 Arg2:E19	
+T94	Diagnostic_procedure 1436 1446	background
+E37	Diagnostic_procedure:T94 
+R75	SUB_PROCEDURE Arg1:E37 Arg2:E19	
+R76	MODIFY Arg1:E20 Arg2:E37	
+R77	MODIFY Arg1:E21 Arg2:E37	
+*	OVERLAP E19 E22
+R78	BEFORE Arg1:E22 Arg2:E23	
+R79	BEFORE Arg1:E23 Arg2:E24	
+*	OVERLAP E24 E25
+R80	BEFORE Arg1:E25 Arg2:E26	
+*	OVERLAP E26 E28 E34
+R81	SUB_PROCEDURE Arg1:E33 Arg2:E28	
+R82	BEFORE Arg1:E34 Arg2:E36	
+*	OVERLAP E36 E35

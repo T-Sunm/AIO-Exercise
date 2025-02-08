@@ -1,0 +1,566 @@
+T1	Age 2 13	61-year-old
+T2	Personal_background 14 21	Chinese
+T3	Sex 22 27	woman
+T4	Sign_symptom 42 51	dizziness
+E1	Sign_symptom:T4 
+T5	Duration 56 63	3 weeks
+E2	Duration:T5 
+T6	Clinical_event 72 80	admitted
+E3	Clinical_event:T6 
+T7	Nonbiological_location 88 96	hospital
+R1	MODIFY Arg1:T7 Arg2:E3	
+T8	Sign_symptom 115 119	mass
+E4	Sign_symptom:T8 
+T9	Diagnostic_procedure 130 144	radiologically
+E5	Diagnostic_procedure:T9 
+T10	Biological_structure 105 114	bifrontal
+R2	MODIFY Arg1:T10 Arg2:E4	
+T11	History 366 397	20-year history of hypertension
+T12	Sign_symptom 157 166	dizziness
+E6	Sign_symptom:T12 
+T13	Sign_symptom 193 265	signs or symptoms that are commonly associated with neurological disease
+E7	Sign_symptom:T13 
+A1	POLARITY E7 NEG
+T14	Sign_symptom 275 283	headache
+E8	Sign_symptom:T14 
+A2	POLARITY E8 NEG
+T15	Sign_symptom 285 293	vomiting
+E9	Sign_symptom:T15 
+A3	POLARITY E9 NEG
+T16	Sign_symptom 295 315	sensory disturbances
+E10	Sign_symptom:T16 
+A4	POLARITY E10 NEG
+T17	Sign_symptom 317 338	altered consciousness
+E11	Sign_symptom:T17 
+A5	POLARITY E11 NEG
+T18	Sign_symptom 343 351	seizures
+E12	Sign_symptom:T18 
+A6	POLARITY E12 NEG
+T19	Medication 434 474	angiotensin-converting enzyme inhibitors
+E13	Medication:T19 
+T20	Sign_symptom 502 509	healthy
+E14	Sign_symptom:T20 
+T21	Family_history 511 592	No special circumstances were identified regarding her personal or family history
+T22	Diagnostic_procedure 638 662	neurological examination
+E15	Diagnostic_procedure:T22 
+T23	Lab_value 626 632	normal
+R3	MODIFY Arg1:T23 Arg2:E15	
+T24	Diagnostic_procedure 692 718	magnetic resonance imaging
+E16	Diagnostic_procedure:T24 
+T25	Diagnostic_procedure 720 723	MRI
+E17	Diagnostic_procedure:T25 
+R4	IDENTICAL Arg1:E17 Arg2:E16	
+T26	Detailed_description 674 691	contrast-enhanced
+T27	Detailed_description 664 669	Plain
+R5	MODIFY Arg1:T26 Arg2:E16	
+R6	MODIFY Arg1:T27 Arg2:E16	
+T28	Biological_structure 732 736	head
+R7	MODIFY Arg1:T28 Arg2:E16	
+T29	Sign_symptom 762 768	lesion
+E18	Sign_symptom:T29 
+T30	Detailed_description 746 761	space-occupying
+R8	MODIFY Arg1:T30 Arg2:E18	
+T31	Biological_structure 776 790	bifrontal lobe
+R9	MODIFY Arg1:T31 Arg2:E18	
+T32	Biological_structure 792 816	mainly on the right side
+R10	MODIFY Arg1:T32 Arg2:T31	
+T33	Biological_structure 818 848	clinging to the sagittal sinus
+R11	MODIFY Arg1:T33 Arg2:T31	
+T34	Biological_structure 857 870	cerebral falx
+R12	MODIFY Arg1:T34 Arg2:T31	
+T35	Coreference 907 911	mass
+E19	Coreference:T35 
+R13	IDENTICAL Arg1:E19 Arg2:E18	
+T36	Volume 876 894	5.7 × 5.0 × 5.0 cm
+R14	MODIFY Arg1:T36 Arg2:E19	
+T37	Biological_structure 920 947	across the sagittal midline
+R15	MODIFY Arg1:T37 Arg2:E19	
+T38	Sign_symptom 957 969	isointensity
+E20	Sign_symptom:T38 
+T39	Diagnostic_procedure 977 994	T1-weighted image
+E21	Diagnostic_procedure:T39 
+T40	Sign_symptom 1008 1022	hyperintensity
+E22	Sign_symptom:T40 
+T41	Diagnostic_procedure 1030 1047	T2-weighted image
+E23	Diagnostic_procedure:T41 
+T42	Detailed_description 1085 1117	characteristic “dural-tail” sign
+R16	MODIFY Arg1:T42 Arg2:E22	
+R17	SUB_PROCEDURE Arg1:E21 Arg2:E16	
+R18	SUB_PROCEDURE Arg1:E23 Arg2:E16	
+T43	Disease_disorder 1167 1177	meningioma
+E24	Disease_disorder:T43 
+T44	Detailed_description 1142 1166	parasagittal-parafalcine
+R19	MODIFY Arg1:T44 Arg2:E24	
+T45	Therapeutic_procedure 1217 1226	resection
+E25	Therapeutic_procedure:T45 
+T46	Detailed_description 1194 1205	craniotomic
+R20	MODIFY Arg1:T46 Arg2:E25	
+T47	Diagnostic_procedure 1256 1278	blood cell examination
+E26	Diagnostic_procedure:T47 
+T48	Diagnostic_procedure 1280 1300	coagulation function
+E27	Diagnostic_procedure:T48 
+T49	Diagnostic_procedure 1302 1326	liver and renal function
+E28	Diagnostic_procedure:T49 
+T50	Diagnostic_procedure 1334 1344	urinalysis
+E29	Diagnostic_procedure:T50 
+T51	Diagnostic_procedure 1352 1358	x-rays
+E30	Diagnostic_procedure:T51 
+T52	Biological_structure 1346 1351	chest
+R21	MODIFY Arg1:T52 Arg2:E30	
+T53	Diagnostic_procedure 1363 1380	electrocardiogram
+E31	Diagnostic_procedure:T53 
+T54	Lab_value 1386 1392	normal
+R22	MODIFY Arg1:T54 Arg2:E26	
+R23	MODIFY Arg1:T54 Arg2:E27	
+R24	MODIFY Arg1:T54 Arg2:E28	
+R25	MODIFY Arg1:T54 Arg2:E29	
+R26	MODIFY Arg1:T54 Arg2:E30	
+R27	MODIFY Arg1:T54 Arg2:E31	
+T55	Diagnostic_procedure 1398 1405	albumin
+E32	Diagnostic_procedure:T55 
+T56	Diagnostic_procedure 1422 1437	total bilirubin
+E33	Diagnostic_procedure:T56 
+T57	Diagnostic_procedure 1439 1443	TBil
+E34	Diagnostic_procedure:T57 
+T58	Diagnostic_procedure 1470 1486	direct bilirubin
+E35	Diagnostic_procedure:T58 
+T59	Diagnostic_procedure 1488 1492	DBil
+E36	Diagnostic_procedure:T59 
+R28	IDENTICAL Arg1:E34 Arg2:E33	
+R29	IDENTICAL Arg1:E36 Arg2:E35	
+T60	Lab_value 1410 1416	36 g/L
+R30	MODIFY Arg1:T60 Arg2:E32	
+T61	Lab_value 1449 1460	12.2 μmol/L
+R31	MODIFY Arg1:T61 Arg2:E33	
+T62	Lab_value 1498 1508	4.1 μmol/L
+R32	MODIFY Arg1:T62 Arg2:E35	
+T63	Diagnostic_procedure 1510 1530	Alanine transaminase
+E37	Diagnostic_procedure:T63 
+T64	Diagnostic_procedure 1532 1535	ALT
+E38	Diagnostic_procedure:T64 
+R33	IDENTICAL Arg1:E38 Arg2:E37	
+T65	Lab_value 1541 1547	17 U/L
+R34	MODIFY Arg1:T65 Arg2:E37	
+T66	Diagnostic_procedure 1557 1587	international normalized ratio
+E39	Diagnostic_procedure:T66 
+T67	Diagnostic_procedure 1589 1592	INR
+E40	Diagnostic_procedure:T67 
+R35	IDENTICAL Arg1:E40 Arg2:E39	
+T68	Lab_value 1621 1625	1.02
+R36	MODIFY Arg1:T68 Arg2:E39	
+T69	Diagnostic_procedure 1710 1725	echocardiograph
+E41	Diagnostic_procedure:T69 
+T70	Diagnostic_procedure 1732 1750	blood gas analysis
+E42	Diagnostic_procedure:T70 
+T71	Diagnostic_procedure 1766 1781	creatine kinase
+E43	Diagnostic_procedure:T71 
+T72	Diagnostic_procedure 1793 1812	pulmonary functions
+E44	Diagnostic_procedure:T72 
+T73	Lab_value 1835 1864	no surgical contraindications
+R37	MODIFY Arg1:T73 Arg2:E44	
+R38	MODIFY Arg1:T73 Arg2:E43	
+R39	MODIFY Arg1:T73 Arg2:E42	
+R40	MODIFY Arg1:T73 Arg2:E41	
+T74	Medication 1940 1943	VPA
+E45	Medication:T74 
+#1	AnnotatorNotes E45	Valproic acid
+T75	Dosage 1944 1957	twice per day
+T76	Dosage 1913 1936	Five hundred milligrams
+R41	MODIFY Arg1:T76 Arg2:E45	
+R42	MODIFY Arg1:T75 Arg2:E45	
+T77	Date 1972 1999	3 days before the operation
+E46	Date:T77 
+T78	Therapeutic_procedure 2050 2060	craniotomy
+E47	Therapeutic_procedure:T78 
+T79	Therapeutic_procedure 2095 2110	tumor resection
+E48	Therapeutic_procedure:T79 
+R43	SUB_PROCEDURE Arg1:E47 Arg2:E48	
+T80	Coreference 2129 2134	tumor
+E49	Coreference:T80 
+R44	IDENTICAL Arg1:E49 Arg2:E24	
+T81	Color 2139 2143	pink
+T82	Detailed_description 2148 2153	solid
+R45	MODIFY Arg1:T81 Arg2:E49	
+R46	MODIFY Arg1:T82 Arg2:E49	
+T83	Detailed_description 2164 2185	moderate blood supply
+T84	Texture 2207 2213	medium
+R47	MODIFY Arg1:T83 Arg2:E49	
+R48	MODIFY Arg1:T84 Arg2:E49	
+T85	Medication 2267 2270	VPA
+E50	Medication:T85 
+T86	Dosage 2257 2263	800 mg
+R49	MODIFY Arg1:T86 Arg2:E50	
+T87	Administration 2291 2311	intravenous infusion
+R50	MODIFY Arg1:T87 Arg2:E50	
+T88	Time 2215 2255	Thirty minutes before the end of surgery
+E51	Time:T88 
+T89	Sign_symptom 2355 2368	consciousness
+E52	Sign_symptom:T89 
+T90	Diagnostic_procedure 2408 2426	Glasgow coma scale
+E53	Diagnostic_procedure:T90 
+T91	Diagnostic_procedure 2428 2431	GCS
+E54	Diagnostic_procedure:T91 
+R51	IDENTICAL Arg1:E54 Arg2:E53	
+T92	Lab_value 2398 2400	15
+R52	MODIFY Arg1:T92 Arg2:E53	
+T93	Time 2369 2386	within 30 minutes
+E55	Time:T93 
+T94	Date 2434 2449	Two hours later
+E56	Date:T94 
+T95	Clinical_event 2467 2478	transported
+E57	Clinical_event:T95 
+T96	Nonbiological_location 2491 2495	ward
+R53	MODIFY Arg1:T96 Arg2:E57	
+T97	Disease_disorder 2519 2522	UGH
+E58	Disease_disorder:T97 
+#2	AnnotatorNotes E58	upper gastrointestinal hemorrhage
+T98	Sign_symptom 2528 2535	vomitus
+E59	Sign_symptom:T98 
+T99	Volume 2537 2556	approximately 50 mL
+R54	MODIFY Arg1:T99 Arg2:E59	
+T100	Color 2574 2588	coffee-colored
+T101	Detailed_description 2589 2594	blood
+R55	MODIFY Arg1:T101 Arg2:E59	
+R56	MODIFY Arg1:T100 Arg2:T101	
+T102	Sign_symptom 2655 2661	damage
+E60	Sign_symptom:T102 
+A7	POLARITY E60 UNCERTAIN
+T103	Biological_structure 2631 2643	endotracheal
+T104	Detailed_description 2644 2654	intubation
+R57	MODIFY Arg1:T104 Arg2:E60	
+R58	MODIFY Arg1:T103 Arg2:E60	
+T105	Disease_disorder 2730 2739	gastritis
+E61	Disease_disorder:T105 
+T106	Sign_symptom 2770 2776	injury
+E62	Sign_symptom:T106 
+T107	Detailed_description 2759 2769	craniotomy
+R59	MODIFY Arg1:T107 Arg2:E62	
+R60	CAUSE Arg1:E62 Arg2:E61	
+T108	Detailed_description 2710 2729	erosive-hemorrhagic
+T109	Detailed_description 2704 2709	acute
+R61	MODIFY Arg1:T109 Arg2:E61	
+R62	MODIFY Arg1:T108 Arg2:E61	
+T110	Medication 2800 2810	omeprazole
+E63	Medication:T110 
+T111	Sign_symptom 2854 2865	hematemesis
+E64	Sign_symptom:T111 
+A8	POLARITY E64 NEG
+T112	Medication 2903 2906	VPA
+E65	Medication:T112 
+T113	Dosage 2908 2915	1200 mg
+R63	MODIFY Arg1:T113 Arg2:E65	
+T114	Administration 2917 2930	intravenously
+R64	MODIFY Arg1:T114 Arg2:E65	
+T115	Date 2932 2969	during the first 2 postoperative days
+E66	Date:T115 
+T116	Medication 3033 3036	VPA
+E67	Medication:T116 
+T117	Dosage 3059 3065	500 mg
+T118	Dosage 3090 3101	twice a day
+T119	Administration 3070 3074	oral
+R65	MODIFY Arg1:T117 Arg2:E67	
+R66	MODIFY Arg1:T119 Arg2:E67	
+R67	MODIFY Arg1:T118 Arg2:E67	
+T120	Diagnostic_procedure 3111 3114	MRI
+E68	Diagnostic_procedure:T120 
+T121	Biological_structure 3105 3110	brain
+R68	MODIFY Arg1:T121 Arg2:E68	
+T122	Date 3146 3151	day 3
+E69	Date:T122 
+T123	Sign_symptom 3178 3183	tumor
+E70	Sign_symptom:T123 
+A9	POLARITY E70 NEG
+T124	Diagnostic_procedure 3214 3229	operative field
+E71	Diagnostic_procedure:T124 
+T125	Lab_value 3234 3239	clean
+R69	MODIFY Arg1:T125 Arg2:E71	
+T126	Diagnostic_procedure 3278 3302	histological examination
+E72	Diagnostic_procedure:T126 
+T127	Detailed_description 3269 3277	paraffin
+R70	MODIFY Arg1:T127 Arg2:E72	
+T128	Disease_disorder 3330 3340	meningioma
+E73	Disease_disorder:T128 
+T129	Time 3345 3349	3 am
+E74	Time:T129 
+T130	Time 3367 3372	day 4
+E75	Time:T130 
+T131	Disease_disorder 3415 3419	coma
+E76	Disease_disorder:T131 
+T132	Severity 3410 3414	deep
+R71	MODIFY Arg1:T132 Arg2:E76	
+T133	Sign_symptom 3425 3444	pupils were dilated
+E77	Sign_symptom:T133 
+T134	Distance 3448 3454	3.0 mm
+R72	MODIFY Arg1:T134 Arg2:E77	
+T135	Shape 3459 3464	round
+R73	MODIFY Arg1:T135 Arg2:E77	
+T136	Diagnostic_procedure 3474 3486	light reflex
+E78	Diagnostic_procedure:T136 
+T137	Lab_value 3491 3500	sensitive
+R74	MODIFY Arg1:T137 Arg2:E78	
+T138	Diagnostic_procedure 3506 3530	neurological examination
+E79	Diagnostic_procedure:T138 
+T139	Lab_value 3535 3547	unremarkable
+R75	MODIFY Arg1:T139 Arg2:E79	
+T140	Diagnostic_procedure 3557 3568	vital signs
+E80	Diagnostic_procedure:T140 
+T141	Lab_value 3574 3580	stable
+R76	MODIFY Arg1:T141 Arg2:E80	
+T142	Diagnostic_procedure 3595 3607	mental state
+E81	Diagnostic_procedure:T142 
+T143	Lab_value 3608 3625	gradually changed
+R77	MODIFY Arg1:T143 Arg2:E81	
+T144	Disease_disorder 3636 3640	coma
+E82	Disease_disorder:T144 
+T145	Lab_value 3631 3635	deep
+R78	MODIFY Arg1:T145 Arg2:E82	
+T146	Diagnostic_procedure 3642 3645	GCS
+E83	Diagnostic_procedure:T146 
+T147	Lab_value 3648 3649	8
+R79	MODIFY Arg1:T147 Arg2:E83	
+T148	Sign_symptom 3697 3704	lesions
+E84	Sign_symptom:T148 
+T149	Biological_structure 3684 3696	intracranial
+R80	MODIFY Arg1:T149 Arg2:E84	
+A10	POLARITY E84 UNCERTAIN
+T150	Diagnostic_procedure 3708 3731	computerized tomography
+E85	Diagnostic_procedure:T150 
+T151	Diagnostic_procedure 3733 3735	CT
+E86	Diagnostic_procedure:T151 
+R81	IDENTICAL Arg1:E86 Arg2:E85	
+T152	Biological_structure 3749 3754	brain
+R82	MODIFY Arg1:T152 Arg2:E85	
+T153	Lab_value 3794 3828	failed to reveal any abnormalities
+R83	MODIFY Arg1:T153 Arg2:E85	
+T154	Sign_symptom 3851 3859	swelling
+E87	Sign_symptom:T154 
+A11	POLARITY E87 NEG
+T155	Biological_structure 3845 3850	brain
+T156	Severity 3838 3844	severe
+R84	MODIFY Arg1:T155 Arg2:E87	
+R85	MODIFY Arg1:T156 Arg2:E87	
+T157	Disease_disorder 3861 3884	intracranial hemorrhage
+E88	Disease_disorder:T157 
+A12	POLARITY E88 NEG
+T158	Disease_disorder 3889 3908	cerebral infarction
+E89	Disease_disorder:T158 
+A13	POLARITY E89 NEG
+T159	Disease_disorder 3938 3957	cerebral infarction
+E90	Disease_disorder:T159 
+A14	POLARITY E90 UNCERTAIN
+T160	Time 3980 3995	within 24 hours
+E91	Time:T160 
+T161	Medication 3997 4011	glucocorticoid
+E92	Medication:T161 
+T162	Medication 4013 4021	mannitol
+E93	Medication:T162 
+T163	Medication 4029 4040	vasodilator
+E94	Medication:T163 
+T164	Diagnostic_procedure 4074 4092	laboratory results
+E95	Diagnostic_procedure:T164 
+T165	Diagnostic_procedure 4126 4135	functions
+E96	Diagnostic_procedure:T165 
+R86	SUB_PROCEDURE Arg1:E96 Arg2:E95	
+T166	Biological_structure 4120 4125	renal
+T167	Biological_structure 4109 4114	liver
+T168	Biological_structure 4097 4107	blood cell
+R87	MODIFY Arg1:T166 Arg2:E96	
+R88	MODIFY Arg1:T167 Arg2:E96	
+R89	MODIFY Arg1:T168 Arg2:E96	
+T169	Lab_value 4144 4168	relatively normal ranges
+R90	MODIFY Arg1:T169 Arg2:E96	
+T170	Diagnostic_procedure 4174 4181	albumin
+E97	Diagnostic_procedure:T170 
+T171	Lab_value 4186 4192	33 g/L
+R91	MODIFY Arg1:T171 Arg2:E97	
+T172	Diagnostic_procedure 4198 4202	TBil
+E98	Diagnostic_procedure:T172 
+T173	Diagnostic_procedure 4228 4232	DBil
+E99	Diagnostic_procedure:T173 
+T174	Lab_value 4207 4218	13.3 μmol/L
+T175	Lab_value 4237 4247	4.5 μmol/L
+R92	MODIFY Arg1:T174 Arg2:E98	
+R93	MODIFY Arg1:T175 Arg2:E99	
+T176	Diagnostic_procedure 4249 4252	ALT
+E100	Diagnostic_procedure:T176 
+T177	Lab_value 4257 4263	12 U/L
+R94	MODIFY Arg1:T177 Arg2:E100	
+T178	Diagnostic_procedure 4273 4276	INR
+E101	Diagnostic_procedure:T178 
+T179	Lab_value 4304 4308	1.01
+R95	MODIFY Arg1:T179 Arg2:E101	
+T180	History 4325 4339	history of UGH
+T181	Diagnostic_procedure 4356 4369	blood ammonia
+E102	Diagnostic_procedure:T181 
+T182	Diagnostic_procedure 4393 4416	fecal occult blood test
+E103	Diagnostic_procedure:T182 
+T183	Diagnostic_procedure 4421 4439	blood gas analysis
+E104	Diagnostic_procedure:T183 
+T184	Coreference 4445 4458	blood ammonia
+E105	Coreference:T184 
+T185	Coreference 4530 4553	fecal occult blood test
+E106	Coreference:T185 
+R96	IDENTICAL Arg1:E105 Arg2:E102	
+R97	IDENTICAL Arg1:E106 Arg2:E103	
+T186	Lab_value 4463 4471	elevated
+T187	Lab_value 4473 4485	181.6 μmol/L
+R98	MODIFY Arg1:T186 Arg2:E105	
+R99	MODIFY Arg1:T187 Arg2:E105	
+T188	Lab_value 4558 4566	positive
+R100	MODIFY Arg1:T188 Arg2:E106	
+T189	Disease_disorder 4661 4683	hepatic encephalopathy
+E107	Disease_disorder:T189 
+T190	Disease_disorder 4649 4652	UGH
+E108	Disease_disorder:T190 
+R101	CAUSE Arg1:E108 Arg2:E107	
+T191	Medication 4716 4719	VPA
+E109	Medication:T191 
+T192	Administration 4735 4746	intravenous
+R102	MODIFY Arg1:T192 Arg2:E109	
+T193	Medication 4783 4792	Lactulose
+E110	Medication:T193 
+T194	Medication 4794 4803	vitamin B
+E111	Medication:T194 
+T195	Medication 4809 4819	L-arginine
+E112	Medication:T195 
+T196	Therapeutic_procedure 4839 4845	clysis
+E113	Therapeutic_procedure:T196 
+T197	Detailed_description 4851 4858	vinegar
+R103	MODIFY Arg1:T197 Arg2:E113	
+T198	Therapeutic_procedure 4894 4900	fasted
+E114	Therapeutic_procedure:T198 
+T199	Diagnostic_procedure 4916 4929	blood ammonia
+E115	Diagnostic_procedure:T199 
+T200	Lab_value 4936 4946	fluctuated
+R104	MODIFY Arg1:T200 Arg2:E115	
+T201	Lab_value 4948 4966	144.8–207.7 μmol/L
+R105	MODIFY Arg1:T201 Arg2:E115	
+T202	Sign_symptom 4986 4997	unconscious
+E116	Sign_symptom:T202 
+T203	Duration 5009 5025	following 3 days
+E117	Duration:T203 
+T204	Diagnostic_procedure 5081 5093	mental state
+E118	Diagnostic_procedure:T204 
+T205	Lab_value 5055 5063	progress
+R106	MODIFY Arg1:T205 Arg2:E118	
+T206	Diagnostic_procedure 5098 5111	blood ammonia
+E119	Diagnostic_procedure:T206 
+R107	MODIFY Arg1:T205 Arg2:E119	
+T207	Clinical_event 5122 5157	held a multidisciplinary conference
+E120	Clinical_event:T207 
+T208	Disease_disorder 5318 5321	VHE
+E121	Disease_disorder:T208 
+#3	AnnotatorNotes E121	Valproate-induced hyperammonemic encephalopathy
+T209	Diagnostic_procedure 5356 5365	blood VPA
+E122	Diagnostic_procedure:T209 
+T210	Lab_value 5387 5399	normal range
+R108	MODIFY Arg1:T210 Arg2:E122	
+T211	Medication 5420 5423	VPA
+E123	Medication:T211 
+A15	POLARITY E123 NEG
+T212	Diagnostic_procedure 5605 5617	mental state
+E124	Diagnostic_procedure:T212 
+T213	Lab_value 5627 5634	improve
+R109	MODIFY Arg1:T213 Arg2:E124	
+T214	Time 5644 5658	first 24 hours
+E125	Time:T214 
+T215	Sign_symptom 5709 5722	consciousness
+E126	Sign_symptom:T215 
+T216	Detailed_description 5700 5708	complete
+R110	MODIFY Arg1:T216 Arg2:E126	
+T217	Date 5723 5738	within 48 hours
+E127	Date:T217 
+T218	Diagnostic_procedure 5740 5743	GCS
+E128	Diagnostic_procedure:T218 
+T219	Lab_value 5746 5748	15
+R111	MODIFY Arg1:T219 Arg2:E128	
+T220	Diagnostic_procedure 5755 5769	ammonia levels
+E129	Diagnostic_procedure:T220 
+T221	Biological_structure 5777 5782	blood
+R112	MODIFY Arg1:T221 Arg2:E129	
+T222	Lab_value 5783 5792	decreased
+R113	MODIFY Arg1:T222 Arg2:E129	
+T223	Lab_value 5822 5828	normal
+R114	MODIFY Arg1:T223 Arg2:E129	
+T224	Date 5829 5842	within 4 days
+E130	Date:T224 
+R115	MODIFY Arg1:E130 Arg2:T223	
+T225	Date 5869 5875	day 15
+E131	Date:T225 
+T226	Clinical_event 5935 5945	discharged
+E132	Clinical_event:T226 
+T227	Sign_symptom 5954 5967	complications
+E133	Sign_symptom:T227 
+A16	POLARITY E133 NEG
+T228	Clinical_event 5973 5982	follow-up
+E134	Clinical_event:T228 
+T229	Date 6011 6018	month 5
+E135	Date:T229 
+T230	Sign_symptom 6038 6051	consciousness
+E136	Sign_symptom:T230 
+T231	Detailed_description 6033 6037	full
+R116	MODIFY Arg1:T231 Arg2:E136	
+T232	Sign_symptom 6060 6070	recurrence
+E137	Sign_symptom:T232 
+A17	POLARITY E137 NEG
+T233	Detailed_description 6078 6091	primary tumor
+R117	MODIFY Arg1:T233 Arg2:E137	
+T234	Diagnostic_procedure 6116 6119	GCS
+E138	Diagnostic_procedure:T234 
+T235	Lab_value 6130 6132	15
+R118	MODIFY Arg1:T235 Arg2:E138	
+T236	Diagnostic_procedure 6173 6202	quality of postoperative life
+E139	Diagnostic_procedure:T236 
+T237	Lab_value 6162 6172	satisfying
+R119	MODIFY Arg1:T237 Arg2:E139	
+*	OVERLAP E1 E2
+R120	BEFORE Arg1:E2 Arg2:E3	
+R121	AFTER Arg1:E3 Arg2:E4	
+*	OVERLAP E4 E5
+R122	BEFORE Arg1:E5 Arg2:E6	
+*	OVERLAP E6 E7 E8 E9 E10 E11 E12
+R123	AFTER Arg1:E12 Arg2:E13	
+*	OVERLAP E13 E14
+R124	BEFORE Arg1:E14 Arg2:E15	
+*	OVERLAP E15 E16 E18 E20 E21 E22 E23 E24
+R125	MODIFY Arg1:E21 Arg2:E20	
+R126	BEFORE Arg1:E24 Arg2:E25	
+R127	AFTER Arg1:E25 Arg2:E26	
+*	OVERLAP E26 E27 E28 E29 E30 E31 E32 E33 E35 E37 E39 E41 E42 E43 E44
+R128	BEFORE Arg1:E44 Arg2:E45	
+*	OVERLAP E45 E46
+R129	BEFORE Arg1:E46 Arg2:E48	
+*	OVERLAP E48 E49
+R130	BEFORE Arg1:E49 Arg2:E51	
+*	OVERLAP E51 E50
+R131	BEFORE Arg1:E50 Arg2:E52	
+*	OVERLAP E52 E55 E53
+R132	BEFORE Arg1:E53 Arg2:E56	
+*	OVERLAP E56 E57 E58 E59 E60 E61 E62 E63 E64
+R133	BEFORE Arg1:E64 Arg2:E65	
+*	OVERLAP E65 E66
+R134	BEFORE Arg1:E66 Arg2:E67	
+R135	BEFORE Arg1:E67 Arg2:E68	
+*	OVERLAP E68 E69 E70 E71 E72 E73
+R136	BEFORE Arg1:E73 Arg2:E74	
+*	OVERLAP E74 E75 E76 E77 E78 E79 E80 E81 E82 E83 E84 E85 E87 E88 E89
+R137	BEFORE Arg1:E89 Arg2:E90	
+*	OVERLAP E90 E91 E92 E93 E94 E95 E97 E98 E99 E100 E101 E102 E103 E104 E105 E106 E108 E107 E109
+R138	BEFORE Arg1:E109 Arg2:E110	
+*	OVERLAP E110 E111 E112 E113 E114
+R139	BEFORE Arg1:E114 Arg2:E115	
+*	OVERLAP E115 E116 E117
+R140	BEFORE Arg1:E117 Arg2:E118	
+*	OVERLAP E118 E119 E120
+R141	BEFORE Arg1:E120 Arg2:E121	
+*	OVERLAP E121 E122 E123
+R142	BEFORE Arg1:E123 Arg2:E124	
+*	OVERLAP E124 E125
+R143	BEFORE Arg1:E125 Arg2:E126	
+*	OVERLAP E126 E127 E128
+R144	BEFORE Arg1:E128 Arg2:E129	
+*	OVERLAP E129 E130
+R145	BEFORE Arg1:E130 Arg2:E131	
+*	OVERLAP E131 E132 E133
+R146	BEFORE Arg1:E133 Arg2:E134	
+*	OVERLAP E134 E135 E136 E137 E138 E139

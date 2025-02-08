@@ -1,0 +1,271 @@
+T1	Age 2 13	60-year-old
+T2	Sex 14 18	male
+T3	History 85 93	diabetes
+T4	History 98 117	alcoholic hepatitis
+T5	Disease_disorder 98 117	alcoholic hepatitis
+E1	Disease_disorder:T5 
+T6	Disease_disorder 85 93	diabetes
+E2	Disease_disorder:T6 
+T7	Diagnostic_procedure 122 142	physical examination
+E3	Diagnostic_procedure:T7 
+T8	Activity 19 26	visited
+E4	Activity:T8 
+T9	Nonbiological_location 31 48	outpatient clinic
+R1	MODIFY Arg1:T9 Arg2:E4	
+T10	Sign_symptom 56 60	mass
+E5	Sign_symptom:T10 
+T11	Biological_structure 68 76	left hip
+R2	MODIFY Arg1:T11 Arg2:E5	
+T12	Sign_symptom 152 156	mass
+E6	Sign_symptom:T12 
+T13	Medication 2435 2447	chemotherapy
+E7	Medication:T13 
+T14	Medication 2457 2466	etoposide
+E8	Medication:T14 
+T15	Medication 2471 2480	cisplatin
+E9	Medication:T15 
+R3	SUB_PROCEDURE Arg1:E8 Arg2:E7	
+R4	SUB_PROCEDURE Arg1:E9 Arg2:E7	
+T16	Distance 167 172	10 cm
+R5	MODIFY Arg1:T16 Arg2:E6	
+T17	Sign_symptom 262 270	palpable
+E10	Sign_symptom:T17 
+T18	Biological_structure 233 257	left inguinal lymph node
+T19	Distance 228 232	5 cm
+R6	MODIFY Arg1:T19 Arg2:E10	
+R7	MODIFY Arg1:T18 Arg2:E10	
+T20	Biological_structure 205 208	hip
+R8	MODIFY Arg1:T20 Arg2:E6	
+T21	Diagnostic_procedure 290 303	tumor markers
+E11	Diagnostic_procedure:T21 
+T22	Detailed_description 284 289	Serum
+R9	MODIFY Arg1:T22 Arg2:E11	
+T23	Diagnostic_procedure 315 318	CEA
+E12	Diagnostic_procedure:T23 
+T24	Diagnostic_procedure 323 330	CA 19-9
+E13	Diagnostic_procedure:T24 
+R10	SUB_PROCEDURE Arg1:E12 Arg2:E11	
+R11	SUB_PROCEDURE Arg1:E13 Arg2:E11	
+T25	Qualitative_concept 337 357	within normal limits
+R12	MODIFY Arg1:T25 Arg2:E11	
+T26	Diagnostic_procedure 373 380	amylase
+E14	Diagnostic_procedure:T26 
+T27	Lab_value 382 390	227 IU/L
+R13	MODIFY Arg1:T27 Arg2:E14	
+T28	Diagnostic_procedure 419 425	lipase
+E15	Diagnostic_procedure:T28 
+T29	Detailed_description 367 372	serum
+R14	MODIFY Arg1:T29 Arg2:E14	
+R15	MODIFY Arg1:T29 Arg2:E15	
+T30	Lab_value 427 435	378 IU/L
+R16	MODIFY Arg1:T30 Arg2:E15	
+T31	Diagnostic_procedure 457 476	fasting blood sugar
+E16	Diagnostic_procedure:T31 
+T32	Lab_value 478 487	144 mg/dL
+R17	MODIFY Arg1:T32 Arg2:E16	
+T33	Diagnostic_procedure 522 541	liver function test
+E17	Diagnostic_procedure:T33 
+T34	Diagnostic_procedure 560 586	aspartate aminotransferase
+E18	Diagnostic_procedure:T34 
+R18	SUB_PROCEDURE Arg1:E18 Arg2:E17	
+T35	Diagnostic_procedure 624 648	alanine aminotransferase
+E19	Diagnostic_procedure:T35 
+R19	SUB_PROCEDURE Arg1:E19 Arg2:E17	
+T36	Lab_value 588 596	178 IU/L
+R20	MODIFY Arg1:T36 Arg2:E18	
+T37	Lab_value 650 658	225 IU/L
+R21	MODIFY Arg1:T37 Arg2:E19	
+T38	Diagnostic_procedure 696 716	alkaline phosphatase
+E20	Diagnostic_procedure:T38 
+T39	Detailed_description 690 695	serum
+R22	MODIFY Arg1:T39 Arg2:E20	
+T40	Lab_value 718 726	370 IU/L
+R23	MODIFY Arg1:T40 Arg2:E20	
+T41	Qualitative_concept 766 785	above normal ranges
+R24	MODIFY Arg1:T41 Arg2:E17	
+R25	MODIFY Arg1:T41 Arg2:E14	
+R26	MODIFY Arg1:T41 Arg2:E15	
+R27	MODIFY Arg1:T41 Arg2:E16	
+T42	Diagnostic_procedure 800 823	computerized tomography
+E21	Diagnostic_procedure:T42 
+T43	Diagnostic_procedure 825 827	CT
+E22	Diagnostic_procedure:T43 
+R28	IDENTICAL Arg1:E22 Arg2:E21	
+T44	Biological_structure 790 799	abdominal
+R29	MODIFY Arg1:T44 Arg2:E21	
+T45	Sign_symptom 867 871	mass
+E23	Sign_symptom:T45 
+T46	Biological_structure 858 866	left hip
+R30	MODIFY Arg1:T46 Arg2:E23	
+T47	Sign_symptom 879 887	enlarged
+E24	Sign_symptom:T47 
+T48	Biological_structure 888 912	left inguinal lymph node
+R31	MODIFY Arg1:T48 Arg2:E24	
+T49	Sign_symptom 954 958	mass
+E25	Sign_symptom:T49 
+T50	Detailed_description 930 943	heterogeneous
+T51	Detailed_description 944 953	enhancing
+T52	Qualitative_concept 925 929	huge
+R32	MODIFY Arg1:T52 Arg2:E25	
+R33	MODIFY Arg1:T50 Arg2:E25	
+R34	MODIFY Arg1:T51 Arg2:E25	
+T53	Biological_structure 978 986	pancreas
+R35	MODIFY Arg1:T53 Arg2:E25	
+T54	Diagnostic_procedure 1005 1013	PET scan
+E26	Diagnostic_procedure:T54 
+T55	Disease_disorder 1026 1036	metastases
+E27	Disease_disorder:T55 
+A1	POLARITY E27 NEG
+T56	Therapeutic_procedure 1066 1080	staged surgery
+E28	Therapeutic_procedure:T56 
+T57	Therapeutic_procedure 1114 1127	mass excision
+E29	Therapeutic_procedure:T57 
+R36	SUB_PROCEDURE Arg1:E29 Arg2:E28	
+T58	Biological_structure 1105 1113	inguinal
+T59	Biological_structure 1097 1100	hip
+R37	MODIFY Arg1:T58 Arg2:E29	
+R38	MODIFY Arg1:T59 Arg2:E29	
+T60	Date 1131 1148	December 19, 2014
+E30	Date:T60 
+T61	Diagnostic_procedure 1154 1178	histopathological report
+E31	Diagnostic_procedure:T61 
+T62	Disease_disorder 1212 1236	neuroendocrine carcinoma
+E32	Disease_disorder:T62 
+T63	Detailed_description 1190 1200	metastatic
+T64	Detailed_description 1201 1211	small cell
+R39	MODIFY Arg1:T64 Arg2:E32	
+R40	MODIFY Arg1:T63 Arg2:E32	
+T65	Distance 1244 1271	maximal diameter of 10.5 cm
+R41	MODIFY Arg1:T65 Arg2:E33	
+T66	Sign_symptom 1287 1291	mass
+E33	Sign_symptom:T66 
+T67	Sign_symptom 1303 1309	growth
+E34	Sign_symptom:T67 
+T68	Biological_structure 1279 1286	buttock
+R42	MODIFY Arg1:T68 Arg2:E33	
+T69	Distance 1298 1302	7 cm
+R43	MODIFY Arg1:T69 Arg2:E34	
+T70	Biological_structure 1316 1335	inguinal lymph node
+R44	MODIFY Arg1:T70 Arg2:E34	
+T71	Diagnostic_procedure 1341 1354	mitotic index
+E35	Diagnostic_procedure:T71 
+T72	Lab_value 1359 1385	over 50 mitoses per 50 HPF
+E36	Lab_value:T72 
+R45	MODIFY Arg1:E36 Arg2:E35	
+T73	Diagnostic_procedure 1394 1405	Ki-67 index
+E37	Diagnostic_procedure:T73 
+T74	Lab_value 1418 1421	50%
+E38	Lab_value:T74 
+R46	MODIFY Arg1:E38 Arg2:E37	
+T75	Date 1426 1442	January 21, 2015
+E39	Date:T75 
+T76	Therapeutic_procedure 1465 1479	pancreatectomy
+E40	Therapeutic_procedure:T76 
+T77	Detailed_description 1459 1464	total
+T78	Detailed_description 1486 1491	total
+T79	Therapeutic_procedure 1492 1503	gastrectomy
+E41	Therapeutic_procedure:T79 
+R47	MODIFY Arg1:T78 Arg2:E41	
+R48	MODIFY Arg1:T77 Arg2:E40	
+T80	Sign_symptom 1535 1540	tumor
+E42	Sign_symptom:T80 
+T81	Biological_structure 1560 1568	pancreas
+R49	MODIFY Arg1:T81 Arg2:E42	
+T82	Area 1575 1598	9 cm × 6 cm in diameter
+R50	MODIFY Arg1:T82 Arg2:E42	
+T83	Biological_structure 1613 1632	left gastric artery
+T84	Biological_structure 1634 1648	splenic artery
+T85	Biological_structure 1654 1666	splenic vein
+R51	MODIFY Arg1:T83 Arg2:E42	
+T86	Diagnostic_procedure 1672 1696	histopathological report
+E43	Diagnostic_procedure:T86 
+R52	MODIFY Arg1:T84 Arg2:E42	
+R53	MODIFY Arg1:T85 Arg2:E42	
+T87	Sign_symptom 1734 1740	lesion
+E44	Sign_symptom:T87 
+T88	Detailed_description 1723 1733	metastatic
+R54	MODIFY Arg1:T88 Arg2:E44	
+T89	Sign_symptom 1760 1765	tumor
+E45	Sign_symptom:T89 
+T90	Biological_structure 1792 1803	lymph nodes
+R55	MODIFY Arg1:T90 Arg2:E45	
+T91	Quantitative_concept 1780 1791	8 of the 32
+R56	MODIFY Arg1:T91 Arg2:T90	
+T92	Date 1824 1846	7th post-operative day
+E46	Date:T92 
+T93	Sign_symptom 1877 1882	fever
+E47	Sign_symptom:T93 
+T94	Sign_symptom 1887 1899	leukocytosis
+E48	Sign_symptom:T94 
+T95	Severity 1872 1876	high
+R57	MODIFY Arg1:T95 Arg2:E47	
+T96	Diagnostic_procedure 1930 1932	CT
+E49	Diagnostic_procedure:T96 
+T97	Biological_structure 1920 1929	abdominal
+R58	MODIFY Arg1:T97 Arg2:E49	
+T98	Sign_symptom 1963 1979	fluid collection
+E50	Sign_symptom:T98 
+T99	Detailed_description 1954 1962	infected
+R59	MODIFY Arg1:T99 Arg2:E50	
+T100	Biological_structure 1987 1997	lesser sac
+R60	MODIFY Arg1:T100 Arg2:E50	
+T101	Distance 2004 2016	4.7 cm-sized
+T102	Sign_symptom 2027 2031	mass
+E51	Sign_symptom:T102 
+T103	Detailed_description 2017 2026	recurring
+R61	MODIFY Arg1:T103 Arg2:E51	
+R62	MODIFY Arg1:T101 Arg2:E51	
+T104	Biological_structure 2079 2087	left hip
+R63	MODIFY Arg1:T104 Arg2:E51	
+T105	Disease_disorder 2117 2126	infection
+E52	Disease_disorder:T105 
+T106	Biological_structure 2134 2150	abdominal cavity
+R64	MODIFY Arg1:T106 Arg2:E52	
+T107	Medication 2166 2177	antibiotics
+E53	Medication:T107 
+T108	Therapeutic_procedure 2182 2189	removed
+E54	Therapeutic_procedure:T108 
+T109	Sign_symptom 2213 2217	mass
+E55	Sign_symptom:T109 
+R65	MODIFY Arg1:E55 Arg2:E54	
+T110	Detailed_description 2203 2212	recurring
+T111	Biological_structure 2194 2202	left hip
+R66	MODIFY Arg1:T110 Arg2:E55	
+R67	MODIFY Arg1:T111 Arg2:E55	
+T112	Date 2221 2237	February 3, 2015
+E56	Date:T112 
+T113	Diagnostic_procedure 2243 2257	histopathology
+E57	Diagnostic_procedure:T113 
+T114	Distance 2305 2331	maximum diameter of 7.5 cm
+#1	AnnotatorNotes T114	Not connected as this is an implicit coreference
+T115	Disease_disorder 2374 2387	complications
+E58	Disease_disorder:T115 
+A2	POLARITY E58 NEG
+T116	Date 2391 2407	February 9, 2015
+E59	Date:T116 
+*	OVERLAP E4 E5
+R68	AFTER Arg1:E5 Arg2:E2	
+*	OVERLAP E2 E1
+R69	BEFORE Arg1:E1 Arg2:E3	
+*	OVERLAP E3 E6 E10 E11 E14 E15 E16 E17 E20 E21 E23 E24 E25 E26 E27
+T117	Detailed_description 146 151	large
+R70	MODIFY Arg1:T117 Arg2:E6	
+R71	BEFORE Arg1:E27 Arg2:E28	
+*	OVERLAP E28 E30
+R72	BEFORE Arg1:E30 Arg2:E31	
+*	OVERLAP E31 E32 E33 E34 E35 E37
+R73	BEFORE Arg1:E37 Arg2:E39	
+*	OVERLAP E39 E40 E41 E42
+R74	BEFORE Arg1:E42 Arg2:E43	
+*	OVERLAP E43 E44 E45
+R75	BEFORE Arg1:E45 Arg2:E46	
+*	OVERLAP E46 E47 E48 E49 E50 E51 E52
+R76	BEFORE Arg1:E52 Arg2:E53	
+R77	BEFORE Arg1:E53 Arg2:E54	
+*	OVERLAP E54 E56
+R78	BEFORE Arg1:E56 Arg2:E57	
+T118	Clinical_event 2349 2359	discharged
+E60	Clinical_event:T118 
+R79	BEFORE Arg1:E57 Arg2:E60	
+*	OVERLAP E60 E58 E59
+R80	BEFORE Arg1:E59 Arg2:E7	

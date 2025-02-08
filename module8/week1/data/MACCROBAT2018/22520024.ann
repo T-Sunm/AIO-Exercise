@@ -1,0 +1,263 @@
+T1	Age 2 13	60-year-old
+T2	Sex 14 18	male
+T3	Disease_disorder 97 120	retroperitoneal sarcoma
+E1	Disease_disorder:T3 
+T4	Detailed_description 77 96	T2bN0M0G3 Stage III
+R1	MODIFY Arg1:T4 Arg2:E1	
+T5	Therapeutic_procedure 62 71	resection
+E2	Therapeutic_procedure:T5 
+T6	Detailed_description 54 61	radical
+R2	MODIFY Arg1:T6 Arg2:E2	
+R3	MODIFY Arg1:E1 Arg2:E2	
+T7	History 54 178	radical resection of a T2bN0M0G3 Stage III retroperitoneal sarcoma, including right nephrectomy and cholecystectomy, in 2002
+T8	Therapeutic_procedure 138 149	nephrectomy
+E3	Therapeutic_procedure:T8 
+T9	Detailed_description 132 137	right
+R4	MODIFY Arg1:T9 Arg2:E3	
+T10	Therapeutic_procedure 154 169	cholecystectomy
+E4	Therapeutic_procedure:T10 
+R5	SUB_PROCEDURE Arg1:E3 Arg2:E2	
+R6	SUB_PROCEDURE Arg1:E4 Arg2:E2	
+T11	Date 174 178	2002
+E5	Date:T11 
+T12	Diagnostic_procedure 180 201	Pathologic evaluation
+E6	Diagnostic_procedure:T12 
+T13	Disease_disorder 234 245	liposarcoma
+E7	Disease_disorder:T13 
+T14	Severity 223 233	high-grade
+R7	MODIFY Arg1:T14 Arg2:E7	
+T15	Distance 217 222	25 cm
+R8	MODIFY Arg1:T15 Arg2:E7	
+T16	Detailed_description 251 282	different histologic components
+T17	Detailed_description 294 300	myxoid
+T18	Detailed_description 302 312	round cell
+T19	Detailed_description 314 333	well-differentiated
+T20	Detailed_description 335 345	sclerosing
+T21	Detailed_description 350 370	pleomorphic patterns
+R9	MODIFY Arg1:T17 Arg2:T16	
+R10	MODIFY Arg1:T18 Arg2:T16	
+R11	MODIFY Arg1:T19 Arg2:T16	
+R12	MODIFY Arg1:T20 Arg2:T16	
+R13	MODIFY Arg1:T21 Arg2:T16	
+R14	MODIFY Arg1:T16 Arg2:E7	
+T22	Diagnostic_procedure 372 388	Surgical margins
+E8	Diagnostic_procedure:T22 
+T23	Lab_value 394 402	negative
+R15	MODIFY Arg1:T23 Arg2:E8	
+T24	Sign_symptom 424 430	invade
+E9	Sign_symptom:T24 
+A1	POLARITY E9 NEG
+T25	Sign_symptom 410 415	tumor
+E10	Sign_symptom:T25 
+R16	MODIFY Arg1:E10 Arg2:E9	
+T26	Biological_structure 435 441	kidney
+R17	MODIFY Arg1:T26 Arg2:E9	
+T27	Sign_symptom 492 497	tumor
+E11	Sign_symptom:T27 
+A2	POLARITY E11 NEG
+T28	Biological_structure 457 467	renal vein
+T29	Biological_structure 472 478	ureter
+R18	MODIFY Arg1:T29 Arg2:E11	
+R19	MODIFY Arg1:T28 Arg2:E11	
+T30	Therapeutic_procedure 539 557	additional therapy
+E12	Therapeutic_procedure:T30 
+A3	POLARITY E12 NEG
+T31	Diagnostic_procedure 572 598	magnetic resonance imaging
+E13	Diagnostic_procedure:T31 
+T32	Detailed_description 559 571	Surveillance
+R20	MODIFY Arg1:T32 Arg2:E13	
+T33	Date 602 606	2007
+E14	Date:T33 
+T34	Sign_symptom 628 644	tumor recurrence
+E15	Sign_symptom:T34 
+T35	Detailed_description 619 627	isolated
+R21	MODIFY Arg1:T35 Arg2:E15	
+T36	Biological_structure 652 667	retroperitoneum
+R22	MODIFY Arg1:T36 Arg2:E15	
+T37	Diagnostic_procedure 684 693	celiotomy
+E16	Diagnostic_procedure:T37 
+T38	Detailed_description 672 683	exploratory
+R23	MODIFY Arg1:T38 Arg2:E16	
+T39	Sign_symptom 703 720	tumor involvement
+E17	Sign_symptom:T39 
+T40	Biological_structure 728 736	duodenum
+T41	Biological_structure 738 758	head of the pancreas
+T42	Biological_structure 760 784	superior mesenteric vein
+T43	Biological_structure 786 795	vena cava
+T44	Biological_structure 800 815	left renal vein
+T45	Detailed_description 828 844	adhesive changes
+R24	MODIFY Arg1:T45 Arg2:E17	
+T46	Severity 821 827	severe
+R25	MODIFY Arg1:T46 Arg2:T45	
+T47	Disease_disorder 890 910	unresectable disease
+E18	Disease_disorder:T47 
+R26	MODIFY Arg1:T40 Arg2:E17	
+R27	MODIFY Arg1:T41 Arg2:E17	
+R28	MODIFY Arg1:T42 Arg2:E17	
+R29	MODIFY Arg1:T43 Arg2:E17	
+R30	MODIFY Arg1:T44 Arg2:E17	
+T48	Therapeutic_procedure 966 975	radiation
+E19	Therapeutic_procedure:T48 
+T49	Detailed_description 948 965	stereotactic body
+R31	MODIFY Arg1:T49 Arg2:E19	
+T50	Sign_symptom 999 1004	tumor
+E20	Sign_symptom:T50 
+T51	Biological_structure 983 998	retroperitoneal
+R32	MODIFY Arg1:T51 Arg2:E20	
+T52	Dosage 1008 1022	five fractions
+T53	Dosage 1029 1048	total dose of 30 Gy
+R33	MODIFY Arg1:T53 Arg2:E19	
+R34	MODIFY Arg1:T52 Arg2:E19	
+T54	Sign_symptom 1058 1070	complication
+E21	Sign_symptom:T54 
+A4	POLARITY E21 NEG
+T55	Diagnostic_procedure 1086 1093	imaging
+E22	Diagnostic_procedure:T55 
+T56	Sign_symptom 1151 1155	mass
+E23	Sign_symptom:T56 
+A5	POLARITY E23 MAYBE_NEG
+T57	Biological_structure 1135 1150	retroperitoneal
+R35	MODIFY Arg1:T57 Arg2:E23	
+T58	Date 1157 1171	One year later
+E24	Date:T58 
+T59	Clinical_event 1185 1194	presented
+E25	Clinical_event:T59 
+T60	Sign_symptom 1200 1211	weight loss
+E26	Sign_symptom:T60 
+T61	Sign_symptom 1236 1240	pain
+E27	Sign_symptom:T61 
+T62	Detailed_description 1213 1225	postprandial
+T63	Biological_structure 1226 1235	abdominal
+R36	MODIFY Arg1:T63 Arg2:E27	
+R37	MODIFY Arg1:T62 Arg2:E27	
+T64	Sign_symptom 1242 1248	nausea
+E28	Sign_symptom:T64 
+T65	Sign_symptom 1253 1261	vomiting
+E29	Sign_symptom:T65 
+T66	Diagnostic_procedure 1263 1286	Cross-sectional imaging
+E30	Diagnostic_procedure:T66 
+T67	Sign_symptom 1303 1307	mass
+E31	Sign_symptom:T67 
+T68	Distance 1298 1302	7 cm
+R38	MODIFY Arg1:T68 Arg2:E31	
+T69	Biological_structure 1332 1361	third portion of the duodenum
+R39	MODIFY Arg1:T69 Arg2:E31	
+T70	Sign_symptom 1405 1416	involvement
+E32	Sign_symptom:T70 
+A6	POLARITY E32 NEG
+T71	Biological_structure 1424 1439	pancreatic head
+T72	Biological_structure 1447 1463	other structures
+R40	MODIFY Arg1:T71 Arg2:E32	
+R41	MODIFY Arg1:T72 Arg2:E32	
+T73	Therapeutic_procedure 1557 1566	resection
+E33	Therapeutic_procedure:T73 
+T74	Diagnostic_procedure 1674 1685	exploration
+E34	Diagnostic_procedure:T74 
+T75	Sign_symptom 1700 1705	tumor
+E35	Sign_symptom:T75 
+T76	Biological_structure 1722 1735	intraduodenal
+R42	MODIFY Arg1:T76 Arg2:E35	
+T77	Coreference 1750 1754	mass
+E36	Coreference:T77 
+R43	IDENTICAL Arg1:E36 Arg2:E35	
+T78	Detailed_description 1737 1749	pedunculated
+R44	MODIFY Arg1:T78 Arg2:E35	
+T79	Biological_structure 1762 1785	posterior duodenal wall
+R45	MODIFY Arg1:T79 Arg2:E35	
+T80	Therapeutic_procedure 1871 1882	duodenotomy
+E37	Therapeutic_procedure:T80 
+T81	Therapeutic_procedure 1887 1904	stalk transection
+E38	Therapeutic_procedure:T81 
+T82	Sign_symptom 1921 1925	mass
+E39	Sign_symptom:T82 
+T83	Detailed_description 1912 1920	polypoid
+R46	MODIFY Arg1:T83 Arg2:E39	
+T84	Therapeutic_procedure 1956 1965	resection
+E40	Therapeutic_procedure:T84 
+T85	Biological_structure 1947 1955	duodenal
+R47	MODIFY Arg1:T85 Arg2:E40	
+T86	Detailed_description 1939 1946	partial
+R48	MODIFY Arg1:T86 Arg2:E40	
+T87	Therapeutic_procedure 1996 2007	anastomosis
+E41	Therapeutic_procedure:T87 
+T88	Biological_structure 1981 1995	duodenojejunal
+R49	MODIFY Arg1:T88 Arg2:E41	
+R50	SUB_PROCEDURE Arg1:E41 Arg2:E40	
+T89	Detailed_description 1971 1980	hand-sewn
+R51	MODIFY Arg1:T89 Arg2:E41	
+T90	Diagnostic_procedure 2020 2050	Surgical pathology examination
+E42	Diagnostic_procedure:T90 
+T91	Disease_disorder 2090 2101	liposarcoma
+E43	Disease_disorder:T91 
+T92	Severity 2079 2089	high-grade
+R52	MODIFY Arg1:T92 Arg2:E43	
+T93	Detailed_description 2069 2078	recurrent
+R53	MODIFY Arg1:T93 Arg2:E43	
+T94	Distance 2062 2068	9.5 cm
+R54	MODIFY Arg1:T94 Arg2:E43	
+T95	Detailed_description 2107 2135	polypoid intraluminal growth
+R55	MODIFY Arg1:T95 Arg2:E43	
+T96	Detailed_description 2147 2153	myxoid
+T97	Detailed_description 2155 2165	round cell
+T98	Detailed_description 2167 2186	well-differentiated
+T99	Detailed_description 2188 2198	sclerosing
+T100	Detailed_description 2203 2228	focally pleomorphic areas
+R56	MODIFY Arg1:T96 Arg2:T95	
+R57	MODIFY Arg1:T97 Arg2:T95	
+R58	MODIFY Arg1:T98 Arg2:T95	
+R59	MODIFY Arg1:T99 Arg2:T95	
+R60	MODIFY Arg1:T100 Arg2:T95	
+T101	Diagnostic_procedure 2230 2246	Surgical margins
+E44	Diagnostic_procedure:T101 
+T102	Lab_value 2252 2260	negative
+R61	MODIFY Arg1:T102 Arg2:E44	
+T103	Sign_symptom 2268 2273	tumor
+E45	Sign_symptom:T103 
+T104	Distance 2279 2292	within 0.1 cm
+R62	MODIFY Arg1:T104 Arg2:E45	
+T105	Biological_structure 2300 2312	stalk margin
+R63	MODIFY Arg1:T105 Arg2:T104	
+T106	Sign_symptom 2353 2374	neoplastic components
+E46	Sign_symptom:T106 
+A7	POLARITY E46 NEG
+T107	Biological_structure 2405 2413	duodenum
+R64	MODIFY Arg1:T107 Arg2:E46	
+T108	Diagnostic_procedure 2419 2439	postoperative course
+E47	Diagnostic_procedure:T108 
+T109	Therapeutic_procedure 2419 2439	postoperative course
+E48	Therapeutic_procedure:T109 
+T110	Lab_value 2444 2457	uncomplicated
+R65	MODIFY Arg1:T110 Arg2:E47	
+T111	Sign_symptom 2495 2505	recurrence
+E49	Sign_symptom:T111 
+A8	POLARITY E49 NEG
+T112	Date 2512 2526	30 months from
+E50	Date:T112 
+T113	History 539 557	additional therapy
+T114	History 217 245	25 cm high-grade liposarcoma
+R67	BEFORE Arg1:E1 Arg2:E3	
+*	OVERLAP E3 E4 E5 E6 E7
+*	OVERLAP E2 E1
+R66	BEFORE Arg1:E7 Arg2:E8	
+R68	AFTER Arg1:E8 Arg2:E10	
+*	OVERLAP E10 E11
+R69	BEFORE Arg1:E11 Arg2:E12	
+R70	BEFORE Arg1:E12 Arg2:E13	
+*	OVERLAP E13 E14 E15 E16 E17 E18
+R71	BEFORE Arg1:E18 Arg2:E19	
+*	OVERLAP E19 E20
+R72	BEFORE Arg1:E20 Arg2:E21	
+R73	BEFORE Arg1:E21 Arg2:E22	
+*	OVERLAP E22 E23
+R74	BEFORE Arg1:E23 Arg2:E24	
+*	OVERLAP E24 E25 E26 E27 E28 E29 E30 E31 E32
+R75	BEFORE Arg1:E32 Arg2:E33	
+*	OVERLAP E33 E34 E35 E37 E38 E39
+R76	BEFORE Arg1:E39 Arg2:E40	
+*	OVERLAP E40 E41
+R77	BEFORE Arg1:E41 Arg2:E42	
+*	OVERLAP E42 E43 E44 E45 E46
+R78	BEFORE Arg1:E46 Arg2:E47	
+*	OVERLAP E47 E48
+R79	BEFORE Arg1:E48 Arg2:E49	
+*	OVERLAP E49 E50

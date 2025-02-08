@@ -1,0 +1,151 @@
+T1	Age 2 13	60-year-old
+T2	Sex 14 17	man
+T3	Diagnostic_procedure 32 43	colonoscopy
+E1	Diagnostic_procedure:T3 
+T4	Sign_symptom 69 82	sessile polyp
+E2	Sign_symptom:T4 
+T5	Distance 64 68	2 cm
+R1	MODIFY Arg1:T5 Arg2:E2	
+T6	Distance 100 105	10 cm
+T7	Biological_structure 115 125	anal verge
+R2	MODIFY Arg1:T6 Arg2:T7	
+R3	MODIFY Arg1:T7 Arg2:E2	
+T8	Therapeutic_procedure 130 150	successfully removed
+E3	Therapeutic_procedure:T8 
+T9	Disease_disorder 168 189	tubulovillous adenoma
+E4	Disease_disorder:T9 
+T10	Coreference 156 161	polyp
+E5	Coreference:T10 
+R4	IDENTICAL Arg1:E5 Arg2:E2	
+T11	Sign_symptom 201 221	high-grade dysplasia
+E6	Sign_symptom:T11 
+T12	Diagnostic_procedure 225 247	flexible sigmoidoscopy
+E7	Diagnostic_procedure:T12 
+T13	Date 258 276	three months later
+E8	Date:T13 
+T14	Diagnostic_procedure 298 309	colonoscopy
+E9	Diagnostic_procedure:T14 
+T15	Date 310 348	one year after the initial colonoscopy
+E10	Date:T15 
+R6	MODIFY Arg1:E10 Arg2:E9	
+T16	Detailed_description 291 297	repeat
+R7	MODIFY Arg1:T16 Arg2:E9	
+T17	Lab_value 360 368	negative
+R8	MODIFY Arg1:T17 Arg2:E9	
+R9	MODIFY Arg1:T17 Arg2:E7	
+T18	Diagnostic_procedure 387 398	colonoscopy
+E11	Diagnostic_procedure:T18 
+T19	Date 409 450	three years after the initial colonoscopy
+E12	Date:T19 
+T20	Sign_symptom 462 475	sessile polyp
+E13	Sign_symptom:T20 
+T21	Distance 477 481	3 cm
+R10	MODIFY Arg1:T21 Arg2:E13	
+T22	Distance 494 499	10 cm
+T23	Biological_structure 509 519	anal verge
+R11	MODIFY Arg1:T22 Arg2:T23	
+R12	MODIFY Arg1:T23 Arg2:E13	
+T24	Diagnostic_procedure 521 529	Biopsies
+E14	Diagnostic_procedure:T24 
+T25	Disease_disorder 575 590	villous adenoma
+E15	Disease_disorder:T25 
+T26	Sign_symptom 596 615	low-grade dysplasia
+E16	Sign_symptom:T26 
+R13	MODIFY Arg1:E16 Arg2:E15	
+R5	MODIFY Arg1:E6 Arg2:E4	
+T27	Diagnostic_procedure 762 788	magnetic resonance imaging
+E17	Diagnostic_procedure:T27 
+T28	Diagnostic_procedure 790 793	MRI
+E18	Diagnostic_procedure:T28 
+T29	Biological_structure 755 761	pelvic
+R14	MODIFY Arg1:T29 Arg2:E17	
+R15	IDENTICAL Arg1:E18 Arg2:E17	
+T30	Diagnostic_procedure 807 828	endoscopic ultrasound
+E19	Diagnostic_procedure:T30 
+T31	Diagnostic_procedure 830 833	EUS
+E20	Diagnostic_procedure:T31 
+R16	IDENTICAL Arg1:E20 Arg2:E19	
+T32	Coreference 882 885	MRI
+E21	Coreference:T32 
+R17	IDENTICAL Arg1:E21 Arg2:E17	
+T33	Sign_symptom 914 918	mass
+E22	Sign_symptom:T33 
+T34	Biological_structure 907 913	rectal
+R18	MODIFY Arg1:T34 Arg2:E22	
+T35	Biological_structure 933 951	muscularis propria
+R19	MODIFY Arg1:T35 Arg2:E22	
+T36	Detailed_description 898 906	invasive
+R20	MODIFY Arg1:T36 Arg2:E22	
+T37	Disease_disorder 1008 1027	T2 rectal carcinoma
+E23	Disease_disorder:T37 
+T38	Sign_symptom 1050 1065	lymphadenopathy
+E24	Sign_symptom:T38 
+A1	POLARITY E24 NEG
+T39	Biological_structure 1043 1049	pelvic
+R21	MODIFY Arg1:T39 Arg2:E24	
+T40	Coreference 1084 1087	EUS
+E25	Coreference:T40 
+R22	IDENTICAL Arg1:E25 Arg2:E20	
+T41	Sign_symptom 1106 1110	mass
+E26	Sign_symptom:T41 
+T42	Biological_structure 1099 1105	rectal
+R23	MODIFY Arg1:T42 Arg2:E26	
+T43	Biological_structure 1125 1131	mucosa
+T44	Biological_structure 1136 1145	submucosa
+R24	MODIFY Arg1:T43 Arg2:E26	
+R25	MODIFY Arg1:T44 Arg2:E26	
+T45	Therapeutic_procedure 1357 1375	surgical resection
+E27	Therapeutic_procedure:T45 
+T46	Therapeutic_procedure 1401 1423	low anterior resection
+E28	Therapeutic_procedure:T46 
+R26	SUB_PROCEDURE Arg1:E28 Arg2:E27	
+T47	Therapeutic_procedure 1428 1450	end-to-end anastomosis
+E29	Therapeutic_procedure:T47 
+T48	Therapeutic_procedure 1456 1470	loop ileostomy
+E30	Therapeutic_procedure:T48 
+T49	Diagnostic_procedure 1472 1488	Pathology review
+E31	Diagnostic_procedure:T49 
+T50	Biological_structure 1496 1517	resected rectosigmoid
+R27	MODIFY Arg1:T50 Arg2:E31	
+T51	Disease_disorder 1529 1544	villous adenoma
+E32	Disease_disorder:T51 
+T52	Sign_symptom 1550 1568	low-grade dyplasia
+E33	Sign_symptom:T52 
+R28	MODIFY Arg1:E33 Arg2:E32	
+T53	Sign_symptom 1595 1622	muscularis propria invasion
+E34	Sign_symptom:T53 
+A2	POLARITY E34 NEG
+T54	Therapeutic_procedure 1739 1757	ileostomy reversal
+E35	Therapeutic_procedure:T54 
+T55	Date 1758 1775	five months later
+E36	Date:T55 
+T56	Sign_symptom 1788 1800	asymptomatic
+E37	Sign_symptom:T56 
+T57	Sign_symptom 1809 1830	recurrence of tumours
+E38	Sign_symptom:T57 
+A3	POLARITY E38 NEG
+T58	Therapeutic_procedure 1690 1697	excised
+E39	Therapeutic_procedure:T58 
+T59	Biological_structure 1644 1653;1673 1684	pericolic lymph nodes
+T60	Biological_structure 1662 1684	mesorectal lymph nodes
+R29	MODIFY Arg1:T59 Arg2:E39	
+R30	MODIFY Arg1:T60 Arg2:E39	
+T61	Lab_value 1639 1643	five
+R31	MODIFY Arg1:T61 Arg2:T59	
+T62	Lab_value 1658 1661	two
+R32	MODIFY Arg1:T62 Arg2:T60	
+T63	Sign_symptom 1709 1715	benign
+E40	Sign_symptom:T63 
+R33	MODIFY Arg1:E40 Arg2:T59	
+R34	MODIFY Arg1:E40 Arg2:T60	
+*	OVERLAP E1 E2 E3 E4
+R35	BEFORE Arg1:E4 Arg2:E7	
+*	OVERLAP E7 E8 E9
+R36	BEFORE Arg1:E9 Arg2:E11	
+*	OVERLAP E11 E12 E13 E14 E15 E17 E19 E22 E23 E24 E26
+R37	BEFORE Arg1:E26 Arg2:E27	
+*	OVERLAP E27 E29 E30
+R38	BEFORE Arg1:E30 Arg2:E31	
+*	OVERLAP E31 E32 E34 E39 E40
+R39	BEFORE Arg1:E40 Arg2:E35	
+*	OVERLAP E35 E36 E37 E38

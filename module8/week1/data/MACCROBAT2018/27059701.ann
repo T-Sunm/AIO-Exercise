@@ -1,0 +1,207 @@
+T1	Age 2 13	50-year-old
+T2	Sex 14 18	lady
+T3	Clinical_event 19 28	presented
+E1	Clinical_event:T3 
+T4	Sign_symptom 48 52	pain
+E2	Sign_symptom:T4 
+T5	Biological_structure 53 60	abdomen
+R1	MODIFY Arg1:T5 Arg2:E2	
+T6	Sign_symptom 65 73	jaundice
+E3	Sign_symptom:T6 
+T7	Duration 78 99	one and a half months
+E4	Duration:T7 
+T8	Sign_symptom 145 150	fever
+E5	Sign_symptom:T8 
+T9	Detailed_description 124 136	intermittent
+R2	MODIFY Arg1:T9 Arg2:E5	
+T10	Duration 158 169	last 1 week
+E6	Duration:T10 
+T11	Diagnostic_procedure 171 191	Physical examination
+E7	Diagnostic_procedure:T11 
+T12	Sign_symptom 213 220	icterus
+E8	Sign_symptom:T12 
+#1	AnnotatorNotes E8	jaundice
+T13	Sign_symptom 252 256	mass
+E9	Sign_symptom:T13 
+T14	Shape 243 251	globular
+R3	MODIFY Arg1:T14 Arg2:E9	
+T15	Detailed_description 236 242	tender
+T16	Detailed_description 227 235	palpable
+R4	MODIFY Arg1:T15 Arg2:E9	
+R5	MODIFY Arg1:T16 Arg2:E9	
+T17	Biological_structure 264 283	right hypochondrium
+R6	MODIFY Arg1:T17 Arg2:E9	
+T18	Area 294 302	3 × 3 cm
+R7	MODIFY Arg1:T18 Arg2:E9	
+T19	Sign_symptom 340 348	jaundice
+E10	Sign_symptom:T19 
+T20	Detailed_description 328 339	obstructive
+R8	MODIFY Arg1:T20 Arg2:E10	
+T21	Disease_disorder 362 385	periampullary carcinoma
+E11	Disease_disorder:T21 
+T22	Diagnostic_procedure 396 424	Ultrasonographic examination
+E12	Diagnostic_procedure:T22 
+T23	Biological_structure 432 439	abdomen
+R9	MODIFY Arg1:T23 Arg2:E12	
+T24	Biological_structure 444 450	pelvis
+R10	MODIFY Arg1:T24 Arg2:E12	
+T25	Sign_symptom 460 507	dilatation of the intrahepatic biliary radicles
+E13	Sign_symptom:T25 
+T26	Biological_structure 478 507	intrahepatic biliary radicles
+T27	Biological_structure 509 513	IHBR
+R11	IDENTICAL Arg1:T27 Arg2:T26	
+R12	MODIFY Arg1:T26 Arg2:E13	
+T28	Sign_symptom 544 555	gall stones
+E14	Sign_symptom:T28 
+T29	Detailed_description 537 543	mobile
+T30	Detailed_description 521 529	multiple
+R13	MODIFY Arg1:T30 Arg2:E14	
+R14	MODIFY Arg1:T29 Arg2:E14	
+T31	Sign_symptom 562 586	dilated common bile duct
+E15	Sign_symptom:T31 
+T32	Biological_structure 570 586	common bile duct
+T33	Biological_structure 588 591	CBD
+R15	IDENTICAL Arg1:T33 Arg2:T32	
+T34	Distance 603 609	1.8 cm
+T35	Detailed_description 615 649	sudden narrowing at its distal end
+R16	MODIFY Arg1:T34 Arg2:E15	
+R17	MODIFY Arg1:T35 Arg2:E15	
+T36	Diagnostic_procedure 651 658	CT scan
+E16	Diagnostic_procedure:T36 
+T37	Sign_symptom 675 732	dilatation of the extra and intrahepatic biliary radicles
+E17	Sign_symptom:T37 
+T38	Severity 666 674	moderate
+R18	MODIFY Arg1:T38 Arg2:E17	
+T39	Sign_symptom 734 748	cholelithiasis
+E18	Sign_symptom:T39 
+#2	AnnotatorNotes E18	Gallstones
+T40	Sign_symptom 765 800	thickening of the gall bladder wall
+E19	Sign_symptom:T40 
+T41	Biological_structure 808 814	fundus
+R19	MODIFY Arg1:T41 Arg2:E19	
+T42	Sign_symptom 833 842	stricture
+E20	Sign_symptom:T42 
+T43	Biological_attribute 822 832	distal CBD
+R20	MODIFY Arg1:T43 Arg2:E20	
+T44	Sign_symptom 881 891	metastasis
+E21	Sign_symptom:T44 
+A1	POLARITY E21 NEG
+T45	Disease_disorder 929 952	periampullary carcinoma
+E22	Disease_disorder:T45 
+T46	Disease_disorder 958 979	chronic cholecystitis
+E23	Disease_disorder:T46 
+#3	AnnotatorNotes E23	this is a disease because it's chronic
+T47	Therapeutic_procedure 1020 1043	pancreaticoduodenectomy
+E24	Therapeutic_procedure:T47 
+T48	Therapeutic_procedure 1045 1064	Whipple’s procedure
+E25	Therapeutic_procedure:T48 
+R21	IDENTICAL Arg1:E25 Arg2:E24	
+T49	Clinical_event 1006 1013	planned
+E26	Clinical_event:T49 
+T50	Therapeutic_procedure 1120 1139	Whipple’s procedure
+E27	Therapeutic_procedure:T50 
+T51	Diagnostic_procedure 1141 1158	table examination
+E28	Diagnostic_procedure:T51 
+T52	Biological_structure 1166 1183	resected specimen
+R22	MODIFY Arg1:T52 Arg2:E28	
+T53	Sign_symptom 1202 1213	gall stones
+E29	Sign_symptom:T53 
+T54	Detailed_description 1193 1201	multiple
+T55	Biological_structure 1221 1233	gall bladder
+R23	MODIFY Arg1:T54 Arg2:E29	
+R24	MODIFY Arg1:T55 Arg2:E29	
+T56	Sign_symptom 1247 1265	mucosal thickening
+E30	Sign_symptom:T56 
+T57	Biological_structure 1273 1279	fundus
+R25	MODIFY Arg1:T57 Arg2:E30	
+T58	Sign_symptom 1313 1319	growth
+E31	Sign_symptom:T58 
+T59	Detailed_description 1287 1296	irregular
+T60	Detailed_description 1297 1312	circumferential
+R26	MODIFY Arg1:T60 Arg2:E31	
+R27	MODIFY Arg1:T59 Arg2:E31	
+T61	Biological_structure 1334 1368	intrapancreatic portion of the CBD
+R28	MODIFY Arg1:T61 Arg2:E31	
+T62	Therapeutic_procedure 1370 1390	Postoperative period
+E32	Therapeutic_procedure:T62 
+T63	Lab_value 1395 1405	uneventful
+R29	MODIFY Arg1:T63 Arg2:E32	
+T64	Clinical_event 1423 1432	recovered
+E33	Clinical_event:T64 
+T65	Lab_value 1433 1447	satisfactorily
+R30	MODIFY Arg1:T65 Arg2:E33	
+T66	Diagnostic_procedure 1449 1478	Histopathological examination
+E34	Diagnostic_procedure:T66 
+T67	Biological_structure 1486 1503	resected specimen
+R31	MODIFY Arg1:T67 Arg2:E34	
+T68	Sign_symptom 1529 1564	thickening of the gall bladder wall
+E35	Sign_symptom:T68 
+T69	Biological_structure 1572 1578	fundus
+R32	MODIFY Arg1:T69 Arg2:E35	
+T70	Sign_symptom 1599 1606	calculi
+E36	Sign_symptom:T70 
+#4	AnnotatorNotes E36	stones
+T71	Detailed_description 1593 1598	small
+T72	Detailed_description 1584 1592	multiple
+R33	MODIFY Arg1:T71 Arg2:E36	
+R34	MODIFY Arg1:T72 Arg2:E36	
+T73	Distance 1630 1636	1.4 cm
+R35	MODIFY Arg1:T73 Arg2:E36	
+T74	Disease_disorder 1721 1735	adenocarcinoma
+E37	Disease_disorder:T74 
+A2	POLARITY E37 UNCERTAIN
+T75	Biological_structure 1751 1757	mucosa
+R36	MODIFY Arg1:T75 Arg2:E37	
+T76	Diagnostic_procedure 1759 1779	Microscopic sections
+E38	Diagnostic_procedure:T76 
+T77	Disease_disorder 1823 1837	adenocarcinoma
+E39	Disease_disorder:T77 
+T78	Biological_structure 1845 1861	common bile duct
+R37	MODIFY Arg1:T78 Arg2:E39	
+T79	Biological_structure 1798 1815	distal CBD region
+R38	MODIFY Arg1:T79 Arg2:E38	
+T80	Detailed_description 1867 1875	invasion
+R39	MODIFY Arg1:T80 Arg2:E39	
+T81	Biological_structure 1885 1914	muscular wall of the duodenum
+R40	MODIFY Arg1:T81 Arg2:T80	
+T82	Diagnostic_procedure 1916 1924	Sections
+E40	Diagnostic_procedure:T82 
+T83	Biological_structure 1942 1962	resected lymph nodes
+R41	MODIFY Arg1:T83 Arg2:E40	
+T84	Sign_symptom 1976 1987	tumor cells
+E41	Sign_symptom:T84 
+A3	POLARITY E41 NEG
+R42	MODIFY Arg1:E41 Arg2:E40	
+T85	Medication 2163 2179	adjuvant therapy
+E42	Medication:T85 
+A4	POLARITY E42 NEG
+T86	Date 2210 2231	2 years after surgery
+E43	Date:T86 
+T87	Sign_symptom 2197 2204	disease
+E44	Sign_symptom:T87 
+A5	POLARITY E44 NEG
+T88	Disease_disorder 2028 2042	adenocarcinoma
+E45	Disease_disorder:T88 
+T89	Biological_structure 2050 2062	gall bladder
+R43	MODIFY Arg1:T89 Arg2:E45	
+T90	Detailed_description 2015 2023	pT1aN0M0
+R44	MODIFY Arg1:T90 Arg2:E45	
+T91	Disease_disorder 2079 2093	adenocarcinoma
+E46	Disease_disorder:T91 
+T92	Biological_structure 2101 2111	distal CBD
+R45	MODIFY Arg1:T92 Arg2:E46	
+T93	Detailed_description 2067 2074	pT2N0M0
+R46	MODIFY Arg1:T93 Arg2:E46	
+R47	AFTER Arg1:E1 Arg2:E2	
+*	OVERLAP E2 E3 E4
+R48	BEFORE Arg1:E4 Arg2:E5	
+*	OVERLAP E5 E6
+R49	BEFORE Arg1:E6 Arg2:E7	
+*	OVERLAP E7 E8 E9 E10 E11 E12 E13 E14 E15 E16 E17 E18 E19 E20 E21
+R50	BEFORE Arg1:E21 Arg2:E22	
+*	OVERLAP E22 E23 E26 E24
+R51	BEFORE Arg1:E24 Arg2:E27	
+R52	BEFORE Arg1:E27 Arg2:E28	
+*	OVERLAP E28 E29 E30 E31 E32 E33 E34 E35 E36 E37 E38 E39 E40 E41 E45 E46 E42
+R53	BEFORE Arg1:E42 Arg2:E44	
+*	OVERLAP E44 E43

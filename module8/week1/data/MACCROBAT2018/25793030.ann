@@ -1,0 +1,207 @@
+T1	Age 25 36	66-year-old
+T2	Sex 37 43	female
+T3	History 57 92	no significant past medical history
+T4	Clinical_event 93 103	presenting
+E1	Clinical_event:T4 
+T5	Sign_symptom 115 119	pain
+E2	Sign_symptom:T5 
+T6	Biological_structure 109 114	chest
+R1	MODIFY Arg1:T6 Arg2:E2	
+T7	Medication 142 150	antacids
+E3	Medication:T7 
+T8	Nonbiological_location 158 180	primary care physician
+R2	MODIFY Arg1:T8 Arg2:E3	
+T9	Clinical_event 199 208	presented
+E4	Clinical_event:T9 
+T10	Date 186 194	next day
+E5	Date:T10 
+T11	Nonbiological_location 216 230	emergency room
+R3	MODIFY Arg1:T11 Arg2:E4	
+T12	Diagnostic_procedure 241 258	electrocardiogram
+E6	Diagnostic_procedure:T12 
+T13	Disease_disorder 296 317	myocardial infarction
+E7	Disease_disorder:T13 
+T14	Detailed_description 283 295	ST elevation
+T15	Detailed_description 268 282	posterolateral
+R4	MODIFY Arg1:T14 Arg2:E7	
+R5	MODIFY Arg1:T15 Arg2:E7	
+T16	Clinical_event 347 352	taken
+E8	Clinical_event:T16 
+T17	Nonbiological_location 360 379	catheterization lab
+R6	MODIFY Arg1:T17 Arg2:E8	
+T18	Therapeutic_procedure 394 419	percutaneous intervention
+E9	Therapeutic_procedure:T18 
+T19	Sign_symptom 448 456	occluded
+E10	Sign_symptom:T19 
+T20	Severity 440 447	acutely
+R7	MODIFY Arg1:T20 Arg2:E10	
+T21	Biological_structure 457 487	large ramus intermedius vessel
+R8	MODIFY Arg1:T21 Arg2:E10	
+T22	Biological_structure 530 542	lateral wall
+T23	Sign_symptom 497 506	supplying
+E11	Sign_symptom:T23 
+R9	MODIFY Arg1:E11 Arg2:T21	
+R10	MODIFY Arg1:T22 Arg2:E11	
+T24	Sign_symptom 567 575	did well
+E12	Sign_symptom:T24 
+T25	Detailed_description 576 585	initially
+R11	MODIFY Arg1:T25 Arg2:E12	
+T26	Time 591 610	several hours later
+E13	Time:T26 
+T27	Disease_disorder 634 651	cardiogenic shock
+E14	Disease_disorder:T27 
+T28	Lab_value 615 623	suddenly
+R12	MODIFY Arg1:T28 Arg2:E14	
+T29	Therapeutic_procedure 656 681	intra-aortic balloon pump
+E15	Therapeutic_procedure:T29 
+T30	Diagnostic_procedure 701 715	echocardiogram
+E16	Diagnostic_procedure:T30 
+T31	Disease_disorder 749 769	mitral regurgitation
+E17	Disease_disorder:T31 
+T32	Severity 742 748	severe
+R13	MODIFY Arg1:T32 Arg2:E17	
+T33	Disease_disorder 777 785	ruptured
+E18	Disease_disorder:T33 
+T34	Biological_structure 786 802	papillary muscle
+R14	MODIFY Arg1:T34 Arg2:E18	
+T35	Therapeutic_procedure 839 846	support
+E19	Therapeutic_procedure:T35 
+T36	Lab_value 831 838	maximal
+R15	MODIFY Arg1:T36 Arg2:E19	
+T37	Sign_symptom 848 860	deteriorated
+E20	Sign_symptom:T37 
+T38	Severity 861 868	rapidly
+R16	MODIFY Arg1:T38 Arg2:E20	
+T39	Sign_symptom 886 894	acidosis
+E21	Sign_symptom:T39 
+T40	Sign_symptom 896 904	oliguria
+E22	Sign_symptom:T40 
+T41	Sign_symptom 927 932	edema
+E23	Sign_symptom:T41 
+T42	Detailed_description 910 916	florid
+T43	Biological_structure 917 926	pulmonary
+R17	MODIFY Arg1:T43 Arg2:E23	
+R18	MODIFY Arg1:T42 Arg2:E23	
+T44	Lab_value 874 885	progressive
+R19	MODIFY Arg1:T44 Arg2:E21	
+A1	TREND E21 INC
+T45	Diagnostic_procedure 1046 1062	echocardiography
+E24	Diagnostic_procedure:T45 
+T46	Biological_structure 1030 1045	transesophageal
+R20	MODIFY Arg1:T46 Arg2:E24	
+T47	Disease_disorder 1080 1100	mitral regurgitation
+E25	Disease_disorder:T47 
+T48	Severity 1073 1079	severe
+R21	MODIFY Arg1:T48 Arg2:E25	
+T49	Disease_disorder 1108 1116	ruptured
+E26	Disease_disorder:T49 
+T50	Biological_structure 1117 1147	anterolateral papillary muscle
+R22	MODIFY Arg1:T50 Arg2:E26	
+T51	Sign_symptom 1154 1159	small
+E27	Sign_symptom:T51 
+T52	Biological_structure 1160 1171	left atrium
+R23	MODIFY Arg1:T52 Arg2:E27	
+T53	Therapeutic_procedure 1210 1232	cardiopulmonary bypass
+E28	Therapeutic_procedure:T53 
+T54	Sign_symptom 1238 1246	acidosis
+E29	Sign_symptom:T54 
+A2	POLARITY E29 NEG
+T55	Clinical_event 1273 1283	make urine
+E30	Clinical_event:T55 
+T56	Diagnostic_procedure 1295 1308	visualization
+E31	Diagnostic_procedure:T56 
+T57	Biological_structure 1316 1328	mitral valve
+R24	MODIFY Arg1:T57 Arg2:E31	
+T58	Detailed_description 1350 1379	vertical transseptal approach
+R25	MODIFY Arg1:T58 Arg2:E31	
+T59	Biological_structure 1392 1404	right atrium
+R26	MODIFY Arg1:T59 Arg2:T58	
+T60	Diagnostic_procedure 1430 1439	inspected
+E32	Diagnostic_procedure:T60 
+T61	Coreference 1410 1415	valve
+E33	Coreference:T61 
+R27	IDENTICAL Arg1:E33 Arg2:T57	
+R28	MODIFY Arg1:E33 Arg2:E32	
+T63	Sign_symptom 1448 1456	necrotic
+E35	Sign_symptom:T63 
+T64	Disease_disorder 1457 1465	ruptured
+E36	Disease_disorder:T64 
+T65	Biological_structure 1466 1496	anterolateral papillary muscle
+R29	MODIFY Arg1:T65 Arg2:E36	
+R30	MODIFY Arg1:T65 Arg2:E35	
+T62	Sign_symptom 1552 1560	attached
+E34	Sign_symptom:T62 
+T66	Biological_structure 1568 1588	A1 chordal apparatus
+T67	Biological_structure 1536 1551	chunk of muscle
+R31	MODIFY Arg1:T67 Arg2:E34	
+R32	MODIFY Arg1:T66 Arg2:E34	
+T68	Severity 1530 1535	large
+R33	MODIFY Arg1:T68 Arg2:T67	
+T69	Therapeutic_procedure 1635 1642	excised
+E37	Therapeutic_procedure:T69 
+T70	Biological_structure 1594 1630	anterior leaflet of the mitral valve
+R34	MODIFY Arg1:T70 Arg2:E37	
+T71	Sign_symptom 1679 1685	intact
+E38	Sign_symptom:T71 
+T72	Biological_structure 1661 1678	posterior leaflet
+R35	MODIFY Arg1:T72 Arg2:E38	
+T73	Therapeutic_procedure 1708 1721	bioprosthesis
+E39	Therapeutic_procedure:T73 
+T74	Detailed_description 1695 1707	St Jude Epic
+R36	MODIFY Arg1:T74 Arg2:E39	
+T75	Distance 1689 1694	27-mm
+R37	MODIFY Arg1:T75 Arg2:E39	
+T76	Therapeutic_procedure 1765 1800	extracorporeal membrane oxygenation
+E40	Therapeutic_procedure:T76 
+T77	Therapeutic_procedure 1823 1829	weaned
+E41	Therapeutic_procedure:T77 
+T78	Date 1830 1842	3 days later
+E42	Date:T78 
+#1	AnnotatorNotes E41	from extracorporeal membrane oxygenation
+T79	Sign_symptom 1888 1896	recovery
+E43	Sign_symptom:T79 
+T80	Lab_value 1882 1887	early
+R38	MODIFY Arg1:T80 Arg2:E43	
+T81	Date 1898 1913	One month later
+E44	Date:T81 
+T82	Clinical_event 1929 1938	discharge
+E45	Clinical_event:T82 
+A3	POLARITY E45 NEG
+T83	Outcome 1944 1951	expired
+E46	Outcome:T83 
+T84	Disease_disorder 1969 1978	pneumonia
+E47	Disease_disorder:T84 
+T85	Disease_disorder 1998 2004	sepsis
+E48	Disease_disorder:T85 
+T86	Disease_disorder 2010 2028	multiorgan failure
+E49	Disease_disorder:T86 
+*	OVERLAP E1 E2
+R39	BEFORE Arg1:E2 Arg2:E3	
+R40	BEFORE Arg1:E3 Arg2:E5	
+*	OVERLAP E5 E4 E6 E7
+R41	BEFORE Arg1:E7 Arg2:E8	
+*	OVERLAP E8 E9 E10 E11
+R42	BEFORE Arg1:E11 Arg2:E12	
+R43	BEFORE Arg1:E12 Arg2:E13	
+*	OVERLAP E13 E14
+R44	BEFORE Arg1:E14 Arg2:E15	
+*	OVERLAP E15 E16 E17 E18
+R45	BEFORE Arg1:E18 Arg2:E19	
+*	OVERLAP E19 E20 E21 E22 E23
+R46	BEFORE Arg1:E23 Arg2:E24	
+T87	Nonbiological_location 1014 1028	operating room
+R47	MODIFY Arg1:T87 Arg2:E24	
+*	OVERLAP E24 E25 E26 E27
+R48	BEFORE Arg1:E27 Arg2:E28	
+R49	AFTER Arg1:E28 Arg2:E29	
+*	OVERLAP E29 E30
+R50	BEFORE Arg1:E30 Arg2:E31	
+*	OVERLAP E31 E33 E32 E35 E36 E34
+R51	BEFORE Arg1:E34 Arg2:E37	
+*	OVERLAP E37 E38 E39
+R52	BEFORE Arg1:E39 Arg2:E40	
+R53	BEFORE Arg1:E40 Arg2:E41	
+*	OVERLAP E41 E42
+R54	BEFORE Arg1:E42 Arg2:E43	
+R55	BEFORE Arg1:E43 Arg2:E44	
+*	OVERLAP E44 E45 E46 E47 E48 E49

@@ -1,0 +1,353 @@
+T1	Age 2 13	74-year-old
+T2	Sex 14 17	man
+T3	Clinical_event 22 30	referred
+E1	Clinical_event:T3 
+T4	Nonbiological_location 38 46	hospital
+T5	Date 50 63	November 2000
+E2	Date:T5 
+T6	Sign_symptom 75 92	liver dysfunction
+E3	Sign_symptom:T6 
+T7	Disease_disorder 164 182	nephrotic syndrome
+E4	Disease_disorder:T7 
+T8	Date 186 190	1995
+E5	Date:T8 
+T9	Clinical_event 111 126	medical checkup
+E6	Clinical_event:T9 
+T10	Diagnostic_procedure 192 215	Laboratory examinations
+E7	Diagnostic_procedure:T10 
+T11	Diagnostic_procedure 232 259	serum hepatobiliary enzymes
+E8	Diagnostic_procedure:T11 
+T12	Lab_value 223 231	elevated
+R1	MODIFY Arg1:T12 Arg2:E8	
+T13	Diagnostic_procedure 264 267	IgM
+E9	Diagnostic_procedure:T13 
+R2	MODIFY Arg1:T12 Arg2:E9	
+T14	Diagnostic_procedure 289 317	antimitochondrial antibodies
+E10	Diagnostic_procedure:T14 
+T15	Lab_value 277 285	presence
+R3	MODIFY Arg1:T15 Arg2:E10	
+T16	Diagnostic_procedure 341 352	Hepatitis B
+E11	Diagnostic_procedure:T16 
+T17	Diagnostic_procedure 319 336	Serologic markers
+E12	Diagnostic_procedure:T17 
+R4	SUB_PROCEDURE Arg1:E11 Arg2:E12	
+T18	Diagnostic_procedure 341 350;357 358	Hepatitis C
+E13	Diagnostic_procedure:T18 
+R5	SUB_PROCEDURE Arg1:E13 Arg2:E12	
+T19	Lab_value 372 380	negative
+R6	MODIFY Arg1:T19 Arg2:E13	
+R7	MODIFY Arg1:T19 Arg2:E11	
+T20	Diagnostic_procedure 382 409	Histopathologic examination
+E14	Diagnostic_procedure:T20 
+T21	Diagnostic_procedure 421 436	biopsy specimen
+E15	Diagnostic_procedure:T21 
+T22	Biological_structure 415 420	liver
+R8	MODIFY Arg1:T22 Arg2:E15	
+T23	Therapeutic_procedure 449 460	laparoscopy
+E16	Therapeutic_procedure:T23 
+R9	MODIFY Arg1:E16 Arg2:E15	
+T24	Disease_disorder 498 509	cholangitis
+E17	Disease_disorder:T24 
+T25	Detailed_description 470 485	non-suppurative
+T26	Detailed_description 486 497	destructive
+T27	Biological_structure 517 528	portal area
+R10	MODIFY Arg1:T26 Arg2:E17	
+R11	MODIFY Arg1:T25 Arg2:E17	
+R12	MODIFY Arg1:T27 Arg2:E17	
+T28	Disease_disorder 559 562	PBC
+E18	Disease_disorder:T28 
+T29	Disease_disorder 564 579	Scheuer stage 3
+E19	Disease_disorder:T29 
+R13	MODIFY Arg1:E19 Arg2:E18	
+T30	Medication 599 619	ursodeoxycholic acid
+E20	Medication:T30 
+T31	Dosage 621 627	900 mg
+T32	Frequency 628 633	daily
+T33	Date 651 672	January and June 2002
+E21	Date:T33 
+T35	Therapeutic_procedure 696 724	endoscopic variceal ligation
+E23	Therapeutic_procedure:T35 
+T36	Therapeutic_procedure 730 764	endoscopic injection sclerotherapy
+E24	Therapeutic_procedure:T36 
+T37	Therapeutic_procedure 776 800	argon plasma coagulation
+E25	Therapeutic_procedure:T37 
+T38	Sign_symptom 815 833	esophageal varices
+E26	Sign_symptom:T38 
+T39	Severity 805 814	worsening
+R14	MODIFY Arg1:T39 Arg2:E26	
+T40	Date 838 852	September 2007
+E27	Date:T40 
+T41	Clinical_event 870 878	admitted
+E28	Clinical_event:T41 
+T42	Sign_symptom 910 928	esophageal varices
+E29	Sign_symptom:T42 
+T43	Severity 900 909	recurrent
+R15	MODIFY Arg1:T43 Arg2:E29	
+T44	Diagnostic_procedure 934 948	platelet count
+E30	Diagnostic_procedure:T44 
+T45	Lab_value 968 978	52 × 109/L
+T46	Lab_value 983 993	69 × 109/L
+R16	MODIFY Arg1:T45 Arg2:E30	
+R17	MODIFY Arg1:T46 Arg2:E30	
+T47	Duration 998 1011	several years
+E31	Duration:T47 
+R18	MODIFY Arg1:E31 Arg2:E30	
+T48	Lab_value 1033 1041	decrease
+T49	Lab_value 1047 1057	61 × 109/L
+T50	Date 1061 1070	June 2007
+E32	Date:T50 
+T51	Lab_value 1074 1083	8 × 109/L
+T52	Date 1084 1105	just before admission
+E33	Date:T52 
+T53	Coreference 1017 1019	it
+E34	Coreference:T53 
+R19	IDENTICAL Arg1:E34 Arg2:E30	
+T54	Sign_symptom 1135 1151	thrombocytopenia
+E35	Sign_symptom:T54 
+T55	Detailed_description 1118 1131	deterioration
+R20	MODIFY Arg1:T55 Arg2:E35	
+T56	Disease_disorder 1172 1191	infectious diseases
+E36	Disease_disorder:T56 
+A1	POLARITY E36 NEG
+T57	Medication 1214 1224	medication
+E37	Medication:T57 
+A2	POLARITY E37 NEG
+T58	Date 1229 1238	admission
+E38	Date:T58 
+T59	Sign_symptom 1264 1271	purpura
+E39	Sign_symptom:T59 
+A3	POLARITY E39 NEG
+T60	Sign_symptom 1276 1293	bleeding episodes
+E40	Sign_symptom:T60 
+A4	POLARITY E40 NEG
+T61	Diagnostic_procedure 1347 1376	platelet-associated IgG level
+E41	Diagnostic_procedure:T61 
+T62	Lab_value 1390 1394	high
+T63	Detailed_description 1381 1389	markedly
+R21	MODIFY Arg1:T63 Arg2:T62	
+R22	MODIFY Arg1:T62 Arg2:E41	
+T64	Diagnostic_procedure 1408 1414	biopsy
+E42	Diagnostic_procedure:T64 
+T65	Biological_structure 1396 1407	Bone marrow
+R23	MODIFY Arg1:T65 Arg2:E42	
+T66	Sign_symptom 1424 1444	normocellular marrow
+E43	Sign_symptom:T66 
+T67	Sign_symptom 1453 1468	cellular atypia
+E44	Sign_symptom:T67 
+A5	POLARITY E44 NEG
+T68	Diagnostic_procedure 1470 1485	Ultrasonography
+E45	Diagnostic_procedure:T68 
+T69	Diagnostic_procedure 1490 1516	magnetic resonance imaging
+E46	Diagnostic_procedure:T69 
+T70	Sign_symptom 1528 1537	cirrhotic
+E47	Sign_symptom:T70 
+T71	Biological_structure 1538 1543	liver
+R24	MODIFY Arg1:T71 Arg2:E47	
+T72	Sign_symptom 1549 1561	splenomegaly
+E48	Sign_symptom:T72 
+T73	Sign_symptom 1563 1570	ascites
+E49	Sign_symptom:T73 
+T74	Sign_symptom 1576 1586	gallstones
+E50	Sign_symptom:T74 
+T75	Diagnostic_procedure 1592 1603	spleen size
+E51	Diagnostic_procedure:T75 
+T76	Lab_value 1617 1626	unchanged
+R25	MODIFY Arg1:T76 Arg2:E51	
+T77	Detailed_description 1632 1640	previous
+T78	Diagnostic_procedure 1641 1661	imaging examinations
+E52	Diagnostic_procedure:T78 
+R26	MODIFY Arg1:T77 Arg2:E52	
+R27	MODIFY Arg1:E52 Arg2:T76	
+T79	Disease_disorder 1707 1710	PBC
+E53	Disease_disorder:T79 
+T80	Disease_disorder 1712 1741	decompensated liver cirrhosis
+E54	Disease_disorder:T80 
+T81	Disease_disorder 1748 1751	ITP
+E55	Disease_disorder:T81 
+T82	Diagnostic_procedure 1767 1807	Human leukocyte antigen (HLA) genotyping
+E56	Diagnostic_procedure:T82 
+T83	Diagnostic_procedure 1822 1871	polymerase chain reaction-sequencing-based typing
+E57	Diagnostic_procedure:T83 
+T84	Diagnostic_procedure 1875 1926	polymerase chain reaction-sequence specific primers
+E58	Diagnostic_procedure:T84 
+R28	SUB_PROCEDURE Arg1:E57 Arg2:E56	
+R29	SUB_PROCEDURE Arg1:E58 Arg2:E56	
+T85	Sign_symptom 1962 1972	A*02010101
+E59	Sign_symptom:T85 
+T86	Sign_symptom 1974 1982	B*400201
+E60	Sign_symptom:T86 
+T87	Sign_symptom 1984 1992	C*030401
+E61	Sign_symptom:T87 
+T88	Sign_symptom 1994 2004	C*07020101
+E62	Sign_symptom:T88 
+T89	Sign_symptom 2006 2015	DPB1*0501
+E63	Sign_symptom:T89 
+T90	Sign_symptom 2017 2026	DQA1*0103
+E64	Sign_symptom:T90 
+T91	Sign_symptom 2028 2039	DQA1*030101
+E65	Sign_symptom:T91 
+T92	Sign_symptom 2041 2052	DQB1*030201
+E66	Sign_symptom:T92 
+T93	Sign_symptom 2054 2065	DQB1*060101
+E67	Sign_symptom:T93 
+T94	Sign_symptom 2067 2078	DRB1*080201
+E68	Sign_symptom:T94 
+T95	Sign_symptom 2084 2095	DRB1*080302
+E69	Sign_symptom:T95 
+T96	Diagnostic_procedure 2101 2121	13C urea breath test
+E70	Diagnostic_procedure:T96 
+T97	Diagnostic_procedure 2126 2144	H pylori infection
+E71	Diagnostic_procedure:T97 
+R30	SUB_PROCEDURE Arg1:E70 Arg2:E71	
+T98	Lab_value 2149 2157	negative
+R31	MODIFY Arg1:T98 Arg2:E71	
+T99	Medication 2201 2213	prednisolone
+E72	Medication:T99 
+T100	Administration 2196 2200	Oral
+R32	MODIFY Arg1:T100 Arg2:E72	
+T101	Dosage 2215 2220	30 mg
+T102	Frequency 2221 2226	daily
+T103	Coreference 2232 2235	ITP
+E73	Coreference:T103 
+R33	IDENTICAL Arg1:E73 Arg2:E55	
+T104	Date 2251 2257	day 11
+E74	Date:T104 
+T105	Medication 2263 2279	diuretic therapy
+E75	Medication:T105 
+T106	Medication 2294 2310	albumin infusion
+E76	Medication:T106 
+R34	CAUSE Arg1:E73 Arg2:E72	
+T107	Sign_symptom 2315 2322	ascites
+E77	Sign_symptom:T107 
+R35	CAUSE Arg1:E77 Arg2:E76	
+R36	CAUSE Arg1:E77 Arg2:E75	
+T108	Diagnostic_procedure 2345 2359	platelet count
+E78	Diagnostic_procedure:T108 
+T109	Lab_value 2360 2384	did not increase notably
+R37	MODIFY Arg1:T109 Arg2:E78	
+T110	Medication 2386 2399	pulse therapy
+E79	Medication:T110 
+T111	Administration 2405 2416	intravenous
+T112	Medication 2417 2435	methylprednisolone
+E80	Medication:T112 
+R38	MODIFY Arg1:T111 Arg2:E80	
+T113	Dosage 2437 2440	1 g
+T114	Frequency 2441 2446	daily
+T115	Duration 2461 2471	d 22 to 24
+E81	Duration:T115 
+T116	Coreference 2486 2494	response
+E82	Coreference:T116 
+R40	IDENTICAL Arg1:E82 Arg2:E78	
+T117	Lab_value 2499 2503	weak
+R41	MODIFY Arg1:T117 Arg2:E82	
+T118	Detailed_description 2508 2517	temporary
+R42	MODIFY Arg1:T118 Arg2:E82	
+T119	Date 2522 2526	d 31
+E83	Date:T119 
+T120	Sign_symptom 2533 2539	melena
+E84	Sign_symptom:T120 
+T121	Severity 2528 2532	mild
+R43	MODIFY Arg1:T121 Arg2:E84	
+T122	Medication 2601 2630	immune gamma globulin therapy
+E85	Medication:T122 
+T123	Administration 2589 2600	intravenous
+R44	MODIFY Arg1:T123 Arg2:E85	
+T124	Detailed_description 2580 2585	trial
+R45	MODIFY Arg1:T124 Arg2:E85	
+T125	Dosage 2632 2636	25 g
+T126	Frequency 2637 2642	daily
+R46	MODIFY Arg1:T126 Arg2:E85	
+T127	Duration 2647 2657	d 32 to 36
+E86	Duration:T127 
+T128	Medication 2703 2735	methylprednisolone pulse therapy
+E87	Medication:T128 
+T129	Administration 2691 2702	intravenous
+T130	Detailed_description 2675 2687	second round
+R47	MODIFY Arg1:T130 Arg2:E87	
+R48	MODIFY Arg1:T129 Arg2:E87	
+T131	Duration 2739 2749	d 32 to 34
+E88	Duration:T131 
+T132	Coreference 2770 2778	response
+E89	Coreference:T132 
+T133	Diagnostic_procedure 2829 2843	platelet count
+E90	Diagnostic_procedure:T133 
+R49	IDENTICAL Arg1:E89 Arg2:E78	
+T134	Lab_value 2761 2769	moderate
+R50	MODIFY Arg1:T134 Arg2:E89	
+T135	Medication 2793 2805	prednisolone
+E91	Medication:T135 
+T136	Clinical_event 2810 2819	continued
+E92	Clinical_event:T136 
+R51	MODIFY Arg1:E92 Arg2:E91	
+T137	Lab_value 2844 2860	increased slowly
+R52	MODIFY Arg1:T137 Arg2:E90	
+T138	Sign_symptom 2866 2904	ascites was relatively well controlled
+E93	Sign_symptom:T138 
+T139	Medication 2910 2919	diuretics
+E94	Medication:T139 
+R53	CAUSE Arg1:E94 Arg2:E93	
+T140	Clinical_event 2923 2932	discharge
+E95	Clinical_event:T140 
+T141	Disease_disorder 2950 2979	decompensated liver cirrhosis
+E96	Disease_disorder:T141 
+T142	Diagnostic_procedure 2988 3002	platelet count
+E97	Diagnostic_procedure:T142 
+T143	Clinical_event 3047 3056	follow-up
+E98	Clinical_event:T143 
+T144	Sign_symptom 3060 3078	esophageal varices
+E99	Sign_symptom:T144 
+T145	Therapeutic_procedure 3087 3118	prophylactic endoscopic therapy
+E100	Therapeutic_procedure:T145 
+A6	POLARITY E100 NEG
+R54	MODIFY Arg1:T4 Arg2:E1	
+*	OVERLAP E1 E2 E3
+R55	AFTER Arg1:E3 Arg2:E6	
+R56	AFTER Arg1:E6 Arg2:E4	
+*	OVERLAP E4 E5
+R57	BEFORE Arg1:E5 Arg2:E7	
+*	OVERLAP E7 E8 E9 E10 E12 E14 E15 E17 E18
+R58	MODIFY Arg1:T31 Arg2:E20	
+R59	MODIFY Arg1:T32 Arg2:E20	
+R60	BEFORE Arg1:E18 Arg2:E20	
+R61	BEFORE Arg1:E20 Arg2:E21	
+R63	BEFORE Arg1:E26 Arg2:E27	
+*	OVERLAP E27 E28 E29
+R64	AFTER Arg1:E29 Arg2:E30	
+R65	BEFORE Arg1:E30 Arg2:E34	
+R66	MODIFY Arg1:T48 Arg2:E34	
+R67	MODIFY Arg1:T49 Arg2:E34	
+R68	MODIFY Arg1:E32 Arg2:T49	
+R69	MODIFY Arg1:T51 Arg2:E34	
+R70	MODIFY Arg1:E33 Arg2:T51	
+R71	BEFORE Arg1:E34 Arg2:E32	
+R72	BEFORE Arg1:E32 Arg2:E33	
+*	OVERLAP E33 E35
+R73	AFTER Arg1:E35 Arg2:E36	
+*	OVERLAP E36 E37
+R74	BEFORE Arg1:E37 Arg2:E38	
+*	OVERLAP E38 E39 E40 E41 E42 E43 E44 E45 E46 E47 E48 E49 E50 E51
+R75	BEFORE Arg1:E51 Arg2:E53	
+R76	IDENTICAL Arg1:E53 Arg2:E54	
+*	OVERLAP E53 E55 E56 E59 E60 E61 E62 E63 E64 E65 E66 E67 E68 E69 E70
+R77	BEFORE Arg1:E70 Arg2:E72	
+R78	MODIFY Arg1:T101 Arg2:E72	
+R79	MODIFY Arg1:T102 Arg2:E72	
+*	OVERLAP E72 E74 E75 E76
+R80	BEFORE Arg1:E76 Arg2:E78	
+*	OVERLAP E78 E79 E80 E81
+R39	MODIFY Arg1:T113 Arg2:E80	
+R81	MODIFY Arg1:T114 Arg2:E80	
+R82	BEFORE Arg1:E81 Arg2:E82	
+R83	BEFORE Arg1:E82 Arg2:E83	
+R84	MODIFY Arg1:T125 Arg2:E85	
+*	OVERLAP E83 E84
+R85	BEFORE Arg1:E84 Arg2:E85	
+*	OVERLAP E85 E86 E87 E88
+R86	BEFORE Arg1:E88 Arg2:E89	
+*	OVERLAP E89 E91 E90
+R87	BEFORE Arg1:E90 Arg2:E93	
+*	OVERLAP E93 E95 E96 E97
+R88	MODIFY Arg1:E99 Arg2:E98	
+R89	BEFORE Arg1:E97 Arg2:E98	
+*	OVERLAP E98 E100
+*	OVERLAP E21 E23 E24 E25 E26

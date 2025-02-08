@@ -1,0 +1,296 @@
+T1	Age 2 13	58-year-old
+T2	Personal_background 14 19	white
+T3	Personal_background 20 28	American
+T4	Sex 29 33	male
+T5	Clinical_event 34 43	presented
+E1	Clinical_event:T5 
+T6	Nonbiological_location 51 71	emergency department
+T7	Nonbiological_location 73 75	ED
+R1	IDENTICAL Arg1:T7 Arg2:T6	
+T8	Sign_symptom 97 106	confusion
+E2	Sign_symptom:T8 
+T9	Sign_symptom 108 122	disorientation
+E3	Sign_symptom:T9 
+T10	Sign_symptom 124 150	inability to walk steadily
+E4	Sign_symptom:T10 
+T11	Sign_symptom 156 167	dehydration
+E5	Sign_symptom:T11 
+T12	Sign_symptom 196 204	weakness
+E6	Sign_symptom:T12 
+T13	Sign_symptom 206 214	polyuria
+E7	Sign_symptom:T13 
+T14	Sign_symptom 220 230	polydipsia
+E8	Sign_symptom:T14 
+T15	Duration 231 253	over the previous week
+E9	Duration:T15 
+R2	MODIFY Arg1:E9 Arg2:E8	
+R3	MODIFY Arg1:E9 Arg2:E7	
+R4	MODIFY Arg1:E9 Arg2:E6	
+T16	Detailed_description 82 93	acute onset
+R5	MODIFY Arg1:T16 Arg2:E2	
+R6	MODIFY Arg1:T16 Arg2:E3	
+R7	MODIFY Arg1:T16 Arg2:E4	
+R8	MODIFY Arg1:T16 Arg2:E5	
+T17	Disease_disorder 282 285	CML
+E10	Disease_disorder:T17 
+#1	AnnotatorNotes E10	Chronic myeloid leukemia
+T18	Date 286 303	six years earlier
+E11	Date:T18 
+T19	Clinical_event 267 276	diagnosed
+E12	Clinical_event:T19 
+T20	Medication 348 360	chemotherapy
+E13	Medication:T20 
+T21	Detailed_description 339 347	multiple
+T22	Detailed_description 361 369	regimens
+R9	MODIFY Arg1:T22 Arg2:E13	
+R10	MODIFY Arg1:T21 Arg2:E13	
+T23	Medication 409 420	allopurinol
+E14	Medication:T23 
+T24	Clinical_event 425 433	awaiting
+E15	Clinical_event:T24 
+T25	Therapeutic_procedure 444 466	bone marrow transplant
+E16	Therapeutic_procedure:T25 
+A1	POLARITY E16 NEG
+#2	AnnotatorNotes E16	This event is Negative because it hadn't happened yet
+T26	Detailed_description 434 443	allogenic
+R11	MODIFY Arg1:T26 Arg2:E16	
+R12	MODIFY Arg1:E16 Arg2:E15	
+T27	Sign_symptom 313 335	hematological response
+E17	Sign_symptom:T27 
+A2	POLARITY E17 NEG
+T28	Diagnostic_procedure 468 479	Vital signs
+E18	Diagnostic_procedure:T28 
+T29	Clinical_event 483 492	admission
+E19	Clinical_event:T29 
+T30	Nonbiological_location 500 502	ED
+R13	MODIFY Arg1:T30 Arg2:E19	
+T31	Diagnostic_procedure 512 522	heart rate
+E20	Diagnostic_procedure:T31 
+T32	Lab_value 526 533	104 bpm
+R14	MODIFY Arg1:T32 Arg2:E20	
+T33	Diagnostic_procedure 535 549	blood pressure
+E21	Diagnostic_procedure:T33 
+T34	Lab_value 553 565	122/68 mm Hg
+R15	MODIFY Arg1:T34 Arg2:E21	
+T35	Diagnostic_procedure 570 581	temperature
+E22	Diagnostic_procedure:T35 
+T36	Lab_value 585 591	99.7°F
+T37	Lab_value 593 599	37.6°C
+R16	MODIFY Arg1:T36 Arg2:E22	
+R17	MODIFY Arg1:T37 Arg2:E22	
+T38	Diagnostic_procedure 639 659	physical examination
+E23	Diagnostic_procedure:T38 
+T39	Lab_value 613 635	no remarkable findings
+R18	MODIFY Arg1:T39 Arg2:E23	
+T41	Sign_symptom 697 708	dehydration
+E25	Sign_symptom:T41 
+T40	Sign_symptom 671 692	altered mental status
+E24	Sign_symptom:T40 
+T42	Diagnostic_procedure 710 732	Laboratory evaluations
+E26	Diagnostic_procedure:T42 
+T43	Diagnostic_procedure 739 749	hemoglobin
+E27	Diagnostic_procedure:T43 
+T44	Lab_value 750 759	13.3 g/dL
+R19	MODIFY Arg1:T44 Arg2:E27	
+T45	Diagnostic_procedure 761 783	white blood cell count
+E28	Diagnostic_procedure:T45 
+T46	Lab_value 784 794	18.3×109/L
+T47	Lab_value 796 813	neutrophils 79.6%
+T48	Lab_value 815 831	lymphocytes 7.2%
+T49	Lab_value 837 851	monocytes 8.3%
+R20	MODIFY Arg1:T46 Arg2:E28	
+R21	MODIFY Arg1:T47 Arg2:E28	
+R22	MODIFY Arg1:T48 Arg2:E28	
+R23	MODIFY Arg1:T49 Arg2:E28	
+T50	Diagnostic_procedure 858 872	platelet count
+E29	Diagnostic_procedure:T50 
+T51	Lab_value 873 882	910×109/L
+R24	MODIFY Arg1:T51 Arg2:E29	
+T52	Diagnostic_procedure 884 896	Serum levels
+E30	Diagnostic_procedure:T52 
+R25	SUB_PROCEDURE Arg1:E27 Arg2:E26	
+R26	SUB_PROCEDURE Arg1:E28 Arg2:E26	
+R27	SUB_PROCEDURE Arg1:E29 Arg2:E26	
+T53	Diagnostic_procedure 903 910	calcium
+E31	Diagnostic_procedure:T53 
+T54	Lab_value 911 921	18.6 mg/dL
+R28	MODIFY Arg1:T54 Arg2:E31	
+T55	Diagnostic_procedure 923 932	phosphate
+E32	Diagnostic_procedure:T55 
+T56	Lab_value 933 942	4.6 mg/dL
+R29	MODIFY Arg1:T56 Arg2:E32	
+T57	Diagnostic_procedure 944 950	sodium
+E33	Diagnostic_procedure:T57 
+T58	Lab_value 951 960	135 mEq/L
+R30	MODIFY Arg1:T58 Arg2:E33	
+T59	Diagnostic_procedure 962 971	potassium
+E34	Diagnostic_procedure:T59 
+T60	Lab_value 972 981	2.7 mg/dL
+R31	MODIFY Arg1:T60 Arg2:E34	
+T61	Diagnostic_procedure 983 990	albumin
+E35	Diagnostic_procedure:T61 
+T62	Lab_value 991 999	4.0 g/dL
+R32	MODIFY Arg1:T62 Arg2:E35	
+T63	Diagnostic_procedure 1001 1011	creatinine
+E36	Diagnostic_procedure:T63 
+T64	Lab_value 1012 1021	2.2 mg/dL
+R33	MODIFY Arg1:T64 Arg2:E36	
+T65	Diagnostic_procedure 1023 1038	total bilirubin
+E37	Diagnostic_procedure:T65 
+T66	Lab_value 1039 1048	0.9 mg/dL
+R34	MODIFY Arg1:T66 Arg2:E37	
+T67	Diagnostic_procedure 1050 1070	alkaline phosphatase
+E38	Diagnostic_procedure:T67 
+T68	Lab_value 1071 1079	125 IU/L
+R35	MODIFY Arg1:T68 Arg2:E38	
+T69	Diagnostic_procedure 1081 1107	aspartate aminotransferase
+E39	Diagnostic_procedure:T69 
+T70	Lab_value 1108 1115	41 IU/L
+R36	MODIFY Arg1:T70 Arg2:E39	
+T71	Diagnostic_procedure 1121 1145	alanine aminotransferase
+E40	Diagnostic_procedure:T71 
+T72	Lab_value 1146 1153	71 IU/L
+R37	MODIFY Arg1:T72 Arg2:E40	
+R38	SUB_PROCEDURE Arg1:E31 Arg2:E30	
+R39	SUB_PROCEDURE Arg1:E32 Arg2:E30	
+R40	SUB_PROCEDURE Arg1:E33 Arg2:E30	
+R41	SUB_PROCEDURE Arg1:E34 Arg2:E30	
+R42	SUB_PROCEDURE Arg1:E35 Arg2:E30	
+R43	SUB_PROCEDURE Arg1:E36 Arg2:E30	
+R44	SUB_PROCEDURE Arg1:E37 Arg2:E30	
+R45	SUB_PROCEDURE Arg1:E38 Arg2:E30	
+R46	SUB_PROCEDURE Arg1:E39 Arg2:E30	
+R47	SUB_PROCEDURE Arg1:E40 Arg2:E30	
+T73	Diagnostic_procedure 1155 1159	SPEP
+E41	Diagnostic_procedure:T73 
+#3	AnnotatorNotes E41	Serum protein electrophoresis
+T74	Lab_value 1164 1187	negative for an M spike
+R48	MODIFY Arg1:T74 Arg2:E41	
+T75	Diagnostic_procedure 1189 1217	Hormones and vitamins levels
+E42	Diagnostic_procedure:T75 
+T76	Diagnostic_procedure 1224 1227	PTH
+E43	Diagnostic_procedure:T76 
+T77	Diagnostic_procedure 1251 1256	PHTrP
+E44	Diagnostic_procedure:T77 
+T78	Lab_value 1228 1236	8.5 pg/L
+R49	MODIFY Arg1:T78 Arg2:E43	
+T79	Lab_value 1257 1265	1.4 pg/L
+R50	MODIFY Arg1:T79 Arg2:E44	
+T80	Diagnostic_procedure 1277 1292	25-OH vitamin D
+E45	Diagnostic_procedure:T80 
+T81	Lab_value 1293 1303	30.4 ng/mL
+R51	MODIFY Arg1:T81 Arg2:E45	
+T82	Diagnostic_procedure 1322 1340	1,25 OH vitamin D3
+E46	Diagnostic_procedure:T82 
+T83	Lab_value 1341 1351	33.7 ng/mL
+R52	MODIFY Arg1:T83 Arg2:E46	
+T84	Diagnostic_procedure 1373 1380	CT scan
+E47	Diagnostic_procedure:T84 
+T85	Biological_structure 1367 1372	Chest
+R53	MODIFY Arg1:T85 Arg2:E47	
+T86	Sign_symptom 1402 1409	lesions
+E48	Sign_symptom:T86 
+T87	Detailed_description 1396 1401	lytic
+T88	Detailed_description 1388 1395	diffuse
+R54	MODIFY Arg1:T87 Arg2:E48	
+R55	MODIFY Arg1:T88 Arg2:E48	
+T89	Sign_symptom 1414 1430	bone destruction
+E49	Sign_symptom:T89 
+T90	Biological_structure 1457 1474	thoracic skeleton
+R56	MODIFY Arg1:T90 Arg2:E49	
+T91	Sign_symptom 1499 1522	bone marrow involvement
+E50	Sign_symptom:T91 
+A3	POLARITY E50 UNCERTAIN
+T92	Sign_symptom 1641 1652	blast phase
+E51	Sign_symptom:T92 
+T93	Disease_disorder 1592 1595	CML
+E52	Disease_disorder:T93 
+T94	Sign_symptom 1607 1620	hypercalcemia
+E53	Sign_symptom:T94 
+T95	Therapeutic_procedure 1680 1689	hydration
+E54	Therapeutic_procedure:T95 
+T96	Detailed_description 1669 1679	aggressive
+R57	MODIFY Arg1:T96 Arg2:E54	
+T97	Medication 1700 1706	saline
+E55	Medication:T97 
+T98	Medication 1711 1721	calcitonin
+E56	Medication:T98 
+T99	Lab_value 1695 1699	0.9%
+R58	MODIFY Arg1:T99 Arg2:E55	
+T100	Dosage 1722 1731	400 units
+T101	Administration 1732 1744	subcutaneous
+R59	MODIFY Arg1:T100 Arg2:E56	
+R60	MODIFY Arg1:T101 Arg2:E56	
+T102	Medication 1777 1792	zoledronic acid
+E57	Medication:T102 
+T103	Dosage 1793 1799	3.3 mg
+R61	MODIFY Arg1:T103 Arg2:E57	
+T104	Administration 1800 1811	intravenous
+R62	MODIFY Arg1:T104 Arg2:E57	
+T105	Detailed_description 1813 1845	adjusted for renal insufficiency
+R63	MODIFY Arg1:T105 Arg2:E57	
+T106	Duration 1858 1873	After five days
+E58	Duration:T106 
+T107	Sign_symptom 1905 1913	symptoms
+E59	Sign_symptom:T107 
+A4	POLARITY E59 NEG
+T108	Diagnostic_procedure 1918 1938	serum calcium levels
+E60	Diagnostic_procedure:T108 
+T109	Lab_value 1888 1901	normalization
+R64	MODIFY Arg1:T109 Arg2:E60	
+T110	Clinical_event 1960 1969	discharge
+E61	Clinical_event:T110 
+T111	Nonbiological_location 1979 1987	hospital
+R65	MODIFY Arg1:T111 Arg2:E61	
+T112	Therapeutic_procedure 2016 2036	palliative treatment
+E62	Therapeutic_procedure:T112 
+T113	Medication 2042 2051	ponatinib
+E63	Medication:T113 
+T114	Therapeutic_procedure 2056 2068	radiotherapy
+E64	Therapeutic_procedure:T114 
+R66	SUB_PROCEDURE Arg1:E63 Arg2:E62	
+R67	SUB_PROCEDURE Arg1:E64 Arg2:E62	
+T115	Diagnostic_procedure 2081 2101	serum calcium levels
+E65	Diagnostic_procedure:T115 
+T116	Lab_value 2107 2117	maintained
+R68	MODIFY Arg1:T116 Arg2:E65	
+T117	Medication 2123 2138	zoledronic acid
+E66	Medication:T117 
+T118	Dosage 2139 2161	4 mg every eight weeks
+R69	MODIFY Arg1:T118 Arg2:E66	
+T119	Disease_disorder 2192 2198	cancer
+E67	Disease_disorder:T119 
+A5	TREND E67 INC
+T120	Outcome 2217 2228	passed away
+E68	Outcome:T120 
+T121	Date 2243 2261	eight months after
+E69	Date:T121 
+*	OVERLAP E1 E2 E3 E4 E5
+R70	AFTER Arg1:E5 Arg2:E6	
+*	OVERLAP E6 E7 E8 E9
+R71	AFTER Arg1:E9 Arg2:E12	
+*	OVERLAP E12 E10 E11 E17 E13
+R72	BEFORE Arg1:E13 Arg2:E14	
+*	OVERLAP E14 E15 E16
+R73	BEFORE Arg1:E16 Arg2:E18	
+*	OVERLAP E18 E19 E20 E21 E22 E23 E24 E25 E26 E30 E41 E42 E47 E48 E49 E50
+R74	SUB_PROCEDURE Arg1:E43 Arg2:E42	
+R75	SUB_PROCEDURE Arg1:E44 Arg2:E42	
+R76	SUB_PROCEDURE Arg1:E45 Arg2:E42	
+R77	SUB_PROCEDURE Arg1:E46 Arg2:E42	
+T122	Clinical_event 1579 1588	diagnosis
+E70	Clinical_event:T122 
+R78	BEFORE Arg1:E50 Arg2:E70	
+*	OVERLAP E70 E52 E53 E51
+R79	BEFORE Arg1:E51 Arg2:E54	
+R80	SUB_PROCEDURE Arg1:E55 Arg2:E54	
+R81	SUB_PROCEDURE Arg1:E56 Arg2:E54	
+*	OVERLAP E54 E57
+R82	BEFORE Arg1:E57 Arg2:E58	
+*	OVERLAP E58 E59 E60
+R83	BEFORE Arg1:E60 Arg2:E61	
+R84	BEFORE Arg1:E61 Arg2:E62	
+*	OVERLAP E62 E65 E66
+R85	BEFORE Arg1:E66 Arg2:E67	
+R86	BEFORE Arg1:E67 Arg2:E68	
+*	OVERLAP E68 E69

@@ -1,0 +1,232 @@
+T1	Age 2 13	41-year-old
+T2	Personal_background 14 23	Caucasian
+T3	Sex 24 29	woman
+T4	Date 101 105	2006
+E1	Date:T4 
+T5	Therapeutic_procedure 57 77	lung transplantation
+E2	Therapeutic_procedure:T5 
+T6	History 82 97	cystic fibrosis
+T7	Detailed_description 50 56	double
+T8	Detailed_description 42 49	primary
+R1	MODIFY Arg1:T7 Arg2:E2	
+R2	MODIFY Arg1:T8 Arg2:E2	
+T9	History 111 153	medical history was otherwise unremarkable
+T10	Date 245 258	December 2015
+E3	Date:T10 
+T11	Therapeutic_procedure 274 291	retransplantation
+E4	Therapeutic_procedure:T11 
+T12	Disease_disorder 304 330	lung allograft dysfunction
+E5	Disease_disorder:T12 
+T13	Detailed_description 296 303	chronic
+R3	MODIFY Arg1:T13 Arg2:E5	
+T14	Date 343 358	month preceding
+E6	Date:T14 
+T15	Diagnostic_procedure 380 396	sputum specimens
+E7	Diagnostic_procedure:T15 
+T16	Lab_value 378 379	4
+R4	MODIFY Arg1:T16 Arg2:E7	
+T17	Lab_value 406 414	negative
+R5	MODIFY Arg1:T17 Arg2:E7	
+T18	Detailed_description 419 436	acid-fast bacilli
+R6	MODIFY Arg1:T18 Arg2:T17	
+T19	Detailed_description 441 473	specific M. tuberculosis culture
+R7	MODIFY Arg1:T19 Arg2:T17	
+T20	Diagnostic_procedure 488 513	polymerase chain reaction
+E8	Diagnostic_procedure:T20 
+T21	Diagnostic_procedure 515 518	PCR
+E9	Diagnostic_procedure:T21 
+R8	IDENTICAL Arg1:E9 Arg2:E8	
+R9	MODIFY Arg1:T17 Arg2:E8	
+T22	Date 546 552	day 42
+E10	Date:T22 
+T23	Diagnostic_procedure 575 593	respiratory status
+E11	Diagnostic_procedure:T23 
+T24	Lab_value 554 567	deterioration
+R10	MODIFY Arg1:T24 Arg2:E11	
+T25	Diagnostic_procedure 611 634	computerized tomography
+E12	Diagnostic_procedure:T25 
+T26	Diagnostic_procedure 636 638	CT
+E13	Diagnostic_procedure:T26 
+R11	IDENTICAL Arg1:E13 Arg2:E12	
+T27	Biological_structure 605 610	chest
+R12	MODIFY Arg1:T27 Arg2:E12	
+T28	Sign_symptom 680 687	nodules
+E14	Sign_symptom:T28 
+T29	Detailed_description 670 679	bilateral
+T30	Detailed_description 655 669	sub-centimeter
+R13	MODIFY Arg1:T29 Arg2:E14	
+R14	MODIFY Arg1:T30 Arg2:E14	
+T31	Biological_structure 713 735	apical posterior lobes
+R15	MODIFY Arg1:T31 Arg2:E14	
+T32	Disease_disorder 752 768	pleural effusion
+E15	Disease_disorder:T32 
+T33	Detailed_description 742 751	bilateral
+R16	MODIFY Arg1:T33 Arg2:E15	
+T34	Diagnostic_procedure 794 816	bronchoalveolar lavage
+E16	Diagnostic_procedure:T34 
+T35	Diagnostic_procedure 818 821	BAL
+E17	Diagnostic_procedure:T35 
+R17	BEFORE Arg1:E17 Arg2:E16	
+T36	Detailed_description 478 487	real-time
+R18	MODIFY Arg1:T36 Arg2:E8	
+T37	Diagnostic_procedure 852 855	PCR
+E18	Diagnostic_procedure:T37 
+T38	Detailed_description 842 851	real-time
+R19	MODIFY Arg1:T38 Arg2:E18	
+T39	Lab_value 833 841	positive
+R20	MODIFY Arg1:T39 Arg2:E18	
+T40	Detailed_description 860 898	rifampicin-susceptible M. tuberculosis
+R21	MODIFY Arg1:T40 Arg2:T39	
+T41	Diagnostic_procedure 913 920	culture
+E19	Diagnostic_procedure:T41 
+T42	Lab_value 900 909	confirmed
+R22	MODIFY Arg1:T42 Arg2:E19	
+T43	Date 938 944	day 62
+E20	Date:T43 
+T44	Diagnostic_procedure 946 966	Tuberculin skin test
+E21	Diagnostic_procedure:T44 
+T45	Diagnostic_procedure 968 971	TST
+E22	Diagnostic_procedure:T45 
+R23	IDENTICAL Arg1:E22 Arg2:E21	
+T46	Diagnostic_procedure 1004 1008	IGRA
+E23	Diagnostic_procedure:T46 
+T47	Diagnostic_procedure 976 1002	interferon-γ release assay
+E24	Diagnostic_procedure:T47 
+R24	IDENTICAL Arg1:E23 Arg2:E24	
+A1	POLARITY E21 NEG
+A2	POLARITY E24 NEG
+T48	Diagnostic_procedure 1043 1046	BAL
+E25	Diagnostic_procedure:T48 
+T49	Lab_value 1090 1107	no other pathogen
+R25	MODIFY Arg1:T49 Arg2:E25	
+T50	Date 1140 1146	day 60
+E26	Date:T50 
+T51	Coreference 1123 1126	one
+E27	Coreference:T51 
+R26	IDENTICAL Arg1:E27 Arg2:E25	
+T52	Lab_value 1161 1183	Pseudomonas aeruginosa
+R27	MODIFY Arg1:T52 Arg2:E27	
+T53	Medication 1200 1218	antibiotic therapy
+E28	Medication:T53 
+T54	Detailed_description 1189 1199	adjunctive
+R28	MODIFY Arg1:T54 Arg2:E28	
+T55	Medication 1223 1242	imipenem-cilastatin
+E29	Medication:T55 
+R29	SUB_PROCEDURE Arg1:E29 Arg2:E28	
+T56	Dosage 1244 1249	3 g/d
+R30	MODIFY Arg1:T56 Arg2:E29	
+T57	Diagnostic_procedure 1251 1275	Histological examination
+E30	Diagnostic_procedure:T57 
+T58	Diagnostic_procedure 1286 1292	biopsy
+E31	Diagnostic_procedure:T58 
+T59	Biological_structure 1281 1285	lung
+R31	MODIFY Arg1:T59 Arg2:E31	
+T60	Date 1303 1316	6 weeks after
+E32	Date:T60 
+T61	Lab_value 1346 1365	caseating granuloma
+T62	Lab_value 1370 1378	necrosis
+R32	MODIFY Arg1:T61 Arg2:E30	
+R33	MODIFY Arg1:T62 Arg2:E30	
+T63	Diagnostic_procedure 1469 1472	PCR
+E33	Diagnostic_procedure:T63 
+T64	Detailed_description 1459 1468	real-time
+R34	MODIFY Arg1:T64 Arg2:E33	
+T65	Lab_value 1380 1397	Acid-fast bacilli
+R35	MODIFY Arg1:T65 Arg2:E33	
+T66	Detailed_description 1417 1455	rifampicin-susceptible M. tuberculosis
+R36	MODIFY Arg1:T66 Arg2:T65	
+T67	Date 1491 1497	day 65
+E34	Date:T67 
+T68	Diagnostic_procedure 1513 1519	status
+E35	Diagnostic_procedure:T68 
+T69	Lab_value 1520 1528	worsened
+R37	MODIFY Arg1:T69 Arg2:E35	
+T70	Sign_symptom 1541 1550	hypoxemia
+E36	Sign_symptom:T70 
+T71	Severity 1534 1540	severe
+R38	MODIFY Arg1:T71 Arg2:E36	
+T72	Disease_disorder 1552 1557	shock
+E37	Disease_disorder:T72 
+T73	Medication 1584 1598	cathecolamines
+E38	Medication:T73 
+T74	Disease_disorder 1604 1622	multiorgan failure
+E39	Disease_disorder:T74 
+T75	Date 1658 1664	day 70
+E40	Date:T75 
+T76	Medication 1694 1703	isoniazid
+E41	Medication:T76 
+T77	Medication 1705 1715	rifampicin
+E42	Medication:T77 
+T78	Medication 1717 1727	ethambutol
+E43	Medication:T78 
+T79	Medication 1733 1745	pyrazinamide
+E44	Medication:T79 
+T80	Outcome 1636 1640	died
+E45	Outcome:T80 
+T81	Diagnostic_procedure 1771 1774	PCR
+E46	Diagnostic_procedure:T81 
+T82	Detailed_description 1761 1770	real-time
+R39	MODIFY Arg1:T82 Arg2:E46	
+T83	Detailed_description 1790 1804	explanted lung
+R40	MODIFY Arg1:T83 Arg2:E46	
+T84	Lab_value 1868 1876	negative
+R41	MODIFY Arg1:T84 Arg2:E46	
+T85	Detailed_description 1809 1858	BALs performed on postoperative days 1, 7, and 21
+R42	MODIFY Arg1:T85 Arg2:E46	
+T86	Subject 1882 1893	organ donor
+T87	Coreference 1942 1944	He
+E47	Coreference:T87 
+R43	IDENTICAL Arg1:E47 Arg2:T86	
+T88	Detailed_description 1894 1940	died of posttraumatic intracerebral hemorrhage
+R44	MODIFY Arg1:T88 Arg2:T86	
+T89	Detailed_description 1949 1966	a 47-year-old man
+R45	MODIFY Arg1:T89 Arg2:E47	
+T90	Detailed_description 1972 2031	no history of lung disease or risk factors for tuberculosis
+R46	MODIFY Arg1:T90 Arg2:E47	
+T91	Detailed_description 2043 2074	chronic alcohol use and smoking
+R47	MODIFY Arg1:T91 Arg2:E47	
+T93	Coreference 2469 2474	donor
+E49	Coreference:T93 
+R48	IDENTICAL Arg1:E49 Arg2:E47	
+T94	Detailed_description 2442 2454	Both kidneys
+R49	MODIFY Arg1:T94 Arg2:E49	
+T95	Detailed_description 2480 2516	transplanted into 2 other recipients
+R50	MODIFY Arg1:T95 Arg2:T94	
+#2	AnnotatorNotes T86	Note that most of the following section is about the donor, not the patient
+T92	Detailed_description 2076 2106	TST results were not available
+R51	MODIFY Arg1:T92 Arg2:E47	
+T96	Detailed_description 2134 2197	lung CT-scan showed no signs of active or previous tuberculosis
+R52	MODIFY Arg1:T96 Arg2:E47	
+T97	Detailed_description 2202 2244	no TST or IGRA test results were available
+R53	MODIFY Arg1:T97 Arg2:E47	
+T98	Detailed_description 2254 2328	cultures of per-transplantation right lung biopsy yielded Candida albicans
+R54	MODIFY Arg1:T98 Arg2:E47	
+T99	Detailed_description 2344 2440	M. tuberculosis real-time PCR yielded negative results on the left and right donor-lung biopsies
+R55	MODIFY Arg1:T99 Arg2:T86	
+T100	Subject 2567 2584	kidney recipients
+T101	Detailed_description 2552 2559;2585 2654	neither had developed any signs or symptoms suggestive of active tuberculosis
+R56	MODIFY Arg1:T101 Arg2:T100	
+T102	Detailed_description 2518 2550	Six months after transplantation
+R57	MODIFY Arg1:T102 Arg2:T101	
+*	OVERLAP E2 E1
+R58	BEFORE Arg1:E1 Arg2:E3	
+*	OVERLAP E3 E4 E5
+R59	AFTER Arg1:E5 Arg2:E6	
+*	OVERLAP E6 E7 E8
+R60	BEFORE Arg1:E8 Arg2:E10	
+*	OVERLAP E10 E11 E12 E14 E15 E16 E18
+R61	BEFORE Arg1:E18 Arg2:E19	
+*	OVERLAP E19 E20 E21 E24
+R62	AFTER Arg1:E24 Arg2:E25	
+*	OVERLAP E25 E27 E26
+R63	BEFORE Arg1:E26 Arg2:E28	
+R64	AFTER Arg1:E28 Arg2:E30	
+*	OVERLAP E30 E31 E32 E33
+R65	BEFORE Arg1:E33 Arg2:E34	
+*	OVERLAP E34 E35 E36 E37 E38 E39
+T103	Dosage 1574 1583	high dose
+R66	MODIFY Arg1:T103 Arg2:E38	
+R67	BEFORE Arg1:E39 Arg2:E45	
+*	OVERLAP E45 E40 E41 E42 E43 E44
+R68	BEFORE Arg1:E44 Arg2:E46	
+T104	History 174 240	no known history of pulmonary tuberculosis or tuberculosis contact

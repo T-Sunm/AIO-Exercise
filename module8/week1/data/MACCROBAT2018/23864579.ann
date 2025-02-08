@@ -1,0 +1,285 @@
+T1	Age 3 14	84-year-old
+T2	Sex 15 19	male
+T3	History 46 110	coronary artery disease and right coronary artery (RCA) stenting
+T4	Clinical_event 115 123	admitted
+E1	Clinical_event:T4 
+T5	Nonbiological_location 131 150	university hospital
+T6	Date 154 167	February 2012
+E2	Date:T6 
+T7	Sign_symptom 191 199	dyspnoea
+E3	Sign_symptom:T7 
+T8	Sign_symptom 214 222	syncopes
+E4	Sign_symptom:T8 
+T9	Detailed_description 204 213	recurring
+T10	Detailed_description 179 190	progressive
+R1	MODIFY Arg1:T10 Arg2:E3	
+R2	MODIFY Arg1:T9 Arg2:E4	
+T11	Diagnostic_procedure 224 245	Cardiological work-up
+E5	Diagnostic_procedure:T11 
+T12	Disease_disorder 286 301	aortic stenosis
+E6	Disease_disorder:T12 
+T13	Lab_value 257 266	grade III
+R3	MODIFY Arg1:T13 Arg2:E6	
+T14	Detailed_description 274 285	symptomatic
+T15	Severity 267 273	severe
+R4	MODIFY Arg1:T14 Arg2:E6	
+R5	MODIFY Arg1:T15 Arg2:E6	
+T16	Diagnostic_procedure 334 352	logistic EuroSCORE
+E7	Diagnostic_procedure:T16 
+T17	Lab_value 356 365	19 points
+R6	MODIFY Arg1:T17 Arg2:E7	
+T18	Therapeutic_procedure 438 442	TAVI
+E8	Therapeutic_procedure:T18 
+#1	AnnotatorNotes E8	transcatheter aortic valve implantation
+T19	Disease_disorder 386 398	arteriopathy
+E9	Disease_disorder:T19 
+T20	Severity 371 377	severe
+T21	Biological_structure 378 385	femoral
+R7	MODIFY Arg1:T21 Arg2:E9	
+R8	MODIFY Arg1:T20 Arg2:E9	
+T22	Detailed_description 421 437	trans-subclavian
+R9	MODIFY Arg1:T22 Arg2:E8	
+T23	Detailed_description 479 499	CoreValve prosthesis
+T24	Coreference 461 473	implantation
+E10	Coreference:T24 
+R10	IDENTICAL Arg1:E10 Arg2:E8	
+R11	MODIFY Arg1:T23 Arg2:E10	
+T25	Detailed_description 501 510	Medtronic
+R12	MODIFY Arg1:T25 Arg2:T23	
+T26	Detailed_description 590 604	diameter 31 mm
+R13	MODIFY Arg1:T26 Arg2:T23	
+T27	Clinical_event 618 627	discharge
+E11	Clinical_event:T27 
+T28	Clinical_event 636 644	referred
+E12	Clinical_event:T28 
+R14	MODIFY Arg1:T5 Arg2:E1	
+T29	Biological_structure 657 665	hospital
+R15	MODIFY Arg1:T29 Arg2:E12	
+T30	Sign_symptom 677 685	dyspnoea
+E13	Sign_symptom:T30 
+T31	Disease_disorder 703 720	pleural effusions
+E14	Disease_disorder:T31 
+R16	CAUSE Arg1:E14 Arg2:E13	
+T32	Detailed_description 693 702	bilateral
+R17	MODIFY Arg1:T32 Arg2:E14	
+T33	Diagnostic_procedure 722 755	Transoesophageal echocardiography
+E15	Diagnostic_procedure:T33 
+T34	Diagnostic_procedure 757 760	TEE
+E16	Diagnostic_procedure:T34 
+R18	IDENTICAL Arg1:E16 Arg2:E15	
+T35	Sign_symptom 778 798	mitral regurgitation
+E17	Sign_symptom:T35 
+T36	Severity 771 777	severe
+R19	MODIFY Arg1:T36 Arg2:E17	
+T37	Therapeutic_procedure 854 873	mitral valve repair
+E18	Therapeutic_procedure:T37 
+T38	Biological_structure 884 893	MitraClip
+R20	MODIFY Arg1:T38 Arg2:E18	
+T39	Detailed_description 839 853	interventional
+R21	MODIFY Arg1:T39 Arg2:E18	
+T40	Sign_symptom 800 802	MR
+E19	Sign_symptom:T40 
+R22	IDENTICAL Arg1:E19 Arg2:E17	
+T41	Detailed_description 895 962	Abbott Vascular, Abbott Laboratories, Abbott Park, Illinois, U.S.A.
+T42	Detailed_description 513 587	Medtronic World Headquarters Medtronic Parkway Minneapolis, Minnesota, USA
+R23	MODIFY Arg1:T42 Arg2:T25	
+R24	MODIFY Arg1:T41 Arg2:T38	
+T43	Therapeutic_procedure 991 1025	atrial septal defect (ASD) closure
+E20	Therapeutic_procedure:T43 
+T44	Detailed_description 1026 1049	AMPLATZER™ PFO Occluder
+R25	MODIFY Arg1:T44 Arg2:E20	
+T45	Date 1111 1126	Two weeks after
+E21	Date:T45 
+T46	Clinical_event 1137 1146	discharge
+E22	Clinical_event:T46 
+T47	Detailed_description 1127 1136	secondary
+R26	MODIFY Arg1:T47 Arg2:E22	
+T48	Disease_disorder 1182 1195	heart failure
+E23	Disease_disorder:T48 
+T49	Detailed_description 1170 1181	progressive
+R27	MODIFY Arg1:T49 Arg2:E23	
+T50	Disease_disorder 1222 1235	renal failure
+E24	Disease_disorder:T50 
+T51	Detailed_description 1216 1221	acute
+R28	MODIFY Arg1:T51 Arg2:E24	
+T52	Diagnostic_procedure 1247 1263	echocardiography
+E25	Diagnostic_procedure:T52 
+T53	Detailed_description 1237 1246	Immediate
+R29	MODIFY Arg1:T53 Arg2:E25	
+T54	Sign_symptom 1336 1338	MR
+E26	Sign_symptom:T54 
+T55	Severity 1329 1335	severe
+T56	Detailed_description 1319 1328	recurrent
+R30	MODIFY Arg1:T55 Arg2:E26	
+R31	MODIFY Arg1:T56 Arg2:E26	
+T57	Sign_symptom 1294 1314	aortic regurgitation
+E27	Sign_symptom:T57 
+T58	Severity 1275 1293	moderate-to-severe
+R32	MODIFY Arg1:T58 Arg2:E27	
+T59	Sign_symptom 1340 1356	Valvular defects
+E28	Sign_symptom:T59 
+T60	Sign_symptom 1396 1429	aortic valve prosthesis migration
+E29	Sign_symptom:T60 
+T61	Severity 1373 1395	slight but significant
+R33	MODIFY Arg1:T61 Arg2:E29	
+T62	Biological_structure 1442 1472	left ventricular outflow tract
+R34	MODIFY Arg1:T62 Arg2:E29	
+R35	CAUSE Arg1:E29 Arg2:E28	
+T63	Sign_symptom 1491 1518	aortic paravalvular leakage
+E30	Sign_symptom:T63 
+R36	CAUSE Arg1:E29 Arg2:E30	
+T64	Sign_symptom 1541 1566	mitral leaflet detachment
+E31	Sign_symptom:T64 
+T65	Detailed_description 1531 1540	posterior
+T66	Detailed_description 1523 1530	partial
+R37	MODIFY Arg1:T65 Arg2:E31	
+R38	MODIFY Arg1:T66 Arg2:E31	
+R39	CAUSE Arg1:E29 Arg2:E31	
+T67	Clinical_event 1628 1639	transferred
+E32	Clinical_event:T67 
+T68	Nonbiological_location 1647 1673	cardiac surgery department
+R40	MODIFY Arg1:T68 Arg2:E32	
+T69	Diagnostic_procedure 1697 1708	angiography
+E33	Diagnostic_procedure:T69 
+T70	Biological_structure 1688 1696	coronary
+R41	MODIFY Arg1:T70 Arg2:E33	
+T71	Disease_disorder 1739 1762	coronary artery disease
+E34	Disease_disorder:T71 
+A1	TREND E34 INC
+T72	Therapeutic_procedure 1838 1855	valve replacement
+E35	Therapeutic_procedure:T72 
+T73	Biological_structure 1831 1837	mitral
+T74	Biological_structure 1820 1826	aortic
+T75	Detailed_description 1807 1819	conventional
+R42	MODIFY Arg1:T73 Arg2:E35	
+R43	MODIFY Arg1:T74 Arg2:E35	
+R44	MODIFY Arg1:T75 Arg2:E35	
+T76	Therapeutic_procedure 1932 1949	median sternotomy
+E36	Therapeutic_procedure:T76 
+R45	SUB_PROCEDURE Arg1:E36 Arg2:E37	
+T77	Therapeutic_procedure 1868 1898	coronary artery bypass surgery
+E37	Therapeutic_procedure:T77 
+T78	Clinical_event 3031 3040	follow-up
+E38	Clinical_event:T78 
+T79	Date 3041 3059	three months after
+E39	Date:T79 
+T80	Diagnostic_procedure 3119 3128	condition
+E40	Diagnostic_procedure:T80 
+T81	Therapeutic_procedure 3152 3165	physiotherapy
+E41	Therapeutic_procedure:T81 
+T82	Date 2878 2891	After a month
+E42	Date:T82 
+T83	Therapeutic_procedure 2895 2913	postoperative care
+E43	Therapeutic_procedure:T83 
+T84	Clinical_event 2931 2941	discharged
+E44	Clinical_event:T84 
+T85	Nonbiological_location 2947 2955	hospital
+R46	MODIFY Arg1:T85 Arg2:E44	
+T86	Therapeutic_procedure 2959 2973	rehabilitation
+E45	Therapeutic_procedure:T86 
+T87	Diagnostic_procedure 2984 2993	condition
+E46	Diagnostic_procedure:T87 
+T88	Lab_value 2979 2983	good
+R47	MODIFY Arg1:T88 Arg2:E46	
+T89	Lab_value 3096 3118	cardiopulmonary stable
+R48	MODIFY Arg1:T89 Arg2:E40	
+T90	Sign_symptom 3003 3026	signs for heart failure
+E47	Sign_symptom:T90 
+A2	POLARITY E47 NEG
+T91	Sign_symptom 2751 2760	recovered
+E48	Sign_symptom:T91 
+T92	Lab_value 2761 2765	well
+R49	MODIFY Arg1:T92 Arg2:E48	
+T93	Disease_disorder 2831 2844	renal failure
+E49	Disease_disorder:T93 
+T94	Disease_disorder 2859 2876	pleural effusions
+E50	Disease_disorder:T94 
+T95	Detailed_description 2849 2858	recurring
+T96	Detailed_description 2821 2830	transient
+R50	MODIFY Arg1:T96 Arg2:E49	
+R51	MODIFY Arg1:T95 Arg2:E50	
+T97	Clinical_event 2788 2817	hospitalization was prolonged
+E51	Clinical_event:T97 
+T98	Diagnostic_procedure 2591 2607	echocardiography
+E52	Diagnostic_procedure:T98 
+T99	Detailed_description 2576 2590	Intraoperative
+R52	MODIFY Arg1:T99 Arg2:E52	
+T100	Lab_value 2617 2653	adequate function of both prostheses
+R53	MODIFY Arg1:T100 Arg2:E52	
+T101	Therapeutic_procedure 2450 2484	atrial septal occluder was removed
+E53	Therapeutic_procedure:T101 
+T102	Therapeutic_procedure 2501 2508	closure
+E54	Therapeutic_procedure:T102 
+T103	Detailed_description 2547 2565	single-suture line
+R54	MODIFY Arg1:T103 Arg2:E54	
+T104	Sign_symptom 2526 2539	septal defect
+E55	Sign_symptom:T104 
+R55	MODIFY Arg1:E55 Arg2:E54	
+T105	Therapeutic_procedure 2420 2429	implanted
+E56	Therapeutic_procedure:T105 
+T106	Detailed_description 2375 2398	mitral valve prosthesis
+T107	Detailed_description 2400 2414	diameter 31 mm
+R56	MODIFY Arg1:T107 Arg2:T106	
+T108	Detailed_description 2357 2374	Edwards Perimount
+R57	MODIFY Arg1:T108 Arg2:T106	
+R58	MODIFY Arg1:T106 Arg2:E56	
+T109	Therapeutic_procedure 2207 2220	vein-grafting
+E57	Therapeutic_procedure:T109 
+T110	Biological_structure 2228 2254	circumflex coronary artery
+R59	MODIFY Arg1:T110 Arg2:E57	
+T111	Therapeutic_procedure 2310 2317	excised
+E58	Therapeutic_procedure:T111 
+T112	Detailed_description 2327 2340	attached clip
+R60	MODIFY Arg1:T112 Arg2:E58	
+T113	Biological_structure 2260 2272	mitral valve
+R61	MODIFY Arg1:T113 Arg2:E58	
+T114	Detailed_description 2277 2305	explored via the left atrium
+R62	MODIFY Arg1:T114 Arg2:T113	
+T115	Therapeutic_procedure 2087 2094	removal
+E59	Therapeutic_procedure:T115 
+T116	Detailed_description 2102 2122	CoreValve prosthesis
+R63	MODIFY Arg1:T116 Arg2:E59	
+T117	Therapeutic_procedure 2190 2199	implanted
+E60	Therapeutic_procedure:T117 
+T118	Detailed_description 2145 2168	aortic valve prosthesis
+T119	Detailed_description 2127 2144	Edwards Perimount
+R64	MODIFY Arg1:T119 Arg2:T118	
+R65	MODIFY Arg1:T118 Arg2:E60	
+T120	Detailed_description 2170 2184	diameter 25 mm
+R66	MODIFY Arg1:T120 Arg2:T118	
+T121	Therapeutic_procedure 1972 1994	cardiopulmonary bypass
+E61	Therapeutic_procedure:T121 
+T122	Therapeutic_procedure 2020 2026	opened
+E62	Therapeutic_procedure:T122 
+T123	Biological_structure 2000 2015	ascending aorta
+R67	MODIFY Arg1:T123 Arg2:E62	
+T124	Detailed_description 2031 2062	exploration of the aortic valve
+R68	MODIFY Arg1:T124 Arg2:E62	
+*	OVERLAP E1 E2 E3 E4 E5 E6 E7 E9
+R69	BEFORE Arg1:E9 Arg2:E8	
+*	OVERLAP E8 E10
+R70	BEFORE Arg1:E10 Arg2:E11	
+R71	BEFORE Arg1:E11 Arg2:E12	
+*	OVERLAP E12 E13 E14
+R72	BEFORE Arg1:E14 Arg2:E15	
+*	OVERLAP E15 E17
+R73	BEFORE Arg1:E17 Arg2:E18	
+*	OVERLAP E18 E20
+R74	BEFORE Arg1:E20 Arg2:E21	
+R75	AFTER Arg1:E21 Arg2:E22	
+R76	BEFORE Arg1:E22 Arg2:E23	
+*	OVERLAP E23 E24 E25 E27
+*	OVERLAP E26 E28 E29 E30 E31
+R77	BEFORE Arg1:E31 Arg2:E32	
+*	OVERLAP E32 E33 E34
+R78	BEFORE Arg1:E34 Arg2:E35	
+*	OVERLAP E35 E37 E61 E62 E59 E60 E57 E58 E56 E53 E54 E52
+R79	BEFORE Arg1:E52 Arg2:E48	
+R80	BEFORE Arg1:E48 Arg2:E51	
+*	OVERLAP E51 E49 E50
+R81	BEFORE Arg1:E50 Arg2:E42	
+*	OVERLAP E42 E43
+R82	BEFORE Arg1:E43 Arg2:E44	
+*	OVERLAP E44 E45 E46 E47
+R83	BEFORE Arg1:E47 Arg2:E38	
+*	OVERLAP E38 E39 E40 E41

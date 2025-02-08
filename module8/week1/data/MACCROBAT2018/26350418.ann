@@ -1,0 +1,331 @@
+T1	Age 2 13	50-year-old
+T2	Sex 14 18	male
+T3	Clinical_event 31 39	admitted
+E1	Clinical_event:T3 
+T4	Nonbiological_location 47 57	Department
+R1	MODIFY Arg1:T4 Arg2:E1	
+T5	Sign_symptom 72 78	nodule
+E2	Sign_symptom:T5 
+T6	Biological_structure 64 71	thyroid
+R2	MODIFY Arg1:T6 Arg2:E2	
+T7	Biological_structure 86 108	right side of the neck
+R3	MODIFY Arg1:T7 Arg2:E2	
+T8	Diagnostic_procedure 161 171	ultrasound
+E3	Diagnostic_procedure:T8 
+T9	Detailed_description 153 160	Doppler
+R4	MODIFY Arg1:T9 Arg2:E3	
+T10	Biological_structure 145 152	carotid
+R5	MODIFY Arg1:T10 Arg2:E3	
+T11	Diagnostic_procedure 178 209	Fine-needle aspiration cytology
+E4	Diagnostic_procedure:T11 
+T12	Diagnostic_procedure 211 215	FNAC
+E5	Diagnostic_procedure:T12 
+R6	IDENTICAL Arg1:E5 Arg2:E4	
+T13	Sign_symptom 237 243	lesion
+E6	Sign_symptom:T13 
+T14	Detailed_description 226 236	follicular
+R7	MODIFY Arg1:T14 Arg2:E6	
+T15	Diagnostic_procedure 264 274	evaluation
+E7	Diagnostic_procedure:T15 
+T16	Diagnostic_procedure 300 306	health
+E8	Diagnostic_procedure:T16 
+T17	Lab_value 295 299	good
+E9	Lab_value:T17 
+R8	MODIFY Arg1:E9 Arg2:E8	
+T18	History 337 349	hypertension
+T19	History 351 359	vitiligo
+T20	History 365 379	celiac disease
+T21	Sign_symptom 337 349	hypertension
+E10	Sign_symptom:T21 
+T22	Disease_disorder 351 359	vitiligo
+E11	Disease_disorder:T22 
+T23	Disease_disorder 365 379	celiac disease
+E12	Disease_disorder:T23 
+T24	Diagnostic_procedure 384 404	physical examination
+E13	Diagnostic_procedure:T24 
+T25	Sign_symptom 414 420	nodule
+E14	Sign_symptom:T25 
+T26	Detailed_description 408 413	small
+R9	MODIFY Arg1:T26 Arg2:E14	
+T27	Distance 422 426	1 cm
+R10	MODIFY Arg1:T27 Arg2:E14	
+T28	Biological_structure 448 466	right thyroid lobe
+R11	MODIFY Arg1:T28 Arg2:E14	
+T29	Sign_symptom 471 479	enlarged
+E15	Sign_symptom:T29 
+A1	POLARITY E15 NEG
+T30	Biological_structure 480 496	neck lymph nodes
+R12	MODIFY Arg1:T30 Arg2:E15	
+T31	Diagnostic_procedure 517 527	ultrasound
+E16	Diagnostic_procedure:T31 
+T32	Biological_structure 512 516	Neck
+R13	MODIFY Arg1:T32 Arg2:E16	
+T33	Distance 537 543	1.3 cm
+T34	Sign_symptom 555 561	nodule
+E17	Sign_symptom:T34 
+T35	Detailed_description 544 554	hypoechoic
+R14	MODIFY Arg1:T35 Arg2:E17	
+R15	MODIFY Arg1:T33 Arg2:E17	
+T36	Detailed_description 567 584	irregular margins
+R16	MODIFY Arg1:T36 Arg2:E17	
+T37	Biological_structure 592 610	right thyroid lobe
+R17	MODIFY Arg1:T37 Arg2:E17	
+T38	Sign_symptom 649 656	nodules
+E18	Sign_symptom:T38 
+T39	Biological_structure 641 648	thyroid
+R18	MODIFY Arg1:T39 Arg2:E18	
+T40	Detailed_description 625 634	bilateral
+T41	Detailed_description 635 640	small
+R19	MODIFY Arg1:T41 Arg2:E18	
+R20	MODIFY Arg1:T40 Arg2:E18	
+T42	Distance 658 664	4–5 mm
+R21	MODIFY Arg1:T42 Arg2:E18	
+T43	Sign_symptom 685 693	enlarged
+E19	Sign_symptom:T43 
+A2	POLARITY E19 NEG
+T44	Biological_structure 694 724	cervical bilateral lymph nodes
+R22	MODIFY Arg1:T44 Arg2:E19	
+T45	Diagnostic_procedure 726 748	Thyroid function tests
+E20	Diagnostic_procedure:T45 
+T46	Lab_value 754 760	normal
+E21	Lab_value:T46 
+R23	MODIFY Arg1:E21 Arg2:E20	
+T47	Sign_symptom 781 803	thyroid autoantibodies
+E22	Sign_symptom:T47 
+A3	POLARITY E22 NEG
+T48	Diagnostic_procedure 811 818	calcium
+E23	Diagnostic_procedure:T48 
+T49	Detailed_description 805 810	Serum
+R24	MODIFY Arg1:T49 Arg2:E23	
+T50	Lab_value 823 829	normal
+E24	Lab_value:T50 
+R25	MODIFY Arg1:E24 Arg2:E23	
+T51	Lab_value 831 840	9.7 mg/dl
+E25	Lab_value:T51 
+R26	MODIFY Arg1:E25 Arg2:E23	
+T52	Diagnostic_procedure 876 879	PTH
+E26	Diagnostic_procedure:T52 
+T53	Lab_value 982 999	slightly elevated
+E27	Lab_value:T53 
+R27	MODIFY Arg1:E27 Arg2:E26	
+T54	Lab_value 1001 1009	68 pg/mL
+E28	Lab_value:T54 
+R28	MODIFY Arg1:E28 Arg2:E26	
+T55	Diagnostic_procedure 920 927	calcium
+E29	Diagnostic_procedure:T55 
+T56	Detailed_description 914 919	serum
+R29	MODIFY Arg1:T56 Arg2:E29	
+T57	Therapeutic_procedure 973 980	surgery
+E30	Therapeutic_procedure:T57 
+T58	Biological_structure 965 972	thyroid
+R30	MODIFY Arg1:T58 Arg2:E30	
+T59	Nonbiological_location 935 941	Center
+R31	MODIFY Arg1:T59 Arg2:E29	
+R32	MODIFY Arg1:T59 Arg2:E26	
+T60	Diagnostic_procedure 1114 1118	FNAC
+E31	Diagnostic_procedure:T60 
+T61	Sign_symptom 1142 1148	lesion
+E32	Sign_symptom:T61 
+T62	Biological_structure 1131 1141	follicular
+R33	MODIFY Arg1:T62 Arg2:E32	
+T63	Diagnostic_procedure 1169 1177	cytology
+E33	Diagnostic_procedure:T63 
+T64	Therapeutic_procedure 1407 1416	lobectomy
+E34	Therapeutic_procedure:T64 
+T65	Detailed_description 1401 1406	right
+R34	MODIFY Arg1:T65 Arg2:E34	
+T66	Diagnostic_procedure 1430 1441	exploration
+E35	Diagnostic_procedure:T66 
+T67	Biological_structure 1425 1429	neck
+R35	MODIFY Arg1:T67 Arg2:E35	
+T68	Diagnostic_procedure 1594 1603	histology
+E36	Diagnostic_procedure:T68 
+T69	Diagnostic_procedure 1883 1909	light microscopic findings
+E37	Diagnostic_procedure:T69 
+T70	Diagnostic_procedure 1918 1945	immunohistochemical profile
+E38	Diagnostic_procedure:T70 
+T71	Disease_disorder 1579 1581	PC
+E39	Disease_disorder:T71 
+A4	POLARITY E39 UNCERTAIN
+#1	AnnotatorNotes E39	Parathyroid carcinoma
+T72	Disease_disorder 1976 1978	PC
+E40	Disease_disorder:T72 
+#2	AnnotatorNotes E40	Parathyroid carcinoma
+T73	Diagnostic_procedure 2000 2007	calcium
+E41	Diagnostic_procedure:T73 
+T74	Diagnostic_procedure 2024 2033	phosphate
+E42	Diagnostic_procedure:T74 
+T75	Diagnostic_procedure 2108 2115	calcium
+E43	Diagnostic_procedure:T75 
+T76	Diagnostic_procedure 2127 2130	PTH
+E44	Diagnostic_procedure:T76 
+T77	Diagnostic_procedure 2179 2189	ultrasound
+E45	Diagnostic_procedure:T77 
+T78	Diagnostic_procedure 2205 2224	computed tomography
+E46	Diagnostic_procedure:T78 
+T79	Date 2278 2296	Eight months later
+E47	Date:T79 
+T80	Diagnostic_procedure 2304 2311	calcium
+E48	Diagnostic_procedure:T80 
+T81	Diagnostic_procedure 2447 2457	ultrasound
+E49	Diagnostic_procedure:T81 
+T82	Biological_structure 2442 2446	Neck
+R36	MODIFY Arg1:T82 Arg2:E49	
+T83	Sign_symptom 2488 2495	lesions
+E50	Sign_symptom:T83 
+A5	POLARITY E50 NEG
+T84	Detailed_description 2475 2487	pathological
+R37	MODIFY Arg1:T84 Arg2:E50	
+T85	Disease_disorder 2536 2540	PHPT
+E51	Disease_disorder:T85 
+A6	POLARITY E51 NEG
+T86	Disease_disorder 2551 2553	PC
+E52	Disease_disorder:T86 
+T87	Sign_symptom 2591 2596	tumor
+E53	Sign_symptom:T87 
+T88	Detailed_description 2576 2590	nonfunctioning
+R38	MODIFY Arg1:T88 Arg2:E53	
+T89	Diagnostic_procedure 2626 2633	calcium
+E54	Diagnostic_procedure:T89 
+T90	Detailed_description 2620 2625	serum
+R39	MODIFY Arg1:T90 Arg2:E54	
+T91	Biological_structure 2638 2642	neck
+T92	Diagnostic_procedure 2643 2653	ultrasound
+E55	Diagnostic_procedure:T92 
+T93	Subject 2661 2683	first-degree relatives
+R40	MODIFY Arg1:T93 Arg2:E55	
+R41	MODIFY Arg1:T91 Arg2:E55	
+R42	MODIFY Arg1:T93 Arg2:E54	
+T94	Lab_value 2688 2694	normal
+E56	Lab_value:T94 
+R43	MODIFY Arg1:E56 Arg2:E55	
+R44	MODIFY Arg1:E56 Arg2:E54	
+T95	Detailed_description 2316 2322	plasma
+T96	Detailed_description 2298 2303	serum
+R45	MODIFY Arg1:T96 Arg2:E48	
+T97	Diagnostic_procedure 2323 2326	PTH
+E57	Diagnostic_procedure:T97 
+R46	MODIFY Arg1:T95 Arg2:E57	
+T98	Lab_value 2339 2352	9.1–9.2 mg/dl
+E58	Lab_value:T98 
+T99	Lab_value 2357 2368	38–44 pg/ml
+E59	Lab_value:T99 
+R47	MODIFY Arg1:E58 Arg2:E48	
+R48	MODIFY Arg1:E59 Arg2:E57	
+T100	Biological_structure 2174 2178	Neck
+T101	Biological_structure 2194 2204	total body
+R49	MODIFY Arg1:T100 Arg2:E45	
+R50	MODIFY Arg1:T101 Arg2:E46	
+T102	Disease_disorder 2269 2276	disease
+E60	Disease_disorder:T102 
+A7	POLARITY E60 NEG
+T103	Detailed_description 2258 2268	metastatic
+T104	Detailed_description 2248 2253	local
+R51	MODIFY Arg1:T103 Arg2:E60	
+R52	MODIFY Arg1:T104 Arg2:E60	
+T105	Therapeutic_procedure 2093 2100	surgery
+E61	Therapeutic_procedure:T105 
+T106	Date 2077 2092	One month after
+E62	Date:T106 
+T107	Detailed_description 2102 2107	serum
+T108	Detailed_description 2120 2126	plasma
+R53	MODIFY Arg1:T107 Arg2:E43	
+R54	MODIFY Arg1:T108 Arg2:E44	
+T109	Lab_value 2136 2145	9.6 mg/dL
+E63	Lab_value:T109 
+T110	Lab_value 2150 2158	47 pg/mL
+E64	Lab_value:T110 
+R55	MODIFY Arg1:E63 Arg2:E43	
+R56	MODIFY Arg1:E64 Arg2:E44	
+T111	Detailed_description 1994 1999	serum
+R57	MODIFY Arg1:T111 Arg2:E41	
+T112	Lab_value 2009 2018	8.7 mg/dl
+E65	Lab_value:T112 
+R58	MODIFY Arg1:E65 Arg2:E41	
+T113	Lab_value 2035 2042	3 mg/dl
+E66	Lab_value:T113 
+R59	MODIFY Arg1:E66 Arg2:E42	
+T114	Lab_value 2063 2075	normal range
+E67	Lab_value:T114 
+R60	MODIFY Arg1:E67 Arg2:E41	
+R61	MODIFY Arg1:E67 Arg2:E42	
+T115	Diagnostic_procedure 1740 1754	Immunostaining
+E68	Diagnostic_procedure:T115 
+T116	Diagnostic_procedure 1759 1772	thyroglobulin
+E69	Diagnostic_procedure:T116 
+T117	Diagnostic_procedure 1808 1822	chromogranin A
+E70	Diagnostic_procedure:T117 
+T118	Diagnostic_procedure 1827 1830	PTH
+E71	Diagnostic_procedure:T118 
+R62	SUB_PROCEDURE Arg1:E69 Arg2:E68	
+R63	SUB_PROCEDURE Arg1:E70 Arg2:E68	
+R64	SUB_PROCEDURE Arg1:E71 Arg2:E68	
+T119	Lab_value 1840 1857	strong reactivity
+E72	Lab_value:T119 
+R65	MODIFY Arg1:E72 Arg2:E71	
+R66	MODIFY Arg1:E72 Arg2:E70	
+T120	Lab_value 1777 1785	negative
+E73	Lab_value:T120 
+R67	MODIFY Arg1:E73 Arg2:E69	
+T121	Sign_symptom 1659 1664	tumor
+E74	Sign_symptom:T121 
+T122	Sign_symptom 1632 1651	infiltrative growth
+E75	Sign_symptom:T122 
+T123	Sign_symptom 1670 1678	invasion
+E76	Sign_symptom:T123 
+T124	Biological_structure 1686 1700	thyroid tissue
+T125	Biological_structure 1705 1726	cervical soft tissues
+R68	MODIFY Arg1:T124 Arg2:E76	
+R69	MODIFY Arg1:T125 Arg2:E76	
+T126	Sign_symptom 1484 1492	invasion
+E77	Sign_symptom:T126 
+A8	POLARITY E77 NEG
+T127	Detailed_description 1478 1483	local
+T128	Detailed_description 1457 1474	macroscopic signs
+R70	MODIFY Arg1:T127 Arg2:E77	
+R71	MODIFY Arg1:T128 Arg2:E77	
+T129	Diagnostic_procedure 1528 1552	pathological examination
+E78	Diagnostic_procedure:T129 
+T130	Detailed_description 1513 1527	frozen-section
+T131	Detailed_description 1498 1512	intraoperative
+R72	MODIFY Arg1:T130 Arg2:E78	
+R73	MODIFY Arg1:T131 Arg2:E78	
+T132	Detailed_description 1622 1631	irregular
+R74	MODIFY Arg1:T132 Arg2:E75	
+T133	Sign_symptom 1185 1191	nodule
+E79	Sign_symptom:T133 
+T134	Sign_symptom 1347 1354	lesions
+E80	Sign_symptom:T134 
+T135	Biological_structure 1328 1346	thyroid follicular
+R75	MODIFY Arg1:T135 Arg2:E80	
+T136	Other_event 1199 1305	epithelial cells with hyperchromatic nuclei organized in small cohesive clusters resembling microfollicles
+E81	Other_event:T136 
+#3	AnnotatorNotes E81	Cytology results
+R76	AFTER Arg1:E1 Arg2:E2	
+*	OVERLAP E2 E3 E4 E6
+R77	BEFORE Arg1:E6 Arg2:E7	
+*	OVERLAP E7 E8
+R78	AFTER Arg1:E8 Arg2:E10	
+*	OVERLAP E10 E11 E12
+R79	BEFORE Arg1:E12 Arg2:E13	
+*	OVERLAP E13 E14 E82 E15 E83 E16 E17 E18 E19 E20 E22 E23 E26 E29 E31 E32 E33 E79 E80
+T137	Sign_symptom 432 440	palpable
+E82	Sign_symptom:T137 
+R80	MODIFY Arg1:E14 Arg2:E82	
+T138	Sign_symptom 502 510	palpable
+E83	Sign_symptom:T138 
+R81	MODIFY Arg1:T30 Arg2:E83	
+A9	POLARITY E83 NEG
+R82	MODIFY Arg1:E81 Arg2:E33	
+R83	BEFORE Arg1:E80 Arg2:E34	
+*	OVERLAP E34 E35 E77 E78 E39
+R84	BEFORE Arg1:E39 Arg2:E36	
+*	OVERLAP E36 E75 E74 E76 E68 E37 E38 E40
+R85	BEFORE Arg1:E40 Arg2:E41	
+*	OVERLAP E41 E42
+R86	BEFORE Arg1:E42 Arg2:E62	
+R87	AFTER Arg1:E62 Arg2:E61	
+R88	BEFORE Arg1:E61 Arg2:E43	
+*	OVERLAP E43 E44 E45 E46 E60
+R89	BEFORE Arg1:E60 Arg2:E47	
+*	OVERLAP E47 E48 E57 E49 E50 E51 E52 E53 E54 E55

@@ -1,0 +1,317 @@
+T1	Age 2 13	53-year-old
+T2	Sex 14 19	woman
+T3	Clinical_event 20 29	presented
+E1	Clinical_event:T3 
+T4	Nonbiological_location 37 48	institution
+R1	MODIFY Arg1:T4 Arg2:E1	
+T5	Sign_symptom 76 86	distention
+E2	Sign_symptom:T5 
+T6	Biological_structure 66 75	abdominal
+T7	Detailed_description 54 65	progressive
+R2	MODIFY Arg1:T6 Arg2:E2	
+R3	MODIFY Arg1:T7 Arg2:E2	
+T8	Sign_symptom 109 117	bleeding
+E3	Sign_symptom:T8 
+T9	Biological_structure 101 108	vaginal
+T10	Detailed_description 91 100	irregular
+R4	MODIFY Arg1:T9 Arg2:E3	
+R5	MODIFY Arg1:T10 Arg2:E3	
+T11	Duration 121 134	several weeks
+E4	Duration:T11 
+T12	Sign_symptom 214 218	mass
+E5	Sign_symptom:T12 
+T13	Diagnostic_procedure 157 159	CT
+E6	Diagnostic_procedure:T13 
+T14	Detailed_description 148 156	contrast
+T15	Biological_structure 160 167	abdomen
+T16	Biological_structure 172 178	pelvis
+R6	MODIFY Arg1:T14 Arg2:E6	
+R7	MODIFY Arg1:T15 Arg2:E6	
+R8	MODIFY Arg1:T16 Arg2:E6	
+T17	Detailed_description 191 202	ill-defined
+T18	Detailed_description 204 213	irregular
+R9	MODIFY Arg1:T18 Arg2:E5	
+R10	MODIFY Arg1:T17 Arg2:E5	
+T19	Biological_structure 226 239	lower uterine
+T20	Biological_structure 240 255	cervical region
+R11	MODIFY Arg1:T19 Arg2:E5	
+R12	MODIFY Arg1:T20 Arg2:E5	
+T21	Sign_symptom 311 317	masses
+E7	Sign_symptom:T21 
+T22	Biological_structure 303 310	omental
+T23	Biological_structure 288 298	peritoneal
+T24	Detailed_description 279 287	multiple
+R13	MODIFY Arg1:T22 Arg2:E7	
+R14	MODIFY Arg1:T23 Arg2:E7	
+R15	MODIFY Arg1:T24 Arg2:E7	
+T25	Sign_symptom 319 327	enlarged
+E8	Sign_symptom:T25 
+T26	Biological_structure 350 361	lymph nodes
+R16	MODIFY Arg1:T26 Arg2:E8	
+T27	Biological_structure 328 334	pelvic
+T28	Biological_structure 339 349	paraaortic
+R17	MODIFY Arg1:T28 Arg2:T26	
+R18	MODIFY Arg1:T27 Arg2:T26	
+T29	Sign_symptom 380 387	ascites
+E9	Sign_symptom:T29 
+T30	Detailed_description 367 379	large-volume
+R19	MODIFY Arg1:T30 Arg2:E9	
+T31	Diagnostic_procedure 401 404	CBC
+E10	Diagnostic_procedure:T31 
+T32	Diagnostic_procedure 425 435	hemoglobin
+E11	Diagnostic_procedure:T32 
+T33	Lab_value 439 447	9.2 g/dL
+R20	MODIFY Arg1:T33 Arg2:E11	
+T34	Sign_symptom 449 461	leukocytosis
+E12	Sign_symptom:T34 
+T35	Lab_value 465 486	36 790 per microliter
+R21	MODIFY Arg1:T35 Arg2:E12	
+T36	Sign_symptom 492 506	thrombocytosis
+E13	Sign_symptom:T36 
+T37	Lab_value 510 532	625 000 per microliter
+R22	MODIFY Arg1:T37 Arg2:E13	
+R23	SUB_PROCEDURE Arg1:E11 Arg2:E10	
+T38	Diagnostic_procedure 540 547	calcium
+E14	Diagnostic_procedure:T38 
+T39	Biological_structure 534 539	Serum
+R24	MODIFY Arg1:T39 Arg2:E14	
+T40	Lab_value 552 560	elevated
+R25	MODIFY Arg1:T40 Arg2:E14	
+T41	Lab_value 564 574	13.1 mg/dL
+R26	MODIFY Arg1:T41 Arg2:E14	
+T42	Diagnostic_procedure 576 579	BUN
+E15	Diagnostic_procedure:T42 
+T43	Diagnostic_procedure 584 594	creatinine
+E16	Diagnostic_procedure:T43 
+T44	Lab_value 600 620	within normal limits
+R27	MODIFY Arg1:T44 Arg2:E16	
+R28	MODIFY Arg1:T44 Arg2:E15	
+T45	Diagnostic_procedure 622 638	Hepatic function
+E17	Diagnostic_procedure:T45 
+T46	Lab_value 643 663	within normal limits
+R29	MODIFY Arg1:T46 Arg2:E17	
+T47	Diagnostic_procedure 667 678	pelvic exam
+E18	Diagnostic_procedure:T47 
+T48	Sign_symptom 708 712	mass
+E19	Sign_symptom:T48 
+T49	Detailed_description 690 699	fungating
+T50	Biological_structure 700 707	vaginal
+R30	MODIFY Arg1:T50 Arg2:E19	
+R31	MODIFY Arg1:T49 Arg2:E19	
+T51	Diagnostic_procedure 736 744	biopsies
+E20	Diagnostic_procedure:T51 
+T52	Biological_structure 752 763	endometrium
+R32	MODIFY Arg1:T52 Arg2:E20	
+T53	Coreference 780 784	mass
+E21	Coreference:T53 
+R33	IDENTICAL Arg1:E21 Arg2:E19	
+T54	Biological_structure 772 779	vaginal
+R34	MODIFY Arg1:T54 Arg2:E21	
+R35	MODIFY Arg1:E21 Arg2:E20	
+T55	Sign_symptom 814 819	tumor
+E22	Sign_symptom:T55 
+T56	Severity 803 813	high-grade
+R36	MODIFY Arg1:T56 Arg2:E22	
+T57	Detailed_description 825 856	predominantly oval-shaped cells
+R37	MODIFY Arg1:T57 Arg2:E22	
+T58	Diagnostic_procedure 858 886	Immunohistochemical staining
+E23	Diagnostic_procedure:T58 
+T59	Diagnostic_procedure 904 912	vimentin
+E24	Diagnostic_procedure:T59 
+T60	Diagnostic_procedure 914 918	CD10
+E25	Diagnostic_procedure:T60 
+T61	Diagnostic_procedure 924 933	cyclin D1
+E26	Diagnostic_procedure:T61 
+T62	Lab_value 891 899	positive
+R38	SUB_PROCEDURE Arg1:E24 Arg2:E23	
+R39	SUB_PROCEDURE Arg1:E25 Arg2:E23	
+R40	SUB_PROCEDURE Arg1:E26 Arg2:E23	
+R41	MODIFY Arg1:T62 Arg2:E24	
+R42	MODIFY Arg1:T62 Arg2:E25	
+R43	MODIFY Arg1:T62 Arg2:E26	
+T63	Disease_disorder 977 1004	endometrial stromal sarcoma
+E27	Disease_disorder:T63 
+T64	Severity 966 976	high-grade
+R44	MODIFY Arg1:T64 Arg2:E27	
+T65	Coreference 1021 1026	tumor
+E28	Coreference:T65 
+R45	IDENTICAL Arg1:E28 Arg2:E27	
+T67	Diagnostic_procedure 1044 1046	ER
+E30	Diagnostic_procedure:T67 
+#1	AnnotatorNotes E30	estrogen receptor
+T66	Lab_value 1031 1039	negative
+R46	MODIFY Arg1:T66 Arg2:E30	
+T68	Diagnostic_procedure 1077 1079	PR
+E29	Diagnostic_procedure:T68 
+#2	AnnotatorNotes E29	progesterone receptor
+T69	Lab_value 1064 1072	positive
+R47	MODIFY Arg1:T69 Arg2:E29	
+T70	Detailed_description 1053 1063	rare cells
+R48	MODIFY Arg1:T70 Arg2:E29	
+R49	MODIFY Arg1:E28 Arg2:E30	
+R50	MODIFY Arg1:E28 Arg2:E29	
+T71	Diagnostic_procedure 1090 1118	immunohistochemical staining
+E31	Diagnostic_procedure:T71 
+T72	Diagnostic_procedure 1123 1135	cytokeratins
+E32	Diagnostic_procedure:T72 
+T73	Lab_value 1140 1148	negative
+R51	MODIFY Arg1:T73 Arg2:E32	
+T74	Sign_symptom 1152 1170	biphasic component
+E33	Sign_symptom:T74 
+A1	POLARITY E33 UNCERTAIN
+R52	SUB_PROCEDURE Arg1:E32 Arg2:E31	
+T75	Diagnostic_procedure 1284 1289	Ca125
+E34	Diagnostic_procedure:T75 
+T76	Lab_value 1303 1311	elevated
+T77	Lab_value 1315 1324	1624 U/mL
+R53	MODIFY Arg1:T76 Arg2:E34	
+R54	MODIFY Arg1:T77 Arg2:E34	
+T78	Diagnostic_procedure 1344 1346	CT
+E35	Diagnostic_procedure:T78 
+T79	Detailed_description 1335 1343	Contrast
+R55	MODIFY Arg1:T79 Arg2:E35	
+T80	Biological_structure 1347 1352	chest
+R56	MODIFY Arg1:T80 Arg2:E35	
+T81	Disease_disorder 1376 1392	pleural effusion
+E36	Disease_disorder:T81 
+T82	Detailed_description 1364 1375	right-sided
+R57	MODIFY Arg1:T82 Arg2:E36	
+T83	Sign_symptom 1411 1418	nodules
+E37	Sign_symptom:T83 
+A2	POLARITY E37 NEG
+T84	Disease_disorder 1422 1437	lymphadenopathy
+E38	Disease_disorder:T84 
+A3	POLARITY E38 NEG
+T85	Detailed_description 1400 1410	suspicious
+R58	MODIFY Arg1:T85 Arg2:E37	
+T86	Disease_disorder 1470 1486	operable disease
+E39	Disease_disorder:T86 
+T87	Therapeutic_procedure 1509 1526	debulking surgery
+E40	Therapeutic_procedure:T87 
+T88	Diagnostic_procedure 1550 1568	laboratory studies
+E41	Diagnostic_procedure:T88 
+T89	Diagnostic_procedure 1591 1598	calcium
+E42	Diagnostic_procedure:T89 
+T90	Biological_structure 1585 1590	serum
+R59	MODIFY Arg1:T90 Arg2:E42	
+R60	SUB_PROCEDURE Arg1:E42 Arg2:E41	
+T91	Lab_value 1611 1620	increased
+T92	Lab_value 1624 1634	19.2 mg/dL
+R61	MODIFY Arg1:T91 Arg2:E42	
+R62	MODIFY Arg1:T92 Arg2:E42	
+T93	Disease_disorder 1684 1690	injury
+E43	Disease_disorder:T93 
+T94	Biological_structure 1677 1683	kidney
+R63	MODIFY Arg1:T94 Arg2:E43	
+T95	Detailed_description 1671 1676	acute
+R64	MODIFY Arg1:T95 Arg2:E43	
+T96	Diagnostic_procedure 1701 1704	BUN
+E44	Diagnostic_procedure:T96 
+T97	Lab_value 1705 1711	rising
+T98	Lab_value 1715 1723	37 mg/dL
+R65	MODIFY Arg1:T97 Arg2:E44	
+R66	MODIFY Arg1:T98 Arg2:E44	
+T99	Diagnostic_procedure 1728 1738	creatinine
+E45	Diagnostic_procedure:T99 
+T100	Lab_value 1742 1752	1.81 mg/dL
+R67	MODIFY Arg1:T100 Arg2:E45	
+T101	Diagnostic_procedure 1757 1770	physical exam
+E46	Diagnostic_procedure:T101 
+T102	Sign_symptom 1792 1801	lethargic
+E47	Sign_symptom:T102 
+T104	Therapeutic_procedure 1834 1841	surgery
+E49	Therapeutic_procedure:T104 
+A4	POLARITY E49 NEG
+A5	POLARITY E40 UNCERTAIN
+T105	Clinical_event 1846 1855	cancelled
+E50	Clinical_event:T105 
+T106	Disease_disorder 1877 1896	medical instability
+E51	Disease_disorder:T106 
+T107	Diagnostic_procedure 1934 1939	PTHrP
+E52	Diagnostic_procedure:T107 
+T108	Lab_value 1925 1933	elevated
+T109	Lab_value 1943 1952	301 pg/mL
+R68	MODIFY Arg1:T109 Arg2:E52	
+R69	MODIFY Arg1:T108 Arg2:E52	
+T110	Lab_value 1967 1976	depressed
+T111	Diagnostic_procedure 1977 1980	PTH
+E53	Diagnostic_procedure:T111 
+T112	Lab_value 1990 1997	3 pg/mL
+R70	MODIFY Arg1:T112 Arg2:E53	
+R71	MODIFY Arg1:T110 Arg2:E53	
+T113	Lab_value 2016 2025	depressed
+T114	Diagnostic_procedure 2026 2041	25-OH vitamin D
+E54	Diagnostic_procedure:T114 
+T115	Lab_value 2051 2059	16 ng/mL
+R72	MODIFY Arg1:T115 Arg2:E54	
+R73	MODIFY Arg1:T113 Arg2:E54	
+T116	Disease_disorder 2089 2124	humoral hypercalcemia of malignancy
+E55	Disease_disorder:T116 
+T117	Medication 2155 2166	pamidronate
+E56	Medication:T117 
+T118	Medication 2168 2178	calcitonin
+E57	Medication:T118 
+T119	Medication 2196 2202	fluids
+E58	Medication:T119 
+T120	Administration 2184 2195	intravenous
+R74	MODIFY Arg1:T120 Arg2:E58	
+T121	Therapeutic_procedure 2238 2250	hemodialysis
+E59	Therapeutic_procedure:T121 
+T122	Detailed_description 2228 2237	temporary
+R75	MODIFY Arg1:T122 Arg2:E59	
+T123	Medication 2255 2264	denosumab
+E60	Medication:T123 
+T124	Sign_symptom 2280 2293	hypercalcemia
+E61	Sign_symptom:T124 
+T125	Detailed_description 2269 2279	refractory
+R76	MODIFY Arg1:T125 Arg2:E61	
+T126	Coreference 2335 2360	electrolyte abnormalities
+E62	Coreference:T126 
+R77	IDENTICAL Arg1:E62 Arg2:E61	
+A6	TREND E62 DEC
+T127	Medication 2427 2439	chemotherapy
+E63	Medication:T127 
+A7	POLARITY E63 UNCERTAIN
+T128	Therapeutic_procedure 2452 2459	surgery
+E64	Therapeutic_procedure:T128 
+A8	POLARITY E64 UNCERTAIN
+T129	Medication 2525 2536	carboplatin
+E65	Medication:T129 
+T130	Medication 2541 2551	paclitaxel
+E66	Medication:T130 
+T131	Dosage 2576 2584	3 cycles
+R78	MODIFY Arg1:T131 Arg2:E66	
+R79	MODIFY Arg1:T131 Arg2:E65	
+T132	Therapeutic_procedure 2610 2619	radiation
+E67	Therapeutic_procedure:T132 
+T133	Biological_structure 2627 2633	uterus
+R80	MODIFY Arg1:T133 Arg2:E67	
+T134	Sign_symptom 2645 2653	bleeding
+E68	Sign_symptom:T134 
+T135	Outcome 2744 2748	died
+E69	Outcome:T135 
+T136	Disease_disorder 2754 2781	complications of malignancy
+E70	Disease_disorder:T136 
+R81	CAUSE Arg1:E70 Arg2:E69	
+R82	AFTER Arg1:E1 Arg2:E2	
+*	OVERLAP E2 E3 E4
+R83	BEFORE Arg1:E4 Arg2:E6	
+*	OVERLAP E6 E5 E7 E8 E9 E10 E12 E13 E14 E15 E16 E17 E18 E19 E20 E22 E23 E27 E28 E30 E29 E31 E33 E34 E35 E36 E37 E38 E39 E40
+R84	BEFORE Arg1:E40 Arg2:E41	
+*	OVERLAP E41 E43 E44 E45 E46 E47 E48
+T103	Sign_symptom 1808 1811	dry
+E48	Sign_symptom:T103 
+T137	Biological_structure 1812 1828	mucous membranes
+R85	MODIFY Arg1:T137 Arg2:E48	
+R86	BEFORE Arg1:E48 Arg2:E49	
+*	OVERLAP E49 E50 E51 E52 E53 E54 E55
+R87	MODIFY Arg1:E49 Arg2:E50	
+R88	BEFORE Arg1:E55 Arg2:E56	
+*	OVERLAP E56 E57 E58
+R89	BEFORE Arg1:E58 Arg2:E59	
+*	OVERLAP E59 E60 E61
+R90	BEFORE Arg1:E61 Arg2:E62	
+*	OVERLAP E62 E63 E64
+R91	BEFORE Arg1:E64 Arg2:E65	
+*	OVERLAP E65 E66 E67 E68
+R92	BEFORE Arg1:E68 Arg2:E69	

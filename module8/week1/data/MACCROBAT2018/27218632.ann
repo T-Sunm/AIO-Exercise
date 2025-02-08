@@ -1,0 +1,206 @@
+T1	Age 2 13	50-year old
+T2	Sex 14 17	man
+T3	Diagnostic_procedure 1909 1913	zinc
+E1	Diagnostic_procedure:T3 
+T4	Lab_value 1923 1931	29 ug/dL
+R1	MODIFY Arg1:T4 Arg2:E1	
+T5	Medication 1973 1993	zinc supplementation
+E2	Medication:T5 
+T6	Outcome 2255 2266	passed away
+E3	Outcome:T6 
+T7	Disease_disorder 56 82	appendiceal adenocarcinoma
+E4	Disease_disorder:T7 
+T8	Detailed_description 47 55	mucinous
+T9	Detailed_description 36 46	metastatic
+R2	MODIFY Arg1:T8 Arg2:E4	
+R3	MODIFY Arg1:T9 Arg2:E4	
+T10	Clinical_event 83 91	presents
+E5	Clinical_event:T10 
+T11	Sign_symptom 125 129	rash
+E6	Sign_symptom:T11 
+T12	Detailed_description 112 124	desquamating
+R4	MODIFY Arg1:T12 Arg2:E6	
+T13	Biological_structure 137 141	face
+R5	MODIFY Arg1:T13 Arg2:E6	
+T14	Biological_structure 165 170	scalp
+R6	MODIFY Arg1:T14 Arg2:E6	
+T15	Biological_structure 172 187	inguinal region
+R7	MODIFY Arg1:T15 Arg2:E6	
+T16	Biological_structure 193 201	perineum
+R8	MODIFY Arg1:T16 Arg2:E6	
+T17	History 36 82	metastatic mucinous appendiceal adenocarcinoma
+T18	Duration 202 224	over the past 4 months
+E7	Duration:T18 
+T19	Sign_symptom 241 245	rash
+E8	Sign_symptom:T19 
+T20	Disease_disorder 278 286	alopecia
+E9	Disease_disorder:T20 
+T21	Detailed_description 270 277	diffuse
+R9	MODIFY Arg1:T21 Arg2:E9	
+T22	Biological_structure 294 298	face
+T23	Biological_structure 300 305	scalp
+T24	Biological_structure 307 313	axilla
+T25	Biological_structure 319 324	groin
+R10	MODIFY Arg1:T22 Arg2:E9	
+R11	MODIFY Arg1:T23 Arg2:E9	
+R12	MODIFY Arg1:T24 Arg2:E9	
+R13	MODIFY Arg1:T25 Arg2:E9	
+T26	Sign_symptom 358 362	rash
+E10	Sign_symptom:T26 
+A1	TREND E10 STAY
+T27	Medication 395 406	fluconazole
+E11	Medication:T27 
+T28	Administration 390 394	oral
+R14	MODIFY Arg1:T28 Arg2:E11	
+T29	Administration 408 415	topical
+T30	Medication 416 426	antibiotic
+E12	Medication:T30 
+T31	Administration 427 435	ointment
+R15	MODIFY Arg1:T31 Arg2:E12	
+R16	MODIFY Arg1:T29 Arg2:E12	
+T32	Administration 441 452	intravenous
+T33	Medication 453 464	antibiotics
+E13	Medication:T33 
+R17	MODIFY Arg1:T32 Arg2:E13	
+T34	Dosage 371 386	multiple rounds
+R18	MODIFY Arg1:T34 Arg2:E11	
+R19	MODIFY Arg1:T34 Arg2:E12	
+R20	MODIFY Arg1:T34 Arg2:E13	
+T35	Medication 529 541	chemotherapy
+E14	Medication:T35 
+T36	Detailed_description 517 528	neoadjuvant
+R21	MODIFY Arg1:T36 Arg2:E14	
+T37	Therapeutic_procedure 554 572	surgical resection
+E15	Therapeutic_procedure:T37 
+T38	Therapeutic_procedure 587 596	colostomy
+E16	Therapeutic_procedure:T38 
+T39	Therapeutic_procedure 613 632	surgical correction
+E17	Therapeutic_procedure:T39 
+#1	AnnotatorNotes E17	Though the surgery failed, it was still done, so it's still annotated
+T40	Disease_disorder 640 663	enterocutaneous fistula
+E18	Disease_disorder:T40 
+T41	Therapeutic_procedure 685 711	total parenteral nutrition
+E19	Therapeutic_procedure:T41 
+T42	Therapeutic_procedure 713 716	TPN
+E20	Therapeutic_procedure:T42 
+R22	IDENTICAL Arg1:E20 Arg2:E19	
+T43	Duration 726 735	past year
+E21	Duration:T43 
+T44	Sign_symptom 771 795	changes in ostomy output
+E22	Sign_symptom:T44 
+A2	POLARITY E22 NEG
+T45	Diagnostic_procedure 814 840	Dermatological examination
+E23	Diagnostic_procedure:T45 
+T46	Sign_symptom 873 880	plaques
+E24	Sign_symptom:T46 
+T47	Detailed_description 860 872	erythematous
+T48	Detailed_description 849 859	widespread
+R23	MODIFY Arg1:T48 Arg2:E24	
+R24	MODIFY Arg1:T47 Arg2:E24	
+T49	Biological_structure 888 892	face
+T50	Biological_structure 894 899	scalp
+T51	Biological_structure 905 928	medial aspect of thighs
+R25	MODIFY Arg1:T49 Arg2:E24	
+R26	MODIFY Arg1:T50 Arg2:E24	
+R27	MODIFY Arg1:T51 Arg2:E24	
+T53	Sign_symptom 955 962	papules
+E26	Sign_symptom:T53 
+T52	Detailed_description 968 975	scaling
+R28	MODIFY Arg1:T52 Arg2:E26	
+T54	Detailed_description 945 954	scattered
+R29	MODIFY Arg1:T54 Arg2:E26	
+T55	Detailed_description 929 940	bilaterally
+R30	MODIFY Arg1:T55 Arg2:T51	
+T56	Biological_structure 979 983	face
+T57	Biological_structure 985 990	scalp
+T58	Biological_structure 992 997	chest
+T59	Biological_structure 1003 1007	back
+R31	MODIFY Arg1:T56 Arg2:E26	
+R32	MODIFY Arg1:T57 Arg2:E26	
+R33	MODIFY Arg1:T58 Arg2:E26	
+R34	MODIFY Arg1:T59 Arg2:E26	
+T60	Disease_disorder 1031 1039	alopecia
+E25	Disease_disorder:T60 
+T61	Detailed_description 1018 1030	non-scarring
+T62	Detailed_description 1009 1016	Diffuse
+R35	MODIFY Arg1:T61 Arg2:E25	
+R36	MODIFY Arg1:T62 Arg2:E25	
+T63	Biological_structure 1058 1062	face
+T64	Biological_structure 1064 1069	scalp
+T65	Biological_structure 1071 1078	axillae
+T66	Biological_structure 1084 1089	groin
+R37	MODIFY Arg1:T63 Arg2:E25	
+R38	MODIFY Arg1:T64 Arg2:E25	
+R39	MODIFY Arg1:T65 Arg2:E25	
+R40	MODIFY Arg1:T66 Arg2:E25	
+T67	Disease_disorder 1116 1118	AE
+E27	Disease_disorder:T67 
+#2	AnnotatorNotes E27	acrodermatitis enteropathica
+T68	Disease_disorder 1160 1175	zinc deficiency
+E28	Disease_disorder:T68 
+R41	CAUSE Arg1:E28 Arg2:E27	
+T69	Disease_disorder 1209 1224	zinc deficiency
+E29	Disease_disorder:T69 
+T70	Detailed_description 1200 1208	acquired
+R42	MODIFY Arg1:T70 Arg2:E29	
+T71	Medication 1254 1274	zinc supplementation
+E30	Medication:T71 
+T72	Lab_value 1243 1253	inadequate
+R43	MODIFY Arg1:T72 Arg2:E30	
+T73	Therapeutic_procedure 1278 1281	TPN
+E31	Therapeutic_procedure:T73 
+#3	AnnotatorNotes E31	Total Parenteral Nutrition
+R44	SUB_PROCEDURE Arg1:E30 Arg2:E31	
+T74	Other_event 1363 1380	national shortage
+E32	Other_event:T74 
+#4	AnnotatorNotes E32	a zinc shortage, specifically
+T75	Medication 1312 1326	trace elements
+E33	Medication:T75 
+A3	POLARITY E33 NEG
+#5	AnnotatorNotes E33	including zinc
+T76	Date 2017 2026	one month
+E34	Date:T76 
+T77	Therapeutic_procedure 2001 2004	TPN
+E35	Therapeutic_procedure:T77 
+R45	SUB_PROCEDURE Arg1:E2 Arg2:E35	
+T78	Sign_symptom 2067 2071	rash
+E36	Sign_symptom:T78 
+A4	POLARITY E36 NEG
+T79	Sign_symptom 2076 2083	fatigue
+E37	Sign_symptom:T79 
+A5	POLARITY E37 NEG
+T80	Sign_symptom 2107 2118	hair growth
+E38	Sign_symptom:T80 
+A6	TREND E38 INC
+T81	Diagnostic_procedure 2138 2148	zinc level
+E39	Diagnostic_procedure:T81 
+T82	Lab_value 2179 2187	90 ug/dL
+R46	MODIFY Arg1:T82 Arg2:E39	
+T83	Disease_disorder 2229 2244	zinc deficiency
+E40	Disease_disorder:T83 
+A7	POLARITY E40 NEG
+R47	BEFORE Arg1:E4 Arg2:E5	
+*	OVERLAP E5 E6 E7 E8 E9
+R48	BEFORE Arg1:E9 Arg2:E10	
+R49	AFTER Arg1:E10 Arg2:E11	
+*	OVERLAP E11 E12 E13
+R50	AFTER Arg1:E13 Arg2:E14	
+R51	BEFORE Arg1:E14 Arg2:E15	
+R52	BEFORE Arg1:E15 Arg2:E16	
+R53	AFTER Arg1:E16 Arg2:E17	
+R54	AFTER Arg1:E17 Arg2:E18	
+R55	BEFORE Arg1:E18 Arg2:E19	
+*	OVERLAP E19 E21 E22
+R56	BEFORE Arg1:E22 Arg2:E23	
+*	OVERLAP E23 E24 E26 E25 E27 E28 E29
+T84	Duration 1345 1353	one year
+E41	Duration:T84 
+R57	AFTER Arg1:E29 Arg2:E30	
+*	OVERLAP E30 E33 E41 E32
+R58	CAUSE Arg1:E32 Arg2:E33	
+R59	BEFORE Arg1:E32 Arg2:E1	
+R60	BEFORE Arg1:E1 Arg2:E2	
+R61	BEFORE Arg1:E2 Arg2:E34	
+*	OVERLAP E34 E36 E37 E38 E39
+R62	BEFORE Arg1:E39 Arg2:E40	
+R63	BEFORE Arg1:E40 Arg2:E3	

@@ -1,0 +1,165 @@
+T1	Age 2 13	13 year-old
+T2	Sex 14 17	boy
+T3	Clinical_event 18 27	presented
+E1	Clinical_event:T3 
+T4	History 113 168	no significant past medical, surgical or family history
+T5	Duration 35 42	1 month
+E2	Duration:T5 
+T6	Sign_symptom 92 101	epistaxis
+E3	Sign_symptom:T6 
+T7	Detailed_description 79 91	small volume
+T8	Biological_structure 54 66	intermittent
+R1	MODIFY Arg1:T7 Arg2:E3	
+R2	MODIFY Arg1:T8 Arg2:E3	
+T9	Diagnostic_procedure 170 190	Physical examination
+E4	Diagnostic_procedure:T9 
+T10	Sign_symptom 222 226	mass
+E5	Sign_symptom:T10 
+T11	Detailed_description 215 221	fleshy
+T12	Biological_structure 202 214	left palatal
+T13	Biological_structure 239 260	left posterior molars
+R3	MODIFY Arg1:T12 Arg2:E5	
+R4	MODIFY Arg1:T13 Arg2:E5	
+T14	Diagnostic_procedure 264 290	nasoendoscopic examination
+E6	Diagnostic_procedure:T14 
+T15	Sign_symptom 312 320	swelling
+E7	Sign_symptom:T15 
+T16	Severity 306 311	large
+R5	MODIFY Arg1:T16 Arg2:E7	
+T17	Biological_structure 328 362	floor of left anterior nasal space
+R6	MODIFY Arg1:T17 Arg2:E7	
+T18	Biological_structure 378 398	left inferior meatus
+T19	Biological_structure 416 434	inferior turbinate
+R7	MODIFY Arg1:T18 Arg2:E7	
+R8	MODIFY Arg1:T19 Arg2:E7	
+T20	Diagnostic_procedure 436 455	Computed Tomography
+E8	Diagnostic_procedure:T20 
+T21	Diagnostic_procedure 457 459	CT
+E9	Diagnostic_procedure:T21 
+T22	Biological_structure 468 485	paranasal sinuses
+R9	MODIFY Arg1:T22 Arg2:E8	
+R10	IDENTICAL Arg1:E9 Arg2:E8	
+T23	Sign_symptom 522 528	lesion
+E10	Sign_symptom:T23 
+T24	Detailed_description 516 521	lytic
+T25	Detailed_description 506 515	expansile
+T26	Detailed_description 495 504	lobulated
+R11	MODIFY Arg1:T24 Arg2:E10	
+R12	MODIFY Arg1:T25 Arg2:E10	
+R13	MODIFY Arg1:T26 Arg2:E10	
+T27	Biological_structure 532 544	left maxilla
+R14	MODIFY Arg1:T27 Arg2:E10	
+T28	Detailed_description 560 573	lucent center
+T29	Detailed_description 578 603	peripheral calcifications
+R15	MODIFY Arg1:T28 Arg2:E10	
+R16	MODIFY Arg1:T29 Arg2:E10	
+T30	Coreference 609 615	lesion
+E11	Coreference:T30 
+R17	IDENTICAL Arg1:E11 Arg2:E10	
+T31	Detailed_description 638 665	large soft tissue component
+T32	Sign_symptom 703 723	contrast enhancement
+E12	Sign_symptom:T32 
+T33	Severity 684 688	mild
+T34	Detailed_description 689 702	heterogeneous
+R18	MODIFY Arg1:T34 Arg2:E12	
+R19	MODIFY Arg1:T33 Arg2:E12	
+R20	MODIFY Arg1:T31 Arg2:E11	
+T35	Coreference 729 735	lesion
+E13	Coreference:T35 
+R21	IDENTICAL Arg1:E13 Arg2:E11	
+T36	Biological_structure 756 779	left maxillary alveolus
+T37	Biological_structure 795 811	left hard palate
+R22	MODIFY Arg1:T36 Arg2:E13	
+R23	MODIFY Arg1:T37 Arg2:E13	
+T38	Biological_structure 813 862	inferior part of the anterior left maxillary wall
+T39	Biological_structure 867 893	medial left maxillary wall
+R24	MODIFY Arg1:T38 Arg2:E13	
+R25	MODIFY Arg1:T39 Arg2:E13	
+T40	Coreference 899 905	lesion
+E14	Coreference:T40 
+R26	IDENTICAL Arg1:E14 Arg2:E13	
+T41	Biological_structure 924 973	roots of the left maxillary molars and pre-molars
+R27	MODIFY Arg1:T41 Arg2:E14	
+T42	Biological_structure 995 1013	left orbital floor
+R28	MODIFY Arg1:T42 Arg2:E14	
+T43	Sign_symptom 1037 1045	invasion
+E15	Sign_symptom:T43 
+A1	POLARITY E15 NEG
+T44	Biological_structure 1029 1036	orbital
+R29	MODIFY Arg1:T44 Arg2:E15	
+T45	Diagnostic_procedure 1082 1101	18-FDG PET-CT study
+E16	Diagnostic_procedure:T45 
+T46	Disease_disorder 1210 1228	metastatic disease
+E17	Disease_disorder:T46 
+A2	POLARITY E17 NEG
+T47	Detailed_description 1201 1209	FDG-avid
+R30	MODIFY Arg1:T47 Arg2:E17	
+T48	Coreference 1107 1111	mass
+E18	Coreference:T48 
+R31	IDENTICAL Arg1:E18 Arg2:E14	
+T50	Lab_value 1162 1178	index SUVmax 9.7
+T49	Detailed_description 1141 1155	hypermetabolic
+T51	Biological_structure 1124 1136	left maxilla
+R32	MODIFY Arg1:T51 Arg2:E18	
+R33	MODIFY Arg1:T49 Arg2:E18	
+R34	MODIFY Arg1:T50 Arg2:E18	
+T52	Diagnostic_procedure 1243 1260	incisional biopsy
+E19	Diagnostic_procedure:T52 
+T53	Detailed_description 1232 1242	trans-oral
+R35	MODIFY Arg1:T53 Arg2:E19	
+T54	Sign_symptom 1281 1285	mass
+E20	Sign_symptom:T54 
+T55	Biological_structure 1268 1280	left palatal
+R36	MODIFY Arg1:T55 Arg2:E20	
+T56	Disease_disorder 1349 1375	mesenchymal chondrosarcoma
+E21	Disease_disorder:T56 
+T57	Detailed_description 1395 1411	biphasic pattern
+R37	MODIFY Arg1:T57 Arg2:E21	
+T58	Detailed_description 1422 1449	sheets of small round cells
+R38	MODIFY Arg1:T58 Arg2:E21	
+T59	Detailed_description 1455 1495	hemangiopericytoma-like vascular pattern
+T60	Detailed_description 1500 1528	mature cartilaginous islands
+R39	MODIFY Arg1:T59 Arg2:E21	
+R40	MODIFY Arg1:T60 Arg2:E21	
+T61	Therapeutic_procedure 1566 1578	maxillectomy
+E22	Therapeutic_procedure:T61 
+T62	Therapeutic_procedure 1591 1600	rhinotomy
+E23	Therapeutic_procedure:T62 
+R41	SUB_PROCEDURE Arg1:E23 Arg2:E22	
+T63	Detailed_description 1583 1590	lateral
+R42	MODIFY Arg1:T63 Arg2:E23	
+T64	Detailed_description 1552 1565	left subtotal
+R43	MODIFY Arg1:T64 Arg2:E22	
+T65	Detailed_description 1605 1625	translabial approach
+R44	MODIFY Arg1:T65 Arg2:E22	
+T66	Diagnostic_procedure 1637 1646	histology
+E24	Diagnostic_procedure:T66 
+A3	POLARITY E21 MAYBE_POS
+T67	Disease_disorder 1692 1718	mesenchymal chondrosarcoma
+E25	Disease_disorder:T67 
+T68	Distance 1667 1670	5cm
+R45	MODIFY Arg1:T68 Arg2:E25	
+T69	Lab_value 1671 1681	high-grade
+T70	Lab_value 1683 1690	Grade 3
+R46	MODIFY Arg1:T70 Arg2:E25	
+R47	MODIFY Arg1:T69 Arg2:E25	
+T71	Sign_symptom 1766 1783	tumor involvement
+E26	Sign_symptom:T71 
+T72	Biological_structure 1731 1748	resection margins
+R48	MODIFY Arg1:T72 Arg2:E26	
+T73	Medication 1825 1837	chemotherapy
+E27	Medication:T73 
+T74	Detailed_description 1816 1824	adjuvant
+R49	MODIFY Arg1:T74 Arg2:E27	
+R50	AFTER Arg1:E1 Arg2:E2	
+*	OVERLAP E2 E3
+R51	BEFORE Arg1:E3 Arg2:E4	
+*	OVERLAP E4 E5 E6 E7 E8 E10 E11 E12 E13 E14 E15
+R52	BEFORE Arg1:E15 Arg2:E16	
+*	OVERLAP E16 E18 E17
+R53	BEFORE Arg1:E17 Arg2:E19	
+*	OVERLAP E19 E20 E21
+R54	BEFORE Arg1:E21 Arg2:E22	
+R55	BEFORE Arg1:E22 Arg2:E24	
+*	OVERLAP E24 E25 E26
+R56	BEFORE Arg1:E26 Arg2:E27	

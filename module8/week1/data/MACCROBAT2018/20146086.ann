@@ -1,0 +1,367 @@
+T1	Age 2 13	54-year-old
+T2	Sex 14 19	woman
+T3	Disease_disorder 34 39	NSCLC
+E1	Disease_disorder:T3 
+T4	Detailed_description 25 33	stage IV
+R1	MODIFY Arg1:T4 Arg2:E1	
+T5	Medication 57 68	carboplatin
+E2	Medication:T5 
+T6	Medication 73 83	paclitaxel
+E3	Medication:T6 
+T8	Diagnostic_procedure 110 128	Molecular analysis
+E4	Diagnostic_procedure:T8 
+T9	Diagnostic_procedure 132 144	tumor tissue
+E5	Diagnostic_procedure:T9 
+R2	SUB_PROCEDURE Arg1:E5 Arg2:E4	
+T10	Detailed_description 149 160	unavailable
+R3	MODIFY Arg1:T10 Arg2:E4	
+T12	Personal_background 209 214	Asian
+T13	History 224 239	smoking history
+T14	Severity 216 223	minimal
+R4	MODIFY Arg1:T14 Arg2:T13	
+T16	Medication 387 396	erlotinib
+E7	Medication:T16 
+T17	Lab_value 398 404	150 mg
+R5	MODIFY Arg1:T17 Arg2:T15	
+T18	Detailed_description 362 370	standard
+R7	MODIFY Arg1:T18 Arg2:T15	
+R8	BEFORE Arg1:E1 Arg2:E2	
+*	OVERLAP E2 E3 E4
+T19	Coreference 410 421	her disease
+E9	Coreference:T19 
+T20	Date 433 458	Twenty-eight months later
+E10	Date:T20 
+T21	Medication 487 496	erlotinib
+E11	Medication:T21 
+T22	Coreference 517 524	disease
+E12	Coreference:T22 
+T23	Detailed_description 525 537	systemically
+T24	Sign_symptom 4114 4122	survived
+E13	Sign_symptom:T24 
+T25	Date 4123 4171	14 months following the diagnosis of CNS disease
+E14	Date:T25 
+T26	Disease_disorder 4160 4171	CNS disease
+E15	Disease_disorder:T26 
+*	OVERLAP E13 E14
+T27	Date 3959 3974	One month later
+E16	Date:T27 
+T28	Medication 4032 4041	cetixumab
+E17	Medication:T28 
+T29	Medication 4046 4055	erlotinib
+E18	Medication:T29 
+T30	Lab_value 4095 4101	100 mg
+T31	Dosage 4085 4093;4103 4108	low dose daily
+R13	MODIFY Arg1:T30 Arg2:T31	
+T33	Dosage 3933 3947	1500 mg weekly
+T35	Medication 3948 3957	erlotinib
+E19	Medication:T35 
+R14	MODIFY Arg1:T33 Arg2:E19	
+R16	MODIFY Arg1:T31 Arg2:E18	
+A3	TREND E18 DEC
+R18	BEFORE Arg1:E19 Arg2:E16	
+T36	Disease_disorder 3988 4010	intra-thoracic disease
+E20	Disease_disorder:T36 
+T37	Detailed_description 3976 3987	progressive
+R19	MODIFY Arg1:T37 Arg2:E20	
+*	OVERLAP E16 E20
+R20	BEFORE Arg1:E20 Arg2:E17	
+*	OVERLAP E17 E18
+R21	BEFORE Arg1:E18 Arg2:E13	
+T38	Diagnostic_procedure 256 265	histology
+E21	Diagnostic_procedure:T38 
+T39	Detailed_description 241 255	non-small cell
+R22	MODIFY Arg1:T39 Arg2:E21	
+T40	Coreference 277 288	her disease
+E22	Coreference:T40 
+R23	IDENTICAL Arg1:E22 Arg2:E1	
+A4	POLARITY E4 NEG
+T47	History 256 265	histology
+T48	Diagnostic_procedure 302 326	EGFR TKI sensitive cells
+E23	Diagnostic_procedure:T48 
+R24	MODIFY Arg1:E23 Arg2:E22	
+R25	BEFORE Arg1:E23 Arg2:E7	
+R26	IDENTICAL Arg1:E12 Arg2:E9	
+T53	Detailed_description 502 513	progression
+R27	MODIFY Arg1:T53 Arg2:E12	
+*	OVERLAP E11 E12
+T54	Medication 593 615	angiogenesis inhibitor
+E24	Medication:T54 
+T55	Detailed_description 580 592	experimental
+R28	MODIFY Arg1:T55 Arg2:E24	
+T56	Medication 631 641	pemetrexed
+E25	Medication:T56 
+T57	Coreference 654 677	standard dose erlotinib
+E26	Coreference:T57 
+*	OVERLAP E25 E26
+T60	Date 703 718	11 months later
+E27	Date:T60 
+T61	Coreference 720 731	her disease
+E28	Coreference:T61 
+R29	IDENTICAL Arg1:E28 Arg2:E12	
+T62	Detailed_description 738 748	progressed
+R30	MODIFY Arg1:T62 Arg2:E28	
+*	OVERLAP E28 E27 E30
+R31	BEFORE Arg1:E26 Arg2:E27	
+T67	Other_event 473 483	resistance
+E29	Other_event:T67 
+*	OVERLAP E10 E29
+R32	MODIFY Arg1:E11 Arg2:E29	
+R33	BEFORE Arg1:E12 Arg2:E24	
+R34	BEFORE Arg1:E24 Arg2:E25	
+T68	Diagnostic_procedure 773 779	biopsy
+E30	Diagnostic_procedure:T68 
+T69	Diagnostic_procedure 887 904	Direct sequencing
+E31	Diagnostic_procedure:T69 
+T70	Diagnostic_procedure 950 954	EGFR
+E32	Diagnostic_procedure:T70 
+T71	Detailed_description 933 946	kinase domain
+R35	MODIFY Arg1:T71 Arg2:E32	
+T72	Diagnostic_procedure 968 982	L858R mutation
+E33	Diagnostic_procedure:T72 
+R36	SUB_PROCEDURE Arg1:E33 Arg2:E32	
+R37	SUB_PROCEDURE Arg1:E32 Arg2:E31	
+T73	Diagnostic_procedure 1058 1072	T790M mutation
+E34	Diagnostic_procedure:T73 
+T74	Biological_structure 750 753	DNA
+R38	MODIFY Arg1:T74 Arg2:E30	
+T75	Disease_disorder 802 808	lesion
+E35	Disease_disorder:T75 
+T76	Biological_structure 797 801	lung
+T77	Detailed_description 785 796	progressing
+R39	MODIFY Arg1:T76 Arg2:E35	
+R40	MODIFY Arg1:T77 Arg2:E35	
+T78	Diagnostic_procedure 867 881	EGFR mutations
+E36	Diagnostic_procedure:T78 
+T79	Sign_symptom 1150 1159	headaches
+E37	Sign_symptom:T79 
+T80	Disease_disorder 1207 1217	metastases
+E38	Disease_disorder:T80 
+T81	Biological_structure 1203 1206	CNS
+R41	MODIFY Arg1:T81 Arg2:E38	
+A5	POLARITY E38 MAYBE_POS
+T82	Diagnostic_procedure 1235 1242	imaging
+E39	Diagnostic_procedure:T82 
+T83	Lab_value 1226 1234	negative
+R42	MODIFY Arg1:T83 Arg2:E39	
+A6	POLARITY E39 NEG
+T84	Detailed_description 908 919	exons 18–21
+R43	MODIFY Arg1:T84 Arg2:T71	
+T85	Detailed_description 999 1019	EGFR TKI sensitivity
+R44	MODIFY Arg1:T85 Arg2:E33	
+T86	Detailed_description 1089 1117	acquired EGFR TKI resistance
+R45	MODIFY Arg1:T86 Arg2:E34	
+T87	Therapeutic_procedure 1270 1285	lumbar puncture
+E40	Therapeutic_procedure:T87 
+A7	POLARITY E40 NEG
+T88	Medication 1309 1321	temozolomide
+E41	Medication:T88 
+T89	Detailed_description 1301 1308	empiric
+R46	MODIFY Arg1:T89 Arg2:E41	
+R47	MODIFY Arg1:T23 Arg2:E12	
+R50	MODIFY Arg1:E35 Arg2:E30	
+T90	Detailed_description 1327 1340	standard dose
+T92	Medication 1341 1350	erlotinib
+E6	Medication:T92 
+T93	Dosage 1352 1364	150 mg daily
+T91	Disease_disorder 1379 1390	CNS disease
+E42	Disease_disorder:T91 
+A8	POLARITY E42 MAYBE_POS
+T94	Time 1396 1411	after one cycle
+E43	Time:T94 
+T95	Sign_symptom 1416 1425	headaches
+E44	Sign_symptom:T95 
+T96	Lab_value 1426 1434	worsened
+R51	MODIFY Arg1:T96 Arg2:E44	
+T97	Sign_symptom 1454 1460	nausea
+E45	Sign_symptom:T97 
+T98	Sign_symptom 1465 1473	vomiting
+E46	Sign_symptom:T98 
+T99	Disease_disorder 1489 1503	CNS metastases
+E47	Disease_disorder:T99 
+T100	Diagnostic_procedure 1527 1548	intracranial pressure
+E48	Diagnostic_procedure:T100 
+T101	Lab_value 1520 1526	raised
+R52	MODIFY Arg1:T101 Arg2:E48	
+T102	Diagnostic_procedure 1550 1576	Magnetic resonance imaging
+E49	Diagnostic_procedure:T102 
+T103	Diagnostic_procedure 1577 1582	(MRI)
+E50	Diagnostic_procedure:T103 
+R53	IDENTICAL Arg1:E50 Arg2:E49	
+T104	Biological_structure 1590 1595	brain
+T105	Diagnostic_procedure 1637 1649	CSF cytology
+E51	Diagnostic_procedure:T105 
+R54	MODIFY Arg1:T104 Arg2:E50	
+R55	SUB_PROCEDURE Arg1:E51 Arg2:E50	
+T106	Disease_disorder 1613 1615	LM
+E52	Disease_disorder:T106 
+T107	Biological_structure 1685 1688	DNA
+T108	Diagnostic_procedure 1673 1683	sequencing
+E53	Diagnostic_procedure:T108 
+T109	Detailed_description 1666 1672	direct
+R56	MODIFY Arg1:T109 Arg2:E53	
+T110	Diagnostic_procedure 1694 1703	CSF cells
+E54	Diagnostic_procedure:T110 
+T111	Diagnostic_procedure 1713 1718	L858R
+E55	Diagnostic_procedure:T111 
+T112	Diagnostic_procedure 1730 1750	EGFR TKI sensitivity
+E56	Diagnostic_procedure:T112 
+T113	Diagnostic_procedure 1783 1808	T790M resistance mutation
+E57	Diagnostic_procedure:T113 
+T114	Diagnostic_procedure 1850 1855	T790M
+E58	Diagnostic_procedure:T114 
+A9	POLARITY E58 NEG
+T115	Lab_value 1860 1868	negative
+R57	MODIFY Arg1:T115 Arg2:E58	
+A10	POLARITY E56 MAYBE_POS
+A11	POLARITY E57 MAYBE_NEG
+T116	Coreference 1872 1883	this sample
+E59	Coreference:T116 
+R58	IDENTICAL Arg1:E59 Arg2:E54	
+T117	Diagnostic_procedure 1948 1953	assay
+E60	Diagnostic_procedure:T117 
+T118	Lab_value 1900 1914	more sensitive
+T119	Detailed_description 1915 1937	fluorescence detection
+T120	Detailed_description 1938 1947	PCR-based
+R59	MODIFY Arg1:T120 Arg2:E60	
+R60	MODIFY Arg1:T119 Arg2:E60	
+R61	MODIFY Arg1:T118 Arg2:E60	
+T121	Diagnostic_procedure 1980 2024	PCR restriction fragment length polymorphism
+E61	Diagnostic_procedure:T121 
+T122	Coreference 2038 2068	the specific missense mutation
+E62	Coreference:T122 
+T123	Coreference 2120 2131	That result
+E63	Coreference:T123 
+A12	POLARITY E63 NEG
+T124	Lab_value 2141 2149	negative
+R62	MODIFY Arg1:T124 Arg2:E63	
+T125	Diagnostic_procedure 2163 2177	wild type peak
+E64	Diagnostic_procedure:T125 
+A13	POLARITY E64 POS
+R63	IDENTICAL Arg1:E63 Arg2:E60	
+R64	SUB_PROCEDURE Arg1:E62 Arg2:E61	
+R65	IDENTICAL Arg1:E62 Arg2:E57	
+T155	Diagnostic_procedure 3025 3049	Pharmacokinetic analysis
+E76	Diagnostic_procedure:T155 
+T156	Biological_structure 3053 3056	CSF
+R81	MODIFY Arg1:T156 Arg2:E76	
+T157	Subject 3062 3077	another patient
+T158	Disease_disorder 3089 3091	LM
+E77	Disease_disorder:T158 
+T159	Disease_disorder 3083 3088	NSCLC
+E78	Disease_disorder:T159 
+R82	MODIFY Arg1:E78 Arg2:E77	
+T160	Dosage 3117 3124;3135 3141	1500 mg weekly
+T162	Medication 3125 3134	erlotinib
+E79	Medication:T162 
+R88	MODIFY Arg1:T160 Arg2:E79	
+R90	MODIFY Arg1:T93 Arg2:T90	
+R91	MODIFY Arg1:T90 Arg2:E6	
+T165	Lab_value 3186 3195	11,300 nM
+T166	Diagnostic_procedure 3157 3182	peak plasma concentration
+E80	Diagnostic_procedure:T166 
+T169	Lab_value 3235 3241	130 nM
+T170	Diagnostic_procedure 3214 3231	CSF concentration
+E81	Diagnostic_procedure:T170 
+R75	MODIFY Arg1:T169 Arg2:E81	
+R92	MODIFY Arg1:T165 Arg2:E80	
+T172	Detailed_description 3333 3351	exceeding the IC50
+R93	MODIFY Arg1:T172 Arg2:T169	
+T178	Dosage 3458 3474	high-dose weekly
+T179	Medication 3475 3484	erlotinib
+E87	Medication:T179 
+T180	Lab_value 3488 3495	1000 mg
+T181	Lab_value 3501 3508	1200 mg
+R96	MODIFY Arg1:T178 Arg2:E87	
+R98	MODIFY Arg1:T180 Arg2:T178	
+R99	MODIFY Arg1:T181 Arg2:T178	
+R100	MODIFY Arg1:T178 Arg2:E87	
+T182	Sign_symptom 3521 3527	nausea
+E88	Sign_symptom:T182 
+T183	Detailed_description 3510 3520	persistent
+R102	MODIFY Arg1:T183 Arg2:E88	
+T184	Diagnostic_procedure 3552 3576	Pharmacokinetic analysis
+E89	Diagnostic_procedure:T184 
+A15	POLARITY E89 NEG
+T186	Disease_disorder 3758 3771	hydrocephalus
+E91	Disease_disorder:T186 
+T187	Sign_symptom 3787 3795	symptoms
+E92	Sign_symptom:T187 
+T188	Detailed_description 3776 3786	persistent
+R104	MODIFY Arg1:T188 Arg2:E92	
+T189	Diagnostic_procedure 3819 3840	intracranial pressure
+E93	Diagnostic_procedure:T189 
+T190	Therapeutic_procedure 3850 3858	VP shunt
+E94	Therapeutic_procedure:T190 
+T191	Lab_value 3809 3818	increased
+R105	MODIFY Arg1:T191 Arg2:E93	
+T192	Therapeutic_procedure 3875 3892	radiation therapy
+E95	Therapeutic_procedure:T192 
+T193	Biological_structure 3863 3874	whole-brain
+R106	MODIFY Arg1:T193 Arg2:E95	
+T7	Detailed_description 84 108	without disease response
+R9	MODIFY Arg1:T7 Arg2:E2	
+R10	MODIFY Arg1:T7 Arg2:E3	
+A2	POLARITY E23 MAYBE_POS
+*	OVERLAP E5 E23
+R11	IDENTICAL Arg1:E9 Arg2:E22	
+R12	BEFORE Arg1:E7 Arg2:E9	
+T11	Detailed_description 422 431	responded
+R107	MODIFY Arg1:T11 Arg2:E9	
+R108	BEFORE Arg1:E9 Arg2:E10	
+#1	AnnotatorNotes E29	Not sure how to label drug resistance 
+R109	SUB_PROCEDURE Arg1:E36 Arg2:E30	
+R110	SUB_PROCEDURE Arg1:E31 Arg2:E36	
+R111	SUB_PROCEDURE Arg1:E34 Arg2:E8	
+T41	Coreference 1033 1035	It
+E8	Coreference:T41 
+R112	IDENTICAL Arg1:E8 Arg2:E31	
+*	OVERLAP E34 E37 E38 E39 E40 E41 E6 E42
+R113	BEFORE Arg1:E42 Arg2:E43	
+*	OVERLAP E43 E44 E45 E46 E47
+A1	POLARITY E47 MAYBE_POS
+R114	MODIFY Arg1:E48 Arg2:E47	
+*	OVERLAP E48 E49
+R115	MODIFY Arg1:E52 Arg2:E50	
+R116	MODIFY Arg1:E52 Arg2:E51	
+*	OVERLAP E51 E53
+R117	MODIFY Arg1:T107 Arg2:E54	
+R118	SUB_PROCEDURE Arg1:E54 Arg2:E53	
+R119	SUB_PROCEDURE Arg1:E55 Arg2:E54	
+R120	SUB_PROCEDURE Arg1:E56 Arg2:E55	
+R121	SUB_PROCEDURE Arg1:E57 Arg2:E54	
+*	OVERLAP E57 E58 E60
+R122	SUB_PROCEDURE Arg1:E61 Arg2:E60	
+*	OVERLAP E62 E63
+R123	SUB_PROCEDURE Arg1:E64 Arg2:E63	
+R66	MODIFY Arg1:T157 Arg2:E76	
+R67	MODIFY Arg1:E77 Arg2:T157	
+*	OVERLAP E77 E79 E80 E81
+*	OVERLAP E64 E76
+R68	BEFORE Arg1:E81 Arg2:E87	
+*	OVERLAP E87 E88 E89
+T42	Date 3613 3626	After 1 month
+E65	Date:T42 
+R69	BEFORE Arg1:E89 Arg2:E65	
+T43	Diagnostic_procedure 3684 3687	MRI
+E66	Diagnostic_procedure:T43 
+T44	Biological_structure 3678 3683	brain
+R70	MODIFY Arg1:T44 Arg2:E66	
+T45	Date 3701 3715	after 2 months
+E67	Date:T45 
+T46	Biological_structure 3723 3735	cauda equina
+R71	BEFORE Arg1:E66 Arg2:E67	
+T49	Disease_disorder 3672 3674	LM
+E68	Disease_disorder:T49 
+T50	Diagnostic_procedure 3639 3668	partial radiographic response
+E69	Diagnostic_procedure:T50 
+R72	MODIFY Arg1:E68 Arg2:E69	
+*	OVERLAP E65 E69
+R73	SUB_PROCEDURE Arg1:E69 Arg2:E66	
+*	OVERLAP E67 E91 E66 E92 E93
+R74	MODIFY Arg1:T46 Arg2:E66	
+R76	BEFORE Arg1:E93 Arg2:E94	
+*	OVERLAP E94 E95
+R77	BEFORE Arg1:E95 Arg2:E19	
+T15	Dosage 371 383	daily dosing
+R6	MODIFY Arg1:T15 Arg2:E7	
+R48	IDENTICAL Arg1:E26 Arg2:E7	

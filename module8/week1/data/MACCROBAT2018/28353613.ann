@@ -1,0 +1,185 @@
+T1	Age 2 13	58-year-old
+T2	Occupation 14 27	cotton farmer
+T3	Nonbiological_location 49 90	West China Hospital of Sichuan University
+T4	Duration 105 117	over 1-month
+E1	Duration:T4 
+T5	Sign_symptom 139 144	fever
+E2	Sign_symptom:T5 
+T6	Lab_value 146 166	between 38 and 40 °C
+R1	MODIFY Arg1:T6 Arg2:E2	
+T7	Detailed_description 129 138	recurrent
+R2	MODIFY Arg1:T7 Arg2:E2	
+T8	Sign_symptom 180 185	cough
+E3	Sign_symptom:T8 
+T9	Sign_symptom 191 198	dyspnea
+E4	Sign_symptom:T9 
+T10	Detailed_description 169 179	productive
+R3	MODIFY Arg1:T10 Arg2:E3	
+T11	Disease_disorder 240 249	pneumonia
+E5	Disease_disorder:T11 
+T12	Medication 267 276	latamoxef
+E6	Medication:T12 
+T13	Medication 278 287	ofloxacin
+E7	Medication:T13 
+T14	Medication 289 299	vancomycin
+E8	Medication:T14 
+T15	Medication 305 317	voriconazole
+E9	Medication:T15 
+T16	Nonbiological_location 321 335	local hospital
+T17	Sign_symptom 349 370	remission of symptoms
+E10	Sign_symptom:T17 
+A1	POLARITY E10 NEG
+T18	History 404 429	hepatitis B virus carrier
+T19	History 437 466	10 pack-years smoking history
+T20	History 477 562	no history of diabetes mellitus, tuberculosis, and use of glucocorticoids in the past
+T21	Clinical_event 581 590	admission
+E11	Clinical_event:T21 
+T22	Diagnostic_procedure 592 606	blood pressure
+E12	Diagnostic_procedure:T22 
+T23	Lab_value 608 620	145/95 mm Hg
+R4	MODIFY Arg1:T23 Arg2:E12	
+T24	Diagnostic_procedure 622 632	heart rate
+E13	Diagnostic_procedure:T24 
+T25	Lab_value 634 648	120 per minute
+R5	MODIFY Arg1:T25 Arg2:E13	
+T26	Diagnostic_procedure 650 666	respiratory rate
+E14	Diagnostic_procedure:T26 
+T27	Lab_value 668 681	30 per minute
+R6	MODIFY Arg1:T27 Arg2:E14	
+T28	Diagnostic_procedure 687 698	temperature
+E15	Diagnostic_procedure:T28 
+T29	Lab_value 700 707	39.3 °C
+R7	MODIFY Arg1:T29 Arg2:E15	
+T30	Diagnostic_procedure 709 729	Physical examination
+E16	Diagnostic_procedure:T30 
+T31	Sign_symptom 739 763	diminished breath sounds
+E17	Sign_symptom:T31 
+T32	Sign_symptom 772 777	rales
+E18	Sign_symptom:T32 
+A2	POLARITY E18 NEG
+T33	Diagnostic_procedure 794 821	evaluation of other systems
+E19	Diagnostic_procedure:T33 
+T34	Lab_value 826 838	unremarkable
+R8	MODIFY Arg1:T34 Arg2:E19	
+T35	Sign_symptom 855 860	edema
+E20	Sign_symptom:T35 
+T36	Biological_structure 864 875	lower limbs
+T37	Severity 846 854	moderate
+R9	MODIFY Arg1:T37 Arg2:E20	
+R10	MODIFY Arg1:T36 Arg2:E20	
+T38	Diagnostic_procedure 877 906	Arterial blood gases analysis
+E21	Diagnostic_procedure:T38 
+T39	Diagnostic_procedure 914 916	pH
+E22	Diagnostic_procedure:T39 
+T40	Lab_value 917 922	7.361
+R11	MODIFY Arg1:T40 Arg2:E22	
+T41	Diagnostic_procedure 924 928	PCO2
+E23	Diagnostic_procedure:T41 
+T42	Diagnostic_procedure 945 948	PO2
+E24	Diagnostic_procedure:T42 
+T43	Lab_value 929 939	53.5 mm Hg
+T44	Lab_value 949 959	62.8 mm Hg
+R12	MODIFY Arg1:T44 Arg2:E24	
+R13	MODIFY Arg1:T43 Arg2:E23	
+R14	SUB_PROCEDURE Arg1:E22 Arg2:E21	
+R15	SUB_PROCEDURE Arg1:E23 Arg2:E21	
+R16	SUB_PROCEDURE Arg1:E24 Arg2:E21	
+T45	Sign_symptom 1005 1017	leukocytosis
+E25	Sign_symptom:T45 
+T46	Lab_value 1021 1031	49,500/mm3
+T47	Lab_value 1037 1054	97.4% neutrophils
+T48	Diagnostic_procedure 1005 1017	leukocytosis
+E26	Diagnostic_procedure:T48 
+R17	MODIFY Arg1:T46 Arg2:E26	
+R18	MODIFY Arg1:T47 Arg2:E26	
+T49	Diagnostic_procedure 1069 1082	procalcitonin
+E27	Diagnostic_procedure:T49 
+T50	Lab_value 1086 1096	5.16 ng/mL
+R19	MODIFY Arg1:T50 Arg2:E27	
+T51	Diagnostic_procedure 1104 1123	computed tomography
+E28	Diagnostic_procedure:T51 
+T52	Biological_structure 1098 1103	Chest
+R20	MODIFY Arg1:T52 Arg2:E28	
+T53	Sign_symptom 1137 1144	nodules
+E29	Sign_symptom:T53 
+T54	Sign_symptom 1146 1152	masses
+E30	Sign_symptom:T54 
+T55	Sign_symptom 1154 1175	patchy consolidations
+E31	Sign_symptom:T55 
+T56	Sign_symptom 1181 1207	bilateral pleural effusion
+E32	Sign_symptom:T56 
+T57	Diagnostic_procedure 1262 1274	sputum smear
+E33	Diagnostic_procedure:T57 
+T58	Disease_disorder 1384 1402	Nocardia infection
+E34	Disease_disorder:T58 
+A3	POLARITY E34 MAYBE_POS
+T59	Sign_symptom 1349 1356	bacilli
+E35	Sign_symptom:T59 
+T60	Detailed_description 1342 1348	beaded
+T61	Detailed_description 1320 1336	weakly acid-fast
+T62	Detailed_description 1305 1318	gram-positive
+T63	Detailed_description 1292 1303	filamentous
+R21	MODIFY Arg1:T60 Arg2:E35	
+R22	MODIFY Arg1:T61 Arg2:E35	
+R23	MODIFY Arg1:T62 Arg2:E35	
+R24	MODIFY Arg1:T63 Arg2:E35	
+T64	Medication 1416 1445	Trimethoprim-sulfamethoxazole
+E36	Medication:T64 
+T65	Dosage 1447 1466	3 pills per 6 hours
+R25	MODIFY Arg1:T65 Arg2:E36	
+T66	Therapeutic_procedure 1485 1496	ventilation
+E37	Therapeutic_procedure:T66 
+T67	Detailed_description 1473 1484	noninvasive
+R26	MODIFY Arg1:T67 Arg2:E37	
+T68	Diagnostic_procedure 1524 1538	Sputum culture
+E38	Diagnostic_procedure:T68 
+T69	Lab_value 1546 1573	growth of numerous bacteria
+R27	MODIFY Arg1:T69 Arg2:E38	
+T70	Sign_symptom 1611 1629	N otitidiscaviarum
+E39	Sign_symptom:T70 
+#1	AnnotatorNotes E39	Nocardia species
+T71	Diagnostic_procedure 1647 1664	mass spectroscopy
+E40	Diagnostic_procedure:T71 
+T72	Date 1668 1689	day 6 after admission
+E41	Date:T72 
+T73	Medication 1700 1711	Antibiotics
+E42	Medication:T73 
+T74	Medication 1734 1742	amikacin
+E43	Medication:T74 
+T75	Medication 1747 1755	imipenem
+E44	Medication:T75 
+T76	Medication 1771 1800	trimethoprim-sulfamethoxazole
+E45	Medication:T76 
+R28	SUB_PROCEDURE Arg1:E43 Arg2:E42	
+R29	SUB_PROCEDURE Arg1:E44 Arg2:E42	
+R30	SUB_PROCEDURE Arg1:E45 Arg2:E42	
+T77	Sign_symptom 1871 1879	improved
+E46	Sign_symptom:T77 
+A4	POLARITY E46 NEG
+T78	Outcome 1907 1911	died
+E47	Outcome:T78 
+T79	Sign_symptom 1924 1949	respiratory insufficiency
+E48	Sign_symptom:T79 
+T80	Severity 1917 1923	severe
+R31	MODIFY Arg1:T80 Arg2:E48	
+T81	Date 1957 1974	13th hospital day
+E49	Date:T81 
+T82	Clinical_event 32 41	presented
+E50	Clinical_event:T82 
+R32	MODIFY Arg1:T3 Arg2:E50	
+R33	MODIFY Arg1:E1 Arg2:E2	
+*	OVERLAP E50 E2 E3 E4
+R34	AFTER Arg1:E4 Arg2:E5	
+*	OVERLAP E5 E6 E7 E8 E9
+R35	MODIFY Arg1:T16 Arg2:E5	
+R36	BEFORE Arg1:E9 Arg2:E10	
+R37	BEFORE Arg1:E10 Arg2:E11	
+*	OVERLAP E11 E12 E13 E14 E15 E16 E17 E18 E19 E20 E21 E26 E27 E28 E33 E35 E34
+R38	BEFORE Arg1:E34 Arg2:E36	
+*	OVERLAP E36 E37
+R39	BEFORE Arg1:E37 Arg2:E38	
+*	OVERLAP E38 E39 E40 E41
+R40	BEFORE Arg1:E41 Arg2:E42	
+R41	BEFORE Arg1:E42 Arg2:E46	
+R42	BEFORE Arg1:E46 Arg2:E47	
+*	OVERLAP E47 E48 E49

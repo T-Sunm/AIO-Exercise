@@ -1,0 +1,551 @@
+T1	Age 2 13	22-year-old
+T2	Personal_background 14 21	Tibetan
+T3	Sex 22 25	man
+T4	History 26 66	without significant past medical history
+T5	Disease_disorder 86 108	pulmonary tuberculosis
+E1	Disease_disorder:T5 
+T6	Disease_disorder 110 113	PTB
+E2	Disease_disorder:T6 
+R1	IDENTICAL Arg1:E2 Arg2:E1	
+T7	Diagnostic_procedure 136 147	examination
+E3	Diagnostic_procedure:T7 
+T8	Detailed_description 120 127	routine
+R2	MODIFY Arg1:T8 Arg2:E3	
+T9	Medication 161 176	anti-TB therapy
+E4	Medication:T9 
+T10	Medication 191 200	isoniazid
+E5	Medication:T10 
+T11	Medication 218 221	RMP
+E6	Medication:T11 
+T12	Medication 234 244	ethambutol
+E7	Medication:T12 
+T13	Medication 266 278	pyrazinamide
+E8	Medication:T13 
+R3	SUB_PROCEDURE Arg1:E5 Arg2:E4	
+R4	SUB_PROCEDURE Arg1:E6 Arg2:E4	
+R5	SUB_PROCEDURE Arg1:E7 Arg2:E4	
+R6	SUB_PROCEDURE Arg1:E8 Arg2:E4	
+T14	Medication 202 205	INH
+E9	Medication:T14 
+R7	IDENTICAL Arg1:E9 Arg2:E5	
+T15	Dosage 207 215	300 mg/d
+R8	MODIFY Arg1:T15 Arg2:E5	
+T16	Dosage 223 231	450 mg/d
+R9	MODIFY Arg1:T16 Arg2:E6	
+T17	Medication 246 249	EMB
+E10	Medication:T17 
+T18	Medication 280 283	PZA
+E11	Medication:T18 
+R10	IDENTICAL Arg1:E10 Arg2:E7	
+R11	IDENTICAL Arg1:E11 Arg2:E8	
+T19	Dosage 251 259	750 mg/d
+T20	Dosage 285 294	1500 mg/d
+R12	MODIFY Arg1:T19 Arg2:E7	
+R13	MODIFY Arg1:T20 Arg2:E8	
+T21	Duration 303 309	1 week
+E12	Duration:T21 
+T22	Coreference 324 331	therapy
+E13	Coreference:T22 
+R14	IDENTICAL Arg1:E13 Arg2:E4	
+T23	Clinical_event 340 348	admitted
+E14	Clinical_event:T23 
+T24	Nonbiological_location 356 379	Tibet People's Hospital
+R15	MODIFY Arg1:T24 Arg2:E14	
+T25	Sign_symptom 391 401	hemorrhage
+E15	Sign_symptom:T25 
+T26	Biological_structure 385 390	nasal
+R16	MODIFY Arg1:T26 Arg2:E15	
+T27	Diagnostic_procedure 410 418	platelet
+E16	Diagnostic_procedure:T27 
+T28	Diagnostic_procedure 420 423	PLT
+E17	Diagnostic_procedure:T28 
+R17	IDENTICAL Arg1:E17 Arg2:E16	
+T29	Lab_value 435 446	0.4 × 109/L
+E18	Lab_value:T29 
+R18	MODIFY Arg1:E18 Arg2:E16	
+T30	Sign_symptom 480 489	Epistaxis
+E19	Sign_symptom:T30 
+A1	POLARITY E19 NEG
+T31	Therapeutic_procedure 506 527	symptomatic treatment
+E20	Therapeutic_procedure:T31 
+T32	Date 529 543	Two days later
+E21	Date:T32 
+T33	Sign_symptom 558 570	hematochezia
+E22	Sign_symptom:T33 
+T34	Sign_symptom 572 581	hematuria
+E23	Sign_symptom:T34 
+T35	Sign_symptom 587 594	purpura
+E24	Sign_symptom:T35 
+T36	Therapeutic_procedure 609 620	transfusion
+E25	Therapeutic_procedure:T36 
+T37	Medication 624 643	fresh-frozen plasma
+E26	Medication:T37 
+T38	Nonbiological_location 661 683	another local hospital
+T39	Medication 648 657	platelets
+E27	Medication:T39 
+#1	AnnotatorNotes E27	Note that platelets are not a diagnostic here
+R19	MODIFY Arg1:E26 Arg2:E25	
+R20	MODIFY Arg1:E27 Arg2:E25	
+R21	MODIFY Arg1:T38 Arg2:E25	
+T40	Date 685 700	Four days later
+E28	Date:T40 
+T41	Date 702 719	November 18, 2015
+E29	Date:T41 
+T42	Clinical_event 729 740	transferred
+E30	Clinical_event:T42 
+T43	Nonbiological_location 748 767	West China Hospital
+R22	MODIFY Arg1:T43 Arg2:E30	
+T44	Therapeutic_procedure 791 800	treatment
+E31	Therapeutic_procedure:T44 
+T45	Qualitative_concept 779 790	ineffective
+R23	MODIFY Arg1:T45 Arg2:E31	
+R24	CAUSE Arg1:E31 Arg2:E30	
+T46	Diagnostic_procedure 805 825	physical examination
+E32	Diagnostic_procedure:T46 
+T47	Sign_symptom 845 851	pallor
+E33	Sign_symptom:T47 
+T48	Sign_symptom 858 866	jaundice
+E34	Sign_symptom:T48 
+T49	Severity 853 857	mild
+R25	MODIFY Arg1:T49 Arg2:E34	
+T50	Biological_structure 874 880	sclera
+R26	MODIFY Arg1:T50 Arg2:E34	
+T51	Sign_symptom 882 889	purpura
+E35	Sign_symptom:T51 
+T52	Sign_symptom 891 902	tachycardia
+E36	Sign_symptom:T52 
+T53	Diagnostic_procedure 904 914	heart rate
+E37	Diagnostic_procedure:T53 
+T54	Lab_value 915 922	132/min
+E38	Lab_value:T54 
+R27	MODIFY Arg1:E38 Arg2:E37	
+T55	Sign_symptom 928 946	weak breath sounds
+E39	Sign_symptom:T55 
+T56	Biological_structure 954 975	base of the left lung
+R28	MODIFY Arg1:T56 Arg2:E39	
+T57	Diagnostic_procedure 977 995	Laboratory results
+E40	Diagnostic_procedure:T57 
+T58	Clinical_event 999 1008	admission
+E41	Clinical_event:T58 
+T59	Disease_disorder 1019 1022	DIC
+E42	Disease_disorder:T59 
+#2	AnnotatorNotes E42	Disseminated intravascular coagulation
+T60	Diagnostic_procedure 1024 1040	prothrombin time
+E43	Diagnostic_procedure:T60 
+T61	Diagnostic_procedure 1089 1119	international normalized ratio
+E44	Diagnostic_procedure:T61 
+T62	Diagnostic_procedure 1153 1163	fibrinogen
+E45	Diagnostic_procedure:T62 
+T63	Diagnostic_procedure 1203 1211	D-dimers
+E46	Diagnostic_procedure:T63 
+T64	Diagnostic_procedure 1252 1278	fibrin degradation product
+E47	Diagnostic_procedure:T64 
+T65	Diagnostic_procedure 1318 1321	PLT
+E48	Diagnostic_procedure:T65 
+R29	SUB_PROCEDURE Arg1:E43 Arg2:E40	
+R30	SUB_PROCEDURE Arg1:E44 Arg2:E40	
+R31	SUB_PROCEDURE Arg1:E45 Arg2:E40	
+R32	SUB_PROCEDURE Arg1:E46 Arg2:E40	
+R33	SUB_PROCEDURE Arg1:E47 Arg2:E40	
+R34	SUB_PROCEDURE Arg1:E48 Arg2:E40	
+T66	Lab_value 1042 1054	17.8 seconds
+E49	Lab_value:T66 
+R35	MODIFY Arg1:E49 Arg2:E43	
+T67	Lab_value 1121 1125	1.53
+E50	Lab_value:T67 
+R36	MODIFY Arg1:E50 Arg2:E44	
+T68	Lab_value 1165 1173	1.13 g/L
+E51	Lab_value:T68 
+R37	MODIFY Arg1:E51 Arg2:E45	
+T69	Lab_value 1213 1223	23.45 mg/L
+E52	Lab_value:T69 
+R38	MODIFY Arg1:E52 Arg2:E46	
+T70	Lab_value 1280 1289	60.4 mg/L
+E53	Lab_value:T70 
+R39	MODIFY Arg1:E53 Arg2:E47	
+T71	Lab_value 1323 1332	2 × 109/L
+E54	Lab_value:T71 
+R40	MODIFY Arg1:E54 Arg2:E48	
+T72	Diagnostic_procedure 1403 1419	white blood cell
+E55	Diagnostic_procedure:T72 
+T73	Diagnostic_procedure 1465 1475	hemoglobin
+E56	Diagnostic_procedure:T73 
+T74	Diagnostic_procedure 1513 1528	total bilirubin
+E57	Diagnostic_procedure:T74 
+T75	Diagnostic_procedure 1575 1591	direct bilirubin
+E58	Diagnostic_procedure:T75 
+T76	Diagnostic_procedure 1635 1661	aspartate aminotransferase
+E59	Diagnostic_procedure:T76 
+T77	Diagnostic_procedure 1695 1719	alanine aminotransferase
+E60	Diagnostic_procedure:T77 
+T78	Diagnostic_procedure 1754 1775	lactate dehydrogenase
+E61	Diagnostic_procedure:T78 
+T79	Diagnostic_procedure 1814 1833	serum urea nitrogen
+E62	Diagnostic_procedure:T79 
+T80	Diagnostic_procedure 1881 1899	C-reactive protein
+E63	Diagnostic_procedure:T80 
+T81	Diagnostic_procedure 1937 1949	complement 3
+E64	Diagnostic_procedure:T81 
+T82	Diagnostic_procedure 1997 2009	complement 4
+E65	Diagnostic_procedure:T82 
+R41	SUB_PROCEDURE Arg1:E55 Arg2:E40	
+R42	SUB_PROCEDURE Arg1:E56 Arg2:E40	
+R43	SUB_PROCEDURE Arg1:E57 Arg2:E40	
+R44	SUB_PROCEDURE Arg1:E58 Arg2:E40	
+R45	SUB_PROCEDURE Arg1:E59 Arg2:E40	
+R46	SUB_PROCEDURE Arg1:E60 Arg2:E40	
+R47	SUB_PROCEDURE Arg1:E61 Arg2:E40	
+R48	SUB_PROCEDURE Arg1:E62 Arg2:E40	
+R49	SUB_PROCEDURE Arg1:E63 Arg2:E40	
+R50	SUB_PROCEDURE Arg1:E64 Arg2:E40	
+R51	SUB_PROCEDURE Arg1:E65 Arg2:E40	
+T83	Diagnostic_procedure 1421 1424	WBC
+E66	Diagnostic_procedure:T83 
+R52	IDENTICAL Arg1:E66 Arg2:E55	
+T84	Lab_value 1426 1439	48.38 × 109/L
+E67	Lab_value:T84 
+R53	MODIFY Arg1:E67 Arg2:E55	
+T85	Lab_value 1477 1483	65 g/L
+E68	Lab_value:T85 
+R54	MODIFY Arg1:E68 Arg2:E56	
+T86	Lab_value 1530 1541	30.8 umol/L
+E69	Lab_value:T86 
+R55	MODIFY Arg1:E69 Arg2:E57	
+T87	Lab_value 1593 1604	16.6 umol/L
+E70	Lab_value:T87 
+R56	MODIFY Arg1:E70 Arg2:E58	
+T88	Lab_value 1663 1669	75 U/L
+E71	Lab_value:T88 
+R57	MODIFY Arg1:E71 Arg2:E59	
+T89	Lab_value 1721 1728	293 U/L
+E72	Lab_value:T89 
+R58	MODIFY Arg1:E72 Arg2:E60	
+T90	Lab_value 1777 1784	380 U/L
+E73	Lab_value:T90 
+R59	MODIFY Arg1:E73 Arg2:E61	
+T91	Lab_value 1835 1847	13.01 mmol/L
+E74	Lab_value:T91 
+R60	MODIFY Arg1:E74 Arg2:E62	
+T92	Lab_value 1901 1911	16.70 mg/L
+E75	Lab_value:T92 
+R61	MODIFY Arg1:E75 Arg2:E63	
+T93	Lab_value 1951 1959	0.41 g/L
+E76	Lab_value:T93 
+R62	MODIFY Arg1:E76 Arg2:E64	
+T94	Lab_value 2011 2021	0.0797 g/L
+E77	Lab_value:T94 
+R63	MODIFY Arg1:E77 Arg2:E65	
+T95	Diagnostic_procedure 2063 2073	urine test
+E78	Diagnostic_procedure:T95 
+T96	Diagnostic_procedure 2081 2091	blood cell
+E79	Diagnostic_procedure:T96 
+R64	SUB_PROCEDURE Arg1:E79 Arg2:E78	
+T97	Lab_value 2092 2104	>330 Cell/uL
+E80	Lab_value:T97 
+R65	MODIFY Arg1:E80 Arg2:E79	
+T98	Diagnostic_procedure 2106 2115	leukocyte
+E81	Diagnostic_procedure:T98 
+T99	Diagnostic_procedure 2129 2136	protein
+E82	Diagnostic_procedure:T99 
+T100	Diagnostic_procedure 2148 2160	urobilinogen
+E83	Diagnostic_procedure:T100 
+T101	Lab_value 2116 2127	250 Cell/uL
+E84	Lab_value:T101 
+R66	MODIFY Arg1:E84 Arg2:E81	
+R67	SUB_PROCEDURE Arg1:E81 Arg2:E78	
+R68	SUB_PROCEDURE Arg1:E82 Arg2:E78	
+R69	SUB_PROCEDURE Arg1:E83 Arg2:E78	
+T102	Lab_value 2137 2142	2 g/L
+E85	Lab_value:T102 
+T103	Lab_value 2161 2170	70 umol/L
+E86	Lab_value:T103 
+R70	MODIFY Arg1:E86 Arg2:E83	
+T104	Diagnostic_procedure 2180 2190	stool test
+E87	Diagnostic_procedure:T104 
+T105	Diagnostic_procedure 2198 2212	red blood cell
+E88	Diagnostic_procedure:T105 
+T106	Diagnostic_procedure 2220 2236	white blood cell
+E89	Diagnostic_procedure:T106 
+T107	Diagnostic_procedure 2244 2261	occult blood test
+E90	Diagnostic_procedure:T107 
+T108	Lab_value 2263 2264	+
+E91	Lab_value:T108 
+R71	MODIFY Arg1:E91 Arg2:E90	
+T109	Lab_value 2237 2242	1+/HP
+E92	Lab_value:T109 
+T110	Lab_value 2213 2218	4+/HP
+E93	Lab_value:T110 
+R72	MODIFY Arg1:E92 Arg2:E89	
+R73	MODIFY Arg1:E93 Arg2:E88	
+R74	SUB_PROCEDURE Arg1:E88 Arg2:E87	
+R75	SUB_PROCEDURE Arg1:E89 Arg2:E87	
+R76	SUB_PROCEDURE Arg1:E90 Arg2:E87	
+T111	Diagnostic_procedure 2267 2273	T-SPOT
+E94	Diagnostic_procedure:T111 
+T112	Lab_value 2285 2293	positive
+E95	Lab_value:T112 
+R77	MODIFY Arg1:E95 Arg2:E94	
+T113	Diagnostic_procedure 2331 2360	analysis for mycobacterium TB
+E96	Diagnostic_procedure:T113 
+T114	Detailed_description 2295 2330	Real-time polymerase chain reaction
+T115	Detailed_description 2364 2370	sputum
+R78	MODIFY Arg1:T115 Arg2:E96	
+R79	MODIFY Arg1:T114 Arg2:E96	
+T116	Lab_value 2375 2383	positive
+E97	Lab_value:T116 
+R80	MODIFY Arg1:E97 Arg2:E96	
+T117	Diagnostic_procedure 2385 2405	Acid fast stain test
+E98	Diagnostic_procedure:T117 
+T118	Detailed_description 2411 2423	sputum smear
+R81	MODIFY Arg1:T118 Arg2:E98	
+T119	Lab_value 2428 2436	negative
+E99	Lab_value:T119 
+R82	MODIFY Arg1:E99 Arg2:E98	
+T120	Diagnostic_procedure 2444 2463	computed tomography
+E100	Diagnostic_procedure:T120 
+T121	Biological_structure 2438 2443	Chest
+R83	MODIFY Arg1:T121 Arg2:E100	
+T122	Diagnostic_procedure 2465 2467	CT
+E101	Diagnostic_procedure:T122 
+R84	IDENTICAL Arg1:E101 Arg2:E100	
+T123	Clinical_event 2472 2481	admission
+E102	Clinical_event:T123 
+T124	Date 2483 2500	November 18, 2015
+E103	Date:T124 
+T125	Sign_symptom 2517 2528	infiltrates
+E104	Sign_symptom:T125 
+T126	Biological_structure 2536 2563	upper lobe of the left lung
+R85	MODIFY Arg1:T126 Arg2:E104	
+T127	Disease_disorder 2570 2586	pleural effusion
+E105	Disease_disorder:T127 
+T128	Disease_disorder 2592 2612	pericardial effusion
+E106	Disease_disorder:T128 
+T129	Detailed_description 2565 2569	left
+R86	MODIFY Arg1:T129 Arg2:E105	
+T130	Sign_symptom 2629 2640	enlargement
+E107	Sign_symptom:T130 
+T131	Biological_structure 2644 2667	mediastinal lymph nodes
+R87	MODIFY Arg1:T131 Arg2:E107	
+T132	Diagnostic_procedure 2679 2689	ultrasound
+E108	Diagnostic_procedure:T132 
+T133	Biological_structure 2669 2678	Abdominal
+R88	MODIFY Arg1:T133 Arg2:E108	
+T134	Sign_symptom 2715 2720	fluid
+E109	Sign_symptom:T134 
+T135	Qualitative_concept 2699 2711	small amount
+R89	MODIFY Arg1:T135 Arg2:E109	
+T136	Biological_structure 2737 2742	liver
+T137	Biological_structure 2747 2753	spleen
+R90	MODIFY Arg1:T136 Arg2:E109	
+R91	MODIFY Arg1:T137 Arg2:E109	
+T138	Diagnostic_procedure 2755 2772	Serologic markers
+E110	Diagnostic_procedure:T138 
+T139	Disease_disorder 2808 2823	viral hepatitis
+E111	Disease_disorder:T139 
+T140	Detailed_description 2800 2807	chronic
+T141	Detailed_description 2791 2796	acute
+R92	MODIFY Arg1:T140 Arg2:E111	
+R93	MODIFY Arg1:T141 Arg2:E111	
+T142	Lab_value 2778 2786	negative
+E112	Lab_value:T142 
+T143	Disease_disorder 2825 2828	HIV
+E113	Disease_disorder:T143 
+T144	Diagnostic_procedure 2830 2847	direct Coomb test
+E114	Diagnostic_procedure:T144 
+T145	Disease_disorder 2853 2873	autoimmune hepatitis
+E115	Disease_disorder:T145 
+R94	MODIFY Arg1:E112 Arg2:E110	
+A2	POLARITY E111 NEG
+A3	POLARITY E113 NEG
+#3	AnnotatorNotes E111	Note that this is actually a test for viral hepatitis, but is implicitly saying the patient does not have viral hepatitis
+A4	POLARITY E115 NEG
+T146	Diagnostic_procedure 2892 2908	film and culture
+E116	Diagnostic_procedure:T146 
+T147	Detailed_description 2875 2891	Peripheral blood
+R95	MODIFY Arg1:T147 Arg2:E116	
+T148	Lab_value 2914 2922	negative
+E117	Lab_value:T148 
+R96	MODIFY Arg1:E117 Arg2:E116	
+T149	Diagnostic_procedure 2936 2960	smear and medulloculture
+E118	Diagnostic_procedure:T149 
+T150	Detailed_description 2924 2935	Bone marrow
+R97	MODIFY Arg1:T150 Arg2:E118	
+T151	Lab_value 2971 2979	negative
+E119	Lab_value:T151 
+R98	MODIFY Arg1:E119 Arg2:E118	
+T152	Medication 2985 3007	antituberculosis drugs
+E120	Medication:T152 
+A5	POLARITY E120 NEG
+T153	Clinical_event 3044 3053	admission
+E121	Clinical_event:T153 
+T154	Therapeutic_procedure 3063 3070	fasting
+E122	Therapeutic_procedure:T154 
+T156	Therapeutic_procedure 3279 3309	nutrition supportive treatment
+E124	Therapeutic_procedure:T156 
+T155	Administration 3094 3102	infusion
+T157	Medication 3119 3125	plasma
+E123	Medication:T157 
+T158	Detailed_description 3106 3118	fresh-frozen
+R99	MODIFY Arg1:T158 Arg2:E123	
+R100	MODIFY Arg1:T155 Arg2:E123	
+T159	Medication 3127 3135	platelet
+E125	Medication:T159 
+T160	Medication 3137 3159	packed red blood cells
+E126	Medication:T160 
+T161	Administration 3161 3172	intravenous
+T162	Medication 3173 3188	immune globulin
+E127	Medication:T162 
+R101	MODIFY Arg1:T161 Arg2:E127	
+T163	Medication 3202 3222	human thrombopoietin
+E128	Medication:T163 
+T164	Detailed_description 3190 3201	recombinant
+R102	MODIFY Arg1:T164 Arg2:E128	
+T165	Medication 3224 3234	omeprazole
+E129	Medication:T165 
+T166	Medication 3240 3267	polyene phosphatidylcholine
+E130	Medication:T166 
+T167	Date 3311 3326	Five days after
+E131	Date:T167 
+T168	Therapeutic_procedure 3327 3334	fasting
+E132	Therapeutic_procedure:T168 
+T169	Date 3336 3353	November 23, 2015
+E133	Date:T169 
+T170	Medication 3400 3403	EMB
+E134	Medication:T170 
+T171	Medication 3405 3417	moxifloxacin
+E135	Medication:T171 
+T172	Medication 3423 3431	amikacin
+E136	Medication:T172 
+T173	Sign_symptom 3464 3474	hemorrhage
+E137	Sign_symptom:T173 
+A6	POLARITY E137 NEG
+T174	Date 3476 3492	Eight days after
+E138	Date:T174 
+T175	Clinical_event 3493 3502	admission
+E139	Clinical_event:T175 
+T176	Date 3504 3521	November 26, 2015
+E140	Date:T176 
+T177	Diagnostic_procedure 3528 3536	platelet
+E141	Diagnostic_procedure:T177 
+T178	Lab_value 3548 3553	risen
+E142	Lab_value:T178 
+R103	MODIFY Arg1:E142 Arg2:E141	
+T179	Medication 3565 3568	INH
+E143	Medication:T179 
+T180	Dosage 3570 3578	200 mg/d
+T181	Administration 3580 3600	intravenously guttae
+R104	MODIFY Arg1:T180 Arg2:E143	
+R105	MODIFY Arg1:T181 Arg2:E143	
+T182	Date 3622 3635	24 days after
+E144	Date:T182 
+T183	Clinical_event 3636 3645	admission
+E145	Clinical_event:T183 
+T184	Date 3647 3664	December 11, 2015
+E146	Date:T184 
+T185	Diagnostic_procedure 3677 3697	liver function tests
+E147	Diagnostic_procedure:T185 
+T186	Diagnostic_procedure 3702 3710	platelet
+E148	Diagnostic_procedure:T186 
+T187	Lab_value 3730 3736	normal
+E149	Lab_value:T187 
+R106	MODIFY Arg1:E149 Arg2:E148	
+R107	MODIFY Arg1:E149 Arg2:E147	
+T188	Diagnostic_procedure 3747 3766	laboratory features
+E150	Diagnostic_procedure:T188 
+T189	Date 3794 3809	One month later
+E151	Date:T189 
+T190	Date 3811 3828	December 17, 2015
+E152	Date:T190 
+T191	Diagnostic_procedure 3846 3848	CT
+E153	Diagnostic_procedure:T191 
+T192	Biological_structure 3840 3845	chest
+R108	MODIFY Arg1:T192 Arg2:E153	
+T193	Sign_symptom 3871 3883	infiltration
+E154	Sign_symptom:T193 
+A7	POLARITY E154 NEG
+T194	Sign_symptom 3885 3896	hydrothorax
+E155	Sign_symptom:T194 
+A8	POLARITY E155 NEG
+T195	Disease_disorder 3902 3922	pericardial effusion
+E156	Disease_disorder:T195 
+A9	POLARITY E156 NEG
+T196	Date 3950 3969	about 4 weeks after
+E157	Date:T196 
+T197	Clinical_event 3970 3979	admission
+E158	Clinical_event:T197 
+T198	Outcome 3993 4002	recovered
+E159	Outcome:T198 
+T199	Clinical_event 4007 4020	left hospital
+E160	Clinical_event:T199 
+T200	Medication 4026 4029	INH
+E161	Medication:T200 
+T201	Dosage 4031 4039	300 mg/d
+R109	MODIFY Arg1:T201 Arg2:E161	
+T202	Medication 4042 4045	EMB
+E162	Medication:T202 
+T203	Dosage 4047 4055	750 mg/d
+R110	MODIFY Arg1:T203 Arg2:E162	
+T204	Medication 4058 4070	levofloxacin
+E163	Medication:T204 
+T205	Medication 4087 4099	streptomycin
+E164	Medication:T205 
+T206	Dosage 4072 4080	500 mg/d
+T207	Dosage 4101 4112	750,000 U/d
+R111	MODIFY Arg1:T207 Arg2:E164	
+R112	MODIFY Arg1:T206 Arg2:E163	
+T208	Administration 4114 4137	intramuscular injection
+R113	MODIFY Arg1:T208 Arg2:E164	
+T209	Disease_disorder 4167 4170	DIC
+E165	Disease_disorder:T209 
+A10	POLARITY E165 NEG
+T210	Sign_symptom 4174 4184	hemorrhage
+E166	Sign_symptom:T210 
+A11	POLARITY E166 NEG
+T211	Duration 4192 4200	8 months
+E167	Duration:T211 
+T212	Clinical_event 4204 4213	follow-up
+E168	Clinical_event:T212 
+T213	Diagnostic_procedure 4268 4270	CT
+E169	Diagnostic_procedure:T213 
+A12	POLARITY E169 NEG
+T214	Biological_structure 4262 4267	chest
+T215	Clinical_event 4281 4290	discharge
+E170	Clinical_event:T215 
+R114	MODIFY Arg1:T214 Arg2:E169	
+*	OVERLAP E1 E3
+R115	BEFORE Arg1:E3 Arg2:E4	
+*	OVERLAP E4 E12 E13
+R116	BEFORE Arg1:E13 Arg2:E14	
+*	OVERLAP E14 E15 E16
+R117	BEFORE Arg1:E16 Arg2:E19	
+R118	AFTER Arg1:E19 Arg2:E20	
+R119	BEFORE Arg1:E20 Arg2:E21	
+*	OVERLAP E21 E22 E23 E24 E25 E26 E27
+R120	BEFORE Arg1:E27 Arg2:E28	
+*	OVERLAP E28 E29 E30 E31 E32 E33 E34 E35 E36 E37 E39 E40 E41 E42 E78 E87 E94 E96 E98 E100 E102 E103 E104 E105 E106 E107 E108 E109 E110 E111 E113 E114 E115 E116 E118
+R121	BEFORE Arg1:E118 Arg2:E120	
+R122	AFTER Arg1:E120 Arg2:E121	
+R123	BEFORE Arg1:E121 Arg2:E122	
+*	OVERLAP E122 E123 E125 E126 E127 E128 E129 E130 E124
+R124	BEFORE Arg1:E124 Arg2:E131	
+R125	AFTER Arg1:E131 Arg2:E132	
+R126	BEFORE Arg1:E132 Arg2:E133	
+*	OVERLAP E133 E134 E135 E136 E137
+R127	BEFORE Arg1:E137 Arg2:E138	
+R128	AFTER Arg1:E138 Arg2:E139	
+R129	BEFORE Arg1:E139 Arg2:E140	
+*	OVERLAP E140 E141
+R130	BEFORE Arg1:E141 Arg2:E143	
+*	OVERLAP E143 E144
+R131	AFTER Arg1:E144 Arg2:E145	
+R132	BEFORE Arg1:E145 Arg2:E146	
+*	OVERLAP E146 E147 E148 E150
+R133	BEFORE Arg1:E150 Arg2:E151	
+*	OVERLAP E151 E152 E153 E154 E155 E156
+R134	BEFORE Arg1:E156 Arg2:E157	
+R135	AFTER Arg1:E157 Arg2:E158	
+R136	BEFORE Arg1:E158 Arg2:E159	
+*	OVERLAP E159 E160 E161 E162 E163 E164
+R137	BEFORE Arg1:E164 Arg2:E165	
+*	OVERLAP E165 E166 E167 E168 E169
+R138	AFTER Arg1:E169 Arg2:E170	

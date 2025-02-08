@@ -1,0 +1,501 @@
+T1	Age 3 13	8-year-old
+T2	Sex 14 17	boy
+T3	Activity 22 30	referred
+E1	Activity:T3 
+T4	Sign_symptom 49 56	fatigue
+E2	Sign_symptom:T4 
+T5	Family_history 95 121	non-consanguineous parents
+T6	Clinical_event 65 69	born
+E3	Clinical_event:T6 
+T7	Diagnostic_procedure 78 86	weighing
+E4	Diagnostic_procedure:T7 
+T8	Lab_value 87 91	4 kg
+E5	Lab_value:T8 
+R1	MODIFY Arg1:E5 Arg2:E4	
+T9	Medication 3718 3733	insulin detemir
+E6	Medication:T9 
+T10	Diagnostic_procedure 1403 1410	lactate
+E7	Diagnostic_procedure:T10 
+T11	Detailed_description 1395 1402	Fasting
+R2	MODIFY Arg1:T11 Arg2:E7	
+T12	Lab_value 1415 1423	elevated
+E8	Lab_value:T12 
+T13	Lab_value 1427 1437	3.8 mmol/L
+E9	Lab_value:T13 
+R3	MODIFY Arg1:E8 Arg2:E7	
+R4	MODIFY Arg1:E9 Arg2:E7	
+T14	Diagnostic_procedure 1439 1463	Neurological examination
+E10	Diagnostic_procedure:T14 
+T15	Lab_value 1475 1499	upper motor neuron signs
+E11	Lab_value:T15 
+T16	Biological_structure 1507 1518	lower limbs
+T17	Detailed_description 1519 1530	bilaterally
+R5	MODIFY Arg1:T17 Arg2:E11	
+R6	MODIFY Arg1:T16 Arg2:E11	
+R7	MODIFY Arg1:E11 Arg2:E10	
+T18	Diagnostic_procedure 1541 1557	cerebellar signs
+E12	Diagnostic_procedure:T18 
+T19	Lab_value 1563 1571	negative
+E13	Lab_value:T19 
+R8	MODIFY Arg1:E13 Arg2:E12	
+R9	SUB_PROCEDURE Arg1:E12 Arg2:E10	
+T20	Diagnostic_procedure 1573 1576	MRI
+E14	Diagnostic_procedure:T20 
+T21	Biological_structure 1584 1589	brain
+R10	MODIFY Arg1:T21 Arg2:E14	
+T22	Sign_symptom 1603 1614	volume loss
+E15	Sign_symptom:T22 
+T23	Sign_symptom 1627 1637	prominence
+E16	Sign_symptom:T23 
+T24	Severity 1620 1626	slight
+R11	MODIFY Arg1:T24 Arg2:E16	
+T25	Biological_structure 1645 1661	cerebellar folia
+R12	MODIFY Arg1:T25 Arg2:E16	
+T26	Diagnostic_procedure 1748 1770	lactate:pyruvate ratio
+E17	Diagnostic_procedure:T26 
+T27	Lab_value 1775 1783	elevated
+E18	Lab_value:T27 
+T28	Lab_value 1785 1789	30:1
+E19	Lab_value:T28 
+R13	MODIFY Arg1:E18 Arg2:E17	
+R14	MODIFY Arg1:E19 Arg2:E17	
+T29	Diagnostic_procedure 174 180	Height
+E20	Diagnostic_procedure:T29 
+T30	Diagnostic_procedure 185 191	weight
+E21	Diagnostic_procedure:T30 
+T31	Lab_value 204 208	10th
+E22	Lab_value:T31 
+T32	Lab_value 213 217	50th
+E23	Lab_value:T32 
+R15	MODIFY Arg1:E22 Arg2:E20	
+R16	MODIFY Arg1:E23 Arg2:E21	
+T33	Detailed_description 218 226	centiles
+R17	MODIFY Arg1:T33 Arg2:E20	
+R18	MODIFY Arg1:T33 Arg2:E21	
+T34	Diagnostic_procedure 254 265	examination
+E24	Diagnostic_procedure:T34 
+T35	Sign_symptom 290 302	hepatomegaly
+E25	Sign_symptom:T35 
+T36	Biological_structure 330 349	right costal margin
+R19	MODIFY Arg1:T36 Arg2:E25	
+T37	Distance 313 325	3.5 cm below
+R20	MODIFY Arg1:T37 Arg2:T36	
+T38	Diagnostic_procedure 359 380	laboratory evaluation
+E26	Diagnostic_procedure:T38 
+T39	Sign_symptom 414 421	anaemia
+E27	Sign_symptom:T39 
+T40	Diagnostic_procedure 1325 1330	ALAS2
+E28	Diagnostic_procedure:T40 
+T41	Diagnostic_procedure 1332 1336	ABC7
+E29	Diagnostic_procedure:T41 
+T42	Diagnostic_procedure 1338 1342	FECH
+E30	Diagnostic_procedure:T42 
+T43	Diagnostic_procedure 1347 1351	PUS1
+E31	Diagnostic_procedure:T43 
+T44	Diagnostic_procedure 1268 1323	Analysis of several genes responsible for hereditary SA
+E32	Diagnostic_procedure:T44 
+R21	SUB_PROCEDURE Arg1:E28 Arg2:E32	
+R22	SUB_PROCEDURE Arg1:E29 Arg2:E32	
+R23	SUB_PROCEDURE Arg1:E30 Arg2:E32	
+R24	SUB_PROCEDURE Arg1:E31 Arg2:E32	
+T45	Sign_symptom 1374 1393	pathogenic variants
+E33	Sign_symptom:T45 
+A1	POLARITY E33 NEG
+T46	Diagnostic_procedure 1181 1187	copper
+E34	Diagnostic_procedure:T46 
+T47	Diagnostic_procedure 1192 1196	lead
+E35	Diagnostic_procedure:T47 
+T48	Diagnostic_procedure 1218 1230	blood smears
+E36	Diagnostic_procedure:T48 
+T49	Subject 1248 1255	parents
+T50	Subject 1260 1266	sister
+T51	Diagnostic_procedure 142 172	early developmental milestones
+E37	Diagnostic_procedure:T51 
+T52	Lab_value 135 141	normal
+E38	Lab_value:T52 
+R25	MODIFY Arg1:E38 Arg2:E37	
+T53	Detailed_description 390 402	normochromic
+T54	Detailed_description 403 413	normocytic
+R26	MODIFY Arg1:T54 Arg2:E27	
+R27	MODIFY Arg1:T53 Arg2:E27	
+T55	Diagnostic_procedure 423 434	haemoglobin
+E39	Diagnostic_procedure:T55 
+T56	Lab_value 435 443	7.8 g/dL
+E40	Lab_value:T56 
+R28	MODIFY Arg1:E40 Arg2:E39	
+T57	Diagnostic_procedure 455 478	mean corpuscular volume
+E41	Diagnostic_procedure:T57 
+R29	SUB_PROCEDURE Arg1:E39 Arg2:E26	
+T58	Diagnostic_procedure 480 483	MCV
+E42	Diagnostic_procedure:T58 
+R30	IDENTICAL Arg1:E42 Arg2:E41	
+T59	Lab_value 485 492	85.8 fL
+E43	Lab_value:T59 
+R31	MODIFY Arg1:E43 Arg2:E41	
+R32	SUB_PROCEDURE Arg1:E41 Arg2:E26	
+T60	Diagnostic_procedure 505 533	mean corpuscular haemoglobin
+E44	Diagnostic_procedure:T60 
+T61	Diagnostic_procedure 535 538	MCH
+E45	Diagnostic_procedure:T61 
+R33	IDENTICAL Arg1:E45 Arg2:E44	
+T62	Lab_value 540 547	25.4 pg
+E46	Lab_value:T62 
+R34	MODIFY Arg1:E46 Arg2:E44	
+T63	Sign_symptom 569 581	anisocytosis
+E47	Sign_symptom:T63 
+T64	Diagnostic_procedure 583 610	red-cell distribution width
+E48	Diagnostic_procedure:T64 
+T65	Diagnostic_procedure 612 615	RDW
+E49	Diagnostic_procedure:T65 
+R35	IDENTICAL Arg1:E49 Arg2:E48	
+R36	SUB_PROCEDURE Arg1:E48 Arg2:E26	
+T66	Lab_value 617 620	29%
+E50	Lab_value:T66 
+R37	MODIFY Arg1:E50 Arg2:E48	
+T67	Sign_symptom 633 644	Hypochromia
+E51	Sign_symptom:T67 
+T68	Sign_symptom 649 658	teardrops
+E52	Sign_symptom:T68 
+#1	AnnotatorNotes E52	Teardrop erythrocytes
+T69	Diagnostic_procedure 677 687	blood film
+E53	Diagnostic_procedure:T69 
+T70	Sign_symptom 689 700	Leucopoenia
+E54	Sign_symptom:T70 
+T71	Diagnostic_procedure 721 737	white cell count
+E55	Diagnostic_procedure:T71 
+T72	Lab_value 738 747	2.9×109/L
+E56	Lab_value:T72 
+R38	MODIFY Arg1:E56 Arg2:E55	
+T73	Diagnostic_procedure 760 771	neutrophils
+E57	Diagnostic_procedure:T73 
+T74	Lab_value 772 781	1.7×109/L
+E58	Lab_value:T74 
+R39	MODIFY Arg1:E58 Arg2:E57	
+T75	Diagnostic_procedure 794 805	lymphocytes
+E59	Diagnostic_procedure:T75 
+T76	Lab_value 806 815	0.8×109/L
+E60	Lab_value:T76 
+R40	MODIFY Arg1:E60 Arg2:E59	
+T77	Diagnostic_procedure 840 848	aspirate
+E61	Diagnostic_procedure:T77 
+T78	Diagnostic_procedure 853 859	biopsy
+E62	Diagnostic_procedure:T78 
+T79	Biological_structure 828 839	bone marrow
+R41	MODIFY Arg1:T79 Arg2:E61	
+R42	MODIFY Arg1:T79 Arg2:E62	
+T80	Sign_symptom 871 884	hypercellular
+E63	Sign_symptom:T80 
+T81	Biological_structure 885 891	marrow
+R43	MODIFY Arg1:T81 Arg2:E63	
+T82	Sign_symptom 897 918	erythroid hyperplasia
+E64	Sign_symptom:T82 
+T83	Diagnostic_procedure 923 933	iron stain
+E65	Diagnostic_procedure:T83 
+T84	Lab_value 962 1007	50% of erythroblasts were ringed sideroblasts
+E66	Lab_value:T84 
+R44	MODIFY Arg1:E66 Arg2:E65	
+T85	Diagnostic_procedure 1051 1085	fluorescence in situ hybridisation
+E67	Diagnostic_procedure:T85 
+T86	Diagnostic_procedure 1016 1028	cytogenetics
+E68	Diagnostic_procedure:T86 
+T87	Biological_structure 1009 1015	Marrow
+R45	MODIFY Arg1:T87 Arg2:E68	
+T88	Detailed_description 1097 1120	chromosomes 5q, 7 and 8
+R46	MODIFY Arg1:T88 Arg2:E67	
+T89	Diagnostic_procedure 1125 1139	flow cytometry
+E69	Diagnostic_procedure:T89 
+T90	Diagnostic_procedure 1157 1173	blast population
+E70	Diagnostic_procedure:T90 
+T91	Lab_value 1140 1154	did not detect
+E71	Lab_value:T91 
+R47	SUB_PROCEDURE Arg1:E70 Arg2:E69	
+R48	MODIFY Arg1:E71 Arg2:E70	
+T92	Lab_value 1202 1208	normal
+E72	Lab_value:T92 
+T93	Detailed_description 1175 1180	Serum
+R49	MODIFY Arg1:T93 Arg2:E34	
+R50	MODIFY Arg1:T93 Arg2:E35	
+R51	MODIFY Arg1:E72 Arg2:E35	
+R52	MODIFY Arg1:E72 Arg2:E34	
+R53	MODIFY Arg1:E72 Arg2:E36	
+R54	MODIFY Arg1:T49 Arg2:E36	
+R55	MODIFY Arg1:T50 Arg2:E36	
+T94	Diagnostic_procedure 1669 1682	organic acids
+E73	Diagnostic_procedure:T94 
+T95	Detailed_description 1663 1668	Urine
+R56	MODIFY Arg1:T95 Arg2:E73	
+T96	Diagnostic_procedure 1701 1720	3-methylglutaconate
+E74	Diagnostic_procedure:T96 
+T97	Diagnostic_procedure 1725 1742	3-methylglutarate
+E75	Diagnostic_procedure:T97 
+T98	Lab_value 1692 1700	elevated
+E76	Lab_value:T98 
+R57	MODIFY Arg1:E76 Arg2:E74	
+R58	MODIFY Arg1:E76 Arg2:E75	
+T99	Diagnostic_procedure 1799 1805	biopsy
+E77	Diagnostic_procedure:T99 
+T100	Biological_structure 1792 1798	Muscle
+R59	MODIFY Arg1:T100 Arg2:E77	
+T101	Lab_value 1817 1836	structurally normal
+E78	Lab_value:T101 
+R60	MODIFY Arg1:E78 Arg2:E77	
+T102	Biological_structure 1837 1843	muscle
+R61	MODIFY Arg1:T102 Arg2:E78	
+T103	Diagnostic_procedure 1848 1865	biochemical assay
+E79	Diagnostic_procedure:T103 
+T104	Diagnostic_procedure 1869 1897	respiratory chain components
+E80	Diagnostic_procedure:T104 
+R62	SUB_PROCEDURE Arg1:E80 Arg2:E79	
+T105	Disease_disorder 1933 1954	complex IV deficiency
+E81	Disease_disorder:T105 
+T106	Detailed_description 1925 1932	partial
+R63	MODIFY Arg1:T106 Arg2:E81	
+T107	Therapeutic_procedure 1984 1997	high-fat diet
+E82	Therapeutic_procedure:T107 
+T108	Medication 2002 2012	coenzyme Q
+E83	Medication:T108 
+T109	Diagnostic_procedure 2045 2051	energy
+E84	Diagnostic_procedure:T109 
+T110	Lab_value 2030 2041	improvement
+E85	Lab_value:T110 
+R64	MODIFY Arg1:E85 Arg2:E84	
+T111	Diagnostic_procedure 2607 2623	Thyroid function
+E86	Diagnostic_procedure:T111 
+T112	Lab_value 2628 2634	normal
+E87	Lab_value:T112 
+R65	MODIFY Arg1:E87 Arg2:E86	
+T113	Diagnostic_procedure 2254 2265	Haemoglobin
+E88	Diagnostic_procedure:T113 
+T114	Lab_value 2273 2277	fell
+E89	Lab_value:T114 
+T115	Lab_value 2281 2289	4.4 g/dL
+E90	Lab_value:T115 
+R66	MODIFY Arg1:E89 Arg2:E88	
+R67	MODIFY Arg1:E90 Arg2:E88	
+T116	Therapeutic_procedure 2352 2364	transfusions
+E91	Therapeutic_procedure:T116 
+T117	Detailed_description 2343 2351	red cell
+R68	MODIFY Arg1:T117 Arg2:E91	
+T118	Frequency 2330 2342	three-weekly
+R69	MODIFY Arg1:T118 Arg2:E91	
+T119	Detailed_description 2302 2312	occasional
+R70	MODIFY Arg1:T119 Arg2:E91	
+T120	Therapeutic_procedure 2380 2392	transfusions
+E92	Therapeutic_procedure:T120 
+T121	Diagnostic_procedure 2394 2402	ferritin
+E93	Diagnostic_procedure:T121 
+T122	Lab_value 2403 2407	rose
+E94	Lab_value:T122 
+T123	Lab_value 2411 2420	1700 µg/L
+E95	Lab_value:T123 
+R71	MODIFY Arg1:E94 Arg2:E93	
+R72	MODIFY Arg1:E95 Arg2:E93	
+T124	Medication 2436 2450	iron chelation
+E96	Medication:T124 
+T125	Diagnostic_procedure 2065 2070	mtDNA
+E97	Diagnostic_procedure:T125 
+T126	Biological_structure 2074 2084	leucocytes
+T127	Biological_structure 2089 2095	muscle
+T128	Diagnostic_procedure 2106 2109	PCR
+E98	Diagnostic_procedure:T128 
+R73	MODIFY Arg1:T126 Arg2:E97	
+R74	MODIFY Arg1:T127 Arg2:E97	
+T129	Sign_symptom 2127 2135	deletion
+E99	Sign_symptom:T129 
+A2	POLARITY E99 NEG
+R75	SUB_PROCEDURE Arg1:E97 Arg2:E98	
+T130	Diagnostic_procedure 2457 2471	growth hormone
+E100	Diagnostic_procedure:T130 
+T131	Date 2593 2605	age 13 years
+E101	Date:T131 
+T132	Lab_value 2550 2560	447 nmol/L
+E102	Lab_value:T132 
+T133	Lab_value 2523 2532	30.9 mU/L
+E103	Lab_value:T133 
+T134	Sign_symptom 2504 2517	hypoglycaemia
+E104	Sign_symptom:T134 
+T136	Diagnostic_procedure 2476 2484	cortisol
+E105	Diagnostic_procedure:T136 
+R77	MODIFY Arg1:E103 Arg2:E100	
+R78	MODIFY Arg1:E102 Arg2:E105	
+T137	Detailed_description 2452 2456	Peak
+R79	MODIFY Arg1:T137 Arg2:E100	
+R80	MODIFY Arg1:T137 Arg2:E105	
+T138	Detailed_description 2643 2647	peak
+T139	Diagnostic_procedure 2648 2656	cortisol
+E106	Diagnostic_procedure:T139 
+R81	MODIFY Arg1:T138 Arg2:E106	
+T140	Lab_value 2661 2671	384 nmol/L
+E107	Lab_value:T140 
+R82	MODIFY Arg1:E107 Arg2:E106	
+T141	Medication 2682 2709	adrenocorticotropic hormone
+E108	Medication:T141 
+T142	Medication 2711 2715	ACTH
+E109	Medication:T142 
+R83	IDENTICAL Arg1:E109 Arg2:E108	
+T143	Diagnostic_procedure 2737 2751	renin activity
+E110	Diagnostic_procedure:T143 
+T144	Lab_value 2756 2764	elevated
+E111	Lab_value:T144 
+R84	MODIFY Arg1:E111 Arg2:E110	
+T145	Lab_value 2768 2778	15 ng/mL/h
+E112	Lab_value:T145 
+R85	MODIFY Arg1:E112 Arg2:E110	
+T146	Diagnostic_procedure 2784 2801	adrenal androgens
+E113	Diagnostic_procedure:T146 
+T147	Diagnostic_procedure 2859 2874	steroid profile
+E114	Diagnostic_procedure:T147 
+T148	Medication 2933 2947	Hydrocortisone
+E115	Medication:T148 
+T149	Medication 2969 2984	fludrocortisone
+E116	Medication:T149 
+T150	Sign_symptom 3367 3381	hyperglycaemia
+E117	Sign_symptom:T150 
+T151	Dosage 3706 3717	twice daily
+R86	MODIFY Arg1:T151 Arg2:E6	
+T152	Diagnostic_procedure 3775 3787	fructosamine
+E118	Diagnostic_procedure:T152 
+T153	Lab_value 3788 3798	161 µmol/L
+E119	Lab_value:T153 
+R87	MODIFY Arg1:E119 Arg2:E118	
+T154	Diagnostic_procedure 3752 3769	glycaemic control
+E120	Diagnostic_procedure:T154 
+T155	Lab_value 3739 3751	satisfactory
+E121	Lab_value:T155 
+R88	MODIFY Arg1:E121 Arg2:E120	
+T156	Dosage 2948 2964	5 mg twice daily
+R89	MODIFY Arg1:T156 Arg2:E115	
+T157	Dosage 2985 2997	100 µg daily
+R90	MODIFY Arg1:T157 Arg2:E116	
+T158	Detailed_description 2851 2858	urinary
+R91	MODIFY Arg1:T158 Arg2:E114	
+T159	Lab_value 2879 2899	qualitatively normal
+E122	Lab_value:T159 
+R92	MODIFY Arg1:E122 Arg2:E114	
+T160	Diagnostic_procedure 2921 2931	ultrasound
+E123	Diagnostic_procedure:T160 
+T161	Biological_structure 2911 2920	abdominal
+R93	MODIFY Arg1:T161 Arg2:E123	
+R94	MODIFY Arg1:E122 Arg2:E123	
+T162	Detailed_description 2730 2736	Plasma
+R95	MODIFY Arg1:T162 Arg2:E110	
+T164	Lab_value 2807 2847	below the lower limit of assay detection
+E124	Lab_value:T164 
+R97	MODIFY Arg1:E124 Arg2:E113	
+T163	Diagnostic_procedure 3014 3054	Adrenal autoantibodies to 21-hydroxylase
+E125	Diagnostic_procedure:T163 
+T165	Lab_value 3060 3068	negative
+E126	Lab_value:T165 
+T166	Diagnostic_procedure 3073 3100	very-long-chain fatty acids
+E127	Diagnostic_procedure:T166 
+T167	Lab_value 3106 3112	normal
+E128	Lab_value:T167 
+R96	MODIFY Arg1:E128 Arg2:E127	
+R98	MODIFY Arg1:E126 Arg2:E125	
+T168	Disease_disorder 3165 3181	Fanconi syndrome
+E129	Disease_disorder:T168 
+T169	Biological_structure 3151 3164	renal tubular
+R99	MODIFY Arg1:T169 Arg2:E129	
+T170	Sign_symptom 3192 3202	glycosuria
+E130	Sign_symptom:T170 
+T171	Sign_symptom 3204 3216	hypokalaemia
+E131	Sign_symptom:T171 
+T172	Sign_symptom 3218 3235	hypophosphataemia
+E132	Sign_symptom:T172 
+T173	Diagnostic_procedure 3245 3286	maximal tubular reabsorption of phosphate
+E133	Diagnostic_procedure:T173 
+T174	Lab_value 3241 3244	low
+E134	Lab_value:T174 
+R100	MODIFY Arg1:E134 Arg2:E133	
+T175	Sign_symptom 3305 3318	aminoaciduria
+E135	Sign_symptom:T175 
+T176	Detailed_description 3293 3304	generalised
+R101	MODIFY Arg1:T176 Arg2:E135	
+T177	Clinical_event 3392 3401	admission
+E136	Clinical_event:T177 
+T178	Therapeutic_procedure 3430 3441	gastrostomy
+E137	Therapeutic_procedure:T178 
+T179	Detailed_description 3419 3429	endoscopic
+T180	Detailed_description 3406 3418	percutaneous
+R102	MODIFY Arg1:T179 Arg2:E137	
+R103	MODIFY Arg1:T180 Arg2:E137	
+T181	Diagnostic_procedure 3462 3473	haemoglobin
+E138	Diagnostic_procedure:T181 
+T182	Detailed_description 3453 3461	Glycated
+R104	MODIFY Arg1:T182 Arg2:E138	
+T183	Lab_value 3478 3486	elevated
+E139	Lab_value:T183 
+T184	Lab_value 3490 3501	62 mmol/mol
+E140	Lab_value:T184 
+R105	MODIFY Arg1:E139 Arg2:E138	
+R106	MODIFY Arg1:E140 Arg2:E138	
+T185	Lab_value 3503 3507	7.8%
+E141	Lab_value:T185 
+R107	MODIFY Arg1:E141 Arg2:E138	
+T186	Diagnostic_procedure 3523 3540	red cell turnover
+E142	Diagnostic_procedure:T186 
+T187	Lab_value 3517 3522	rapid
+E143	Lab_value:T187 
+R108	MODIFY Arg1:E143 Arg2:E142	
+T188	Diagnostic_procedure 3542 3567	Pancreatic autoantibodies
+E144	Diagnostic_procedure:T188 
+T189	Lab_value 3573 3581	negative
+E145	Lab_value:T189 
+R109	MODIFY Arg1:E145 Arg2:E144	
+T190	Diagnostic_procedure 3583 3610	glutamic acid decarboxylase
+E146	Diagnostic_procedure:T190 
+T191	Diagnostic_procedure 3612 3624	anti-insulin
+E147	Diagnostic_procedure:T191 
+T192	Diagnostic_procedure 3626 3646	anti-islet antigen 2
+E148	Diagnostic_procedure:T192 
+T193	Diagnostic_procedure 3651 3683	pancreatic islet cell antibodies
+E149	Diagnostic_procedure:T193 
+R110	SUB_PROCEDURE Arg1:E146 Arg2:E144	
+R111	SUB_PROCEDURE Arg1:E147 Arg2:E144	
+R112	SUB_PROCEDURE Arg1:E148 Arg2:E144	
+R113	SUB_PROCEDURE Arg1:E149 Arg2:E144	
+*	OVERLAP E1 E2
+R114	AFTER Arg1:E2 Arg2:E3	
+*	OVERLAP E3 E4
+R115	BEFORE Arg1:E4 Arg2:E37	
+R116	BEFORE Arg1:E37 Arg2:E20	
+*	OVERLAP E20 E21 E24 E25 E26 E27 E47 E51 E52 E53 E54 E55 E57 E59 E61 E62 E63 E64 E65 E68 E67 E69 E34 E35 E36 E32 E33 E7 E10 E14 E15 E16 E73 E74 E75 E17 E77 E79 E81
+T194	Lab_value 1034 1040	normal
+E150	Lab_value:T194 
+R117	MODIFY Arg1:E150 Arg2:E68	
+R118	BEFORE Arg1:E81 Arg2:E82	
+*	OVERLAP E82 E83
+R119	BEFORE Arg1:E83 Arg2:E84	
+*	OVERLAP E84 E97 E99
+T195	Medication 2137 2146	Carnitine
+E151	Medication:T195 
+T196	Medication 2148 2157	vitamin A
+E152	Medication:T196 
+T197	Medication 2159 2167	thiamine
+E153	Medication:T197 
+T198	Medication 2169 2179	pyridoxine
+E154	Medication:T198 
+T199	Medication 2181 2187	folate
+E155	Medication:T199 
+T200	Medication 2192 2199	uridine
+E156	Medication:T200 
+T201	Sign_symptom 2245 2252	anaemia
+E157	Sign_symptom:T201 
+A3	TREND E157 STAY
+R120	BEFORE Arg1:E99 Arg2:E151	
+*	OVERLAP E151 E152 E153 E154 E155 E156
+R121	BEFORE Arg1:E156 Arg2:E157	
+*	OVERLAP E157 E88 E91
+R122	BEFORE Arg1:E91 Arg2:E92	
+*	OVERLAP E92 E93 E96
+R123	BEFORE Arg1:E96 Arg2:E100	
+T135	Medication 2488 2495	insulin
+E158	Medication:T135 
+R76	CAUSE Arg1:E158 Arg2:E104	
+*	OVERLAP E100 E105 E158 E104 E101 E86 E106 E108 E110 E113 E114 E123
+R124	BEFORE Arg1:E123 Arg2:E115	
+*	OVERLAP E115 E116 E125 E127
+R125	BEFORE Arg1:E127 Arg2:E129	
+*	OVERLAP E129 E130 E131 E132 E133 E135 E117 E136 E137 E138 E142 E144
+R126	BEFORE Arg1:E144 Arg2:E6	
+*	OVERLAP E6 E120 E118

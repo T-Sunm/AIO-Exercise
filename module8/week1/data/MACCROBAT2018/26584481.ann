@@ -1,0 +1,301 @@
+T1	Age 25 36	22-year-old
+T2	Sex 37 42	woman
+T3	History 51 91	diagnosed in childhood with type IIb VHL
+T4	History 104 129	multiple retinal angiomas
+T5	History 131 147	pancreatic cysts
+T6	History 153 192	spinal and cerebellar hemangioblastomas
+T7	Clinical_event 202 210	admitted
+E1	Clinical_event:T7 
+T8	Nonbiological_location 218 226	hospital
+R1	MODIFY Arg1:T8 Arg2:E1	
+T9	Sign_symptom 254 261	dyspnea
+E2	Sign_symptom:T9 
+T10	Sign_symptom 266 278	palpitations
+E3	Sign_symptom:T10 
+T11	Detailed_description 242 253	progressive
+R2	MODIFY Arg1:T11 Arg2:E2	
+T12	Diagnostic_procedure 300 314	blood pressure
+E4	Diagnostic_procedure:T12 
+T13	Diagnostic_procedure 283 294	examination
+E5	Diagnostic_procedure:T13 
+T14	Lab_value 319 332	159/119 mm Hg
+R3	MODIFY Arg1:T14 Arg2:E4	
+T15	Diagnostic_procedure 341 346	pulse
+E6	Diagnostic_procedure:T15 
+T16	Lab_value 351 358	123 bpm
+R4	MODIFY Arg1:T16 Arg2:E6	
+T17	Diagnostic_procedure 360 380	Physical examination
+E7	Diagnostic_procedure:T17 
+R5	SUB_PROCEDURE Arg1:E4 Arg2:E5	
+R6	SUB_PROCEDURE Arg1:E6 Arg2:E5	
+T18	Sign_symptom 401 407	murmur
+E8	Sign_symptom:T18 
+T19	Detailed_description 392 400	systolic
+R7	MODIFY Arg1:T19 Arg2:E8	
+T20	Biological_structure 415 427	mitral focus
+T21	Biological_structure 433 458	irradiation to the axilla
+R8	MODIFY Arg1:T20 Arg2:E8	
+R9	MODIFY Arg1:T21 Arg2:E8	
+T22	Sign_symptom 463 478	pulmonary rales
+E9	Sign_symptom:T22 
+T23	Diagnostic_procedure 480 499	Electrocardiography
+E10	Diagnostic_procedure:T23 
+T24	Lab_value 509 531	no remarkable findings
+R10	MODIFY Arg1:T24 Arg2:E10	
+T25	Sign_symptom 550 561	tachycardia
+E11	Sign_symptom:T25 
+T26	Detailed_description 544 549	sinus
+R11	MODIFY Arg1:T26 Arg2:E11	
+T27	Diagnostic_procedure 563 579	Laboratory tests
+E12	Diagnostic_procedure:T27 
+T28	Diagnostic_procedure 610 639	pro-brain natriuretic peptide
+E13	Diagnostic_procedure:T28 
+T29	Detailed_description 599 609	N-terminal
+R12	MODIFY Arg1:T29 Arg2:E13	
+T30	Lab_value 590 598	elevated
+R13	MODIFY Arg1:T30 Arg2:E13	
+T31	Diagnostic_procedure 650 655	X-ray
+E14	Diagnostic_procedure:T31 
+R14	SUB_PROCEDURE Arg1:E13 Arg2:E12	
+T32	Biological_structure 644 649	chest
+R15	MODIFY Arg1:T32 Arg2:E14	
+T33	Sign_symptom 672 700	pulmonary interstitial edema
+E15	Sign_symptom:T33 
+T34	Clinical_event 718 726	admitted
+E16	Clinical_event:T34 
+T35	Biological_structure 734 758	Department of Cardiology
+R16	MODIFY Arg1:T35 Arg2:E16	
+T36	Disease_disorder 801 814	heart failure
+E17	Disease_disorder:T36 
+T37	Detailed_description 787 800	decompensated
+T38	Detailed_description 781 786	acute
+R17	MODIFY Arg1:T37 Arg2:E17	
+R18	MODIFY Arg1:T38 Arg2:E17	
+T39	Diagnostic_procedure 830 846	echocardiography
+E18	Diagnostic_procedure:T39 
+T40	Detailed_description 816 829	Transthoracic
+R19	MODIFY Arg1:T40 Arg2:E18	
+T41	Sign_symptom 856 863	dilated
+E19	Sign_symptom:T41 
+T42	Diagnostic_procedure 903 920	ejection fraction
+E20	Diagnostic_procedure:T42 
+T43	Lab_value 884 902	severely depressed
+R20	MODIFY Arg1:T43 Arg2:E20	
+T44	Sign_symptom 940 951	hypokinesia
+E21	Sign_symptom:T44 
+T45	Sign_symptom 963 983	mitral regurgitation
+E22	Sign_symptom:T45 
+T46	Severity 958 962	mild
+R21	MODIFY Arg1:T46 Arg2:E22	
+T47	Detailed_description 928 939	generalized
+R22	MODIFY Arg1:T47 Arg2:E21	
+T48	Sign_symptom 1059 1066	dyspnea
+E23	Sign_symptom:T48 
+T49	Detailed_description 1048 1058	paroxysmal
+R23	MODIFY Arg1:T49 Arg2:E23	
+T50	Detailed_description 1028 1044	several episodes
+R24	MODIFY Arg1:T50 Arg2:E23	
+T51	Medication 1090 1100	β-blockers
+E24	Medication:T51 
+T52	Medication 1105 1114	diuretics
+E25	Medication:T52 
+T53	Disease_disorder 1149 1170	adrenal gland disease
+E26	Disease_disorder:T53 
+A1	POLARITY E26 UNCERTAIN
+T54	Diagnostic_procedure 1188 1201	catecholamine
+E27	Diagnostic_procedure:T54 
+T55	Diagnostic_procedure 1206 1223	metanephrine test
+E28	Diagnostic_procedure:T55 
+T56	Biological_structure 1180 1187	urinary
+R25	MODIFY Arg1:T56 Arg2:E27	
+T57	Detailed_description 1172 1179	24-hour
+R26	MODIFY Arg1:T57 Arg2:E27	
+R27	MODIFY Arg1:T57 Arg2:E28	
+T58	Diagnostic_procedure 1249 1252	MRI
+E29	Diagnostic_procedure:T58 
+T59	Biological_structure 1241 1248	Cardiac
+R28	MODIFY Arg1:T59 Arg2:E29	
+T60	Diagnostic_procedure 1292 1312	cardiomyopathy study
+E30	Diagnostic_procedure:T60 
+R29	SUB_PROCEDURE Arg1:E29 Arg2:E30	
+T61	Sign_symptom 1423 1427	mass
+E31	Sign_symptom:T61 
+T62	Biological_structure 1412 1422	left renal
+R30	MODIFY Arg1:T62 Arg2:E31	
+T63	Detailed_description 1406 1411	great
+R31	MODIFY Arg1:T63 Arg2:E31	
+R32	MODIFY Arg1:T56 Arg2:E28	
+T64	Coreference 1447 1463	laboratory tests
+E32	Coreference:T64 
+R33	IDENTICAL Arg1:E32 Arg2:E28	
+R34	IDENTICAL Arg1:E32 Arg2:E27	
+T65	Diagnostic_procedure 1499 1513	norepinephrine
+E33	Diagnostic_procedure:T65 
+T66	Lab_value 1471 1488	markedly elevated
+T67	Diagnostic_procedure 1515 1535	total catecholamines
+E34	Diagnostic_procedure:T67 
+T68	Diagnostic_procedure 1537 1552	normetanephrine
+E35	Diagnostic_procedure:T68 
+T69	Diagnostic_procedure 1557 1569	metanephrine
+E36	Diagnostic_procedure:T69 
+T70	Diagnostic_procedure 1582 1593	epinephrine
+E37	Diagnostic_procedure:T70 
+R35	MODIFY Arg1:T66 Arg2:E33	
+R36	MODIFY Arg1:T66 Arg2:E34	
+R37	MODIFY Arg1:T66 Arg2:E35	
+R38	MODIFY Arg1:T66 Arg2:E36	
+R39	MODIFY Arg1:T66 Arg2:E37	
+T71	Lab_value 1625 1631	468 μg
+T72	Coreference 1610 1624	norepinephrine
+E38	Coreference:T72 
+T73	Coreference 1664 1675	epinephrine
+E39	Coreference:T73 
+T74	Coreference 1712 1732	total catecholamines
+E40	Coreference:T74 
+T75	Coreference 1773 1788	normetanephrine
+E41	Coreference:T75 
+T76	Coreference 1831 1849	total metanephrine
+E42	Coreference:T76 
+R40	IDENTICAL Arg1:E38 Arg2:E33	
+R41	IDENTICAL Arg1:E39 Arg2:E37	
+R42	IDENTICAL Arg1:E40 Arg2:E34	
+R43	IDENTICAL Arg1:E41 Arg2:E35	
+R44	IDENTICAL Arg1:E42 Arg2:E36	
+R45	MODIFY Arg1:T71 Arg2:E38	
+T77	Lab_value 1676 1681	13 μg
+R46	MODIFY Arg1:T77 Arg2:E39	
+T78	Lab_value 1733 1739	658 μg
+R47	MODIFY Arg1:T78 Arg2:E40	
+T79	Lab_value 1789 1797	2,988 μg
+R48	MODIFY Arg1:T79 Arg2:E41	
+T80	Lab_value 1850 1858	3,013 μg
+R49	MODIFY Arg1:T80 Arg2:E42	
+T81	Diagnostic_procedure 1908 1911	MRI
+E43	Diagnostic_procedure:T81 
+T82	Biological_structure 1898 1907	abdominal
+R50	MODIFY Arg1:T82 Arg2:E43	
+T83	Sign_symptom 1967 1973	masses
+E44	Sign_symptom:T83 
+T84	Detailed_description 1960 1966	cystic
+T85	Detailed_description 1956 1959	two
+R51	MODIFY Arg1:T84 Arg2:E44	
+R52	MODIFY Arg1:T85 Arg2:E44	
+T86	Biological_structure 1997 2015	left hypochondrium
+R53	MODIFY Arg1:T86 Arg2:E44	
+T87	Therapeutic_procedure 2026 2035	resection
+E45	Therapeutic_procedure:T87 
+T88	Coreference 2039 2050	both masses
+E46	Coreference:T88 
+R54	IDENTICAL Arg1:E46 Arg2:E44	
+T89	Detailed_description 2017 2025	Surgical
+R55	MODIFY Arg1:T89 Arg2:E45	
+T90	Therapeutic_procedure 2072 2082	α-blockade
+E47	Therapeutic_procedure:T90 
+T91	Therapeutic_procedure 2109 2119	β-blockade
+E48	Therapeutic_procedure:T91 
+T92	Medication 2088 2104	phenoxybenzamine
+E49	Medication:T92 
+T93	Medication 2125 2136	propranolol
+E50	Medication:T93 
+R56	SUB_PROCEDURE Arg1:E49 Arg2:E47	
+R57	SUB_PROCEDURE Arg1:E50 Arg2:E48	
+T94	Therapeutic_procedure 2148 2169	laparoscopic approach
+E51	Therapeutic_procedure:T94 
+R58	SUB_PROCEDURE Arg1:E51 Arg2:E45	
+T95	Disease_disorder 2199 2215	pheochromocytoma
+E52	Disease_disorder:T95 
+T96	Diagnostic_procedure 2250 2259	histology
+E53	Diagnostic_procedure:T96 
+T97	Therapeutic_procedure 2231 2246	renal carcinoma
+E54	Therapeutic_procedure:T97 
+T98	Detailed_description 2220 2230	clear cell
+R59	MODIFY Arg1:T98 Arg2:E54	
+T99	Clinical_event 2268 2277	follow-up
+E55	Clinical_event:T99 
+T100	Diagnostic_procedure 2279 2293	blood pressure
+E56	Diagnostic_procedure:T100 
+T101	Diagnostic_procedure 2298 2308	heart rate
+E57	Diagnostic_procedure:T101 
+T102	Lab_value 2316 2326	normalized
+R60	MODIFY Arg1:T102 Arg2:E56	
+R61	MODIFY Arg1:T102 Arg2:E57	
+T103	Lab_value 2328 2340	124/77 mm Hg
+R62	MODIFY Arg1:T103 Arg2:E56	
+T104	Lab_value 2342 2348	78 bpm
+R63	MODIFY Arg1:T104 Arg2:E57	
+T105	Diagnostic_procedure 2367 2380	catecholamine
+E58	Diagnostic_procedure:T105 
+T106	Biological_structure 2359 2366	urinary
+T107	Detailed_description 2351 2358	24-hour
+R64	MODIFY Arg1:T106 Arg2:E58	
+R65	MODIFY Arg1:T107 Arg2:E58	
+T108	Lab_value 2400 2412	normal range
+R66	MODIFY Arg1:T108 Arg2:E58	
+T109	Diagnostic_procedure 2414 2428	norepinephrine
+E59	Diagnostic_procedure:T109 
+T110	Lab_value 2429 2434	69 μg
+R67	MODIFY Arg1:T110 Arg2:E59	
+T111	Diagnostic_procedure 2441 2460	total catecholamine
+E60	Diagnostic_procedure:T111 
+T112	Lab_value 2461 2467	221 μg
+R68	MODIFY Arg1:T112 Arg2:E60	
+T113	Diagnostic_procedure 2474 2489	normetanephrine
+E61	Diagnostic_procedure:T113 
+T114	Lab_value 2490 2496	202 μg
+R69	MODIFY Arg1:T114 Arg2:E61	
+T115	Diagnostic_procedure 2506 2524	total metanephrine
+E62	Diagnostic_procedure:T115 
+T116	Lab_value 2525 2531	259 μg
+R70	MODIFY Arg1:T116 Arg2:E62	
+T117	Sign_symptom 2577 2589	palpitations
+E63	Sign_symptom:T117 
+A2	POLARITY E63 NEG
+T118	Sign_symptom 2593 2600	dyspnea
+E64	Sign_symptom:T118 
+A3	POLARITY E64 NEG
+R71	SUB_PROCEDURE Arg1:E59 Arg2:E58	
+R72	SUB_PROCEDURE Arg1:E60 Arg2:E58	
+R73	SUB_PROCEDURE Arg1:E61 Arg2:E58	
+R74	SUB_PROCEDURE Arg1:E62 Arg2:E58	
+T119	Date 2602 2618	Six months after
+E65	Date:T119 
+T120	Diagnostic_procedure 2639 2655	echocardiography
+E66	Diagnostic_procedure:T120 
+T121	Sign_symptom 2702 2718	normal diameters
+E67	Sign_symptom:T121 
+T122	Biological_structure 2682 2696	left ventricle
+R75	MODIFY Arg1:T122 Arg2:E67	
+T123	Biological_structure 864 878	left ventricle
+R76	MODIFY Arg1:T123 Arg2:E19	
+T124	Diagnostic_procedure 2733 2750	ejection fraction
+E68	Diagnostic_procedure:T124 
+T125	Lab_value 2723 2732	preserved
+R77	MODIFY Arg1:T125 Arg2:E68	
+T126	Diagnostic_procedure 2761 2777	Genetic analysis
+E69	Diagnostic_procedure:T126 
+T127	Sign_symptom 2789 2806	germline mutation
+E70	Sign_symptom:T127 
+T128	Detailed_description 2808 2823	exon 3 deletion
+T129	Detailed_description 2832 2857	VHL tumor suppressor gene
+T130	Detailed_description 2865 2890	short arm of chromosome 3
+R78	MODIFY Arg1:T130 Arg2:T129	
+R79	MODIFY Arg1:T128 Arg2:T129	
+R80	MODIFY Arg1:T129 Arg2:E70	
+T131	Family_history 2911 2935	no family history of VHL
+T132	Detailed_description 2968 2984	de novo mutation
+R81	MODIFY Arg1:T132 Arg2:E70	
+*	OVERLAP E1 E2 E3 E5 E7 E8 E9 E10 E11 E12 E14 E15
+R82	BEFORE Arg1:E15 Arg2:E16	
+*	OVERLAP E16 E17 E18 E19 E20 E21 E22 E23 E24 E25 E26
+R83	BEFORE Arg1:E26 Arg2:E27	
+#1	AnnotatorNotes T57	Not a duration per se as it describes a diagnostic test
+*	OVERLAP E28 E30 E31 E32 E33 E34 E35 E36 E37 E38 E39 E40 E41 E42 E43 E44
+R84	BEFORE Arg1:E44 Arg2:E45	
+R85	AFTER Arg1:E45 Arg2:E47	
+*	OVERLAP E47 E48
+R86	BEFORE Arg1:E48 Arg2:E51	
+*	OVERLAP E51 E52 E54 E53
+R87	BEFORE Arg1:E53 Arg2:E55	
+*	OVERLAP E55 E56 E57 E58 E63 E64
+R88	BEFORE Arg1:E64 Arg2:E65	
+*	OVERLAP E65 E66 E67 E68 E69 E70

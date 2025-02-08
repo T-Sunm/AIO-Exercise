@@ -1,0 +1,457 @@
+T1	Age 2 13	23-year-old
+T2	Sex 14 17	man
+T3	Disease_disorder 36 58	severe aplastic anemia
+E1	Disease_disorder:T3 
+T4	Disease_disorder 60 63	SAA
+E2	Disease_disorder:T4 
+R1	IDENTICAL Arg1:E2 Arg2:E1	
+T5	History 36 58	severe aplastic anemia
+T6	Date 141 153	January 2014
+E3	Date:T6 
+T7	Subject 131 137	mother
+T8	Therapeutic_procedure 75 102	bone marrow transplantation
+E4	Therapeutic_procedure:T8 
+T9	Detailed_description 112 130	HLA-haploidentical
+R2	MODIFY Arg1:T9 Arg2:T7	
+T10	Medication 194 220	busulphan cyclophosphamide
+E5	Medication:T10 
+T11	Medication 225 247	antithymocyte globulin
+E6	Medication:T11 
+T12	Medication 265 279	Cyclosporine A
+E7	Medication:T12 
+T13	Medication 301 313	methotrexate
+E8	Medication:T13 
+T14	Detailed_description 290 300	short-term
+R3	MODIFY Arg1:T14 Arg2:E8	
+T15	Medication 315 318	MTX
+E9	Medication:T15 
+T16	Medication 281 284	CsA
+E10	Medication:T16 
+R4	IDENTICAL Arg1:E9 Arg2:E8	
+R5	IDENTICAL Arg1:E10 Arg2:E7	
+T17	Medication 249 253	BUCY
+E11	Medication:T17 
+T18	Medication 254 257	ATG
+E12	Medication:T18 
+R6	IDENTICAL Arg1:E11 Arg2:E5	
+R7	IDENTICAL Arg1:E12 Arg2:E6	
+T19	Medication 325 346	mycophenolate mofetil
+E13	Medication:T19 
+T20	Medication 348 351	MMF
+E14	Medication:T20 
+R8	IDENTICAL Arg1:E14 Arg2:E13	
+T21	Disease_disorder 386 411	graft-versus-host disease
+E15	Disease_disorder:T21 
+A1	POLARITY E15 UNCERTAIN
+T22	Disease_disorder 413 417	GVHD
+E16	Disease_disorder:T22 
+R9	IDENTICAL Arg1:E16 Arg2:E15	
+T23	Disease_disorder 478 502	infectious complications
+E17	Disease_disorder:T23 
+A2	POLARITY E17 UNCERTAIN
+T24	Medication 519 530	fluconazole
+E18	Medication:T24 
+T25	Therapeutic_procedure 546 557	prophylaxis
+E19	Therapeutic_procedure:T25 
+T26	Detailed_description 535 545	antifungal
+R10	MODIFY Arg1:T26 Arg2:E19	
+R11	SUB_PROCEDURE Arg1:E18 Arg2:E19	
+T27	Medication 562 571	acyclovir
+E20	Medication:T27 
+T28	Disease_disorder 598 608	infections
+E21	Disease_disorder:T28 
+T29	Detailed_description 583 597	herpes-related
+R12	MODIFY Arg1:T29 Arg2:E21	
+A3	POLARITY E21 UNCERTAIN
+T30	Diagnostic_procedure 612 620	hemogram
+E22	Diagnostic_procedure:T30 
+T31	Disease_disorder 751 755	GVHD
+E23	Disease_disorder:T31 
+T32	Detailed_description 745 750	acute
+R13	MODIFY Arg1:T32 Arg2:E23	
+T33	Detailed_description 736 744	grade II
+R14	MODIFY Arg1:T33 Arg2:E23	
+R15	MODIFY Arg1:T7 Arg2:E4	
+T34	Diagnostic_procedure 666 669	ANC
+E24	Diagnostic_procedure:T34 
+T35	Clinical_event 3642 3650	followed
+E25	Clinical_event:T35 
+T36	Disease_disorder 3705 3714	infection
+E26	Disease_disorder:T36 
+A4	POLARITY E26 NEG
+T37	Detailed_description 3698 3704	fungal
+T38	Detailed_description 3689 3697	invasive
+R16	MODIFY Arg1:T37 Arg2:E26	
+R17	MODIFY Arg1:T38 Arg2:E26	
+T39	Lab_value 669 679	>0.5×109/L
+E27	Lab_value:T39 
+R18	MODIFY Arg1:E27 Arg2:E24	
+T40	Date 684 691	day +12
+E28	Date:T40 
+T41	Therapeutic_procedure 697 712	transplantation
+E29	Therapeutic_procedure:T41 
+T42	Sign_symptom 634 664	reconstruction of granulocytes
+E30	Sign_symptom:T42 
+R19	SUB_PROCEDURE Arg1:E24 Arg2:E22	
+T43	Biological_structure 763 767	skin
+R20	MODIFY Arg1:T43 Arg2:E23	
+T44	Date 771 778	day +42
+E31	Date:T44 
+T45	Therapeutic_procedure 784 799	transplantation
+E32	Therapeutic_procedure:T45 
+T46	Medication 855 874	methyl-prednisolone
+E33	Medication:T46 
+T47	Sign_symptom 893 910	complete response
+E34	Sign_symptom:T47 
+T48	Sign_symptom 912 914	CR
+E35	Sign_symptom:T48 
+R21	IDENTICAL Arg1:E35 Arg2:E34	
+T49	Dosage 838 851	standard-dose
+R22	MODIFY Arg1:T49 Arg2:E33	
+T50	Disease_disorder 931 943	chronic GVHD
+E36	Disease_disorder:T50 
+T51	Disease_disorder 945 950	cGVHD
+E37	Disease_disorder:T51 
+R23	IDENTICAL Arg1:E37 Arg2:E36	
+T52	Biological_structure 959 963	skin
+R24	MODIFY Arg1:T52 Arg2:E36	
+T53	Date 990 998	day +100
+E38	Date:T53 
+T54	Therapeutic_procedure 1004 1019	transplantation
+E39	Therapeutic_procedure:T54 
+T55	Medication 1044 1056	prednisolone
+E40	Medication:T55 
+T56	Medication 1061 1064	CsA
+E41	Medication:T56 
+#1	AnnotatorNotes E41	Cyclosporin A
+T57	Date 1069 1076	day 120
+E42	Date:T57 
+T58	Therapeutic_procedure 1082 1097	transplantation
+E43	Therapeutic_procedure:T58 
+T59	Sign_symptom 1118 1123	cough
+E44	Sign_symptom:T59 
+T60	Medication 1128 1139	antibiotics
+E45	Medication:T60 
+T61	Diagnostic_procedure 1161 1175	blood analysis
+E46	Diagnostic_procedure:T61 
+T62	Diagnostic_procedure 1200 1203	WBC
+E47	Diagnostic_procedure:T62 
+T63	Diagnostic_procedure 1217 1220	ANC
+E48	Diagnostic_procedure:T63 
+T64	Diagnostic_procedure 1234 1244	hemoglobin
+E49	Diagnostic_procedure:T64 
+T65	Diagnostic_procedure 1258 1267	platelets
+E50	Diagnostic_procedure:T65 
+T66	Lab_value 1205 1215	2.34×109/L
+E51	Lab_value:T66 
+T67	Lab_value 1222 1232	1.72×109/L
+E52	Lab_value:T67 
+T68	Lab_value 1246 1252	85 g/L
+E53	Lab_value:T68 
+T69	Lab_value 1269 1277	72×109/L
+E54	Lab_value:T69 
+R25	MODIFY Arg1:E51 Arg2:E47	
+R26	MODIFY Arg1:E52 Arg2:E48	
+R27	MODIFY Arg1:E53 Arg2:E49	
+R28	MODIFY Arg1:E54 Arg2:E50	
+R29	SUB_PROCEDURE Arg1:E47 Arg2:E46	
+R30	SUB_PROCEDURE Arg1:E48 Arg2:E46	
+R31	SUB_PROCEDURE Arg1:E49 Arg2:E46	
+R32	SUB_PROCEDURE Arg1:E50 Arg2:E46	
+T70	Diagnostic_procedure 1301 1320	computed tomography
+E55	Diagnostic_procedure:T70 
+T71	Diagnostic_procedure 1322 1324	CT
+E56	Diagnostic_procedure:T71 
+T72	Biological_structure 1295 1300	chest
+R33	MODIFY Arg1:T72 Arg2:E55	
+R34	IDENTICAL Arg1:E56 Arg2:E55	
+T73	Diagnostic_procedure 1335 1354	tests for pathogens
+E57	Diagnostic_procedure:T73 
+T74	Detailed_description 1355 1376	via routine culturing
+R35	MODIFY Arg1:T74 Arg2:E57	
+T75	Diagnostic_procedure 1404 1417	Beta-D glucan
+E58	Diagnostic_procedure:T75 
+T76	Diagnostic_procedure 1419 1425	G-test
+E59	Diagnostic_procedure:T76 
+R36	IDENTICAL Arg1:E59 Arg2:E58	
+T77	Diagnostic_procedure 1431 1444	Galactomannan
+E60	Diagnostic_procedure:T77 
+T78	Diagnostic_procedure 1446 1453	GM-test
+E61	Diagnostic_procedure:T78 
+R37	IDENTICAL Arg1:E61 Arg2:E60	
+T79	Lab_value 1464 1472	negative
+E62	Lab_value:T79 
+T80	Detailed_description 1388 1393	blood
+R38	MODIFY Arg1:T80 Arg2:E58	
+R39	MODIFY Arg1:T80 Arg2:E60	
+R40	MODIFY Arg1:E62 Arg2:E60	
+R41	MODIFY Arg1:E62 Arg2:E58	
+T81	Sign_symptom 1488 1493	cough
+E63	Sign_symptom:T81 
+A5	TREND E63 STAY
+T82	Medication 1513 1524	antibiotics
+E64	Medication:T82 
+T83	Medication 1569 1581	voriconazole
+E65	Medication:T83 
+T84	Dosage 1583 1612	6 mg/kg/12h for the first day
+T85	Dosage 1626 1637	4 mg/kg/12h
+R42	MODIFY Arg1:T84 Arg2:E65	
+R43	MODIFY Arg1:T85 Arg2:E65	
+T86	Sign_symptom 1646 1654	toxicity
+E66	Sign_symptom:T86 
+T87	Biological_structure 1640 1645	Liver
+R44	MODIFY Arg1:T87 Arg2:E66	
+T88	Medication 1671 1683	voriconazole
+E67	Medication:T88 
+T89	Therapeutic_procedure 1704 1723	anti-fungal regimen
+E68	Therapeutic_procedure:T89 
+T90	Medication 1739 1749	micafungin
+E69	Medication:T90 
+R45	SUB_PROCEDURE Arg1:E69 Arg2:E68	
+T91	Dosage 1751 1759	100 mg/d
+R46	MODIFY Arg1:T91 Arg2:E69	
+T92	Sign_symptom 1786 1791	cough
+E70	Sign_symptom:T92 
+A6	TREND E70 STAY
+T93	Detailed_description 1775 1785	persistent
+R47	MODIFY Arg1:T93 Arg2:E70	
+T94	Sign_symptom 1812 1822	hoarseness
+E71	Sign_symptom:T94 
+T95	Date 1833 1848	after two weeks
+E72	Date:T95 
+T96	Sign_symptom 1864 1870	ulcers
+E73	Sign_symptom:T96 
+T97	Biological_structure 1897 1903	throat
+R48	MODIFY Arg1:T97 Arg2:E73	
+T98	Diagnostic_procedure 1907 1919	laryngoscopy
+E74	Diagnostic_procedure:T98 
+T99	Sign_symptom 1959 1966	dyspnea
+E75	Sign_symptom:T99 
+T100	Severity 1952 1958	severe
+R49	MODIFY Arg1:T100 Arg2:E75	
+T101	Date 1967 1988	in the following week
+E76	Date:T101 
+T102	Therapeutic_procedure 2021 2031	treatments
+E77	Therapeutic_procedure:T102 
+T103	Detailed_description 2013 2020	topical
+T104	Detailed_description 1994 2008	anti-infection
+R50	MODIFY Arg1:T103 Arg2:E77	
+R51	MODIFY Arg1:T104 Arg2:E77	
+T105	Diagnostic_procedure 2057 2069	bronchoscopy
+E78	Diagnostic_procedure:T105 
+T106	Detailed_description 2046 2056	Fiberoptic
+R52	MODIFY Arg1:T106 Arg2:E78	
+T107	Sign_symptom 2101 2109	material
+E79	Sign_symptom:T107 
+T108	Sign_symptom 2140 2150	obstructed
+E80	Sign_symptom:T108 
+T109	Detailed_description 2133 2139	nearly
+R53	MODIFY Arg1:T109 Arg2:E80	
+T110	Biological_structure 2155 2163	bronchus
+R54	MODIFY Arg1:T110 Arg2:E80	
+T111	Shape 2093 2100	nodular
+T112	Detailed_description 2082 2091	irregular
+R55	MODIFY Arg1:T111 Arg2:E79	
+R56	MODIFY Arg1:T112 Arg2:E79	
+T113	Detailed_description 2115 2125	white moss
+R57	MODIFY Arg1:T113 Arg2:E79	
+T114	Diagnostic_procedure 2180 2182	CT
+E81	Diagnostic_procedure:T114 
+T115	Biological_structure 2174 2179	chest
+R58	MODIFY Arg1:T115 Arg2:E81	
+T116	Lab_value 2195 2203	negative
+E82	Lab_value:T116 
+R59	MODIFY Arg1:E82 Arg2:E81	
+T117	Diagnostic_procedure 2224 2253	histopathological examination
+E83	Diagnostic_procedure:T117 
+T118	Diagnostic_procedure 2257 2263	biopsy
+E84	Diagnostic_procedure:T118 
+T119	Disease_disorder 2286 2297	Aspergillus
+E85	Disease_disorder:T119 
+T120	Disease_disorder 2376 2393	tracheobronchitis
+E86	Disease_disorder:T120 
+T121	Disease_disorder 2364 2375	Aspergillus
+E87	Disease_disorder:T121 
+T122	Detailed_description 2347 2363	pseudomembranous
+R60	CAUSE Arg1:E87 Arg2:E86	
+R61	MODIFY Arg1:T122 Arg2:E86	
+T123	Detailed_description 2394 2403	type ITBA
+R62	MODIFY Arg1:T123 Arg2:E86	
+T124	Diagnostic_procedure 2428 2440	bronchoscopy
+E88	Diagnostic_procedure:T124 
+T125	Diagnostic_procedure 2447 2471	pathological examination
+E89	Diagnostic_procedure:T125 
+T126	Medication 2482 2492	antibiotic
+E90	Medication:T126 
+T127	Medication 2497 2507	micafungin
+E91	Medication:T127 
+A7	POLARITY E90 NEG
+A8	POLARITY E91 NEG
+T128	Medication 2545 2559	amphotericin B
+E92	Medication:T128 
+T129	Detailed_description 2535 2544	liposomal
+R63	MODIFY Arg1:T129 Arg2:E92	
+T130	Medication 2571 2574	AmB
+E93	Medication:T130 
+T131	Detailed_description 2561 2570	liposomal
+R64	MODIFY Arg1:T131 Arg2:E93	
+R65	IDENTICAL Arg1:E93 Arg2:E92	
+T132	Dosage 2593 2598	daily
+T133	Dosage 2619 2626	3 mg/kg
+R66	MODIFY Arg1:T133 Arg2:E92	
+R67	MODIFY Arg1:T132 Arg2:E92	
+T134	Diagnostic_procedure 2648 2658	creatinine
+E94	Diagnostic_procedure:T134 
+T135	Detailed_description 2642 2647	serum
+R68	MODIFY Arg1:T135 Arg2:E94	
+T136	Lab_value 2675 2686	60.4 μmol/L
+E95	Lab_value:T136 
+T137	Lab_value 2665 2669	rose
+E96	Lab_value:T137 
+T138	Lab_value 2690 2700	168 μmol/L
+E97	Lab_value:T138 
+R69	MODIFY Arg1:E96 Arg2:E94	
+R70	MODIFY Arg1:E95 Arg2:E94	
+R71	MODIFY Arg1:E97 Arg2:E94	
+T139	Date 2701 2724	during the first 7 days
+E98	Date:T139 
+T140	Medication 2738 2741	AmB
+E99	Medication:T140 
+T141	Detailed_description 2728 2737	liposomal
+R72	MODIFY Arg1:T141 Arg2:E99	
+T142	Disease_disorder 2772 2789	renal dysfunction
+E100	Disease_disorder:T142 
+T143	Severity 2760 2771	progressive
+R73	MODIFY Arg1:T143 Arg2:E100	
+T144	Medication 2795 2806	anti-fungal
+E101	Medication:T144 
+T145	Medication 2848 2860	posaconazole
+E102	Medication:T145 
+T146	Medication 2879 2890	caspofungin
+E103	Medication:T146 
+R74	SUB_PROCEDURE Arg1:E102 Arg2:E101	
+R75	SUB_PROCEDURE Arg1:E103 Arg2:E101	
+T147	Dosage 2862 2873	400 mg/12 h
+T148	Dosage 2892 2904	50 mg, daily
+T149	Dosage 2906 2930	70 mg for the first dose
+R76	MODIFY Arg1:T147 Arg2:E102	
+R77	MODIFY Arg1:T148 Arg2:E103	
+R78	MODIFY Arg1:T149 Arg2:E103	
+T150	Duration 2972 2979	2 weeks
+E104	Duration:T150 
+T151	Medication 2938 2957	combination therapy
+E105	Medication:T151 
+R79	SUB_PROCEDURE Arg1:E102 Arg2:E105	
+R80	SUB_PROCEDURE Arg1:E103 Arg2:E105	
+T152	Sign_symptom 3000 3007	nodules
+E106	Sign_symptom:T152 
+A9	POLARITY E106 NEG
+T153	Biological_structure 3015 3021	throat
+R81	MODIFY Arg1:T153 Arg2:E106	
+T154	Diagnostic_procedure 3051 3063	bronchoscopy
+E107	Diagnostic_procedure:T154 
+T155	Diagnostic_procedure 3098 3100	CT
+E108	Diagnostic_procedure:T155 
+T156	Biological_structure 3092 3097	chest
+R82	MODIFY Arg1:T156 Arg2:E108	
+T157	Sign_symptom 3113 3124	progression
+E109	Sign_symptom:T157 
+T158	Sign_symptom 3150 3157	dyspnea
+E110	Sign_symptom:T158 
+A10	TREND E110 INC
+T159	Diagnostic_procedure 3196 3208	bronchoscopy
+E111	Diagnostic_procedure:T159 
+T160	Detailed_description 3185 3195	fiberoptic
+R83	MODIFY Arg1:T160 Arg2:E111	
+T161	Therapeutic_procedure 3226 3232	remove
+E112	Therapeutic_procedure:T161 
+T162	Sign_symptom 3237 3257	obstructive material
+E113	Sign_symptom:T162 
+T163	Biological_structure 3277 3284	airways
+R84	MODIFY Arg1:T163 Arg2:E113	
+T164	Frequency 3285 3296	once a week
+R85	MODIFY Arg1:T164 Arg2:E112	
+R86	MODIFY Arg1:E113 Arg2:E112	
+T165	Duration 3301 3310	two weeks
+E114	Duration:T165 
+T166	Sign_symptom 3323 3331	symptoms
+E115	Sign_symptom:T166 
+A11	POLARITY E115 NEG
+T167	Biological_structure 3360 3365	chest
+T168	Diagnostic_procedure 3366 3368	CT
+E116	Diagnostic_procedure:T168 
+R87	MODIFY Arg1:T167 Arg2:E116	
+T169	Lab_value 3381 3389	negative
+E117	Lab_value:T169 
+R88	MODIFY Arg1:E117 Arg2:E116	
+T170	Medication 3428 3439	anti-fungal
+E118	Medication:T170 
+A12	POLARITY E118 NEG
+T171	Diagnostic_procedure 3464 3469	tests
+E119	Diagnostic_procedure:T171 
+T172	Disease_disorder 3488 3499	Aspergillus
+E120	Disease_disorder:T172 
+A13	POLARITY E120 NEG
+T173	Medication 3501 3513	Posaconazole
+E121	Medication:T173 
+T174	Therapeutic_procedure 3546 3568	prophylactic treatment
+E122	Therapeutic_procedure:T174 
+R89	SUB_PROCEDURE Arg1:E121 Arg2:E122	
+T175	Clinical_event 3589 3599	discharged
+E123	Clinical_event:T175 
+T176	Nonbiological_location 3605 3613	hospital
+R90	MODIFY Arg1:T176 Arg2:E123	
+R91	BEFORE Arg1:E1 Arg2:E4	
+*	OVERLAP E4 E3
+R92	AFTER Arg1:E3 Arg2:E5	
+*	OVERLAP E5 E6
+R93	BEFORE Arg1:E6 Arg2:E7	
+*	OVERLAP E7 E8 E13 E15 E17 E19 E20 E21
+R94	BEFORE Arg1:E21 Arg2:E22	
+*	OVERLAP E22 E30 E28
+R95	AFTER Arg1:E28 Arg2:E29	
+R96	BEFORE Arg1:E29 Arg2:E23	
+*	OVERLAP E23 E31
+R97	AFTER Arg1:E31 Arg2:E32	
+R98	BEFORE Arg1:E32 Arg2:E33	
+R99	BEFORE Arg1:E33 Arg2:E34	
+R100	BEFORE Arg1:E34 Arg2:E36	
+*	OVERLAP E36 E38
+R101	AFTER Arg1:E38 Arg2:E39	
+R102	BEFORE Arg1:E39 Arg2:E40	
+*	OVERLAP E40 E41
+R103	BEFORE Arg1:E41 Arg2:E42	
+R104	AFTER Arg1:E42 Arg2:E43	
+R105	BEFORE Arg1:E43 Arg2:E44	
+R106	BEFORE Arg1:E44 Arg2:E45	
+*	OVERLAP E45 E46 E55 E57 E58 E60 E63 E64
+R107	BEFORE Arg1:E64 Arg2:E65	
+R108	BEFORE Arg1:E65 Arg2:E66	
+*	OVERLAP E66 E67
+R109	BEFORE Arg1:E67 Arg2:E68	
+R110	BEFORE Arg1:E68 Arg2:E70	
+*	OVERLAP E70 E71 E72 E73 E74
+R111	BEFORE Arg1:E74 Arg2:E75	
+*	OVERLAP E75 E76 E77 E78 E79 E80 E81 E83 E84 E85 E87 E86 E88 E89
+R112	BEFORE Arg1:E89 Arg2:E90	
+*	OVERLAP E90 E91 E92
+R113	BEFORE Arg1:E92 Arg2:E94	
+*	OVERLAP E94 E98 E99
+R114	BEFORE Arg1:E99 Arg2:E100	
+*	OVERLAP E100 E101
+R115	BEFORE Arg1:E101 Arg2:E105	
+*	OVERLAP E105 E104
+R116	BEFORE Arg1:E104 Arg2:E106	
+*	OVERLAP E106 E107 E108 E109
+R117	BEFORE Arg1:E109 Arg2:E110	
+*	OVERLAP E110 E111 E112 E113 E114
+R118	BEFORE Arg1:E114 Arg2:E115	
+*	OVERLAP E115 E116
+R119	BEFORE Arg1:E116 Arg2:E118	
+T177	Lab_value 3475 3483	negative
+E124	Lab_value:T177 
+*	OVERLAP E118 E119 E120 E121
+R120	MODIFY Arg1:E124 Arg2:E119	
+R121	BEFORE Arg1:E121 Arg2:E123	
+R122	BEFORE Arg1:E123 Arg2:E25	
+*	OVERLAP E25 E26

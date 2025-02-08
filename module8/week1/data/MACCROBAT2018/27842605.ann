@@ -1,0 +1,536 @@
+T1	Age 2 13	76-year-old
+T2	Sex 14 19	woman
+T3	Clinical_event 20 29	presented
+E1	Clinical_event:T3 
+T4	Nonbiological_location 37 45	hospital
+R1	MODIFY Arg1:T4 Arg2:E1	
+T5	Sign_symptom 65 78	epigastralgia
+E2	Sign_symptom:T5 
+T6	Date 85 96	a day prior
+E3	Date:T6 
+T7	Diagnostic_procedure 111 126	Laboratory data
+E4	Diagnostic_procedure:T7 
+T8	Diagnostic_procedure 165 181	aminotransferase
+E5	Diagnostic_procedure:T8 
+T9	Diagnostic_procedure 183 207	alanine aminotransferase
+E6	Diagnostic_procedure:T9 
+T10	Diagnostic_procedure 209 233	ɤ-guanosine triphosphate
+E7	Diagnostic_procedure:T10 
+T11	Diagnostic_procedure 239 259	alkaline phosphatase
+E8	Diagnostic_procedure:T11 
+R6	SUB_PROCEDURE Arg1:E5 Arg2:E4	
+R7	SUB_PROCEDURE Arg1:E6 Arg2:E4	
+R8	SUB_PROCEDURE Arg1:E7 Arg2:E4	
+R9	SUB_PROCEDURE Arg1:E8 Arg2:E4	
+T13	Activity 4808 4812	died
+E9	Activity:T13 
+T14	Disease_disorder 4816 4835	progressive disease
+E10	Disease_disorder:T14 
+R10	CAUSE Arg1:E10 Arg2:E9	
+T15	Date 4836 4850	8 months after
+E11	Date:T15 
+T16	Diagnostic_procedure 267 282	total bilirubin
+E12	Diagnostic_procedure:T16 
+T17	Diagnostic_procedure 287 300	tumor markers
+E13	Diagnostic_procedure:T17 
+T18	Detailed_description 261 266	Serum
+R11	MODIFY Arg1:T18 Arg2:E12	
+T12	Lab_value 152 161	elevation
+E14	Lab_value:T12 
+R2	MODIFY Arg1:E14 Arg2:E5	
+R3	MODIFY Arg1:E14 Arg2:E6	
+R4	MODIFY Arg1:E14 Arg2:E7	
+R5	MODIFY Arg1:E14 Arg2:E8	
+T19	Clinical_event 100 109	admission
+E15	Clinical_event:T19 
+T20	Diagnostic_procedure 302 326	carcinoembryonic antigen
+E16	Diagnostic_procedure:T20 
+T21	Diagnostic_procedure 328 331	CEA
+E17	Diagnostic_procedure:T21 
+R12	IDENTICAL Arg1:E17 Arg2:E16	
+T22	Diagnostic_procedure 334 359	carbohydrate antigen 19-9
+E18	Diagnostic_procedure:T22 
+T23	Diagnostic_procedure 361 367	CA19-9
+E19	Diagnostic_procedure:T23 
+R13	IDENTICAL Arg1:E19 Arg2:E18	
+T24	Diagnostic_procedure 370 376	SPan-1
+E20	Diagnostic_procedure:T24 
+T25	Diagnostic_procedure 382 405	neuron-specific enolase
+E21	Diagnostic_procedure:T25 
+T26	Diagnostic_procedure 407 410	NSE
+E22	Diagnostic_procedure:T26 
+R14	IDENTICAL Arg1:E22 Arg2:E21	
+T27	Lab_value 422 442	within normal ranges
+E23	Lab_value:T27 
+R15	MODIFY Arg1:E23 Arg2:E12	
+R16	MODIFY Arg1:E23 Arg2:E13	
+R17	MODIFY Arg1:E23 Arg2:E16	
+R18	MODIFY Arg1:E23 Arg2:E18	
+R19	MODIFY Arg1:E23 Arg2:E20	
+R20	MODIFY Arg1:E23 Arg2:E21	
+T28	Diagnostic_procedure 454 473	computed tomography
+E24	Diagnostic_procedure:T28 
+T29	Diagnostic_procedure 475 477	CT
+E25	Diagnostic_procedure:T29 
+R21	IDENTICAL Arg1:E25 Arg2:E24	
+T30	Diagnostic_procedure 483 526	magnetic resonance cholangiopancreatography
+E26	Diagnostic_procedure:T30 
+T31	Diagnostic_procedure 528 532	MRCP
+E27	Diagnostic_procedure:T31 
+R22	IDENTICAL Arg1:E27 Arg2:E26	
+T32	Sign_symptom 543 547	mass
+E28	Sign_symptom:T32 
+T33	Sign_symptom 554 562	enlarged
+E29	Sign_symptom:T33 
+T34	Biological_structure 563 574	gallbladder
+R23	MODIFY Arg1:T34 Arg2:E29	
+R24	MODIFY Arg1:T34 Arg2:E28	
+T35	Sign_symptom 579 584	bulky
+E30	Sign_symptom:T35 
+T36	Biological_structure 585 604	hepatic lymph nodes
+R25	MODIFY Arg1:T36 Arg2:E30	
+T37	Biological_structure 621 634	hepatic hilum
+R26	MODIFY Arg1:T37 Arg2:T36	
+T38	Sign_symptom 677 684	lesions
+E31	Sign_symptom:T38 
+A1	POLARITY E31 NEG
+T39	Diagnostic_procedure 704 730	gastrointestinal endoscopy
+E32	Diagnostic_procedure:T39 
+T40	Detailed_description 698 703	lower
+T41	Detailed_description 688 693	upper
+R27	MODIFY Arg1:T40 Arg2:E32	
+R28	MODIFY Arg1:T41 Arg2:E32	
+T42	Diagnostic_procedure 732 783	Endoscopic ultrasound-guided fine-needle aspiration
+E33	Diagnostic_procedure:T42 
+T43	Diagnostic_procedure 785 792	EUS-FNA
+E34	Diagnostic_procedure:T43 
+R29	IDENTICAL Arg1:E34 Arg2:E33	
+T44	Diagnostic_procedure 1017 1053	endoscopic naso-gallbladder drainage
+E35	Diagnostic_procedure:T44 
+T45	Diagnostic_procedure 1055 1060	ENGBD
+E36	Diagnostic_procedure:T45 
+R30	IDENTICAL Arg1:E36 Arg2:E35	
+T46	Therapeutic_procedure 1844 1859	cholecystectomy
+E37	Therapeutic_procedure:T46 
+T47	Therapeutic_procedure 1875 1890	lymphadenectomy
+E38	Therapeutic_procedure:T47 
+T48	Biological_structure 1861 1874	hepatic hilar
+R31	MODIFY Arg1:T48 Arg2:E38	
+T49	Therapeutic_procedure 1918 1927	resection
+E39	Therapeutic_procedure:T49 
+T50	Biological_structure 1892 1917	extrahepatic biliary duct
+R32	MODIFY Arg1:T50 Arg2:E39	
+T51	Therapeutic_procedure 1933 1952	hepaticojejunostomy
+E40	Therapeutic_procedure:T51 
+T52	Sign_symptom 2044 2051	lesions
+E41	Sign_symptom:T52 
+A2	POLARITY E41 NEG
+T53	Diagnostic_procedure 1150 1178	positron emission tomography
+E42	Diagnostic_procedure:T53 
+T54	Diagnostic_procedure 1179 1198	computed tomography
+E43	Diagnostic_procedure:T54 
+T55	Diagnostic_procedure 1200 1203	PET
+E44	Diagnostic_procedure:T55 
+T56	Diagnostic_procedure 1204 1206	CT
+E45	Diagnostic_procedure:T56 
+R33	IDENTICAL Arg1:E44 Arg2:E42	
+R34	IDENTICAL Arg1:E45 Arg2:E43	
+T57	Biological_structure 834 850	hilar lymph node
+R35	MODIFY Arg1:T57 Arg2:E33	
+T58	Diagnostic_procedure 852 880	Immunohistochemical staining
+E46	Diagnostic_procedure:T58 
+T59	Diagnostic_procedure 931 938	keratin
+E47	Diagnostic_procedure:T59 
+T60	Diagnostic_procedure 940 944	CD56
+E48	Diagnostic_procedure:T60 
+T61	Diagnostic_procedure 950 963	synaptophysin
+E49	Diagnostic_procedure:T61 
+T62	Lab_value 916 926	positivity
+E50	Lab_value:T62 
+R36	MODIFY Arg1:E50 Arg2:E47	
+R37	MODIFY Arg1:E50 Arg2:E48	
+R38	MODIFY Arg1:E50 Arg2:E49	
+R39	SUB_PROCEDURE Arg1:E49 Arg2:E46	
+T63	Detailed_description 971 982	tumor cells
+R40	MODIFY Arg1:T63 Arg2:E46	
+T64	Disease_disorder 1009 1012	NEC
+E51	Disease_disorder:T64 
+#1	AnnotatorNotes E51	neuro endocrine carcinoma
+T65	Detailed_description 1062 1070	catheter
+R41	MODIFY Arg1:T65 Arg2:E35	
+T66	Diagnostic_procedure 1091 1104	bile cytology
+E52	Diagnostic_procedure:T66 
+T67	Sign_symptom 1114 1137	class V malignant cells
+E53	Sign_symptom:T67 
+T68	Sign_symptom 1274 1281	lesions
+E54	Sign_symptom:T68 
+A3	POLARITY E54 UNCERTAIN
+T69	Sign_symptom 1321 1328	lesions
+E55	Sign_symptom:T69 
+A4	POLARITY E55 NEG
+T70	Diagnostic_procedure 1370 1392	18F fluorodeoxyglucose
+E56	Diagnostic_procedure:T70 
+T71	Diagnostic_procedure 1394 1397	FDG
+E57	Diagnostic_procedure:T71 
+R42	IDENTICAL Arg1:E57 Arg2:E56	
+R43	SUB_PROCEDURE Arg1:E56 Arg2:E42	
+T72	Lab_value 1354 1366	accumulation
+E58	Lab_value:T72 
+R44	MODIFY Arg1:E58 Arg2:E56	
+T73	Biological_structure 1410 1421	gallbladder
+T74	Biological_structure 1439 1450	lymph nodes
+R45	MODIFY Arg1:T73 Arg2:E58	
+R46	MODIFY Arg1:T74 Arg2:E58	
+T75	Diagnostic_procedure 1423 1429	SUVmax
+E59	Diagnostic_procedure:T75 
+T76	Diagnostic_procedure 1452 1458	SUVmax
+E60	Diagnostic_procedure:T76 
+T77	Lab_value 1430 1433	7.8
+E61	Lab_value:T77 
+T78	Lab_value 1459 1463	13.4
+E62	Lab_value:T78 
+R47	MODIFY Arg1:E61 Arg2:E59	
+R48	MODIFY Arg1:E62 Arg2:E60	
+R49	SUB_PROCEDURE Arg1:E59 Arg2:E42	
+R50	SUB_PROCEDURE Arg1:E60 Arg2:E42	
+T79	Disease_disorder 1554 1557	NEC
+E63	Disease_disorder:T79 
+T80	Biological_structure 1542 1553	gallbladder
+R51	MODIFY Arg1:T80 Arg2:E63	
+T81	Biological_structure 1592 1617	hepatic hilar lymph nodes
+R52	MODIFY Arg1:T81 Arg2:E63	
+T82	Disease_disorder 1618 1628	metastasis
+E64	Disease_disorder:T82 
+T83	Detailed_description 1252 1259	primary
+T84	Detailed_description 1263 1273	metastatic
+R53	MODIFY Arg1:T83 Arg2:E54	
+R54	MODIFY Arg1:T84 Arg2:E54	
+T85	Therapeutic_procedure 1661 1679	surgical resection
+E65	Therapeutic_procedure:T85 
+T86	Medication 1689 1701	chemotherapy
+E66	Medication:T86 
+T87	Disease_disorder 1769 1780	obstruction
+E67	Disease_disorder:T87 
+T88	Detailed_description 1758 1768	mechanical
+R55	MODIFY Arg1:T88 Arg2:E67	
+T89	Biological_structure 1788 1801	hepatic hilum
+R56	MODIFY Arg1:T89 Arg2:E67	
+T90	Sign_symptom 1809 1817	enlarged
+E68	Sign_symptom:T90 
+T91	Biological_structure 1818 1828	lymph node
+R57	MODIFY Arg1:T91 Arg2:E68	
+T92	Sign_symptom 1958 1963	bulky
+E69	Sign_symptom:T92 
+T93	Biological_structure 1964 1975	lymph nodes
+R58	MODIFY Arg1:T93 Arg2:E69	
+T94	Therapeutic_procedure 1989 1997	resected
+E70	Therapeutic_procedure:T94 
+R59	MODIFY Arg1:T93 Arg2:E70	
+T95	Detailed_description 2002 2009	en bloc
+R60	MODIFY Arg1:T95 Arg2:E70	
+T96	Diagnostic_procedure 2068 2088	postoperative course
+E71	Diagnostic_procedure:T96 
+T97	Lab_value 2093 2103	uneventful
+E72	Lab_value:T97 
+R61	MODIFY Arg1:E72 Arg2:E71	
+T98	Clinical_event 2116 2126	discharged
+E73	Clinical_event:T98 
+T99	Date 2134 2149	tenth day after
+E74	Date:T99 
+T100	Therapeutic_procedure 2150 2157	surgery
+E75	Therapeutic_procedure:T100 
+T101	Diagnostic_procedure 2159 2174	Macroscopically
+E76	Diagnostic_procedure:T101 
+T102	Sign_symptom 2180 2185	tumor
+E77	Sign_symptom:T102 
+T103	Area 2190 2200	58 × 42 mm
+R62	MODIFY Arg1:T103 Arg2:E77	
+T104	Biological_structure 2232 2238	fundus
+R63	MODIFY Arg1:T104 Arg2:E77	
+T105	Sign_symptom 2268 2277	gallstone
+E78	Sign_symptom:T105 
+T106	Color 2258 2267	yellowish
+R64	MODIFY Arg1:T106 Arg2:E78	
+R65	MODIFY Arg1:T104 Arg2:E78	
+T107	Therapeutic_procedure 2353 2360	excised
+E79	Therapeutic_procedure:T107 
+R66	MODIFY Arg1:E77 Arg2:E76	
+T108	Biological_structure 2305 2330	hepatic hilar lymph nodes
+T109	Area 2332 2342	71 × 37 mm
+R67	MODIFY Arg1:T109 Arg2:E79	
+R68	MODIFY Arg1:T108 Arg2:E79	
+T110	Diagnostic_procedure 2382 2405	Microscopic examination
+E80	Diagnostic_procedure:T110 
+T111	Biological_structure 2413 2424	gallbladder
+R69	MODIFY Arg1:T111 Arg2:E80	
+T112	Disease_disorder 2476 2490	adenocarcinoma
+E81	Disease_disorder:T112 
+T113	Detailed_description 2436 2467	moderate to well differentiated
+R70	MODIFY Arg1:T113 Arg2:E81	
+T114	Detailed_description 2468 2475	tubular
+R71	MODIFY Arg1:T114 Arg2:E81	
+T115	Biological_structure 2513 2519	mucosa
+T116	Biological_structure 2527 2541	muscular layer
+R72	MODIFY Arg1:T116 Arg2:E81	
+R73	MODIFY Arg1:T115 Arg2:E81	
+T117	Biological_structure 2547 2570	not the serosal surface
+R74	MODIFY Arg1:T117 Arg2:E81	
+T118	Disease_disorder 2584 2587	NEC
+E82	Disease_disorder:T118 
+A5	POLARITY E82 NEG
+T119	Sign_symptom 2617 2622	tumor
+E83	Sign_symptom:T119 
+T120	Biological_structure 2636 2647	gallbladder
+R75	MODIFY Arg1:T120 Arg2:E83	
+T121	Diagnostic_procedure 2674 2687	synaptophysin
+E84	Diagnostic_procedure:T121 
+T122	Diagnostic_procedure 2692 2696	CD56
+E85	Diagnostic_procedure:T122 
+T123	Diagnostic_procedure 2715 2729	chromogranin A
+E86	Diagnostic_procedure:T123 
+T124	Lab_value 2652 2669	slightly positive
+E87	Lab_value:T124 
+R76	MODIFY Arg1:E87 Arg2:E84	
+R77	MODIFY Arg1:E87 Arg2:E85	
+T125	Lab_value 2702 2710	negative
+E88	Lab_value:T125 
+R78	MODIFY Arg1:E88 Arg2:E86	
+R79	MODIFY Arg1:E83 Arg2:E84	
+R80	MODIFY Arg1:E83 Arg2:E85	
+R81	MODIFY Arg1:E83 Arg2:E86	
+T126	Diagnostic_procedure 2746 2762	resection margin
+E89	Diagnostic_procedure:T126 
+T127	Sign_symptom 2799 2804	tumor
+E90	Sign_symptom:T127 
+A6	POLARITY E90 NEG
+T128	Biological_structure 2772 2781	liver bed
+R82	MODIFY Arg1:T128 Arg2:E89	
+R83	MODIFY Arg1:E90 Arg2:E89	
+T129	Disease_disorder 2838 2847	carcinoma
+E91	Disease_disorder:T129 
+T130	Biological_structure 2816 2826	epithelium
+R84	MODIFY Arg1:T130 Arg2:E91	
+T131	Sign_symptom 2866 2876	metaplasia
+E92	Sign_symptom:T131 
+T132	Biological_structure 2855 2865	intestinal
+R85	MODIFY Arg1:T132 Arg2:E92	
+T133	Biological_structure 2886 2898	goblet cells
+R86	MODIFY Arg1:T133 Arg2:E92	
+T134	Diagnostic_procedure 2935 2946	alcian blue
+E93	Diagnostic_procedure:T134 
+T135	Biological_structure 2980 3005	hepatic hilar lymph nodes
+T136	Sign_symptom 3035 3040	tumor
+E94	Sign_symptom:T136 
+T137	Detailed_description 3023 3028	small
+T138	Shape 3029 3034	round
+R87	MODIFY Arg1:T138 Arg2:E94	
+R88	MODIFY Arg1:T137 Arg2:E94	
+T139	Diagnostic_procedure 3067 3073	nuclei
+E95	Diagnostic_procedure:T139 
+T140	Diagnostic_procedure 3084 3093	cytoplasm
+E96	Diagnostic_procedure:T140 
+T141	Lab_value 3052 3066	hyperchromatic
+E97	Lab_value:T141 
+T142	Lab_value 3078 3083	scant
+E98	Lab_value:T142 
+R89	MODIFY Arg1:E98 Arg2:E96	
+R90	MODIFY Arg1:E97 Arg2:E95	
+R91	MODIFY Arg1:E94 Arg2:E95	
+R92	MODIFY Arg1:E94 Arg2:E96	
+R93	MODIFY Arg1:T135 Arg2:E94	
+T143	Sign_symptom 3116 3121	tumor
+E99	Sign_symptom:T143 
+T144	Detailed_description 3104 3108	Some
+R94	MODIFY Arg1:T144 Arg2:E99	
+T145	Qualitative_concept 3133 3138	large
+R95	MODIFY Arg1:T145 Arg2:E99	
+T146	Diagnostic_procedure 3157 3163	nuclei
+E100	Diagnostic_procedure:T146 
+T147	Texture 3147 3156	vesicular
+R96	MODIFY Arg1:T147 Arg2:E100	
+R97	MODIFY Arg1:E99 Arg2:E100	
+T148	Sign_symptom 3169 3174	tumor
+E101	Sign_symptom:T148 
+T149	Disease_disorder 3517 3520	NEC
+E102	Disease_disorder:T149 
+T150	Disease_disorder 4506 4509	NEC
+E103	Disease_disorder:T150 
+T151	Detailed_description 3198 3204	sheets
+T152	Detailed_description 3206 3211	cords
+T153	Detailed_description 3221 3231	trabecular
+T154	Detailed_description 3235 3242	rosette
+T155	Sign_symptom 3284 3292	necrosis
+E104	Sign_symptom:T155 
+T156	Detailed_description 3278 3283	focal
+R98	MODIFY Arg1:T156 Arg2:E104	
+R99	MODIFY Arg1:T151 Arg2:E101	
+R100	MODIFY Arg1:T152 Arg2:E101	
+R101	MODIFY Arg1:T153 Arg2:E101	
+R102	MODIFY Arg1:T154 Arg2:E101	
+R103	MODIFY Arg1:E101 Arg2:E104	
+T157	Diagnostic_procedure 3304 3325	immunohistochemically
+E105	Diagnostic_procedure:T157 
+T158	Lab_value 3326 3334	positive
+E106	Lab_value:T158 
+T159	Diagnostic_procedure 3339 3343	CD56
+E107	Diagnostic_procedure:T159 
+T160	Diagnostic_procedure 3345 3358	synaptophysin
+E108	Diagnostic_procedure:T160 
+T161	Diagnostic_procedure 3364 3378	chromogranin A
+E109	Diagnostic_procedure:T161 
+R104	MODIFY Arg1:E106 Arg2:E107	
+R105	MODIFY Arg1:E106 Arg2:E108	
+R106	MODIFY Arg1:E106 Arg2:E109	
+R107	SUB_PROCEDURE Arg1:E107 Arg2:E105	
+R108	SUB_PROCEDURE Arg1:E108 Arg2:E105	
+R109	SUB_PROCEDURE Arg1:E109 Arg2:E105	
+T162	Diagnostic_procedure 3396 3409	mitotic count
+E110	Diagnostic_procedure:T162 
+T163	Lab_value 3414 3453	24 per 10 high-power microscopic fields
+E111	Lab_value:T163 
+R110	MODIFY Arg1:E111 Arg2:E110	
+T164	Diagnostic_procedure 3463 3488	Ki-67 proliferation index
+E112	Diagnostic_procedure:T164 
+T165	Lab_value 3493 3499	70–80%
+E113	Lab_value:T165 
+R111	MODIFY Arg1:E113 Arg2:E112	
+T166	Biological_structure 3560 3579	hepatic lymph nodes
+T167	Therapeutic_procedure 3600 3610	cauterized
+E114	Therapeutic_procedure:T167 
+T168	Detailed_description 3584 3599	microscopically
+T169	Biological_structure 3526 3552	surgical dissection margin
+R112	MODIFY Arg1:T166 Arg2:T169	
+R113	MODIFY Arg1:T169 Arg2:E114	
+R114	MODIFY Arg1:T168 Arg2:E114	
+T170	Sign_symptom 3622 3627	tumor
+E115	Sign_symptom:T170 
+R115	MODIFY Arg1:E115 Arg2:E114	
+T171	Sign_symptom 3648 3656	invasion
+E116	Sign_symptom:T171 
+A7	POLARITY E116 NEG
+T172	Biological_structure 3664 3689	extrahepatic biliary duct
+R116	MODIFY Arg1:T172 Arg2:E116	
+T173	Diagnostic_procedure 3717 3743	pathological re-evaluation
+E117	Diagnostic_procedure:T173 
+T174	Diagnostic_procedure 3747 3765	total segmentation
+E118	Diagnostic_procedure:T174 
+R117	SUB_PROCEDURE Arg1:E118 Arg2:E117	
+T175	Disease_disorder 3788 3802	adenocarcinoma
+E119	Disease_disorder:T175 
+T176	Biological_structure 3823 3834	lymph nodes
+T177	Severity 3769 3784	negligible area
+R118	MODIFY Arg1:T177 Arg2:E119	
+R119	MODIFY Arg1:T176 Arg2:E119	
+T178	Disease_disorder 3853 3867	adenocarcinoma
+E120	Disease_disorder:T178 
+T179	Biological_structure 3886 3919	intestinal metaplastic epithelium
+T180	Biological_structure 3927 3938	gallbladder
+R120	MODIFY Arg1:T180 Arg2:T179	
+T181	Diagnostic_procedure 3962 3966	CDX2
+E121	Diagnostic_procedure:T181 
+T182	Lab_value 3949 3957	positive
+E122	Lab_value:T182 
+R121	MODIFY Arg1:T179 Arg2:E122	
+R122	MODIFY Arg1:E120 Arg2:E122	
+R123	MODIFY Arg1:E122 Arg2:E121	
+T183	Diagnostic_procedure 4048 4052	CDX2
+E123	Diagnostic_procedure:T183 
+T184	Lab_value 4035 4043	negative
+E124	Lab_value:T184 
+R124	MODIFY Arg1:E124 Arg2:E123	
+T185	Biological_structure 4013 4030	hilar lymph nodes
+R125	MODIFY Arg1:T185 Arg2:E124	
+T186	Medication 4117 4128	carboplatin
+E125	Medication:T186 
+T187	Dosage 4101 4113	three cycles
+R126	MODIFY Arg1:T187 Arg2:E125	
+T188	Medication 4193 4202	etoposide
+E126	Medication:T188 
+T189	Dosage 4204 4255	80 mg/m2 on days 1 through 3 repeated every 21 days
+R127	MODIFY Arg1:T189 Arg2:E126	
+T190	Dosage 4130 4187	area under the curve of 5 on day 1 repeated every 21 days
+R128	MODIFY Arg1:T190 Arg2:E125	
+T191	Sign_symptom 4291 4302	neutropenia
+E127	Sign_symptom:T191 
+T192	Severity 4283 4290	grade 4
+R129	MODIFY Arg1:T192 Arg2:E127	
+T193	Medication 4349 4365	fluoroquinolones
+E128	Medication:T193 
+T194	Detailed_description 4336 4348	prophylactic
+R130	MODIFY Arg1:T194 Arg2:E128	
+T195	Date 4258 4281	During the first course
+E129	Date:T195 
+T196	Date 4367 4381	After 4 months
+E130	Date:T196 
+T197	Sign_symptom 4392 4403	recurrences
+E131	Sign_symptom:T197 
+T198	Detailed_description 4383 4391	multiple
+R131	MODIFY Arg1:T198 Arg2:E131	
+T199	Biological_structure 4411 4434	para-aortic lymph nodes
+R132	MODIFY Arg1:T199 Arg2:E131	
+T200	Diagnostic_procedure 4492 4499	EUS-FNA
+E132	Diagnostic_procedure:T200 
+T201	Medication 4545 4557	chemotherapy
+E133	Medication:T201 
+T202	Detailed_description 4533 4544	second-line
+R133	MODIFY Arg1:T202 Arg2:E133	
+T203	Medication 4563 4572	amrubicin
+E134	Medication:T203 
+R134	SUB_PROCEDURE Arg1:E134 Arg2:E133	
+T204	Dosage 4574 4625	24 mg/m2 on days 1 through 3 repeated every 21 days
+R135	MODIFY Arg1:T204 Arg2:E134	
+T205	Sign_symptom 4636 4647	neutropenia
+E135	Sign_symptom:T205 
+T206	Sign_symptom 4652 4658	anemia
+E136	Sign_symptom:T206 
+T207	Severity 4628 4635	Grade 4
+R136	MODIFY Arg1:T207 Arg2:E135	
+T208	Medication 4725 4762	granulocyte colony-stimulating factor
+E137	Medication:T208 
+T209	Detailed_description 4715 4724	pegylated
+R137	MODIFY Arg1:T209 Arg2:E137	
+T210	Therapeutic_procedure 4782 4793	transfusion
+E138	Therapeutic_procedure:T210 
+T211	Detailed_description 4767 4781	red blood cell
+R138	MODIFY Arg1:T211 Arg2:E138	
+R139	AFTER Arg1:E1 Arg2:E2	
+*	OVERLAP E2 E3
+R140	BEFORE Arg1:E3 Arg2:E15	
+*	OVERLAP E15 E4 E12 E13 E16 E18 E20 E21 E24 E26 E28 E29 E30 E31 E32 E33
+R141	BEFORE Arg1:E33 Arg2:E46	
+R142	SUB_PROCEDURE Arg1:E47 Arg2:E46	
+R143	SUB_PROCEDURE Arg1:E48 Arg2:E46	
+*	OVERLAP E46 E51
+R144	BEFORE Arg1:E51 Arg2:E35	
+*	OVERLAP E35 E52 E53 E42 E43 E54
+R145	BEFORE Arg1:E54 Arg2:E55	
+*	OVERLAP E55 E63 E64
+R146	BEFORE Arg1:E64 Arg2:E65	
+R147	BEFORE Arg1:E65 Arg2:E66	
+R148	CAUSE Arg1:E68 Arg2:E67	
+R149	AFTER Arg1:E66 Arg2:E67	
+*	OVERLAP E67 E68
+R150	BEFORE Arg1:E68 Arg2:E37	
+*	OVERLAP E37 E38 E39 E40 E69 E70
+R151	BEFORE Arg1:E70 Arg2:E41	
+R152	BEFORE Arg1:E41 Arg2:E71	
+R153	BEFORE Arg1:E71 Arg2:E73	
+*	OVERLAP E73 E74
+R154	AFTER Arg1:E74 Arg2:E75	
+R155	BEFORE Arg1:E75 Arg2:E76	
+*	OVERLAP E76 E77 E78
+R156	AFTER Arg1:E78 Arg2:E79	
+R157	BEFORE Arg1:E79 Arg2:E80	
+*	OVERLAP E80 E81 E82 E83 E84 E85 E86 E89 E90 E91 E92 E93 E94 E95 E96 E99 E100 E101 E104 E105 E110 E112 E102
+R158	BEFORE Arg1:E102 Arg2:E114	
+*	OVERLAP E114 E115 E116
+R159	BEFORE Arg1:E116 Arg2:E117	
+*	OVERLAP E117 E119 E120 E121 E123
+R160	BEFORE Arg1:E123 Arg2:E125	
+*	OVERLAP E125 E126 E129 E127 E128
+R161	BEFORE Arg1:E128 Arg2:E130	
+*	OVERLAP E130 E131 E132 E103 E133 E135 E136
+R162	BEFORE Arg1:E136 Arg2:E137	
+*	OVERLAP E137 E138
+R163	BEFORE Arg1:E138 Arg2:E9	
+*	OVERLAP E9 E10 E11

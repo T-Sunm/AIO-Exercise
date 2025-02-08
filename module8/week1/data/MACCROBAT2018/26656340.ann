@@ -1,0 +1,132 @@
+T1	Age 201 211	4-year-old
+T2	Sex 212 218	female
+T3	Clinical_event 225 234	presented
+E1	Clinical_event:T3 
+T4	Nonbiological_location 242 264	outpatients department
+R1	MODIFY Arg1:T4 Arg2:E1	
+T5	Sign_symptom 310 318	swelling
+E2	Sign_symptom:T5 
+T6	Biological_structure 322 333	both cheeks
+R2	MODIFY Arg1:T6 Arg2:E2	
+T7	Detailed_description 298 309	symmetrical
+T8	Detailed_description 288 296	painless
+T9	Detailed_description 270 286	slowly enlarging
+R3	MODIFY Arg1:T7 Arg2:E2	
+R4	MODIFY Arg1:T8 Arg2:E2	
+R5	MODIFY Arg1:T9 Arg2:E2	
+T10	Sign_symptom 402 431	change in her facial symmetry
+E3	Sign_symptom:T10 
+T11	Date 367 378	2 years old
+E4	Date:T11 
+T12	History 335 464	When the girl was approximately 2 years old, the parents noticed a change in her facial symmetry, which later became more obvious
+T13	Sign_symptom 484 493	swellings
+E5	Sign_symptom:T13 
+T14	Detailed_description 499 503	bony
+T15	Detailed_description 508 512	hard
+R6	MODIFY Arg1:T14 Arg2:E5	
+R7	MODIFY Arg1:T15 Arg2:E5	
+T16	Diagnostic_procedure 469 478	palpation
+E6	Diagnostic_procedure:T16 
+T17	Diagnostic_procedure 607 618	temperature
+E7	Diagnostic_procedure:T17 
+T18	Lab_value 592 603	no increase
+R8	MODIFY Arg1:T18 Arg2:E7	
+T19	Sign_symptom 547 555	swelling
+E8	Sign_symptom:T19 
+T20	Biological_structure 533 537	skin
+R9	MODIFY Arg1:T20 Arg2:E8	
+T21	Texture 560 566	smooth
+R10	MODIFY Arg1:T21 Arg2:T20	
+T22	Detailed_description 571 585	freely movable
+R11	MODIFY Arg1:T22 Arg2:T20	
+T23	History 638 746	no history of any trauma, pain, pus discharge, blood discharge, fever, paresthesia, anorexia, or weight loss
+T24	History 748 790	No significant family history was reported
+T25	Diagnostic_procedure 802 813	radiography
+E9	Diagnostic_procedure:T25 
+T26	Detailed_description 792 801	Panoramic
+R12	MODIFY Arg1:T26 Arg2:E9	
+T27	Sign_symptom 823 834	involvement
+E10	Sign_symptom:T27 
+T28	Biological_structure 847 855	mandible
+R13	MODIFY Arg1:T28 Arg2:E10	
+T29	Biological_structure 864 871	maxilla
+R14	MODIFY Arg1:T29 Arg2:T28	
+T30	Sign_symptom 916 928	radiolucency
+E11	Sign_symptom:T30 
+T31	Detailed_description 934 960	thin and expanded cortices
+T32	Detailed_description 903 915	multilocular
+R15	MODIFY Arg1:T31 Arg2:E11	
+R16	MODIFY Arg1:T32 Arg2:E11	
+T33	Shape 886 902	soap bubble-like
+R17	MODIFY Arg1:T33 Arg2:E11	
+T34	Sign_symptom 1019 1027	impacted
+E12	Sign_symptom:T34 
+T35	Biological_structure 1012 1014	47
+#1	AnnotatorNotes T35	tooth
+R18	MODIFY Arg1:T35 Arg2:E12	
+T36	Sign_symptom 962 977	Unerupted teeth
+E13	Sign_symptom:T36 
+T37	Biological_structure 988 1006	15, 25, 35, 37, 45
+R19	MODIFY Arg1:T37 Arg2:E13	
+T38	Diagnostic_procedure 1048 1067	computed tomography
+E14	Diagnostic_procedure:T38 
+T39	Detailed_description 1037 1047	Multislice
+R20	MODIFY Arg1:T39 Arg2:E14	
+T40	Sign_symptom 1111 1118	lesions
+E15	Sign_symptom:T40 
+T41	Detailed_description 1091 1103	multilocular
+T42	Detailed_description 1104 1110	cystic
+R21	MODIFY Arg1:T42 Arg2:E15	
+R22	MODIFY Arg1:T41 Arg2:E15	
+T43	Detailed_description 1131 1159	soft-tissue density material
+R23	MODIFY Arg1:T43 Arg2:E15	
+T44	Sign_symptom 1171 1180	anomalies
+E16	Sign_symptom:T44 
+T45	Biological_structure 1164 1170	dental
+R24	MODIFY Arg1:T45 Arg2:E16	
+T46	Biological_structure 1195 1229	body and the sides of the mandible
+R25	MODIFY Arg1:T46 Arg2:E16	
+T47	Sign_symptom 1239 1246	lesions
+E17	Sign_symptom:T47 
+T48	Biological_structure 1273 1280	maxilla
+R26	MODIFY Arg1:T48 Arg2:E17	
+T49	Diagnostic_procedure 1292 1298	biopsy
+E18	Diagnostic_procedure:T49 
+T50	Biological_structure 1321 1350	central area of the left rami
+R27	MODIFY Arg1:T50 Arg2:E18	
+T51	Diagnostic_procedure 1352 1374	Histologic examination
+E19	Diagnostic_procedure:T51 
+T52	Therapeutic_procedure 1672 1693	surgical intervention
+E20	Therapeutic_procedure:T52 
+A1	POLARITY E20 NEG
+T53	Clinical_event 1730 1741	followed up
+E21	Clinical_event:T53 
+T54	Detailed_description 1745 1762	regular intervals
+R28	MODIFY Arg1:T54 Arg2:E21	
+T55	Sign_symptom 1408 1419	giant cells
+E22	Sign_symptom:T55 
+T56	Detailed_description 1393 1407	multinucleated
+T57	Detailed_description 1387 1392	large
+T58	Detailed_description 1382 1386	many
+R29	MODIFY Arg1:T56 Arg2:E22	
+R30	MODIFY Arg1:T57 Arg2:E22	
+R31	MODIFY Arg1:T58 Arg2:E22	
+T59	Biological_structure 1451 1475	connective tissue stroma
+T60	Detailed_description 1441 1450	fibrillar
+T61	Detailed_description 1432 1440	delicate
+T62	Detailed_description 1425 1430	loose
+R32	MODIFY Arg1:T60 Arg2:T59	
+R33	MODIFY Arg1:T61 Arg2:T59	
+R34	MODIFY Arg1:T62 Arg2:T59	
+R35	MODIFY Arg1:T59 Arg2:E22	
+T63	Biological_structure 1487 1515	large numbers of fibroblasts
+T64	Biological_structure 1520 1544	many small blood vessels
+R36	MODIFY Arg1:T63 Arg2:T59	
+R37	MODIFY Arg1:T64 Arg2:T59	
+*	OVERLAP E1 E2
+R38	AFTER Arg1:E2 Arg2:E4	
+*	OVERLAP E4 E3
+R39	BEFORE Arg1:E3 Arg2:E6	
+*	OVERLAP E6 E5 E8 E7 E9 E10 E11 E13 E12 E14 E15 E16 E17 E18 E19 E22
+R40	BEFORE Arg1:E22 Arg2:E20	
+R41	BEFORE Arg1:E20 Arg2:E21	

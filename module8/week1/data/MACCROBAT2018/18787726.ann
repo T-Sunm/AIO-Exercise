@@ -1,0 +1,252 @@
+T1	Age 2 13	63-year-old
+T2	Sex 14 19	woman
+T3	History 25 49	no known cardiac history
+T4	Sign_symptom 83 90	dyspnea
+E1	Sign_symptom:T4 
+T5	Therapeutic_procedure 101 111	intubation
+E2	Therapeutic_procedure:T5 
+T6	Therapeutic_procedure 116 135	ventilatory support
+E3	Therapeutic_procedure:T6 
+T7	Nonbiological_location 136 151	out of hospital
+R1	MODIFY Arg1:T7 Arg2:E3	
+T8	Detailed_description 67 79	sudden onset
+R2	MODIFY Arg1:T8 Arg2:E1	
+T9	Clinical_event 50 59	presented
+E4	Clinical_event:T9 
+T10	Sign_symptom 192 202	discomfort
+E5	Sign_symptom:T10 
+A1	POLARITY E5 NEG
+T11	Biological_structure 186 191	chest
+R3	MODIFY Arg1:T11 Arg2:E5	
+T12	Sign_symptom 204 216	palpitations
+E6	Sign_symptom:T12 
+A2	POLARITY E6 NEG
+T13	Sign_symptom 218 225	syncope
+E7	Sign_symptom:T13 
+A3	POLARITY E7 NEG
+T14	Disease_disorder 229 238	infection
+E8	Disease_disorder:T14 
+A4	POLARITY E8 NEG
+T15	Sign_symptom 256 264	afebrile
+E9	Sign_symptom:T15 
+T16	Sign_symptom 269 281	normotensive
+E10	Sign_symptom:T16 
+T17	Sign_symptom 296 307	tachycardia
+E11	Sign_symptom:T17 
+T18	Detailed_description 290 295	sinus
+R4	MODIFY Arg1:T18 Arg2:E11	
+T19	Lab_value 311 324	140 beats/min
+R5	MODIFY Arg1:T19 Arg2:E11	
+T20	Diagnostic_procedure 330 359	cardiorespiratory examination
+E12	Diagnostic_procedure:T20 
+T21	Diagnostic_procedure 391 414	jugular venous pressure
+E13	Diagnostic_procedure:T21 
+T23	Biological_structure 422 438	angle of the jaw
+R7	MODIFY Arg1:T23 Arg2:E13	
+T24	Sign_symptom 453 470	third heart sound
+E14	Sign_symptom:T24 
+T25	Detailed_description 442 452	left-sided
+R8	MODIFY Arg1:T25 Arg2:E14	
+T26	Sign_symptom 485 493	crackles
+E15	Sign_symptom:T26 
+T27	Detailed_description 475 484	bibasilar
+R9	MODIFY Arg1:T27 Arg2:E15	
+T28	Biological_structure 497 506	both lung
+R10	MODIFY Arg1:T28 Arg2:E15	
+T29	Diagnostic_procedure 519 544	complete blood cell count
+E16	Diagnostic_procedure:T29 
+T30	Diagnostic_procedure 546 558	electrolytes
+E17	Diagnostic_procedure:T30 
+T31	Diagnostic_procedure 563 581	cardiac biomarkers
+E18	Diagnostic_procedure:T31 
+T33	Diagnostic_procedure 620 637	electrocardiogram
+E19	Diagnostic_procedure:T33 
+T34	Sign_symptom 647 660	ST depression
+E20	Sign_symptom:T34 
+T35	Diagnostic_procedure 664 678	leads V2 to V6
+E21	Diagnostic_procedure:T35 
+R14	SUB_PROCEDURE Arg1:E21 Arg2:E19	
+R15	MODIFY Arg1:E20 Arg2:E21	
+T36	Disease_disorder 694 716	anterolateral ischemia
+E22	Disease_disorder:T36 
+T37	Diagnostic_procedure 737 747	radiograph
+E23	Diagnostic_procedure:T37 
+T38	Biological_structure 731 736	chest
+R16	MODIFY Arg1:T38 Arg2:E23	
+T39	Sign_symptom 771 790	vascular congestion
+E24	Sign_symptom:T39 
+T40	Biological_structure 761 770	pulmonary
+R17	MODIFY Arg1:T40 Arg2:E24	
+T41	Disease_disorder 822 837	pulmonary edema
+E25	Disease_disorder:T41 
+T42	Diagnostic_procedure 853 882	echocardiographic examination
+E26	Diagnostic_procedure:T42 
+T43	Diagnostic_procedure 899 917	cardiac dimensions
+E27	Diagnostic_procedure:T43 
+T45	Diagnostic_procedure 926 937	wall motion
+E28	Diagnostic_procedure:T45 
+T47	Disease_disorder 947 968	diastolic dysfunction
+E29	Disease_disorder:T47 
+T48	Severity 942 946	mild
+R20	MODIFY Arg1:T48 Arg2:E29	
+T49	Diagnostic_procedure 977 1028	early diastolic to late diastolic transmitral ratio
+E30	Diagnostic_procedure:T49 
+T51	Diagnostic_procedure 1055 1072	deceleration time
+E31	Diagnostic_procedure:T51 
+R22	SUB_PROCEDURE Arg1:E27 Arg2:E26	
+R23	SUB_PROCEDURE Arg1:E28 Arg2:E26	
+R24	SUB_PROCEDURE Arg1:E30 Arg2:E26	
+T52	Lab_value 1074 1080	250 ms
+R25	MODIFY Arg1:T52 Arg2:E31	
+R27	SUB_PROCEDURE Arg1:E31 Arg2:E26	
+T54	Biological_structure 1136 1164	lateral mitral valve annulus
+T55	Diagnostic_procedure 1096 1128	early diastolic annular velocity
+E32	Diagnostic_procedure:T55 
+R29	MODIFY Arg1:T54 Arg2:E32	
+R30	SUB_PROCEDURE Arg1:E32 Arg2:E26	
+T57	Sign_symptom 1187 1195	diuresis
+E33	Sign_symptom:T57 
+T58	Therapeutic_procedure 1218 1237	ventilatory support
+E34	Therapeutic_procedure:T58 
+T59	Therapeutic_procedure 1187 1195	diuresis
+E35	Therapeutic_procedure:T59 
+#1	AnnotatorNotes E35	Intentional, likely through medication (diuretics)
+T60	Lab_value 1176 1186	aggressive
+R31	MODIFY Arg1:T60 Arg2:E35	
+T61	Lab_value 1210 1217	minimal
+R32	MODIFY Arg1:T61 Arg2:E34	
+T62	Therapeutic_procedure 1255 1264	extubated
+E36	Therapeutic_procedure:T62 
+T63	Date 1265 1282	one day following
+E37	Date:T63 
+T64	Time 1309 1319	Within 1 h
+E38	Time:T64 
+T65	Disease_disorder 1367 1382	pulmonary edema
+E39	Disease_disorder:T65 
+T66	Detailed_description 1357 1366	recurrent
+R33	MODIFY Arg1:T66 Arg2:E39	
+T67	Diagnostic_procedure 1398 1414	radiographically
+E40	Diagnostic_procedure:T67 
+T68	Therapeutic_procedure 1426 1448	mechanical ventilation
+E41	Therapeutic_procedure:T68 
+T69	Diagnostic_procedure 1450 1473	Cardiac catheterization
+E42	Diagnostic_procedure:T69 
+T70	Lab_value 1501 1507	normal
+T71	Biological_structure 1508 1525	coronary arteries
+R34	MODIFY Arg1:T71 Arg2:T70	
+R35	MODIFY Arg1:T70 Arg2:E42	
+T72	Date 1527 1535	On day 4
+E43	Date:T72 
+T73	Clinical_event 1562 1571	admission
+E44	Clinical_event:T73 
+T74	Nonbiological_location 1543 1561	coronary care unit
+R36	MODIFY Arg1:T74 Arg2:E44	
+T75	Therapeutic_procedure 1612 1622	extubation
+E45	Therapeutic_procedure:T75 
+A5	POLARITY E45 NEG
+T77	Diagnostic_procedure 1626 1646	computed tomographic
+E46	Diagnostic_procedure:T77 
+T78	Disease_disorder 1688 1694	goiter
+E47	Disease_disorder:T78 
+T79	Detailed_description 1675 1687	multinodular
+T80	Area 1663 1674	4 cm × 9 cm
+R38	MODIFY Arg1:T79 Arg2:E47	
+R39	MODIFY Arg1:T80 Arg2:E47	
+T81	Biological_structure 1714 1725	mediastinum
+R40	MODIFY Arg1:T81 Arg2:E47	
+T82	Sign_symptom 1760 1768	stenosis
+E48	Sign_symptom:T82 
+T83	Biological_structure 1751 1759	tracheal
+R41	MODIFY Arg1:T83 Arg2:E48	
+R42	CAUSE Arg1:E47 Arg2:E48	
+T84	Disease_disorder 1801 1805	NPPE
+E49	Disease_disorder:T84 
+#2	AnnotatorNotes E49	Negative pressure pulmonary edema
+T85	Disease_disorder 1831 1837	goiter
+E50	Disease_disorder:T85 
+T86	Severity 1822 1830	enlarged
+R43	MODIFY Arg1:T86 Arg2:E50	
+R44	CAUSE Arg1:E50 Arg2:E49	
+T87	Therapeutic_procedure 1861 1882	surgical intervention
+E51	Therapeutic_procedure:T87 
+T88	Therapeutic_procedure 1889 1902	thyroidectomy
+E52	Therapeutic_procedure:T88 
+R45	SUB_PROCEDURE Arg1:E52 Arg2:E51	
+T89	Diagnostic_procedure 1919 1931	bronchoscopy
+E53	Diagnostic_procedure:T89 
+T90	Detailed_description 1904 1918	Intraoperative
+R46	MODIFY Arg1:T90 Arg2:E53	
+T91	Lab_value 1962 1978	greater than 50%
+T92	Sign_symptom 1950 1958	stenosis
+E54	Sign_symptom:T92 
+T93	Biological_structure 1941 1949	tracheal
+R47	MODIFY Arg1:T93 Arg2:E54	
+R48	MODIFY Arg1:T91 Arg2:E54	
+T94	Diagnostic_procedure 1984 2004	postoperative course
+E55	Diagnostic_procedure:T94 
+T96	Date 2028 2050	three months following
+E56	Date:T96 
+T97	Clinical_event 2051 2060	discharge
+E57	Clinical_event:T97 
+T98	Outcome 2074 2082	returned
+E58	Outcome:T98 
+T99	Detailed_description 2090 2113	previous activity level
+R50	MODIFY Arg1:T99 Arg2:E58	
+T100	Sign_symptom 2133 2140	dyspnea
+E59	Sign_symptom:T100 
+A6	POLARITY E59 NEG
+R51	AFTER Arg1:E4 Arg2:E1	
+*	OVERLAP E1 E2 E3
+R52	AFTER Arg1:E3 Arg2:E5	
+*	OVERLAP E5 E6 E7 E8
+R53	BEFORE Arg1:E8 Arg2:E9	
+*	OVERLAP E9 E10 E11 E12 E13 E14 E15 E16 E17 E18 E19 E20 E22 E23 E24 E25 E26 E29
+A7	POLARITY E22 UNCERTAIN
+R54	BEFORE Arg1:E29 Arg2:E35	
+*	OVERLAP E35 E33 E34
+R55	BEFORE Arg1:E34 Arg2:E36	
+*	OVERLAP E36 E37
+R56	BEFORE Arg1:E37 Arg2:E38	
+T101	Coreference 1323 1333	extubation
+E60	Coreference:T101 
+R57	IDENTICAL Arg1:E60 Arg2:E36	
+*	OVERLAP E38 E60 E39 E40 E41
+R58	BEFORE Arg1:E41 Arg2:E42	
+R59	BEFORE Arg1:E42 Arg2:E43	
+*	OVERLAP E43 E44 E45 E46 E47 E48 E49 E50
+R60	BEFORE Arg1:E50 Arg2:E51	
+*	OVERLAP E51 E53 E54
+R61	BEFORE Arg1:E54 Arg2:E55	
+R62	BEFORE Arg1:E55 Arg2:E56	
+R63	AFTER Arg1:E56 Arg2:E57	
+R64	BEFORE Arg1:E57 Arg2:E58	
+*	OVERLAP E58 E59
+T56	Lab_value 1088 1095	reduced
+E61	Lab_value:T56 
+R18	MODIFY Arg1:E61 Arg2:E32	
+T53	Lab_value 1045 1054	prolonged
+E62	Lab_value:T53 
+R19	MODIFY Arg1:E62 Arg2:E31	
+T50	Lab_value 1032 1043	less than 1
+E63	Lab_value:T50 
+R21	MODIFY Arg1:E63 Arg2:E30	
+T46	Lab_value 919 925	normal
+E64	Lab_value:T46 
+R26	MODIFY Arg1:E64 Arg2:E28	
+T44	Lab_value 892 898	normal
+E65	Lab_value:T44 
+R28	MODIFY Arg1:E65 Arg2:E27	
+T76	Clinical_event 1585 1591	failed
+E66	Clinical_event:T76 
+R37	MODIFY Arg1:E66 Arg2:E45	
+T22	Lab_value 382 390	elevated
+E67	Lab_value:T22 
+R6	MODIFY Arg1:E67 Arg2:E13	
+T32	Lab_value 587 607	within normal limits
+E68	Lab_value:T32 
+R11	MODIFY Arg1:E68 Arg2:E18	
+R12	MODIFY Arg1:E68 Arg2:E17	
+R13	MODIFY Arg1:E68 Arg2:E16	
+T95	Lab_value 2009 2022	uncomplicated
+E69	Lab_value:T95 
+R49	MODIFY Arg1:E69 Arg2:E55	

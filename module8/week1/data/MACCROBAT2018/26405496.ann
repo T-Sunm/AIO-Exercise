@@ -1,0 +1,310 @@
+T1	Age 8 21	aged 31 years
+T2	Sex 2 7	woman
+T3	History 23 27	G2P2
+T4	History 29 66	without any pathological past history
+T5	Therapeutic_procedure 78 91	prenatal care
+E1	Therapeutic_procedure:T5 
+T6	Lab_value 73 77	good
+R1	MODIFY Arg1:T6 Arg2:E1	
+T7	History 73 91	good prenatal care
+T8	Diagnostic_procedure 107 124	prenatal analysis
+E2	Diagnostic_procedure:T8 
+T9	Lab_value 100 106	normal
+R2	MODIFY Arg1:T9 Arg2:E2	
+T10	History 100 124	normal prenatal analysis
+T11	Family_history 100 124	normal prenatal analysis
+T12	Diagnostic_procedure 126 140	blood pressure
+E3	Diagnostic_procedure:T12 
+T13	Clinical_event 152 161	follow-up
+E4	Clinical_event:T13 
+T14	Lab_value 166 172	normal
+R3	MODIFY Arg1:T14 Arg2:E3	
+T15	Therapeutic_procedure 196 213	caesarian section
+E5	Therapeutic_procedure:T15 
+T16	Sign_symptom 229 239	amenorrhea
+E6	Sign_symptom:T16 
+#1	AnnotatorNotes E6	patient is pregnant so this is normal
+T17	Duration 217 225	38 weeks
+E7	Duration:T17 
+T18	Therapeutic_procedure 274 284	anesthesia
+E8	Therapeutic_procedure:T18 
+T19	Biological_structure 267 273	spinal
+R4	MODIFY Arg1:T19 Arg2:E8	
+T20	Sign_symptom 319 331	hypertensive
+E9	Sign_symptom:T20 
+T21	Lab_value 333 346	180/100 mm Hg
+R5	MODIFY Arg1:T21 Arg2:E9	
+T22	Lab_value 354 364	normalized
+R6	MODIFY Arg1:T22 Arg2:E9	
+T23	Time 365 384	after a few minutes
+E10	Time:T23 
+T24	Therapeutic_procedure 393 402	treatment
+E11	Therapeutic_procedure:T24 
+A1	POLARITY E11 NEG
+T25	Clinical_event 407 418	post-partum
+E12	Clinical_event:T25 
+T26	Time 420 434	after 12 hours
+E13	Time:T26 
+T27	Sign_symptom 488 496	headache
+E14	Sign_symptom:T27 
+T28	Severity 481 487	severe
+R7	MODIFY Arg1:T28 Arg2:E14	
+T29	Sign_symptom 502 510	apyrexia
+E15	Sign_symptom:T29 
+T30	Sign_symptom 574 585	convulsions
+E16	Sign_symptom:T30 
+T31	Detailed_description 560 573	tonico-clonic
+T32	Detailed_description 548 559	generalized
+R8	MODIFY Arg1:T31 Arg2:E16	
+R9	MODIFY Arg1:T32 Arg2:E16	
+T33	Detailed_description 530 544	three episodes
+R10	MODIFY Arg1:T33 Arg2:E16	
+T34	Sign_symptom 595 605	convulsion
+E17	Sign_symptom:T34 
+T35	Detailed_description 591 594	1st
+R11	MODIFY Arg1:T35 Arg2:E17	
+A2	POLARITY E17 NEG
+T36	Time 613 624	1 min after
+E18	Time:T36 
+T37	Therapeutic_procedure 641 654	resuscitation
+E19	Therapeutic_procedure:T37 
+T38	Medication 672 683	diazepam IV
+E20	Medication:T38 
+T39	Administration 659 668	injection
+R12	MODIFY Arg1:T39 Arg2:E20	
+T40	Diagnostic_procedure 703 723	clinical examination
+E21	Diagnostic_procedure:T40 
+T41	Sign_symptom 733 741	afebrile
+E22	Sign_symptom:T41 
+T42	Diagnostic_procedure 754 768	blood pressure
+E23	Diagnostic_procedure:T42 
+T43	Lab_value 772 783	140/90 mmHg
+R13	MODIFY Arg1:T43 Arg2:E23	
+T44	Diagnostic_procedure 793 811	Glasgow coma scale
+E24	Diagnostic_procedure:T44 
+T45	Lab_value 815 817	14
+R14	MODIFY Arg1:T45 Arg2:E24	
+T46	Sign_symptom 830 850	neurological deficit
+E25	Sign_symptom:T46 
+A3	POLARITY E25 NEG
+T47	Sign_symptom 870 878	rigidity
+E26	Sign_symptom:T47 
+A4	POLARITY E26 NEG
+T48	Biological_structure 865 869	neck
+R15	MODIFY Arg1:T48 Arg2:E26	
+T49	Sign_symptom 880 888	diuresis
+E27	Sign_symptom:T49 
+T50	Diagnostic_procedure 908 929	examination of urines
+E28	Diagnostic_procedure:T50 
+T51	Detailed_description 933 946	urinary strip
+R16	MODIFY Arg1:T51 Arg2:E28	
+T52	Lab_value 951 959	positive
+R17	MODIFY Arg1:T52 Arg2:E28	
+T53	Sign_symptom 985 1002	convulsive crisis
+E29	Sign_symptom:T53 
+A5	POLARITY E29 NEG
+T54	Detailed_description 973 984	2nd and 3th
+R18	MODIFY Arg1:T54 Arg2:E29	
+T55	Disease_disorder 1067 1081	HELLP syndrome
+E30	Disease_disorder:T55 
+T56	Diagnostic_procedure 1044 1063	Laboratory findings
+E31	Diagnostic_procedure:T56 
+T57	Diagnostic_procedure 1097 1110	liver enzymes
+E32	Diagnostic_procedure:T57 
+T58	Lab_value 1090 1096	raised
+R19	MODIFY Arg1:T58 Arg2:E32	
+T59	Diagnostic_procedure 1112 1116	ASAT
+E33	Diagnostic_procedure:T59 
+T60	Diagnostic_procedure 1130 1134	ALAT
+E34	Diagnostic_procedure:T60 
+T61	Lab_value 1117 1125	525 IU/L
+R20	MODIFY Arg1:T61 Arg2:E33	
+T62	Lab_value 1135 1143	214 IU/L
+R21	MODIFY Arg1:T62 Arg2:E34	
+T63	Sign_symptom 1146 1155	hemolysis
+E35	Sign_symptom:T63 
+T64	Clinical_event 2371 2381	discharged
+E36	Clinical_event:T64 
+T65	Diagnostic_procedure 2390 2399	condition
+E37	Diagnostic_procedure:T65 
+T66	Lab_value 2385 2389	good
+R22	MODIFY Arg1:T66 Arg2:E37	
+T67	Date 2403 2408	day 5
+E38	Date:T67 
+T68	Medication 2415 2427	beta-blocker
+E39	Medication:T68 
+T69	Medication 2432 2448	sodium valproate
+E40	Medication:T69 
+T70	Duration 2467 2479	three months
+E41	Duration:T70 
+T71	Diagnostic_procedure 2485 2488	MRI
+E42	Diagnostic_procedure:T71 
+T72	Date 2510 2528	three months later
+E43	Date:T72 
+T73	Sign_symptom 2568 2573	edema
+E44	Sign_symptom:T73 
+A6	POLARITY E44 NEG
+T74	Biological_structure 2559 2567	cerebral
+R23	MODIFY Arg1:T74 Arg2:E44	
+T75	Diagnostic_procedure 1725 1751	magnetic resonance imaging
+E45	Diagnostic_procedure:T75 
+T76	Diagnostic_procedure 2140 2160	electroencephalogram
+E46	Diagnostic_procedure:T76 
+T77	Diagnostic_procedure 2162 2165	EEG
+E47	Diagnostic_procedure:T77 
+T78	Diagnostic_procedure 1753 1756	MRI
+E48	Diagnostic_procedure:T78 
+R24	IDENTICAL Arg1:E48 Arg2:E45	
+R25	IDENTICAL Arg1:E47 Arg2:E46	
+T79	Date 2176 2193	in the second day
+E49	Date:T79 
+T80	Sign_symptom 1157 1171	hemoglobinemia
+E50	Sign_symptom:T80 
+T81	Lab_value 1175 1182	7 mg/dl
+R26	MODIFY Arg1:T81 Arg2:E50	
+T82	Diagnostic_procedure 1192 1206	platelet count
+E51	Diagnostic_procedure:T82 
+T83	Lab_value 1188 1191	low
+R27	MODIFY Arg1:T83 Arg2:E51	
+T84	Lab_value 1208 1226	44 000 platelet/mL
+R28	MODIFY Arg1:T84 Arg2:E51	
+T85	Diagnostic_procedure 1263 1283	renal function tests
+E52	Diagnostic_procedure:T85 
+T86	Diagnostic_procedure 1289 1309	inflammatory markers
+E53	Diagnostic_procedure:T86 
+T87	Diagnostic_procedure 1315 1331	thyroid hormones
+E54	Diagnostic_procedure:T87 
+T88	Lab_value 1337 1343	normal
+R29	MODIFY Arg1:T88 Arg2:E54	
+R30	MODIFY Arg1:T88 Arg2:E53	
+R31	MODIFY Arg1:T88 Arg2:E52	
+T89	Diagnostic_procedure 1349 1363	viral serology
+E55	Diagnostic_procedure:T89 
+T90	Lab_value 1368 1376	negative
+R32	MODIFY Arg1:T90 Arg2:E55	
+T91	Clinical_event 1394 1405	transferred
+E56	Clinical_event:T91 
+T92	Nonbiological_location 1409 1428	intensive care unit
+R33	MODIFY Arg1:T92 Arg2:E56	
+T93	Medication 1461 1478	magnesium sulfate
+E57	Medication:T93 
+T94	Medication 1493 1516	calcium channel blocker
+E58	Medication:T94 
+T95	Medication 1518 1529	nicardipine
+E59	Medication:T95 
+R34	SUB_PROCEDURE Arg1:E59 Arg2:E58	
+T96	Medication 1532 1545	antiepileptic
+E60	Medication:T96 
+T97	Medication 1547 1560	phenobarbital
+E61	Medication:T97 
+R35	SUB_PROCEDURE Arg1:E61 Arg2:E60	
+T98	Medication 1606 1613	heparin
+E62	Medication:T98 
+T99	Detailed_description 1585 1605	low molecular weight
+R36	MODIFY Arg1:T99 Arg2:E62	
+T100	Sign_symptom 1619 1625	anemia
+E63	Sign_symptom:T100 
+A7	POLARITY E63 NEG
+T101	Sign_symptom 1630 1642	thrombopenia
+E64	Sign_symptom:T101 
+A8	POLARITY E64 NEG
+T102	Therapeutic_procedure 1656 1667	transfusion
+E65	Therapeutic_procedure:T102 
+T103	Medication 1671 1693	packed red blood cells
+E66	Medication:T103 
+T104	Medication 1698 1706	platelet
+E67	Medication:T104 
+R37	SUB_PROCEDURE Arg1:E66 Arg2:E65	
+R38	SUB_PROCEDURE Arg1:E67 Arg2:E65	
+T105	Time 1768 1782	one hour after
+E68	Time:T105 
+T106	Sign_symptom 1822 1827	zones
+E69	Sign_symptom:T106 
+T107	Diagnostic_procedure 1831 1844	hyposignal T1
+E70	Diagnostic_procedure:T107 
+T108	Diagnostic_procedure 1846 1860	hypersignal T2
+E71	Diagnostic_procedure:T108 
+T109	Diagnostic_procedure 1865 1880	flair sequences
+E72	Diagnostic_procedure:T109 
+T110	Biological_structure 1898 1913	cerebral cortex
+T111	Biological_structure 1915 1923	parietal
+T112	Biological_structure 1928 1950	occipital sub-cortical
+T113	Biological_structure 1959 1971	white matter
+R39	MODIFY Arg1:T110 Arg2:E69	
+R40	MODIFY Arg1:T111 Arg2:E69	
+R41	MODIFY Arg1:T112 Arg2:E69	
+R42	MODIFY Arg1:T113 Arg2:E69	
+R43	SUB_PROCEDURE Arg1:E70 Arg2:E45	
+R44	SUB_PROCEDURE Arg1:E71 Arg2:E45	
+R45	SUB_PROCEDURE Arg1:E72 Arg2:E45	
+T114	Sign_symptom 2006 2015	permeable
+E73	Sign_symptom:T114 
+T115	Biological_structure 1973 2000	Intracranial venous sinuses
+R46	MODIFY Arg1:T115 Arg2:E73	
+T116	Disease_disorder 2038 2051	PRES syndrome
+E74	Disease_disorder:T116 
+#2	AnnotatorNotes E74	Posterior reversible encephalopathy syndrome
+T117	Disease_disorder 2076 2088	preeclampsia
+E75	Disease_disorder:T117 
+T118	Severity 2069 2075	severe
+R47	MODIFY Arg1:T118 Arg2:E75	
+R48	CAUSE Arg1:E75 Arg2:E74	
+T119	Diagnostic_procedure 2267 2281	blood pressure
+E76	Diagnostic_procedure:T119 
+T120	Lab_value 2250 2263	normalization
+R49	MODIFY Arg1:T120 Arg2:E76	
+T121	Lab_value 2287 2300	normalization
+T122	Diagnostic_procedure 2308 2326	neurological state
+E77	Diagnostic_procedure:T122 
+R50	MODIFY Arg1:T121 Arg2:E77	
+T123	Diagnostic_procedure 2338 2357	biological analysis
+E78	Diagnostic_procedure:T123 
+R51	MODIFY Arg1:T121 Arg2:E78	
+T124	Time 1024 1042	within few seconds
+E79	Time:T124 
+*	OVERLAP E1 E2
+R52	BEFORE Arg1:E2 Arg2:E3	
+*	OVERLAP E3 E4
+R53	BEFORE Arg1:E4 Arg2:E5	
+R54	AFTER Arg1:E5 Arg2:E7	
+*	OVERLAP E7 E6
+R55	BEFORE Arg1:E6 Arg2:E8	
+*	OVERLAP E8 E9
+R56	BEFORE Arg1:E9 Arg2:E10	
+*	OVERLAP E10 E11
+R57	BEFORE Arg1:E11 Arg2:E12	
+*	OVERLAP E12 E13 E14 E15
+R58	BEFORE Arg1:E15 Arg2:E16	
+R59	BEFORE Arg1:E16 Arg2:E17	
+*	OVERLAP E17 E18
+R60	AFTER Arg1:E18 Arg2:E19	
+*	OVERLAP E19 E20
+R61	BEFORE Arg1:E20 Arg2:E21	
+*	OVERLAP E21 E22 E23 E24 E25 E26 E27 E28
+R62	BEFORE Arg1:E28 Arg2:E29	
+*	OVERLAP E29 E79
+R63	SUB_PROCEDURE Arg1:E32 Arg2:E31	
+R64	SUB_PROCEDURE Arg1:E33 Arg2:E32	
+R65	SUB_PROCEDURE Arg1:E34 Arg2:E32	
+R66	SUB_PROCEDURE Arg1:E51 Arg2:E31	
+R67	BEFORE Arg1:E29 Arg2:E31	
+*	OVERLAP E31 E30 E35 E50 E52 E53 E54 E55
+R68	BEFORE Arg1:E55 Arg2:E56	
+*	OVERLAP E56 E57 E58 E60 E62 E63 E64 E65
+R69	BEFORE Arg1:E65 Arg2:E45	
+*	OVERLAP E45 E68 E69 E73
+R70	BEFORE Arg1:E73 Arg2:E74	
+*	OVERLAP E74 E75
+R71	BEFORE Arg1:E75 Arg2:E46	
+T125	Sign_symptom 2209 2216	anomaly
+E80	Sign_symptom:T125 
+A9	POLARITY E80 NEG
+*	OVERLAP E46 E49 E80
+R72	BEFORE Arg1:E80 Arg2:E76	
+*	OVERLAP E76 E77 E78
+R73	BEFORE Arg1:E78 Arg2:E36	
+*	OVERLAP E36 E37 E38
+R74	BEFORE Arg1:E38 Arg2:E39	
+*	OVERLAP E39 E40 E41
+R75	BEFORE Arg1:E41 Arg2:E42	
+*	OVERLAP E42 E43 E44

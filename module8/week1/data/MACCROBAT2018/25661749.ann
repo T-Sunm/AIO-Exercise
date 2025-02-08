@@ -1,0 +1,407 @@
+T1	Age 2 13	68-year-old
+T2	Sex 14 17	man
+T3	Subject 34 49	his optometrist
+T4	Clinical_event 22 30	referred
+E1	Clinical_event:T4 
+T5	Nonbiological_location 53 56	HES
+T6	Disease_disorder 72 75	LTG
+E2	Disease_disorder:T6 
+A1	POLARITY E2 MAYBE_POS
+T7	Diagnostic_procedure 104 129	visual field test results
+E3	Diagnostic_procedure:T7 
+T8	Detailed_description 83 103	repeatedly irregular
+R1	MODIFY Arg1:T8 Arg2:E3	
+T9	Diagnostic_procedure 167 188	intraocular pressures
+E4	Diagnostic_procedure:T9 
+T10	Diagnostic_procedure 190 194	IOPs
+E5	Diagnostic_procedure:T10 
+R2	IDENTICAL Arg1:E5 Arg2:E4	
+T11	Disease_disorder 220 228	glaucoma
+E6	Disease_disorder:T11 
+T12	Family_history 220 228	glaucoma
+T13	Diagnostic_procedure 140 158	optic disc cupping
+E7	Diagnostic_procedure:T13 
+T14	Detailed_description 131 139	advanced
+R3	MODIFY Arg1:T14 Arg2:E7	
+T15	Lab_value 160 166	normal
+R4	MODIFY Arg1:T15 Arg2:E4	
+T16	Biological_structure 286 294	left eye
+T17	Biological_structure 296 298	LE
+R5	IDENTICAL Arg1:T17 Arg2:T16	
+T18	Lab_value 339 345	6/6 N5
+T19	Date 370 386	6 months earlier
+E8	Date:T19 
+T20	Diagnostic_procedure 322 335	visual acuity
+E9	Diagnostic_procedure:T20 
+T21	Detailed_description 280 284	good
+R6	MODIFY Arg1:T21 Arg2:T16	
+R7	MODIFY Arg1:T18 Arg2:E9	
+R8	BEFORE Arg1:E9 Arg2:E8	
+T22	Lab_value 438 446	6/7.5 N6
+T23	Coreference 413 415	it
+E10	Coreference:T23 
+R9	IDENTICAL Arg1:E10 Arg2:E11	
+R10	MODIFY Arg1:T22 Arg2:E10	
+R11	BEFORE Arg1:E8 Arg2:E10	
+T24	Sign_symptom 265 271	vision
+E11	Sign_symptom:T24 
+R12	MODIFY Arg1:T16 Arg2:E11	
+T25	Detailed_description 358 369	deteriorate
+R13	MODIFY Arg1:T25 Arg2:E11	
+A2	TREND E11 DEC
+*	OVERLAP E11 E8 E2
+R14	AFTER Arg1:E11 Arg2:E9	
+A3	TREND E10 INC
+T26	Biological_structure 452 461	right eye
+T27	Biological_structure 463 465	RE
+R15	IDENTICAL Arg1:T27 Arg2:T26	
+T28	Disease_disorder 483 492	amblyopic
+E12	Disease_disorder:T28 
+T29	Lab_value 517 525	6/18 N12
+T30	Diagnostic_procedure 500 513	visual acuity
+E13	Diagnostic_procedure:T30 
+R16	MODIFY Arg1:T29 Arg2:E13	
+R17	MODIFY Arg1:E12 Arg2:T27	
+R18	MODIFY Arg1:E13 Arg2:T27	
+T31	Disease_disorder 617 629	hypertension
+E14	Disease_disorder:T31 
+T32	Disease_disorder 631 652	hypercholesterolaemia
+E15	Disease_disorder:T32 
+T33	Lab_value 654 667	50 pack-years
+T34	History 671 678	smoking
+T35	Disease_disorder 683 698	type 2 diabetes
+E16	Disease_disorder:T35 
+T36	Disease_disorder 707 727	diabetic retinopathy
+E17	Disease_disorder:T36 
+A4	POLARITY E17 NEG
+T37	History 617 629	hypertension
+T38	History 631 652	hypercholesterolaemia
+T39	Disease_disorder 595 607	vasculopathy
+E18	Disease_disorder:T39 
+T40	Detailed_description 586 594	systemic
+R19	MODIFY Arg1:T40 Arg2:E18	
+T41	Sign_symptom 569 581	risk factors
+E19	Sign_symptom:T41 
+R20	BEFORE Arg1:E18 Arg2:E19	
+T42	History 569 581	risk factors
+A5	POLARITY E18 UNCERTAIN
+R21	MODIFY Arg1:E14 Arg2:E19	
+R22	MODIFY Arg1:E15 Arg2:E19	
+R23	MODIFY Arg1:T33 Arg2:T34	
+R24	MODIFY Arg1:T34 Arg2:E19	
+R25	MODIFY Arg1:E16 Arg2:E19	
+R26	MODIFY Arg1:E17 Arg2:E19	
+T43	Sign_symptom 773 794	new systemic symptoms
+E20	Sign_symptom:T43 
+A6	POLARITY E20 NEG
+T44	Sign_symptom 829 837	lethargy
+E21	Sign_symptom:T44 
+T45	Lab_value 819 828	increased
+R27	MODIFY Arg1:T45 Arg2:E21	
+*	OVERLAP E20 E21 E22 E13
+T46	Nonbiological_location 863 866	HES
+T47	Diagnostic_procedure 839 859	Clinical examination
+E22	Diagnostic_procedure:T47 
+R28	MODIFY Arg1:T46 Arg2:E22	
+T48	Diagnostic_procedure 895 913	cupped optic discs
+E23	Diagnostic_procedure:T48 
+T49	Detailed_description 876 894	advanced bilateral
+R29	MODIFY Arg1:T49 Arg2:E23	
+R30	SUB_PROCEDURE Arg1:E23 Arg2:E22	
+T50	Diagnostic_procedure 921 938	cup-to-disc ratio
+E24	Diagnostic_procedure:T50 
+R31	SUB_PROCEDURE Arg1:E24 Arg2:E23	
+T51	Lab_value 945 948	0.9
+T52	Lab_value 950 953	90%
+T53	Lab_value 964 967	0.8
+T54	Lab_value 969 972	80%
+R32	IDENTICAL Arg1:T54 Arg2:T53	
+R33	IDENTICAL Arg1:T52 Arg2:T51	
+T55	Subject 1030 1041	optometrist
+R34	MODIFY Arg1:T51 Arg2:E24	
+R36	MODIFY Arg1:T53 Arg2:E24	
+T57	Detailed_description 939 944	right
+R37	MODIFY Arg1:T57 Arg2:T51	
+T56	Detailed_description 959 963	left
+R35	MODIFY Arg1:T56 Arg2:T53	
+T58	Detailed_description 1020 1029	referring
+R38	MODIFY Arg1:T58 Arg2:T55	
+T59	Diagnostic_procedure 1097 1101	IOPs
+E25	Diagnostic_procedure:T59 
+T60	Diagnostic_procedure 1079 1092	eye movements
+E26	Diagnostic_procedure:T60 
+T61	Lab_value 1072 1078	normal
+R39	MODIFY Arg1:T61 Arg2:E26	
+T62	Age 1105 1114	mid-teens
+R40	MODIFY Arg1:T62 Arg2:E25	
+R41	MODIFY Arg1:T62 Arg2:E26	
+T63	Diagnostic_procedure 1131 1153	Computerised perimetry
+E27	Diagnostic_procedure:T63 
+T64	Diagnostic_procedure 1173 1186	visual fields
+E28	Diagnostic_procedure:T64 
+T65	Detailed_description 1161 1172	constricted
+R42	MODIFY Arg1:T65 Arg2:E28	
+R43	SUB_PROCEDURE Arg1:E28 Arg2:E27	
+T66	Biological_structure 1195 1199	eyes
+T67	Lab_value 1190 1194	both
+R44	MODIFY Arg1:T67 Arg2:T66	
+R45	MODIFY Arg1:T66 Arg2:E28	
+T68	Lab_value 1260 1276	in excess of 30%
+T69	Lab_value 1213 1232	considerably raised
+T70	Diagnostic_procedure 1233 1259	false-negative error rates
+E29	Diagnostic_procedure:T70 
+R46	MODIFY Arg1:T69 Arg2:E29	
+R47	MODIFY Arg1:T68 Arg2:E29	
+R48	SUB_PROCEDURE Arg1:E29 Arg2:E28	
+T71	Diagnostic_procedure 1045 1070	equal and reactive pupils
+E30	Diagnostic_procedure:T71 
+T72	Diagnostic_procedure 1002 1010	findings
+E31	Diagnostic_procedure:T72 
+R49	MODIFY Arg1:T55 Arg2:E31	
+R50	SUB_PROCEDURE Arg1:E30 Arg2:E31	
+R51	SUB_PROCEDURE Arg1:E26 Arg2:E31	
+R52	SUB_PROCEDURE Arg1:E25 Arg2:E31	
+R53	MODIFY Arg1:T62 Arg2:E30	
+T73	History 1097 1101	IOPs
+T74	History 1072 1092	normal eye movements
+T75	History 1045 1070	equal and reactive pupils
+T76	History 1002 1010	findings
+T77	History 683 698	type 2 diabetes
+T78	History 707 727	diabetic retinopathy
+T79	Biological_structure 1412 1414	RE
+T80	Disease_disorder 1402 1411	amblyopic
+E32	Disease_disorder:T80 
+R54	MODIFY Arg1:E32 Arg2:T79	
+T81	Diagnostic_procedure 1420 1430	field test
+E33	Diagnostic_procedure:T81 
+T82	Date 1444 1457	4 weeks later
+E34	Date:T82 
+*	OVERLAP E33 E34 E35
+T83	Detailed_description 1458 1478	with similar results
+R55	MODIFY Arg1:T83 Arg2:E33	
+T84	Biological_structure 1567 1569	LE
+T85	Detailed_description 1561 1565	good
+R56	MODIFY Arg1:T85 Arg2:T84	
+T86	Lab_value 1531 1552	further deterioration
+R57	MODIFY Arg1:T86 Arg2:T84	
+T87	Clinical_event 1500 1505	visit
+E35	Clinical_event:T87 
+R58	MODIFY Arg1:T84 Arg2:E35	
+T88	Diagnostic_procedure 1571 1586	Visual acuities
+E36	Diagnostic_procedure:T88 
+T89	Lab_value 1596 1600;1628 1631	6/24 N36
+T90	Detailed_description 1602 1626	loss of one Snellen line
+R59	MODIFY Arg1:T89 Arg2:E36	
+R60	MODIFY Arg1:T90 Arg2:T89	
+T91	Biological_structure 1649 1651	RE
+T92	Disease_disorder 1639 1648	amblyopic
+E37	Disease_disorder:T92 
+R61	MODIFY Arg1:E37 Arg2:T91	
+T93	Lab_value 1657 1661;1690 1693	6/18 N36
+T94	Detailed_description 1663 1688	loss of two Snellen lines
+R62	MODIFY Arg1:T93 Arg2:E36	
+R63	MODIFY Arg1:T94 Arg2:T93	
+T95	Biological_structure 1701 1703	LE
+R64	MODIFY Arg1:T91 Arg2:T89	
+R65	MODIFY Arg1:T95 Arg2:T93	
+T96	Diagnostic_procedure 1737 1750	colour vision
+E38	Diagnostic_procedure:T96 
+T97	Lab_value 1727 1736	depressed
+R66	MODIFY Arg1:T97 Arg2:E38	
+R67	SUB_PROCEDURE Arg1:E38 Arg2:E36	
+T98	Diagnostic_procedure 1762 1766	scan
+E39	Diagnostic_procedure:T98 
+T99	Detailed_description 1755 1761	urgent
+R68	MODIFY Arg1:T99 Arg2:E39	
+T100	Biological_structure 1784 1788	head
+T101	Biological_structure 1793 1798	orbit
+R69	MODIFY Arg1:T100 Arg2:E39	
+R70	MODIFY Arg1:T101 Arg2:E39	
+T102	Disease_disorder 1839 1845	lesion
+E40	Disease_disorder:T102 
+A7	POLARITY E40 MAYBE_NEG
+T103	Detailed_description 1827 1838	compressive
+R71	MODIFY Arg1:T103 Arg2:E40	
+T104	Diagnostic_procedure 1850 1864	blood analysis
+E41	Diagnostic_procedure:T104 
+T105	Disease_disorder 1911 1927	optic neuropathy
+E42	Disease_disorder:T105 
+T106	Diagnostic_procedure 1938 1949	vitamin B12
+E43	Diagnostic_procedure:T106 
+T107	Diagnostic_procedure 1951 1964	folate levels
+E44	Diagnostic_procedure:T107 
+T108	Diagnostic_procedure 1969 1989	inflammatory markers
+E45	Diagnostic_procedure:T108 
+T109	Diagnostic_procedure 1895 1927	other causes of optic neuropathy
+E46	Diagnostic_procedure:T109 
+R72	SUB_PROCEDURE Arg1:E43 Arg2:E46	
+R73	SUB_PROCEDURE Arg1:E44 Arg2:E46	
+R74	SUB_PROCEDURE Arg1:E45 Arg2:E46	
+R75	SUB_PROCEDURE Arg1:E46 Arg2:E41	
+T110	Diagnostic_procedure 1991 1994	MRI
+E47	Diagnostic_procedure:T110 
+T111	Disease_disorder 2012 2016	mass
+E48	Disease_disorder:T111 
+T112	Biological_attribute 2006 2011	large
+R76	MODIFY Arg1:T112 Arg2:E48	
+T113	Biological_structure 2032 2047	pituitary fossa
+T114	Volume 2072 2093	4.5 cm×5.1 cm× 4.8 cm
+R77	MODIFY Arg1:T114 Arg2:E48	
+R78	MODIFY Arg1:T113 Arg2:E48	
+R79	MODIFY Arg1:E48 Arg2:E47	
+T115	Biological_structure 2127 2146	suprasellar cistern
+T116	Biological_structure 2151 2179	infrasellar sphenoid sinuses
+R80	MODIFY Arg1:T115 Arg2:E48	
+R81	MODIFY Arg1:T116 Arg2:E48	
+T117	Biological_structure 2185 2197	optic chiasm
+T118	Biological_structure 2207 2219	optic nerves
+T119	Lab_value 2202 2206	both
+R82	MODIFY Arg1:T119 Arg2:T118	
+T120	Detailed_description 2225 2245	displaced superiorly
+T121	Detailed_description 2250 2274	compressed on both sides
+R83	MODIFY Arg1:T120 Arg2:T118	
+R84	MODIFY Arg1:T120 Arg2:T117	
+R85	MODIFY Arg1:T121 Arg2:T118	
+R86	MODIFY Arg1:T121 Arg2:T117	
+T122	Disease_disorder 2280 2284	mass
+E49	Disease_disorder:T122 
+T123	Diagnostic_procedure 2306 2308;2316 2323	T1 signals
+E50	Diagnostic_procedure:T123 
+T124	Diagnostic_procedure 2313 2323	T2 signals
+E51	Diagnostic_procedure:T124 
+T125	Diagnostic_procedure 2338 2350	fluid levels
+E52	Diagnostic_procedure:T125 
+T126	Lab_value 2329 2337	multiple
+R87	MODIFY Arg1:T126 Arg2:E52	
+T127	Detailed_description 2292 2305	heterogeneous
+R88	MODIFY Arg1:T127 Arg2:E50	
+R89	MODIFY Arg1:T127 Arg2:E51	
+R90	MODIFY Arg1:E51 Arg2:E49	
+R91	MODIFY Arg1:E50 Arg2:E49	
+R92	MODIFY Arg1:E52 Arg2:E49	
+T128	Disease_disorder 2379 2390	haemorrhage
+E53	Disease_disorder:T128 
+T129	History 2379 2390	haemorrhage
+T130	Disease_disorder 2428 2442	calcifications
+E54	Disease_disorder:T130 
+A8	POLARITY E54 MAYBE_POS
+T131	Diagnostic_procedure 2395 2416	low-signal components
+E55	Diagnostic_procedure:T131 
+T132	History 2395 2416	low-signal components
+R93	CAUSE Arg1:E53 Arg2:E52	
+R94	CAUSE Arg1:E55 Arg2:E52	
+R95	MODIFY Arg1:E54 Arg2:E55	
+T133	Disease_disorder 2481 2498	craniopharyngioma
+E56	Disease_disorder:T133 
+T134	Disease_disorder 2515 2532	pituitary adenoma
+E57	Disease_disorder:T134 
+T135	Nonbiological_location 2575 2592	neurosurgery unit
+T136	Clinical_event 2550 2558	referred
+E58	Clinical_event:T136 
+T137	Diagnostic_procedure 2631 2647	prolactin levels
+E59	Diagnostic_procedure:T137 
+T138	Lab_value 2651 2677	greater than 200 000 mIU/L
+T139	Disease_disorder 2715 2727	prolactinoma
+E60	Disease_disorder:T139 
+T140	Severity 2709 2714	giant
+R96	MODIFY Arg1:T140 Arg2:E60	
+A9	POLARITY E60 POS
+R97	MODIFY Arg1:T135 Arg2:E58	
+T141	Lab_value 2615 2630	markedly raised
+R98	MODIFY Arg1:T141 Arg2:E59	
+*	OVERLAP E58 E59 E60
+T142	Medication 2800 2811	cabergoline
+E61	Medication:T142 
+T143	Dosage 2812 2818	500 µg
+T144	Medication 2823 2836	dexamethasone
+E62	Medication:T144 
+T145	Dosage 2837 2841	8 mg	 
+R99	MODIFY Arg1:T145 Arg2:E62	
+R100	MODIFY Arg1:T143 Arg2:E61	
+T146	Nonbiological_location 2753 2780	local endocrinology service
+T147	Date 2843 2856	Within a week
+E63	Date:T147 
+R101	BEFORE Arg1:E60 Arg2:E61	
+*	OVERLAP E61 E62
+R102	BEFORE Arg1:E62 Arg2:E63	
+T149	Diagnostic_procedure 2909 2935	visual fields and acuities
+E65	Diagnostic_procedure:T149 
+A11	TREND E65 INC
+T150	Lab_value 2939 2943	6/18
+T151	Lab_value 2954 2957	6/9
+T152	Biological_structure 2944 2946	RE
+T153	Biological_structure 2958 2960	LE
+R103	MODIFY Arg1:T153 Arg2:T151	
+R104	MODIFY Arg1:T152 Arg2:T150	
+T154	Diagnostic_procedure 2966 2982	prolactin levels
+E66	Diagnostic_procedure:T154 
+T155	Lab_value 3045 3054	336 mIU/L
+R105	MODIFY Arg1:T155 Arg2:E66	
+A12	TREND E66 DEC
+T156	Date 3056 3074	Three months later
+E67	Date:T156 
+R106	BEFORE Arg1:E66 Arg2:E67	
+T157	Diagnostic_procedure 3079 3092	visual acuity
+E68	Diagnostic_procedure:T157 
+T158	Biological_structure 3100 3102	RE
+T159	Biological_structure 3107 3109	LE
+T160	Lab_value 3115 3119	6/18
+T161	Lab_value 3124 3127	6/5
+R107	MODIFY Arg1:T160 Arg2:E68	
+R108	MODIFY Arg1:T161 Arg2:E68	
+R109	MODIFY Arg1:T159 Arg2:T161	
+R110	MODIFY Arg1:T158 Arg2:T160	
+T162	Diagnostic_procedure 3147 3171	visual field examination
+E69	Diagnostic_procedure:T162 
+T163	Detailed_description 3202 3223	almost normal results
+T164	Detailed_description 3179 3196	striking recovery
+R111	MODIFY Arg1:T164 Arg2:E69	
+R112	MODIFY Arg1:T163 Arg2:E69	
+*	OVERLAP E67 E68 E69
+T148	Lab_value 2871 2891	dramatic improvement
+R113	MODIFY Arg1:T148 Arg2:E65	
+R114	MODIFY Arg1:T150 Arg2:E65	
+R115	MODIFY Arg1:T151 Arg2:E65	
+*	OVERLAP E63 E65 E66
+T165	Lab_value 3000 3041	dramatic response with levels coming down
+R116	MODIFY Arg1:T165 Arg2:E66	
+A10	POLARITY E56 MAYBE_POS
+A13	POLARITY E57 MAYBE_POS
+T166	Detailed_description 2502 2514	haemorrhagic
+R117	MODIFY Arg1:T166 Arg2:E57	
+T167	Sign_symptom 1325 1338	concentration
+E64	Sign_symptom:T167 
+T168	Sign_symptom 1343 1357	attention span
+E70	Sign_symptom:T168 
+T169	Severity 1320 1324	poor
+R118	MODIFY Arg1:T169 Arg2:E64	
+R119	MODIFY Arg1:T169 Arg2:E70	
+*	OVERLAP E64 E70
+T170	Detailed_description 1358 1381	with testing compounded
+T171	Coreference 1296 1300	this
+E71	Coreference:T171 
+R120	IDENTICAL Arg1:E71 Arg2:E29	
+R121	MODIFY Arg1:T3 Arg2:E1	
+R122	MODIFY Arg1:T5 Arg2:E1	
+R123	CAUSE Arg1:E64 Arg2:E71	
+R124	CAUSE Arg1:E70 Arg2:E71	
+R125	MODIFY Arg1:T170 Arg2:E71	
+R126	MODIFY Arg1:T79 Arg2:E71	
+R127	BEFORE Arg1:E70 Arg2:E33	
+*	OVERLAP E38 E39
+R128	MODIFY Arg1:E40 Arg2:E39	
+*	OVERLAP E40 E41
+*	OVERLAP E45 E47 E49
+T172	Coreference 2444 2458	The appearance
+E72	Coreference:T172 
+R129	IDENTICAL Arg1:E72 Arg2:E49	
+R130	MODIFY Arg1:E56 Arg2:E72	
+R131	MODIFY Arg1:E57 Arg2:E72	
+*	OVERLAP E54 E72
+R132	BEFORE Arg1:E57 Arg2:E58	
+*	OVERLAP E24 E27
+R133	MODIFY Arg1:E3 Arg2:E2	
+R134	MODIFY Arg1:E7 Arg2:E2	
+R135	MODIFY Arg1:E4 Arg2:E2	
+R136	MODIFY Arg1:E6 Arg2:E2	
+R137	AFTER Arg1:E1 Arg2:E2	

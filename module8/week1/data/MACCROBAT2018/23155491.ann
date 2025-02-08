@@ -1,0 +1,273 @@
+T1	Age 2 13	57-year-old
+T2	Personal_background 14 20	Jewish
+T3	Sex 21 24	man
+T4	Disease_disorder 30 45	Crohn's disease
+E1	Disease_disorder:T4 
+T5	Disease_disorder 47 49	CD
+E2	Disease_disorder:T5 
+R1	IDENTICAL Arg1:E2 Arg2:E1	
+T6	Biological_structure 58 63	ileum
+R2	MODIFY Arg1:T6 Arg2:E1	
+T7	Date 81 96	age of thirteen
+E3	Date:T7 
+T8	History 30 45	Crohn's disease
+T9	Clinical_event 98 107	presented
+E4	Clinical_event:T9 
+T10	Disease_disorder 122 146	nonmelanoma skin cancers
+E5	Disease_disorder:T10 
+T11	Disease_disorder 148 153	NMSCs
+E6	Disease_disorder:T11 
+R3	IDENTICAL Arg1:E6 Arg2:E5	
+T12	Detailed_description 113 121	multiple
+R4	MODIFY Arg1:T12 Arg2:E5	
+T13	Duration 176 198	over the past 16 years
+E7	Duration:T13 
+T14	Medication 259 269	thiopurine
+E8	Medication:T14 
+T15	Medication 270 286	6-mercaptopurine
+E9	Medication:T15 
+R5	SUB_PROCEDURE Arg1:E9 Arg2:E8	
+T16	Dosage 235 251	prolonged course
+R6	MODIFY Arg1:T16 Arg2:E8	
+T17	Medication 288 302	mercaptopurine
+E10	Medication:T17 
+R7	IDENTICAL Arg1:E10 Arg2:E9	
+T18	Disease_disorder 347 351	NMSC
+E11	Disease_disorder:T18 
+T19	Lab_value 344 346	84
+R8	MODIFY Arg1:T19 Arg2:E11	
+T20	Nonbiological_location 364 374	our clinic
+T21	Nonbiological_location 384 397	other clinics
+T22	Lab_value 353 355	72
+T23	Coreference 356 360	NMSC
+E12	Coreference:T23 
+T24	Lab_value 376 378	12
+R9	IDENTICAL Arg1:E12 Arg2:E11	
+R10	MODIFY Arg1:T20 Arg2:T22	
+R11	MODIFY Arg1:T22 Arg2:E12	
+R12	MODIFY Arg1:T21 Arg2:T24	
+R13	MODIFY Arg1:T24 Arg2:E12	
+T25	Diagnostic_procedure 420 426	biopsy
+E13	Diagnostic_procedure:T25 
+A1	POLARITY E13 UNCERTAIN
+T26	Therapeutic_procedure 431 438	removal
+E14	Therapeutic_procedure:T26 
+A2	POLARITY E14 UNCERTAIN
+T27	Disease_disorder 467 469	CD
+E15	Disease_disorder:T27 
+T28	Medication 497 510	sulfasalazine
+E16	Medication:T28 
+T29	Medication 528 536	steroids
+E17	Medication:T29 
+T30	Frequency 515 527	intermittent
+R14	MODIFY Arg1:T30 Arg2:E17	
+T31	Duration 563 576	past 20 years
+E18	Duration:T31 
+T32	Medication 596 600	6-MP
+E19	Medication:T32 
+T33	Medication 304 308	6-MP
+E20	Medication:T33 
+R15	IDENTICAL Arg1:E20 Arg2:E9	
+T34	Frequency 601 606	daily
+R16	MODIFY Arg1:T34 Arg2:E19	
+T35	Duration 615 630	first ten years
+E21	Duration:T35 
+T36	Medication 647 651	6-MP
+E22	Medication:T36 
+T37	Lab_value 665 667	30
+T38	Disease_disorder 668 672	NMSC
+E23	Disease_disorder:T38 
+R17	MODIFY Arg1:T37 Arg2:E23	
+T39	Disease_disorder 682 705	squamous cell carcinoma
+E24	Disease_disorder:T39 
+T40	Lab_value 674 676	14
+R18	MODIFY Arg1:T40 Arg2:E24	
+T41	Disease_disorder 707 710	SCC
+E25	Disease_disorder:T41 
+R19	IDENTICAL Arg1:E25 Arg2:E24	
+T42	Lab_value 716 718	16
+T43	Disease_disorder 724 744	basal cell carcinoma
+E26	Disease_disorder:T43 
+T44	Disease_disorder 746 749	BCC
+E27	Disease_disorder:T44 
+R20	IDENTICAL Arg1:E27 Arg2:E26	
+T45	Therapeutic_procedure 773 780	treated
+E28	Therapeutic_procedure:T45 
+T46	Nonbiological_location 781 790	elsewhere
+R21	MODIFY Arg1:T46 Arg2:E28	
+T47	Duration 799 819	subsequent ten years
+E29	Duration:T47 
+T48	Date 826 835	past year
+E30	Date:T48 
+T49	Clinical_event 849 857	returned
+E31	Clinical_event:T49 
+T50	Nonbiological_location 865 871	clinic
+R22	MODIFY Arg1:T50 Arg2:E31	
+T51	Lab_value 882 885	100
+T52	Sign_symptom 890 897	lesions
+E32	Sign_symptom:T52 
+R23	MODIFY Arg1:T51 Arg2:E32	
+T53	Lab_value 886 889	new
+R24	MODIFY Arg1:T53 Arg2:E32	
+T54	Disease_disorder 912 922	malignancy
+E33	Disease_disorder:T54 
+T55	Biological_structure 930 935	torso
+T56	Biological_structure 940 951	extremities
+R25	MODIFY Arg1:T55 Arg2:E33	
+R26	MODIFY Arg1:T56 Arg2:E33	
+T57	Lab_value 985 987	42
+T58	Sign_symptom 1002 1009	lesions
+E34	Sign_symptom:T58 
+T59	Disease_disorder 1013 1017	NMCS
+E35	Disease_disorder:T59 
+T60	Diagnostic_procedure 988 994	biopsy
+E36	Diagnostic_procedure:T60 
+R27	MODIFY Arg1:T57 Arg2:E34	
+T61	Lab_value 1019 1021	20
+T62	Disease_disorder 1027 1030	SCC
+E37	Disease_disorder:T62 
+R28	MODIFY Arg1:T61 Arg2:E37	
+T63	Lab_value 1035 1037	22
+T64	Disease_disorder 1043 1046	BCC
+E38	Disease_disorder:T64 
+R29	MODIFY Arg1:T63 Arg2:E38	
+T65	Lab_value 1061 1066	three
+T66	Disease_disorder 1074 1078	SCCs
+E39	Disease_disorder:T66 
+R30	MODIFY Arg1:T65 Arg2:E39	
+T67	Lab_value 1084 1109	moderately differentiated
+R31	MODIFY Arg1:T67 Arg2:T65	
+T68	Lab_value 1114 1117	two
+T69	Lab_value 1123 1144	poorly differentiated
+R32	MODIFY Arg1:T69 Arg2:T68	
+R33	MODIFY Arg1:T68 Arg2:E39	
+T70	Therapeutic_procedure 1199 1211	Mohs surgery
+E40	Therapeutic_procedure:T70 
+T71	Therapeutic_procedure 1216 1228	xenografting
+E41	Therapeutic_procedure:T71 
+T72	Disease_disorder 1168 1180	skin cancers
+E42	Disease_disorder:T72 
+R34	MODIFY Arg1:E42 Arg2:E40	
+R35	MODIFY Arg1:E42 Arg2:E41	
+T73	Sign_symptom 1249 1256	lesions
+E43	Sign_symptom:T73 
+T74	Biological_structure 1261 1270	pretibial
+R36	MODIFY Arg1:T74 Arg2:E43	
+T75	Area 1284 1292	64x53 mm
+R37	MODIFY Arg1:T75 Arg2:E43	
+T76	Lab_value 1234 1241	largest
+R38	MODIFY Arg1:T76 Arg2:E43	
+T77	Diagnostic_procedure 1321 1327	biopsy
+E44	Diagnostic_procedure:T77 
+A3	POLARITY E44 NEG
+T78	Sign_symptom 1355 1361	esions
+E45	Sign_symptom:T78 
+R39	MODIFY Arg1:E45 Arg2:E44	
+T79	Diagnostic_procedure 1394 1403	skin type
+E46	Diagnostic_procedure:T79 
+T80	Lab_value 1379 1393	Fitzpatrick II
+R40	MODIFY Arg1:T80 Arg2:E46	
+T81	Activity 1430 1442	sun exposure
+E47	Activity:T81 
+T82	Detailed_description 1420 1429	excessive
+R41	MODIFY Arg1:T82 Arg2:E47	
+T83	Duration 1447 1455	25 years
+E48	Duration:T83 
+T84	Nonbiological_location 1459 1466	Hawai‘i
+R42	MODIFY Arg1:T84 Arg2:E47	
+R43	BEFORE Arg1:E48 Arg2:E47	
+T85	Medication 1492 1501	sunscreen
+E49	Medication:T85 
+A4	POLARITY E49 NEG
+T86	Date 1468 1476	Early on
+E50	Date:T86 
+T87	Activity 1513 1517	sail
+E51	Activity:T87 
+T88	Detailed_description 1530 1551	during peak sun hours
+T89	Detailed_description 1520 1529	catamaran
+R44	MODIFY Arg1:T89 Arg2:E51	
+R45	MODIFY Arg1:T88 Arg2:E51	
+T90	Subject 1579 1585	mother
+T91	Detailed_description 1590 1620	one skin cancer lesion removed
+R46	MODIFY Arg1:T91 Arg2:T90	
+T92	Family_history 1579 1620	mother had one skin cancer lesion removed
+T93	Activity 1651 1657	smoker
+E52	Activity:T93 
+A5	POLARITY E52 NEG
+T94	History 1625 1657	denied ever having been a smoker
+T95	History 1420 1455	excessive sun exposure for 25 years
+T96	History 1480 1501	did not use sunscreen
+T97	History 1513 1551	sail a catamaran during peak sun hours
+T98	Date 1670 1679	past year
+E53	Date:T98 
+T99	Medication 1696 1700	6-MP
+E54	Medication:T99 
+A6	POLARITY E54 NEG
+T100	Medication 1717 1727	mesalamine
+E55	Medication:T100 
+T101	Medication 1729 1736	Pentasa
+E56	Medication:T101 
+R47	IDENTICAL Arg1:E56 Arg2:E55	
+T102	Medication 1748 1758	adalimumab
+E57	Medication:T102 
+T103	Medication 1760 1766	Humira
+E58	Medication:T103 
+R48	IDENTICAL Arg1:E58 Arg2:E57	
+T104	Diagnostic_procedure 1843 1853	skin exams
+E59	Diagnostic_procedure:T104 
+T105	Frequency 1835 1842	monthly
+R49	MODIFY Arg1:T105 Arg2:E59	
+T106	Clinical_event 1871 1883	hospitalized
+E60	Clinical_event:T106 
+T107	Lab_value 1884 1892	16 times
+R50	MODIFY Arg1:T107 Arg2:E60	
+T108	Disease_disorder 1901 1903	CD
+E61	Disease_disorder:T108 
+T109	Therapeutic_procedure 1939 1948	resection
+E62	Therapeutic_procedure:T109 
+A7	POLARITY E62 NEG
+T110	Biological_structure 1928 1938	intestinal
+R51	MODIFY Arg1:T110 Arg2:E62	
+T111	Clinical_event 1984 1999	hospitalization
+E63	Clinical_event:T111 
+T112	Disease_disorder 2033 2047	adenocarcinoma
+E64	Disease_disorder:T112 
+T113	Detailed_description 2022 2032	metastatic
+R52	MODIFY Arg1:T113 Arg2:E64	
+T114	Biological_structure 2055 2066	small bowel
+R53	MODIFY Arg1:T114 Arg2:E64	
+T115	Outcome 2072 2083	passed away
+E65	Outcome:T115 
+T116	Date 2084 2097	shortly after
+E66	Date:T116 
+*	OVERLAP E1 E3
+R54	BEFORE Arg1:E3 Arg2:E4	
+R55	AFTER Arg1:E4 Arg2:E5	
+*	OVERLAP E5 E7 E8
+R56	BEFORE Arg1:E8 Arg2:E11	
+*	OVERLAP E11 E13 E14 E67
+T117	Sign_symptom 454 461	lesions
+E67	Sign_symptom:T117 
+R57	AFTER Arg1:E67 Arg2:E15	
+*	OVERLAP E15 E16 E17
+R58	BEFORE Arg1:E17 Arg2:E18	
+*	OVERLAP E18 E19
+R59	AFTER Arg1:E19 Arg2:E21	
+*	OVERLAP E21 E22 E23 E24 E26
+R60	MODIFY Arg1:T42 Arg2:E26	
+R61	BEFORE Arg1:E26 Arg2:E28	
+*	OVERLAP E28 E29
+R62	BEFORE Arg1:E29 Arg2:E30	
+*	OVERLAP E30 E31 E32 E33
+R63	AFTER Arg1:E33 Arg2:E36	
+*	OVERLAP E36 E34 E35 E37 E38 E39 E42 E40 E41 E43 E44 E45 E46
+R64	AFTER Arg1:E46 Arg2:E47	
+*	OVERLAP E47 E50 E49 E51 E52
+R65	BEFORE Arg1:E52 Arg2:E53	
+*	OVERLAP E53 E54 E55
+R66	BEFORE Arg1:E55 Arg2:E57	
+*	OVERLAP E57 E59 E60 E61 E62
+R67	BEFORE Arg1:E62 Arg2:E63	
+*	OVERLAP E63 E64
+R68	BEFORE Arg1:E64 Arg2:E65	
+*	OVERLAP E65 E66

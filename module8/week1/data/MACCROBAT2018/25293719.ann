@@ -1,0 +1,324 @@
+T1	Sex 28 34	female
+T2	Age 35 40	child
+T3	Family_history 109 163	consanguineous, first-cousin British Pakistani parents
+T4	Subject 156 163	parents
+T5	Detailed_description 109 123	consanguineous
+T6	Detailed_description 125 137	first-cousin
+T7	Personal_background 138 155	British Pakistani
+R1	MODIFY Arg1:T6 Arg2:T4	
+R2	MODIFY Arg1:T5 Arg2:T4	
+T8	Therapeutic_procedure 63 80	caesarean section
+E1	Therapeutic_procedure:T8 
+T9	Detailed_description 53 62	emergency
+R3	MODIFY Arg1:T9 Arg2:E1	
+T10	Clinical_event 42 46	born
+E2	Clinical_event:T10 
+T11	Quantitative_concept 84 105	34 weeks of gestation
+R4	MODIFY Arg1:T11 Arg2:E1	
+T12	Diagnostic_procedure 165 180	Antenatal scans
+E3	Diagnostic_procedure:T12 
+T14	Diagnostic_procedure 226 234	weighing
+E4	Diagnostic_procedure:T14 
+T17	Diagnostic_procedure 259 277	head circumference
+E5	Diagnostic_procedure:T17 
+T18	Lab_value 281 288	26.7 cm
+R7	MODIFY Arg1:T18 Arg2:E5	
+T19	Therapeutic_procedure 442 459	caesarean section
+E6	Therapeutic_procedure:T19 
+T21	Diagnostic_procedure 465 477	Apgar scores
+E7	Diagnostic_procedure:T21 
+T25	Detailed_description 488 493	1 min
+T26	Detailed_description 500 505	5 min
+T27	Detailed_description 515 521	10 min
+T28	Sign_symptom 382 400	growth retardation
+E8	Sign_symptom:T28 
+T29	Detailed_description 432 441	emergency
+R15	MODIFY Arg1:T29 Arg2:E6	
+T30	Therapeutic_procedure 328 347	Induction of labour
+E9	Therapeutic_procedure:T30 
+A1	POLARITY E9 UNCERTAIN
+T31	Qualitative_concept 409 415	failed
+R16	MODIFY Arg1:T31 Arg2:E9	
+R17	CAUSE Arg1:E8 Arg2:E9	
+T32	Clinical_event 531 539	admitted
+E10	Clinical_event:T32 
+T33	Nonbiological_location 547 575	neonatal intensive care unit
+R18	MODIFY Arg1:T33 Arg2:E10	
+T34	Therapeutic_procedure 580 627	continuous positive airway pressure ventilation
+E11	Therapeutic_procedure:T34 
+T35	Time 634 650	few hours of age
+E12	Time:T35 
+T36	Sign_symptom 675 690	lactic acidosis
+E13	Sign_symptom:T36 
+T37	Severity 668 674	severe
+R19	MODIFY Arg1:T37 Arg2:E13	
+T38	Diagnostic_procedure 704 729	lactic acid concentration
+E14	Diagnostic_procedure:T38 
+T39	Lab_value 734 743	22 mmol/l
+R20	MODIFY Arg1:T39 Arg2:E14	
+T41	Detailed_description 748 760	subsequently
+T42	Lab_value 774 783	63 mmol/l
+R23	MODIFY Arg1:T41 Arg2:T42	
+T20	Lab_value 201 206	small
+E15	Lab_value:T20 
+R8	MODIFY Arg1:E15 Arg2:E4	
+T13	Lab_value 235 242	1.19 kg
+E16	Lab_value:T13 
+R5	MODIFY Arg1:E16 Arg2:E4	
+T15	Clinical_event 246 251	birth
+E17	Clinical_event:T15 
+T16	Lab_value 290 326	considerably below the 0.4th centile
+E18	Lab_value:T16 
+R6	MODIFY Arg1:E18 Arg2:E5	
+T22	Lab_value 483 484	4
+E19	Lab_value:T22 
+T23	Lab_value 495 496	7
+E20	Lab_value:T23 
+T24	Lab_value 510 511	9
+E21	Lab_value:T24 
+R9	MODIFY Arg1:E19 Arg2:E7	
+R10	MODIFY Arg1:E20 Arg2:E7	
+R11	MODIFY Arg1:E21 Arg2:E7	
+R12	MODIFY Arg1:T25 Arg2:E19	
+R13	MODIFY Arg1:T26 Arg2:E20	
+R14	MODIFY Arg1:T27 Arg2:E21	
+R21	MODIFY Arg1:T42 Arg2:E14	
+T40	Lab_value 761 770	increased
+E22	Lab_value:T40 
+R22	MODIFY Arg1:E22 Arg2:E14	
+R24	MODIFY Arg1:T41 Arg2:E22	
+T43	Medication 862 880	sodium bicarbonate
+E23	Medication:T43 
+T44	Administration 837 858	intravenous infusions
+T45	Medication 885 916	Tris-hydroxymethyl aminomethane
+E24	Medication:T45 
+T46	Medication 918 922	THAM
+E25	Medication:T46 
+R25	IDENTICAL Arg1:E25 Arg2:E24	
+R26	MODIFY Arg1:T44 Arg2:E23	
+R27	MODIFY Arg1:T44 Arg2:E24	
+T47	Sign_symptom 966 984	metabolic acidosis
+E26	Sign_symptom:T47 
+T48	Clinical_event 2671 2675	died
+E27	Clinical_event:T48 
+T49	Sign_symptom 1005 1018	hypoglycaemia
+E28	Sign_symptom:T49 
+T50	Time 1019 1031	within hours
+E29	Time:T50 
+T51	Clinical_event 1035 1040	birth
+E30	Clinical_event:T51 
+T52	Administration 1068 1088	intravenous infusion
+T53	Medication 1096 1103	glucose
+E31	Medication:T53 
+T54	Dosage 1092 1095	15%
+T55	Dosage 1105 1118	7.8 mg/kg/min
+R28	MODIFY Arg1:T54 Arg2:E31	
+R29	MODIFY Arg1:T55 Arg2:E31	
+R30	MODIFY Arg1:T52 Arg2:E31	
+T56	Diagnostic_procedure 1125 1146	ammonia concentration
+E32	Diagnostic_procedure:T56 
+T57	Lab_value 1151 1157	normal
+E33	Lab_value:T57 
+R31	MODIFY Arg1:E33 Arg2:E32	
+T58	Diagnostic_procedure 1165 1185	organic acid profile
+E34	Diagnostic_procedure:T58 
+T59	Detailed_description 1159 1164	Urine
+R32	MODIFY Arg1:T59 Arg2:E34	
+T60	Diagnostic_procedure 1214 1225	lactic acid
+E35	Diagnostic_procedure:T60 
+T61	Diagnostic_procedure 1240 1254	phenolic acids
+E36	Diagnostic_procedure:T61 
+T62	Lab_value 1230 1239	increased
+E37	Lab_value:T62 
+T63	Lab_value 1256 1287	especially hydroxyphenyllactate
+E38	Lab_value:T63 
+R33	MODIFY Arg1:E38 Arg2:E36	
+R34	MODIFY Arg1:E37 Arg2:E36	
+T64	Lab_value 1201 1210	excretion
+E39	Lab_value:T64 
+T65	Severity 1193 1200	massive
+R35	MODIFY Arg1:T65 Arg2:E39	
+R36	MODIFY Arg1:E39 Arg2:E35	
+R37	SUB_PROCEDURE Arg1:E35 Arg2:E34	
+R38	SUB_PROCEDURE Arg1:E36 Arg2:E34	
+T66	Diagnostic_procedure 1296 1307	amino acids
+E40	Diagnostic_procedure:T66 
+T67	Detailed_description 1289 1295	Plasma
+R39	MODIFY Arg1:T67 Arg2:E40	
+T68	Diagnostic_procedure 1340 1347	alanine
+E41	Diagnostic_procedure:T68 
+T69	Diagnostic_procedure 1352 1361	glutamine
+E42	Diagnostic_procedure:T69 
+T70	Lab_value 1315 1321	raised
+E43	Lab_value:T70 
+R40	MODIFY Arg1:E43 Arg2:E41	
+R41	MODIFY Arg1:E43 Arg2:E42	
+R42	SUB_PROCEDURE Arg1:E41 Arg2:E40	
+R43	SUB_PROCEDURE Arg1:E42 Arg2:E40	
+T71	Lab_value 1363 1367	1567
+E44	Lab_value:T71 
+R44	MODIFY Arg1:E44 Arg2:E41	
+T72	Lab_value 1372 1383	1369 μmol/l
+E45	Lab_value:T72 
+R45	MODIFY Arg1:E45 Arg2:E42	
+T73	Sign_symptom 1420 1435	lactic acidosis
+E46	Sign_symptom:T73 
+T74	Diagnostic_procedure 1445 1462	other amino acids
+E47	Diagnostic_procedure:T74 
+T75	Lab_value 1480 1489	increased
+E48	Lab_value:T75 
+R46	MODIFY Arg1:E48 Arg2:E47	
+R47	SUB_PROCEDURE Arg1:E47 Arg2:E40	
+T76	Sign_symptom 1519 1532	aminoaciduria
+E49	Sign_symptom:T76 
+T77	Detailed_description 1507 1518	generalised
+T78	Severity 1501 1506	gross
+R48	MODIFY Arg1:T78 Arg2:E49	
+R49	MODIFY Arg1:T77 Arg2:E49	
+T79	Diagnostic_procedure 1540 1562	acylcarnitine analysis
+E50	Diagnostic_procedure:T79 
+T80	Detailed_description 1534 1539	Blood
+R50	MODIFY Arg1:T80 Arg2:E50	
+T81	Lab_value 1567 1573	normal
+E51	Lab_value:T81 
+R51	MODIFY Arg1:E51 Arg2:E50	
+T82	Diagnostic_procedure 1575 1591	Echocardiography
+E52	Diagnostic_procedure:T82 
+T83	Lab_value 1601 1620	structurally normal
+E53	Lab_value:T83 
+T84	Diagnostic_procedure 1636 1656	ventricular function
+E54	Diagnostic_procedure:T84 
+T85	Biological_structure 1621 1626	heart
+R52	MODIFY Arg1:T85 Arg2:E53	
+R53	MODIFY Arg1:E53 Arg2:E52	
+T86	Lab_value 1631 1635	good
+E55	Lab_value:T86 
+R54	MODIFY Arg1:E55 Arg2:E54	
+R55	SUB_PROCEDURE Arg1:E54 Arg2:E52	
+T87	Diagnostic_procedure 1666 1676	ultrasound
+E56	Diagnostic_procedure:T87 
+T88	Biological_structure 1658 1665	Cranial
+R56	MODIFY Arg1:T88 Arg2:E56	
+T89	Sign_symptom 2528 2536	acidosis
+E57	Sign_symptom:T89 
+A2	TREND E57 INC
+T90	Medication 2518 2522	THAM
+E58	Medication:T90 
+T91	Medication 2502 2513	bicarbonate
+E59	Medication:T91 
+T92	Administration 2489 2498	infusions
+R57	MODIFY Arg1:T92 Arg2:E59	
+R58	MODIFY Arg1:T92 Arg2:E58	
+T93	Diagnostic_procedure 2574 2582	biopsies
+E60	Diagnostic_procedure:T93 
+T94	Biological_structure 2569 2573	skin
+T95	Biological_structure 2558 2564	Muscle
+R59	MODIFY Arg1:T94 Arg2:E60	
+R60	MODIFY Arg1:T95 Arg2:E60	
+T96	Date 2681 2685	55 h
+E61	Date:T96 
+T97	Therapeutic_procedure 2641 2665	intensive care treatment
+E62	Therapeutic_procedure:T97 
+A3	POLARITY E62 NEG
+T98	Sign_symptom 2455 2463	seizures
+E63	Sign_symptom:T98 
+T99	Date 2467 2479	∼48 h of age
+E64	Date:T99 
+T100	Clinical_event 2358 2369	transferred
+E65	Clinical_event:T100 
+T101	Nonbiological_location 2375 2390	tertiary centre
+R61	MODIFY Arg1:T101 Arg2:E65	
+T102	Sign_symptom 2416 2434	metabolic acidosis
+E66	Sign_symptom:T102 
+A4	TREND E66 INC
+T103	Disease_disorder 2118 2130	coagulopathy
+E67	Disease_disorder:T103 
+T104	Severity 2111 2117	severe
+R62	MODIFY Arg1:T104 Arg2:E67	
+T105	Diagnostic_procedure 2148 2164	prothrombin time
+E68	Diagnostic_procedure:T105 
+T106	Lab_value 2139 2147	extended
+E69	Lab_value:T106 
+R63	MODIFY Arg1:E69 Arg2:E68	
+T107	Lab_value 2168 2174	47.7 s
+E70	Lab_value:T107 
+R64	MODIFY Arg1:E70 Arg2:E68	
+T108	Diagnostic_procedure 2208 2222	plasma albumin
+E71	Diagnostic_procedure:T108 
+T109	Lab_value 2199 2207	very low
+E72	Lab_value:T109 
+R65	MODIFY Arg1:E72 Arg2:E71	
+T110	Lab_value 2226 2231	7 g/l
+E73	Lab_value:T110 
+R66	MODIFY Arg1:E73 Arg2:E71	
+T111	Diagnostic_procedure 2269 2289	liver function tests
+E74	Diagnostic_procedure:T111 
+T112	Lab_value 2262 2268	normal
+E75	Lab_value:T112 
+R67	MODIFY Arg1:E75 Arg2:E74	
+T113	Diagnostic_procedure 2303 2318	creatine kinase
+E76	Diagnostic_procedure:T113 
+T114	Lab_value 2296 2302	raised
+E77	Lab_value:T114 
+T115	Lab_value 2322 2330	2700 U/l
+E78	Lab_value:T115 
+R68	MODIFY Arg1:E78 Arg2:E76	
+R69	MODIFY Arg1:E77 Arg2:E76	
+T116	Diagnostic_procedure 2023 2033	ultrasound
+E79	Diagnostic_procedure:T116 
+T117	Biological_structure 2013 2022	Abdominal
+R70	MODIFY Arg1:T117 Arg2:E79	
+T118	Sign_symptom 2043 2052	distended
+E80	Sign_symptom:T118 
+T119	Biological_structure 2053 2068	urinary bladder
+R71	MODIFY Arg1:T119 Arg2:E80	
+T120	Disease_disorder 1983 2011	intraventricular haemorrhage
+E81	Disease_disorder:T120 
+A5	POLARITY E81 UNCERTAIN
+T121	Biological_structure 1914 1930	choroid plexuses
+T122	Sign_symptom 1936 1947	hyperechoic
+E82	Sign_symptom:T122 
+R72	MODIFY Arg1:T121 Arg2:E82	
+T123	Sign_symptom 1952 1961	irregular
+E83	Sign_symptom:T123 
+R73	MODIFY Arg1:T121 Arg2:E83	
+T124	Sign_symptom 1711 1716	cysts
+E84	Sign_symptom:T124 
+T125	Sign_symptom 1806 1811	cysts
+E85	Sign_symptom:T125 
+T126	Detailed_description 1795 1805	left-sided
+R74	MODIFY Arg1:T126 Arg2:E85	
+T127	Sign_symptom 1870 1874	cyst
+E86	Sign_symptom:T127 
+T128	Biological_structure 1694 1710	intraventricular
+R75	MODIFY Arg1:T128 Arg2:E84	
+T129	Detailed_description 1684 1693	bilateral
+R76	MODIFY Arg1:T129 Arg2:E84	
+T130	Biological_structure 1728 1789	frontal horns and anterior portions of the lateral ventricles
+R77	MODIFY Arg1:T130 Arg2:E84	
+T131	Distance 1825 1848	up to 15 mm in diameter
+R78	MODIFY Arg1:T131 Arg2:E85	
+T132	Distance 1892 1908	8 mm in diameter
+R79	MODIFY Arg1:T132 Arg2:E86	
+*	OVERLAP E2 E1
+R80	AFTER Arg1:E1 Arg2:E3	
+R81	BEFORE Arg1:E3 Arg2:E4	
+*	OVERLAP E4 E17 E5
+R82	AFTER Arg1:E5 Arg2:E9	
+*	OVERLAP E9 E8
+R83	BEFORE Arg1:E8 Arg2:E6	
+R84	BEFORE Arg1:E6 Arg2:E7	
+R85	BEFORE Arg1:E7 Arg2:E10	
+*	OVERLAP E10 E11
+R86	BEFORE Arg1:E11 Arg2:E12	
+*	OVERLAP E12 E13 E14 E23 E24 E26 E28 E29
+R87	AFTER Arg1:E29 Arg2:E30	
+R88	BEFORE Arg1:E30 Arg2:E31	
+*	OVERLAP E31 E32 E34 E40 E49 E50 E52 E54 E56 E84 E85 E86 E82 E83 E81 E79 E80 E67 E68 E71 E74 E76
+R89	BEFORE Arg1:E76 Arg2:E65	
+*	OVERLAP E65 E66
+R90	BEFORE Arg1:E66 Arg2:E63	
+*	OVERLAP E63 E64 E59 E58 E57 E60
+R91	BEFORE Arg1:E60 Arg2:E62	
+R92	BEFORE Arg1:E62 Arg2:E27	
+*	OVERLAP E27 E61

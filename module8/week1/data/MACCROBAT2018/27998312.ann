@@ -1,0 +1,140 @@
+T1	Age 2 13	46-year-old
+T2	Personal_background 14 23	Caucasian
+T3	Sex 24 29	woman
+T4	History 35 59	type 2 diabetes mellitus
+T5	History 64 80	bipolar disorder
+T6	Clinical_event 81 90	presented
+E1	Clinical_event:T6 
+T7	Nonbiological_location 98 118	emergency department
+R1	MODIFY Arg1:T7 Arg2:E1	
+T8	Sign_symptom 130 148	abdominal symptoms
+E2	Sign_symptom:T8 
+T9	Detailed_description 124 129	vague
+R2	MODIFY Arg1:T9 Arg2:E2	
+T10	Sign_symptom 153 161	vomiting
+E3	Sign_symptom:T10 
+T11	History 194 220	left below knee amputation
+T12	History 225 246	right toes amputation
+T13	History 251 297	complications secondary to diabetic neuropathy
+T14	Sign_symptom 374 379	ulcer
+E4	Sign_symptom:T14 
+T15	Detailed_description 365 373	diabetic
+T16	Detailed_description 356 364	infected
+R3	MODIFY Arg1:T15 Arg2:E4	
+R4	MODIFY Arg1:T16 Arg2:E4	
+T17	Biological_structure 387 397	right foot
+R5	MODIFY Arg1:T17 Arg2:E4	
+T18	Disease_disorder 438 442	CAPD
+E5	Disease_disorder:T18 
+T19	Disease_disorder 459 472	renal disease
+E6	Disease_disorder:T19 
+A1	POLARITY E5 NEG
+A2	POLARITY E6 NEG
+T20	Diagnostic_procedure 474 484	creatinine
+E7	Diagnostic_procedure:T20 
+T21	Diagnostic_procedure 497 516	blood urea nitrogen
+E8	Diagnostic_procedure:T21 
+T22	Diagnostic_procedure 517 522	(BUN)
+E9	Diagnostic_procedure:T22 
+R6	IDENTICAL Arg1:E9 Arg2:E8	
+T23	Lab_value 523 531	16 mg/dL
+T24	Lab_value 485 495	1.23 mg/dL
+R7	MODIFY Arg1:T24 Arg2:E7	
+R8	MODIFY Arg1:T23 Arg2:E8	
+T25	Diagnostic_procedure 537 557	blood glucose levels
+E10	Diagnostic_procedure:T25 
+T26	Lab_value 563 580	poorly controlled
+R9	MODIFY Arg1:T26 Arg2:E10	
+T27	Medication 598 605	insulin
+E11	Medication:T27 
+T28	Administration 585 597	subcutaneous
+T29	Administration 606 615	injection
+R10	MODIFY Arg1:T29 Arg2:E11	
+R11	MODIFY Arg1:T28 Arg2:E11	
+T30	Lab_value 632 665	range of 400 to 500 mg/dL at home
+R12	MODIFY Arg1:T30 Arg2:E10	
+T32	Diagnostic_procedure 701 721	blood glucose levels
+E12	Diagnostic_procedure:T32 
+T33	Lab_value 751 767	175 to 378 mg/dL
+R14	MODIFY Arg1:T33 Arg2:E12	
+T34	Medication 803 810	insulin
+E13	Medication:T34 
+T35	Detailed_description 794 802	stricter
+T36	Detailed_description 811 818	regimen
+R15	MODIFY Arg1:T36 Arg2:E13	
+R16	MODIFY Arg1:T35 Arg2:E13	
+T37	Diagnostic_procedure 850 857	CT scan
+E14	Diagnostic_procedure:T37 
+T38	Detailed_description 837 849	non-contrast
+R17	MODIFY Arg1:T38 Arg2:E14	
+T39	Sign_symptom 906 921	hypoattenuation
+E15	Sign_symptom:T39 
+T40	Detailed_description 865 874	confluent
+T41	Biological_structure 876 883	bilobar
+R18	MODIFY Arg1:T41 Arg2:E15	
+R19	MODIFY Arg1:T40 Arg2:E15	
+T42	Detailed_description 927 951	subcapsular distribution
+R20	MODIFY Arg1:T42 Arg2:E15	
+T43	Biological_structure 967 972	liver
+R21	MODIFY Arg1:T43 Arg2:E15	
+T44	Diagnostic_procedure 984 987	MRI
+E16	Diagnostic_procedure:T44 
+T45	Biological_structure 988 993	liver
+R22	MODIFY Arg1:T45 Arg2:E16	
+T46	Diagnostic_procedure 1185 1198	gradient echo
+E17	Diagnostic_procedure:T46 
+T47	Detailed_description 1176 1184	In-phase
+R23	MODIFY Arg1:T47 Arg2:E17	
+T48	Sign_symptom 1232 1236	foci
+E18	Sign_symptom:T48 
+T49	Detailed_description 1219 1231	hyperintense
+R24	MODIFY Arg1:T49 Arg2:E18	
+T50	Biological_structure 1244 1249	liver
+R25	MODIFY Arg1:T50 Arg2:E18	
+T51	Diagnostic_procedure 1673 1675	CT
+E19	Diagnostic_procedure:T51 
+T52	Biological_structure 1683 1690	abdomen
+T53	Biological_structure 1695 1701	pelvis
+T54	Disease_disorder 1643 1646	SHS
+E20	Disease_disorder:T54 
+#1	AnnotatorNotes E20	simple hepatic steatosis (or, non-alcoholic fatty liver disease)
+T55	Date 1716 1730	3 months later
+E21	Date:T55 
+T56	Sign_symptom 1745 1769	near complete resolution
+E22	Sign_symptom:T56 
+T57	Diagnostic_procedure 1857 1876	blood glucose level
+E23	Diagnostic_procedure:T57 
+T58	Lab_value 1880 1895	below 200 mg/dL
+R26	MODIFY Arg1:T58 Arg2:E23	
+T59	Therapeutic_procedure 1815 1830	glucose control
+E24	Therapeutic_procedure:T59 
+T31	Clinical_event 674 694	poor drug compliance
+E25	Clinical_event:T31 
+R13	CAUSE Arg1:E25 Arg2:T30	
+*	OVERLAP E1 E2 E3
+R27	AFTER Arg1:E2 Arg2:E4	
+*	OVERLAP E4 E5 E6
+R28	BEFORE Arg1:E6 Arg2:E7	
+*	OVERLAP E7 E8 E10 E11 E25
+R29	BEFORE Arg1:E25 Arg2:E12	
+*	OVERLAP E12 E13 E14 E15 E16 E18 E27 E29 E20
+R30	SUB_PROCEDURE Arg1:E17 Arg2:E16	
+T60	Diagnostic_procedure 1332 1354	opposed-phase sequence
+E26	Diagnostic_procedure:T60 
+R31	SUB_PROCEDURE Arg1:E26 Arg2:E16	
+T61	Lab_value 1366 1380	loss in signal
+T62	Sign_symptom 1415 1454	presence of intracellular fat and water
+E27	Sign_symptom:T62 
+R32	MODIFY Arg1:T61 Arg2:E26	
+T63	Coreference 1565 1577	MR sequences
+E28	Coreference:T63 
+R33	IDENTICAL Arg1:E28 Arg2:E16	
+T64	Sign_symptom 1590 1605	presence of fat
+E29	Sign_symptom:T64 
+T65	Biological_structure 1523 1541	hepatic parenchyma
+R34	MODIFY Arg1:T65 Arg2:E29	
+R35	BEFORE Arg1:E20 Arg2:E19	
+R36	MODIFY Arg1:T52 Arg2:E19	
+R37	MODIFY Arg1:T53 Arg2:E19	
+*	OVERLAP E19 E21 E22 E24 E23
+R38	CAUSE Arg1:E24 Arg2:T58	

@@ -1,0 +1,447 @@
+T1	Age 2 13	75-year-old
+T2	Sex 14 17	man
+T3	Clinical_event 22 30	referred
+E1	Clinical_event:T3 
+T4	Nonbiological_location 38 46	hospital
+R1	MODIFY Arg1:T4 Arg2:E1	
+T5	Sign_symptom 69 78	dysphagia
+E2	Sign_symptom:T5 
+T6	Sign_symptom 123 129	nausea
+E3	Sign_symptom:T6 
+T7	Duration 83 91	9 months
+E4	Duration:T7 
+T8	Sign_symptom 134 142	vomiting
+E5	Sign_symptom:T8 
+T9	Sign_symptom 154 165	hematemesis
+E6	Sign_symptom:T9 
+A1	POLARITY E6 NEG
+T10	Sign_symptom 167 179	hematochezia
+E7	Sign_symptom:T10 
+A2	POLARITY E7 NEG
+T11	Sign_symptom 181 189	lethargy
+E8	Sign_symptom:T11 
+A3	POLARITY E8 NEG
+T12	Sign_symptom 195 202	dyspnea
+E9	Sign_symptom:T12 
+A4	POLARITY E9 NEG
+T13	History 214 227	active smoker
+T14	Diagnostic_procedure 263 283	Physical examination
+E10	Diagnostic_procedure:T14 
+T15	Sign_symptom 307 322	lymphadenopathy
+E11	Sign_symptom:T15 
+A5	POLARITY E11 NEG
+T16	Sign_symptom 324 335	thyromegaly
+E12	Sign_symptom:T16 
+A6	POLARITY E12 NEG
+T17	Sign_symptom 337 344	ascites
+E13	Sign_symptom:T17 
+A7	POLARITY E13 NEG
+T18	Sign_symptom 349 353	mass
+E14	Sign_symptom:T18 
+A8	POLARITY E14 NEG
+T19	Biological_structure 361 368	abdomen
+R2	MODIFY Arg1:T19 Arg2:E14	
+T20	Detailed_description 296 306	peripheral
+R3	MODIFY Arg1:T20 Arg2:E11	
+T21	Diagnostic_procedure 370 385	Laboratory data
+E15	Diagnostic_procedure:T21 
+T22	Lab_value 391 397	normal
+R4	MODIFY Arg1:T22 Arg2:E15	
+T23	Diagnostic_procedure 399 405	HBs-Ag
+E16	Diagnostic_procedure:T23 
+T24	Diagnostic_procedure 416 419	HIV
+E17	Diagnostic_procedure:T24 
+T25	Diagnostic_procedure 434 442	syphilis
+E18	Diagnostic_procedure:T25 
+T26	Lab_value 406 414	negative
+R5	MODIFY Arg1:T26 Arg2:E16	
+T27	Lab_value 420 428	negative
+R6	MODIFY Arg1:T27 Arg2:E17	
+T28	Lab_value 443 451	negative
+R7	MODIFY Arg1:T28 Arg2:E18	
+R8	SUB_PROCEDURE Arg1:E16 Arg2:E15	
+R9	SUB_PROCEDURE Arg1:E17 Arg2:E15	
+R10	SUB_PROCEDURE Arg1:E18 Arg2:E15	
+T29	Diagnostic_procedure 462 504	serum antibody against Helicobacter pylori
+E19	Diagnostic_procedure:T29 
+T30	Lab_value 509 517	negative
+R11	MODIFY Arg1:T30 Arg2:E19	
+T31	Diagnostic_procedure 525 544	computed tomography
+E20	Diagnostic_procedure:T31 
+T32	Diagnostic_procedure 546 548	CT
+E21	Diagnostic_procedure:T32 
+R12	IDENTICAL Arg1:E21 Arg2:E20	
+T33	Biological_structure 519 524	Chest
+R13	MODIFY Arg1:T33 Arg2:E20	
+T34	Sign_symptom 632 640	neoplasm
+E22	Sign_symptom:T34 
+T35	Detailed_description 568 572	huge
+R14	MODIFY Arg1:T35 Arg2:E22	
+T36	Detailed_description 573 591	well-circumscribed
+R15	MODIFY Arg1:T36 Arg2:E22	
+T37	Detailed_description 596 607	homogeneous
+R16	MODIFY Arg1:T37 Arg2:E22	
+T38	Shape 608 619	cylindrical
+R17	MODIFY Arg1:T38 Arg2:E22	
+T39	Detailed_description 620 631	mesenchymal
+R18	MODIFY Arg1:T39 Arg2:E22	
+T40	Volume 651 666	15.5×5.9×4.0 cm
+R19	MODIFY Arg1:T40 Arg2:E22	
+T41	Biological_structure 670 696	lower and middle esophagus
+R20	MODIFY Arg1:T41 Arg2:E22	
+T42	Detailed_description 702 727	mild contrast enhancement
+R21	MODIFY Arg1:T42 Arg2:E20	
+T43	Diagnostic_procedure 738 740	CT
+E23	Diagnostic_procedure:T43 
+T44	Sign_symptom 753 766	abnormalities
+E24	Sign_symptom:T44 
+A9	POLARITY E24 NEG
+T45	Biological_structure 774 779	lungs
+T46	Biological_structure 781 786	heart
+T47	Biological_structure 788 792	ribs
+T48	Biological_structure 797 808	mediastinum
+R22	MODIFY Arg1:T45 Arg2:E24	
+R23	MODIFY Arg1:T46 Arg2:E24	
+R24	MODIFY Arg1:T47 Arg2:E24	
+R25	MODIFY Arg1:T48 Arg2:E24	
+T49	Diagnostic_procedure 810 832	Endoscopic examination
+E25	Diagnostic_procedure:T49 
+T50	Sign_symptom 853 859	lesion
+E26	Sign_symptom:T50 
+T51	Detailed_description 842 852	submucosal
+R26	MODIFY Arg1:T51 Arg2:E26	
+T52	Biological_structure 867 876	esophagus
+R27	MODIFY Arg1:T52 Arg2:E26	
+T53	Distance 889 917	20 cm from the incisor teeth
+R28	MODIFY Arg1:T53 Arg2:T52	
+T54	Biological_structure 928 944	up to the cardia
+R29	MODIFY Arg1:T54 Arg2:T52	
+T55	Diagnostic_procedure 955 981	Endoscopic ultrasonography
+E27	Diagnostic_procedure:T55 
+T56	Diagnostic_procedure 983 986	EUS
+E28	Diagnostic_procedure:T56 
+R30	IDENTICAL Arg1:E28 Arg2:E27	
+T57	Sign_symptom 1008 1014	lesion
+E29	Sign_symptom:T57 
+T58	Detailed_description 997 1007	hypoechoic
+R31	MODIFY Arg1:T58 Arg2:E29	
+T59	Detailed_description 1023 1036	lear boundary
+R32	MODIFY Arg1:T59 Arg2:E29	
+T60	Detailed_description 1052 1061	4th layer
+R33	MODIFY Arg1:T60 Arg2:E29	
+T61	Coreference 1067 1071	mass
+E30	Coreference:T61 
+R34	IDENTICAL Arg1:E30 Arg2:E29	
+T62	Sign_symptom 1086 1098	benign tumor
+E31	Sign_symptom:T62 
+T63	Disease_disorder 1135 1155	esophageal leiomyoma
+E32	Disease_disorder:T63 
+R35	MODIFY Arg1:E31 Arg2:E30	
+T64	Therapeutic_procedure 1236 1245	resection
+E33	Therapeutic_procedure:T64 
+A10	POLARITY E33 NEG
+T65	Therapeutic_procedure 1271 1280	resection
+E34	Therapeutic_procedure:T65 
+A11	POLARITY E34 NEG
+T66	Detailed_description 1260 1270	submucosal
+T67	Detailed_description 1249 1259	endoscopic
+T68	Detailed_description 1217 1227	Endoscopic
+T69	Detailed_description 1228 1235	mucosal
+R36	MODIFY Arg1:T69 Arg2:E33	
+R37	MODIFY Arg1:T68 Arg2:E33	
+R38	MODIFY Arg1:T66 Arg2:E34	
+R39	MODIFY Arg1:T67 Arg2:E34	
+T70	Therapeutic_procedure 1337 1346	resection
+E35	Therapeutic_procedure:T70 
+T71	Detailed_description 1328 1336	surgical
+R40	MODIFY Arg1:T71 Arg2:E35	
+T72	Therapeutic_procedure 1444 1453	resection
+E36	Therapeutic_procedure:T72 
+T73	Detailed_description 1421 1443	thoracoscopic-assisted
+R41	MODIFY Arg1:T73 Arg2:E36	
+T74	Coreference 1461 1465	mass
+E37	Coreference:T74 
+R42	IDENTICAL Arg1:E37 Arg2:E30	
+T75	Therapeutic_procedure 1488 1499	anastomosis
+E38	Therapeutic_procedure:T75 
+T76	Detailed_description 1471 1487	gastroesophageal
+R43	MODIFY Arg1:T76 Arg2:E38	
+T77	Therapeutic_procedure 1515 1523	ligation
+E39	Therapeutic_procedure:T77 
+R44	SUB_PROCEDURE Arg1:E38 Arg2:E36	
+R45	SUB_PROCEDURE Arg1:E39 Arg2:E36	
+T78	Biological_structure 1501 1514	thoracic duct
+R46	MODIFY Arg1:T78 Arg2:E39	
+T79	Therapeutic_procedure 1529 1540	jejunostomy
+E40	Therapeutic_procedure:T79 
+R47	SUB_PROCEDURE Arg1:E40 Arg2:E36	
+T80	Therapeutic_procedure 1542 1562	Postoperative course
+E41	Therapeutic_procedure:T80 
+T81	Lab_value 1567 1577	uneventful
+R48	MODIFY Arg1:T81 Arg2:E41	
+T82	Sign_symptom 1605 1609	lump
+E42	Sign_symptom:T82 
+T83	Shape 1590 1604	spindle shaped
+R49	MODIFY Arg1:T83 Arg2:E42	
+T84	Volume 1620 1637	14 × 3.5 × 2.5 cm
+R50	MODIFY Arg1:T84 Arg2:E42	
+T85	Biological_structure 1668 1677	esophagus
+R51	MODIFY Arg1:T85 Arg2:E42	
+T86	Biological_structure 1699 1715	esophageal lumen
+R52	MODIFY Arg1:T86 Arg2:T85	
+T87	Biological_structure 1736 1741	lumen
+R53	MODIFY Arg1:T87 Arg2:E43	
+T88	Sign_symptom 1720 1727	blocked
+E43	Sign_symptom:T88 
+R54	CAUSE Arg1:E42 Arg2:E43	
+T89	Coreference 1748 1752	lump
+E44	Coreference:T89 
+R55	IDENTICAL Arg1:E44 Arg2:E42	
+T90	Biological_structure 1768 1777	submucosa
+R56	MODIFY Arg1:T90 Arg2:E44	
+T91	Detailed_description 1782 1808	covered with intact mucosa
+R57	MODIFY Arg1:T91 Arg2:E44	
+T92	Sign_symptom 1818 1825	erosion
+E45	Sign_symptom:T92 
+A12	POLARITY E45 NEG
+T93	Disease_disorder 1827 1832	ulcer
+E46	Disease_disorder:T93 
+A13	POLARITY E46 NEG
+T94	Disease_disorder 1838 1848	hemorrhage
+E47	Disease_disorder:T94 
+A14	POLARITY E47 NEG
+R58	MODIFY Arg1:E44 Arg2:E45	
+R59	MODIFY Arg1:E44 Arg2:E46	
+R60	MODIFY Arg1:E44 Arg2:E47	
+T95	Color 1870 1888	homogenously white
+T96	Color 1892 1905	grayish-white
+R61	MODIFY Arg1:T95 Arg2:E44	
+R62	MODIFY Arg1:T96 Arg2:E44	
+T97	Diagnostic_procedure 1916 1940	Histological examination
+E48	Diagnostic_procedure:T97 
+T98	Diagnostic_procedure 1947 1958	hematoxylin
+E49	Diagnostic_procedure:T98 
+T99	Diagnostic_procedure 1963 1977	eosin staining
+E50	Diagnostic_procedure:T99 
+R63	SUB_PROCEDURE Arg1:E49 Arg2:E48	
+R64	SUB_PROCEDURE Arg1:E50 Arg2:E48	
+T100	Coreference 1992 1997	tumor
+E51	Coreference:T100 
+R65	IDENTICAL Arg1:E51 Arg2:E44	
+T101	Detailed_description 2002 2041	covered with intact squamous epithelium
+R66	MODIFY Arg1:T101 Arg2:E51	
+T102	Biological_structure 2051 2076	from the submucosal layer
+T103	Biological_structure 2101 2115	muscular layer
+R67	MODIFY Arg1:T102 Arg2:T101	
+R68	MODIFY Arg1:T103 Arg2:T101	
+T104	Coreference 2121 2126	tumor
+E52	Coreference:T104 
+R69	IDENTICAL Arg1:E52 Arg2:E51	
+T105	Detailed_description 2131 2201	composed of many nodules of varying sizes separated by collagen fibers
+R70	MODIFY Arg1:T105 Arg2:E52	
+T106	Detailed_description 2203 2305	Numerous cytoplasm-rich cells were observed in the collagenous septations with invasive growth pattern
+R71	MODIFY Arg1:T106 Arg2:E52	
+T107	Detailed_description 2322 2439	nodules were mainly composed of small to mid-sized centrocyte-like or monocyte-like cells arranged in diffuse pattern
+R72	MODIFY Arg1:T107 Arg2:T105	
+R73	MODIFY Arg1:T106 Arg2:T105	
+T108	Detailed_description 2447 2467	atypical lymphocytes
+R74	MODIFY Arg1:T108 Arg2:T107	
+T109	Detailed_description 2478 2492	clear boundary
+T110	Detailed_description 2494 2508	pale cytoplasm
+T111	Detailed_description 2510 2527	irregular nucleus
+T112	Detailed_description 2533 2553	occasional nucleolus
+R75	MODIFY Arg1:T109 Arg2:T108	
+R76	MODIFY Arg1:T110 Arg2:T108	
+R77	MODIFY Arg1:T111 Arg2:T108	
+R78	MODIFY Arg1:T112 Arg2:T108	
+T113	Diagnostic_procedure 2564 2571	Mitosis
+E53	Diagnostic_procedure:T113 
+T114	Lab_value 2576 2580	rare
+R79	MODIFY Arg1:T114 Arg2:E53	
+T115	Sign_symptom 2602 2608	lesion
+E54	Sign_symptom:T115 
+A15	POLARITY E54 NEG
+T116	Coreference 2631 2637	lesion
+E55	Coreference:T116 
+R80	IDENTICAL Arg1:E55 Arg2:E52	
+T117	Detailed_description 2585 2601	lymphoepithelial
+R81	MODIFY Arg1:T117 Arg2:E54	
+R82	MODIFY Arg1:E55 Arg2:E54	
+T118	Diagnostic_procedure 2642 2670	immunohistochemical staining
+E56	Diagnostic_procedure:T118 
+T119	Diagnostic_procedure 2710 2721	cytokeratin
+E57	Diagnostic_procedure:T119 
+T120	Biological_structure 2672 2682	epithelium
+R83	MODIFY Arg1:T120 Arg2:T121	
+T121	Lab_value 2687 2705	diffusely positive
+R84	MODIFY Arg1:T121 Arg2:E57	
+R85	SUB_PROCEDURE Arg1:E57 Arg2:E56	
+T122	Diagnostic_procedure 2780 2813	cluster of differentiation (CD)20
+E58	Diagnostic_procedure:T122 
+T123	Lab_value 2757 2775	diffusely positive
+T124	Coreference 2740 2751	tumor cells
+E59	Coreference:T124 
+R86	IDENTICAL Arg1:E59 Arg2:E55	
+T125	Diagnostic_procedure 2815 2827	paired box 5
+E60	Diagnostic_procedure:T125 
+T126	Diagnostic_procedure 2842 2865	B-cell lymphoma (Bcl)-2
+E61	Diagnostic_procedure:T126 
+R88	MODIFY Arg1:T123 Arg2:E58	
+R89	MODIFY Arg1:T123 Arg2:E60	
+R90	MODIFY Arg1:T123 Arg2:E61	
+R92	MODIFY Arg1:E59 Arg2:T123	
+R93	SUB_PROCEDURE Arg1:E58 Arg2:E56	
+R94	SUB_PROCEDURE Arg1:E60 Arg2:E56	
+R95	SUB_PROCEDURE Arg1:E61 Arg2:E56	
+T127	Diagnostic_procedure 2979 3006	multiple myeloma oncogene 1
+E62	Diagnostic_procedure:T127 
+T128	Diagnostic_procedure 3008 3013	CD138
+E63	Diagnostic_procedure:T128 
+T129	Diagnostic_procedure 3019 3023	CD43
+E64	Diagnostic_procedure:T129 
+T130	Lab_value 2966 2974	positive
+R96	MODIFY Arg1:T130 Arg2:E62	
+R97	MODIFY Arg1:T130 Arg2:E63	
+R98	MODIFY Arg1:T130 Arg2:E64	
+T131	Biological_structure 2876 2905	Small deposits of tumor cells
+T132	Detailed_description 2930 2959	mainly in the collagen fibers
+R99	MODIFY Arg1:T132 Arg2:T131	
+R102	MODIFY Arg1:T131 Arg2:T130	
+R103	SUB_PROCEDURE Arg1:E62 Arg2:E56	
+R104	SUB_PROCEDURE Arg1:E63 Arg2:E56	
+R105	SUB_PROCEDURE Arg1:E64 Arg2:E56	
+T133	Diagnostic_procedure 3068 3072	CD30
+E65	Diagnostic_procedure:T133 
+T134	Lab_value 3055 3063	positive
+T135	Biological_structure 3025 3044	Several tumor cells
+R106	MODIFY Arg1:T135 Arg2:T134	
+R107	MODIFY Arg1:T134 Arg2:E65	
+T136	Diagnostic_procedure 3110 3113	CD3
+E66	Diagnostic_procedure:T136 
+R108	SUB_PROCEDURE Arg1:E65 Arg2:E56	
+T137	Lab_value 3097 3105	positive
+T138	Diagnostic_procedure 3118 3121	CD5
+E67	Diagnostic_procedure:T138 
+R109	MODIFY Arg1:T137 Arg2:E66	
+R110	MODIFY Arg1:T137 Arg2:E67	
+T139	Biological_structure 3074 3091	Small lymphocytes
+T140	Lab_value 3155 3163	positive
+T141	Diagnostic_procedure 3168 3172	CD21
+E68	Diagnostic_procedure:T141 
+T142	Diagnostic_procedure 3177 3181	CD23
+E69	Diagnostic_procedure:T142 
+R87	MODIFY Arg1:T140 Arg2:E68	
+R91	MODIFY Arg1:T140 Arg2:E69	
+T143	Biological_structure 3123 3149	Follicular dendritic cells
+R100	MODIFY Arg1:T139 Arg2:T137	
+R101	MODIFY Arg1:T143 Arg2:T140	
+R111	SUB_PROCEDURE Arg1:E66 Arg2:E56	
+R112	SUB_PROCEDURE Arg1:E67 Arg2:E56	
+R113	SUB_PROCEDURE Arg1:E68 Arg2:E56	
+R114	SUB_PROCEDURE Arg1:E69 Arg2:E56	
+T144	Diagnostic_procedure 3220 3228	CyclinD1
+E70	Diagnostic_procedure:T144 
+T145	Diagnostic_procedure 3230 3234	CD10
+E71	Diagnostic_procedure:T145 
+T146	Diagnostic_procedure 3236 3241	Bcl-6
+E72	Diagnostic_procedure:T146 
+T147	Diagnostic_procedure 3247 3304	B lymphocyte specific activation of OCT binding protein 1
+E73	Diagnostic_procedure:T147 
+T148	Biological_structure 3192 3201	All cells
+T149	Lab_value 3207 3215	negative
+R115	MODIFY Arg1:T148 Arg2:T149	
+R116	SUB_PROCEDURE Arg1:E70 Arg2:E56	
+R117	SUB_PROCEDURE Arg1:E71 Arg2:E56	
+R118	SUB_PROCEDURE Arg1:E72 Arg2:E56	
+R119	SUB_PROCEDURE Arg1:E73 Arg2:E56	
+T150	Clinical_event 4423 4432	follow-up
+E74	Clinical_event:T150 
+T151	Disease_disorder 3489 3502	MALT lymphoma
+E75	Disease_disorder:T151 
+T152	Diagnostic_procedure 3518 3559	gene rearragements and clonality analysis
+E76	Diagnostic_procedure:T152 
+T153	Diagnostic_procedure 3563 3594	immunoglobulin heavy chain gene
+E77	Diagnostic_procedure:T153 
+T154	Diagnostic_procedure 3596 3618	kappa light chain gene
+E78	Diagnostic_procedure:T154 
+T155	Diagnostic_procedure 3624 3647	lambda light chain gene
+E79	Diagnostic_procedure:T155 
+T156	Detailed_description 3672 3718	IdentiCloneTM IGH/IGK/IGL Gene Clonality Assay
+T157	Detailed_description 3720 3749	InVivoScribe Technologies, CA
+R120	MODIFY Arg1:T157 Arg2:T156	
+R121	MODIFY Arg1:T156 Arg2:E76	
+R122	SUB_PROCEDURE Arg1:E77 Arg2:E76	
+R123	SUB_PROCEDURE Arg1:E78 Arg2:E76	
+R124	SUB_PROCEDURE Arg1:E79 Arg2:E76	
+T158	Disease_disorder 4006 4024	Epstein–Barr virus
+E80	Disease_disorder:T158 
+A16	POLARITY E80 NEG
+T159	Disease_disorder 4264 4277	MALT lymphoma
+E81	Disease_disorder:T159 
+T160	Biological_structure 4253 4263	esophageal
+T161	Detailed_description 4245 4252	primary
+R125	MODIFY Arg1:T160 Arg2:E81	
+R126	MODIFY Arg1:T161 Arg2:E81	
+T162	Therapeutic_procedure 4307 4316	resection
+E82	Therapeutic_procedure:T162 
+T163	Detailed_description 4298 4306	surgical
+R127	MODIFY Arg1:T163 Arg2:E82	
+T164	Therapeutic_procedure 4371 4383	radiotherapy
+E83	Therapeutic_procedure:T164 
+T165	Therapeutic_procedure 4332 4339	therapy
+E84	Therapeutic_procedure:T165 
+T166	Medication 4355 4367	chemotherapy
+E85	Medication:T166 
+A17	POLARITY E84 NEG
+A18	POLARITY E85 NEG
+A19	POLARITY E83 NEG
+T167	Sign_symptom 4449 4459	recurrence
+E86	Sign_symptom:T167 
+A20	POLARITY E86 NEG
+T168	Sign_symptom 4463 4473	metastases
+E87	Sign_symptom:T168 
+A21	POLARITY E87 NEG
+T169	Diagnostic_procedure 4487 4489	CT
+E88	Diagnostic_procedure:T169 
+T170	Sign_symptom 4515 4527	asymptomatic
+E89	Sign_symptom:T170 
+T171	Coreference 3839 3855	heavy chain gene
+E90	Coreference:T171 
+T172	Coreference 3898 3920	kappa light chain gene
+E91	Coreference:T172 
+T173	Coreference 3957 3980	lambda light chain gene
+E92	Coreference:T173 
+R128	IDENTICAL Arg1:E90 Arg2:E77	
+R129	IDENTICAL Arg1:E91 Arg2:E78	
+R130	IDENTICAL Arg1:E92 Arg2:E79	
+T174	Lab_value 3786 3830	1 band appeared within 150 to 175 base pairs
+T175	Lab_value 3857 3894	2 discrete bands within 225 to 250 bp
+T176	Lab_value 3926 3953	1 band within 125 to 150 bp
+R131	MODIFY Arg1:T174 Arg2:E90	
+R132	MODIFY Arg1:T175 Arg2:E91	
+R133	MODIFY Arg1:T176 Arg2:E92	
+T177	Diagnostic_procedure 4058 4079	in situ hybridization
+E93	Diagnostic_procedure:T177 
+T178	Detailed_description 4090 4116	EB virus-encoded small RNA
+R134	MODIFY Arg1:T178 Arg2:E93	
+R135	AFTER Arg1:E1 Arg2:E2	
+*	OVERLAP E2 E4
+R136	BEFORE Arg1:E4 Arg2:E3	
+*	OVERLAP E3 E5 E6 E7 E8 E9 E10 E11 E12 E13 E14 E15 E19 E20 E22 E23 E24 E25 E26 E27 E29 E31 E32
+R137	BEFORE Arg1:E32 Arg2:E33	
+*	OVERLAP E33 E34
+R138	BEFORE Arg1:E34 Arg2:E35	
+*	OVERLAP E35 E36
+R139	BEFORE Arg1:E36 Arg2:E41	
+R140	AFTER Arg1:E41 Arg2:E42	
+*	OVERLAP E42 E44 E45 E46 E47 E48 E51 E52 E53 E54 E56 E75 E76 E90 E91 E92 E80 E93
+R141	BEFORE Arg1:E93 Arg2:E81	
+R142	AFTER Arg1:E81 Arg2:E82	
+R143	BEFORE Arg1:E82 Arg2:E84	
+*	OVERLAP E84 E85 E83
+T179	Duration 4411 4419	8 months
+E94	Duration:T179 
+R144	BEFORE Arg1:E83 Arg2:E94	
+*	OVERLAP E94 E74 E86 E87 E88 E89
+T180	History 232 261	consumed alcohol for 30 years
+#1	AnnotatorNotes T180	continuously?

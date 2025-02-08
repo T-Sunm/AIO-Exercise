@@ -1,0 +1,242 @@
+T1	Age 15 25	4-year-old
+T2	Sex 26 29	boy
+T3	Disease_disorder 55 68	Blau syndrome
+E1	Disease_disorder:T3 
+T4	Disease_disorder 142 151	arthritis
+E2	Disease_disorder:T4 
+T5	Biological_structure 126 131	ankle
+T6	Biological_structure 136 141	wrist
+T7	Disease_disorder 152 165	tenosynovitis
+E3	Disease_disorder:T7 
+T8	Sign_symptom 186 190	rash
+E4	Sign_symptom:T8 
+T9	Biological_attribute 175 185	eczematous
+T10	Detailed_description 167 174	diffuse
+R1	MODIFY Arg1:T10 Arg2:E4	
+R2	MODIFY Arg1:T9 Arg2:E4	
+T11	Disease_disorder 196 203	uveitis
+E5	Disease_disorder:T11 
+T12	Disease_disorder 242 252	granulomas
+E6	Disease_disorder:T12 
+T13	Detailed_description 229 241	noncaseating
+R3	MODIFY Arg1:T13 Arg2:E6	
+T14	Diagnostic_procedure 273 286	NOD2 mutation
+E7	Diagnostic_procedure:T14 
+T15	Detailed_description 260 272	heterozygous
+R4	MODIFY Arg1:T15 Arg2:E7	
+T16	Diagnostic_procedure 288 295	p.R334W
+E8	Diagnostic_procedure:T16 
+R5	IDENTICAL Arg1:E8 Arg2:E7	
+T17	Medication 362 377	corticosteroids
+E9	Medication:T17 
+T18	Administration 345 352	topical
+T19	Administration 357 361	oral
+R6	MODIFY Arg1:T19 Arg2:E9	
+R7	MODIFY Arg1:T18 Arg2:E9	
+T20	Duration 383 397	over the years
+E10	Duration:T20 
+T21	Disease_disorder 398 415	visual impairment
+E11	Disease_disorder:T21 
+T22	Detailed_description 416 426	progressed
+R8	MODIFY Arg1:T22 Arg2:E11	
+A1	TREND E11 INC
+T23	Disease_disorder 298 316	Ocular involvement
+E12	Disease_disorder:T23 
+T24	Detailed_description 331 341	controlled
+R9	MODIFY Arg1:E9 Arg2:T24	
+R10	MODIFY Arg1:T24 Arg2:E12	
+T25	Disease_disorder 452 465	Blau syndrome
+E13	Disease_disorder:T25 
+T26	Disease_disorder 467 476	arthritis
+E14	Disease_disorder:T26 
+T27	Sign_symptom 481 485	rash
+E15	Sign_symptom:T27 
+R11	MODIFY Arg1:E13 Arg2:E14	
+R12	MODIFY Arg1:E13 Arg2:E15	
+T28	Duration 496 505	over time
+E16	Duration:T28 
+T29	Detailed_description 487 495	subsided
+R13	MODIFY Arg1:T29 Arg2:E15	
+R14	MODIFY Arg1:T29 Arg2:E14	
+A2	TREND E15 DEC
+A3	TREND E14 DEC
+T30	Disease_disorder 517 527	panuveitis
+E17	Disease_disorder:T30 
+T31	Detailed_description 507 516	Bilateral
+R15	MODIFY Arg1:T31 Arg2:E17	
+T33	Medication 589 601	methotrexate
+E18	Medication:T33 
+T34	Detailed_description 528 538	progressed
+R16	MODIFY Arg1:T34 Arg2:E17	
+T35	Disease_disorder 619 631	inflammation
+E19	Disease_disorder:T35 
+T36	Biological_structure 612 618	ocular
+R17	MODIFY Arg1:T36 Arg2:E19	
+T37	Detailed_description 632 641	persisted
+R18	MODIFY Arg1:T37 Arg2:E19	
+T38	Medication 672 679	steroid
+E20	Medication:T38 
+T39	Administration 680 690	injections
+T40	Detailed_description 666 671	local
+R19	MODIFY Arg1:T40 Arg2:T39	
+R20	MODIFY Arg1:T39 Arg2:E20	
+T41	Medication 727 755	methylprednisolone treatment
+E21	Medication:T41 
+T42	Administration 704 715;721 726	intravenous bolus
+T43	Administration 716 726	(IV) bolus
+R21	IDENTICAL Arg1:T43 Arg2:T42	
+R22	MODIFY Arg1:T43 Arg2:E21	
+T44	Detailed_description 695 703	repeated
+R23	MODIFY Arg1:T44 Arg2:T42	
+*	OVERLAP E20 E21 E19 E18
+T46	Medication 803 813	infliximab
+E22	Medication:T46 
+T47	Dosage 828 835;861 879	5 mg/kg every 4 to 6 weeks
+T48	Dosage 849 857;861 879	10 mg/kg every 4 to 6 weeks
+T50	Administration 858 860	IV
+R24	MODIFY Arg1:T47 Arg2:E22	
+R25	MODIFY Arg1:T48 Arg2:E22	
+R26	MODIFY Arg1:T50 Arg2:E22	
+T51	Date 939 978	1 year after this treatment was started
+E23	Date:T51 
+T52	Disease_disorder 979 986	uveitis
+E24	Disease_disorder:T52 
+T53	Severity 987 995	worsened
+R28	MODIFY Arg1:T53 Arg2:E24	
+T55	Medication 1017 1027	infliximab
+E25	Medication:T55 
+A4	TREND E25 DEC
+T56	Detailed_description 1032 1044	discontinued
+R29	MODIFY Arg1:T56 Arg2:E25	
+T57	Medication 1046 1056	Adalimumab
+E26	Medication:T57 
+T58	Dosage 1058 1080	24 mg/m2 every 2 weeks
+R30	MODIFY Arg1:T58 Arg2:E26	
+T60	Medication 1119 1131	methotrexate
+E27	Medication:T60 
+T61	Dosage 1133 1148	15 mg/m2/weekly
+R32	MODIFY Arg1:T61 Arg2:E27	
+A5	TREND E27 INC
+T49	Lab_value 1154 1163	increased
+R27	MODIFY Arg1:T49 Arg2:E27	
+T59	Disease_disorder 1174 1188	ocular disease
+E28	Disease_disorder:T59 
+T62	Detailed_description 1198 1204	active
+R31	MODIFY Arg1:T62 Arg2:E28	
+T63	Medication 1206 1227	Mycophenolate mofetil
+E29	Medication:T63 
+T64	Dosage 1229 1238	750 mg/m2
+T65	Medication 1249 1258	abatacept
+E30	Medication:T65 
+T66	Dosage 1260 1274	10 mg/kg/month
+T67	Administration 1275 1277	IV
+R33	MODIFY Arg1:T66 Arg2:E30	
+R34	MODIFY Arg1:T67 Arg2:E30	
+R35	MODIFY Arg1:T64 Arg2:E29	
+T70	Disease_disorder 1404 1411	lesions
+E32	Disease_disorder:T70 
+T71	Biological_structure 1396 1403	retinal
+T72	Disease_disorder 1382 1395	granulomatous
+E33	Disease_disorder:T72 
+T73	Disease_disorder 1433 1445	inflammation
+E34	Disease_disorder:T73 
+T74	Biological_structure 1416 1432	anterior chamber
+R36	MODIFY Arg1:T74 Arg2:E34	
+T76	Medication 1551 1579	corticosteroid pulse therapy
+E36	Medication:T76 
+T77	Dosage 1640 1655	3 boluses/month
+T78	Duration 1660 1680	6 consecutive months
+E37	Duration:T78 
+T79	Medication 1819 1830	canakinumab
+E38	Medication:T79 
+T80	Dosage 1802 1815	2 mg/kg/month
+R37	MODIFY Arg1:T80 Arg2:E38	
+T81	Lab_value 1626 1639	an average of
+R38	MODIFY Arg1:T81 Arg2:T77	
+R39	MODIFY Arg1:T77 Arg2:E36	
+*	OVERLAP E36 E37 E35 E52
+T75	Medication 1772 1800	IL-1 antibody administration
+E35	Medication:T75 
+R40	SUB_PROCEDURE Arg1:E38 Arg2:E35	
+T82	Disease_disorder 1871 1883	ocular flare
+E39	Disease_disorder:T82 
+A7	POLARITY E39 NEG
+T84	Medication 1900 1921	steroid pulse therapy
+E41	Medication:T84 
+A8	POLARITY E41 NEG
+T83	Medication 1969 1981	methotrexate
+E40	Medication:T83 
+T85	Administration 1964 1968	oral
+R41	MODIFY Arg1:T85 Arg2:E40	
+T86	Medication 1995 2005	prednisone
+E42	Medication:T86 
+T87	Dosage 2007 2020	0.2 mg/kg/day
+T88	Lab_value 1986 1994	low-dose
+R42	MODIFY Arg1:T88 Arg2:E42	
+R43	MODIFY Arg1:T87 Arg2:E42	
+A9	TREND E40 STAY
+A10	TREND E42 STAY
+T89	Diagnostic_procedure 2057 2072	fluorangiograms
+E43	Diagnostic_procedure:T89 
+T91	Detailed_description 2137 2172	well tolerated with no side effects
+T92	Diagnostic_procedure 2190 2206	laboratory tests
+E44	Diagnostic_procedure:T92 
+T93	Frequency 2218 2225	monthly
+T94	Detailed_description 2232 2238	normal
+R44	MODIFY Arg1:T94 Arg2:E44	
+R45	MODIFY Arg1:T93 Arg2:E44	
+T95	Medication 2124 2132	The drug
+E45	Medication:T95 
+#1	AnnotatorNotes E45	Likely a coreference, but unclear which drug it's referring to.
+R46	MODIFY Arg1:T91 Arg2:E45	
+*	OVERLAP E45 E44 E39 E41 E38 E40 E42 E43
+R47	MODIFY Arg1:E2 Arg2:E1	
+R48	MODIFY Arg1:E3 Arg2:E1	
+R49	MODIFY Arg1:E4 Arg2:E1	
+R50	MODIFY Arg1:E5 Arg2:E1	
+*	OVERLAP E4 E5 E2 E3 E46
+T90	Diagnostic_procedure 206 216	histologic
+E46	Diagnostic_procedure:T90 
+R51	MODIFY Arg1:E6 Arg2:E46	
+R52	MODIFY Arg1:E46 Arg2:E1	
+R53	MODIFY Arg1:E7 Arg2:E1	
+*	OVERLAP E6 E7
+*	OVERLAP E8 E12
+R54	BEFORE Arg1:E9 Arg2:E10	
+*	OVERLAP E10 E11 E15 E16 E14
+T96	Date 789 801	age 10 years
+E47	Date:T96 
+T97	Date 545 556	age 5 years
+E48	Date:T97 
+R55	AFTER Arg1:E17 Arg2:E48	
+R56	BEFORE Arg1:E48 Arg2:E18	
+R57	BEFORE Arg1:E21 Arg2:E47	
+*	OVERLAP E47 E22
+R58	BEFORE Arg1:E22 Arg2:E23	
+R59	BEFORE Arg1:E16 Arg2:E17	
+*	OVERLAP E23 E24
+T98	Date 1004 1010	age 12
+E49	Date:T98 
+R60	BEFORE Arg1:E24 Arg2:E49	
+*	OVERLAP E49 E25
+R61	BEFORE Arg1:E25 Arg2:E26	
+*	OVERLAP E26 E27 E28
+R62	BEFORE Arg1:E28 Arg2:E29	
+R63	BEFORE Arg1:E29 Arg2:E30	
+T68	Diagnostic_procedure 1311 1342	without significant improvement
+E31	Diagnostic_procedure:T68 
+A6	TREND E31 STAY
+R64	BEFORE Arg1:E30 Arg2:E31	
+T99	Date 1347 1359	age 16 years
+E50	Date:T99 
+R65	BEFORE Arg1:E31 Arg2:E50	
+R66	MODIFY Arg1:T71 Arg2:E32	
+R67	MODIFY Arg1:E33 Arg2:E32	
+*	OVERLAP E50 E32 E34 E51
+T100	Sign_symptom 1459 1464	edema
+E51	Sign_symptom:T100 
+T101	Biological_structure 1451 1458	macular
+R68	MODIFY Arg1:T101 Arg2:E51	
+T102	Disease_disorder 1489 1507	retinal detachment
+E52	Disease_disorder:T102 
+R69	BEFORE Arg1:E51 Arg2:E52	

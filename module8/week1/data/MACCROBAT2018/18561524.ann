@@ -1,0 +1,430 @@
+T1	Age 3 14	18-year-old
+T2	Sex 15 19	male
+T3	Disease_disorder 39 79	attention-deficit hyperactivity disorder
+E1	Disease_disorder:T3 
+T4	Disease_disorder 81 85	ADHD
+E2	Disease_disorder:T4 
+T5	Date 90 94	2005
+E3	Date:T5 
+T6	Diagnostic_procedure 121 136	body mass index
+E4	Diagnostic_procedure:T6 
+T7	Diagnostic_procedure 138 141	BMI
+E5	Diagnostic_procedure:T7 
+T8	Lab_value 146 148	40
+R2	MODIFY Arg1:T8 Arg2:E4	
+T9	History 103 113	overweight
+T10	Sign_symptom 103 113	overweight
+E6	Sign_symptom:T10 
+T11	Medication 168 187	quetiapine fumarate
+E7	Medication:T11 
+T12	Medication 188 199	(Seroquel®)
+E8	Medication:T12 
+T13	Dosage 200 212	900 mg daily
+T14	Date 216 226	April 2005
+E9	Date:T14 
+T15	Medication 231 246	methylphenidate
+E10	Medication:T15 
+T16	Medication 247 258	(Concerta®)
+E11	Medication:T16 
+T17	Dosage 259 270	54 mg daily
+T18	Date 274 288	September 2005
+E12	Date:T18 
+T19	Date 297 321	beginning of August 2006
+E13	Date:T19 
+T20	Clinical_event 329 337	admitted
+E14	Clinical_event:T20 
+T21	Nonbiological_location 345 359	local hospital
+T22	Severity 365 371	severe
+T23	Sign_symptom 372 380	dyspnoea
+E15	Sign_symptom:T23 
+T24	Sign_symptom 382 391	tachypnea
+E16	Sign_symptom:T24 
+T25	Sign_symptom 393 404	tachycardia
+E17	Sign_symptom:T25 
+T26	Sign_symptom 410 418	cyanosis
+E18	Sign_symptom:T26 
+T27	Clinical_event 423 432	admission
+E19	Clinical_event:T27 
+T28	Diagnostic_procedure 437 451	blood pressure
+E20	Diagnostic_procedure:T28 
+T29	Lab_value 456 467	120/80 mmHg
+T30	Diagnostic_procedure 477 495	arterial blood gas
+E21	Diagnostic_procedure:T30 
+T31	Diagnostic_procedure 507 509	pH
+E22	Diagnostic_procedure:T31 
+T32	Lab_value 513 517	7.45
+T33	Diagnostic_procedure 519 523	pCO2
+E23	Diagnostic_procedure:T33 
+T34	Diagnostic_procedure 537 541	paO2
+E24	Diagnostic_procedure:T34 
+T35	Diagnostic_procedure 559 561	BE
+E25	Diagnostic_procedure:T35 
+T36	Lab_value 527 535	3.55 kPa
+T37	Lab_value 545 553	7.76 kPa
+T38	Lab_value 565 576	−5.1 mmol/l
+R3	MODIFY Arg1:T32 Arg2:E22	
+R4	MODIFY Arg1:T36 Arg2:E23	
+R5	MODIFY Arg1:T37 Arg2:E24	
+R6	MODIFY Arg1:T38 Arg2:E25	
+R7	SUB_PROCEDURE Arg1:E22 Arg2:E21	
+R8	SUB_PROCEDURE Arg1:E23 Arg2:E21	
+R9	SUB_PROCEDURE Arg1:E24 Arg2:E21	
+R10	SUB_PROCEDURE Arg1:E25 Arg2:E21	
+T39	Diagnostic_procedure 578 596	C-reactive protein
+E26	Diagnostic_procedure:T39 
+T40	Lab_value 601 613	not elevated
+R11	MODIFY Arg1:T40 Arg2:E26	
+T41	Biological_structure 619 624	chest
+T42	Diagnostic_procedure 625 630	X-ray
+E27	Diagnostic_procedure:T42 
+R12	MODIFY Arg1:T41 Arg2:E27	
+T45	Sign_symptom 641 655	enlarged heart
+E28	Sign_symptom:T45 
+R13	MODIFY Arg1:E28 Arg2:E27	
+T43	Sign_symptom 670 680	hemoptysis
+E29	Sign_symptom:T43 
+T44	Medication 717 724	heparin
+E30	Medication:T44 
+T46	Detailed_description 702 716	unfractionated
+R14	MODIFY Arg1:T46 Arg2:E30	
+T47	Biological_structure 741 750	pulmonary
+T48	Sign_symptom 751 759	embolism
+E31	Sign_symptom:T48 
+R15	MODIFY Arg1:T47 Arg2:E31	
+A1	POLARITY E31 UNCERTAIN
+T49	Disease_disorder 787 804	cardiogenic shock
+E32	Disease_disorder:T49 
+T50	Medication 826 842	vasoactive drugs
+E33	Medication:T50 
+T51	Sign_symptom 880 888	oliguric
+E34	Sign_symptom:T51 
+T52	Diagnostic_procedure 897 910	liver enzymes
+E35	Diagnostic_procedure:T52 
+T53	Lab_value 916 922	rising
+R16	MODIFY Arg1:T53 Arg2:E35	
+T54	Clinical_event 931 939	referred
+E36	Clinical_event:T54 
+T55	Nonbiological_location 947 955	hospital
+T56	Clinical_event 982 991	admission
+E37	Clinical_event:T56 
+T57	Diagnostic_procedure 996 1010	blood pressure
+E38	Diagnostic_procedure:T57 
+T58	Lab_value 1015 1025	90/60 mmHg
+T59	Medication 1049 1062	noradrenaline
+E39	Medication:T59 
+T60	Administration 1035 1043	infusion
+R17	MODIFY Arg1:T60 Arg2:E39	
+T61	Diagnostic_procedure 1068 1078	heart rate
+E40	Diagnostic_procedure:T61 
+T62	Lab_value 1083 1093	130/minute
+T63	Diagnostic_procedure 1102 1113	temperature
+E41	Diagnostic_procedure:T63 
+T64	Lab_value 1118 1125	38.4 °C
+T65	Diagnostic_procedure 1138 1162	computed tomography scan
+E42	Diagnostic_procedure:T65 
+T66	Biological_structure 1129 1137	thoracic
+R18	MODIFY Arg1:T66 Arg2:E42	
+T67	Sign_symptom 1163 1194	did not show pulmonary embolism
+E43	Sign_symptom:T67 
+A2	POLARITY E43 NEG
+R19	MODIFY Arg1:E43 Arg2:E42	
+T68	Diagnostic_procedure 1196 1212	Echocardiography
+E44	Diagnostic_procedure:T68 
+T69	Sign_symptom 1222 1243	biventricular failure
+E45	Sign_symptom:T69 
+T70	Distance 1292 1296	7 cm
+T71	Diagnostic_procedure 1248 1287	left ventricular end diastolic diameter
+E46	Diagnostic_procedure:T71 
+R20	MODIFY Arg1:T70 Arg2:E46	
+T72	Biological_structure 1302 1316	left ventricle
+T73	Lab_value 1330 1341	hypokinetic
+R21	MODIFY Arg1:T73 Arg2:T72	
+T74	Severity 1321 1329	severely
+R22	MODIFY Arg1:T74 Arg2:T73	
+T75	Diagnostic_procedure 1350 1367	ejection fraction
+E47	Diagnostic_procedure:T75 
+T76	Diagnostic_procedure 1369 1371	EF
+E48	Diagnostic_procedure:T76 
+T77	Lab_value 1376 1383	20%–25%
+T78	Diagnostic_procedure 1389 1428	left ventricular end diastolic pressure
+E49	Diagnostic_procedure:T78 
+T79	Lab_value 1442 1450	elevated
+R23	MODIFY Arg1:T79 Arg2:E49	
+T80	Sign_symptom 1477 1497	mitral regurgitation
+E50	Sign_symptom:T80 
+T81	Lab_value 1468 1476	moderate
+R24	MODIFY Arg1:T81 Arg2:E50	
+T82	Therapeutic_procedure 1512 1524	hemodialysis
+E51	Therapeutic_procedure:T82 
+T83	Detailed_description 1499 1511	Intermittent
+R25	MODIFY Arg1:T83 Arg2:E51	
+T84	Diagnostic_procedure 1544 1558	liver function
+E52	Diagnostic_procedure:T84 
+T85	Coreference 1590 1598	dialysis
+E53	Coreference:T85 
+R26	IDENTICAL Arg1:E53 Arg2:E51	
+T86	Diagnostic_procedure 1603 1617	renal function
+E54	Diagnostic_procedure:T86 
+T87	Lab_value 1618 1630	deteriorated
+R27	MODIFY Arg1:T87 Arg2:E54	
+T88	Lab_value 1559 1567	improved
+R28	MODIFY Arg1:T88 Arg2:E52	
+T89	Severity 1568 1576	slightly
+R29	MODIFY Arg1:T89 Arg2:T88	
+T90	Diagnostic_procedure 1647 1664	creatinine values
+E55	Diagnostic_procedure:T90 
+R30	SUB_PROCEDURE Arg1:E55 Arg2:E54	
+T91	Lab_value 1636 1646	increasing
+R31	MODIFY Arg1:T91 Arg2:E55	
+T92	Date 1666 1682	After three days
+E56	Date:T92 
+T93	Diagnostic_procedure 1720 1754	left ventricular systolic function
+E57	Diagnostic_procedure:T93 
+T94	Lab_value 1703 1712	worsening
+R32	MODIFY Arg1:T94 Arg2:E57	
+T95	Diagnostic_procedure 1763 1780	ejection fraction
+E58	Diagnostic_procedure:T95 
+T96	Lab_value 1784 1791	10%–12%
+R33	MODIFY Arg1:T96 Arg2:E58	
+T97	Sign_symptom 1803 1825	pulmonary hypertension
+E59	Sign_symptom:T97 
+T98	Diagnostic_procedure 1831 1858	systolic pulmonary pressure
+E60	Diagnostic_procedure:T98 
+T99	Lab_value 1872 1879	30 mmHg
+R34	MODIFY Arg1:T99 Arg2:E60	
+T100	Disease_disorder 1920 1934	cardiomyopathy
+E61	Disease_disorder:T100 
+T101	Detailed_description 1912 1919	dilated
+R35	MODIFY Arg1:T101 Arg2:E61	
+T102	Sign_symptom 1940 1958	low output failure
+E62	Sign_symptom:T102 
+T103	Sign_symptom 1983 1990	failure
+E63	Sign_symptom:T103 
+T104	Biological_structure 1977 1982	liver
+R36	MODIFY Arg1:T104 Arg2:E63	
+T105	Biological_structure 1967 1972	renal
+R37	MODIFY Arg1:T105 Arg2:E63	
+R38	CAUSE Arg1:E62 Arg2:E63	
+T106	Coreference 2018 2032	cardiomyopathy
+E64	Coreference:T106 
+R39	IDENTICAL Arg1:E64 Arg2:E61	
+T107	Detailed_description 2005 2017	drug-induced
+R40	MODIFY Arg1:T107 Arg2:E64	
+T108	Medication 2037 2052	methylphenidate
+E65	Medication:T108 
+T109	Medication 2057 2076	quetiapine fumarate
+E66	Medication:T109 
+A3	POLARITY E66 NEG
+A4	POLARITY E65 NEG
+T110	Diagnostic_procedure 2096 2130	Screening for infectious pathogens
+E67	Diagnostic_procedure:T110 
+T111	Diagnostic_procedure 2132 2153	immunological markers
+E68	Diagnostic_procedure:T111 
+T112	Diagnostic_procedure 2159 2163	iron
+E69	Diagnostic_procedure:T112 
+T113	Diagnostic_procedure 2167 2185	amyloid deposition
+E70	Diagnostic_procedure:T113 
+T114	Lab_value 2195 2203	negative
+R41	MODIFY Arg1:T114 Arg2:E70	
+R42	MODIFY Arg1:T114 Arg2:E69	
+R43	MODIFY Arg1:T114 Arg2:E68	
+R44	MODIFY Arg1:T114 Arg2:E67	
+T115	Nonbiological_location 2248 2288	National Hospital (Rikshospitalet, Oslo)
+T116	Medication 2302 2315	noradrenaline
+E71	Medication:T116 
+T117	Medication 2320 2330	dobutamine
+E72	Medication:T117 
+T118	Administration 2331 2340	infusions
+R45	MODIFY Arg1:T118 Arg2:E72	
+R46	MODIFY Arg1:T118 Arg2:E71	
+T119	Therapeutic_procedure 2369 2393	intraaortic balloon pump
+E73	Therapeutic_procedure:T119 
+T120	Therapeutic_procedure 2395 2399	IABP
+E74	Therapeutic_procedure:T120 
+T121	Clinical_event 2356 2365	admission
+E75	Clinical_event:T121 
+T122	Coreference 2418 2431	noradrenaline
+E76	Coreference:T122 
+R47	IDENTICAL Arg1:E76 Arg2:E71	
+T123	Medication 2448 2461	nitroprusside
+E77	Medication:T123 
+T124	Diagnostic_procedure 2463 2483	Coronary angiography
+E78	Diagnostic_procedure:T124 
+T125	Lab_value 2488 2494	normal
+R48	MODIFY Arg1:T125 Arg2:E78	
+T126	Diagnostic_procedure 2511 2517	biopsy
+E79	Diagnostic_procedure:T126 
+T127	Biological_structure 2496 2510	Endomyocardial
+R49	MODIFY Arg1:T127 Arg2:E79	
+T128	Biological_structure 2527 2542	right ventricle
+R50	MODIFY Arg1:T128 Arg2:E79	
+T129	Disease_disorder 2571 2591	myocardial pathology
+E80	Disease_disorder:T129 
+A5	POLARITY E80 MAYBE_NEG
+R51	MODIFY Arg1:E80 Arg2:E79	
+T130	Coreference 2611 2615	IABP
+E81	Coreference:T130 
+T131	Coreference 2617 2630	nitroprusside
+E82	Coreference:T131 
+R52	IDENTICAL Arg1:E81 Arg2:E73	
+R53	IDENTICAL Arg1:E82 Arg2:E77	
+T133	Diagnostic_procedure 2696 2710	liver function
+E84	Diagnostic_procedure:T133 
+T134	Lab_value 2723 2729	normal
+R55	MODIFY Arg1:T134 Arg2:E84	
+T135	Diagnostic_procedure 2650 2668	clinical situation
+E85	Diagnostic_procedure:T135 
+T136	Lab_value 2679 2687	improved
+R56	MODIFY Arg1:T136 Arg2:E85	
+T137	Diagnostic_procedure 2735 2749	renal function
+E86	Diagnostic_procedure:T137 
+T138	Lab_value 2755 2763	improved
+R57	MODIFY Arg1:T138 Arg2:E86	
+T139	Sign_symptom 2780 2788	diuresis
+E87	Sign_symptom:T139 
+T140	Diagnostic_procedure 2793 2803	creatinine
+E88	Diagnostic_procedure:T140 
+T141	Lab_value 2814 2817	798
+T142	Lab_value 2821 2830	98 μmol/l
+A6	TREND E88 DEC
+R58	MODIFY Arg1:T141 Arg2:E88	
+R59	MODIFY Arg1:T142 Arg2:E88	
+T143	Diagnostic_procedure 2836 2838	EF
+E89	Diagnostic_procedure:T143 
+T144	Lab_value 2867 2870	15%
+R60	MODIFY Arg1:T144 Arg2:E89	
+T145	Lab_value 2858 2865	reduced
+R61	MODIFY Arg1:T145 Arg2:E89	
+T146	Sign_symptom 2884 2903	behavioral problems
+E90	Sign_symptom:T146 
+T147	Sign_symptom 2908 2923	adipose stature
+E91	Sign_symptom:T147 
+T148	Therapeutic_procedure 2941 2957	heart transplant
+E92	Therapeutic_procedure:T148 
+A7	POLARITY E92 NEG
+T149	Clinical_event 2932 2938	denied
+E93	Clinical_event:T149 
+R62	CAUSE Arg1:E91 Arg2:E93	
+R63	CAUSE Arg1:E90 Arg2:E93	
+R64	MODIFY Arg1:E93 Arg2:E92	
+T150	Coreference 2979 2983	IABP
+E94	Coreference:T150 
+R65	IDENTICAL Arg1:E94 Arg2:E73	
+T151	Duration 2988 2995	26 days
+E95	Duration:T151 
+T152	Duration 3001 3014	after 28 days
+E96	Duration:T152 
+T153	Clinical_event 3022 3033	transferred
+E97	Clinical_event:T153 
+T154	Nonbiological_location 3042 3054	our hospital
+T155	Diagnostic_procedure 3073 3098	liver and renal functions
+E98	Diagnostic_procedure:T155 
+T156	Lab_value 3104 3110	normal
+R66	MODIFY Arg1:T156 Arg2:E98	
+T157	Medication 3135 3180	angiotensin-converting enzyme (ACE)-inhibitor
+E99	Medication:T157 
+T158	Medication 3184 3196	beta-blocker
+E100	Medication:T158 
+T159	Medication 3202 3211	diuretics
+E101	Medication:T159 
+T160	Clinical_event 3297 3307	discharged
+E102	Clinical_event:T160 
+T161	Duration 3234 3243	two weeks
+E103	Duration:T161 
+T162	Diagnostic_procedure 3248 3263	clinical status
+E104	Diagnostic_procedure:T162 
+T163	Lab_value 3264 3272	improved
+R67	MODIFY Arg1:T163 Arg2:E104	
+T164	Diagnostic_procedure 3325 3341	echocardiography
+E105	Diagnostic_procedure:T164 
+T165	Diagnostic_procedure 3392 3394	EF
+E106	Diagnostic_procedure:T165 
+T166	Lab_value 3398 3401	20%
+R68	MODIFY Arg1:T166 Arg2:E106	
+T167	Date 3406 3416	March 2007
+E107	Date:T167 
+T168	Biological_structure 3372 3386	left ventricle
+T169	Lab_value 3364 3371	dilated
+T170	Diagnostic_procedure 3422 3437	clinical status
+E108	Diagnostic_procedure:T170 
+T171	Lab_value 3442 3450	improved
+R70	MODIFY Arg1:T171 Arg2:E108	
+T172	Diagnostic_procedure 3465 3479	function class
+E109	Diagnostic_procedure:T172 
+T173	Lab_value 3480 3482	II
+T175	Diagnostic_procedure 3520 3522	EF
+E111	Diagnostic_procedure:T175 
+T176	Diagnostic_procedure 3536 3552	echocardiography
+E112	Diagnostic_procedure:T176 
+T177	Lab_value 3556 3563	30%–35%
+R71	MODIFY Arg1:T177 Arg2:E111	
+R72	MODIFY Arg1:T29 Arg2:E20	
+R73	MODIFY Arg1:T58 Arg2:E38	
+R74	MODIFY Arg1:T62 Arg2:E40	
+R75	MODIFY Arg1:T77 Arg2:E47	
+R76	IDENTICAL Arg1:E2 Arg2:E1	
+R77	MODIFY Arg1:T173 Arg2:E109	
+T174	Detailed_description 3484 3510	New York Heart Association
+R78	MODIFY Arg1:T174 Arg2:E109	
+R79	SUB_PROCEDURE Arg1:E112 Arg2:E111	
+R80	MODIFY Arg1:T154 Arg2:E97	
+R81	MODIFY Arg1:T169 Arg2:E105	
+R69	MODIFY Arg1:T168 Arg2:E105	
+R82	MODIFY Arg1:T55 Arg2:E36	
+R83	MODIFY Arg1:T21 Arg2:E14	
+R84	IDENTICAL Arg1:E11 Arg2:E10	
+R85	IDENTICAL Arg1:E8 Arg2:E7	
+R86	MODIFY Arg1:T13 Arg2:E7	
+R87	MODIFY Arg1:T17 Arg2:E10	
+R88	MODIFY Arg1:T64 Arg2:E41	
+T178	Clinical_event 2229 2240	transferred
+E110	Clinical_event:T178 
+T179	Date 2205 2221	After three days
+E113	Date:T179 
+T180	Nonbiological_location 3311 3319	his home
+R89	MODIFY Arg1:T180 Arg2:E102	
+*	OVERLAP E1 E3 E6 E4
+R1	IDENTICAL Arg1:E5 Arg2:E4	
+R90	BEFORE Arg1:E4 Arg2:E7	
+*	OVERLAP E7 E9
+R91	BEFORE Arg1:E9 Arg2:E10	
+*	OVERLAP E10 E12
+R92	BEFORE Arg1:E12 Arg2:E13	
+*	OVERLAP E13 E14 E15 E16 E17 E18 E19 E20 E21 E26 E27 E28
+R93	MODIFY Arg1:T22 Arg2:E15	
+R94	BEFORE Arg1:E28 Arg2:E29	
+*	OVERLAP E29 E30 E31
+R95	BEFORE Arg1:E31 Arg2:E32	
+*	OVERLAP E32 E33
+R96	BEFORE Arg1:E33 Arg2:E34	
+*	OVERLAP E34 E35
+R97	BEFORE Arg1:E35 Arg2:E36	
+*	OVERLAP E36 E37 E38 E39 E40 E41 E42 E44 E45 E46 E47 E49 E50
+R98	IDENTICAL Arg1:E48 Arg2:E47	
+R99	BEFORE Arg1:E50 Arg2:E51	
+R100	BEFORE Arg1:E51 Arg2:E52	
+*	OVERLAP E52 E54
+R101	BEFORE Arg1:E54 Arg2:E56	
+*	OVERLAP E56 E57 E58 E59 E60 E61 E62 E63 E65 E66 E67 E68 E69 E70
+R102	BEFORE Arg1:E70 Arg2:E113	
+*	OVERLAP E113 E110 E71 E72 E75
+R103	MODIFY Arg1:T115 Arg2:E110	
+R104	BEFORE Arg1:E75 Arg2:E73	
+R105	IDENTICAL Arg1:E74 Arg2:E73	
+*	OVERLAP E73 E77 E78
+R106	BEFORE Arg1:E78 Arg2:E79	
+*	OVERLAP E79 E80 E83 E85 E84 E86 E87 E88 E89
+T132	Therapeutic_procedure 2636 2644	dialysis
+E83	Therapeutic_procedure:T132 
+R54	BEFORE Arg1:E89 Arg2:E90	
+*	OVERLAP E90 E91 E93 E92
+R107	BEFORE Arg1:E92 Arg2:E94	
+*	OVERLAP E94 E95
+R108	BEFORE Arg1:E95 Arg2:E96	
+*	OVERLAP E96 E97 E98 E99 E100 E101
+R109	BEFORE Arg1:E101 Arg2:E103	
+*	OVERLAP E103 E104
+R110	BEFORE Arg1:E104 Arg2:E102	
+*	OVERLAP E102 E105 E106
+R111	BEFORE Arg1:E106 Arg2:E107	
+*	OVERLAP E107 E108 E109 E111

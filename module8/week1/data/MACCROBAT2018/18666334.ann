@@ -1,0 +1,114 @@
+T1	Age 2 13	19-year-old
+T2	Sex 14 17	man
+T3	Clinical_event 18 27	presented
+E1	Clinical_event:T3 
+T4	Nonbiological_location 35 55	emergency department
+R1	MODIFY Arg1:T4 Arg2:E1	
+T5	Activity 68 77	insertion
+E2	Activity:T5 
+T6	Time 57 67	12 h after
+E3	Time:T6 
+T7	Detailed_description 83 106	high pressure container
+T8	Biological_structure 135 141	rectum
+R2	MODIFY Arg1:T8 Arg2:E2	
+R3	MODIFY Arg1:T7 Arg2:E2	
+T9	Diagnostic_procedure 161 171	radiograph
+E4	Diagnostic_procedure:T9 
+T10	Detailed_description 145 150	plain
+T11	Biological_structure 151 160	abdominal
+R4	MODIFY Arg1:T11 Arg2:E4	
+R5	MODIFY Arg1:T10 Arg2:E4	
+T12	Disease_disorder 255 266	perforation
+E5	Disease_disorder:T12 
+A1	POLARITY E5 NEG
+T13	Sign_symptom 194 203	container
+E6	Sign_symptom:T13 
+T14	Biological_structure 211 230	rectosigmoid region
+R6	MODIFY Arg1:T14 Arg2:E6	
+T15	Diagnostic_procedure 279 292	sigmoidoscopy
+E7	Diagnostic_procedure:T15 
+T16	Detailed_description 270 278	flexible
+R7	MODIFY Arg1:T16 Arg2:E7	
+T17	Medication 313 331	conscious sedation
+E8	Medication:T17 
+T18	Sign_symptom 337 343	object
+E9	Sign_symptom:T18 
+T19	Biological_structure 361 392	above the rectosigmoid junction
+R8	MODIFY Arg1:T19 Arg2:E9	
+T20	Coreference 398 407	container
+E10	Coreference:T20 
+R9	IDENTICAL Arg1:E10 Arg2:E9	
+T21	Therapeutic_procedure 421 430	extracted
+E11	Therapeutic_procedure:T21 
+A2	POLARITY E11 NEG
+T22	Therapeutic_procedure 434 455	bimanual manipulation
+E12	Therapeutic_procedure:T22 
+R10	SUB_PROCEDURE Arg1:E12 Arg2:E11	
+T23	Therapeutic_procedure 471 477	remove
+E13	Therapeutic_procedure:T23 
+A3	POLARITY E13 NEG
+T24	Detailed_description 494 529	conventional endoscopic instruments
+R11	MODIFY Arg1:T24 Arg2:E13	
+T25	Detailed_description 539 557	polypectomy snares
+R12	MODIFY Arg1:T25 Arg2:T24	
+T26	Lab_value 563 575	unsuccessful
+R13	MODIFY Arg1:T26 Arg2:E13	
+T27	Diagnostic_procedure 581 594	sigmoidoscope
+E14	Diagnostic_procedure:T27 
+T28	Coreference 625 637	foreign body
+E15	Coreference:T28 
+R14	IDENTICAL Arg1:E15 Arg2:E10	
+T29	Coreference 482 488	object
+E16	Coreference:T29 
+R15	IDENTICAL Arg1:E16 Arg2:E10	
+R16	MODIFY Arg1:E16 Arg2:E13	
+T30	Diagnostic_procedure 742 770	pneumatic dilatation balloon
+E17	Diagnostic_procedure:T30 
+T31	Distance 736 741	40 mm
+R17	MODIFY Arg1:T31 Arg2:E17	
+T32	Coreference 901 910	container
+E18	Coreference:T32 
+R18	IDENTICAL Arg1:E18 Arg2:E15	
+T33	Diagnostic_procedure 697 710	sigmoidoscope
+E19	Diagnostic_procedure:T33 
+A4	POLARITY E19 NEG
+T34	Diagnostic_procedure 661 671	guide wire
+E20	Diagnostic_procedure:T34 
+T35	Diagnostic_procedure 862 872	guide wire
+E21	Diagnostic_procedure:T35 
+T36	Diagnostic_procedure 948 961	sigmoidoscope
+E22	Diagnostic_procedure:T36 
+T37	Coreference 1009 1016	balloon
+E23	Coreference:T37 
+R19	IDENTICAL Arg1:E23 Arg2:E17	
+T38	Coreference 1077 1086	container
+E24	Coreference:T38 
+R20	IDENTICAL Arg1:E24 Arg2:E18	
+T39	Biological_structure 1094 1100	rectum
+R21	MODIFY Arg1:T39 Arg2:E24	
+T40	Coreference 1137 1144	balloon
+E25	Coreference:T40 
+R22	IDENTICAL Arg1:E25 Arg2:E23	
+T41	Coreference 1163 1172	container
+E26	Coreference:T41 
+R23	IDENTICAL Arg1:E26 Arg2:E24	
+T42	Therapeutic_procedure 1190 1197	removed
+E27	Therapeutic_procedure:T42 
+T43	Lab_value 1177 1189	successfully
+R24	MODIFY Arg1:T43 Arg2:E27	
+T44	Detailed_description 1204 1239	fluoroscopic and endoscopic control
+R25	MODIFY Arg1:T44 Arg2:E27	
+*	OVERLAP E1 E3
+R26	AFTER Arg1:E3 Arg2:E2	
+R27	BEFORE Arg1:E2 Arg2:E4	
+*	OVERLAP E4 E6 E5 E7 E8 E9
+R28	BEFORE Arg1:E9 Arg2:E10	
+*	OVERLAP E10 E11
+R29	BEFORE Arg1:E11 Arg2:E13	
+*	OVERLAP E13 E16 E14 E15
+R30	BEFORE Arg1:E15 Arg2:E20	
+*	OVERLAP E20 E19
+R31	BEFORE Arg1:E19 Arg2:E17	
+*	OVERLAP E17 E21 E18
+R32	BEFORE Arg1:E18 Arg2:E22	
+*	OVERLAP E22 E23 E24 E25 E26 E27

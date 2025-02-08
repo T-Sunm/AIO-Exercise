@@ -1,0 +1,156 @@
+T1	Age 2 13	21-year-old
+T2	Sex 14 17	man
+T3	Medication 565 575	medication
+E1	Medication:T3 
+A1	POLARITY E1 NEG
+T4	Clinical_event 18 27	presented
+E2	Clinical_event:T4 
+T5	Nonbiological_location 35 55	emergency department
+R1	MODIFY Arg1:T5 Arg2:E2	
+T6	Sign_symptom 63 67	rash
+E3	Sign_symptom:T6 
+T7	Biological_structure 75 79	arms
+T8	Biological_structure 84 88	neck
+R2	MODIFY Arg1:T7 Arg2:E3	
+R3	MODIFY Arg1:T8 Arg2:E3	
+T9	Coreference 101 103	It
+E4	Coreference:T9 
+R4	IDENTICAL Arg1:E4 Arg2:E3	
+T10	Duration 118 141	over the course of 36 h
+E5	Duration:T10 
+T11	Sign_symptom 177 185	erythema
+E6	Sign_symptom:T11 
+T12	Sign_symptom 207 211	rash
+E7	Sign_symptom:T12 
+T13	Detailed_description 193 206	maculopapular
+T14	Detailed_description 147 173	discrete ‘pin prick’ areas
+R5	MODIFY Arg1:T14 Arg2:E6	
+R6	MODIFY Arg1:T13 Arg2:E7	
+T15	Detailed_description 217 225	vesicles
+R7	MODIFY Arg1:T15 Arg2:E7	
+T16	Coreference 238 240	It
+E8	Coreference:T16 
+R8	IDENTICAL Arg1:E8 Arg2:E4	
+T17	Biological_structure 253 261	forearms
+R9	MODIFY Arg1:T17 Arg2:E8	
+T18	Biological_structure 271 297	dorsal aspect of the hands
+T19	Biological_structure 305 333	flexor surface of the elbows
+R10	MODIFY Arg1:T18 Arg2:E8	
+R11	MODIFY Arg1:T19 Arg2:E8	
+T20	Coreference 335 337	It
+E9	Coreference:T20 
+R12	IDENTICAL Arg1:E9 Arg2:E8	
+T21	Biological_structure 379 383	neck
+R13	MODIFY Arg1:T21 Arg2:E9	
+T22	Sign_symptom 413 417	rash
+E10	Sign_symptom:T22 
+T23	Detailed_description 421 426	itchy
+T24	Detailed_description 431 438	painful
+R14	MODIFY Arg1:T23 Arg2:E10	
+R15	MODIFY Arg1:T24 Arg2:E10	
+T25	Diagnostic_procedure 448 455	feeling
+E11	Diagnostic_procedure:T25 
+T26	Lab_value 457 474	under the weather
+R16	MODIFY Arg1:T26 Arg2:E11	
+T27	History 493 552	no previous dermatological or other medical history of note
+T28	Occupation 580 623	worked in a supermarket handling food items
+T29	History 638 682	no history of occupational chemical exposure
+T30	History 687 765	had not recently had any change in washing powder or personal hygiene products
+T31	Diagnostic_procedure 767 793	Physiological observations
+E12	Diagnostic_procedure:T31 
+T32	Lab_value 808 814	normal
+T33	Diagnostic_procedure 819 839	systemic examination
+E13	Diagnostic_procedure:T33 
+T34	Lab_value 840 852	unremarkable
+R17	MODIFY Arg1:T34 Arg2:E13	
+R18	MODIFY Arg1:T32 Arg2:E12	
+T35	Diagnostic_procedure 1291 1302	Blood tests
+E14	Diagnostic_procedure:T35 
+T36	Diagnostic_procedure 1313 1329	full blood count
+E15	Diagnostic_procedure:T36 
+T37	Diagnostic_procedure 1331 1335	urea
+E16	Diagnostic_procedure:T37 
+T38	Diagnostic_procedure 1340 1352	electrolytes
+E17	Diagnostic_procedure:T38 
+T39	Diagnostic_procedure 861 872	examination
+E18	Diagnostic_procedure:T39 
+T40	Sign_symptom 880 884	rash
+E19	Sign_symptom:T40 
+T41	Biological_structure 922 926	skin
+T42	Activity 927 945	exposed to the sun
+E20	Activity:T42 
+T43	Activity 951 980	wearing a short-sleeved shirt
+E21	Activity:T43 
+T44	Other_entity 1016 1048	‘V’ shape on the patient's chest
+R19	MODIFY Arg1:T44 Arg2:E19	
+R20	MODIFY Arg1:T41 Arg2:E19	
+R21	MODIFY Arg1:E20 Arg2:T41	
+R22	CAUSE Arg1:E21 Arg2:E20	
+T45	Date 1158 1168	48 h prior
+E22	Date:T45 
+T46	Date 1190 1200	12 h prior
+E23	Date:T46 
+T47	Sign_symptom 1227 1231	rash
+E24	Sign_symptom:T47 
+T48	Activity 1239 1258	strimming the grass
+E25	Activity:T48 
+#1	AnnotatorNotes E25	(sp)
+R23	SUB_PROCEDURE Arg1:E15 Arg2:E14	
+R24	SUB_PROCEDURE Arg1:E16 Arg2:E14	
+R25	SUB_PROCEDURE Arg1:E17 Arg2:E14	
+T49	Diagnostic_procedure 1354 1373	liver function test
+E26	Diagnostic_procedure:T49 
+T50	Diagnostic_procedure 1378 1396	C-reactive protein
+E27	Diagnostic_procedure:T50 
+T51	Lab_value 1406 1436	within normal reference ranges
+R26	MODIFY Arg1:T51 Arg2:E14	
+R27	SUB_PROCEDURE Arg1:E26 Arg2:E14	
+R28	SUB_PROCEDURE Arg1:E27 Arg2:E14	
+T52	Disease_disorder 1614 1634	phytophotodermatitis
+E28	Disease_disorder:T52 
+T53	Medication 1677 1691	chlorphenamine
+E29	Medication:T53 
+T54	Clinical_event 1661 1671	discharged
+E30	Clinical_event:T54 
+T55	Medication 1693 1709	simple analgesia
+E31	Medication:T55 
+T56	Other_event 1718 1769	advice to wear a long-sleeved t-shirt and sunscreen
+E32	Other_event:T56 
+T57	Sign_symptom 1804 1808	rash
+E33	Sign_symptom:T57 
+A2	TREND E33 DEC
+T58	Duration 1825 1842	period of 3 weeks
+E34	Duration:T58 
+T59	Coreference 1844 1846	It
+E35	Coreference:T59 
+R29	IDENTICAL Arg1:E35 Arg2:E33	
+T60	Detailed_description 1856 1864	pruritic
+R30	MODIFY Arg1:T60 Arg2:E35	
+T61	Sign_symptom 1903 1907	pain
+E36	Sign_symptom:T61 
+A3	TREND E36 DEC
+T62	Duration 1916 1931	over a few days
+E37	Duration:T62 
+T63	Sign_symptom 1942 1950	scarring
+E38	Sign_symptom:T63 
+A4	TREND E38 DEC
+T64	Date 1972 1986	2 months after
+E39	Date:T64 
+R31	AFTER Arg1:E2 Arg2:E3	
+*	OVERLAP E3 E4 E5 E6 E7 E8 E9
+R32	BEFORE Arg1:E9 Arg2:E10	
+*	OVERLAP E10 E11 E1 E12 E13 E18 E19
+R33	AFTER Arg1:E19 Arg2:E20	
+*	OVERLAP E20 E21
+R34	AFTER Arg1:E21 Arg2:E22	
+R35	BEFORE Arg1:E22 Arg2:E23	
+R36	BEFORE Arg1:E23 Arg2:E24	
+R37	AFTER Arg1:E24 Arg2:E25	
+R38	BEFORE Arg1:E25 Arg2:E14	
+R39	BEFORE Arg1:E14 Arg2:E28	
+R40	BEFORE Arg1:E28 Arg2:E30	
+*	OVERLAP E30 E29 E31 E32
+R41	BEFORE Arg1:E32 Arg2:E33	
+*	OVERLAP E33 E35 E36 E37
+R42	BEFORE Arg1:E37 Arg2:E38	
+*	OVERLAP E38 E39

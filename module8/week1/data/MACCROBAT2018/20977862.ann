@@ -1,0 +1,200 @@
+T1	Age 2 13	48-year-old
+T2	Sex 14 17	man
+T3	Clinical_event 18 27	presented
+E1	Clinical_event:T3 
+T4	Nonbiological_location 35 43	hospital
+R1	MODIFY Arg1:T4 Arg2:E1	
+T5	Sign_symptom 72 78	bruits
+E2	Sign_symptom:T5 
+T6	Biological_structure 59 71	intracranial
+R2	MODIFY Arg1:T6 Arg2:E2	
+T7	Diagnostic_procedure 102 125	laboratory examinations
+E3	Diagnostic_procedure:T7 
+T8	Diagnostic_procedure 84 97	cranial nerve
+E4	Diagnostic_procedure:T8 
+T9	Lab_value 131 137	normal
+R3	MODIFY Arg1:T9 Arg2:E3	
+R4	MODIFY Arg1:T9 Arg2:E4	
+T10	Disease_disorder 141 145	DVAF
+E5	Disease_disorder:T10 
+A1	POLARITY E5 UNCERTAIN
+T11	Diagnostic_procedure 162 206	conventional digital subtraction angiography
+E6	Diagnostic_procedure:T11 
+T12	Disease_disorder 237 252	Cognard II DVAF
+E7	Disease_disorder:T12 
+T13	Biological_structure 272 295	right hypoglossal canal
+R5	MODIFY Arg1:T13 Arg2:E7	
+T14	Biological_structure 297 299	HC
+R6	IDENTICAL Arg1:T14 Arg2:T13	
+T15	Coreference 306 310	DVAF
+E8	Coreference:T15 
+R7	IDENTICAL Arg1:E8 Arg2:E7	
+T16	Biological_structure 326 344	meningeal branches
+T17	Biological_structure 352 391	bilateral ascending pharyngeal arteries
+R8	MODIFY Arg1:T17 Arg2:T16	
+T18	Biological_structure 401 430	right anterior condylar veins
+T19	Biological_structure 442 459	hypoglossal canal
+R9	MODIFY Arg1:T19 Arg2:T18	
+T20	Sign_symptom 473 488	fistulous point
+E9	Sign_symptom:T20 
+R10	MODIFY Arg1:T18 Arg2:E9	
+R11	MODIFY Arg1:T16 Arg2:E8	
+T21	Detailed_description 496 525	drained into the jugular vein
+R12	MODIFY Arg1:T21 Arg2:E9	
+T22	Therapeutic_procedure 527 549	Endovascular treatment
+E10	Therapeutic_procedure:T22 
+T23	Coreference 634 639	bruit
+E11	Coreference:T23 
+R13	IDENTICAL Arg1:E11 Arg2:E2	
+T24	Biological_structure 621 633	intracranial
+R14	MODIFY Arg1:T24 Arg2:E11	
+T25	Detailed_description 609 620	intolerable
+R15	MODIFY Arg1:T25 Arg2:E11	
+T26	Therapeutic_procedure 668 690	transarterial approach
+E12	Therapeutic_procedure:T26 
+R16	SUB_PROCEDURE Arg1:E12 Arg2:E10	
+T27	Medication 697 715	general anesthesia
+E13	Medication:T27 
+R17	MODIFY Arg1:E13 Arg2:E12	
+T28	Therapeutic_procedure 724 749	biplane angiographic unit
+E14	Therapeutic_procedure:T28 
+R18	SUB_PROCEDURE Arg1:E14 Arg2:E10	
+T29	Therapeutic_procedure 751 778	Standard coaxial techniques
+E15	Therapeutic_procedure:T29 
+R19	SUB_PROCEDURE Arg1:E15 Arg2:E10	
+T30	Therapeutic_procedure 794 822	guide catheter was navigated
+E16	Therapeutic_procedure:T30 
+T31	Biological_structure 832 869	left ascendingtrawt pharyngeal artery
+R20	MODIFY Arg1:T31 Arg2:E16	
+T32	Therapeutic_procedure 1019 1044	microcatheter was flushed
+E17	Therapeutic_procedure:T32 
+T33	Volume 1050 1055	10 mL
+T34	Biological_structure 1059 1072	normal saline
+R21	MODIFY Arg1:T33 Arg2:T34	
+R22	MODIFY Arg1:T34 Arg2:E17	
+T35	Therapeutic_procedure 871 935	Marathon flow directed catheter (eV3) was subsequently navigated
+E18	Therapeutic_procedure:T35 
+T36	Sign_symptom 1006 1013	fistula
+E19	Sign_symptom:T36 
+R23	MODIFY Arg1:E19 Arg2:E18	
+T37	Diagnostic_procedure 1407 1416	angiogram
+E20	Diagnostic_procedure:T37 
+T38	Detailed_description 1397 1406	follow-up
+R24	MODIFY Arg1:T38 Arg2:E20	
+T39	Sign_symptom 1427 1441	residual shunt
+E21	Sign_symptom:T39 
+A2	POLARITY E21 NEG
+T40	Biological_structure 1459 1471	intracranial
+T41	Sign_symptom 1472 1478	bruits
+E22	Sign_symptom:T41 
+R25	MODIFY Arg1:T40 Arg2:E22	
+A3	POLARITY E22 NEG
+T42	Dosage 1550 1555	10 mg
+T43	Medication 1556 1569	dexamethasone
+E23	Medication:T43 
+T44	Administration 1574 1596	intravenously injected
+T45	Duration 1601 1611	three days
+E24	Duration:T45 
+T46	Date 1620 1659	second day after endovascular treatment
+E25	Date:T46 
+T47	Sign_symptom 1688 1716	difficulty moving his tongue
+E26	Sign_symptom:T47 
+T48	Diagnostic_procedure 1744 1755	examination
+E27	Diagnostic_procedure:T48 
+T49	Biological_structure 1730 1743	Cranial nerve
+R26	MODIFY Arg1:T49 Arg2:E27	
+T50	Sign_symptom 1783 1812	right hypoglossal nerve palsy
+E28	Sign_symptom:T50 
+T51	Clinical_event 1830 1840	discharged
+E29	Clinical_event:T51 
+T52	Nonbiological_location 1850 1858	hospital
+T53	Date 1859 1884	four days after treatment
+E30	Date:T53 
+T54	Medication 1893 1921	continuative pharmacotherapy
+E31	Medication:T54 
+A4	POLARITY E31 NEG
+T55	Date 1926 1946	two months follow-up
+E32	Date:T55 
+T56	Sign_symptom 2005 2014	dysphagia
+E33	Sign_symptom:T56 
+T57	Sign_symptom 2036 2046	dysarthria
+E34	Sign_symptom:T57 
+T58	Sign_symptom 2148 2159	hemiatrophy
+E35	Sign_symptom:T58 
+T59	Detailed_description 2129 2135	marked
+T60	Detailed_description 2136 2147	right-sided
+R27	MODIFY Arg1:T60 Arg2:E35	
+R28	MODIFY Arg1:T59 Arg2:E35	
+T61	Diagnostic_procedure 2106 2123	tongue protrusion
+E36	Diagnostic_procedure:T61 
+T62	Lab_value 2066 2098	tongue deviated toward the right
+R29	MODIFY Arg1:T62 Arg2:E36	
+T63	Diagnostic_procedure 2204 2213	examation
+E37	Diagnostic_procedure:T63 
+T64	Coreference 2221 2250	right hypoglossal nerve palsy
+E38	Coreference:T64 
+R30	IDENTICAL Arg1:E38 Arg2:E28	
+T65	Date 2290 2312	three months follow-up
+E39	Date:T65 
+T66	Diagnostic_procedure 2329 2350	vocal cord evaluation
+E40	Diagnostic_procedure:T66 
+T67	Subject 2357 2371	ENT specialist
+R31	MODIFY Arg1:T67 Arg2:E40	
+T68	Nonbiological_location 2377 2391	local hospital
+R32	MODIFY Arg1:T68 Arg2:E40	
+T69	Sign_symptom 2404 2413	paralysis
+E41	Sign_symptom:T69 
+A5	POLARITY E41 NEG
+T70	Biological_structure 2393 2403	Vocal cord
+R33	MODIFY Arg1:T70 Arg2:E41	
+T71	Sign_symptom 2470 2481	dysfunction
+E42	Sign_symptom:T71 
+T72	Biological_structure 2458 2469	vagus nerve
+R34	MODIFY Arg1:T72 Arg2:E42	
+A6	POLARITY E42 NEG
+T73	Medication 2483 2499	Oral Vitamin B12
+E43	Medication:T73 
+T74	Therapeutic_procedure 1096 1133	microcatheter was subsequently filled
+E44	Therapeutic_procedure:T74 
+T75	Medication 1139 1157	dimethyl sulfoxide
+E45	Medication:T75 
+R35	MODIFY Arg1:E45 Arg2:E44	
+T76	Therapeutic_procedure 1183 1191	injected
+E46	Therapeutic_procedure:T76 
+T77	Medication 1166 1173	Onyx-18
+E47	Medication:T77 
+R36	MODIFY Arg1:E47 Arg2:E46	
+T78	Duration 1197 1208	two minutes
+E48	Duration:T78 
+R37	MODIFY Arg1:E48 Arg2:E46	
+T79	Biological_structure 2190 2203	cranial nerve
+R38	MODIFY Arg1:T79 Arg2:E37	
+*	OVERLAP E1 E2
+R39	BEFORE Arg1:E2 Arg2:E4	
+*	OVERLAP E4 E3 E5
+R40	BEFORE Arg1:E5 Arg2:E6	
+*	OVERLAP E6 E7 E8 E9 E10 E16
+R41	BEFORE Arg1:E16 Arg2:E18	
+R42	BEFORE Arg1:E18 Arg2:E17	
+R43	BEFORE Arg1:E17 Arg2:E44	
+R44	BEFORE Arg1:E44 Arg2:E46	
+T80	Therapeutic_procedure 1282 1303	injection was stopped
+E49	Therapeutic_procedure:T80 
+R45	BEFORE Arg1:E46 Arg2:E49	
+R46	BEFORE Arg1:E49 Arg2:E20	
+*	OVERLAP E20 E21 E22
+R47	MODIFY Arg1:T42 Arg2:E23	
+R48	MODIFY Arg1:T44 Arg2:E23	
+R49	MODIFY Arg1:E24 Arg2:E23	
+R50	BEFORE Arg1:E22 Arg2:E23	
+*	OVERLAP E23 E25 E26 E27 E28
+R51	BEFORE Arg1:E28 Arg2:E29	
+R52	MODIFY Arg1:T52 Arg2:E29	
+*	OVERLAP E29 E30 E31
+R53	BEFORE Arg1:E31 Arg2:E32	
+*	OVERLAP E32 E33 E34 E36 E35 E37 E38
+R54	BEFORE Arg1:E38 Arg2:E39	
+*	OVERLAP E39 E40 E41 E42 E43
+T81	Clinical_event 2547 2556	follow-up
+E50	Clinical_event:T81 
+R55	BEFORE Arg1:E43 Arg2:E50	
