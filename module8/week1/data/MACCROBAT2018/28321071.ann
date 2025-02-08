@@ -1,0 +1,200 @@
+T1	Age 3 14	82-year-old
+T2	Sex 15 20	woman
+T3	Clinical_event 25 36	transferred
+E1	Clinical_event:T3 
+T4	Nonbiological_location 44 52	hospital
+R1	MODIFY Arg1:T4 Arg2:E1	
+T5	Sign_symptom 64 71	dyspnea
+E2	Sign_symptom:T5 
+T6	Sign_symptom 84 94	hemoptysis
+E3	Sign_symptom:T6 
+T7	Severity 76 83	massive
+R2	MODIFY Arg1:T7 Arg2:E3	
+T8	History 125 141	bronchial asthma
+T9	History 172 198	bronchodilator medications
+T10	History 208 286	no history of tuberculosis, nontuberculous mycobacterial infection, or smoking
+T11	Diagnostic_procedure 292 312	physical examination
+E4	Diagnostic_procedure:T11 
+T12	Sign_symptom 340 348	crackles
+E5	Sign_symptom:T12 
+T13	Detailed_description 322 329	diffuse
+T14	Detailed_description 330 339	bilateral
+R3	MODIFY Arg1:T14 Arg2:E5	
+R4	MODIFY Arg1:T13 Arg2:E5	
+T15	Sign_symptom 375 384	hypoxemia
+E6	Sign_symptom:T15 
+T16	Severity 368 374	severe
+R5	MODIFY Arg1:T16 Arg2:E6	
+T17	Therapeutic_procedure 525 535	intubation
+E7	Therapeutic_procedure:T17 
+T18	Biological_structure 516 524	tracheal
+R6	MODIFY Arg1:T18 Arg2:E7	
+T19	Sign_symptom 568 577	aspirated
+E8	Sign_symptom:T19 
+T20	Biological_structure 558 563	blood
+T21	Volume 537 543	100 mL
+T22	Color 547 557	bright-red
+R7	MODIFY Arg1:T22 Arg2:T20	
+R8	MODIFY Arg1:T21 Arg2:T20	
+R9	MODIFY Arg1:T20 Arg2:E8	
+T23	Diagnostic_procedure 386 388	pH
+E9	Diagnostic_procedure:T23 
+T24	Diagnostic_procedure 396 400	PCO2
+E10	Diagnostic_procedure:T24 
+T25	Diagnostic_procedure 412 415	PO2
+E11	Diagnostic_procedure:T25 
+T26	Diagnostic_procedure 427 432	HCO3-
+E12	Diagnostic_procedure:T26 
+T27	Diagnostic_procedure 444 446	BE
+E13	Diagnostic_procedure:T27 
+T28	Diagnostic_procedure 458 462	SpO2
+E14	Diagnostic_procedure:T28 
+T29	Detailed_description 489 503	reservoir mask
+R10	MODIFY Arg1:T29 Arg2:E14	
+T30	Lab_value 389 394	7.362
+R11	MODIFY Arg1:T30 Arg2:E9	
+T31	Lab_value 401 410	35.1 mmHg
+R12	MODIFY Arg1:T31 Arg2:E10	
+T32	Lab_value 416 425	61.0 mmHg
+R13	MODIFY Arg1:T32 Arg2:E11	
+T33	Lab_value 433 442	20.1 mmHg
+R14	MODIFY Arg1:T33 Arg2:E12	
+T34	Lab_value 447 456	-5.5 mmHg
+R15	MODIFY Arg1:T34 Arg2:E13	
+T35	Lab_value 463 468	90.5%
+R16	MODIFY Arg1:T35 Arg2:E14	
+T36	Lab_value 470 487	under 10 L O2/min
+R17	MODIFY Arg1:T36 Arg2:E14	
+T37	Diagnostic_procedure 587 597	radiograph
+E15	Diagnostic_procedure:T37 
+T38	Biological_structure 581 586	chest
+R18	MODIFY Arg1:T38 Arg2:E15	
+T39	Sign_symptom 615 626	infiltrates
+E16	Sign_symptom:T39 
+T40	Detailed_description 605 614	bilateral
+R19	MODIFY Arg1:T40 Arg2:E16	
+T41	Diagnostic_procedure 644 646	CT
+E17	Diagnostic_procedure:T41 
+T42	Biological_structure 638 643	chest
+R20	MODIFY Arg1:T42 Arg2:E17	
+T43	Sign_symptom 677 691	consolidations
+E18	Sign_symptom:T43 
+T44	Sign_symptom 709 716	opacity
+E19	Sign_symptom:T44 
+T45	Detailed_description 668 676	multiple
+R21	MODIFY Arg1:T45 Arg2:E18	
+T46	Texture 696 708	ground glass
+R22	MODIFY Arg1:T46 Arg2:E19	
+T47	Disease_disorder 727 741	bronchiectasis
+E20	Disease_disorder:T47 
+T48	Detailed_description 721 726	focal
+R23	MODIFY Arg1:T48 Arg2:E20	
+T49	Biological_structure 745 760	right segment 4
+T50	Biological_structure 762 764	S4
+R24	IDENTICAL Arg1:T50 Arg2:T49	
+R25	MODIFY Arg1:T49 Arg2:E20	
+T51	Sign_symptom 805 812	lesions
+E21	Sign_symptom:T51 
+A1	POLARITY E21 NEG
+T52	Detailed_description 789 804	space-occupying
+R26	MODIFY Arg1:T52 Arg2:E21	
+T53	Date 814 829	Four days after
+E22	Date:T53 
+T54	Diagnostic_procedure 845 866	respiratory condition
+E23	Diagnostic_procedure:T54 
+T55	Lab_value 871 879	improved
+R27	MODIFY Arg1:T55 Arg2:E23	
+T56	Sign_symptom 907 919	hemorrhaging
+E24	Sign_symptom:T56 
+A2	POLARITY E24 NEG
+T57	Detailed_description 900 906	active
+R28	MODIFY Arg1:T57 Arg2:E24	
+T58	Therapeutic_procedure 957 966	extubated
+E25	Therapeutic_procedure:T58 
+T59	Therapeutic_procedure 929 942	tracheal tube
+E26	Therapeutic_procedure:T59 
+T60	Sign_symptom 1010 1016	sputum
+E27	Sign_symptom:T60 
+T61	Detailed_description 1003 1009	bloody
+R29	MODIFY Arg1:T61 Arg2:E27	
+T62	Severity 987 999	small amount
+R30	MODIFY Arg1:T62 Arg2:E27	
+T63	Diagnostic_procedure 1102 1104	CT
+E28	Diagnostic_procedure:T63 
+T64	Detailed_description 1084 1101	contrast-enhanced
+R31	MODIFY Arg1:T64 Arg2:E28	
+T65	Disease_disorder 1119 1133	bronchiectasis
+E29	Disease_disorder:T65 
+T66	Biological_structure 1137 1145	right S4
+R32	MODIFY Arg1:T66 Arg2:E29	
+T67	Sign_symptom 1168 1180	infiltration
+E30	Sign_symptom:T67 
+A3	TREND E30 DEC
+T68	Diagnostic_procedure 1182 1185	CTA
+E31	Diagnostic_procedure:T68 
+T69	Disease_disorder 1216 1227	anastomosis
+E32	Disease_disorder:T69 
+T70	Biological_structure 1207 1215	vascular
+R33	MODIFY Arg1:T70 Arg2:E32	
+T71	Detailed_description 1198 1206	abnormal
+R34	MODIFY Arg1:T71 Arg2:E32	
+T72	Biological_structure 1240 1269	right inferior phrenic artery
+T73	Biological_structure 1274 1296	right pulmonary artery
+R35	MODIFY Arg1:T72 Arg2:E32	
+R36	MODIFY Arg1:T73 Arg2:E32	
+T74	Disease_disorder 1314 1328	bronchiectasis
+E33	Disease_disorder:T74 
+T75	Detailed_description 1308 1313	focal
+R37	MODIFY Arg1:T75 Arg2:E33	
+T76	Biological_structure 1336 1353	right middle lobe
+R38	MODIFY Arg1:T76 Arg2:E33	
+T77	Sign_symptom 1428 1438	hemoptysis
+E34	Sign_symptom:T77 
+T78	Severity 1420 1427	massive
+R39	MODIFY Arg1:T78 Arg2:E34	
+R40	CAUSE Arg1:E32 Arg2:E34	
+T79	Therapeutic_procedure 1463 1475	embolization
+E35	Therapeutic_procedure:T79 
+T80	Therapeutic_procedure 1479 1493	superselecting
+E36	Therapeutic_procedure:T80 
+T81	Biological_structure 1498 1527	right inferior phrenic artery
+R41	MODIFY Arg1:T81 Arg2:E36	
+T82	Detailed_description 1535 1556	2.2-Fr. microcatheter
+R42	MODIFY Arg1:T82 Arg2:E36	
+R43	SUB_PROCEDURE Arg1:E36 Arg2:E35	
+T83	Diagnostic_procedure 1569 1578	angiogram
+E37	Diagnostic_procedure:T83 
+T84	Biological_structure 1586 1608	right bronchial artery
+R44	MODIFY Arg1:T84 Arg2:E37	
+T85	Sign_symptom 1634 1642	bleeding
+E38	Sign_symptom:T85 
+A4	POLARITY E38 NEG
+T86	Detailed_description 1627 1633	active
+R45	MODIFY Arg1:T86 Arg2:E38	
+T87	Date 1644 1661	Three weeks after
+E39	Date:T87 
+T88	Clinical_event 1701 1711	discharged
+E40	Clinical_event:T88 
+T89	Sign_symptom 1745 1755	hemoptysis
+E41	Sign_symptom:T89 
+A5	POLARITY E41 NEG
+T90	Detailed_description 1735 1744	recurrent
+R46	MODIFY Arg1:T90 Arg2:E41	
+T91	Duration 1760 1771	three years
+E42	Duration:T91 
+*	OVERLAP E3 E4 E5 E2 E1 E6 E9 E10 E11 E12 E13 E14
+R47	BEFORE Arg1:E14 Arg2:E7	
+R48	BEFORE Arg1:E7 Arg2:E8	
+*	OVERLAP E8 E15 E16 E17 E18 E19 E20 E21
+R49	BEFORE Arg1:E21 Arg2:E22	
+*	OVERLAP E22 E23 E24 E26
+R50	BEFORE Arg1:E26 Arg2:E25	
+R51	BEFORE Arg1:E25 Arg2:E27	
+*	OVERLAP E27 E28 E29 E30 E31 E32 E33 E34
+R52	BEFORE Arg1:E34 Arg2:E35	
+R53	BEFORE Arg1:E35 Arg2:E37	
+*	OVERLAP E37 E38
+R54	BEFORE Arg1:E38 Arg2:E39	
+*	OVERLAP E39 E40
+R55	BEFORE Arg1:E40 Arg2:E41	
+*	OVERLAP E41 E42

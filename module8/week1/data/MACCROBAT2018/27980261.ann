@@ -1,0 +1,199 @@
+T1	Age 2 13	73-year-old
+T2	Sex 14 17	man
+T3	Clinical_event 31 42	transferred
+E1	Clinical_event:T3 
+T4	Nonbiological_location 50 64	emergency room
+T5	Sign_symptom 85 89	pain
+E2	Sign_symptom:T5 
+T6	Biological_structure 79 84	chest
+T7	Detailed_description 72 78	sudden
+R1	MODIFY Arg1:T6 Arg2:E2	
+R2	MODIFY Arg1:T7 Arg2:E2	
+T8	Disease_disorder 109 151	ST-segment elevation myocardial infarction
+E3	Disease_disorder:T8 
+T9	Disease_disorder 153 158	STEMI
+E4	Disease_disorder:T9 
+R3	IDENTICAL Arg1:E4 Arg2:E3	
+T10	History 206 237	history of smoking for 50 years
+T11	Therapeutic_procedure 260 281	coronary intervention
+E5	Therapeutic_procedure:T11 
+T12	Biological_structure 247 259	percutaneous
+R4	MODIFY Arg1:T12 Arg2:E5	
+T13	Detailed_description 239 246	Primary
+R5	MODIFY Arg1:T13 Arg2:E5	
+T14	Sign_symptom 323 338	contrast defect
+E6	Sign_symptom:T14 
+T15	Biological_structure 359 390	left anterior descending artery
+R6	MODIFY Arg1:T15 Arg2:E6	
+T16	Shape 309 322	string-shaped
+T17	Detailed_description 303 307	long
+R7	MODIFY Arg1:T16 Arg2:E6	
+R8	MODIFY Arg1:T17 Arg2:E6	
+T18	Diagnostic_procedure 401 429	Optical coherence tomography
+E7	Diagnostic_procedure:T18 
+T19	Diagnostic_procedure 431 434	OCT
+E8	Diagnostic_procedure:T19 
+R9	IDENTICAL Arg1:E8 Arg2:E7	
+T20	Distance 477 487	50-mm long
+T21	Sign_symptom 488 494	object
+E9	Sign_symptom:T21 
+T22	Texture 461 476	smooth-surfaced
+T23	Detailed_description 456 459	odd
+R10	MODIFY Arg1:T20 Arg2:E9	
+R11	MODIFY Arg1:T22 Arg2:E9	
+R12	MODIFY Arg1:T23 Arg2:E9	
+T24	Therapeutic_procedure 579 603	intracoronary aspiration
+E10	Therapeutic_procedure:T24 
+T25	Sign_symptom 519 525	object
+E11	Sign_symptom:T25 
+T26	Detailed_description 532 560	looked like a parasitic worm
+R13	MODIFY Arg1:T26 Arg2:E11	
+T27	Color 513 518	white
+T28	Detailed_description 507 511	long
+R14	MODIFY Arg1:T27 Arg2:E11	
+R15	MODIFY Arg1:T28 Arg2:E11	
+T29	Therapeutic_procedure 608 625	revascularization
+E12	Therapeutic_procedure:T29 
+T30	Coreference 726 729	OCT
+E13	Coreference:T30 
+R16	IDENTICAL Arg1:E13 Arg2:E7	
+T31	Sign_symptom 667 681	plaque rupture
+E14	Sign_symptom:T31 
+A1	POLARITY E14 NEG
+T32	Sign_symptom 701 709	thrombus
+E15	Sign_symptom:T32 
+A2	POLARITY E15 NEG
+T33	Diagnostic_procedure 784 800	echocardiography
+E16	Diagnostic_procedure:T33 
+T34	Biological_structure 770 783	transthoracic
+R17	MODIFY Arg1:T34 Arg2:E16	
+T35	Date 747 768	eleventh hospital day
+E17	Date:T35 
+T36	Sign_symptom 825 831	object
+E18	Sign_symptom:T36 
+T37	Biological_structure 839 850	left atrium
+T38	Detailed_description 816 824	floating
+R18	MODIFY Arg1:T38 Arg2:E18	
+R19	MODIFY Arg1:T37 Arg2:E18	
+T39	Diagnostic_procedure 852 880	Contrast computed tomography
+E19	Diagnostic_procedure:T39 
+T40	Area 897 903	7×6 cm
+T41	Detailed_description 892 896	huge
+T42	Sign_symptom 904 908	mass
+E20	Sign_symptom:T42 
+R20	MODIFY Arg1:T40 Arg2:E20	
+R21	MODIFY Arg1:T41 Arg2:E20	
+T43	Biological_structure 949 975	right upper pulmonary lobe
+T44	Detailed_description 981 1011	direct pulmonary vein invasion
+R22	MODIFY Arg1:T43 Arg2:E20	
+R23	MODIFY Arg1:T44 Arg2:E20	
+T45	Diagnostic_procedure 1035 1057	bronchoscopic findings
+E21	Diagnostic_procedure:T45 
+T46	Sign_symptom 1078 1088	lung tumor
+E22	Sign_symptom:T46 
+A3	POLARITY E22 NEG
+R24	MODIFY Arg1:E22 Arg2:E21	
+T47	Diagnostic_procedure 1092 1119	histopathologic examination
+E23	Diagnostic_procedure:T47 
+T48	Coreference 1146 1152	object
+E24	Coreference:T48 
+R25	IDENTICAL Arg1:E24 Arg2:E11	
+T49	Detailed_description 1127 1136	aspirated
+T50	Biological_structure 1137 1145	coronary
+R26	MODIFY Arg1:T50 Arg2:E24	
+R27	MODIFY Arg1:T49 Arg2:E24	
+R28	MODIFY Arg1:E24 Arg2:E23	
+T51	Disease_disorder 1179 1188	carcinoma
+E25	Disease_disorder:T51 
+T52	Biological_structure 1174 1178	lung
+R29	MODIFY Arg1:T52 Arg2:E25	
+T53	Detailed_description 1162 1173	pleomorphic
+R30	MODIFY Arg1:T53 Arg2:E25	
+T54	Disease_disorder 1229 1234	STEMI
+E26	Disease_disorder:T54 
+T55	Sign_symptom 1251 1263	embolization
+E27	Sign_symptom:T55 
+T56	Biological_structure 1242 1250	coronary
+R31	MODIFY Arg1:T56 Arg2:E27	
+T57	Disease_disorder 1285 1294	carcinoma
+E28	Disease_disorder:T57 
+T58	Biological_structure 1280 1284	lung
+R32	MODIFY Arg1:T58 Arg2:E28	
+R33	CAUSE Arg1:E28 Arg2:E27	
+R34	CAUSE Arg1:E27 Arg2:E26	
+T59	Diagnostic_procedure 1302 1305	MRI
+E29	Diagnostic_procedure:T59 
+T60	Biological_structure 1296 1301	Brain
+R35	MODIFY Arg1:T60 Arg2:E29	
+T61	Sign_symptom 1361 1371	infarction
+E30	Sign_symptom:T61 
+T62	Biological_structure 1352 1360	cerebral
+R36	MODIFY Arg1:T62 Arg2:E30	
+T63	Detailed_description 1339 1351	asymptomatic
+R37	MODIFY Arg1:T63 Arg2:E30	
+T64	Biological_structure 1379 1397	right frontal lobe
+R38	MODIFY Arg1:T64 Arg2:E30	
+T65	Sign_symptom 1424 1430	lesion
+E31	Sign_symptom:T65 
+T66	Detailed_description 1404 1409	small
+T67	Biological_structure 1410 1423	parietal lobe
+R39	MODIFY Arg1:T67 Arg2:E31	
+R40	MODIFY Arg1:T66 Arg2:E31	
+T68	Sign_symptom 1451 1461	metastasis
+E32	Sign_symptom:T68 
+R41	IDENTICAL Arg1:E32 Arg2:E31	
+T69	Disease_disorder 1526 1535	carcinoma
+E33	Disease_disorder:T69 
+T70	Biological_structure 1515 1525	right lung
+R42	MODIFY Arg1:T70 Arg2:E33	
+T71	Detailed_description 1537 1545	stage IV
+R43	MODIFY Arg1:T71 Arg2:E33	
+T72	Detailed_description 1547 1557	c-T2bN2M1b
+R44	MODIFY Arg1:T72 Arg2:E33	
+T73	Medication 1592 1604	chemotherapy
+E34	Medication:T73 
+T74	Medication 1615 1626	carboplatin
+E35	Medication:T74 
+T75	Medication 1629 1639	paclitaxel
+E36	Medication:T75 
+R45	SUB_PROCEDURE Arg1:E35 Arg2:E34	
+R46	SUB_PROCEDURE Arg1:E36 Arg2:E34	
+T76	Diagnostic_procedure 1769 1784	clinical course
+E37	Diagnostic_procedure:T76 
+T77	Lab_value 1764 1768	good
+R47	MODIFY Arg1:T77 Arg2:E37	
+T78	Medication 1805 1817	Chemotherapy
+E38	Medication:T78 
+R48	IDENTICAL Arg1:E38 Arg2:E34	
+T79	Dosage 1834 1842	9 cycles
+R49	MODIFY Arg1:T79 Arg2:E38	
+T80	Diagnostic_procedure 1880 1901	carcinoma progression
+E39	Diagnostic_procedure:T80 
+T81	Lab_value 1906 1916	suppressed
+R50	MODIFY Arg1:T81 Arg2:E39	
+T82	Sign_symptom 1930 1940	doing well
+E40	Sign_symptom:T82 
+T83	Therapeutic_procedure 1968 1971	PCI
+E41	Therapeutic_procedure:T83 
+#1	AnnotatorNotes E41	Percutaneous coronary intervention
+T84	Clinical_event 1985 1996	followed-up
+E42	Clinical_event:T84 
+T85	Detailed_description 1997 2006	regularly
+R51	MODIFY Arg1:T85 Arg2:E42	
+T86	Duration 1945 1964	more than two years
+E43	Duration:T86 
+R52	MODIFY Arg1:T4 Arg2:E1	
+*	OVERLAP E1 E2 E3
+R53	BEFORE Arg1:E3 Arg2:E5	
+*	OVERLAP E5 E6 E7 E9 E11 E10 E12 E14 E15
+T87	Lab_value 630 652	successfully completed
+R54	MODIFY Arg1:T87 Arg2:E12	
+R55	BEFORE Arg1:E15 Arg2:E17	
+*	OVERLAP E17 E16 E18 E19 E20 E21 E23 E25 E26 E27 E28 E29 E30 E31
+R56	BEFORE Arg1:E31 Arg2:E33	
+*	OVERLAP E33 E34
+R57	BEFORE Arg1:E34 Arg2:E37	
+R58	BEFORE Arg1:E37 Arg2:E38	
+*	OVERLAP E38 E39
+R59	BEFORE Arg1:E39 Arg2:E40	
+*	OVERLAP E40 E43 E41 E42

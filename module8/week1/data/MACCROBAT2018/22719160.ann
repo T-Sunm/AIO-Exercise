@@ -1,0 +1,316 @@
+T1	Date 3 15	January 2009
+E1	Date:T1 
+T2	Age 19 30	57-year-old
+T3	Sex 31 36	woman
+T4	Clinical_event 48 57	presented
+E2	Clinical_event:T4 
+T5	Sign_symptom 69 88	shortness of breath
+E3	Sign_symptom:T5 
+T6	Duration 100 107	1-month
+E4	Duration:T6 
+T7	Sign_symptom 131 150	shortness of breath
+E5	Sign_symptom:T7 
+T8	Detailed_description 119 130	progressive
+T9	Diagnostic_procedure 177 194	exercise capacity
+E6	Diagnostic_procedure:T9 
+T10	Lab_value 157 173	gradual decrease
+R1	MODIFY Arg1:T10 Arg2:E6	
+T11	Sign_symptom 213 220	dyspnea
+E7	Sign_symptom:T11 
+T12	Severity 208 212	mild
+R2	MODIFY Arg1:T12 Arg2:E7	
+T13	Sign_symptom 238 257	additional symptoms
+E8	Sign_symptom:T13 
+A1	POLARITY E8 NEG
+R3	MODIFY Arg1:T8 Arg2:E5	
+T14	Date 262 268	age 40
+E9	Date:T14 
+T15	Clinical_event 283 292	diagnosed
+E10	Clinical_event:T15 
+T19	Disease_disorder 329 342	breast cancer
+E11	Disease_disorder:T19 
+T20	Detailed_description 318 328	left-sided
+R4	MODIFY Arg1:T20 Arg2:E11	
+T21	Lab_value 311 316	T1bN1
+R5	MODIFY Arg1:T21 Arg2:E11	
+T22	Lab_value 300 309	stage IIA
+R6	MODIFY Arg1:T22 Arg2:E11	
+T23	History 300 342	stage IIA, T1bN1, left-sided breast cancer
+T24	Therapeutic_procedure 377 387	lumpectomy
+E12	Therapeutic_procedure:T24 
+T25	Therapeutic_procedure 401 416	node dissection
+E13	Therapeutic_procedure:T25 
+T26	Biological_structure 392 400	axillary
+R7	MODIFY Arg1:T26 Arg2:E13	
+T27	Medication 457 468	DOX therapy
+E14	Medication:T27 
+T28	Dosage 470 478	75 mg/m2
+R8	MODIFY Arg1:T28 Arg2:E14	
+T29	Dosage 445 453	4 cycles
+R9	MODIFY Arg1:T29 Arg2:E14	
+T30	Dosage 493 501	8 cycles
+T31	Medication 505 521	cyclophosphamide
+E15	Medication:T31 
+T32	Medication 523 535	methotrexate
+E16	Medication:T32 
+T33	Medication 541 555	5-fluorouracil
+E17	Medication:T33 
+T34	Diagnostic_procedure 557 585	Multigated acquisition scans
+E18	Diagnostic_procedure:T34 
+T35	Medication 603 615	chemotherapy
+E19	Medication:T35 
+T36	Diagnostic_procedure 630 646	cardiac function
+E20	Diagnostic_procedure:T36 
+T37	Lab_value 623 629	normal
+R10	MODIFY Arg1:T37 Arg2:E20	
+T38	Medication 654 666	chemotherapy
+E21	Medication:T38 
+T39	Therapeutic_procedure 700 709	radiation
+E22	Therapeutic_procedure:T39 
+T40	Biological_structure 682 699	left whole-breast
+R11	MODIFY Arg1:T40 Arg2:E22	
+T41	Detailed_description 718 732	axillary boost
+R12	MODIFY Arg1:T41 Arg2:E22	
+T42	Sign_symptom 746 751	tumor
+E23	Sign_symptom:T42 
+T43	Detailed_description 761 787	estrogen receptor-positive
+R13	MODIFY Arg1:T43 Arg2:E23	
+T44	Medication 838 859	anti-estrogen therapy
+E24	Medication:T44 
+T45	Medication 870 879	tamoxifen
+E25	Medication:T45 
+T16	Duration 884 891	5 years
+E26	Duration:T16 
+T17	Medication 934 943	letrozole
+E27	Medication:T17 
+T18	Duration 952 966	17 years after
+E28	Duration:T18 
+T46	Sign_symptom 994 1000	active
+E29	Sign_symptom:T46 
+T47	Diagnostic_procedure 1024 1030	health
+E30	Diagnostic_procedure:T47 
+T48	Lab_value 1008 1023	relatively good
+R14	MODIFY Arg1:T48 Arg2:E30	
+T49	Sign_symptom 1090 1101	tachycardia
+E31	Sign_symptom:T49 
+T50	Sign_symptom 1103 1112	tachypnea
+E32	Sign_symptom:T50 
+T51	Sign_symptom 1118 1130	hypertension
+E33	Sign_symptom:T51 
+T52	Sign_symptom 1162 1172	distention
+E34	Sign_symptom:T52 
+T53	Biological_structure 1147 1161	jugular venous
+T54	Sign_symptom 1177 1179	S3
+E35	Sign_symptom:T54 
+#1	AnnotatorNotes E35	specifically, S3 heart sound
+T55	Sign_symptom 1181 1196	pulmonary rales
+E36	Sign_symptom:T55 
+T56	Sign_symptom 1219 1224	edema
+E37	Sign_symptom:T56 
+T57	Detailed_description 1208 1218	peripheral
+T58	Severity 1202 1207	trace
+R15	MODIFY Arg1:T57 Arg2:E37	
+R16	MODIFY Arg1:T58 Arg2:E37	
+T59	Diagnostic_procedure 1234 1251	laboratory values
+E38	Diagnostic_procedure:T59 
+R17	MODIFY Arg1:T53 Arg2:E34	
+T60	Lab_value 1257 1277	within normal limits
+R18	MODIFY Arg1:T60 Arg2:E38	
+T61	Diagnostic_procedure 1310 1350	N-terminal pro-brain natriuretic peptide
+E39	Diagnostic_procedure:T61 
+T62	Lab_value 1352 1364	>2,000 pg/mL
+R19	MODIFY Arg1:T62 Arg2:E39	
+T63	Lab_value 1292 1300	elevated
+R20	MODIFY Arg1:T63 Arg2:E39	
+T64	Disease_disorder 1411 1425	cardiomyopathy
+E40	Disease_disorder:T64 
+T65	Diagnostic_procedure 1442 1456	cardiac enzyme
+E41	Diagnostic_procedure:T65 
+T66	Lab_value 1435 1441	normal
+R21	MODIFY Arg1:T66 Arg2:E41	
+T67	Diagnostic_procedure 1468 1485	electrocardiogram
+E42	Diagnostic_procedure:T67 
+T68	Diagnostic_procedure 1487 1490	ECG
+E43	Diagnostic_procedure:T68 
+R22	IDENTICAL Arg1:E43 Arg2:E42	
+T69	Sign_symptom 1509 1525	ischemic changes
+E44	Sign_symptom:T69 
+A2	POLARITY E44 NEG
+T70	Diagnostic_procedure 1542 1551	angiogram
+E45	Diagnostic_procedure:T70 
+T71	Biological_structure 1533 1541	coronary
+R23	MODIFY Arg1:T71 Arg2:E45	
+T72	Lab_value 1555 1561	normal
+R24	MODIFY Arg1:T72 Arg2:E45	
+T73	Diagnostic_procedure 1578 1581	ECG
+E46	Diagnostic_procedure:T73 
+T74	Sign_symptom 1595 1606	tachycardia
+E47	Sign_symptom:T74 
+T75	Detailed_description 1589 1594	sinus
+R25	MODIFY Arg1:T75 Arg2:E47	
+T76	Sign_symptom 1654 1673	left-axis deviation
+E48	Sign_symptom:T76 
+T77	Sign_symptom 1621 1652	premature ventricular complexes
+E49	Sign_symptom:T77 
+T78	Frequency 1612 1620	frequent
+R26	MODIFY Arg1:T78 Arg2:E49	
+T79	Sign_symptom 1687 1698	enlargement
+E50	Sign_symptom:T79 
+T80	Biological_structure 1675 1686	left atrial
+R27	MODIFY Arg1:T80 Arg2:E50	
+T81	Sign_symptom 1716 1729	QRS complexes
+E51	Sign_symptom:T81 
+T82	Detailed_description 1704 1715	low-voltage
+R28	MODIFY Arg1:T82 Arg2:E51	
+T83	Sign_symptom 1747 1757	ST changes
+E52	Sign_symptom:T83 
+T84	Detailed_description 1735 1746	nonspecific
+R29	MODIFY Arg1:T84 Arg2:E52	
+T85	Diagnostic_procedure 1783 1797	echocardiogram
+E53	Diagnostic_procedure:T85 
+T86	Detailed_description 1769 1782	2-dimensional
+R30	MODIFY Arg1:T86 Arg2:E53	
+T87	Diagnostic_procedure 1809 1843	left ventricular ejection fraction
+E54	Diagnostic_procedure:T87 
+T88	Diagnostic_procedure 1845 1849	LVEF
+E55	Diagnostic_procedure:T88 
+R31	IDENTICAL Arg1:E55 Arg2:E54	
+T89	Lab_value 1854 1858	0.20
+R32	MODIFY Arg1:T89 Arg2:E54	
+T90	Sign_symptom 1897 1908	hypokinesis
+E56	Sign_symptom:T90 
+T91	Sign_symptom 1923 1930	dilated
+E57	Sign_symptom:T91 
+T92	Severity 1860 1866	severe
+T93	Biological_structure 1875 1891	left ventricular
+T94	Detailed_description 1867 1874	diffuse
+T95	Biological_structure 1893 1895	LV
+R33	IDENTICAL Arg1:T95 Arg2:T93	
+R34	MODIFY Arg1:T93 Arg2:E56	
+R35	MODIFY Arg1:T94 Arg2:E56	
+R36	MODIFY Arg1:T92 Arg2:E56	
+T96	Severity 1916 1922	mildly
+R37	MODIFY Arg1:T96 Arg2:E57	
+T97	Biological_structure 1931 1942	left atrium
+R38	MODIFY Arg1:T97 Arg2:E57	
+T98	Diagnostic_procedure 2003 2036	cardiovascular magnetic resonance
+E58	Diagnostic_procedure:T98 
+T99	Diagnostic_procedure 2038 2041	CMR
+E59	Diagnostic_procedure:T99 
+R39	IDENTICAL Arg1:E59 Arg2:E58	
+T100	Diagnostic_procedure 2075 2079	LVEF
+E60	Diagnostic_procedure:T100 
+T101	Lab_value 2083 2087	0.20
+R40	MODIFY Arg1:T101 Arg2:E60	
+T103	Diagnostic_procedure 2093 2113	T2-weighted sequence
+E62	Diagnostic_procedure:T103 
+R41	SUB_PROCEDURE Arg1:E62 Arg2:E58	
+T102	Disease_disorder 2147 2158	dysfunction
+E61	Disease_disorder:T102 
+T104	Diagnostic_procedure 2126 2130	flow
+E63	Diagnostic_procedure:T104 
+T105	Lab_value 2121 2125	slow
+R42	MODIFY Arg1:T105 Arg2:E63	
+T106	Biological_structure 2144 2146	LV
+R43	MODIFY Arg1:T106 Arg2:E61	
+T107	Sign_symptom 2178 2183	edema
+E64	Sign_symptom:T107 
+A3	POLARITY E64 NEG
+T108	Biological_structure 2167 2177	myocardial
+R44	MODIFY Arg1:T108 Arg2:E64	
+T109	Diagnostic_procedure 2199 2221	gadolinium enhancement
+E65	Diagnostic_procedure:T109 
+R45	SUB_PROCEDURE Arg1:E65 Arg2:E58	
+T110	Detailed_description 2194 2198	Late
+R46	MODIFY Arg1:T110 Arg2:E65	
+T111	Sign_symptom 2251 2259	thinning
+E66	Sign_symptom:T111 
+T112	Biological_structure 2240 2250	myocardial
+R47	MODIFY Arg1:T112 Arg2:E66	
+T113	Detailed_description 2232 2239	diffuse
+R48	MODIFY Arg1:T113 Arg2:E66	
+T114	Therapeutic_procedure 2302 2319	treated medically
+E67	Therapeutic_procedure:T114 
+T115	Sign_symptom 2325 2333	symptoms
+E68	Sign_symptom:T115 
+A4	TREND E68 DEC
+T116	Lab_value 2348 2356	improved
+R49	MODIFY Arg1:T116 Arg2:E68	
+T117	Therapeutic_procedure 2364 2371	therapy
+E69	Therapeutic_procedure:T117 
+T118	Medication 2394 2403	β-blocker
+E70	Medication:T118 
+T119	Medication 2408 2447	angiotensin-converting enzyme inhibitor
+E71	Medication:T119 
+T120	Medication 2449 2456	digoxin
+E72	Medication:T120 
+T121	Medication 2464 2472	diuretic
+E73	Medication:T121 
+T122	Coreference 2478 2485	therapy
+E74	Coreference:T122 
+A5	TREND E74 DEC
+R50	IDENTICAL Arg1:E74 Arg2:E69	
+T123	Lab_value 2497 2504	tapered
+R51	MODIFY Arg1:T123 Arg2:E74	
+T124	Diagnostic_procedure 2514 2518	LVEF
+E75	Diagnostic_procedure:T124 
+T125	Lab_value 2519 2528	increased
+R52	MODIFY Arg1:T125 Arg2:E75	
+T126	Lab_value 2534 2538	0.20
+T127	Lab_value 2542 2546	0.55
+T128	Duration 2557 2571	8-month period
+E76	Duration:T128 
+R53	MODIFY Arg1:T126 Arg2:E75	
+R54	MODIFY Arg1:T127 Arg2:E75	
+T129	Medication 2577 2588	medications
+E77	Medication:T129 
+A6	POLARITY E77 NEG
+T130	Lab_value 2625 2637	discontinued
+R55	MODIFY Arg1:T130 Arg2:E77	
+T131	Medication 2609 2619	metoprolol
+E78	Medication:T131 
+T132	Dosage 2600 2608	low-dose
+R56	MODIFY Arg1:T132 Arg2:E78	
+T133	Date 2638 2650	after 1 year
+E79	Date:T133 
+T134	Sign_symptom 2669 2681	asymptomatic
+E80	Sign_symptom:T134 
+T135	Detailed_description 63 68	acute
+R57	MODIFY Arg1:T135 Arg2:E3	
+*	OVERLAP E2 E3 E1
+R58	AFTER Arg1:E3 Arg2:E4	
+*	OVERLAP E4 E5 E6 E7 E8
+R59	AFTER Arg1:E8 Arg2:E9	
+*	OVERLAP E9 E10 E11
+R60	BEFORE Arg1:E11 Arg2:E12	
+*	OVERLAP E12 E13
+R61	BEFORE Arg1:E13 Arg2:E14	
+R62	MODIFY Arg1:T30 Arg2:E15	
+R63	MODIFY Arg1:T30 Arg2:E16	
+R64	MODIFY Arg1:T30 Arg2:E17	
+*	OVERLAP E14 E15 E16 E17
+R65	BEFORE Arg1:E17 Arg2:E18	
+*	OVERLAP E18 E19 E20
+R66	BEFORE Arg1:E20 Arg2:E21	
+*	OVERLAP E21 E22 E23
+R67	BEFORE Arg1:E23 Arg2:E24	
+R68	BEFORE Arg1:E24 Arg2:E25	
+*	OVERLAP E25 E26
+R69	BEFORE Arg1:E26 Arg2:E27	
+R70	BEFORE Arg1:E27 Arg2:E28	
+*	OVERLAP E28 E29 E30
+R71	BEFORE Arg1:E30 Arg2:E31	
+*	OVERLAP E31 E32 E33 E34 E35 E36 E37 E38 E39 E40 E41 E42 E44 E45 E46 E47 E49 E48 E50 E51 E52 E53 E54 E56 E57 E58 E60 E63 E61 E64 E66 E81
+T136	Sign_symptom 2267 2275	scarring
+E81	Sign_symptom:T136 
+A7	POLARITY E81 NEG
+R72	BEFORE Arg1:E81 Arg2:E67	
+*	OVERLAP E67 E68 E69
+R73	SUB_PROCEDURE Arg1:E70 Arg2:E69	
+R74	SUB_PROCEDURE Arg1:E71 Arg2:E69	
+R75	SUB_PROCEDURE Arg1:E72 Arg2:E69	
+R76	SUB_PROCEDURE Arg1:E73 Arg2:E69	
+R77	BEFORE Arg1:E69 Arg2:E74	
+*	OVERLAP E74 E75 E76
+R78	BEFORE Arg1:E76 Arg2:E77	
+*	OVERLAP E77 E78 E79 E80

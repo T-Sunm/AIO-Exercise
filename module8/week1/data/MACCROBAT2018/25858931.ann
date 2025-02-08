@@ -1,0 +1,321 @@
+T1	Age 15 24	early 70s
+T2	Sex 2 7	woman
+T3	Clinical_event 25 34	presented
+E1	Clinical_event:T3 
+T4	Nonbiological_location 42 56	emergency room
+R1	MODIFY Arg1:T4 Arg2:E1	
+T5	Subject 74 81	husband
+T6	Time 57 69	30 min after
+E2	Time:T6 
+T8	Sign_symptom 118 122	pain
+E3	Sign_symptom:T8 
+T9	Lab_value 95 99	8/10
+R3	MODIFY Arg1:T9 Arg2:E3	
+T10	Sign_symptom 139 150	diaphoresis
+E4	Sign_symptom:T10 
+T11	Sign_symptom 155 163	dyspnoea
+E5	Sign_symptom:T11 
+T12	Biological_structure 112 117	chest
+T13	Biological_structure 101 111	substernal
+R4	MODIFY Arg1:T13 Arg2:T12	
+R5	MODIFY Arg1:T12 Arg2:E3	
+T14	Subject 179 186	husband
+T15	Detailed_description 194 224	out-of-hospital cardiac arrest
+R6	MODIFY Arg1:T15 Arg2:T14	
+T16	Time 225 241	earlier that day
+E6	Time:T16 
+T17	Detailed_description 250 279	brought to our emergency room
+R7	MODIFY Arg1:T17 Arg2:T14	
+T18	Detailed_description 297 331	admitted to the coronary care unit
+R8	MODIFY Arg1:T18 Arg2:T14	
+T19	Coreference 333 335	He
+E7	Coreference:T19 
+R9	IDENTICAL Arg1:E7 Arg2:T14	
+T20	Detailed_description 340 374	recurrent ventricular fibrillation
+T21	Detailed_description 379 417	could not be successfully resuscitated
+R10	MODIFY Arg1:T20 Arg2:E7	
+R11	MODIFY Arg1:T21 Arg2:E7	
+T22	History 458 470	hypertension
+T23	History 495 538	denied having had a similar episode of pain
+T24	History 544 600	had regular appointments with her primary care physician
+T25	Medication 606 616	medication
+E8	Medication:T25 
+T26	Medication 631 641	furosemide
+E9	Medication:T26 
+T27	Medication 652 665	levothyroxine
+E10	Medication:T27 
+T28	Administration 626 630	oral
+T29	Dosage 642 647	20 mg
+T30	Dosage 666 672	100 µg
+R12	MODIFY Arg1:T29 Arg2:E9	
+R13	MODIFY Arg1:T30 Arg2:E10	
+T31	Dosage 679 689	once daily
+R14	MODIFY Arg1:T31 Arg2:E10	
+R15	MODIFY Arg1:T31 Arg2:E9	
+T32	History 695 711	denied allergies
+T33	Clinical_event 716 728	presentation
+E11	Clinical_event:T33 
+T34	Sign_symptom 746 754	afebrile
+E12	Sign_symptom:T34 
+T35	Diagnostic_procedure 763 777	blood pressure
+E13	Diagnostic_procedure:T35 
+T36	Lab_value 781 787	105/55
+R16	MODIFY Arg1:T36 Arg2:E13	
+T37	Diagnostic_procedure 789 799	heart rate
+E14	Diagnostic_procedure:T37 
+T38	Lab_value 803 809	93 bpm
+R17	MODIFY Arg1:T38 Arg2:E14	
+T39	Diagnostic_procedure 811 827	respiratory rate
+E15	Diagnostic_procedure:T39 
+T40	Lab_value 831 837	20/min
+R18	MODIFY Arg1:T40 Arg2:E15	
+T41	Diagnostic_procedure 845 862	oxygen saturation
+E16	Diagnostic_procedure:T41 
+T42	Lab_value 866 869	98%
+T43	Detailed_description 873 881	room air
+R19	MODIFY Arg1:T43 Arg2:E16	
+R20	MODIFY Arg1:T42 Arg2:E16	
+T44	Diagnostic_procedure 886 906	physical examination
+E17	Diagnostic_procedure:T44 
+T45	Sign_symptom 947 951	pain
+E18	Sign_symptom:T45 
+T46	Sign_symptom 931 939	distress
+E19	Sign_symptom:T46 
+R21	CAUSE Arg1:E18 Arg2:E19	
+T47	Severity 919 930	significant
+R22	MODIFY Arg1:T47 Arg2:E19	
+T48	Diagnostic_procedure 957 961	skin
+E20	Diagnostic_procedure:T48 
+T49	Lab_value 966 970	warm
+T50	Lab_value 975 980	moist
+R23	MODIFY Arg1:T49 Arg2:E20	
+R24	MODIFY Arg1:T50 Arg2:E20	
+T51	Diagnostic_procedure 1007 1022	bilateral bases
+E21	Diagnostic_procedure:T51 
+T52	Lab_value 987 1003	minimal crackles
+R25	MODIFY Arg1:T52 Arg2:E21	
+T53	Diagnostic_procedure 1032 1047	rate and rhythm
+E22	Diagnostic_procedure:T53 
+T54	Lab_value 1024 1031	regular
+R26	MODIFY Arg1:T54 Arg2:E22	
+T55	Sign_symptom 1062 1068	murmur
+E23	Sign_symptom:T55 
+T56	Lab_value 1049 1061	2/6 systolic
+R27	MODIFY Arg1:T56 Arg2:E23	
+T57	Detailed_description 1069 1098	of the apex without radiation
+R28	MODIFY Arg1:T57 Arg2:E23	
+T58	Sign_symptom 1103 1107	rubs
+E24	Sign_symptom:T58 
+A1	POLARITY E24 NEG
+T59	Sign_symptom 1131 1141	distention
+E25	Sign_symptom:T59 
+T60	Biological_structure 1118 1130	jugular vein
+R29	MODIFY Arg1:T60 Arg2:E25	
+T61	Distance 1145 1149	8 cm
+R30	MODIFY Arg1:T61 Arg2:E25	
+T62	Lab_value 1109 1117	elevated
+R31	MODIFY Arg1:T62 Arg2:E25	
+T63	Sign_symptom 1194 1200	oedema
+E26	Sign_symptom:T63 
+A2	POLARITY E26 NEG
+T64	Detailed_description 1183 1193	peripheral
+R32	MODIFY Arg1:T64 Arg2:E26	
+T65	Diagnostic_procedure 1169 1175	pulses
+E27	Diagnostic_procedure:T65 
+T66	Lab_value 1151 1157	strong
+R33	MODIFY Arg1:T66 Arg2:E27	
+T67	Detailed_description 1158 1168	peripheral
+R34	MODIFY Arg1:T67 Arg2:E27	
+T68	Diagnostic_procedure 1206 1213	abdomen
+E28	Diagnostic_procedure:T68 
+T69	Lab_value 1218 1222	soft
+T70	Lab_value 1224 1234	non-tender
+T71	Lab_value 1236 1249	non-distended
+R35	MODIFY Arg1:T69 Arg2:E28	
+R36	MODIFY Arg1:T70 Arg2:E28	
+R37	MODIFY Arg1:T71 Arg2:E28	
+T72	Lab_value 1251 1268	with bowel sounds
+R38	MODIFY Arg1:T72 Arg2:E28	
+T73	Sign_symptom 1290 1295	alert
+E29	Sign_symptom:T73 
+T74	Sign_symptom 1300 1308	oriented
+E30	Sign_symptom:T74 
+T75	Sign_symptom 1323 1344	neurological deficits
+E31	Sign_symptom:T75 
+A3	POLARITY E31 NEG
+T76	Detailed_description 1317 1322	focal
+R39	MODIFY Arg1:T76 Arg2:E31	
+T77	Diagnostic_procedure 1350 1370	complete blood count
+E32	Diagnostic_procedure:T77 
+T78	Diagnostic_procedure 1372 1393	basic metabolic panel
+E33	Diagnostic_procedure:T78 
+T79	Diagnostic_procedure 1398 1415	coagulation tests
+E34	Diagnostic_procedure:T79 
+T80	Lab_value 1421 1441	within normal limits
+R40	MODIFY Arg1:T80 Arg2:E34	
+R41	MODIFY Arg1:T80 Arg2:E33	
+R42	MODIFY Arg1:T80 Arg2:E32	
+T81	Diagnostic_procedure 1447 1462	cardiac enzymes
+E35	Diagnostic_procedure:T81 
+T82	Lab_value 1468 1477	increased
+R43	MODIFY Arg1:T82 Arg2:E35	
+T83	Diagnostic_procedure 1485 1495	troponin I
+E36	Diagnostic_procedure:T83 
+T84	Lab_value 1499 1509	2.59 ng/mL
+T85	Diagnostic_procedure 1544 1566	creatine phosphokinase
+E37	Diagnostic_procedure:T85 
+T86	Lab_value 1570 1576	84 U/L
+R44	MODIFY Arg1:T86 Arg2:E37	
+T87	Diagnostic_procedure 1604 1607	ECG
+E38	Diagnostic_procedure:T87 
+T88	Clinical_event 1611 1620	admission
+E39	Clinical_event:T88 
+T89	Clinical_event 2188 2193	taken
+E40	Clinical_event:T89 
+T90	Nonbiological_location 2201 2235	cardiac catheterisation laboratory
+R45	MODIFY Arg1:T90 Arg2:E40	
+T91	Diagnostic_procedure 1637 1649	sinus rhythm
+E41	Diagnostic_procedure:T91 
+T92	Lab_value 1630 1636	normal
+R46	MODIFY Arg1:T92 Arg2:E41	
+T93	Lab_value 1655 1698	2–3 mm ST segment elevations in leads V2–V3
+T94	Lab_value 1703 1725	Q waves in leads V1–V3
+R47	MODIFY Arg1:T93 Arg2:E41	
+R48	MODIFY Arg1:T94 Arg2:E41	
+T95	Disease_disorder 1755 1762	infarct
+E42	Disease_disorder:T95 
+A4	POLARITY E42 MAYBE_POS
+T96	Biological_structure 1741 1754	anterior wall
+R49	MODIFY Arg1:T96 Arg2:E42	
+T97	Diagnostic_procedure 1778 1792	echocardiogram
+E43	Diagnostic_procedure:T97 
+T98	Diagnostic_procedure 1802 1836	left ventricular ejection fraction
+E44	Diagnostic_procedure:T98 
+T99	Lab_value 1840 1846	30–35%
+R50	MODIFY Arg1:T99 Arg2:E44	
+T100	Sign_symptom 1885 1896	hypertrophy
+E45	Sign_symptom:T100 
+T101	Biological_structure 1868 1884	left ventricular
+T102	Detailed_description 1857 1867	concentric
+T103	Severity 1852 1856	mild
+R51	MODIFY Arg1:T101 Arg2:E45	
+R52	MODIFY Arg1:T102 Arg2:E45	
+R53	MODIFY Arg1:T103 Arg2:E45	
+T104	Sign_symptom 1898 1906	akinesis
+E46	Sign_symptom:T104 
+T105	Biological_structure 1914 1918	apex
+R54	MODIFY Arg1:T105 Arg2:E46	
+T106	Biological_structure 1923 1946	2/3 of the inferoseptum
+R55	MODIFY Arg1:T106 Arg2:E46	
+T107	Biological_structure 1951 1989	apical inferior-anterior wall segments
+R56	MODIFY Arg1:T107 Arg2:E46	
+T108	Sign_symptom 2002 2018	ischaemic damage
+E47	Sign_symptom:T108 
+A5	POLARITY E47 MAYBE_POS
+T109	Biological_structure 2026 2057	left anterior descending artery
+R57	MODIFY Arg1:T109 Arg2:E47	
+T110	Disease_disorder 2078 2102	takotsubo cardiomyopathy
+E48	Disease_disorder:T110 
+A6	POLARITY E48 MAYBE_POS
+T111	Medication 2144 2151	aspirin
+E49	Medication:T111 
+T112	Medication 2163 2172	prasugrel
+E50	Medication:T112 
+T113	Dosage 2152 2158	162 mg
+T114	Dosage 2173 2178	60 mg
+R58	MODIFY Arg1:T114 Arg2:E50	
+R59	MODIFY Arg1:T113 Arg2:E49	
+T115	Diagnostic_procedure 2241 2250	angiogram
+E51	Diagnostic_procedure:T115 
+T116	Disease_disorder 2274 2297	coronary artery disease
+E52	Disease_disorder:T116 
+T117	Detailed_description 2258 2273	non-obstructive
+R60	MODIFY Arg1:T117 Arg2:E52	
+T118	Sign_symptom 2311 2325	irregularities
+E53	Sign_symptom:T118 
+T119	Biological_structure 2303 2310	luminal
+R61	MODIFY Arg1:T119 Arg2:E53	
+T120	Diagnostic_procedure 2350 2371	left ventriculography
+E54	Diagnostic_procedure:T120 
+T121	Diagnostic_procedure 2382 2399	ejection fraction
+E55	Diagnostic_procedure:T121 
+T122	Lab_value 2403 2406	35%
+R62	MODIFY Arg1:T122 Arg2:E55	
+T123	Sign_symptom 2412 2420	akinesis
+E56	Sign_symptom:T123 
+T124	Biological_structure 2424 2435	apical wall
+R63	MODIFY Arg1:T124 Arg2:E56	
+T125	Sign_symptom 2440 2452	hyperkinesis
+E57	Sign_symptom:T125 
+T126	Biological_structure 2456 2470	basal segments
+R64	MODIFY Arg1:T126 Arg2:E57	
+T127	Diagnostic_procedure 2511 2527	haemodynamically
+E58	Diagnostic_procedure:T127 
+T128	Lab_value 2528 2534	stable
+R65	MODIFY Arg1:T128 Arg2:E58	
+T129	Medication 2559 2584	heart failure medications
+E59	Medication:T129 
+T130	Administration 2554 2558	oral
+R66	MODIFY Arg1:T130 Arg2:E59	
+T131	Medication 2596 2606	lisinopril
+E60	Medication:T131 
+T132	Dosage 2607 2619	2.5 mg daily
+T133	Medication 2624 2643	metoprolol tartrate
+E61	Medication:T133 
+T134	Dosage 2644 2667	12.5 mg two times a day
+R67	MODIFY Arg1:T134 Arg2:E61	
+R68	MODIFY Arg1:T132 Arg2:E60	
+R69	SUB_PROCEDURE Arg1:E60 Arg2:E59	
+R70	SUB_PROCEDURE Arg1:E61 Arg2:E59	
+T135	Sign_symptom 2673 2677	pain
+E62	Sign_symptom:T135 
+A7	POLARITY E62 NEG
+T136	Sign_symptom 2682 2701	shortness of breath
+E63	Sign_symptom:T136 
+A8	POLARITY E63 NEG
+T137	Clinical_event 2723 2733	discharged
+E64	Clinical_event:T137 
+T138	Nonbiological_location 2734 2738	home
+R71	MODIFY Arg1:T138 Arg2:E64	
+T139	Date 2739 2749	after 48 h
+E65	Date:T139 
+T140	Diagnostic_procedure 2779 2788	condition
+E66	Diagnostic_procedure:T140 
+T141	Lab_value 2772 2778	stable
+R72	MODIFY Arg1:T141 Arg2:E66	
+T142	Diagnostic_procedure 2799 2813	echocardiogram
+E67	Diagnostic_procedure:T142 
+T143	Date 2814 2828	2 months later
+E68	Date:T143 
+T144	Disease_disorder 2854 2868	cardiomyopathy
+E69	Disease_disorder:T144 
+A9	POLARITY E69 NEG
+T145	Diagnostic_procedure 2876 2893	ejection fraction
+E70	Diagnostic_procedure:T145 
+T146	Lab_value 2897 2903	65–70%
+R73	MODIFY Arg1:T146 Arg2:E70	
+T147	Diagnostic_procedure 2917 2940	left ventricular motion
+E71	Diagnostic_procedure:T147 
+T148	Lab_value 2910 2916	normal
+R74	MODIFY Arg1:T148 Arg2:E71	
+*	OVERLAP E1 E2
+T7	Outcome 82 89	expired
+E72	Outcome:T7 
+R2	MODIFY Arg1:T5 Arg2:E72	
+R75	AFTER Arg1:E2 Arg2:E72	
+R76	BEFORE Arg1:E72 Arg2:E3	
+*	OVERLAP E3 E4 E5 E8 E11 E12 E13 E14 E15 E16 E17 E19 E18 E20 E21 E22 E23 E24 E25 E27 E26 E28 E29 E30 E31 E32 E33 E34 E35 E36 E37 E38 E39 E41 E42 E43 E44 E45 E46 E47 E48
+R77	SUB_PROCEDURE Arg1:E9 Arg2:E8	
+R78	SUB_PROCEDURE Arg1:E10 Arg2:E8	
+R79	MODIFY Arg1:T84 Arg2:E36	
+R80	BEFORE Arg1:E48 Arg2:E49	
+*	OVERLAP E49 E50
+R81	BEFORE Arg1:E50 Arg2:E40	
+*	OVERLAP E40 E51 E52 E53 E54 E55 E56 E57
+R82	BEFORE Arg1:E57 Arg2:E58	
+*	OVERLAP E58 E59
+R83	BEFORE Arg1:E59 Arg2:E62	
+*	OVERLAP E62 E63 E64 E65 E66
+R84	BEFORE Arg1:E66 Arg2:E67	
+*	OVERLAP E67 E68 E69 E70 E71
+T149	History 475 489	hypothyroidism

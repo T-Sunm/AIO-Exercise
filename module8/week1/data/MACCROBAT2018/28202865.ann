@@ -1,0 +1,420 @@
+T1	Age 18 29	48-year-old
+T2	Sex 30 33	man
+T3	Clinical_event 58 70	hospitalized
+E1	Clinical_event:T3 
+T4	Sign_symptom 78 88	hemoptysis
+E2	Sign_symptom:T4 
+T5	Date 89 107	at 42 years of age
+E3	Date:T5 
+T6	Diagnostic_procedure 131 141	radiograph
+E4	Diagnostic_procedure:T6 
+T7	Biological_structure 125 130	chest
+T8	Biological_structure 146 151	chest
+T9	Diagnostic_procedure 152 171	computed tomography
+E5	Diagnostic_procedure:T9 
+T10	Diagnostic_procedure 173 175	CT
+E6	Diagnostic_procedure:T10 
+R1	IDENTICAL Arg1:E6 Arg2:E5	
+T11	Sign_symptom 194 214	ground-glass opacity
+E7	Sign_symptom:T11 
+T12	Detailed_description 186 193	diffuse
+R2	MODIFY Arg1:T12 Arg2:E7	
+T13	Sign_symptom 216 219	GGO
+E8	Sign_symptom:T13 
+R3	IDENTICAL Arg1:E8 Arg2:E7	
+T14	Biological_structure 228 242	bilateral lung
+R4	MODIFY Arg1:T14 Arg2:E7	
+T15	Diagnostic_procedure 267 292	bronchoscopic examination
+E9	Diagnostic_procedure:T15 
+T16	Sign_symptom 306 318	accumulation
+E10	Sign_symptom:T16 
+T17	Detailed_description 339 344	blood
+R5	MODIFY Arg1:T17 Arg2:E10	
+T18	Severity 322 335	large amounts
+R6	MODIFY Arg1:T18 Arg2:E10	
+T19	Biological_structure 352 359	trachea
+T20	Biological_structure 364 371	bronchi
+R7	MODIFY Arg1:T19 Arg2:E10	
+R8	MODIFY Arg1:T20 Arg2:E10	
+T21	Diagnostic_procedure 395 423	bronchoalveolar lavage fluid
+E11	Diagnostic_procedure:T21 
+T22	Diagnostic_procedure 425 429	BALF
+E12	Diagnostic_procedure:T22 
+R9	IDENTICAL Arg1:E12 Arg2:E11	
+T23	Lab_value 435 441	bloody
+E13	Lab_value:T23 
+T24	Lab_value 465 494	hemosiderin-laden macrophages
+E14	Lab_value:T24 
+R10	MODIFY Arg1:E14 Arg2:E11	
+T25	Diagnostic_procedure 498 510	culture test
+E15	Diagnostic_procedure:T25 
+T26	Diagnostic_procedure 518 522	BALF
+E16	Diagnostic_procedure:T26 
+R11	SUB_PROCEDURE Arg1:E15 Arg2:E16	
+T27	Lab_value 532 543	no findings
+E17	Lab_value:T27 
+R12	MODIFY Arg1:E17 Arg2:E15	
+T28	Diagnostic_procedure 548 565	electrocardiogram
+E18	Diagnostic_procedure:T28 
+T29	Diagnostic_procedure 584 598	echocardiogram
+E19	Diagnostic_procedure:T29 
+T30	Biological_structure 570 583	transthoracic
+R13	MODIFY Arg1:T30 Arg2:E19	
+T31	Lab_value 608 624	no abnormalities
+E20	Lab_value:T31 
+R14	MODIFY Arg1:E20 Arg2:E19	
+R15	MODIFY Arg1:E20 Arg2:E18	
+T32	Family_history 790 845	younger brother who had been diagnosed with hepatitis C
+T33	Subject 790 805	younger brother
+T34	Disease_disorder 834 845	hepatitis C
+E21	Disease_disorder:T34 
+R16	MODIFY Arg1:T33 Arg2:E21	
+T35	Sign_symptom 703 722	hemorrhagic episode
+E22	Sign_symptom:T35 
+T36	Other_event 628 641	questionnaire
+E23	Other_event:T36 
+T37	Medication 884 889	drugs
+E24	Medication:T37 
+A1	POLARITY E24 NEG
+T38	Detailed_description 903 925	potential to cause DAH
+R17	MODIFY Arg1:T38 Arg2:E24	
+T39	Disease_disorder 971 974	DAH
+E25	Disease_disorder:T39 
+#1	AnnotatorNotes E25	Diffuse alveolar hemorrhage
+T40	Disease_disorder 995 1005	vasculitis
+E26	Disease_disorder:T40 
+A2	POLARITY E26 UNCERTAIN
+R18	CAUSE Arg1:E26 Arg2:E25	
+T41	Medication 1064 1082	methylprednisolone
+E27	Medication:T41 
+T42	Dosage 1084 1098	1,000 mg daily
+R19	MODIFY Arg1:T42 Arg2:E27	
+T43	Administration 1052 1063	intravenous
+R20	MODIFY Arg1:T43 Arg2:E27	
+T44	Duration 1104 1110	3 days
+E28	Duration:T44 
+T45	Medication 1123 1135	prednisolone
+E29	Medication:T45 
+T46	Dosage 1137 1148	25 mg daily
+R21	MODIFY Arg1:T46 Arg2:E29	
+T47	Sign_symptom 1183 1191	symptoms
+E30	Sign_symptom:T47 
+A3	POLARITY E30 NEG
+T48	Diagnostic_procedure 1199 1201	CT
+E31	Diagnostic_procedure:T48 
+T49	Biological_structure 1193 1198	Chest
+R22	MODIFY Arg1:T49 Arg2:E31	
+T50	Sign_symptom 1231 1234	GGO
+E32	Sign_symptom:T50 
+A4	POLARITY E32 NEG
+T51	Medication 1250 1262	prednisolone
+E33	Medication:T51 
+T52	Dosage 1272 1279	tapered
+T53	Dosage 1295 1307	discontinued
+R23	MODIFY Arg1:T52 Arg2:E33	
+R24	MODIFY Arg1:T53 Arg2:E33	
+T54	Date 1311 1331	two-and-a-half years
+E34	Date:T54 
+T55	Clinical_event 1342 1351	discharge
+E35	Clinical_event:T55 
+T56	Nonbiological_location 1361 1369	hospital
+R25	MODIFY Arg1:T56 Arg2:E35	
+T57	Clinical_event 1387 1397	readmitted
+E36	Clinical_event:T57 
+T58	Nonbiological_location 1405 1413	hospital
+R26	MODIFY Arg1:T58 Arg2:E36	
+T59	Sign_symptom 1435 1445	hemoptysis
+E37	Sign_symptom:T59 
+T60	Date 1446 1464	at 46 years of age
+E38	Date:T60 
+T62	Medication 1557 1569	prednisolone
+E40	Medication:T62 
+T63	Dosage 1579 1586	tapered
+T64	Dosage 1592 1603	60 mg daily
+T65	Dosage 1629 1639	5 mg daily
+R27	MODIFY Arg1:T63 Arg2:E40	
+R28	MODIFY Arg1:T64 Arg2:E40	
+R29	MODIFY Arg1:T65 Arg2:E40	
+T66	Date 1641 1659	At 48 years of age
+E41	Date:T66 
+T67	Clinical_event 1668 1678	readmitted
+E42	Clinical_event:T67 
+T68	Nonbiological_location 1686 1694	hospital
+R30	MODIFY Arg1:T68 Arg2:E42	
+T69	Sign_symptom 1724 1734	hemoptysis
+E43	Sign_symptom:T69 
+T70	Medication 1758 1765	steroid
+E44	Medication:T70 
+T71	Disease_disorder 1774 1791	diabetes mellitus
+E45	Disease_disorder:T71 
+R31	CAUSE Arg1:E44 Arg2:E45	
+T72	Medication 1816 1827	glimepiride
+E46	Medication:T72 
+T73	Dosage 1829 1839	3 mg daily
+R32	MODIFY Arg1:T73 Arg2:E46	
+T74	Clinical_event 1845 1854	admission
+E47	Clinical_event:T74 
+T75	Diagnostic_procedure 1860 1866	weight
+E48	Diagnostic_procedure:T75 
+T76	Lab_value 1871 1876	75 kg
+E49	Lab_value:T76 
+T77	Diagnostic_procedure 1881 1887	height
+E50	Diagnostic_procedure:T77 
+T78	Lab_value 1888 1894	167 cm
+E51	Lab_value:T78 
+R33	MODIFY Arg1:E49 Arg2:E48	
+R34	MODIFY Arg1:E51 Arg2:E50	
+T79	Diagnostic_procedure 1900 1911	vital signs
+E52	Diagnostic_procedure:T79 
+T80	Diagnostic_procedure 1929 1943	blood pressure
+E53	Diagnostic_procedure:T80 
+T81	Lab_value 1945 1957	178/102 mmHg
+E54	Lab_value:T81 
+R35	MODIFY Arg1:E54 Arg2:E53	
+T82	Diagnostic_procedure 1959 1969	pulse rate
+E55	Diagnostic_procedure:T82 
+T83	Lab_value 1971 1984	109 beats/min
+E56	Lab_value:T83 
+R36	MODIFY Arg1:E56 Arg2:E55	
+T84	Diagnostic_procedure 1986 2000	pulse oximetry
+E57	Diagnostic_procedure:T84 
+T85	Lab_value 2002 2005	97%
+E58	Lab_value:T85 
+T86	Detailed_description 2009 2017	room air
+R37	MODIFY Arg1:T86 Arg2:E57	
+R38	MODIFY Arg1:E58 Arg2:E57	
+T87	Diagnostic_procedure 2023 2039	body temperature
+E59	Diagnostic_procedure:T87 
+T88	Lab_value 2041 2047	36.8°C
+E60	Lab_value:T88 
+R39	MODIFY Arg1:E60 Arg2:E59	
+R40	SUB_PROCEDURE Arg1:E53 Arg2:E52	
+R41	SUB_PROCEDURE Arg1:E55 Arg2:E52	
+R42	SUB_PROCEDURE Arg1:E57 Arg2:E52	
+R43	SUB_PROCEDURE Arg1:E59 Arg2:E52	
+T89	Diagnostic_procedure 2055 2067	auscultation
+E61	Diagnostic_procedure:T89 
+T90	Biological_structure 2049 2054	Chest
+R44	MODIFY Arg1:T90 Arg2:E61	
+T91	Sign_symptom 2082 2090	crackles
+E62	Sign_symptom:T91 
+T92	Detailed_description 2077 2081	fine
+R45	MODIFY Arg1:T92 Arg2:E62	
+T93	Biological_structure 2098 2108	right lung
+R46	MODIFY Arg1:T93 Arg2:E62	
+T94	Sign_symptom 2124 2128	rash
+E63	Sign_symptom:T94 
+A5	POLARITY E63 NEG
+T95	Biological_structure 2119 2123	skin
+R47	MODIFY Arg1:T95 Arg2:E63	
+T96	Sign_symptom 2143 2151	bleeding
+E64	Sign_symptom:T96 
+A6	POLARITY E64 NEG
+T97	Sign_symptom 2161 2169	swelling
+E65	Sign_symptom:T97 
+A7	POLARITY E65 NEG
+T98	Biological_structure 2155 2160	joint
+T99	Biological_structure 2130 2142	subcutaneous
+R48	MODIFY Arg1:T99 Arg2:E64	
+R49	MODIFY Arg1:T98 Arg2:E65	
+T100	Diagnostic_procedure 2192 2202	radiograph
+E66	Diagnostic_procedure:T100 
+T101	Biological_structure 2186 2191	chest
+T102	Diagnostic_procedure 2207 2209	CT
+E67	Diagnostic_procedure:T102 
+R50	MODIFY Arg1:T101 Arg2:E66	
+R51	MODIFY Arg1:T101 Arg2:E67	
+T103	Sign_symptom 2241 2244	GGO
+E68	Sign_symptom:T103 
+T104	Detailed_description 2233 2240	diffuse
+R52	MODIFY Arg1:T104 Arg2:E68	
+T105	Biological_structure 2252 2266	bilateral lung
+R53	MODIFY Arg1:T105 Arg2:E68	
+T106	Sign_symptom 2280 2286	anemia
+E69	Sign_symptom:T106 
+T107	Severity 2275 2279	Mild
+R54	MODIFY Arg1:T107 Arg2:E69	
+T108	Diagnostic_procedure 2301 2311	hemoglobin
+E70	Diagnostic_procedure:T108 
+T109	Lab_value 2313 2322	11.3 g/dL
+E71	Lab_value:T109 
+R55	BEFORE Arg1:E71 Arg2:E70	
+T110	Diagnostic_procedure 2334 2344	hemoglobin
+E72	Diagnostic_procedure:T110 
+T111	Lab_value 2361 2370	14.6 g/dL
+E73	Lab_value:T111 
+R56	MODIFY Arg1:E73 Arg2:E72	
+T112	Diagnostic_procedure 2408 2445	activated partial thromboplastin time
+E74	Diagnostic_procedure:T112 
+T113	Diagnostic_procedure 2447 2451	APTT
+E75	Diagnostic_procedure:T113 
+R57	IDENTICAL Arg1:E75 Arg2:E74	
+T114	Lab_value 2470 2482	53.5 seconds
+E76	Lab_value:T114 
+T115	Lab_value 2457 2466	prolonged
+E77	Lab_value:T115 
+R58	MODIFY Arg1:E77 Arg2:E74	
+R59	MODIFY Arg1:E76 Arg2:E74	
+T116	Sign_symptom 2384 2394	hemoptysis
+E78	Sign_symptom:T116 
+T117	Diagnostic_procedure 2518 2534	Laboratory tests
+E79	Diagnostic_procedure:T117 
+T118	Diagnostic_procedure 2561 2574	blood glucose
+E80	Diagnostic_procedure:T118 
+T119	Diagnostic_procedure 2579 2593	hemoglobin A1c
+E81	Diagnostic_procedure:T119 
+T120	Lab_value 2606 2615	299 mg/dL
+E82	Lab_value:T120 
+T121	Lab_value 2620 2624	8.2%
+E83	Lab_value:T121 
+R60	MODIFY Arg1:E82 Arg2:E80	
+R61	MODIFY Arg1:E83 Arg2:E81	
+T122	Disease_disorder 2667 2684	diabetes mellitus
+E84	Disease_disorder:T122 
+T123	Medication 2651 2658	steroid
+E85	Medication:T123 
+R62	CAUSE Arg1:E85 Arg2:E84	
+T124	Diagnostic_procedure 2686 2730	Autoantibodies for various collagen diseases
+E86	Diagnostic_procedure:T124 
+T125	Lab_value 2736 2744	negative
+E87	Lab_value:T125 
+R63	MODIFY Arg1:E87 Arg2:E86	
+T126	Disease_disorder 2800 2803	DAH
+E88	Disease_disorder:T126 
+T127	Medication 2849 2867	methylprednisolone
+E89	Medication:T127 
+T128	Administration 2837 2848	intravenous
+T129	Duration 2872 2878	3 days
+E90	Duration:T129 
+T130	Dosage 2827 2836	high-dose
+R64	MODIFY Arg1:T128 Arg2:E89	
+R65	MODIFY Arg1:T130 Arg2:E89	
+T131	Medication 2892 2904	prednisolone
+E91	Medication:T131 
+T132	Dosage 2906 2917	60 mg daily
+R66	MODIFY Arg1:T132 Arg2:E91	
+T61	Diagnostic_procedure 1542 1551	condition
+E39	Diagnostic_procedure:T61 
+T133	Lab_value 1523 1534	improvement
+E92	Lab_value:T133 
+R67	MODIFY Arg1:E92 Arg2:E39	
+T134	Diagnostic_procedure 2924 2933	condition
+E93	Diagnostic_procedure:T134 
+T135	Lab_value 2934 2942	improved
+E94	Lab_value:T135 
+R68	MODIFY Arg1:E94 Arg2:E93	
+T136	Date 3077 3108	as an elementary school student
+E95	Date:T136 
+T137	Clinical_event 3122 3134	hospitalized
+E96	Clinical_event:T137 
+T138	History 3077 3134	as an elementary school student, he had been hospitalized
+T139	History 3139 3235	had received blood transfusions twice following abnormally heavy bleeding after tooth extraction
+T140	Therapeutic_procedure 3152 3170	blood transfusions
+E97	Therapeutic_procedure:T140 
+T141	Quantitative_concept 3171 3176	twice
+R69	MODIFY Arg1:T141 Arg2:E97	
+T142	Disease_disorder 3204 3212	bleeding
+E98	Disease_disorder:T142 
+T143	Severity 3187 3203	abnormally heavy
+R70	MODIFY Arg1:T143 Arg2:E98	
+T144	Therapeutic_procedure 3219 3235	tooth extraction
+E99	Therapeutic_procedure:T144 
+R71	CAUSE Arg1:E99 Arg2:E98	
+T145	Date 3309 3321	at that time
+E100	Date:T145 
+T146	Disease_disorder 3268 3285	bleeding disorder
+E101	Disease_disorder:T146 
+A8	POLARITY E101 UNCERTAIN
+T147	Detailed_description 3257 3267	congenital
+R72	MODIFY Arg1:T147 Arg2:E101	
+T148	Family_history 3353 3424	younger brother had been diagnosed with hemophilia B during adolescence
+T149	Subject 3353 3368	younger brother
+T150	Disease_disorder 3393 3405	hemophilia B
+E102	Disease_disorder:T150 
+R73	MODIFY Arg1:T149 Arg2:E102	
+T151	Disease_disorder 3457 3467	hemophilia
+E103	Disease_disorder:T151 
+A9	POLARITY E103 UNCERTAIN
+T152	Diagnostic_procedure 3473 3498	blood coagulation factors
+E104	Diagnostic_procedure:T152 
+T153	Diagnostic_procedure 3533 3551	factor IX activity
+E105	Diagnostic_procedure:T153 
+T154	Lab_value 3556 3558	3%
+E106	Lab_value:T154 
+R74	MODIFY Arg1:E106 Arg2:E105	
+R75	SUB_PROCEDURE Arg1:E105 Arg2:E104	
+T155	Disease_disorder 3613 3625	hemophilia B
+E107	Disease_disorder:T155 
+T156	Severity 3604 3612	moderate
+R76	MODIFY Arg1:T156 Arg2:E107	
+T157	Disease_disorder 3672 3675	DAH
+E108	Disease_disorder:T157 
+A10	POLARITY E108 NEG
+T158	Medication 3706 3728	corticosteroid therapy
+E109	Medication:T158 
+T159	Medication 3780 3792	prednisolone
+E110	Medication:T159 
+T160	Medication 3808 3849	coagulation factor IX replacement therapy
+E111	Medication:T160 
+A11	POLARITY E111 NEG
+T161	Disease_disorder 3868 3871	DAH
+E112	Disease_disorder:T161 
+A12	POLARITY E112 NEG
+T162	Sign_symptom 3875 3895	hemorrhagic symptoms
+E113	Sign_symptom:T162 
+A13	POLARITY E113 NEG
+T163	Duration 3915 3929	during 3 years
+E114	Duration:T163 
+T164	Medication 3972 3984	prednisolone
+E115	Medication:T164 
+A14	POLARITY E115 NEG
+*	OVERLAP E1 E2 E3 E4 E5 E7 E9 E10 E11 E15 E18 E19 E23 E116 E22
+R77	MODIFY Arg1:T7 Arg2:E4	
+R78	MODIFY Arg1:T8 Arg2:E5	
+R79	MODIFY Arg1:E13 Arg2:E11	
+T165	Date 661 673	at that time
+E116	Date:T165 
+R80	AFTER Arg1:E22 Arg2:E21	
+R81	BEFORE Arg1:E21 Arg2:E24	
+R82	BEFORE Arg1:E24 Arg2:E25	
+*	OVERLAP E25 E26
+R83	BEFORE Arg1:E26 Arg2:E27	
+R84	MODIFY Arg1:E28 Arg2:E27	
+R85	BEFORE Arg1:E27 Arg2:E29	
+R86	BEFORE Arg1:E29 Arg2:E30	
+*	OVERLAP E30 E31 E32
+R87	BEFORE Arg1:E32 Arg2:E33	
+*	OVERLAP E33 E34
+R88	AFTER Arg1:E34 Arg2:E35	
+R89	BEFORE Arg1:E35 Arg2:E36	
+*	OVERLAP E36 E37 E38
+R90	BEFORE Arg1:E38 Arg2:E39	
+R91	BEFORE Arg1:E39 Arg2:E40	
+R92	BEFORE Arg1:E40 Arg2:E41	
+*	OVERLAP E41 E42 E43
+R93	BEFORE Arg1:E43 Arg2:E45	
+R94	BEFORE Arg1:E45 Arg2:E46	
+*	OVERLAP E46 E47 E48 E50 E52 E61 E62 E63 E64 E65 E66 E67 E68 E69 E70
+R95	AFTER Arg1:E70 Arg2:E72	
+R96	BEFORE Arg1:E72 Arg2:E78	
+R97	BEFORE Arg1:E78 Arg2:E74	
+*	OVERLAP E74 E79 E85 E84 E86 E88
+R98	SUB_PROCEDURE Arg1:E80 Arg2:E79	
+R99	SUB_PROCEDURE Arg1:E81 Arg2:E79	
+R100	MODIFY Arg1:E90 Arg2:E89	
+R101	BEFORE Arg1:E88 Arg2:E89	
+R102	BEFORE Arg1:E89 Arg2:E91	
+R103	BEFORE Arg1:E91 Arg2:E93	
+R104	AFTER Arg1:E93 Arg2:E95	
+*	OVERLAP E95 E96 E97 E98 E99 E101 E100 E102
+R105	BEFORE Arg1:E102 Arg2:E103	
+*	OVERLAP E103 E104
+R106	BEFORE Arg1:E104 Arg2:E107	
+*	OVERLAP E107 E108 E109
+R107	BEFORE Arg1:E109 Arg2:E110	
+*	OVERLAP E110 E111
+R108	BEFORE Arg1:E111 Arg2:E112	
+*	OVERLAP E112 E113
+R109	MODIFY Arg1:E114 Arg2:E113	
+R110	MODIFY Arg1:E114 Arg2:E112	
+R111	AFTER Arg1:E113 Arg2:E115	

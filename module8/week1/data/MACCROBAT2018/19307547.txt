@@ -1,0 +1,25 @@
+A newborn boy of healthy nonconsanguineous parents was delivered at 37 weeks’ gestation by cesarean section.
+His mother (primipara, 32 years old) had been admitted to our hospital 2 weeks previously because of reduced fetal intrauterine movements and polyhydramnios.
+The child’s birthweight was 2,330 g (<10th percentile), length 47 cm, and head circumference 33.2 cm (25th percentile).
+He had low-set ears and bilateral clubfoot.
+Apgar scores were 2, 6, and 7 at 1, 5, and 10 minutes.
+The child presented with severe hypotonia and generalized muscle weakness, requiring ventilatory assistance and total parenteral nutrition.
+Weaning failed because of inadequate pulmonary ventilation and respiratory acidosis.
+Hearing loss was detected by auditory evoked potentials, while cranial MRI showed mildly enlarged ventricles and liquor spaces.
+Two days after birth, the infant presented with severe abdominal distension with a hypoactive bowel.
+MRI revealed marked intestinal dilation without mechanical obstruction.
+Laboratory investigations showed hypoglycemia (27 mg/dL), hypomagnesemia (0.58 mmol/L), and hypokalemia (2.4 mmol/L).
+Blood lactate was normal (1.3 mmol/L, normal range 0.5–2.2 mmol/L) and liver enzymes were unremarkable.
+A skeletal muscle biopsy was performed and showed scattered, hypertrophic cytochrome c oxidase (COX)-deficient and succinate dehydrogenase–positive muscle fibers (figure), suggesting a mitochondrial disorder.
+Molecular genetic studies revealed marked mtDNA depletion in muscle (93% decrease as compared to age-matched controls), while a screen for mtDNA rearrangements within individual COX-positive and COX-deficient fibers4 was negative.
+We sequenced the entire coding region and intron-exon boundaries of the POLG1 gene, identifying two reported heterozygous missense mutations in compound c.679C>T predicting p.R227W and c.2542G>A predicting p.G848S.
+Sequencing of parental samples confirmed recessive inheritance.
+The infant died at 20 days of respiratory failure.
+At autopsy, the brain did not show remarkable changes on gross examination.
+Histology was not informative due to poor preservation of tissue; there was no evidence of neuronal damage in the spinal cord.
+The liver showed diffuse cholestasis, consistent with total parenteral nutrition; hepatocyte steatosis, necrosis, or liver fibrosis were not observed.
+The testicles were undescended, while remaining visceral organs were normal except for a marked dilation and thinning of the bowel wall.
+Despite normal histology, analysis of stomach, ileum, and colon homogenates revealed severe mtDNA depletion (up to 94% decrease; table e-1 on the Neurology® Web site at www.neurology.org).
+Laser capture microdissection analysis5 revealed that the mtDNA depletion was confined to the muscularis propria, being most prominent in its external layer (figure).
+Ganglion cells from the myenteric plexus showed milder mtDNA depletion, restricted to the small intestine (figure).
+There was no mtDNA depletion in liver (not shown).

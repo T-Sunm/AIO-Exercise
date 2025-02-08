@@ -1,0 +1,475 @@
+T1	Age 2 13	53-year-old
+T2	Sex 14 17	man
+T3	Clinical_event 18 22	came
+E1	Clinical_event:T3 
+T4	Nonbiological_location 30 38	hospital
+R1	MODIFY Arg1:T4 Arg2:E1	
+T5	Disease_disorder 72 85	heart failure
+E2	Disease_disorder:T5 
+T6	Detailed_description 66 71	acute
+R2	MODIFY Arg1:T6 Arg2:E2	
+T7	Duration 94 108	2-week history
+E3	Duration:T7 
+T8	Sign_symptom 124 138	breathlessness
+E4	Sign_symptom:T8 
+T9	Detailed_description 112 123	progressive
+R3	MODIFY Arg1:T9 Arg2:E4	
+A1	TREND E4 INC
+T10	Sign_symptom 175 184	abscesses
+E5	Sign_symptom:T10 
+T11	Disease_disorder 196 206	dermatitis
+E6	Disease_disorder:T11 
+T12	Detailed_description 189 195	atopic
+R4	MODIFY Arg1:T12 Arg2:E6	
+T13	Biological_structure 170 174	skin
+T14	Frequency 160 169	recurrent
+R5	MODIFY Arg1:T14 Arg2:E5	
+R6	MODIFY Arg1:T13 Arg2:E5	
+T15	History 149 184	history of recurrent skin abscesses
+T16	History 189 206	atopic dermatitis
+T17	Clinical_event 221 228	visited
+E7	Clinical_event:T17 
+T18	Frequency 211 220	regularly
+R7	MODIFY Arg1:T18 Arg2:E7	
+T19	Nonbiological_location 231 244	dermatologist
+R8	MODIFY Arg1:T19 Arg2:E7	
+T20	Clinical_event 265 273	arriving
+E8	Clinical_event:T20 
+T21	Nonbiological_location 281 289	hospital
+R9	MODIFY Arg1:T21 Arg2:E8	
+T22	Sign_symptom 312 316	warm
+E9	Sign_symptom:T22 
+T23	Sign_symptom 321 324	dry
+E10	Sign_symptom:T23 
+T24	Biological_structure 295 306	extremities
+R10	MODIFY Arg1:T24 Arg2:E9	
+R11	MODIFY Arg1:T24 Arg2:E10	
+T25	Diagnostic_procedure 343 378	New York Heart Association criteria
+E11	Diagnostic_procedure:T25 
+T27	Disease_disorder 397 421	congestive heart failure
+E12	Disease_disorder:T27 
+T28	Disease_disorder 423 426	CHF
+E13	Disease_disorder:T28 
+R13	IDENTICAL Arg1:E13 Arg2:E12	
+T29	Diagnostic_procedure 432 449	electrocardiogram
+E14	Diagnostic_procedure:T29 
+T30	Nonbiological_location 252 260	hospital
+R14	MODIFY Arg1:T30 Arg2:E7	
+T26	Lab_value 387 396	class III
+E15	Lab_value:T26 
+R12	MODIFY Arg1:E15 Arg2:E11	
+T31	Sign_symptom 479 493	T-wave changes
+E16	Sign_symptom:T31 
+T32	Diagnostic_procedure 522 537	extremity leads
+E17	Diagnostic_procedure:T32 
+T33	Diagnostic_procedure 573 593	anterior chest leads
+E18	Diagnostic_procedure:T33 
+R15	SUB_PROCEDURE Arg1:E17 Arg2:E14	
+R16	SUB_PROCEDURE Arg1:E18 Arg2:E14	
+T34	Detailed_description 467 478	nonspecific
+T35	Detailed_description 459 466	diffuse
+R17	MODIFY Arg1:T34 Arg2:E16	
+R18	MODIFY Arg1:T35 Arg2:E16	
+T36	Diagnostic_procedure 499 506	voltage
+E19	Diagnostic_procedure:T36 
+R19	SUB_PROCEDURE Arg1:E19 Arg2:E17	
+T37	Lab_value 495 498	low
+E20	Lab_value:T37 
+T38	Lab_value 508 513	<5 mm
+E21	Lab_value:T38 
+R20	MODIFY Arg1:E21 Arg2:E19	
+R21	MODIFY Arg1:E20 Arg2:E19	
+T39	Diagnostic_procedure 547 565	R-wave progression
+E22	Diagnostic_procedure:T39 
+R22	SUB_PROCEDURE Arg1:E22 Arg2:E18	
+T40	Lab_value 542 546	poor
+E23	Lab_value:T40 
+R23	MODIFY Arg1:E23 Arg2:E22	
+T41	Sign_symptom 625 640	premature beats
+E24	Sign_symptom:T41 
+T42	Quantitative_concept 595 603	Multiple
+T43	Frequency 604 612	sporadic
+T44	Biological_structure 613 624	ventricular
+R24	MODIFY Arg1:T44 Arg2:E24	
+R25	MODIFY Arg1:T43 Arg2:E24	
+R26	MODIFY Arg1:T42 Arg2:E24	
+T45	Diagnostic_procedure 669 674	x-ray
+E25	Diagnostic_procedure:T45 
+T46	Biological_structure 663 668	Chest
+R27	MODIFY Arg1:T46 Arg2:E25	
+T47	Disease_disorder 696 712	pleural effusion
+E26	Disease_disorder:T47 
+T48	Detailed_description 690 695	right
+R28	MODIFY Arg1:T48 Arg2:E26	
+T49	Sign_symptom 723 735	cardiomegaly
+E27	Sign_symptom:T49 
+T50	Disease_disorder 743 763	pulmonary congestion
+E28	Disease_disorder:T50 
+A2	POLARITY E28 NEG
+T51	Severity 718 722	mild
+R29	MODIFY Arg1:T51 Arg2:E27	
+T52	Diagnostic_procedure 776 787	Blood tests
+E29	Diagnostic_procedure:T52 
+T53	Diagnostic_procedure 813 839	B-type natriuretic peptide
+E30	Diagnostic_procedure:T53 
+T54	Lab_value 795 812	severely elevated
+E31	Lab_value:T54 
+T55	Lab_value 841 850	901 pg/mL
+E32	Lab_value:T55 
+R30	MODIFY Arg1:E32 Arg2:E30	
+R31	MODIFY Arg1:E31 Arg2:E30	
+T56	Diagnostic_procedure 872 875	IgE
+E33	Diagnostic_procedure:T56 
+T57	Lab_value 865 871	raised
+E34	Lab_value:T57 
+T58	Lab_value 877 889	12 000 IU/mL
+E35	Lab_value:T58 
+R32	MODIFY Arg1:E35 Arg2:E33	
+R33	MODIFY Arg1:E34 Arg2:E33	
+T59	Sign_symptom 899 911	eosinophilia
+E36	Sign_symptom:T59 
+A3	POLARITY E36 NEG
+T60	Diagnostic_procedure 913 929	eosinophil count
+E37	Diagnostic_procedure:T60 
+T61	Lab_value 933 943	1.62×108/L
+E38	Lab_value:T61 
+R34	MODIFY Arg1:E38 Arg2:E37	
+T62	Diagnostic_procedure 946 966	Biochemical analysis
+E39	Diagnostic_procedure:T62 
+T63	Diagnostic_procedure 1001 1020	blood urea nitrogen
+E40	Diagnostic_procedure:T63 
+R35	SUB_PROCEDURE Arg1:E30 Arg2:E29	
+R36	SUB_PROCEDURE Arg1:E33 Arg2:E29	
+R37	SUB_PROCEDURE Arg1:E37 Arg2:E29	
+T64	Lab_value 1024 1034	14.3 mg/dL
+E41	Lab_value:T64 
+R38	MODIFY Arg1:E41 Arg2:E40	
+T65	Diagnostic_procedure 1071 1081	creatinine
+E42	Diagnostic_procedure:T65 
+R39	SUB_PROCEDURE Arg1:E40 Arg2:E39	
+T66	Lab_value 1085 1095	0.90 mg/dL
+E43	Lab_value:T66 
+R40	MODIFY Arg1:E43 Arg2:E42	
+T67	Diagnostic_procedure 1113 1131	C-reactive protein
+E44	Diagnostic_procedure:T67 
+T68	Diagnostic_procedure 1133 1136	CRP
+E45	Diagnostic_procedure:T68 
+R41	IDENTICAL Arg1:E45 Arg2:E44	
+T69	Lab_value 1141 1150	0.2 mg/dL
+E46	Lab_value:T69 
+T70	Diagnostic_procedure 1168 1183	serum amyloid A
+E47	Diagnostic_procedure:T70 
+T71	Diagnostic_procedure 1185 1188	SAA
+E48	Diagnostic_procedure:T71 
+R42	IDENTICAL Arg1:E48 Arg2:E47	
+T72	Lab_value 1193 1202	7.0 μg/mL
+E49	Lab_value:T72 
+R43	MODIFY Arg1:E49 Arg2:E47	
+T73	Diagnostic_procedure 1220 1230	troponin T
+E50	Diagnostic_procedure:T73 
+T74	Lab_value 1234 1244	0.07 ng/mL
+E51	Lab_value:T74 
+R44	MODIFY Arg1:E51 Arg2:E50	
+T75	Diagnostic_procedure 1258 1276	Immunology testing
+E52	Diagnostic_procedure:T75 
+R45	SUB_PROCEDURE Arg1:E42 Arg2:E39	
+R46	SUB_PROCEDURE Arg1:E44 Arg2:E39	
+R47	SUB_PROCEDURE Arg1:E47 Arg2:E39	
+R48	SUB_PROCEDURE Arg1:E50 Arg2:E39	
+T76	Diagnostic_procedure 1295 1345	perinuclear anti-neutrophil cytoplasmic antibodies
+E53	Diagnostic_procedure:T76 
+R49	SUB_PROCEDURE Arg1:E53 Arg2:E52	
+T77	Lab_value 1286 1294	negative
+E54	Lab_value:T77 
+R50	MODIFY Arg1:E54 Arg2:E53	
+T78	Diagnostic_procedure 1366 1392	myeloperoxidase antibodies
+E55	Diagnostic_procedure:T78 
+T79	Lab_value 1350 1362	no elevation
+E56	Lab_value:T79 
+R51	MODIFY Arg1:E56 Arg2:E55	
+T80	Diagnostic_procedure 1414 1421	albumin
+E57	Diagnostic_procedure:T80 
+T81	Diagnostic_procedure 1426 1434	globulin
+E58	Diagnostic_procedure:T81 
+T82	Detailed_description 1442 1447	serum
+R52	MODIFY Arg1:T82 Arg2:E58	
+R53	MODIFY Arg1:T82 Arg2:E57	
+T83	Lab_value 1452 1458	normal
+E59	Lab_value:T83 
+R54	MODIFY Arg1:E59 Arg2:E57	
+R55	MODIFY Arg1:E59 Arg2:E58	
+T84	Diagnostic_procedure 1466 1496	protein immuno-electrophoresis
+E60	Diagnostic_procedure:T84 
+T85	Detailed_description 1460 1465	Serum
+R56	MODIFY Arg1:T85 Arg2:E60	
+T86	Diagnostic_procedure 1512 1521	M-protein
+E61	Diagnostic_procedure:T86 
+R57	SUB_PROCEDURE Arg1:E61 Arg2:E60	
+T87	Lab_value 1497 1511	did not reveal
+E62	Lab_value:T87 
+R58	MODIFY Arg1:E62 Arg2:E61	
+T88	Diagnostic_procedure 1527 1537	urinalysis
+E63	Diagnostic_procedure:T88 
+T89	Diagnostic_procedure 1550 1569	Bence-Jones protein
+E64	Diagnostic_procedure:T89 
+R59	SUB_PROCEDURE Arg1:E64 Arg2:E63	
+T90	Lab_value 1547 1549	no
+E65	Lab_value:T90 
+R60	MODIFY Arg1:E65 Arg2:E64	
+T91	Diagnostic_procedure 1585 1601	echocardiography
+E66	Diagnostic_procedure:T91 
+T92	Biological_structure 1571 1584	Transthoracic
+R61	MODIFY Arg1:T92 Arg2:E66	
+T93	Sign_symptom 1658 1669	hypertrophy
+E67	Sign_symptom:T93 
+T94	Biological_structure 1654 1656	LV
+T95	Biological_structure 1636 1652	left ventricular
+R62	MODIFY Arg1:T94 Arg2:T95	
+R63	MODIFY Arg1:T95 Arg2:E67	
+T96	Severity 1631 1635	mild
+T97	Detailed_description 1620 1630	concentric
+R64	MODIFY Arg1:T96 Arg2:E67	
+R65	MODIFY Arg1:T97 Arg2:E67	
+T98	Distance 1671 1676	12 mm
+R66	MODIFY Arg1:T98 Arg2:E67	
+T99	Sign_symptom 1705 1734	granular sparkling appearance
+E68	Sign_symptom:T99 
+A4	POLARITY E68 NEG
+T100	Disease_disorder 1739 1759	pericardial effusion
+E69	Disease_disorder:T100 
+A5	POLARITY E69 NEG
+T101	Diagnostic_procedure 1771 1788	ejection fraction
+E70	Diagnostic_procedure:T101 
+T102	Lab_value 1790 1793	60%
+E71	Lab_value:T102 
+R67	MODIFY Arg1:E71 Arg2:E70	
+T103	Lab_value 1761 1770	preserved
+E72	Lab_value:T103 
+R68	MODIFY Arg1:E72 Arg2:E70	
+T104	Sign_symptom 1810 1821	enlargement
+E73	Sign_symptom:T104 
+T105	Biological_structure 1800 1809	bi-atrial
+R69	MODIFY Arg1:T105 Arg2:E73	
+T106	Diagnostic_procedure 1834 1854	ventricular chambers
+E74	Diagnostic_procedure:T106 
+T107	Lab_value 1827 1833	normal
+E75	Lab_value:T107 
+R70	MODIFY Arg1:E75 Arg2:E74	
+T108	Diagnostic_procedure 1875 1892	diastolic filling
+E76	Diagnostic_procedure:T108 
+T109	Biological_structure 1872 1874	LV
+T110	Detailed_description 1856 1871	Doppler-derived
+R71	MODIFY Arg1:T110 Arg2:E76	
+R72	MODIFY Arg1:T109 Arg2:E76	
+T111	Diagnostic_procedure 2374 2380	biopsy
+E77	Diagnostic_procedure:T111 
+T112	Nonbiological_location 2347 2361	dermatologists
+R73	MODIFY Arg1:T112 Arg2:E77	
+T113	Sign_symptom 2391 2397	macula
+E78	Sign_symptom:T113 
+T114	Color 2386 2390	blue
+T115	Biological_structure 2405 2418	forehead skin
+R74	MODIFY Arg1:T115 Arg2:E78	
+R75	MODIFY Arg1:T114 Arg2:E78	
+T116	Diagnostic_procedure 2011 2020	E/A ratio
+E79	Diagnostic_procedure:T116 
+T117	Lab_value 2024 2027	2.8
+E80	Lab_value:T117 
+T118	Lab_value 2002 2010	elevated
+E81	Lab_value:T118 
+R76	MODIFY Arg1:E81 Arg2:E79	
+R77	MODIFY Arg1:E80 Arg2:E79	
+T119	Diagnostic_procedure 1948 1984	early filling wave deceleration time
+E82	Diagnostic_procedure:T119 
+T120	Biological_structure 1935 1947	trans-mitral
+R78	MODIFY Arg1:T120 Arg2:E82	
+T121	Lab_value 1988 1994	160 ms
+E83	Lab_value:T121 
+R79	MODIFY Arg1:E83 Arg2:E82	
+T122	Lab_value 1908 1927	restrictive pattern
+E84	Lab_value:T122 
+R80	MODIFY Arg1:E84 Arg2:E76	
+T123	Diagnostic_procedure 2053 2063	E/e’ ratio
+E85	Diagnostic_procedure:T123 
+T124	Lab_value 2067 2071	27.3
+E86	Lab_value:T124 
+T125	Diagnostic_procedure 2091 2110	LV filling pressure
+E87	Diagnostic_procedure:T125 
+T126	Lab_value 2082 2090	elevated
+E88	Lab_value:T126 
+R81	MODIFY Arg1:E88 Arg2:E87	
+T127	Lab_value 2040 2049	elevation
+E89	Lab_value:T127 
+R82	MODIFY Arg1:E89 Arg2:E85	
+T128	Date 2115 2120	day 1
+E90	Date:T128 
+T129	Clinical_event 2124 2139	hospitalization
+E91	Clinical_event:T129 
+T130	Date 2231 2236	day 3
+E92	Date:T130 
+T131	Clinical_event 2240 2255	hospitalization
+E93	Clinical_event:T131 
+T132	Medication 2158 2203	angiotensin-converting enzyme (ACE) inhibitor
+E94	Medication:T132 
+T133	Medication 2217 2226	diuretics
+E95	Medication:T133 
+T134	Dosage 2208 2216	low-dose
+R83	MODIFY Arg1:T134 Arg2:E95	
+T135	Medication 2274 2287	ACE inhibitor
+E96	Medication:T135 
+T136	Medication 2292 2300	diuretic
+E97	Medication:T136 
+T137	Sign_symptom 2324 2332	symptoms
+E98	Sign_symptom:T137 
+A6	POLARITY E98 NEG
+T138	Date 2423 2428	day 4
+E99	Date:T138 
+T139	Medication 2455 2464	β-blocker
+E100	Medication:T139 
+T140	Dosage 2446 2454	low-dose
+R84	MODIFY Arg1:T140 Arg2:E100	
+T141	Diagnostic_procedure 2482 2503	endomyocardial biopsy
+E101	Diagnostic_procedure:T141 
+T142	Diagnostic_procedure 2505 2508	EMB
+E102	Diagnostic_procedure:T142 
+R85	IDENTICAL Arg1:E102 Arg2:E101	
+T143	Disease_disorder 2608 2619	amyloidosis
+E103	Disease_disorder:T143 
+A7	POLARITY E103 UNCERTAIN
+T144	Biological_structure 2600 2607	cardiac
+R86	MODIFY Arg1:T144 Arg2:E103	
+T145	Sign_symptom 2650 2666	amyloid deposits
+E104	Sign_symptom:T145 
+A8	POLARITY E104 UNCERTAIN
+T146	Clinical_event 3787 3798	followed-up
+E105	Clinical_event:T146 
+T147	Frequency 3802 3819	6-month intervals
+R87	MODIFY Arg1:T147 Arg2:E105	
+T148	Disease_disorder 3867 3870	CHF
+E106	Disease_disorder:T148 
+A9	POLARITY E106 NEG
+#1	AnnotatorNotes E106	congestive heart failure
+T149	Medication 3689 3698	β-blocker
+E107	Medication:T149 
+T150	Clinical_event 3712 3722	discharged
+E108	Clinical_event:T150 
+T151	Date 3726 3732	day 10
+E109	Date:T151 
+T152	Disease_disorder 3741 3754	complications
+E110	Disease_disorder:T152 
+A10	POLARITY E110 NEG
+T153	Diagnostic_procedure 3484 3512	immunohistochemical reaction
+E111	Diagnostic_procedure:T153 
+T154	Diagnostic_procedure 3516 3538	immunoglobulin λ-chain
+E112	Diagnostic_procedure:T154 
+T155	Lab_value 3466 3483	strongly positive
+E113	Lab_value:T155 
+R88	MODIFY Arg1:E113 Arg2:E112	
+R89	SUB_PROCEDURE Arg1:E112 Arg2:E111	
+T156	Biological_structure 3546 3569	myocardial interstitium
+R90	MODIFY Arg1:T156 Arg2:E112	
+T157	Disease_disorder 3628 3642	AL amyloidosis
+E114	Disease_disorder:T157 
+#2	AnnotatorNotes E114	immunoglobulin light chain amyloidosis
+T158	Disease_disorder 3613 3624	amyloidosis
+E115	Disease_disorder:T158 
+T159	Detailed_description 3604 3612	systemic
+R91	MODIFY Arg1:T159 Arg2:E115	
+T160	Diagnostic_procedure 3233 3256	Histological examinatio
+E116	Diagnostic_procedure:T160 
+T161	Disease_disorder 3312 3323	myocarditis
+E117	Disease_disorder:T161 
+A11	POLARITY E117 NEG
+T162	Disease_disorder 3338 3348	granulomas
+E118	Disease_disorder:T162 
+A12	POLARITY E118 NEG
+T163	Detailed_description 3325 3337	eosinophilic
+R92	MODIFY Arg1:T163 Arg2:E118	
+T164	Disease_disorder 3353 3367	cardiomyopathy
+E119	Disease_disorder:T164 
+A13	POLARITY E119 NEG
+T165	Detailed_description 3373 3388	iron deposition
+R93	MODIFY Arg1:T165 Arg2:E119	
+T166	Biological_structure 3265 3284	myocardial specimen
+R94	MODIFY Arg1:T166 Arg2:E116	
+T167	Diagnostic_procedure 2694 2721	right heart catheterization
+E120	Diagnostic_procedure:T167 
+T168	Diagnostic_procedure 2723 2726	RHC
+E121	Diagnostic_procedure:T168 
+R95	IDENTICAL Arg1:E121 Arg2:E120	
+T169	Diagnostic_procedure 2733 2753	coronary angiography
+E122	Diagnostic_procedure:T169 
+T170	Disease_disorder 2765 2800	obstructive coronary artery disease
+E123	Disease_disorder:T170 
+A14	POLARITY E123 NEG
+T171	Diagnostic_procedure 2829 2832	RHC
+E124	Diagnostic_procedure:T171 
+T172	Diagnostic_procedure 2875 2899	Forrester classification
+E125	Diagnostic_procedure:T172 
+T173	Lab_value 2843 2857	subset type IV
+E126	Lab_value:T173 
+R96	MODIFY Arg1:E126 Arg2:E125	
+T174	Diagnostic_procedure 2923 2937	pressure curve
+E127	Diagnostic_procedure:T174 
+T175	Biological_structure 2905 2922	right ventricular
+R97	MODIFY Arg1:T175 Arg2:E127	
+T176	Sign_symptom 2953 2982	dip-and-plateau configuration
+E128	Sign_symptom:T176 
+A15	POLARITY E128 NEG
+T177	Diagnostic_procedure 2989 2995	biopsy
+E129	Diagnostic_procedure:T177 
+T178	Biological_structure 2984 2988	Skin
+R98	MODIFY Arg1:T178 Arg2:E129	
+T179	Sign_symptom 3005 3019	hyperkeratosis
+E130	Sign_symptom:T179 
+T180	Biological_structure 3027 3036	epidermis
+R99	MODIFY Arg1:T180 Arg2:E130	
+T181	Sign_symptom 3046 3066	inflammatory changes
+E131	Sign_symptom:T181 
+T182	Severity 3041 3045	mild
+R100	MODIFY Arg1:T182 Arg2:E131	
+T183	Biological_structure 3082 3088	dermis
+R101	MODIFY Arg1:T183 Arg2:E131	
+T184	Sign_symptom 3097 3109	infiltration
+E132	Sign_symptom:T184 
+T185	Biological_structure 3113 3124	lymphocytes
+R102	MODIFY Arg1:T185 Arg2:E132	
+T186	Diagnostic_procedure 3202 3220	Congo red staining
+E133	Diagnostic_procedure:T186 
+T187	Detailed_description 3180 3195	polarized light
+R103	MODIFY Arg1:T187 Arg2:E133	
+T188	Lab_value 3161 3174	birefringence
+E134	Lab_value:T188 
+T189	Color 3149 3160	apple-green
+R104	MODIFY Arg1:T189 Arg2:E134	
+R105	MODIFY Arg1:E134 Arg2:E133	
+*	OVERLAP E1 E2
+R106	AFTER Arg1:E2 Arg2:E3	
+*	OVERLAP E3 E4
+R107	AFTER Arg1:E4 Arg2:E5	
+*	OVERLAP E5 E6 E7
+R108	BEFORE Arg1:E7 Arg2:E8	
+*	OVERLAP E8 E9 E10 E11 E12 E14 E16 E24 E25 E26 E27 E28 E29 E39 E52 E57 E58 E60 E63 E66 E67 E68 E69 E70 E73 E74 E76 E82 E79 E85 E87
+R109	SUB_PROCEDURE Arg1:E55 Arg2:E52	
+R110	MODIFY Arg1:E86 Arg2:E85	
+R111	BEFORE Arg1:E87 Arg2:E90	
+*	OVERLAP E90 E91 E94 E95
+R112	BEFORE Arg1:E95 Arg2:E92	
+*	OVERLAP E92 E93 E96 E97
+R113	BEFORE Arg1:E97 Arg2:E98	
+*	OVERLAP E98 E77 E78
+R114	BEFORE Arg1:E78 Arg2:E99	
+*	OVERLAP E99 E100 E101 E103 E104 E120 E122 E123 E124 E125 E127 E128 E129 E130 E131 E132 E133 E116 E117 E118 E119 E135 E136 E111 E115 E114
+T190	Biological_structure 2540 2564	right ventricular septum
+R115	MODIFY Arg1:T190 Arg2:E101	
+T191	Quantitative_concept 2521 2532	3 fragments
+R116	MODIFY Arg1:T191 Arg2:T190	
+T192	Diagnostic_procedure 3394 3412	Congo red staining
+E135	Diagnostic_procedure:T192 
+T193	Sign_symptom 3422 3438	amyloid deposits
+E136	Sign_symptom:T193 
+R117	BEFORE Arg1:E114 Arg2:E107	
+R118	BEFORE Arg1:E107 Arg2:E108	
+*	OVERLAP E108 E109 E110
+R119	BEFORE Arg1:E110 Arg2:E105	
+*	OVERLAP E105 E106

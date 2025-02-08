@@ -1,0 +1,247 @@
+T1	Age 2 13	53 year old
+T2	Sex 14 20	female
+T3	History 21 61	without significant past medical history
+T4	Disease_disorder 85 94	pneumonia
+E1	Disease_disorder:T4 
+T5	Detailed_description 79 84	viral
+T6	Severity 72 78	severe
+R1	MODIFY Arg1:T5 Arg2:E1	
+R2	MODIFY Arg1:T6 Arg2:E1	
+T7	Diagnostic_procedure 141 159	respiratory status
+E2	Diagnostic_procedure:T7 
+T8	Lab_value 120 133	deterioration
+T9	Detailed_description 108 119	progressive
+T10	Detailed_description 101 106	rapid
+R3	MODIFY Arg1:T9 Arg2:T8	
+R4	MODIFY Arg1:T10 Arg2:T8	
+R5	MODIFY Arg1:T8 Arg2:E2	
+T11	Disease_disorder 175 179	ARDS
+E3	Disease_disorder:T11 
+#1	AnnotatorNotes E3	Acute respiratory distress syndrome
+T12	Therapeutic_procedure 184 217	mechanical ventilatory management
+E4	Therapeutic_procedure:T12 
+T13	Detailed_description 224 237	ARDS protocol
+R6	MODIFY Arg1:T13 Arg2:E4	
+T14	Diagnostic_procedure 271 282	oxygenation
+E5	Diagnostic_procedure:T14 
+T15	Lab_value 243 270	unable to maintain adequate
+R7	MODIFY Arg1:T15 Arg2:E5	
+T16	Therapeutic_procedure 308 312	ECMO
+E6	Therapeutic_procedure:T16 
+#2	AnnotatorNotes E6	Extracorporeal membrane oxygenation
+T17	Detailed_description 305 307	VV
+#3	AnnotatorNotes T17	veno-venous
+R8	MODIFY Arg1:T17 Arg2:E6	
+T18	Diagnostic_procedure 326 358	Transesophageal echocardiography
+E7	Diagnostic_procedure:T18 
+T19	Diagnostic_procedure 360 363	TEE
+E8	Diagnostic_procedure:T19 
+R9	IDENTICAL Arg1:E8 Arg2:E7	
+T20	Detailed_description 297 304	bedside
+R10	MODIFY Arg1:T20 Arg2:E6	
+T21	Therapeutic_procedure 399 427	positioning of the guidewire
+E9	Therapeutic_procedure:T21 
+T22	Therapeutic_procedure 432 439	cannula
+E10	Therapeutic_procedure:T22 
+T23	Coreference 523 544	guide wire was placed
+E11	Coreference:T23 
+R11	IDENTICAL Arg1:E11 Arg2:E9	
+T24	Biological_structure 476 503	right internal jugular vein
+R12	MODIFY Arg1:T24 Arg2:E11	
+T25	Detailed_description 451 470	Seldinger technique
+R13	MODIFY Arg1:T25 Arg2:E11	
+T26	Coreference 582 585	IVC
+E12	Coreference:T26 
+R14	IDENTICAL Arg1:E12 Arg2:T24	
+T27	Coreference 546 572	Placement of the guidewire
+E13	Coreference:T27 
+R15	IDENTICAL Arg1:E13 Arg2:E11	
+T28	Detailed_description 619 645	migration of the guidewire
+R16	MODIFY Arg1:T28 Arg2:E13	
+T29	Biological_structure 655 670	right ventricle
+R17	MODIFY Arg1:T29 Arg2:T28	
+T30	Medication 818 825	heparin
+E14	Medication:T30 
+T31	Dosage 792 802	5000 units
+T32	Administration 806 817	intravenous
+R18	MODIFY Arg1:T32 Arg2:E14	
+R19	MODIFY Arg1:T31 Arg2:E14	
+T33	Therapeutic_procedure 887 894	dilated
+E15	Therapeutic_procedure:T33 
+#4	AnnotatorNotes E15	an intentional dilation, rather than a problematic one
+T34	Biological_structure 841 870	right internal jugular venous
+R20	MODIFY Arg1:T34 Arg2:E15	
+T35	Detailed_description 778 783	bolus
+R21	MODIFY Arg1:T35 Arg2:E14	
+T36	Disease_disorder 1159 1179	pericardial effusion
+E16	Disease_disorder:T36 
+T37	Detailed_description 1141 1158	rapidly enlarging
+R22	MODIFY Arg1:T37 Arg2:E16	
+T38	Sign_symptom 1078 1105	premature ventricular beats
+E17	Sign_symptom:T38 
+T39	Detailed_description 1069 1077	Multiple
+R23	MODIFY Arg1:T39 Arg2:E17	
+T40	Lab_value 1032 1067	lost visualization of the guidewire
+T41	Coreference 1019 1026	cannula
+E18	Coreference:T41 
+T42	Diagnostic_procedure 1028 1031	TEE
+E19	Diagnostic_procedure:T42 
+R24	MODIFY Arg1:T40 Arg2:E19	
+#5	AnnotatorNotes T40	a qualitative concept as it's more of a result than a property of how TEE was done
+T43	Detailed_description 1002 1018	23 French Avalon
+R25	MODIFY Arg1:T43 Arg2:E18	
+T44	Therapeutic_procedure 948 964	dilator exchange
+E20	Therapeutic_procedure:T44 
+R26	SUB_PROCEDURE Arg1:E20 Arg2:E15	
+R27	IDENTICAL Arg1:E18 Arg2:E10	
+T45	Therapeutic_procedure 1260 1282	surgical decompression
+E21	Therapeutic_procedure:T45 
+T46	Biological_structure 1290 1307	pericardial space
+R28	MODIFY Arg1:T46 Arg2:E21	
+T47	Disease_disorder 1360 1377	cardiac tamponade
+E22	Disease_disorder:T47 
+T48	Diagnostic_procedure 1334 1348	blood pressure
+E23	Diagnostic_procedure:T48 
+T49	Lab_value 1329 1333	lost
+R29	MODIFY Arg1:T49 Arg2:E23	
+T50	Detailed_description 1354 1359	acute
+R30	MODIFY Arg1:T50 Arg2:E22	
+T51	Coreference 1390 1397	cannula
+E24	Coreference:T51 
+R31	IDENTICAL Arg1:E24 Arg2:E18	
+T52	Detailed_description 1414 1448	clamped at the end but not removed
+R32	MODIFY Arg1:T52 Arg2:E24	
+T53	Therapeutic_procedure 1472 1490	pericardial window
+E25	Therapeutic_procedure:T53 
+T54	Biological_structure 1461 1471	subxiphoid
+R33	MODIFY Arg1:T54 Arg2:E25	
+T55	Diagnostic_procedure 1563 1577	blood pressure
+E26	Diagnostic_procedure:T55 
+T56	Lab_value 1548 1559	restoration
+R34	MODIFY Arg1:T56 Arg2:E26	
+T57	Sign_symptom 1519 1527	drainage
+E27	Sign_symptom:T57 
+T58	Biological_structure 1531 1543	venous blood
+R35	MODIFY Arg1:T58 Arg2:E27	
+T59	Therapeutic_procedure 1579 1590	Transfusion
+E28	Therapeutic_procedure:T59 
+T60	Clinical_event 1636 1647	transported
+E29	Clinical_event:T60 
+T61	Nonbiological_location 1655 1669	operating room
+R36	MODIFY Arg1:T61 Arg2:E29	
+T62	Diagnostic_procedure 1674 1694	surgical exploration
+E30	Diagnostic_procedure:T62 
+T63	Detailed_description 1383 1389	Avalon
+R37	MODIFY Arg1:T63 Arg2:E24	
+T64	Detailed_description 1700 1706	Avalon
+T65	Coreference 1707 1714	cannula
+E31	Coreference:T65 
+R38	IDENTICAL Arg1:E31 Arg2:E24	
+R39	MODIFY Arg1:T64 Arg2:E31	
+T66	Disease_disorder 1733 1743	perforated
+E32	Disease_disorder:T66 
+T67	Biological_structure 1748 1775	apex of the right ventricle
+R40	MODIFY Arg1:T67 Arg2:E32	
+T68	Coreference 1781 1787	injury
+E33	Coreference:T68 
+R41	IDENTICAL Arg1:E33 Arg2:E32	
+T69	Therapeutic_procedure 1792 1800	repaired
+E34	Therapeutic_procedure:T69 
+T70	Coreference 1826 1833	cannula
+E35	Coreference:T70 
+R42	IDENTICAL Arg1:E35 Arg2:E31	
+T71	Detailed_description 1819 1825	Avalon
+R43	MODIFY Arg1:T71 Arg2:E35	
+T72	Diagnostic_procedure 1875 1878	TEE
+E36	Diagnostic_procedure:T72 
+T73	Detailed_description 1884 1914	additional direct manipulation
+R44	MODIFY Arg1:T73 Arg2:E36	
+T74	Biological_structure 1862 1865	IVC
+R45	MODIFY Arg1:T74 Arg2:E35	
+T75	Therapeutic_procedure 1919 1923	ECMO
+E37	Therapeutic_procedure:T75 
+T76	Detailed_description 1916 1918	VV
+R46	MODIFY Arg1:T76 Arg2:E37	
+T77	Diagnostic_procedure 1946 1957	oxygenation
+E38	Diagnostic_procedure:T77 
+T78	Lab_value 1958 1966	improved
+R47	MODIFY Arg1:T78 Arg2:E38	
+T79	Disease_disorder 1985 1999	coagulopathies
+E39	Disease_disorder:T79 
+T80	Therapeutic_procedure 2017 2026	left open
+E40	Therapeutic_procedure:T80 
+T81	Biological_structure 2005 2012	sternum
+R48	MODIFY Arg1:T81 Arg2:E40	
+T82	Therapeutic_procedure 2035 2041	closed
+E41	Therapeutic_procedure:T82 
+T83	Date 2059 2064	day 2
+E42	Date:T83 
+T84	Sign_symptom 2132 2145	complications
+E43	Sign_symptom:T84 
+A1	POLARITY E43 NEG
+T85	Detailed_description 2121 2131	infectious
+T86	Biological_structure 2110 2117	cardiac
+R49	MODIFY Arg1:T85 Arg2:E43	
+R50	MODIFY Arg1:T86 Arg2:E43	
+T87	Diagnostic_procedure 2154 2173	pulmonary condition
+E44	Diagnostic_procedure:T87 
+T88	Lab_value 2174 2189	slowly improved
+R51	MODIFY Arg1:T88 Arg2:E44	
+T89	Therapeutic_procedure 2227 2231	ECMO
+E45	Therapeutic_procedure:T89 
+T90	Detailed_description 2224 2226	VV
+R52	MODIFY Arg1:T90 Arg2:E45	
+A2	POLARITY E45 NEG
+T91	Date 2249 2254	day 9
+E46	Date:T91 
+T92	Clinical_event 2263 2273	discharged
+E47	Clinical_event:T92 
+T93	Nonbiological_location 2274 2278	home
+R53	MODIFY Arg1:T93 Arg2:E47	
+T94	Date 2296 2302	day 24
+E48	Date:T94 
+T95	Therapeutic_procedure 2324 2335	home oxygen
+E49	Therapeutic_procedure:T95 
+A3	POLARITY E49 NEG
+T96	Diagnostic_procedure 2355 2373	physical functions
+E50	Diagnostic_procedure:T96 
+T97	Lab_value 2350 2354	full
+R54	MODIFY Arg1:T97 Arg2:E50	
+T98	Diagnostic_procedure 2403 2421	pulmonary function
+E51	Diagnostic_procedure:T98 
+T99	Lab_value 2396 2402	normal
+R55	MODIFY Arg1:T99 Arg2:E51	
+T100	Date 2425 2433	3 months
+E52	Date:T100 
+T101	Clinical_event 2444 2453	discharge
+E53	Clinical_event:T101 
+T102	Nonbiological_location 2463 2471	hospital
+R56	MODIFY Arg1:T102 Arg2:E53	
+*	OVERLAP E1 E2
+R57	BEFORE Arg1:E2 Arg2:E3	
+*	OVERLAP E3 E4 E5
+R58	BEFORE Arg1:E5 Arg2:E6	
+*	OVERLAP E6 E7 E9 E10 E14 E15 E19 E17 E16
+R59	BEFORE Arg1:E16 Arg2:E21	
+*	OVERLAP E21 E23 E22 E24
+R60	BEFORE Arg1:E24 Arg2:E25	
+*	OVERLAP E25 E27 E26 E28
+R61	BEFORE Arg1:E28 Arg2:E29	
+*	OVERLAP E29 E30
+R62	AFTER Arg1:E30 Arg2:E31	
+*	OVERLAP E31 E32 E33
+R63	BEFORE Arg1:E33 Arg2:E34	
+*	OVERLAP E34 E35 E36
+R64	BEFORE Arg1:E36 Arg2:E37	
+*	OVERLAP E37 E38 E39 E40
+R65	BEFORE Arg1:E40 Arg2:E41	
+*	OVERLAP E41 E42
+R66	BEFORE Arg1:E42 Arg2:E43	
+*	OVERLAP E43 E44
+R67	BEFORE Arg1:E44 Arg2:E45	
+*	OVERLAP E45 E46
+R68	BEFORE Arg1:E46 Arg2:E47	
+*	OVERLAP E47 E48 E49
+R69	BEFORE Arg1:E49 Arg2:E50	
+*	OVERLAP E50 E51 E52
+R70	AFTER Arg1:E52 Arg2:E53	

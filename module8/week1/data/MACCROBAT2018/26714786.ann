@@ -1,0 +1,297 @@
+T1	Age 2 13	64 year old
+T2	Sex 14 20	female
+T3	Disease_disorder 31 34	HHT
+E1	Disease_disorder:T3 
+#1	AnnotatorNotes E1	Hereditary hemorrhagic telangiectasia
+T4	Clinical_event 38 46	referred
+E2	Clinical_event:T4 
+T5	Sign_symptom 75 84	epistaxis
+E3	Sign_symptom:T5 
+T6	Duration 89 104	nearly 50 years
+E4	Duration:T6 
+R1	MODIFY Arg1:E4 Arg2:E3	
+T7	Detailed_description 65 74	recurrent
+R2	MODIFY Arg1:T7 Arg2:E3	
+T8	Coreference 128 136	symptoms
+E5	Coreference:T8 
+R3	IDENTICAL Arg1:E5 Arg2:E3	
+T9	Coreference 166 175	condition
+E6	Coreference:T9 
+R4	IDENTICAL Arg1:E6 Arg2:E1	
+T10	Date 137 156	since the age of 16
+E7	Date:T10 
+T12	Family_history 191 245	All three of her siblings also were diagnosed with HHT
+T18	Date 306 323	Eight years prior
+E11	Date:T18 
+T20	Therapeutic_procedure 371 387	septodermoplasty
+E13	Therapeutic_procedure:T20 
+T21	Detailed_description 360 370	left-sided
+R9	MODIFY Arg1:T21 Arg2:E13	
+T22	Therapeutic_procedure 402 411	rhinotomy
+E14	Therapeutic_procedure:T22 
+T23	Detailed_description 394 401	lateral
+R10	MODIFY Arg1:T23 Arg2:E14	
+R11	SUB_PROCEDURE Arg1:E14 Arg2:E13	
+T24	Coreference 427 436	operation
+E15	Coreference:T24 
+R12	IDENTICAL Arg1:E15 Arg2:E13	
+T25	Sign_symptom 484 492	symptoms
+E16	Sign_symptom:T25 
+A1	TREND E16 DEC
+T26	Sign_symptom 519 528	epistaxis
+E17	Sign_symptom:T26 
+T27	Lab_value 533 546	under control
+R13	MODIFY Arg1:T27 Arg2:E17	
+T28	Medication 572 583	thalidomide
+E18	Medication:T28 
+T29	Dosage 563 571	low dose
+R14	MODIFY Arg1:T29 Arg2:E18	
+T30	Clinical_event 602 610	referred
+E19	Clinical_event:T30 
+T31	Nonbiological_location 618 624	clinic
+R15	MODIFY Arg1:T31 Arg2:E19	
+T32	Sign_symptom 642 651	epistaxis
+E20	Sign_symptom:T32 
+A2	TREND E20 INC
+T35	Duration 675 699	over the prior 12 months
+E21	Duration:T35 
+T36	Therapeutic_procedure 728 740	transfusions
+E22	Therapeutic_procedure:T36 
+A3	TREND E22 INC
+T37	Clinical_event 757 769	consultation
+E23	Clinical_event:T37 
+T38	Sign_symptom 826 835	epistaxis
+E24	Sign_symptom:T38 
+T39	Biological_structure 815 825	left sided
+T40	Frequency 802 807	daily
+R18	MODIFY Arg1:T40 Arg2:E24	
+R19	MODIFY Arg1:T39 Arg2:E24	
+T41	Severity 808 814	severe
+R20	MODIFY Arg1:T41 Arg2:E24	
+T42	Medication 874 885	bevacizumab
+E25	Medication:T42 
+T43	Administration 866 873	topical
+R21	MODIFY Arg1:T43 Arg2:E25	
+T44	Medication 895 910	tranexamic acid
+E26	Medication:T44 
+T45	Administration 890 894	oral
+R22	MODIFY Arg1:T45 Arg2:E26	
+T46	Duration 844 858	several months
+E27	Duration:T46 
+T47	Medication 937 941	iron
+E28	Medication:T47 
+T48	Therapeutic_procedure 946 964	blood transfusions
+E29	Therapeutic_procedure:T48 
+T49	Administration 925 936	intravenous
+R23	MODIFY Arg1:T49 Arg2:E28	
+T50	Frequency 965 981	every two months
+R24	MODIFY Arg1:T50 Arg2:E29	
+R25	MODIFY Arg1:T50 Arg2:E28	
+T51	Diagnostic_procedure 996 1006	hemoglobin
+E30	Diagnostic_procedure:T51 
+T52	Clinical_event 1026 1038	consultation
+E31	Clinical_event:T52 
+T53	Lab_value 1043 1049	75 g/L
+R26	MODIFY Arg1:T53 Arg2:E30	
+T54	Diagnostic_procedure 1080 1108	HHT epistaxis severity score
+E32	Diagnostic_procedure:T54 
+T55	Lab_value 1118 1124	severe
+R27	MODIFY Arg1:T55 Arg2:E32	
+T56	Lab_value 1126 1147	normalized score 9.49
+R28	MODIFY Arg1:T56 Arg2:E32	
+T57	Diagnostic_procedure 1153 1164	examination
+E33	Diagnostic_procedure:T57 
+T58	Sign_symptom 1183 1197	telangiectasia
+E34	Sign_symptom:T58 
+T59	Detailed_description 1174 1182	multiple
+R29	MODIFY Arg1:T59 Arg2:E34	
+T60	Biological_structure 1205 1212	fingers
+T61	Biological_structure 1214 1218	face
+T62	Biological_structure 1220 1224	lips
+T63	Biological_structure 1229 1235	palate
+R30	MODIFY Arg1:T60 Arg2:E34	
+R31	MODIFY Arg1:T61 Arg2:E34	
+R32	MODIFY Arg1:T62 Arg2:E34	
+R33	MODIFY Arg1:T63 Arg2:E34	
+T64	Diagnostic_procedure 1241 1263	endoscopic examination
+E35	Diagnostic_procedure:T64 
+T65	Sign_symptom 1283 1297	telangiectasia
+E36	Sign_symptom:T65 
+T66	Detailed_description 1273 1282	bilateral
+R34	MODIFY Arg1:T66 Arg2:E36	
+T67	Biological_structure 1308 1320	nasal septum
+R35	MODIFY Arg1:T67 Arg2:E36	
+T68	Sign_symptom 1342 1350	crusting
+E37	Sign_symptom:T68 
+T69	Severity 1332 1341	extensive
+R36	MODIFY Arg1:T69 Arg2:E37	
+T70	Biological_structure 1368 1385	left nasal cavity
+R37	MODIFY Arg1:T70 Arg2:E37	
+T71	Diagnostic_procedure 1401 1413	manipulation
+E38	Diagnostic_procedure:T71 
+T72	Sign_symptom 1444 1453	epistaxis
+E39	Sign_symptom:T72 
+R38	CAUSE Arg1:E38 Arg2:E39	
+T73	Severity 1436 1443	profuse
+T74	Detailed_description 1426 1435	immediate
+R39	MODIFY Arg1:T73 Arg2:E39	
+R40	MODIFY Arg1:T74 Arg2:E39	
+T75	Therapeutic_procedure 1564 1580	septodermoplasty
+E40	Therapeutic_procedure:T75 
+T76	Detailed_description 1553 1563	left-sided
+T77	Detailed_description 1542 1552	endoscopic
+R41	MODIFY Arg1:T77 Arg2:E40	
+R42	MODIFY Arg1:T76 Arg2:E40	
+T78	Therapeutic_procedure 1843 1863	endoscopic procedure
+E41	Therapeutic_procedure:T78 
+T79	Therapeutic_procedure 1921 1931	intubation
+E42	Therapeutic_procedure:T79 
+T80	Detailed_description 1908 1920	endotracheal
+R43	MODIFY Arg1:T80 Arg2:E42	
+R44	SUB_PROCEDURE Arg1:E42 Arg2:E41	
+T81	Medication 1884 1902	general anesthesia
+E43	Medication:T81 
+R45	SUB_PROCEDURE Arg1:E43 Arg2:E41	
+T82	Therapeutic_procedure 1954 1962	prepared
+E44	Therapeutic_procedure:T82 
+T83	Biological_structure 1937 1949	nasal cavity
+R46	MODIFY Arg1:T83 Arg2:E44	
+T84	Medication 2003 2013	adrenaline
+E45	Medication:T84 
+T85	Dosage 2015 2021	1:1000
+R47	MODIFY Arg1:T85 Arg2:E45	
+T86	Administration 1995 2002	topical
+R48	MODIFY Arg1:T86 Arg2:E45	
+T87	Biological_structure 2033 2046	both nostrils
+R49	MODIFY Arg1:T87 Arg2:E44	
+T88	Detailed_description 1966 1984	inserting pledgets
+R50	MODIFY Arg1:T88 Arg2:E44	
+R51	MODIFY Arg1:E45 Arg2:T88	
+T89	Therapeutic_procedure 2147 2156	dissected
+E46	Therapeutic_procedure:T89 
+T90	Detailed_description 2065 2094	Using a zero degree endoscope
+T91	Biological_structure 2099 2142	residual STSG and mucosa of the left septum
+R52	MODIFY Arg1:T91 Arg2:E46	
+R53	MODIFY Arg1:T90 Arg2:E46	
+T92	Detailed_description 2157 2186	in a supraperichondrial plane
+R54	MODIFY Arg1:T92 Arg2:E46	
+T93	Sign_symptom 2237 2247	hemorrhage
+E47	Sign_symptom:T93 
+T94	Detailed_description 2229 2236	diffuse
+T95	Severity 2217 2228	significant
+R55	MODIFY Arg1:T94 Arg2:E47	
+R56	MODIFY Arg1:T95 Arg2:E47	
+R57	CAUSE Arg1:E46 Arg2:E47	
+T96	Therapeutic_procedure 2259 2269	hemostasis
+E48	Therapeutic_procedure:T96 
+T97	Detailed_description 2249 2258	Immediate
+R58	MODIFY Arg1:T97 Arg2:E48	
+T98	Detailed_description 2291 2322	topical gelatin-thrombin matrix
+R59	MODIFY Arg1:T98 Arg2:E48	
+T99	Detailed_description 2324 2331	Floseal
+R60	MODIFY Arg1:T99 Arg2:T98	
+T100	Sign_symptom 2424 2438	mucosal defect
+E49	Sign_symptom:T100 
+T101	Distance 2470 2474	3 cm
+R61	MODIFY Arg1:T101 Arg2:E49	
+T102	Detailed_description 2478 2506	anterior-posterior dimension
+R62	MODIFY Arg1:T102 Arg2:T101	
+T103	Therapeutic_procedure 2535 2559	skin graft was harvested
+E50	Therapeutic_procedure:T103 
+T104	Area 2510 2534	4 x 2 cm split thickness
+R63	MODIFY Arg1:T104 Arg2:E50	
+T105	Biological_structure 2569 2580	right thigh
+R64	MODIFY Arg1:T105 Arg2:E50	
+T106	Detailed_description 2582 2609	pie-crusted with a 15 blade
+T107	Biological_structure 2641 2678	along the length of the septal defect
+T108	Detailed_description 2619 2640	placed endoscopically
+R65	MODIFY Arg1:T106 Arg2:E50	
+R66	MODIFY Arg1:T108 Arg2:E50	
+R67	MODIFY Arg1:T107 Arg2:E50	
+T109	Coreference 2702 2707	graft
+E51	Coreference:T109 
+R68	BEFORE Arg1:E51 Arg2:E50	
+T110	Biological_structure 2727 2807	overlap of the mucosa of the nasal floor and the residual superior septal mucosa
+R69	MODIFY Arg1:T110 Arg2:E51	
+T111	Detailed_description 2826 2840	fibrin sealant
+R70	MODIFY Arg1:T111 Arg2:E50	
+T112	Volume 2818 2822	2 mL
+R71	MODIFY Arg1:T112 Arg2:T111	
+T113	Detailed_description 2926 2985	applied first to the edges then central portion of the STSG
+R72	MODIFY Arg1:T113 Arg2:T111	
+T114	Therapeutic_procedure 2995 3002	Packing
+E52	Therapeutic_procedure:T114 
+A4	POLARITY E52 NEG
+T115	Clinical_event 3053 3063	discharged
+E53	Clinical_event:T115 
+T116	Nonbiological_location 3064 3068	home
+R73	MODIFY Arg1:T116 Arg2:E53	
+T117	Date 3069 3095	on the same day of surgery
+E54	Date:T117 
+R74	MODIFY Arg1:E54 Arg2:E53	
+T118	Clinical_event 3106 3115	follow-up
+E55	Clinical_event:T118 
+T119	Date 3116 3131	two weeks after
+E56	Date:T119 
+T120	Sign_symptom 3206 3215	epistaxis
+E57	Sign_symptom:T120 
+T121	Detailed_description 3195 3205	left-sided
+R75	MODIFY Arg1:T121 Arg2:E57	
+T122	Sign_symptom 3171 3186	graft had taken
+E58	Sign_symptom:T122 
+T123	Clinical_event 3321 3330	follow-up
+E59	Clinical_event:T123 
+T124	Date 3312 3320	6 months
+E60	Date:T124 
+T125	Diagnostic_procedure 3345 3355	hemoglobin
+E61	Diagnostic_procedure:T125 
+T126	Lab_value 3372 3379	102 g/L
+R76	MODIFY Arg1:T126 Arg2:E61	
+T127	Therapeutic_procedure 3402 3414	transfusions
+E62	Therapeutic_procedure:T127 
+T128	Frequency 3415 3429	every 4 months
+R77	MODIFY Arg1:T128 Arg2:E62	
+T129	Diagnostic_procedure 3539 3563	epistaxis severity score
+E63	Diagnostic_procedure:T129 
+T130	Lab_value 3589 3593	mild
+T131	Lab_value 3595 3616	normalized score 3.05
+R78	MODIFY Arg1:T130 Arg2:E63	
+R79	MODIFY Arg1:T131 Arg2:E63	
+T132	History 21 34	known for HHT
+R80	BEFORE Arg1:E1 Arg2:E2	
+T133	Nonbiological_location 54 60	clinic
+R81	MODIFY Arg1:T133 Arg2:E2	
+R82	AFTER Arg1:E2 Arg2:E3	
+*	OVERLAP E3 E4 E5 E7 E6
+T11	Family_history 250 304	her mother passed away from an intracranial hemorrhage
+R5	BEFORE Arg1:E6 Arg2:E11	
+*	OVERLAP E11 E13 E15 E16
+T13	Duration 497 514	for several years
+E8	Duration:T13 
+R6	BEFORE Arg1:E16 Arg2:E8	
+*	OVERLAP E8 E17 E18
+R7	BEFORE Arg1:E18 Arg2:E19	
+T14	Detailed_description 632 641	increased
+T15	Severity 652 660	severity
+T16	Frequency 665 674	frequency
+R8	MODIFY Arg1:T14 Arg2:T15	
+R16	MODIFY Arg1:T14 Arg2:T16	
+R17	MODIFY Arg1:T15 Arg2:E20	
+R83	MODIFY Arg1:T16 Arg2:E20	
+R84	AFTER Arg1:E19 Arg2:E20	
+*	OVERLAP E20 E21 E22
+R85	BEFORE Arg1:E22 Arg2:E23	
+*	OVERLAP E23 E24
+R86	AFTER Arg1:E24 Arg2:E27	
+*	OVERLAP E27 E25 E26 E28 E29
+R87	BEFORE Arg1:E29 Arg2:E30	
+*	OVERLAP E30 E31 E32 E33 E34 E35 E36 E37 E38 E39
+R88	BEFORE Arg1:E39 Arg2:E40	
+*	OVERLAP E40 E41 E44 E45 E46 E47 E48 E49 E50 E51
+R89	BEFORE Arg1:E51 Arg2:E52	
+R90	BEFORE Arg1:E52 Arg2:E53	
+R91	BEFORE Arg1:E53 Arg2:E55	
+*	OVERLAP E55 E56 E58 E57
+A5	TREND E57 DEC
+R92	BEFORE Arg1:E57 Arg2:E60	
+*	OVERLAP E60 E59 E61 E62 E63

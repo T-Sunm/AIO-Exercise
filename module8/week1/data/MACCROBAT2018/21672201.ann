@@ -1,0 +1,183 @@
+T1	Age 2 15	33 - year old
+T2	Sex 16 21	woman
+T3	Sign_symptom 85 109	congestive heart failure
+E1	Sign_symptom:T3 
+T4	History 115 130	medical history
+T5	Detailed_description 135 147	unremarkable
+R1	MODIFY Arg1:T5 Arg2:T4	
+T6	History 157 167	a year ago
+T7	Clinical_event 22 31	presented
+E2	Clinical_event:T7 
+T8	Other_event 193 207	child delivery
+E3	Other_event:T8 
+#1	AnnotatorNotes E3	neither therapeutic nor diagnostic procedure
+T9	Clinical_event 222 230	admitted
+E4	Clinical_event:T9 
+T10	Disease_disorder 255 277	acute pulmonary oedema
+E5	Disease_disorder:T10 
+T11	Clinical_event 482 488	surgey
+E6	Clinical_event:T11 
+#2	AnnotatorNotes E6	seems to be a typo of "surgery"
+T12	Clinical_event 502 512	discharged
+E7	Clinical_event:T12 
+T13	Disease_disorder 291 306	Cor triatriatum
+E8	Disease_disorder:T13 
+T14	Sign_symptom 341 363	pulmonary hypertension
+E9	Sign_symptom:T14 
+T15	Clinical_event 372 381	diagnosed
+E10	Clinical_event:T15 
+T16	Biological_structure 393 407	left ventricle
+T17	Detailed_description 412 448	structurally and functionally intact
+T18	Disease_disorder 581 606	NYHA functional class III
+E11	Disease_disorder:T18 
+T19	Clinical_event 566 575	presented
+E12	Clinical_event:T19 
+T20	Sign_symptom 620 649	heart failure and palpittions
+E13	Sign_symptom:T20 
+T21	Sign_symptom 665 690	persistent atrial flutter
+E14	Sign_symptom:T21 
+T22	Diagnostic_procedure 695 715	physical examination
+E15	Diagnostic_procedure:T22 
+T23	Biological_structure 806 817	mitral area
+T24	Nonbiological_location 242 250	hospital
+T25	Disease_disorder 840 853	heart failure
+E16	Disease_disorder:T25 
+T26	Detailed_description 828 839	right-sided
+R2	MODIFY Arg1:T26 Arg2:E16	
+T27	Therapeutic_procedure 524 531	therapy
+E17	Therapeutic_procedure:T27 
+T28	Detailed_description 516 523	medical
+R3	MODIFY Arg1:T28 Arg2:E17	
+T30	Detailed_description 911 929	moderately dilated
+T31	Diagnostic_procedure 869 899	transthoracic echocardiography
+E18	Diagnostic_procedure:T31 
+T32	Disease_disorder 960 971	hypokinetic
+E19	Disease_disorder:T32 
+T33	Detailed_description 951 959	globally
+R5	MODIFY Arg1:T33 Arg2:E19	
+R6	CAUSE Arg1:E14 Arg2:E13	
+T34	Lab_value 1029 1032	30%
+T35	Disease_disorder 996 1013	systolic function
+E20	Disease_disorder:T35 
+T36	Detailed_description 978 995	severely impaired
+R7	MODIFY Arg1:T36 Arg2:E20	
+T37	Biological_structure 1035 1046	Left atrium
+T39	Biological_structure 1048 1050	LA
+T41	Biological_structure 1094 1113	echogenic structure
+T42	Detailed_description 1072 1093	mobile, membrane-like
+R8	MODIFY Arg1:T42 Arg2:T41	
+T43	Shape 1056 1063	dilated
+R9	MODIFY Arg1:T43 Arg2:T37	
+R10	MODIFY Arg1:T43 Arg2:T39	
+T29	Biological_structure 930 944	left ventricle
+T38	Biological_structure 946 948	LV
+R4	MODIFY Arg1:T30 Arg2:T29	
+R11	MODIFY Arg1:T30 Arg2:T38	
+T40	Diagnostic_procedure 1123 1153	Transesophageal echocardiogram
+E21	Diagnostic_procedure:T40 
+T44	Diagnostic_procedure 1155 1158	TEE
+E22	Diagnostic_procedure:T44 
+T45	Biological_structure 1173 1195	fibromuscular membrane
+T46	Biological_structure 1207 1209	LA
+T47	Biological_structure 1329 1350	left atrial appendage
+T48	Biological_structure 1352 1355	LAA
+T49	Biological_structure 1366 1374	chambers
+T50	Biological_structure 1410 1417	orifice
+T51	Detailed_description 1394 1409	non-restrictive
+R12	MODIFY Arg1:T51 Arg2:T50	
+T52	Biological_structure 1427 1435	membrane
+T53	Biological_structure 1458 1470	mitral valve
+T54	Biological_structure 1506 1518	Mitral valve
+T55	Disease_disorder 1561 1581	Patent foramen ovale
+E23	Disease_disorder:T55 
+T56	Disease_disorder 1583 1586	PFO
+E24	Disease_disorder:T56 
+T57	Disease_disorder 1589 1609	atrial septal defect
+E25	Disease_disorder:T57 
+T58	Disease_disorder 1611 1614	ASD
+E26	Disease_disorder:T58 
+T59	Disease_disorder 1685 1700	cor triatriatum
+E27	Disease_disorder:T59 
+T60	Clinical_event 1705 1716	reconfirmed
+E28	Clinical_event:T60 
+T61	Diagnostic_procedure 1718 1744	Magnetic resonance imaging
+E29	Diagnostic_procedure:T61 
+T62	Diagnostic_procedure 1747 1750	MRI
+E30	Diagnostic_procedure:T62 
+T63	Biological_structure 1783 1803	fibromuscular septum
+T64	Biological_structure 1813 1824	left atrium
+T65	Lab_value 1842 1871	ventricular ejection fraction
+T66	Lab_value 1874 1878	LVEF
+T67	Lab_value 1880 1883	30%
+T68	Lab_value 1885 1898	cardiac index
+T69	Lab_value 1899 1911	1,6 L/min/m2
+T70	Lab_value 1913 1927	cardiac output
+T71	Lab_value 1928 1937	2,7 L/min
+T72	Biological_structure 1987 2004	coronary arteries
+T73	Diagnostic_procedure 1952 1972	Coronary angiography
+E31	Diagnostic_procedure:T73 
+T74	Clinical_event 2042 2051	scheduled
+E32	Clinical_event:T74 
+T75	Clinical_event 2133 2147	administration
+E33	Clinical_event:T75 
+T76	Outcome 2090 2098	achieved
+E34	Outcome:T76 
+T77	Medication 2151 2167	sodium pentothal
+E35	Medication:T77 
+T78	Medication 2169 2181	sevofluorane
+E36	Medication:T78 
+T79	Medication 2196 2211	muscle relaxant
+E37	Medication:T79 
+T80	Medication 2183 2191	fentanyl
+E38	Medication:T80 
+T81	Other_entity 2253 2280	right radial arterial lines
+#3	AnnotatorNotes T81	hospital equipment
+T82	Other_entity 2284 2309	pulmonary artery catheter
+#4	AnnotatorNotes T82	hospital equipment
+T84	Other_entity 2336 2353	temperature probe
+#6	AnnotatorNotes T84	hospital equipment
+T83	Other_entity 2316 2330	foley catheter
+#5	AnnotatorNotes T83	hospital equipment
+T85	Diagnostic_procedure 2427 2459	Transesophageal echocardiography
+E39	Diagnostic_procedure:T85 
+T86	Diagnostic_procedure 2461 2464	TEE
+E40	Diagnostic_procedure:T86 
+T87	Clinical_event 2475 2485	instituted
+E41	Clinical_event:T87 
+T88	Therapeutic_procedure 2519 2536	median sternotomy
+E42	Therapeutic_procedure:T88 
+T89	Lab_value 2667 2671	32°C
+T90	Sign_symptom 2654 2665	hypothermic
+E43	Sign_symptom:T90 
+T91	Disease_disorder 3525 3545	atrial septal defect
+E44	Disease_disorder:T91 
+T92	Disease_disorder 3549 3569	patent foramen ovale
+E45	Disease_disorder:T92 
+T93	Disease_disorder 3323 3336	atrial septum
+E46	Disease_disorder:T93 
+T94	Biological_structure 3383 3395	right atrium
+T95	Other_entity 3415 3427	curved clamp
+#7	AnnotatorNotes T95	hospital equipment
+T96	Biological_structure 3499 3510	left atrium
+T97	Biological_structure 3263 3278	pulmonary veins
+T98	Biological_structure 3094 3103	diaphragm
+T99	Therapeutic_procedure 2998 3018	mitral valve surgery
+E47	Therapeutic_procedure:T99 
+T100	Biological_structure 3575 3584	diaphragm
+T101	Biological_structure 3633 3645	mitral valve
+T102	Sign_symptom 3783 3801	thrombus formation
+E48	Sign_symptom:T102 
+T103	Therapeutic_procedure 3807 3826	atriotomy incisions
+E49	Therapeutic_procedure:T103 
+T104	Other_entity 3951 3969	aortic cross-clamp
+#8	AnnotatorNotes T104	hospital equipment
+T105	Outcome 4341 4353	asymptomatic
+E50	Outcome:T105 
+T106	Clinical_event 4241 4251	discharged
+E51	Clinical_event:T106 
+T107	Lab_value 4497 4500	50%
+T108	Lab_value 4489 4493	LVEF
+T109	Diagnostic_procedure 4395 4398	MRI
+E52	Diagnostic_procedure:T109 
+T110	Diagnostic_procedure 4387 4390	TTE
+E53	Diagnostic_procedure:T110 

@@ -1,0 +1,376 @@
+T1	Age 2 13	45-year-old
+T2	Sex 14 19	woman
+T3	Clinical_event 20 28	presents
+E1	Clinical_event:T3 
+T4	Sign_symptom 97 101	pain
+E2	Sign_symptom:T4 
+T5	Nonbiological_location 36 56	general practitioner
+R1	MODIFY Arg1:T5 Arg2:E1	
+T6	Biological_structure 88 96	shoulder
+T7	Biological_structure 79 83	neck
+R2	MODIFY Arg1:T6 Arg2:E2	
+R3	MODIFY Arg1:T7 Arg2:E2	
+T8	Detailed_description 68 78	left-sided
+R4	MODIFY Arg1:T8 Arg2:E2	
+T9	Sign_symptom 107 111	pain
+E3	Sign_symptom:T9 
+T10	Severity 116 120	mild
+R5	MODIFY Arg1:T10 Arg2:E3	
+T11	Sign_symptom 3887 3891	pain
+E4	Sign_symptom:T11 
+A1	POLARITY E4 NEG
+T12	Biological_structure 3878 3886	shoulder
+T13	Biological_structure 3869 3873	neck
+R6	MODIFY Arg1:T12 Arg2:E4	
+R7	MODIFY Arg1:T13 Arg2:E4	
+T14	History 186 259	denied a history of smoking, excessive alcohol use and radiation exposure
+T15	History 156 180	history was unremarkable
+T16	Detailed_description 125 137	non-specific
+R8	MODIFY Arg1:T16 Arg2:E3	
+T17	Diagnostic_procedure 261 281	Physical examination
+E5	Diagnostic_procedure:T17 
+T18	Sign_symptom 320 335	lymphadenopathy
+E6	Sign_symptom:T18 
+T19	Biological_structure 311 319	cervical
+R9	MODIFY Arg1:T19 Arg2:E6	
+T20	Detailed_description 300 310	left sided
+T21	Severity 295 299	mild
+R10	MODIFY Arg1:T20 Arg2:E6	
+R11	MODIFY Arg1:T21 Arg2:E6	
+T22	Diagnostic_procedure 345 356	blood tests
+E7	Diagnostic_procedure:T22 
+T23	Diagnostic_procedure 386 393	calcium
+E8	Diagnostic_procedure:T23 
+T24	Lab_value 366 385	borderline elevated
+E9	Lab_value:T24 
+T25	Lab_value 397 407	10.5 mg/dL
+E10	Lab_value:T25 
+R12	MODIFY Arg1:E10 Arg2:E8	
+R13	MODIFY Arg1:E9 Arg2:E8	
+T26	Lab_value 490 499	286 pg/mL
+E11	Lab_value:T26 
+T27	Nonbiological_location 532 546	otolaryngology
+T28	Clinical_event 520 528	referred
+E12	Clinical_event:T28 
+R14	MODIFY Arg1:T27 Arg2:E12	
+T29	Diagnostic_procedure 461 480	parathyroid hormone
+E13	Diagnostic_procedure:T29 
+R15	MODIFY Arg1:E11 Arg2:E13	
+T30	Lab_value 452 460	elevated
+E14	Lab_value:T30 
+R16	MODIFY Arg1:E14 Arg2:E13	
+T31	Diagnostic_procedure 579 589	ultrasound
+E15	Diagnostic_procedure:T31 
+R17	SUB_PROCEDURE Arg1:E8 Arg2:E7	
+T32	Diagnostic_procedure 423 430	work up
+E16	Diagnostic_procedure:T32 
+R18	SUB_PROCEDURE Arg1:E13 Arg2:E16	
+T33	Biological_structure 571 578	Thyroid
+R19	MODIFY Arg1:T33 Arg2:E15	
+T34	Sign_symptom 610 616	nodule
+E17	Sign_symptom:T34 
+T35	Detailed_description 599 609	hypoechoic
+R20	MODIFY Arg1:T35 Arg2:E17	
+T36	Biological_structure 624 654	left lower lobe of the thyroid
+R21	MODIFY Arg1:T36 Arg2:E17	
+T37	Diagnostic_procedure 656 658	CT
+E18	Diagnostic_procedure:T37 
+T38	Biological_structure 671 675	neck
+R22	MODIFY Arg1:T38 Arg2:E18	
+T39	Sign_symptom 702 708	nodule
+E19	Sign_symptom:T39 
+T40	Detailed_description 692 701	hypodense
+R23	MODIFY Arg1:T40 Arg2:E19	
+T41	Distance 687 691	2 cm
+R24	MODIFY Arg1:T41 Arg2:E19	
+T42	Biological_structure 716 767	posterior inferior aspect of the left lower thyroid
+R25	MODIFY Arg1:T42 Arg2:E19	
+T43	Diagnostic_procedure 772 781	sestamibi
+E20	Diagnostic_procedure:T43 
+#1	AnnotatorNotes E20	Technetium (99mTc) sestamibi
+T44	Sign_symptom 794 810	increased uptake
+E21	Sign_symptom:T44 
+T45	Biological_structure 821 856	lower pole of the left thyroid lobe
+R26	MODIFY Arg1:T45 Arg2:E21	
+T46	Diagnostic_procedure 867 870	PTH
+E22	Diagnostic_procedure:T46 
+T47	Lab_value 858 866	Elevated
+E23	Lab_value:T47 
+R27	MODIFY Arg1:E23 Arg2:E22	
+T48	Sign_symptom 885 893	aberrant
+E24	Sign_symptom:T48 
+T49	Biological_structure 894 911	parathyroid gland
+R28	MODIFY Arg1:T49 Arg2:E24	
+T50	Diagnostic_procedure 915 922	imaging
+E25	Diagnostic_procedure:T50 
+T51	Disease_disorder 940 959	hyperparathyroidism
+E26	Disease_disorder:T51 
+A2	POLARITY E26 UNCERTAIN
+T52	Detailed_description 932 939	primary
+R29	MODIFY Arg1:T52 Arg2:E26	
+T53	Disease_disorder 975 994	hyperparathyroidism
+E27	Disease_disorder:T53 
+T54	Disease_disorder 1014 1026	bone disease
+E28	Disease_disorder:T54 
+T55	Disease_disorder 1028 1040	renal stones
+E29	Disease_disorder:T55 
+T56	Disease_disorder 1045 1070	neuromuscular dysfunction
+E30	Disease_disorder:T56 
+T57	Diagnostic_procedure 1098 1118	screening modalities
+E31	Diagnostic_procedure:T57 
+T58	Sign_symptom 1161 1173	asymptomatic
+E32	Sign_symptom:T58 
+T59	Disease_disorder 1184 1203	hyperparathyroidism
+E33	Disease_disorder:T59 
+T60	Detailed_description 1176 1183	Primary
+R30	MODIFY Arg1:T60 Arg2:E33	
+T61	Disease_disorder 1245 1252	adenoma
+E34	Disease_disorder:T61 
+T62	Biological_structure 1233 1244	parathyroid
+R31	MODIFY Arg1:T62 Arg2:E34	
+T63	Disease_disorder 1292 1303	hyperplasia
+E35	Disease_disorder:T63 
+T64	Biological_structure 1280 1291	parathyroid
+R32	MODIFY Arg1:T64 Arg2:E35	
+T65	Disease_disorder 1373 1382	carcinoma
+E36	Disease_disorder:T65 
+T66	Biological_structure 1361 1372	parathyroid
+R33	MODIFY Arg1:T66 Arg2:E36	
+T67	Diagnostic_procedure 1408 1411	PTH
+E37	Diagnostic_procedure:T67 
+T68	Lab_value 1393 1401	elevated
+E38	Lab_value:T68 
+T69	Detailed_description 1402 1407	serum
+R34	MODIFY Arg1:T69 Arg2:E37	
+R35	MODIFY Arg1:E38 Arg2:E37	
+T70	Diagnostic_procedure 1416 1423	calcium
+E39	Diagnostic_procedure:T70 
+R36	MODIFY Arg1:E38 Arg2:E39	
+T71	Severity 1442 1448	severe
+T72	Sign_symptom 1464 1478	manifestations
+E40	Sign_symptom:T72 
+T73	Biological_structure 1449 1454	renal
+T74	Biological_structure 1459 1463	bone
+R37	MODIFY Arg1:T74 Arg2:E40	
+R38	MODIFY Arg1:T73 Arg2:E40	
+R39	MODIFY Arg1:T71 Arg2:E40	
+T75	Disease_disorder 1511 1517	cancer
+E41	Disease_disorder:T75 
+T76	Disease_disorder 1593 1603	metastases
+E42	Disease_disorder:T76 
+T77	Sign_symptom 1580 1588	invasion
+E43	Sign_symptom:T77 
+T78	Therapeutic_procedure 1553 1564	operatively
+E44	Therapeutic_procedure:T78 
+T79	Therapeutic_procedure 1633 1650	parathyroidectomy
+E45	Therapeutic_procedure:T79 
+T80	Therapeutic_procedure 1778 1785	surgery
+E46	Therapeutic_procedure:T80 
+T81	Clinical_event 2202 2209	brought
+E47	Clinical_event:T81 
+T82	Nonbiological_location 2217 2231	operating room
+R40	MODIFY Arg1:T82 Arg2:E47	
+T83	Therapeutic_procedure 2248 2265	parathyroidectomy
+E48	Therapeutic_procedure:T83 
+T84	Diagnostic_procedure 3050 3062	P57 staining
+E49	Diagnostic_procedure:T84 
+T85	Lab_value 3067 3075	negative
+E50	Lab_value:T85 
+R41	MODIFY Arg1:E50 Arg2:E49	
+*	OVERLAP E1 E2 E3
+R42	BEFORE Arg1:E3 Arg2:E5	
+*	OVERLAP E5 E6 E7 E16
+R43	BEFORE Arg1:E16 Arg2:E12	
+*	OVERLAP E12 E15 E17 E18 E19 E20 E21 E22 E24 E25 E26
+T86	Clinical_event 3308 3319	followed up
+E51	Clinical_event:T86 
+T87	Diagnostic_procedure 3347 3354	imaging
+E52	Diagnostic_procedure:T87 
+T88	Sign_symptom 3380 3386	tumour
+E53	Sign_symptom:T88 
+A3	POLARITY E53 UNCERTAIN
+T89	Detailed_description 3371 3379	residual
+R44	MODIFY Arg1:T89 Arg2:E53	
+T90	Diagnostic_procedure 3404 3413	sestamibi
+E54	Diagnostic_procedure:T90 
+T91	Diagnostic_procedure 3418 3446	positron emission tomography
+E55	Diagnostic_procedure:T91 
+T92	Diagnostic_procedure 3448 3451	PET
+E56	Diagnostic_procedure:T92 
+R45	IDENTICAL Arg1:E56 Arg2:E55	
+T93	Sign_symptom 2056 2060	pain
+E57	Sign_symptom:T93 
+T94	Diagnostic_procedure 2080 2083	PTH
+E58	Diagnostic_procedure:T94 
+T95	Lab_value 2071 2079	elevated
+E59	Lab_value:T95 
+R46	MODIFY Arg1:E59 Arg2:E58	
+T96	Age 2093 2118	younger than 50 years old
+T97	Therapeutic_procedure 2143 2150	surgery
+E60	Therapeutic_procedure:T97 
+R47	AFTER Arg1:E26 Arg2:E57	
+*	OVERLAP E57 E58
+R48	BEFORE Arg1:E58 Arg2:E60	
+R49	AFTER Arg1:E60 Arg2:E47	
+R50	BEFORE Arg1:E47 Arg2:E48	
+T98	Diagnostic_procedure 1852 1878	glomerular filtration rate
+E61	Diagnostic_procedure:T98 
+T99	Diagnostic_procedure 1891 1911	bone density T-score
+E62	Diagnostic_procedure:T99 
+T100	Disease_disorder 1946 1955	fractures
+E63	Disease_disorder:T100 
+T101	Diagnostic_procedure 1976 1983	calcium
+E64	Diagnostic_procedure:T101 
+T102	Detailed_description 1970 1975	serum
+R51	MODIFY Arg1:T102 Arg2:E64	
+T103	Sign_symptom 2313 2317	firm
+E65	Sign_symptom:T103 
+T104	Biological_structure 2289 2306	parathyroid gland
+R52	MODIFY Arg1:T104 Arg2:E65	
+T105	Sign_symptom 2330 2338	adherent
+E66	Sign_symptom:T105 
+T106	Detailed_description 2322 2329	densely
+R53	MODIFY Arg1:T106 Arg2:E66	
+R54	MODIFY Arg1:T104 Arg2:E66	
+T107	Biological_structure 2346 2361	thyroid capsule
+R55	MODIFY Arg1:T107 Arg2:E66	
+T108	Biological_structure 2376 2388	strap muscle
+R56	MODIFY Arg1:T108 Arg2:E66	
+T109	Therapeutic_procedure 2413 2420	dissect
+E67	Therapeutic_procedure:T109 
+A4	POLARITY E67 MAYBE_NEG
+R57	SUB_PROCEDURE Arg1:E67 Arg2:E48	
+T110	Sign_symptom 2443 2451	invasion
+E68	Sign_symptom:T110 
+A5	POLARITY E68 NEG
+T111	Biological_structure 2461 2468	capsule
+T112	Biological_structure 2482 2488	muscle
+T113	Biological_structure 2501 2512	lymph nodes
+R58	MODIFY Arg1:T111 Arg2:E68	
+R59	MODIFY Arg1:T112 Arg2:E68	
+R60	MODIFY Arg1:T113 Arg2:E68	
+T114	Diagnostic_procedure 2518 2535	resected specimen
+E69	Diagnostic_procedure:T114 
+T115	Color 2552 2565	brownish grey
+T116	Sign_symptom 2591 2604	necrotic foci
+E70	Sign_symptom:T116 
+T117	Texture 2610 2627	irregular texture
+R61	MODIFY Arg1:T115 Arg2:E69	
+R62	MODIFY Arg1:T117 Arg2:E69	
+T118	Disease_disorder 2697 2718	parathyroid carcinoma
+E71	Disease_disorder:T118 
+T119	Sign_symptom 2733 2741	invasion
+E72	Sign_symptom:T119 
+T120	Biological_structure 2724 2732	capsular
+R63	MODIFY Arg1:T120 Arg2:E72	
+T121	Sign_symptom 2749 2764	tumour necrosis
+E73	Sign_symptom:T121 
+T122	Detailed_description 2743 2748	focal
+R64	MODIFY Arg1:T122 Arg2:E73	
+T123	Sign_symptom 2775 2783	fibrosis
+E74	Sign_symptom:T123 
+T124	Detailed_description 2766 2774	reactive
+R65	MODIFY Arg1:T124 Arg2:E74	
+T125	Sign_symptom 2810 2818	invasion
+E75	Sign_symptom:T125 
+T126	Biological_structure 2794 2809	skeletal muscle
+R66	MODIFY Arg1:T126 Arg2:E75	
+T127	Therapeutic_procedure 2839 2860	Margins were resected
+E76	Therapeutic_procedure:T127 
+T128	Diagnostic_procedure 2862 2888	Immunohistochemical stains
+E77	Diagnostic_procedure:T128 
+T129	Diagnostic_procedure 2906 2911	Ki-67
+E78	Diagnostic_procedure:T129 
+T130	Lab_value 2896 2905	increased
+E79	Lab_value:T130 
+R67	MODIFY Arg1:E79 Arg2:E78	
+R68	SUB_PROCEDURE Arg1:E78 Arg2:E77	
+T131	Diagnostic_procedure 2941 2946	Bcl-1
+E80	Diagnostic_procedure:T131 
+T132	Diagnostic_procedure 2948 2957	cyclin D1
+E81	Diagnostic_procedure:T132 
+R69	IDENTICAL Arg1:E81 Arg2:E80	
+T133	Lab_value 2934 2940	strong
+E82	Lab_value:T133 
+R70	MODIFY Arg1:E82 Arg2:E80	
+T134	Disease_disorder 3002 3023	parathyroid carcinoma
+E83	Disease_disorder:T134 
+R71	SUB_PROCEDURE Arg1:E80 Arg2:E77	
+T135	Disease_disorder 3102 3124	parathyroid carcinomas
+E84	Disease_disorder:T135 
+T136	Sign_symptom 3152 3166	hypercalcaemia
+E85	Sign_symptom:T136 
+T137	Therapeutic_procedure 3556 3565	operation
+E86	Therapeutic_procedure:T137 
+T138	Therapeutic_procedure 3590 3600	dissection
+E87	Therapeutic_procedure:T138 
+T139	Therapeutic_procedure 3610 3627	hemithyroidectomy
+E88	Therapeutic_procedure:T139 
+T140	Detailed_description 3605 3609	left
+R72	MODIFY Arg1:T140 Arg2:E88	
+T141	Biological_structure 3585 3589	neck
+T142	Detailed_description 3580 3584	left
+T143	Detailed_description 3572 3579	radical
+R73	MODIFY Arg1:T141 Arg2:E87	
+R74	MODIFY Arg1:T142 Arg2:E87	
+R75	MODIFY Arg1:T143 Arg2:E87	
+R76	SUB_PROCEDURE Arg1:E87 Arg2:E86	
+R77	SUB_PROCEDURE Arg1:E88 Arg2:E86	
+T144	Sign_symptom 3641 3650	recovered
+E89	Sign_symptom:T144 
+T145	Date 3697 3704	3 years
+E90	Date:T145 
+T146	Therapeutic_procedure 3722 3729	surgery
+E91	Therapeutic_procedure:T146 
+T147	Outcome 3743 3768	continues to do very well
+E92	Outcome:T147 
+T148	Clinical_event 3776 3787	followed up
+E93	Clinical_event:T148 
+T149	Frequency 3788 3802	every 3 months
+R78	MODIFY Arg1:T149 Arg2:E93	
+T150	Diagnostic_procedure 3820 3823	PTH
+E94	Diagnostic_procedure:T150 
+T151	Diagnostic_procedure 3828 3835	calcium
+E95	Diagnostic_procedure:T151 
+T152	Detailed_description 3814 3819	serum
+R79	MODIFY Arg1:T152 Arg2:E94	
+T153	Diagnostic_procedure 3917 3928	blood tests
+E96	Diagnostic_procedure:T153 
+T154	Diagnostic_procedure 3954 3957	PTH
+E97	Diagnostic_procedure:T154 
+T155	Lab_value 3934 3953	marginally elevated
+E98	Lab_value:T155 
+T156	Frequency 3893 3902	Sometimes
+R80	MODIFY Arg1:T156 Arg2:E98	
+R81	MODIFY Arg1:E98 Arg2:E97	
+T157	Sign_symptom 3987 3998	eucalcaemic
+E99	Sign_symptom:T157 
+T158	Diagnostic_procedure 4013 4026	nuclear scans
+E100	Diagnostic_procedure:T158 
+T159	Diagnostic_procedure 4031 4034	PET
+E101	Diagnostic_procedure:T159 
+T160	Lab_value 4056 4064	negative
+E102	Lab_value:T160 
+R82	MODIFY Arg1:E102 Arg2:E101	
+R83	MODIFY Arg1:E102 Arg2:E100	
+T161	Frequency 4108 4122	every 3 months
+T162	Clinical_event 4098 4107	monitored
+E103	Clinical_event:T162 
+R84	MODIFY Arg1:T161 Arg2:E103	
+R85	SUB_PROCEDURE Arg1:E97 Arg2:E96	
+R86	SUB_PROCEDURE Arg1:E48 Arg2:E60	
+*	OVERLAP E48 E65 E66 E67 E68 E69 E70
+T163	Detailed_description 2581 2590	scattered
+R87	MODIFY Arg1:T163 Arg2:E70	
+T164	Diagnostic_procedure 2646 2655	pathology
+E104	Diagnostic_procedure:T164 
+R88	BEFORE Arg1:E70 Arg2:E104	
+*	OVERLAP E104 E71 E72 E73 E74 E75 E76 E77 E83 E49
+R89	BEFORE Arg1:E49 Arg2:E51	
+*	OVERLAP E51 E52 E53 E54 E55
+R90	BEFORE Arg1:E55 Arg2:E86	
+R91	BEFORE Arg1:E86 Arg2:E89	
+R92	BEFORE Arg1:E89 Arg2:E90	
+R93	AFTER Arg1:E90 Arg2:E91	
+R94	BEFORE Arg1:E91 Arg2:E92	
+*	OVERLAP E92 E93 E94 E95 E4 E96 E99 E100 E101 E103

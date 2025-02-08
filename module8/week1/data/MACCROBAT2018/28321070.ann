@@ -1,0 +1,283 @@
+T1	Age 3 14	84-year-old
+T2	Sex 15 20	woman
+T3	Sign_symptom 54 61	dyspnea
+E1	Sign_symptom:T3 
+T4	Nonbiological_location 36 48	local clinic
+T5	Clinical_event 21 30	presented
+E2	Clinical_event:T5 
+R1	MODIFY Arg1:T4 Arg2:E2	
+T6	Sign_symptom 88 92	pain
+E3	Sign_symptom:T6 
+T7	Biological_structure 78 87	left back
+R2	MODIFY Arg1:T7 Arg2:E3	
+T8	Detailed_description 62 73	on exertion
+R3	MODIFY Arg1:T8 Arg2:E1	
+T9	Duration 93 114	persisting for a mont
+E4	Duration:T9 
+T10	Clinical_event 125 133	admitted
+E5	Clinical_event:T10 
+T11	Nonbiological_location 141 149	hospital
+R4	MODIFY Arg1:T11 Arg2:E5	
+T12	Sign_symptom 166 182	pleural effusion
+E6	Sign_symptom:T12 
+T13	Detailed_description 161 165	left
+R5	MODIFY Arg1:T13 Arg2:E6	
+T14	Diagnostic_procedure 194 199	X-ray
+E7	Diagnostic_procedure:T14 
+T15	Biological_structure 188 193	chest
+R6	MODIFY Arg1:T15 Arg2:E7	
+T16	History 214 226	hypertension
+T17	History 252 307	no history of pleural tuberculosis or chronic pyothorax
+T18	Diagnostic_procedure 352 363	examination
+E8	Diagnostic_procedure:T18 
+T19	Diagnostic_procedure 369 380	vital signs
+E9	Diagnostic_procedure:T19 
+T20	Diagnostic_procedure 385 402	oxygen saturation
+E10	Diagnostic_procedure:T20 
+T21	Lab_value 408 414	normal
+R7	MODIFY Arg1:T21 Arg2:E10	
+R8	MODIFY Arg1:T21 Arg2:E9	
+T22	Diagnostic_procedure 416 420	SpO2
+E11	Diagnostic_procedure:T22 
+T23	Lab_value 422 425	96%
+R9	MODIFY Arg1:T23 Arg2:E11	
+T24	Detailed_description 426 437	ambient air
+R10	MODIFY Arg1:T24 Arg2:E11	
+T25	Diagnostic_procedure 442 459	chest examination
+E12	Diagnostic_procedure:T25 
+T26	Sign_symptom 471 475	mass
+E13	Sign_symptom:T26 
+T27	Sign_symptom 510 514	pain
+E14	Sign_symptom:T27 
+T28	Biological_structure 483 504	left side of her back
+R11	MODIFY Arg1:T28 Arg2:E14	
+T29	Sign_symptom 519 545	decreased breathing sounds
+E15	Sign_symptom:T29 
+T30	Biological_structure 553 574	left lower-lung field
+R12	MODIFY Arg1:T30 Arg2:E15	
+T31	Diagnostic_procedure 592 612	examination findings
+E16	Diagnostic_procedure:T31 
+T32	Detailed_description 576 584	The rest
+R13	MODIFY Arg1:T32 Arg2:E16	
+T33	Lab_value 618 624	normal
+R14	MODIFY Arg1:T33 Arg2:E16	
+T34	Diagnostic_procedure 626 642	Laboratory tests
+E17	Diagnostic_procedure:T34 
+T35	Diagnostic_procedure 671 689	C reactive protein
+E18	Diagnostic_procedure:T35 
+T36	Lab_value 652 667	elevated levels
+R15	MODIFY Arg1:T36 Arg2:E18	
+T37	Diagnostic_procedure 691 712	lactate dehydrogenase
+E19	Diagnostic_procedure:T37 
+T38	Diagnostic_procedure 714 717	LDH
+E20	Diagnostic_procedure:T38 
+R16	IDENTICAL Arg1:E20 Arg2:E19	
+R17	MODIFY Arg1:T36 Arg2:E19	
+T39	Diagnostic_procedure 724 754	soluble interleukin-2 receptor
+E21	Diagnostic_procedure:T39 
+T40	Diagnostic_procedure 756 762	sIL-2R
+E22	Diagnostic_procedure:T40 
+R18	IDENTICAL Arg1:E22 Arg2:E21	
+R19	MODIFY Arg1:T36 Arg2:E21	
+T41	Diagnostic_procedure 783 788	X-ray
+E23	Diagnostic_procedure:T41 
+T42	Biological_structure 777 782	chest
+R20	MODIFY Arg1:T42 Arg2:E23	
+T43	Sign_symptom 809 825	pleural effusion
+E24	Sign_symptom:T43 
+T44	Detailed_description 804 808	left
+R21	MODIFY Arg1:T44 Arg2:E24	
+T45	Detailed_description 831 848	mediastinal shift
+R22	MODIFY Arg1:T45 Arg2:E24	
+T46	Date 850 875	On the first hospital day
+E25	Date:T46 
+T47	Biological_structure 880 891	intercostal
+T48	Therapeutic_procedure 892 905	drainage tube
+E26	Therapeutic_procedure:T48 
+R23	MODIFY Arg1:T47 Arg2:E26	
+T49	Diagnostic_procedure 946 965	computed tomography
+E27	Diagnostic_procedure:T49 
+T50	Diagnostic_procedure 967 969	CT
+E28	Diagnostic_procedure:T50 
+R24	IDENTICAL Arg1:E28 Arg2:E27	
+T51	Biological_structure 940 945	chest
+R25	MODIFY Arg1:T51 Arg2:E27	
+T52	Sign_symptom 1009 1013	mass
+E29	Sign_symptom:T52 
+T53	Biological_structure 1001 1008	pleural
+T54	Detailed_description 991 1000	irregular
+R26	MODIFY Arg1:T53 Arg2:E29	
+R27	MODIFY Arg1:T54 Arg2:E29	
+T55	Biological_structure 1027 1042	left chest wall
+R28	MODIFY Arg1:T55 Arg2:E29	
+T56	Sign_symptom 1052 1063	destruction
+E30	Sign_symptom:T56 
+T57	Biological_structure 1048 1051	rib
+R29	MODIFY Arg1:T57 Arg2:E30	
+T58	Sign_symptom 1068 1084	pleural effusion
+E31	Sign_symptom:T58 
+T59	Sign_symptom 1090 1094	mass
+E32	Sign_symptom:T59 
+T60	Biological_structure 1099 1136	adjacent to the posterior mediastinum
+R30	MODIFY Arg1:T60 Arg2:E32	
+T61	Sign_symptom 1296 1304	purulent
+E33	Sign_symptom:T61 
+A1	POLARITY E33 NEG
+T63	Biological_structure 1263 1276	pleural fluid
+R31	MODIFY Arg1:T63 Arg2:E33	
+T62	Sign_symptom 1281 1287	serous
+E34	Sign_symptom:T62 
+R32	MODIFY Arg1:T63 Arg2:E34	
+T64	Sign_symptom 1166 1170	mass
+E35	Sign_symptom:T64 
+R33	IDENTICAL Arg1:E35 Arg2:E32	
+T65	Detailed_description 1146 1158	lateral side
+T66	Detailed_description 1175 1180	thick
+T67	Biological_structure 1198 1208	chest wall
+R34	MODIFY Arg1:T65 Arg2:E35	
+R35	MODIFY Arg1:T66 Arg2:E35	
+R36	MODIFY Arg1:T67 Arg2:E35	
+T68	Disease_disorder 1241 1257	chest wall tumor
+E36	Disease_disorder:T68 
+T69	Sign_symptom 1231 1235	mass
+E37	Sign_symptom:T69 
+R37	IDENTICAL Arg1:E37 Arg2:E35	
+T70	Diagnostic_procedure 1308 1322	fluid analysis
+E38	Diagnostic_procedure:T70 
+T71	Lab_value 1339 1348	exudative
+R38	MODIFY Arg1:T71 Arg2:E38	
+T72	Lab_value 1354 1399	81% of the white blood cells were lymphocytes
+R39	MODIFY Arg1:T72 Arg2:E38	
+T73	Diagnostic_procedure 1405 1418	fluid culture
+E39	Diagnostic_procedure:T73 
+T74	Lab_value 1423 1431	negative
+R40	MODIFY Arg1:T74 Arg2:E39	
+T75	Diagnostic_procedure 1437 1445	cytology
+E40	Diagnostic_procedure:T75 
+T76	Sign_symptom 1475 1485	malignancy
+E41	Sign_symptom:T76 
+A2	POLARITY E41 NEG
+R41	MODIFY Arg1:E41 Arg2:E40	
+T77	Diagnostic_procedure 1514 1520	biopsy
+E42	Diagnostic_procedure:T77 
+T78	Detailed_description 1507 1513	needle
+R42	MODIFY Arg1:T78 Arg2:E42	
+T79	Detailed_description 1497 1506	CT-guided
+R43	MODIFY Arg1:T79 Arg2:E42	
+T80	Diagnostic_procedure 1540 1554	histopathology
+E43	Diagnostic_procedure:T80 
+T81	Disease_disorder 1588 1617	diffuse large B-cell lymphoma
+E44	Disease_disorder:T81 
+T82	Disease_disorder 1619 1624	DLBCL
+E45	Disease_disorder:T82 
+R44	IDENTICAL Arg1:E45 Arg2:E44	
+T83	Diagnostic_procedure 1648 1652	CD10
+E46	Diagnostic_procedure:T83 
+T84	Diagnostic_procedure 1657 1661	CD20
+E47	Diagnostic_procedure:T84 
+T85	Diagnostic_procedure 1679 1682	CD3
+E48	Diagnostic_procedure:T85 
+T86	Diagnostic_procedure 1687 1690	CD5
+E49	Diagnostic_procedure:T86 
+T87	Lab_value 1635 1643	positive
+R45	MODIFY Arg1:T87 Arg2:E46	
+R46	MODIFY Arg1:T87 Arg2:E47	
+T88	Lab_value 1666 1674	negative
+R47	MODIFY Arg1:T88 Arg2:E48	
+R48	MODIFY Arg1:T88 Arg2:E49	
+T89	Diagnostic_procedure 1700 1770	18-fluorodeoxyglucose positron emission tomography/computed tomography
+E50	Diagnostic_procedure:T89 
+T90	Diagnostic_procedure 1772 1782	FDG-PET/CT
+E51	Diagnostic_procedure:T90 
+R49	IDENTICAL Arg1:E51 Arg2:E50	
+T91	Sign_symptom 1793 1808	high FDG uptake
+E52	Sign_symptom:T91 
+T92	History 2007 2057	never had either tuberculous pleurisy or pyothorax
+T93	Diagnostic_procedure 2063 2081	performance status
+E53	Diagnostic_procedure:T93 
+T94	Diagnostic_procedure 2083 2085	PS
+E54	Diagnostic_procedure:T94 
+R50	IDENTICAL Arg1:E54 Arg2:E53	
+T95	Lab_value 2091 2092	3
+R51	MODIFY Arg1:T95 Arg2:E53	
+T96	Sign_symptom 1832 1836	mass
+E55	Sign_symptom:T96 
+T97	Biological_structure 1816 1831	left chest wall
+R52	MODIFY Arg1:T97 Arg2:E55	
+T98	Disease_disorder 1903 1929	primary malignant lymphoma
+E56	Disease_disorder:T98 
+T99	Biological_structure 1930 1961	originating from the chest wall
+R53	MODIFY Arg1:T99 Arg2:E56	
+T100	Sign_symptom 2122 2129	fatigue
+E57	Sign_symptom:T100 
+#1	AnnotatorNotes T95	Capable of only limited selfcare; confined to bed or chair more than 50% of waking hours
+T101	Sign_symptom 2113 2117	pain
+E58	Sign_symptom:T101 
+T102	Biological_structure 2108 2112	back
+R54	MODIFY Arg1:T102 Arg2:E58	
+T103	Medication 2273 2282	etoposide
+E59	Medication:T103 
+T104	Medication 2245 2254	Rituximab
+E60	Medication:T104 
+A3	POLARITY E60 NEG
+T105	Administration 2268 2272	oral
+T106	Detailed_description 2259 2267	low-dose
+R55	MODIFY Arg1:T105 Arg2:E59	
+R56	MODIFY Arg1:T106 Arg2:E59	
+T107	Dosage 2284 2304	50 mg/day d1-14, q28
+R57	MODIFY Arg1:T107 Arg2:E59	
+T108	Sign_symptom 2328 2344	pleural effusion
+E61	Sign_symptom:T108 
+A4	POLARITY E61 NEG
+T109	Date 2357 2373	within two weeks
+E62	Date:T109 
+T110	Sign_symptom 2384 2388	pain
+E63	Sign_symptom:T110 
+A5	POLARITY E63 NEG
+T111	Biological_structure 2379 2383	back
+R58	MODIFY Arg1:T111 Arg2:E63	
+T112	Diagnostic_procedure 2410 2412	PS
+E64	Diagnostic_procedure:T112 
+T113	Lab_value 2425 2426	1
+R59	MODIFY Arg1:T113 Arg2:E64	
+T114	Date 2427 2441	within a month
+E65	Date:T114 
+T115	Diagnostic_procedure 2443 2451	Chest CT
+E66	Diagnostic_procedure:T115 
+T116	Date 2462 2479	four months later
+E67	Date:T116 
+T117	Lab_value 2487 2504	complete response
+R60	MODIFY Arg1:T117 Arg2:E66	
+T118	Medication 2540 2552	chemotherapy
+E68	Medication:T118 
+T119	Administration 2535 2539	oral
+R61	MODIFY Arg1:T119 Arg2:E68	
+T120	Diagnostic_procedure 2575 2577	PS
+E69	Diagnostic_procedure:T120 
+T121	Lab_value 2570 2574	good
+R62	MODIFY Arg1:T121 Arg2:E69	
+T122	Date 2582 2610	one year after the diagnosis
+E70	Date:T122 
+*	OVERLAP E3 E4 E1
+R63	AFTER Arg1:E2 Arg2:E1	
+R64	BEFORE Arg1:E4 Arg2:E5	
+*	OVERLAP E5 E6 E7 E8 E9 E10 E11 E12 E13 E14 E15 E16 E17 E18 E19 E21 E23 E24
+R65	BEFORE Arg1:E24 Arg2:E25	
+*	OVERLAP E25 E26
+R66	BEFORE Arg1:E26 Arg2:E27	
+*	OVERLAP E27 E29 E30 E31 E32 E35 E36 E34 E33 E38 E39 E40 E41
+R67	BEFORE Arg1:E41 Arg2:E42	
+*	OVERLAP E42 E43 E44 E46 E47 E48 E49 E50 E52 E55 E56
+R68	BEFORE Arg1:E56 Arg2:E53	
+*	OVERLAP E53 E58 E57 E60
+R69	BEFORE Arg1:E60 Arg2:E59	
+R70	BEFORE Arg1:E59 Arg2:E61	
+*	OVERLAP E61 E62 E63
+R71	BEFORE Arg1:E63 Arg2:E64	
+*	OVERLAP E64 E65
+R72	BEFORE Arg1:E65 Arg2:E66	
+*	OVERLAP E66 E67
+R73	BEFORE Arg1:E67 Arg2:E68	
+*	OVERLAP E68 E69 E70
+T123	History 231 243	dyslipidemia
+T124	History 309 347	nor a smoking history or dust exposure

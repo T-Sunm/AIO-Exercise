@@ -1,0 +1,512 @@
+T1	Date 131 135	2013
+E1	Date:T1 
+T2	Age 139 150	66-year-old
+T3	Occupation 151 157	farmer
+T4	History 176 204	ventricular tachycardia (VT)
+T5	Sign_symptom 276 287	palpitation
+E2	Sign_symptom:T5 
+T6	Sign_symptom 289 304	chest tightness
+E3	Sign_symptom:T6 
+T7	Sign_symptom 314 322	sweating
+E4	Sign_symptom:T7 
+T8	Severity 306 313	profuse
+R1	MODIFY Arg1:T8 Arg2:E4	
+T9	Sign_symptom 327 333	nausea
+E5	Sign_symptom:T9 
+T10	Disease_disorder 363 369	causes
+E6	Disease_disorder:T10 
+A1	POLARITY E6 NEG
+T11	Clinical_event 222 231	presented
+E7	Clinical_event:T11 
+T12	Nonbiological_location 239 259	Emergency Department
+R2	MODIFY Arg1:T12 Arg2:E7	
+T13	Detailed_description 265 275	continuous
+R3	MODIFY Arg1:T13 Arg2:E2	
+T14	Diagnostic_procedure 412 426	blood pressure
+E8	Diagnostic_procedure:T14 
+T15	Lab_value 397 408	sudden drop
+R4	MODIFY Arg1:T15 Arg2:E8	
+T16	Sign_symptom 437 446	confusion
+E9	Sign_symptom:T16 
+T17	Detailed_description 431 436	acute
+R5	MODIFY Arg1:T17 Arg2:E9	
+T18	Therapeutic_procedure 467 488	electrical conversion
+E10	Therapeutic_procedure:T18 
+T19	Sign_symptom 494 507	consciousness
+E11	Sign_symptom:T19 
+T20	Sign_symptom 536 544	symptoms
+E12	Sign_symptom:T20 
+A2	POLARITY E12 NEG
+T21	Detailed_description 457 466	immediate
+R6	MODIFY Arg1:T21 Arg2:E10	
+T22	Clinical_event 578 589	transferred
+E13	Clinical_event:T22 
+T23	Nonbiological_location 597 621	Department of Cardiology
+R7	MODIFY Arg1:T23 Arg2:E13	
+T24	Diagnostic_procedure 634 645	evaluations
+E14	Diagnostic_procedure:T24 
+T25	Therapeutic_procedure 650 660	treatments
+E15	Therapeutic_procedure:T25 
+T26	Diagnostic_procedure 676 690	blood pressure
+E16	Diagnostic_procedure:T26 
+T27	Lab_value 695 707	105/75 mm Hg
+R8	MODIFY Arg1:T27 Arg2:E16	
+T28	Diagnostic_procedure 731 741	heart rate
+E17	Diagnostic_procedure:T28 
+T29	Lab_value 745 757	75 beats/min
+R9	MODIFY Arg1:T29 Arg2:E17	
+T30	Diagnostic_procedure 759 775	body temperature
+E18	Diagnostic_procedure:T30 
+T31	Lab_value 779 785	36.6°C
+R10	MODIFY Arg1:T31 Arg2:E18	
+T32	Diagnostic_procedure 790 806	respiration rate
+E19	Diagnostic_procedure:T32 
+T33	Lab_value 810 822	18 times/min
+R11	MODIFY Arg1:T33 Arg2:E19	
+T34	Sign_symptom 841 849	extended
+E20	Sign_symptom:T34 
+T35	Biological_structure 828 840	heart border
+R12	MODIFY Arg1:T35 Arg2:E20	
+T36	Lab_value 850 861	to the left
+R13	MODIFY Arg1:T36 Arg2:E20	
+T37	Diagnostic_procedure 872 886	apical impulse
+E21	Diagnostic_procedure:T37 
+T38	Lab_value 902 928	left 5th intercostal space
+R14	MODIFY Arg1:T38 Arg2:E21	
+T39	Distance 930 970	1.0 cm lateral to the midclavicular line
+R15	MODIFY Arg1:T39 Arg2:T38	
+T40	Duration 1019 1027	30 years
+E22	Duration:T40 
+T41	Disease_disorder 1001 1013	hypertension
+E23	Disease_disorder:T41 
+T42	Medication 1044 1071	antihypertensive medication
+E24	Medication:T42 
+A3	POLARITY E24 NEG
+T43	History 1001 1071	hypertension over 30 years without regular antihypertensive medication
+T44	Diagnostic_procedure 1085 1099	blood pressure
+E25	Diagnostic_procedure:T44 
+T45	Lab_value 1104 1117	170/110 mm Hg
+R16	MODIFY Arg1:T45 Arg2:E25	
+T46	Detailed_description 1077 1084	highest
+R17	MODIFY Arg1:T46 Arg2:E25	
+T47	Family_history 1129 1203	no family history of early coronary artery disease or sudden cardiac death
+T48	History 1208 1282	did not smoke cigarettes or use illicit drugs, and rarely consumed alcohol
+T49	History 1301 1357	no known contacts with sick persons and no recent travel
+T50	Diagnostic_procedure 1379 1396	electrocardiogram
+E26	Diagnostic_procedure:T50 
+T51	Diagnostic_procedure 1398 1401	ECG
+E27	Diagnostic_procedure:T51 
+R18	IDENTICAL Arg1:E27 Arg2:E26	
+T52	Disease_disorder 1406 1408	VT
+E28	Disease_disorder:T52 
+#1	AnnotatorNotes E28	ventricular tachycardia
+T53	Biological_structure 1469 1500	right ventricular outflow tract
+T54	Biological_structure 1502 1506	RVOT
+T55	Biological_structure 1512 1527	tricuspid valve
+R19	IDENTICAL Arg1:T54 Arg2:T53	
+T56	Detailed_description 1371 1378	surface
+T57	Detailed_description 1359 1370	Twelve-lead
+R20	MODIFY Arg1:T56 Arg2:E26	
+R21	MODIFY Arg1:T57 Arg2:E26	
+T58	Biological_structure 1452 1468	boundary between
+R22	MODIFY Arg1:T53 Arg2:T58	
+R23	MODIFY Arg1:T55 Arg2:T58	
+R24	MODIFY Arg1:T58 Arg2:E28	
+T59	Disease_disorder 1534 1536	VT
+E29	Disease_disorder:T59 
+T60	Lab_value 1550 1573	150 beats/min or higher
+R25	MODIFY Arg1:T60 Arg2:E29	
+T61	Sign_symptom 1578 1591	epsilon waves
+E30	Sign_symptom:T61 
+A4	POLARITY E30 NEG
+T62	Diagnostic_procedure 1610 1626	precordial leads
+E31	Diagnostic_procedure:T62 
+R26	MODIFY Arg1:E30 Arg2:E31	
+R27	SUB_PROCEDURE Arg1:E31 Arg2:E26	
+T63	Disease_disorder 1663 1665	VT
+E32	Disease_disorder:T63 
+T64	Lab_value 1537 1546	increased
+R28	MODIFY Arg1:T64 Arg2:E29	
+T65	Lab_value 1666 1675	decreased
+R29	MODIFY Arg1:T65 Arg2:E32	
+T66	Lab_value 1679 1701	120 beats/min or lower
+R30	MODIFY Arg1:T66 Arg2:E32	
+T67	Sign_symptom 1703 1716	epsilon waves
+E33	Sign_symptom:T67 
+T68	Diagnostic_procedure 1729 1740	leads V1–V2
+E34	Diagnostic_procedure:T68 
+R31	SUB_PROCEDURE Arg1:E34 Arg2:E26	
+R32	MODIFY Arg1:E33 Arg2:E34	
+T69	Sign_symptom 5442 5453	palpitation
+E35	Sign_symptom:T69 
+A5	POLARITY E35 NEG
+T70	Sign_symptom 5461 5470	tightness
+E36	Sign_symptom:T70 
+A6	POLARITY E36 NEG
+T71	Biological_structure 5455 5460	chest
+R33	MODIFY Arg1:T71 Arg2:E36	
+T72	Sign_symptom 5480 5488	sweating
+E37	Sign_symptom:T72 
+A7	POLARITY E37 NEG
+T73	Sign_symptom 5492 5498	nausea
+E38	Sign_symptom:T73 
+A8	POLARITY E38 NEG
+T74	Severity 5472 5479	profuse
+R34	MODIFY Arg1:T74 Arg2:E37	
+T75	Clinical_event 5384 5395	followed up
+E39	Clinical_event:T75 
+T76	Date 5396 5410	3 months after
+E40	Date:T76 
+T77	Clinical_event 5095 5105	discharged
+E41	Clinical_event:T77 
+T78	Nonbiological_location 5111 5119	hospital
+R35	MODIFY Arg1:T78 Arg2:E41	
+T79	Date 5123 5128	day 9
+E42	Date:T79 
+T80	Medication 5147 5167	metoprolol succinate
+E43	Medication:T80 
+T81	Administration 5168 5193	sustained-release tablets
+T82	Dosage 5195 5209	23.75 mg daily
+T83	Administration 5211 5215	p.o.
+R36	MODIFY Arg1:T82 Arg2:E43	
+R37	MODIFY Arg1:T81 Arg2:E43	
+R38	MODIFY Arg1:T83 Arg2:E43	
+T84	Medication 5218 5242	amiodarone hydrochloride
+E44	Medication:T84 
+T85	Administration 5243 5250	tablets
+R39	MODIFY Arg1:T85 Arg2:E44	
+T86	Dosage 5252 5264	200 mg daily
+T87	Administration 5266 5270	p.o.
+R40	MODIFY Arg1:T86 Arg2:E44	
+R41	MODIFY Arg1:T87 Arg2:E44	
+T88	Medication 5273 5287	spironolactone
+E45	Medication:T88 
+T89	Medication 5321 5338	fosinopril sodium
+E46	Medication:T89 
+T90	Dosage 5297 5308	40 mg daily
+T91	Administration 5310 5314	p.o.
+T92	Administration 5288 5295	tablets
+R42	MODIFY Arg1:T92 Arg2:E45	
+R43	MODIFY Arg1:T90 Arg2:E45	
+R44	MODIFY Arg1:T91 Arg2:E45	
+T93	Administration 5339 5346	tablets
+T94	Dosage 5348 5359	10 mg daily
+T95	Administration 5361 5365	p.o.
+R45	MODIFY Arg1:T93 Arg2:E46	
+R46	MODIFY Arg1:T94 Arg2:E46	
+R47	MODIFY Arg1:T95 Arg2:E46	
+T96	Diagnostic_procedure 1984 1987	ECG
+E47	Diagnostic_procedure:T96 
+T97	Detailed_description 1978 1983	Sinus
+R48	MODIFY Arg1:T97 Arg2:E47	
+T98	Date 1995 2007	year of 2013
+E48	Date:T98 
+T99	Diagnostic_procedure 2045 2058	electric axis
+E49	Diagnostic_procedure:T99 
+T100	Lab_value 2020 2041	slight left deviation
+R49	MODIFY Arg1:T100 Arg2:E49	
+R50	SUB_PROCEDURE Arg1:E49 Arg2:E47	
+T101	Diagnostic_procedure 2067 2077	heart rate
+E50	Diagnostic_procedure:T101 
+T102	Lab_value 2081 2093	87 beats/min
+T103	Diagnostic_procedure 2114 2121	lead II
+E51	Diagnostic_procedure:T103 
+R51	SUB_PROCEDURE Arg1:E51 Arg2:E47	
+T104	Lab_value 2098 2110	flat T waves
+R52	MODIFY Arg1:T104 Arg2:E51	
+R53	MODIFY Arg1:T102 Arg2:E50	
+T105	Sign_symptom 2379 2394	premature beats
+E52	Sign_symptom:T105 
+T106	Biological_structure 2372 2378	Atrial
+R54	MODIFY Arg1:T106 Arg2:E52	
+T107	Frequency 2404 2416	occasionally
+R55	MODIFY Arg1:T107 Arg2:E52	
+T108	Sign_symptom 2440 2455	premature beats
+E53	Sign_symptom:T108 
+T109	Biological_structure 2428 2439	ventricular
+R56	MODIFY Arg1:T109 Arg2:E53	
+T110	Diagnostic_procedure 2791 2809	biochemical assays
+E54	Diagnostic_procedure:T110 
+T111	Diagnostic_procedure 2827 2845	cardiac troponin I
+E55	Diagnostic_procedure:T111 
+T112	Lab_value 2856 2866	0.714 μg/L
+R57	MODIFY Arg1:T112 Arg2:E55	
+R58	SUB_PROCEDURE Arg1:E55 Arg2:E54	
+T113	Diagnostic_procedure 2896 2928	serum B-type natriuretic peptide
+E56	Diagnostic_procedure:T113 
+T114	Lab_value 2939 2952	466.530 pg/mL
+R59	MODIFY Arg1:T114 Arg2:E56	
+R60	SUB_PROCEDURE Arg1:E56 Arg2:E54	
+T115	Diagnostic_procedure 2982 2995	serum d-dimer
+E57	Diagnostic_procedure:T115 
+T116	Lab_value 3006 3015	8.14 mg/L
+R61	MODIFY Arg1:T116 Arg2:E57	
+R62	SUB_PROCEDURE Arg1:E57 Arg2:E54	
+T117	Diagnostic_procedure 3045 3055	blood urea
+E58	Diagnostic_procedure:T117 
+T118	Lab_value 3066 3078	11.69 mmol/L
+R63	MODIFY Arg1:T118 Arg2:E58	
+T119	Diagnostic_procedure 3113 3129	serum creatinine
+E59	Diagnostic_procedure:T119 
+T120	Lab_value 3140 3153	144.00 μmol/L
+R64	MODIFY Arg1:T120 Arg2:E59	
+T121	Diagnostic_procedure 3185 3200	serum uric acid
+E60	Diagnostic_procedure:T121 
+T122	Lab_value 3211 3224	611.40 μmol/L
+R65	MODIFY Arg1:T122 Arg2:E60	
+T123	Diagnostic_procedure 3261 3291	endogenous creatinine clearing
+E61	Diagnostic_procedure:T123 
+T124	Lab_value 3302 3314	57.90 mL/min
+R66	MODIFY Arg1:T124 Arg2:E61	
+R67	SUB_PROCEDURE Arg1:E58 Arg2:E54	
+R68	SUB_PROCEDURE Arg1:E59 Arg2:E54	
+R69	SUB_PROCEDURE Arg1:E60 Arg2:E54	
+R70	SUB_PROCEDURE Arg1:E61 Arg2:E54	
+T125	Biological_structure 2494 2516	right ventricular apex
+R71	MODIFY Arg1:T125 Arg2:E53	
+T126	Sign_symptom 2191 2204	epsilon waves
+E62	Sign_symptom:T126 
+T127	Lab_value 2216 2237	following QRS complex
+R72	MODIFY Arg1:T127 Arg2:E62	
+T128	Sign_symptom 2123 2140	T wave inversions
+E63	Sign_symptom:T128 
+T129	Diagnostic_procedure 2155 2179	leads III, avF and V1–V3
+E64	Diagnostic_procedure:T129 
+R73	SUB_PROCEDURE Arg1:E64 Arg2:E47	
+T130	Diagnostic_procedure 2241 2252	leads V1–V3
+E65	Diagnostic_procedure:T130 
+R74	SUB_PROCEDURE Arg1:E65 Arg2:E47	
+T131	Diagnostic_procedure 2287 2295	lead avR
+E66	Diagnostic_procedure:T131 
+T132	Detailed_description 2300 2309	amplified
+R75	MODIFY Arg1:T132 Arg2:E66	
+T133	Sign_symptom 2311 2324	epsilon waves
+E67	Sign_symptom:T133 
+T134	Lab_value 2341 2357	behind QRS waves
+R76	MODIFY Arg1:T134 Arg2:E67	
+T135	Sign_symptom 2523 2536	epsilon waves
+E68	Sign_symptom:T135 
+T136	Lab_value 2547 2563	behind QRS waves
+R77	MODIFY Arg1:T136 Arg2:E68	
+T137	Diagnostic_procedure 2608 2611	ECG
+E69	Diagnostic_procedure:T137 
+T138	Biological_structure 2602 2607	sinus
+R78	MODIFY Arg1:T138 Arg2:E69	
+T139	Date 2628 2640	year of 1999
+E70	Date:T139 
+T140	Diagnostic_procedure 2676 2689	electric axis
+E71	Diagnostic_procedure:T140 
+T141	Lab_value 2658 2672	left deviation
+R79	MODIFY Arg1:T141 Arg2:E71	
+R80	SUB_PROCEDURE Arg1:E71 Arg2:E69	
+T142	Sign_symptom 2691 2703	flat T waves
+E72	Sign_symptom:T142 
+T143	Sign_symptom 2708 2725	T wave inversions
+E73	Sign_symptom:T143 
+T144	Sign_symptom 2742 2755	epsilon waves
+E74	Sign_symptom:T144 
+A9	POLARITY E74 NEG
+T145	Sign_symptom 3420 3427	widened
+E75	Sign_symptom:T145 
+T146	Biological_structure 3428 3432	ROVT
+R81	MODIFY Arg1:T146 Arg2:E75	
+T147	Diagnostic_procedure 3343 3347	Echo
+E76	Diagnostic_procedure:T147 
+T148	Sign_symptom 3373 3381	enlarged
+E77	Sign_symptom:T148 
+T149	Severity 3362 3372	remarkably
+R82	MODIFY Arg1:T149 Arg2:E77	
+T150	Biological_structure 3382 3394	right atrium
+R83	MODIFY Arg1:T150 Arg2:E77	
+T151	Biological_structure 3399 3414	right ventricle
+R84	MODIFY Arg1:T151 Arg2:E77	
+T152	Sign_symptom 3434 3455	Uncoordinated motions
+E78	Sign_symptom:T152 
+T153	Biological_structure 3463 3495	left and right ventricular walls
+R85	MODIFY Arg1:T153 Arg2:E78	
+T154	Sign_symptom 3553 3564	degradation
+E79	Sign_symptom:T154 
+T155	Sign_symptom 3577 3590	regurgitation
+E80	Sign_symptom:T155 
+T156	Biological_structure 3540 3552	aortic valve
+R86	MODIFY Arg1:T156 Arg2:E79	
+R87	MODIFY Arg1:T156 Arg2:E80	
+T157	Severity 3570 3576	slight
+R88	MODIFY Arg1:T157 Arg2:E80	
+T158	Sign_symptom 3606 3619	regurgitation
+E81	Sign_symptom:T158 
+T159	Biological_structure 3599 3605	mitral
+R89	MODIFY Arg1:T159 Arg2:E81	
+T160	Severity 3592 3598	slight
+R90	MODIFY Arg1:T160 Arg2:E81	
+T161	Sign_symptom 3654 3667	regurgitation
+E82	Sign_symptom:T161 
+T162	Biological_structure 3644 3653	tricuspid
+R91	MODIFY Arg1:T162 Arg2:E82	
+T163	Severity 3625 3643	moderate to severe
+R92	MODIFY Arg1:T163 Arg2:E82	
+T164	Diagnostic_procedure 3673 3708	left ventricular diastolic function
+E83	Diagnostic_procedure:T164 
+T165	Lab_value 3713 3720	reduced
+T166	Lab_value 3724 3727	55%
+R93	MODIFY Arg1:T165 Arg2:E83	
+R94	MODIFY Arg1:T166 Arg2:E83	
+T167	Diagnostic_procedure 3752 3770	coronary angiogram
+E84	Diagnostic_procedure:T167 
+T168	Disease_disorder 3783 3800	vascular stenosis
+E85	Disease_disorder:T168 
+A10	POLARITY E85 NEG
+T169	Disease_disorder 4008 4012	ARVC
+E86	Disease_disorder:T169 
+#2	AnnotatorNotes E86	Arrhythmogenic right ventricular cardiomyopathy 
+T170	Therapeutic_procedure 4016 4020	diet
+E87	Therapeutic_procedure:T170 
+A11	POLARITY E87 UNCERTAIN
+#3	AnnotatorNotes E87	Uncertain because this is just a suggestion
+T171	Detailed_description 4026 4034	low salt
+T172	Detailed_description 4039 4046	low fat
+R95	MODIFY Arg1:T171 Arg2:E87	
+R96	MODIFY Arg1:T172 Arg2:E87	
+T173	Medication 4096 4116	metoprolol succinate
+E88	Medication:T173 
+T174	Administration 4117 4142	sustained-release tablets
+T175	Dosage 4144 4158	23.75 mg daily
+T176	Administration 4160 4163	p.o
+R97	MODIFY Arg1:T174 Arg2:E88	
+R98	MODIFY Arg1:T175 Arg2:E88	
+R99	MODIFY Arg1:T176 Arg2:E88	
+T177	Medication 4167 4177	amiodarone
+E89	Medication:T177 
+T178	Dosage 4179 4191	200 mg daily
+T179	Administration 4193 4197	p.o.
+T180	Medication 4200 4210	furosemide
+E90	Medication:T180 
+T181	Dosage 4212 4223	20 mg daily
+T182	Administration 4225 4229	i.v.
+R100	MODIFY Arg1:T181 Arg2:E90	
+R101	MODIFY Arg1:T182 Arg2:E90	
+T183	Medication 4245 4255	α-ketoacid
+E91	Medication:T183 
+T184	Detailed_description 4236 4244	compound
+R102	MODIFY Arg1:T184 Arg2:E91	
+T185	Administration 4256 4263	tablets
+T186	Dosage 4265 4277	2.52 g daily
+T187	Administration 4279 4283	p.o.
+R103	MODIFY Arg1:T185 Arg2:E91	
+R104	MODIFY Arg1:T186 Arg2:E91	
+R105	MODIFY Arg1:T187 Arg2:E91	
+T188	Therapeutic_procedure 4364 4387	radiofrequency ablation
+E92	Therapeutic_procedure:T188 
+T189	Disease_disorder 4296 4298	VT
+E93	Disease_disorder:T189 
+T190	Detailed_description 4305 4345	different morphologies and cycle lengths
+R106	MODIFY Arg1:T190 Arg2:E93	
+T191	Diagnostic_procedure 4404 4429	substrate voltage mapping
+E94	Diagnostic_procedure:T191 
+T192	Biological_structure 4448 4469	anterior wall of RVOT
+R107	MODIFY Arg1:T192 Arg2:E94	
+T193	Sign_symptom 4494 4498	scar
+E95	Sign_symptom:T193 
+R108	MODIFY Arg1:T192 Arg2:E95	
+T194	Shape 4485 4493	circular
+R109	MODIFY Arg1:T194 Arg2:E95	
+T195	Therapeutic_procedure 4563 4581	substrate ablation
+E96	Therapeutic_procedure:T195 
+T196	Therapeutic_procedure 4694 4703	ablations
+E97	Therapeutic_procedure:T196 
+R110	SUB_PROCEDURE Arg1:E97 Arg2:E96	
+T197	Detailed_description 4677 4683	linear
+T198	Detailed_description 4688 4693	focal
+R111	MODIFY Arg1:T198 Arg2:E97	
+R112	MODIFY Arg1:T197 Arg2:E97	
+T199	Diagnostic_procedure 4752 4763	stimulation
+E98	Diagnostic_procedure:T199 
+T200	Detailed_description 4741 4751	programmed
+R113	MODIFY Arg1:T200 Arg2:E98	
+T201	Diagnostic_procedure 4776 4787	stimulation
+E99	Diagnostic_procedure:T201 
+T202	Detailed_description 4768 4775	induced
+R114	MODIFY Arg1:T202 Arg2:E99	
+T203	Disease_disorder 4801 4803	VT
+E100	Disease_disorder:T203 
+A12	POLARITY E100 NEG
+T204	Diagnostic_procedure 4880 4883	ECG
+E101	Diagnostic_procedure:T204 
+T205	Sign_symptom 4921 4933	sinus rhythm
+E102	Sign_symptom:T205 
+T206	Diagnostic_procedure 4942 4952	heart rate
+E103	Diagnostic_procedure:T206 
+T207	Lab_value 4956 4968	61 beats/min
+R115	MODIFY Arg1:T207 Arg2:E103	
+T209	Diagnostic_procedure 4991 5008	leads III and avF
+E104	Diagnostic_procedure:T209 
+T210	Sign_symptom 5014 5027	epsilon waves
+E105	Sign_symptom:T210 
+T211	Sign_symptom 5032 5049	T wave inversions
+E106	Sign_symptom:T211 
+T212	Diagnostic_procedure 5053 5064	leads V1–V3
+E107	Diagnostic_procedure:T212 
+R117	SUB_PROCEDURE Arg1:E107 Arg2:E101	
+T208	Sign_symptom 4970 4987	T wave inversions
+E108	Sign_symptom:T208 
+R116	MODIFY Arg1:E108 Arg2:E104	
+T213	Other_entity 5500 5717	Although ARVC was the main diagnosis at the time of this patient's initial presentation, it is essential in such cases to perform a reassessment for the presence of structural heart disease, which can evolve over time
+#4	AnnotatorNotes T213	ignored as discussion
+T214	Sign_symptom 1766 1779	epsilon waves
+E109	Sign_symptom:T214 
+T215	Lab_value 1780 1798	preceded QRS waves
+R118	MODIFY Arg1:T215 Arg2:E109	
+T216	Diagnostic_procedure 1802 1813	leads V1–V2
+E110	Diagnostic_procedure:T216 
+R119	MODIFY Arg1:E109 Arg2:E110	
+T217	Diagnostic_procedure 1821 1840	endocardiac tracing
+E111	Diagnostic_procedure:T217 
+T218	Lab_value 1874 1889	local potential
+R120	MODIFY Arg1:T218 Arg2:E111	
+T219	Biological_structure 1907 1911	RVOT
+R121	MODIFY Arg1:T219 Arg2:T218	
+T220	Detailed_description 1921 1952	prior to the ventricular rhythm
+R122	MODIFY Arg1:T220 Arg2:T218	
+*	OVERLAP E1 E7 E2 E3 E4 E5 E6 E8 E9
+R123	BEFORE Arg1:E9 Arg2:E10	
+*	OVERLAP E10 E11 E12
+R124	BEFORE Arg1:E12 Arg2:E13	
+*	OVERLAP E13 E14 E15 E16 E17 E18 E19 E20 E21
+R125	AFTER Arg1:E21 Arg2:E23	
+*	OVERLAP E23 E22 E24
+R126	BEFORE Arg1:E24 Arg2:E25	
+*	OVERLAP E28 E29 E30 E32 E33 E109 E111
+R127	SUB_PROCEDURE Arg1:E110 Arg2:E26	
+R128	BEFORE Arg1:E111 Arg2:E47	
+*	OVERLAP E47 E48 E50 E63 E62 E66 E67 E52 E53 E68
+R129	AFTER Arg1:E68 Arg2:E69	
+*	OVERLAP E69 E70 E72 E73 E74
+R130	BEFORE Arg1:E74 Arg2:E54	
+*	OVERLAP E54 E76 E77 E75 E78 E79 E80 E81 E82 E83 E84 E85 E86
+R131	BEFORE Arg1:E86 Arg2:E87	
+*	OVERLAP E87 E88 E89 E90 E91
+R132	MODIFY Arg1:T178 Arg2:E89	
+R133	MODIFY Arg1:T179 Arg2:E89	
+R134	BEFORE Arg1:E91 Arg2:E93	
+*	OVERLAP E93 E92 E94 E95
+R135	BEFORE Arg1:E95 Arg2:E96	
+R136	BEFORE Arg1:E96 Arg2:E98	
+*	OVERLAP E98 E99 E100 E101 E102 E103 E108 E105 E106
+R137	SUB_PROCEDURE Arg1:E104 Arg2:E101	
+R138	BEFORE Arg1:E106 Arg2:E41	
+*	OVERLAP E41 E42 E43 E44 E45 E46
+R139	BEFORE Arg1:E46 Arg2:E39	
+*	OVERLAP E39 E40 E35 E36 E37 E38
+T221	History 209 221	hypertension
+T222	Activity 1216 1232	smoke cigarettes
+E112	Activity:T222 
+A13	POLARITY E112 NEG
+T223	Activity 1236 1253	use illicit drugs
+E113	Activity:T223 
+A14	POLARITY E113 NEG
+T224	Activity 1266 1282	consumed alcohol
+E114	Activity:T224 
+A15	POLARITY E114 MAYBE_NEG
+R140	AFTER Arg1:E25 Arg2:E112	
+*	OVERLAP E112 E113 E114
+R141	BEFORE Arg1:E114 Arg2:E26	

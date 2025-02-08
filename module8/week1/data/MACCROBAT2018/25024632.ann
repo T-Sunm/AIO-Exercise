@@ -1,0 +1,133 @@
+T1	Age 2 13	29-year-old
+T2	History 14 23	primipara
+#1	AnnotatorNotes T2	Pregnant for the first time (or in this case, recently pregnant for the first time)
+T3	Sign_symptom 101 105	pain
+E1	Sign_symptom:T3 
+T4	Biological_structure 85 100	upper abdominal
+T5	Detailed_description 72 84	right -sided
+R1	MODIFY Arg1:T4 Arg2:E1	
+R2	MODIFY Arg1:T5 Arg2:E1	
+T6	Severity 65 71	severe
+R3	MODIFY Arg1:T6 Arg2:E1	
+T7	Detailed_description 53 63	persistent
+R4	MODIFY Arg1:T7 Arg2:E1	
+T8	Detailed_description 153 170	on local pressure
+R5	MODIFY Arg1:T8 Arg2:E1	
+T9	Detailed_description 106 129	during deep inspiration
+R6	MODIFY Arg1:T9 Arg2:E1	
+T10	Activity 131 148	physical exercise
+E2	Activity:T10 
+R7	MODIFY Arg1:E2 Arg2:E1	
+T11	Clinical_event 219 231	giving birth
+E3	Clinical_event:T11 
+T12	Date 232 248	one year earlier
+E4	Date:T12 
+T13	Coreference 178 188	complaints
+E5	Coreference:T13 
+R8	IDENTICAL Arg1:E5 Arg2:E1	
+T14	Detailed_description 193 212	developed gradually
+R9	MODIFY Arg1:T14 Arg2:E5	
+T15	Clinical_event 255 264	pregnancy
+E6	Clinical_event:T15 
+T16	Disease_disorder 289 303	HELLP syndrome
+E7	Disease_disorder:T16 
+T17	Sign_symptom 329 337	hematoma
+E8	Sign_symptom:T17 
+T18	Biological_structure 323 328	liver
+T19	Detailed_description 311 322	subcapsular
+R10	MODIFY Arg1:T18 Arg2:E8	
+R11	MODIFY Arg1:T19 Arg2:E8	
+T20	Area 344 356	20 cm × 5 cm
+R12	MODIFY Arg1:T20 Arg2:E8	
+T21	Detailed_description 368 390	resolved spontaneously
+R13	MODIFY Arg1:T21 Arg2:E8	
+T22	Diagnostic_procedure 417 437	liver function tests
+E9	Diagnostic_procedure:T22 
+T23	Lab_value 443 449	normal
+R14	MODIFY Arg1:T23 Arg2:E9	
+T24	Disease_disorder 508 537	sexually transmitted diseases
+E10	Disease_disorder:T24 
+T25	Disease_disorder 541 568	pelvic inflammatory disease
+E11	Disease_disorder:T25 
+T26	Disease_disorder 569 574	(PID)
+E12	Disease_disorder:T26 
+R15	IDENTICAL Arg1:E12 Arg2:E11	
+A1	POLARITY E10 NEG
+A2	POLARITY E11 NEG
+A3	POLARITY E12 NEG
+T27	Therapeutic_procedure 616 629	interventions
+E13	Therapeutic_procedure:T27 
+T28	Biological_structure 600 615	intra-abdominal
+R16	MODIFY Arg1:T28 Arg2:E13	
+A4	POLARITY E13 NEG
+T29	Diagnostic_procedure 650 676	magnetic resonance imaging
+E14	Diagnostic_procedure:T29 
+T30	Biological_structure 634 649	upper-abdominal
+R17	MODIFY Arg1:T30 Arg2:E14	
+T31	Sign_symptom 688 695	density
+E15	Sign_symptom:T31 
+T32	Biological_structure 696 723	between liver and diaphragm
+R18	MODIFY Arg1:T32 Arg2:E15	
+T33	Biological_structure 731 770	site of the former subcapsular hematoma
+R19	MODIFY Arg1:T33 Arg2:E15	
+T34	Sign_symptom 783 804	perihepatic adhesions
+E16	Sign_symptom:T34 
+A5	POLARITY E16 UNCERTAIN
+T35	Clinical_event 826 834	referred
+E17	Clinical_event:T35 
+T36	Nonbiological_location 842 863	hepatobiliary surgeon
+#2	AnnotatorNotes T36	Actually a person, but presumably this required a notable change of location
+T37	Diagnostic_procedure 881 892	laparoscopy
+E18	Diagnostic_procedure:T37 
+T38	Sign_symptom 931 939	adhesion
+E19	Sign_symptom:T38 
+T39	Detailed_description 925 930	thick
+R20	MODIFY Arg1:T39 Arg2:E19	
+T40	Biological_structure 940 986	between liver segment V/VIII and the diaphragm
+R21	MODIFY Arg1:T40 Arg2:E19	
+T41	Therapeutic_procedure 1000 1012	Adhesiolysis
+E20	Therapeutic_procedure:T41 
+T42	Therapeutic_procedure 1050 1070	monopolar diathermia
+E21	Therapeutic_procedure:T42 
+#3	AnnotatorNotes E21	electrosurgical technique
+T43	Therapeutic_procedure 1075 1091	sharp dissection
+E22	Therapeutic_procedure:T43 
+R22	SUB_PROCEDURE Arg1:E21 Arg2:E20	
+R23	SUB_PROCEDURE Arg1:E22 Arg2:E20	
+T44	Medication 1131 1136	Adept
+E23	Medication:T44 
+T45	Medication 1138 1160	4% icodextrin solution
+E24	Medication:T45 
+R24	IDENTICAL Arg1:E23 Arg2:E24	
+T46	Biological_structure 1171 1188	peritoneal cavity
+R25	MODIFY Arg1:T46 Arg2:E23	
+T47	Administration 1162 1188	into the peritoneal cavity
+R26	MODIFY Arg1:T47 Arg2:E23	
+T48	Dosage 1125 1130	1.5 L
+R27	MODIFY Arg1:T48 Arg2:E23	
+T49	Clinical_event 1235 1244	follow-up
+E25	Clinical_event:T49 
+T50	Duration 1245 1275	until three years post-surgery
+E26	Duration:T50 
+T51	Sign_symptom 1293 1301	symptoms
+E27	Sign_symptom:T51 
+A6	POLARITY E27 NEG
+R28	AFTER Arg1:E1 Arg2:E3	
+*	OVERLAP E3 E4
+R29	AFTER Arg1:E4 Arg2:E6	
+*	OVERLAP E6 E7 E8
+R30	BEFORE Arg1:E8 Arg2:E9	
+*	OVERLAP E9 E10 E11 E13
+R31	BEFORE Arg1:E13 Arg2:E14	
+*	OVERLAP E14 E15 E16
+R32	BEFORE Arg1:E16 Arg2:E17	
+R33	MODIFY Arg1:T36 Arg2:E17	
+*	OVERLAP E17 E18 E19 E20
+R34	BEFORE Arg1:E20 Arg2:E23	
+R35	BEFORE Arg1:E23 Arg2:E25	
+*	OVERLAP E25 E26 E27
+T52	Sex 14 23	primipara
+#4	AnnotatorNotes T52	Implicit as we'll assume she's female due to pregnancy
+T53	Clinical_event 24 33	presented
+E28	Clinical_event:T53 
+*	OVERLAP E28 E1

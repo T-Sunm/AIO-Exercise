@@ -1,0 +1,616 @@
+T1	Age 2 13	36-year-old
+T2	Sex 14 20	female
+T3	Nonbiological_location 38 58	emergency department
+T4	Clinical_event 21 30	presented
+E1	Clinical_event:T4 
+R1	MODIFY Arg1:T3 Arg2:E1	
+T5	Sign_symptom 98 102	pain
+E2	Sign_symptom:T5 
+T6	Biological_structure 76 97	right upper abdominal
+T7	Detailed_description 64 75	aggravating
+R2	MODIFY Arg1:T6 Arg2:E2	
+R3	MODIFY Arg1:T7 Arg2:E2	
+T8	Duration 107 114	2 hours
+E3	Duration:T8 
+T9	History 142 191	hepatitis B virus (HBV) carrier for several years
+T10	History 196 209	non-alcoholic
+T11	History 212 277	No other specific personal and familial medical history was noted
+T12	Diagnostic_procedure 287 301	blood pressure
+E4	Diagnostic_procedure:T12 
+T13	Lab_value 306 317	100/60 mmHg
+T14	Diagnostic_procedure 319 329	pulse rate
+E5	Diagnostic_procedure:T14 
+T15	Lab_value 330 336	70/min
+T16	Diagnostic_procedure 338 354	respiration rate
+E6	Diagnostic_procedure:T16 
+T17	Lab_value 355 361	20/min
+T18	Diagnostic_procedure 363 379	body temperature
+E7	Diagnostic_procedure:T18 
+R4	MODIFY Arg1:T13 Arg2:E4	
+R5	MODIFY Arg1:T15 Arg2:E5	
+R6	MODIFY Arg1:T17 Arg2:E6	
+T19	Lab_value 380 385	37.5℃
+R7	MODIFY Arg1:T19 Arg2:E7	
+T20	Diagnostic_procedure 391 410	laboratory findings
+E8	Diagnostic_procedure:T20 
+T21	Diagnostic_procedure 416 432	white blood cell
+E9	Diagnostic_procedure:T21 
+T22	Lab_value 433 443	12,000/mm3
+R8	MODIFY Arg1:T22 Arg2:E9	
+R9	SUB_PROCEDURE Arg1:E9 Arg2:E8	
+T23	Diagnostic_procedure 445 449	poly
+E10	Diagnostic_procedure:T23 
+T24	Lab_value 451 454	70%
+R10	MODIFY Arg1:T24 Arg2:E10	
+R11	SUB_PROCEDURE Arg1:E10 Arg2:E9	
+T25	Diagnostic_procedure 457 467	hemoglobin
+E11	Diagnostic_procedure:T25 
+T26	Lab_value 468 477	12.8 g/dL
+R12	MODIFY Arg1:T26 Arg2:E11	
+T27	Diagnostic_procedure 479 487	platelet
+E12	Diagnostic_procedure:T27 
+T28	Lab_value 488 499	198,000/mm3
+R13	MODIFY Arg1:T28 Arg2:E12	
+T29	Diagnostic_procedure 501 517	prothrombin time
+E13	Diagnostic_procedure:T29 
+T30	Lab_value 518 530	14.3 seconds
+R14	MODIFY Arg1:T30 Arg2:E13	
+T31	Diagnostic_procedure 532 562	international normalized ratio
+E14	Diagnostic_procedure:T31 
+T32	Lab_value 563 567	1.11
+R15	MODIFY Arg1:T32 Arg2:E14	
+T33	Diagnostic_procedure 569 595	aspartate aminotransferase
+E15	Diagnostic_procedure:T33 
+T34	Lab_value 596 603	22 IU/L
+R16	MODIFY Arg1:T34 Arg2:E15	
+T35	Diagnostic_procedure 605 629	alanine aminotransferase
+E16	Diagnostic_procedure:T35 
+T36	Lab_value 630 637	12 IU/L
+R17	MODIFY Arg1:T36 Arg2:E16	
+T37	Diagnostic_procedure 639 654	total bilirubin
+E17	Diagnostic_procedure:T37 
+T38	Lab_value 655 664	0.5 mg/dL
+R18	MODIFY Arg1:T38 Arg2:E17	
+T39	Diagnostic_procedure 666 686	alkaline phosphatase
+E18	Diagnostic_procedure:T39 
+T40	Lab_value 687 695	134 IU/L
+R19	MODIFY Arg1:T40 Arg2:E18	
+T41	Diagnostic_procedure 697 718	lactate dehydrogenase
+E19	Diagnostic_procedure:T41 
+T42	Lab_value 719 727	295 IU/L
+R20	MODIFY Arg1:T42 Arg2:E19	
+T43	Diagnostic_procedure 729 758	gamma-glutamyl transpeptidase
+E20	Diagnostic_procedure:T43 
+T44	Lab_value 759 766	26 IU/L
+R21	MODIFY Arg1:T44 Arg2:E20	
+T45	Diagnostic_procedure 768 783	protein/albumin
+E21	Diagnostic_procedure:T45 
+T46	Lab_value 784 796	6.4/4.0 g/dL
+R22	MODIFY Arg1:T46 Arg2:E21	
+T47	Diagnostic_procedure 798 807	uric acid
+E22	Diagnostic_procedure:T47 
+T48	Lab_value 808 817	5.0 mg/dL
+R23	MODIFY Arg1:T48 Arg2:E22	
+T49	Diagnostic_procedure 819 849	blood urea nitrogen/creatinine
+E23	Diagnostic_procedure:T49 
+T50	Lab_value 850 864	16.6/0.7 mg/dL
+R24	MODIFY Arg1:T50 Arg2:E23	
+R25	SUB_PROCEDURE Arg1:E11 Arg2:E8	
+R26	SUB_PROCEDURE Arg1:E12 Arg2:E8	
+R27	SUB_PROCEDURE Arg1:E13 Arg2:E8	
+R28	SUB_PROCEDURE Arg1:E14 Arg2:E8	
+R29	SUB_PROCEDURE Arg1:E15 Arg2:E8	
+R30	SUB_PROCEDURE Arg1:E16 Arg2:E8	
+R31	SUB_PROCEDURE Arg1:E17 Arg2:E8	
+R32	SUB_PROCEDURE Arg1:E18 Arg2:E8	
+R33	SUB_PROCEDURE Arg1:E19 Arg2:E8	
+R34	SUB_PROCEDURE Arg1:E20 Arg2:E8	
+R35	SUB_PROCEDURE Arg1:E21 Arg2:E8	
+R36	SUB_PROCEDURE Arg1:E22 Arg2:E8	
+R37	SUB_PROCEDURE Arg1:E23 Arg2:E8	
+T51	Diagnostic_procedure 870 889	serum viral markers
+E24	Diagnostic_procedure:T51 
+T52	Diagnostic_procedure 895 900	HBsAg
+E25	Diagnostic_procedure:T52 
+T53	Diagnostic_procedure 906 914	anti-HBs
+E26	Diagnostic_procedure:T53 
+T54	Diagnostic_procedure 920 928	anti-HBc
+E27	Diagnostic_procedure:T54 
+T55	Diagnostic_procedure 934 939	HBeAg
+E28	Diagnostic_procedure:T55 
+T56	Diagnostic_procedure 945 953	anti-HBe
+E29	Diagnostic_procedure:T56 
+T57	Diagnostic_procedure 959 966	HBV-DNA
+E30	Diagnostic_procedure:T57 
+T58	Diagnostic_procedure 978 986	anti-HCV
+E31	Diagnostic_procedure:T58 
+T59	Diagnostic_procedure 995 1003	anti-HIV
+E32	Diagnostic_procedure:T59 
+T60	Lab_value 1005 1006	-
+T61	Lab_value 988 989	-
+T62	Lab_value 967 976	<20 IU/mL
+T63	Lab_value 955 956	+
+T64	Lab_value 941 942	-
+T65	Lab_value 930 931	+
+T66	Lab_value 916 917	-
+T67	Lab_value 902 903	+
+R38	MODIFY Arg1:T67 Arg2:E25	
+R39	MODIFY Arg1:T66 Arg2:E26	
+R40	MODIFY Arg1:T65 Arg2:E27	
+R41	MODIFY Arg1:T64 Arg2:E28	
+R42	MODIFY Arg1:T63 Arg2:E29	
+R43	MODIFY Arg1:T62 Arg2:E30	
+R44	MODIFY Arg1:T61 Arg2:E31	
+R45	MODIFY Arg1:T60 Arg2:E32	
+R46	SUB_PROCEDURE Arg1:E25 Arg2:E24	
+R47	SUB_PROCEDURE Arg1:E26 Arg2:E24	
+R48	SUB_PROCEDURE Arg1:E27 Arg2:E24	
+R49	SUB_PROCEDURE Arg1:E28 Arg2:E24	
+R50	SUB_PROCEDURE Arg1:E29 Arg2:E24	
+R51	SUB_PROCEDURE Arg1:E30 Arg2:E24	
+R52	SUB_PROCEDURE Arg1:E31 Arg2:E24	
+R53	SUB_PROCEDURE Arg1:E32 Arg2:E24	
+T68	Diagnostic_procedure 1023 1042	serum α-fetoprotein
+E33	Diagnostic_procedure:T68 
+T69	Diagnostic_procedure 1044 1047	AFP
+E34	Diagnostic_procedure:T69 
+R54	IDENTICAL Arg1:E34 Arg2:E33	
+T70	Lab_value 1053 1064	676.5 ng/mL
+R55	MODIFY Arg1:T70 Arg2:E33	
+T71	Diagnostic_procedure 1069 1094	carbohydrate antigen 19-9
+E35	Diagnostic_procedure:T71 
+T72	Diagnostic_procedure 1096 1102	CA19-9
+E36	Diagnostic_procedure:T72 
+R56	IDENTICAL Arg1:E36 Arg2:E35	
+T73	Lab_value 1104 1113	<0.6 U/mL
+R57	MODIFY Arg1:T73 Arg2:E35	
+T74	Diagnostic_procedure 1137 1139	CT
+E37	Diagnostic_procedure:T74 
+T75	Biological_structure 1127 1136	abdominal
+R58	MODIFY Arg1:T75 Arg2:E37	
+T76	Sign_symptom 1181 1185	mass
+E38	Sign_symptom:T76 
+T77	Detailed_description 1172 1180	necrotic
+T78	Distance 1161 1165	9 cm
+R59	MODIFY Arg1:T77 Arg2:E38	
+R60	MODIFY Arg1:T78 Arg2:E38	
+T81	Biological_structure 1218 1236	right hepatic lobe
+T79	Detailed_description 1186 1210	with internal hemorrhage
+R61	MODIFY Arg1:T79 Arg2:E38	
+R62	MODIFY Arg1:T81 Arg2:E38	
+T80	Biological_structure 1241 1263	ruptured to peritoneum
+R63	MODIFY Arg1:T80 Arg2:E38	
+T82	Therapeutic_procedure 1306 1321	bisectionectomy
+E39	Therapeutic_procedure:T82 
+T83	Biological_structure 1290 1305	hepatic central
+R64	MODIFY Arg1:T83 Arg2:E39	
+T84	Detailed_description 1280 1289	emergency
+R65	MODIFY Arg1:T84 Arg2:E39	
+T85	Disease_disorder 1380 1387	cHCC-CC
+E40	Disease_disorder:T85 
+#1	AnnotatorNotes E40	Combined hepatocellular-cholangiocarcinoma
+T86	Detailed_description 1393 1446	spindle cell metaplasia of cholangiocarcinoma element
+R66	MODIFY Arg1:T86 Arg2:E40	
+T87	Diagnostic_procedure 1461 1470	serum AFP
+E41	Diagnostic_procedure:T87 
+T88	Lab_value 1475 1484	decreased
+R67	MODIFY Arg1:T88 Arg2:E41	
+T89	Lab_value 1488 1498	7.67 ng/mL
+R68	MODIFY Arg1:T89 Arg2:E41	
+T90	Clinical_event 1510 1519	discharge
+E42	Clinical_event:T90 
+T91	Disease_disorder 1534 1541	cHCC-CC
+E43	Disease_disorder:T91 
+T92	Medication 1566 1578	chemotherapy
+E44	Medication:T92 
+T93	Detailed_description 1557 1565	adjuvant
+R69	MODIFY Arg1:T93 Arg2:E44	
+T94	Medication 1584 1598	tegafur/uracil
+E45	Medication:T94 
+T95	Medication 1600 1603	UFT
+E46	Medication:T95 
+R70	IDENTICAL Arg1:E46 Arg2:E45	
+T96	Duration 1627 1635	3 months
+E47	Duration:T96 
+T97	Date 1637 1651	3 months later
+E48	Date:T97 
+T98	Clinical_event 1653 1662	follow-up
+E49	Clinical_event:T98 
+T99	Diagnostic_procedure 1673 1675	CT
+E50	Diagnostic_procedure:T99 
+T100	Biological_structure 1663 1672	abdominal
+R71	MODIFY Arg1:T100 Arg2:E50	
+T101	Distance 1712 1718	5.5 cm
+T102	Sign_symptom 1741 1745	mass
+E51	Sign_symptom:T102 
+T103	Biological_structure 1725 1740	left subphrenic
+R72	MODIFY Arg1:T103 Arg2:E51	
+R73	MODIFY Arg1:T101 Arg2:E51	
+T104	Sign_symptom 1756 1767	enhancement
+E52	Sign_symptom:T104 
+T105	Severity 1751 1755	mild
+R74	MODIFY Arg1:T105 Arg2:E52	
+T106	Detailed_description 1771 1784	delayed image
+R75	MODIFY Arg1:T106 Arg2:E52	
+T107	Diagnostic_procedure 1801 1804	AFP
+E53	Diagnostic_procedure:T107 
+T108	Lab_value 1809 1818	increased
+T109	Lab_value 1822 1834	312.06 ng/mL
+R76	MODIFY Arg1:T108 Arg2:E53	
+R77	MODIFY Arg1:T109 Arg2:E53	
+T110	Therapeutic_procedure 1863 1874	splenectomy
+E54	Therapeutic_procedure:T110 
+T111	Detailed_description 1850 1862	laparoscopic
+R78	MODIFY Arg1:T111 Arg2:E54	
+T112	Therapeutic_procedure 1880 1893	mass excision
+E55	Therapeutic_procedure:T112 
+R79	SUB_PROCEDURE Arg1:E55 Arg2:E54	
+T113	Diagnostic_procedure 1898 1920	histologic examination
+E56	Diagnostic_procedure:T113 
+T114	Outcome 5025 5030	death
+E57	Outcome:T114 
+T115	Lab_value 1958 2027	proliferation of primitive-appearing mesenchymal spindle-shaped cells
+#2	AnnotatorNotes T115	about as good as I'm going to get with this one
+R80	MODIFY Arg1:T115 Arg2:E59	
+T116	Detailed_description 2029 2105	intimately admixed with the epithelial elements in a highly cellular pattern
+R81	MODIFY Arg1:T116 Arg2:T115	
+T117	Diagnostic_procedure 2176 2183	nucleus
+E58	Diagnostic_procedure:T117 
+T118	Diagnostic_procedure 1922 1942	mesenchymal elements
+E59	Diagnostic_procedure:T118 
+R82	SUB_PROCEDURE Arg1:E59 Arg2:E56	
+T119	Diagnostic_procedure 2107 2116	Cytoplasm
+E60	Diagnostic_procedure:T119 
+T120	Lab_value 2121 2166	more abundant than that of mature fibroblasts
+R83	SUB_PROCEDURE Arg1:E60 Arg2:E56	
+R84	MODIFY Arg1:T120 Arg2:E60	
+R85	SUB_PROCEDURE Arg1:E58 Arg2:E56	
+T121	Shape 2188 2197	elongated
+T122	Shape 2202 2207	plump
+R86	MODIFY Arg1:T121 Arg2:E58	
+R87	MODIFY Arg1:T122 Arg2:E58	
+T123	Lab_value 2215 2304	cells blended progressively with areas of less intense cellular mesenchymal proliferation
+R88	MODIFY Arg1:T123 Arg2:E56	
+T124	Detailed_description 2315 2350	relatively acellular, fibrous septa
+R89	MODIFY Arg1:T124 Arg2:T123	
+T125	Diagnostic_procedure 2352 2359	Osteoid
+E61	Diagnostic_procedure:T125 
+R90	SUB_PROCEDURE Arg1:E61 Arg2:E56	
+T126	Lab_value 2364 2371	present
+R91	MODIFY Arg1:T126 Arg2:E61	
+T127	Detailed_description 2379 2410	within the primitive mesenchyme
+T128	Detailed_description 2412 2451	near the fibrous septa or pseudocapsule
+T129	Detailed_description 2456 2494	admixed within the epithelial elements
+R92	MODIFY Arg1:T129 Arg2:T126	
+R93	MODIFY Arg1:T127 Arg2:T126	
+R94	MODIFY Arg1:T128 Arg2:T126	
+T130	Lab_value 2519 2565	cells morphologically identical to osteoblasts
+T131	Diagnostic_procedure 2496 2508	Osteoid foci
+E62	Diagnostic_procedure:T131 
+R95	SUB_PROCEDURE Arg1:E62 Arg2:E61	
+R96	MODIFY Arg1:T130 Arg2:E62	
+T132	Diagnostic_procedure 2580 2607	immunohistochemistry stains
+E63	Diagnostic_procedure:T132 
+T133	Diagnostic_procedure 2629 2639	hepatocyte
+E64	Diagnostic_procedure:T133 
+T134	Diagnostic_procedure 2641 2646	β-HCG
+E65	Diagnostic_procedure:T134 
+T135	Diagnostic_procedure 2648 2651	AFP
+E66	Diagnostic_procedure:T135 
+T136	Diagnostic_procedure 2653 2661	vimentin
+E67	Diagnostic_procedure:T136 
+T137	Diagnostic_procedure 2663 2666	CK7
+E68	Diagnostic_procedure:T137 
+T138	Diagnostic_procedure 2668 2672	CK19
+E69	Diagnostic_procedure:T138 
+T139	Diagnostic_procedure 2674 2678	CD56
+E70	Diagnostic_procedure:T139 
+T140	Diagnostic_procedure 2683 2692	β-catenin
+E71	Diagnostic_procedure:T140 
+T141	Diagnostic_procedure 2712 2715	CEA
+E72	Diagnostic_procedure:T141 
+T142	Lab_value 2697 2707	negativity
+R97	MODIFY Arg1:T142 Arg2:E72	
+T143	Lab_value 2615 2625	expression
+R98	MODIFY Arg1:T143 Arg2:E64	
+R99	MODIFY Arg1:T143 Arg2:E65	
+R100	MODIFY Arg1:T143 Arg2:E66	
+R101	MODIFY Arg1:T143 Arg2:E67	
+R102	MODIFY Arg1:T143 Arg2:E68	
+R103	MODIFY Arg1:T143 Arg2:E69	
+R104	MODIFY Arg1:T143 Arg2:E70	
+R105	MODIFY Arg1:T143 Arg2:E71	
+R106	SUB_PROCEDURE Arg1:E64 Arg2:E63	
+R107	SUB_PROCEDURE Arg1:E65 Arg2:E63	
+R108	SUB_PROCEDURE Arg1:E66 Arg2:E63	
+R109	SUB_PROCEDURE Arg1:E67 Arg2:E63	
+R110	SUB_PROCEDURE Arg1:E68 Arg2:E63	
+R111	SUB_PROCEDURE Arg1:E69 Arg2:E63	
+R112	SUB_PROCEDURE Arg1:E70 Arg2:E63	
+R113	SUB_PROCEDURE Arg1:E71 Arg2:E63	
+R114	SUB_PROCEDURE Arg1:E72 Arg2:E63	
+T144	Disease_disorder 2752 2766	hepatoblastoma
+E73	Disease_disorder:T144 
+T145	Detailed_description 2741 2751	Metastatic
+R115	MODIFY Arg1:T145 Arg2:E73	
+T146	Diagnostic_procedure 2784 2806	histologic examination
+E74	Diagnostic_procedure:T146 
+T147	Diagnostic_procedure 2812 2839	immunohistochemistry stains
+E75	Diagnostic_procedure:T147 
+T148	Clinical_event 2954 2963	Follow-up
+E76	Clinical_event:T148 
+T149	Biological_structure 2964 2973	abdominal
+T150	Diagnostic_procedure 2974 2976	CT
+E77	Diagnostic_procedure:T150 
+R116	MODIFY Arg1:T149 Arg2:E77	
+T151	Date 2992 3005	1 month after
+E78	Date:T151 
+T152	Sign_symptom 3081 3085	mass
+E79	Sign_symptom:T152 
+T153	Detailed_description 3069 3080	soft tissue
+T154	Detailed_description 3052 3068	subtle enhancing
+T155	Distance 3039 3045	1.7 cm
+T156	Detailed_description 3027 3038	newly onset
+R117	MODIFY Arg1:T153 Arg2:E79	
+R118	MODIFY Arg1:T154 Arg2:E79	
+R119	MODIFY Arg1:T155 Arg2:E79	
+R120	MODIFY Arg1:T156 Arg2:E79	
+T157	Biological_structure 3089 3100	splenic bed
+R121	MODIFY Arg1:T157 Arg2:E79	
+T158	Diagnostic_procedure 3106 3134	positron emission tomography
+E80	Diagnostic_procedure:T158 
+T159	Diagnostic_procedure 3136 3139	PET
+E81	Diagnostic_procedure:T159 
+R122	IDENTICAL Arg1:E81 Arg2:E80	
+T160	Sign_symptom 3161 3167	uptake
+E82	Sign_symptom:T160 
+T161	Detailed_description 3157 3160	FDG
+T162	Detailed_description 3148 3156	multiple
+R123	MODIFY Arg1:T162 Arg2:E82	
+R124	MODIFY Arg1:T161 Arg2:E82	
+T163	Lab_value 3168 3182	max SUV > 3.80
+R125	MODIFY Arg1:T163 Arg2:E82	
+T164	Biological_structure 3225 3232	abdomen
+T165	Detailed_description 3187 3197	left upper
+T166	Detailed_description 3202 3216	lower quadrant
+R126	MODIFY Arg1:T166 Arg2:T164	
+R127	MODIFY Arg1:T165 Arg2:T164	
+R128	MODIFY Arg1:T164 Arg2:E82	
+T167	Biological_structure 3234 3281	paralumbar area including right subphrenic area
+R129	MODIFY Arg1:T167 Arg2:E82	
+T168	Clinical_event 3298 3307	Follow-up
+E83	Clinical_event:T168 
+T169	Diagnostic_procedure 3308 3311	AFP
+E84	Diagnostic_procedure:T169 
+T170	Lab_value 3316 3328	162.69 ng/mL
+R130	MODIFY Arg1:T170 Arg2:E84	
+T171	Medication 3339 3351	chemotherapy
+E85	Medication:T171 
+T172	Detailed_description 3330 3338	Systemic
+R131	MODIFY Arg1:T172 Arg2:E85	
+T173	Medication 3365 3374	cisplatin
+E86	Medication:T173 
+T174	Dosage 3376 3384	60 mg/m2
+R132	MODIFY Arg1:T174 Arg2:E86	
+T175	Medication 3387 3401	5-fluorourasil
+E87	Medication:T175 
+T176	Medication 3403 3407	5-FU
+E88	Medication:T176 
+R133	IDENTICAL Arg1:E88 Arg2:E87	
+T177	Dosage 3410 3419	600 mg/m2
+R134	MODIFY Arg1:T177 Arg2:E87	
+T178	Medication 3422 3433	vincristine
+E89	Medication:T178 
+T179	Dosage 3435 3444	1.5 mg/m2
+R135	MODIFY Arg1:T179 Arg2:E89	
+T180	Frequency 3456 3464	3 cycles
+T181	Frequency 3491 3503	every 4 week
+R136	MODIFY Arg1:T180 Arg2:E85	
+R137	MODIFY Arg1:T181 Arg2:E85	
+R138	SUB_PROCEDURE Arg1:E86 Arg2:E85	
+R139	SUB_PROCEDURE Arg1:E87 Arg2:E85	
+R140	SUB_PROCEDURE Arg1:E89 Arg2:E85	
+T182	Medication 3505 3514	Entecavir
+E90	Medication:T182 
+T183	Dosage 3515 3521	0.5 mg
+R141	MODIFY Arg1:T183 Arg2:E90	
+T184	Medication 3543 3559	chemoprophylaxis
+E91	Medication:T184 
+R142	SUB_PROCEDURE Arg1:E90 Arg2:E91	
+T185	Disease_disorder 3563 3566	CHB
+E92	Disease_disorder:T185 
+A1	POLARITY E92 NEG
+#3	AnnotatorNotes E92	Chronic hepatitis B
+T186	Clinical_event 3602 3611	follow-up
+E93	Clinical_event:T186 
+T187	Diagnostic_procedure 3622 3624	CT
+E94	Diagnostic_procedure:T187 
+T188	Diagnostic_procedure 3629 3632	PET
+E95	Diagnostic_procedure:T188 
+T189	Biological_structure 3612 3621	abdominal
+R143	MODIFY Arg1:T189 Arg2:E94	
+T190	Sign_symptom 3685 3695	metastasis
+E96	Sign_symptom:T190 
+A2	TREND E96 INC
+T191	Detailed_description 3660 3668	multiple
+T192	Biological_structure 3669 3684	intraperitoneal
+R144	MODIFY Arg1:T192 Arg2:E96	
+R145	MODIFY Arg1:T191 Arg2:E96	
+T193	Sign_symptom 3733 3738	fluid
+E97	Sign_symptom:T193 
+T194	Biological_structure 3717 3732	intraperitoneal
+R146	MODIFY Arg1:T194 Arg2:E97	
+T195	Severity 3701 3713	large amount
+R147	MODIFY Arg1:T195 Arg2:E97	
+T196	Diagnostic_procedure 3765 3768	AFP
+E98	Diagnostic_procedure:T196 
+T197	Lab_value 3781 3790	increased
+R148	MODIFY Arg1:T197 Arg2:E98	
+T198	Lab_value 3794 3803	254 ng/mL
+R149	MODIFY Arg1:T198 Arg2:E98	
+T199	Medication 3808 3820	chemotherapy
+E99	Medication:T199 
+T200	Medication 3844 3855	carboplatin
+E100	Medication:T200 
+T201	Lab_value 3857 3866	350 mg/m2
+R150	MODIFY Arg1:T201 Arg2:E100	
+T202	Medication 3873 3884	doxorubicin
+E101	Medication:T202 
+T203	Lab_value 3886 3894	30 mg/m2
+R151	MODIFY Arg1:T203 Arg2:E101	
+T204	Frequency 3896 3909	every 3 weeks
+R152	MODIFY Arg1:T204 Arg2:E99	
+R153	SUB_PROCEDURE Arg1:E100 Arg2:E99	
+R154	SUB_PROCEDURE Arg1:E101 Arg2:E99	
+T205	Sign_symptom 3935 3946	neutropenia
+E102	Sign_symptom:T205 
+T206	Medication 4013 4050	granulocyte colony-stimulating factor
+E103	Medication:T206 
+T207	Medication 4052 4057	G-CSF
+E104	Medication:T207 
+R155	IDENTICAL Arg1:E104 Arg2:E103	
+T208	Sign_symptom 3974 3983	recovered
+E105	Sign_symptom:T208 
+T209	Diagnostic_procedure 4126 4129	AFP
+E106	Diagnostic_procedure:T209 
+T210	Clinical_event 3755 3764	follow-up
+E107	Clinical_event:T210 
+T211	Clinical_event 4116 4125	follow-up
+E108	Clinical_event:T211 
+T212	Lab_value 4134 4143	increased
+R156	MODIFY Arg1:T212 Arg2:E106	
+T213	Lab_value 4144 4157	1510.19 ng/mL
+R157	MODIFY Arg1:T213 Arg2:E106	
+T214	Diagnostic_procedure 4173 4175	CT
+E109	Diagnostic_procedure:T214 
+T215	Biological_structure 4163 4172	abdominal
+R158	MODIFY Arg1:T215 Arg2:E109	
+T216	Sign_symptom 4203 4210	ascites
+E110	Sign_symptom:T216 
+A3	TREND E110 DEC
+T217	Medication 4287 4299	chemotherapy
+E111	Medication:T217 
+T218	Clinical_event 4340 4349	follow-up
+E112	Clinical_event:T218 
+T219	Biological_structure 4350 4359	abdominal
+T220	Diagnostic_procedure 4360 4362	CT
+E113	Diagnostic_procedure:T220 
+T221	Sign_symptom 4423 4429	masses
+E114	Sign_symptom:T221 
+T222	Detailed_description 4412 4422	metastatic
+T223	Biological_structure 4396 4411	intraperitoneal
+T224	Detailed_description 4387 4395	multiple
+R159	MODIFY Arg1:T222 Arg2:E114	
+R160	MODIFY Arg1:T223 Arg2:E114	
+R161	MODIFY Arg1:T224 Arg2:E114	
+T225	Sign_symptom 4455 4465	metastasis
+E115	Sign_symptom:T225 
+T226	Biological_structure 4447 4454	hepatic
+R162	MODIFY Arg1:T226 Arg2:E115	
+T227	Sign_symptom 4502 4507	fluid
+E116	Sign_symptom:T227 
+T228	Biological_structure 4486 4501	intraperitoneal
+R163	MODIFY Arg1:T228 Arg2:E116	
+T229	Severity 4470 4482	large amount
+R164	MODIFY Arg1:T229 Arg2:E116	
+T230	Diagnostic_procedure 4530 4542	paracentesis
+E117	Diagnostic_procedure:T230 
+T231	Diagnostic_procedure 4568 4584	white blood cell
+E118	Diagnostic_procedure:T231 
+T232	Lab_value 4585 4592	310/mm3
+R165	MODIFY Arg1:T232 Arg2:E118	
+T233	Diagnostic_procedure 4594 4598	poly
+E119	Diagnostic_procedure:T233 
+T234	Diagnostic_procedure 4604 4609	lymph
+E120	Diagnostic_procedure:T234 
+T235	Lab_value 4599 4602	20%
+T236	Lab_value 4610 4613	80%
+R166	MODIFY Arg1:T236 Arg2:E120	
+R167	MODIFY Arg1:T235 Arg2:E119	
+R168	SUB_PROCEDURE Arg1:E119 Arg2:E118	
+R169	SUB_PROCEDURE Arg1:E120 Arg2:E118	
+T237	Diagnostic_procedure 4616 4623	protein
+E121	Diagnostic_procedure:T237 
+T238	Lab_value 4624 4632	3.6 g/dL
+R170	MODIFY Arg1:T238 Arg2:E121	
+T239	Diagnostic_procedure 4637 4644	albumin
+E122	Diagnostic_procedure:T239 
+T240	Lab_value 4645 4653	2.3 g/dL
+R171	MODIFY Arg1:T240 Arg2:E122	
+T241	Diagnostic_procedure 4657 4679	ascitic fluid analysis
+E123	Diagnostic_procedure:T241 
+R172	SUB_PROCEDURE Arg1:E118 Arg2:E123	
+R173	SUB_PROCEDURE Arg1:E121 Arg2:E123	
+R174	SUB_PROCEDURE Arg1:E122 Arg2:E123	
+T242	Diagnostic_procedure 4685 4698	serum albumin
+E124	Diagnostic_procedure:T242 
+T243	Lab_value 4703 4711	3.1 g/dL
+R175	MODIFY Arg1:T243 Arg2:E124	
+T244	Diagnostic_procedure 4716 4746	serum-ascites albumin gradient
+E125	Diagnostic_procedure:T244 
+T245	Diagnostic_procedure 4748 4752	SAAG
+E126	Diagnostic_procedure:T245 
+R176	IDENTICAL Arg1:E126 Arg2:E125	
+T246	Lab_value 4758 4766	0.8 g/dL
+R177	MODIFY Arg1:T246 Arg2:E125	
+T247	Diagnostic_procedure 4772 4793	AFB stain and culture
+E127	Diagnostic_procedure:T247 
+T248	Lab_value 4803 4811	negative
+R178	MODIFY Arg1:T248 Arg2:E127	
+T249	Detailed_description 4815 4828	ascitic fluid
+R179	MODIFY Arg1:T249 Arg2:E127	
+T250	Diagnostic_procedure 4834 4837	AFP
+E128	Diagnostic_procedure:T250 
+T251	Detailed_description 4859 4864	serum
+R180	MODIFY Arg1:T251 Arg2:E128	
+T252	Lab_value 4842 4855	6881.93 ng/mL
+R181	MODIFY Arg1:T252 Arg2:E128	
+T253	Disease_disorder 4889 4903	carcinomatosis
+E129	Disease_disorder:T253 
+T254	Biological_structure 4878 4888	peritoneal
+R182	MODIFY Arg1:T254 Arg2:E129	
+T255	Therapeutic_procedure 4927 4950	conservative treatments
+E130	Therapeutic_procedure:T255 
+T256	Therapeutic_procedure 4981 5005	therapeutic paracentesis
+E131	Therapeutic_procedure:T256 
+T257	Duration 5010 5017	1 month
+E132	Duration:T257 
+T258	Detailed_description 4972 4980	repeated
+R183	MODIFY Arg1:T258 Arg2:E131	
+R184	AFTER Arg1:E1 Arg2:E2	
+*	OVERLAP E2 E3
+R185	BEFORE Arg1:E3 Arg2:E4	
+*	OVERLAP E4 E5 E6 E7 E8 E24 E33 E35 E37 E38
+R186	BEFORE Arg1:E38 Arg2:E39	
+*	OVERLAP E39 E40
+R187	BEFORE Arg1:E40 Arg2:E41	
+*	OVERLAP E41 E42
+R188	BEFORE Arg1:E42 Arg2:E43	
+*	OVERLAP E43 E44 E47
+R189	SUB_PROCEDURE Arg1:E45 Arg2:E44	
+R190	BEFORE Arg1:E47 Arg2:E48	
+*	OVERLAP E48 E49 E50 E51 E52 E53
+R191	BEFORE Arg1:E53 Arg2:E54	
+*	OVERLAP E73 E74 E75 E54 E56 E63
+R193	BEFORE Arg1:E75 Arg2:E76	
+*	OVERLAP E76 E77 E78 E79 E80 E82
+R192	BEFORE Arg1:E82 Arg2:E83	
+*	OVERLAP E83 E84
+R194	BEFORE Arg1:E84 Arg2:E85	
+*	OVERLAP E85 E90 E92
+R195	BEFORE Arg1:E92 Arg2:E93	
+*	OVERLAP E93 E94 E95 E96 E97
+R196	BEFORE Arg1:E97 Arg2:E107	
+*	OVERLAP E107 E98
+R197	BEFORE Arg1:E98 Arg2:E99	
+R198	BEFORE Arg1:E99 Arg2:E102	
+R199	BEFORE Arg1:E102 Arg2:E105	
+*	OVERLAP E105 E103
+R200	BEFORE Arg1:E103 Arg2:E108	
+*	OVERLAP E108 E106 E109 E110
+R201	BEFORE Arg1:E110 Arg2:E111	
+R202	BEFORE Arg1:E111 Arg2:E112	
+*	OVERLAP E112 E113 E114 E115 E116 E117 E123 E124 E125 E127 E128
+R203	BEFORE Arg1:E128 Arg2:E129	
+*	OVERLAP E129 E130 E131 E132
+R204	BEFORE Arg1:E132 Arg2:E57	

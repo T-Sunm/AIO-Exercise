@@ -1,0 +1,277 @@
+T1	Age 18 27	34-yr-old
+T2	Sex 28 31	man
+T3	Clinical_event 36 45	presented
+E1	Clinical_event:T3 
+T4	Sign_symptom 65 70	fever
+E2	Sign_symptom:T4 
+T5	Sign_symptom 85 90	cough
+E3	Sign_symptom:T5 
+T6	Detailed_description 77 84	chronic
+R1	MODIFY Arg1:T6 Arg2:E3	
+T7	History 101 107	smoker
+T8	History 118 151	history of pulmonary tuberculosis
+T9	Disease_disorder 139 151	tuberculosis
+E4	Disease_disorder:T9 
+T10	Biological_structure 129 138	pulmonary
+R2	MODIFY Arg1:T10 Arg2:E4	
+T13	Diagnostic_procedure 187 207	computed tomographic
+E7	Diagnostic_procedure:T13 
+T14	Diagnostic_procedure 208 212	(CT)
+E8	Diagnostic_procedure:T14 
+T15	Sign_symptom 241 248	nodules
+E9	Sign_symptom:T15 
+T16	Detailed_description 236 240	tiny
+R5	MODIFY Arg1:T16 Arg2:E9	
+T17	Detailed_description 227 235	multiple
+R6	MODIFY Arg1:T17 Arg2:E9	
+T18	Biological_structure 252 262	both lungs
+R7	MODIFY Arg1:T18 Arg2:E9	
+T19	Diagnostic_procedure 285 291	biopsy
+E10	Diagnostic_procedure:T19 
+T20	Biological_structure 280 284	lung
+R8	MODIFY Arg1:T20 Arg2:E10	
+T21	Detailed_description 266 279	thoracoscopic
+R9	MODIFY Arg1:T21 Arg2:E10	
+T22	Biological_structure 311 327	right upper lobe
+R10	MODIFY Arg1:T22 Arg2:E10	
+T23	Diagnostic_procedure 333 356	microscopic examination
+E11	Diagnostic_procedure:T23 
+T24	Sign_symptom 376 379	LCH
+E12	Sign_symptom:T24 
+#1	AnnotatorNotes E12	Langerhans cell histiocytosis
+T25	Coreference 385 396	tumor cells
+E13	Coreference:T25 
+R11	IDENTICAL Arg1:E13 Arg2:E12	
+T26	Biological_structure 423 429	nuclei
+T27	Texture 415 422	grooved
+T28	Detailed_description 401 410	vesicular
+R12	MODIFY Arg1:T27 Arg2:T26	
+R13	MODIFY Arg1:T28 Arg2:T26	
+T29	Biological_structure 466 488	around the bronchioles
+T30	Coreference 502 513	tumor cells
+E14	Coreference:T30 
+T31	Diagnostic_procedure 541 554	S-100 protein
+E15	Diagnostic_procedure:T31 
+#2	AnnotatorNotes E15	This is a Diagnostic Procedure because a test had to be run to detect presence of this protein.
+T32	Diagnostic_procedure 556 564	vimentin
+E16	Diagnostic_procedure:T32 
+T33	Diagnostic_procedure 566 570	CD68
+E17	Diagnostic_procedure:T33 
+T34	Diagnostic_procedure 575 579	CD1a
+E18	Diagnostic_procedure:T34 
+T35	Lab_value 528 536	positive
+T36	Severity 519 527	strongly
+R15	MODIFY Arg1:T36 Arg2:T35	
+T37	Biological_attribute 447 452	small
+T38	Biological_attribute 453 465	aggregations
+R16	MODIFY Arg1:T37 Arg2:T38	
+R17	MODIFY Arg1:T38 Arg2:T29	
+R18	MODIFY Arg1:E15 Arg2:T35	
+R19	MODIFY Arg1:E16 Arg2:T35	
+R20	MODIFY Arg1:E16 Arg2:T35	
+R21	MODIFY Arg1:E17 Arg2:T35	
+R22	MODIFY Arg1:E18 Arg2:T35	
+R23	MODIFY Arg1:E14 Arg2:E15	
+R24	MODIFY Arg1:E14 Arg2:E16	
+R25	MODIFY Arg1:E14 Arg2:E17	
+R26	MODIFY Arg1:E14 Arg2:E18	
+T39	Biological_structure 609 620	lymphocytes
+T40	Biological_structure 625 636	eosinophils
+T41	Coreference 648 659	tumor cells
+E19	Coreference:T41 
+T42	Biological_structure 592 605	infiltrations
+R28	MODIFY Arg1:T42 Arg2:T39	
+R29	MODIFY Arg1:T42 Arg2:T40	
+R30	MODIFY Arg1:E19 Arg2:T42	
+T43	Diagnostic_procedure 688 711	radiologic examinations
+E20	Diagnostic_procedure:T43 
+T44	Sign_symptom 713 756	no other organs were thought to be involved
+E21	Sign_symptom:T44 
+A1	POLARITY E21 NEG
+T45	Activity 761 773	quit smoking
+E22	Activity:T45 
+#3	AnnotatorNotes E22	Note that this is an activity here though it was history before.
+A2	POLARITY E22 NEG
+T46	Sign_symptom 827 831	well
+E23	Sign_symptom:T46 
+T47	Duration 832 858	for the following one year
+E24	Duration:T47 
+T48	Diagnostic_procedure 884 891	CT scan
+E25	Diagnostic_procedure:T48 
+T49	Shape 922 932	4 cm-sized
+T50	Sign_symptom 933 937	mass
+E26	Sign_symptom:T50 
+T51	Biological_structure 945 960	left lower lobe
+R31	MODIFY Arg1:T49 Arg2:E26	
+R32	MODIFY Arg1:T51 Arg2:E26	
+T52	Biological_structure 1006 1016	both lungs
+T53	Detailed_description 981 989	multiple
+T54	Detailed_description 990 994	tiny
+T55	Sign_symptom 995 1002	nodules
+E27	Sign_symptom:T55 
+R33	MODIFY Arg1:T52 Arg2:E27	
+R34	MODIFY Arg1:T54 Arg2:E27	
+R35	MODIFY Arg1:T53 Arg2:E27	
+T56	Diagnostic_procedure 1035 1041	biopsy
+E28	Diagnostic_procedure:T56 
+T57	Detailed_description 1028 1034	needle
+R36	MODIFY Arg1:T57 Arg2:E28	
+T58	Sign_symptom 1064 1088	possibility of a sarcoma
+E29	Sign_symptom:T58 
+A3	POLARITY E29 MAYBE_POS
+T59	Therapeutic_procedure 1103 1112	lobectomy
+E30	Therapeutic_procedure:T59 
+T60	Shape 1139 1149	4 cm-sized
+T61	Detailed_description 1150 1170	poorly-circumscribed
+T62	Detailed_description 1171 1180	lobulated
+T63	Color 1181 1191	gray-white
+T64	Sign_symptom 1192 1196	mass
+E31	Sign_symptom:T64 
+T65	Detailed_description 1237 1242	small
+T66	Detailed_description 1243 1252	satellite
+T67	Sign_symptom 1253 1260	nodules
+E32	Sign_symptom:T67 
+T68	Coreference 1272 1281	main mass
+E33	Coreference:T68 
+R37	IDENTICAL Arg1:E33 Arg2:E31	
+R38	MODIFY Arg1:T66 Arg2:E32	
+R39	MODIFY Arg1:T65 Arg2:E32	
+R40	MODIFY Arg1:T63 Arg2:E31	
+R41	MODIFY Arg1:T62 Arg2:E31	
+R42	MODIFY Arg1:T61 Arg2:E31	
+R43	MODIFY Arg1:T60 Arg2:E31	
+T69	Diagnostic_procedure 1283 1298	Microscopically
+E34	Diagnostic_procedure:T69 
+T70	Coreference 1304 1315	tumor cells
+E35	Coreference:T70 
+T71	Detailed_description 1321 1347	aggregated in large sheets
+T72	Biological_structure 1367 1386	infiltrative growth
+R45	MODIFY Arg1:T71 Arg2:E35	
+R46	MODIFY Arg1:T72 Arg2:E35	
+T73	Coreference 1426 1437	tumor cells
+E36	Coreference:T73 
+T75	Detailed_description 1443 1481	similar to those seen in a typical LCH
+T76	Coreference 1497 1508	tumor cells
+E38	Coreference:T76 
+T74	Biological_attribute 1392 1410	cytologic features
+R49	MODIFY Arg1:T74 Arg2:E36	
+R50	MODIFY Arg1:T75 Arg2:T74	
+T77	Biological_attribute 1534 1552	cytologic features
+T78	Detailed_description 1561 1587	pleomorphic/hyperchromatic
+T79	Biological_structure 1588 1594	nuclei
+T80	Biological_attribute 1609 1617	nucleoli
+T81	Detailed_description 1599 1608	prominent
+R51	MODIFY Arg1:T81 Arg2:T80	
+R52	MODIFY Arg1:T78 Arg2:T79	
+T82	Biological_structure 1646 1663	tumor giant cells
+T83	Detailed_description 1631 1645	multinucleated
+R53	MODIFY Arg1:T83 Arg2:T82	
+R54	MODIFY Arg1:T77 Arg2:E38	
+R55	MODIFY Arg1:T79 Arg2:T77	
+R56	MODIFY Arg1:T80 Arg2:T77	
+R57	MODIFY Arg1:T82 Arg2:T77	
+T84	Lab_value 1730 1763	30 to 60 per 10 high power fields
+T85	Biological_structure 1701 1716	mitotic figures
+T86	Detailed_description 1692 1700	numerous
+R58	MODIFY Arg1:T86 Arg2:T85	
+R59	MODIFY Arg1:T84 Arg2:T85	
+T87	Detailed_description 1769 1795	some of them were abnormal
+R60	MODIFY Arg1:T87 Arg2:T85	
+T88	Sign_symptom 1811 1822	typical LCH
+E37	Sign_symptom:T88 
+T89	Detailed_description 1799 1807	few foci
+T90	Detailed_description 1832 1858	around the main tumor mass
+R61	MODIFY Arg1:T90 Arg2:E37	
+R62	MODIFY Arg1:T89 Arg2:E37	
+T91	Diagnostic_procedure 1860 1881	Immunohistochemically
+E39	Diagnostic_procedure:T91 
+T92	Severity 1904 1912	strongly
+T93	Lab_value 1913 1921	positive
+T94	Diagnostic_procedure 1926 1939	S-100 protein
+E40	Diagnostic_procedure:T94 
+R63	SUB_PROCEDURE Arg1:E40 Arg2:E39	
+T95	Diagnostic_procedure 1952 1960	vimentin
+E41	Diagnostic_procedure:T95 
+R64	SUB_PROCEDURE Arg1:E41 Arg2:E39	
+T96	Lab_value 1977 1985	positive
+T97	Diagnostic_procedure 1990 1994	CD68
+E42	Diagnostic_procedure:T97 
+R65	SUB_PROCEDURE Arg1:E42 Arg2:E39	
+T98	Lab_value 2032 2040	positive
+T99	Detailed_description 2024 2031	focally
+R66	MODIFY Arg1:T99 Arg2:T98	
+T100	Diagnostic_procedure 2045 2049	CD1a
+E43	Diagnostic_procedure:T100 
+R67	SUB_PROCEDURE Arg1:E43 Arg2:E39	
+T101	Lab_value 2073 2081	negative
+T102	Diagnostic_procedure 2086 2097	cytokeratin
+E44	Diagnostic_procedure:T102 
+T103	Diagnostic_procedure 2099 2126	epithelial membrane antigen
+E45	Diagnostic_procedure:T103 
+T104	Diagnostic_procedure 2128 2131	CD3
+E46	Diagnostic_procedure:T104 
+T105	Diagnostic_procedure 2133 2137	CD20
+E47	Diagnostic_procedure:T105 
+T106	Diagnostic_procedure 2142 2147	HMB45
+E48	Diagnostic_procedure:T106 
+R68	SUB_PROCEDURE Arg1:E44 Arg2:E39	
+R69	SUB_PROCEDURE Arg1:E45 Arg2:E39	
+R70	SUB_PROCEDURE Arg1:E46 Arg2:E39	
+R71	SUB_PROCEDURE Arg1:E47 Arg2:E39	
+R72	SUB_PROCEDURE Arg1:E48 Arg2:E39	
+R73	MODIFY Arg1:T92 Arg2:T93	
+R74	MODIFY Arg1:E40 Arg2:T93	
+R75	MODIFY Arg1:E41 Arg2:T93	
+R76	MODIFY Arg1:E42 Arg2:T96	
+R77	MODIFY Arg1:E43 Arg2:T98	
+R78	MODIFY Arg1:E44 Arg2:T101	
+R79	MODIFY Arg1:E45 Arg2:T101	
+R80	MODIFY Arg1:E46 Arg2:T101	
+R81	MODIFY Arg1:E47 Arg2:T101	
+R82	MODIFY Arg1:E48 Arg2:T101	
+T107	Sign_symptom 2178 2220	failed to demonstrate any Birbeck granules
+E49	Sign_symptom:T107 
+T108	Diagnostic_procedure 2153 2177	ultrastructural analysis
+E50	Diagnostic_procedure:T108 
+R83	MODIFY Arg1:E50 Arg2:E49	
+T109	Biological_structure 2228 2237	cytoplasm
+T110	Sign_symptom 2245 2256	tumor cells
+E51	Sign_symptom:T110 
+T111	Date 2266 2283	five months after
+E52	Date:T111 
+#4	AnnotatorNotes E52	Note that this is a date due to the "after" (not a duration, as those are continuous)
+T112	Coreference 2284 2293	lobectomy
+E53	Coreference:T112 
+R85	IDENTICAL Arg1:E53 Arg2:E30	
+T113	Outcome 2310 2320	doing well
+E54	Outcome:T113 
+T114	Sign_symptom 2326 2374	no significant change in the radiologic findings
+E55	Sign_symptom:T114 
+A4	TREND E55 STAY
+R14	IDENTICAL Arg1:E14 Arg2:E13	
+R27	IDENTICAL Arg1:E19 Arg2:E14	
+R44	IDENTICAL Arg1:E35 Arg2:E33	
+R47	IDENTICAL Arg1:E36 Arg2:E35	
+R48	IDENTICAL Arg1:E38 Arg2:E36	
+T11	Lab_value 166 183	treated and cured
+R3	MODIFY Arg1:T11 Arg2:E4	
+*	OVERLAP E1 E2 E3
+R4	AFTER Arg1:E3 Arg2:E4	
+R84	BEFORE Arg1:E4 Arg2:E7	
+R86	IDENTICAL Arg1:E8 Arg2:E7	
+*	OVERLAP E7 E9
+R87	BEFORE Arg1:E9 Arg2:E10	
+*	OVERLAP E10 E11 E12 E15 E16 E17 E18
+R88	BEFORE Arg1:E18 Arg2:E20	
+*	OVERLAP E20 E21
+R89	BEFORE Arg1:E21 Arg2:E22	
+R90	BEFORE Arg1:E22 Arg2:E23	
+*	OVERLAP E23 E24
+R91	BEFORE Arg1:E24 Arg2:E25	
+*	OVERLAP E25 E26 E27
+R92	BEFORE Arg1:E27 Arg2:E28	
+*	OVERLAP E28 E29 E30 E31 E32 E34 E37 E39 E50
+R93	MODIFY Arg1:T109 Arg2:E51	
+R94	MODIFY Arg1:E51 Arg2:E50	
+R95	BEFORE Arg1:E50 Arg2:E52	
+*	OVERLAP E52 E54 E55

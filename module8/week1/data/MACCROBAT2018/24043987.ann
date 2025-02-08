@@ -1,0 +1,284 @@
+T1	Age 2 13	24-year-old
+T2	Personal_background 14 19	Malay
+T3	Sex 20 24	male
+T4	Clinical_event 37 45	referred
+E1	Clinical_event:T4 
+T5	Nonbiological_location 53 71	respiratory clinic
+R1	MODIFY Arg1:T5 Arg2:E1	
+T6	Diagnostic_procedure 116 126	radiograph
+E2	Diagnostic_procedure:T6 
+T7	Biological_structure 110 115	chest
+R2	MODIFY Arg1:T7 Arg2:E2	
+T8	Lab_value 86 94	abnormal
+E3	Lab_value:T8 
+R3	MODIFY Arg1:E3 Arg2:E2	
+T9	Detailed_description 95 109	pre-employment
+R4	MODIFY Arg1:T9 Arg2:E2	
+T10	Activity 140 147	smoking
+E4	Activity:T10 
+T11	Detailed_description 154 173	10 cigarettes a day
+R5	MODIFY Arg1:T11 Arg2:E4	
+T12	Duration 174 202	since he was 21 years of age
+E5	Duration:T12 
+R6	MODIFY Arg1:E5 Arg2:E4	
+T13	History 140 202	smoking about 10 cigarettes a day since he was 21 years of age
+T14	History 207 323	stopped smoking 10 months ago after he noticed he had being having reduced effort tolerance for the past three years
+T15	Occupation 335 348	office worker
+T16	History 353 417	did not have a history of exposure to organic or inorganic dusts
+T17	Activity 215 222	smoking
+E6	Activity:T17 
+A1	POLARITY E6 NEG
+T18	Date 223 236	10 months ago
+E7	Date:T18 
+T19	Duration 307 323	past three years
+E8	Duration:T19 
+T20	Sign_symptom 274 298	reduced effort tolerance
+E9	Sign_symptom:T20 
+T21	Family_history 423 453	two siblings were asymptomatic
+T22	Subject 423 435	two siblings
+T23	Sign_symptom 441 453	asymptomatic
+E10	Sign_symptom:T23 
+R7	MODIFY Arg1:T22 Arg2:E10	
+T24	Diagnostic_procedure 458 469	examination
+E11	Diagnostic_procedure:T24 
+T25	Sign_symptom 491 502	tachypnoeic
+E12	Sign_symptom:T25 
+A2	POLARITY E12 NEG
+T26	Sign_symptom 527 542	finger clubbing
+E13	Sign_symptom:T26 
+T27	Disease_disorder 556 568	hypertension
+E14	Disease_disorder:T27 
+T28	Detailed_description 546 555	pulmonary
+R8	MODIFY Arg1:T28 Arg2:E14	
+T29	Diagnostic_procedure 574 591	oxygen saturation
+E15	Diagnostic_procedure:T29 
+T30	Detailed_description 595 603	room air
+T31	Detailed_description 604 611	at rest
+R9	MODIFY Arg1:T30 Arg2:E15	
+R10	MODIFY Arg1:T31 Arg2:E15	
+T32	Lab_value 616 619	94%
+E16	Lab_value:T32 
+R11	MODIFY Arg1:E16 Arg2:E15	
+T33	Lab_value 624 631	dropped
+E17	Lab_value:T33 
+T34	Lab_value 635 638	92%
+E18	Lab_value:T34 
+R12	MODIFY Arg1:E17 Arg2:E15	
+R13	MODIFY Arg1:E18 Arg2:E15	
+T35	Activity 645 653	climbing
+E19	Activity:T35 
+T36	Detailed_description 657 679	four flights of stairs
+R14	MODIFY Arg1:T36 Arg2:E19	
+R15	CAUSE Arg1:E19 Arg2:E17	
+T37	Diagnostic_procedure 681 699	Spirometry testing
+E20	Diagnostic_procedure:T37 
+T38	Disease_disorder 734 746	lung disease
+E21	Disease_disorder:T38 
+T39	Diagnostic_procedure 754 790	forced expiratory volume in 1 second
+E22	Diagnostic_procedure:T39 
+T40	Diagnostic_procedure 792 796	FEV1
+E23	Diagnostic_procedure:T40 
+T41	Diagnostic_procedure 804 825	forced vital capacity
+E24	Diagnostic_procedure:T41 
+T42	Diagnostic_procedure 827 830	FVC
+E25	Diagnostic_procedure:T42 
+R16	IDENTICAL Arg1:E23 Arg2:E22	
+R17	IDENTICAL Arg1:E25 Arg2:E24	
+T43	Detailed_description 711 730	restrictive pattern
+R18	MODIFY Arg1:T43 Arg2:E21	
+T44	Lab_value 835 840	2.7 L
+E26	Lab_value:T44 
+R19	MODIFY Arg1:E26 Arg2:E22	
+T45	Lab_value 864 869	3.2 L
+E27	Lab_value:T45 
+R20	MODIFY Arg1:E27 Arg2:E24	
+T46	Diagnostic_procedure 908 922	FEV1/FVC ratio
+E28	Diagnostic_procedure:T46 
+T47	Lab_value 927 930	85%
+E29	Lab_value:T47 
+R21	MODIFY Arg1:E29 Arg2:E28	
+T48	Diagnostic_procedure 936 947	haemoglobin
+E30	Diagnostic_procedure:T48 
+T49	Lab_value 949 956	168 g/L
+E31	Lab_value:T49 
+R22	MODIFY Arg1:E31 Arg2:E30	
+T50	Diagnostic_procedure 965 984	parathyroid hormone
+E32	Diagnostic_procedure:T50 
+T51	Detailed_description 959 964	serum
+R23	MODIFY Arg1:T51 Arg2:E32	
+T52	Lab_value 986 996	2.9 pmol/L
+E33	Lab_value:T52 
+T53	Diagnostic_procedure 1020 1027	calcium
+E34	Diagnostic_procedure:T53 
+T54	Lab_value 1029 1040	2.34 mmol/L
+E35	Lab_value:T54 
+T55	Lab_value 1054 1060	normal
+E36	Lab_value:T55 
+R24	MODIFY Arg1:E36 Arg2:E30	
+R25	MODIFY Arg1:E36 Arg2:E32	
+R26	MODIFY Arg1:E36 Arg2:E34	
+R27	MODIFY Arg1:E35 Arg2:E34	
+R28	MODIFY Arg1:E33 Arg2:E32	
+T56	Diagnostic_procedure 1076 1083	calcium
+E37	Diagnostic_procedure:T56 
+T57	Detailed_description 1070 1075	urine
+T58	Detailed_description 1062 1069	24-hour
+R29	MODIFY Arg1:T57 Arg2:E37	
+R30	MODIFY Arg1:T58 Arg2:E37	
+T59	Lab_value 1093 1099	normal
+E38	Lab_value:T59 
+T60	Lab_value 1100 1108	6.9 mmol
+E39	Lab_value:T60 
+T61	Diagnostic_procedure 1124 1136	urine volume
+E40	Diagnostic_procedure:T61 
+T62	Detailed_description 1116 1123	24-hour
+R31	MODIFY Arg1:T62 Arg2:E40	
+R32	MODIFY Arg1:E39 Arg2:E37	
+R33	MODIFY Arg1:E38 Arg2:E37	
+T63	Lab_value 1140 1145	2.8 L
+E41	Lab_value:T63 
+R34	MODIFY Arg1:E41 Arg2:E40	
+T64	Diagnostic_procedure 1157 1167	radiograph
+E42	Diagnostic_procedure:T64 
+T65	Biological_structure 1151 1156	chest
+R35	MODIFY Arg1:T65 Arg2:E42	
+T66	Sign_symptom 1205 1214	opacities
+E43	Sign_symptom:T66 
+T67	Detailed_description 1192 1204	micronodular
+T68	Detailed_description 1186 1191	dense
+R36	MODIFY Arg1:T67 Arg2:E43	
+R37	MODIFY Arg1:T68 Arg2:E43	
+T69	Detailed_description 1215 1240	distributed symmetrically
+R38	MODIFY Arg1:T69 Arg2:E43	
+T70	Biological_structure 1266 1301	middle to lower zones of both lungs
+R39	MODIFY Arg1:T70 Arg2:E43	
+T71	Texture 1313 1345	classical "sandstorm" appearance
+R40	MODIFY Arg1:T71 Arg2:E43	
+T72	Sign_symptom 1398 1407	opacities
+E44	Sign_symptom:T72 
+T73	Texture 1388 1397	sand-like
+R41	MODIFY Arg1:T73 Arg2:E44	
+T74	Sign_symptom 1372 1380	obscured
+E45	Sign_symptom:T74 
+T75	Biological_structure 1351 1366	cardiac borders
+R42	MODIFY Arg1:T75 Arg2:E45	
+T76	Diagnostic_procedure 1448 1452	HRCT
+E46	Diagnostic_procedure:T76 
+T77	Diagnostic_procedure 1411 1446	high-resolution computed tomography
+E47	Diagnostic_procedure:T77 
+R43	IDENTICAL Arg1:E46 Arg2:E47	
+T78	Biological_structure 1466 1471	lungs
+R44	MODIFY Arg1:T78 Arg2:E47	
+T79	Sign_symptom 1504 1523	microcalcifications
+E48	Sign_symptom:T79 
+T80	Detailed_description 1499 1503	tiny
+T81	Detailed_description 1488 1498	widespread
+R45	MODIFY Arg1:T80 Arg2:E48	
+R46	MODIFY Arg1:T81 Arg2:E48	
+T82	Biological_structure 1539 1544	lungs
+R47	MODIFY Arg1:T82 Arg2:E48	
+T83	Sign_symptom 1569 1579	microliths
+E49	Sign_symptom:T83 
+T84	Biological_structure 1587 1598	lower lobes
+R48	MODIFY Arg1:T84 Arg2:E49	
+T85	Sign_symptom 1644 1661	septal thickening
+E50	Sign_symptom:T85 
+T86	Sign_symptom 1666 1686	ground-glass changes
+E51	Sign_symptom:T86 
+#1	AnnotatorNotes E51	ground glass opacity
+T87	Biological_structure 1631 1643	interlobular
+R49	MODIFY Arg1:T87 Arg2:E50	
+R50	MODIFY Arg1:T87 Arg2:E51	
+T88	Sign_symptom 1699 1713	cystic changes
+E52	Sign_symptom:T88 
+T89	Biological_structure 1688 1698	Subpleural
+R51	MODIFY Arg1:T89 Arg2:E52	
+T90	Biological_structure 1732 1748	both lower lobes
+R52	MODIFY Arg1:T90 Arg2:E52	
+T91	Sign_symptom 1769 1786	black pleura sign
+E53	Sign_symptom:T91 
+T92	Disease_disorder 1805 1817	pneumothorax
+E54	Disease_disorder:T92 
+A3	POLARITY E54 NEG
+T93	Disease_disorder 1821 1837	pleural effusion
+E55	Disease_disorder:T93 
+A4	POLARITY E55 NEG
+T94	Diagnostic_procedure 1919 1923	size
+E56	Diagnostic_procedure:T94 
+T95	Lab_value 1954 1960	normal
+E57	Lab_value:T95 
+T96	Diagnostic_procedure 1860 1876	bronchial system
+E58	Diagnostic_procedure:T96 
+R53	MODIFY Arg1:E57 Arg2:E56	
+T97	Biological_structure 1931 1948	pulmonary vessels
+R54	MODIFY Arg1:T97 Arg2:E56	
+T98	Biological_structure 1892 1909	small bronchioles
+R55	MODIFY Arg1:T98 Arg2:E58	
+R56	MODIFY Arg1:E57 Arg2:E58	
+T99	Disease_disorder 1974 2006	diffuse parenchymal lung disease
+E59	Disease_disorder:T99 
+T100	Therapeutic_procedure 2008 2039	videoassisted thoracic surgical
+E60	Therapeutic_procedure:T100 
+A5	POLARITY E60 NEG
+T101	Therapeutic_procedure 2041 2045	VATS
+E61	Therapeutic_procedure:T101 
+R57	IDENTICAL Arg1:E61 Arg2:E60	
+T102	Diagnostic_procedure 2052 2058	biopsy
+E62	Diagnostic_procedure:T102 
+T103	Biological_structure 2047 2051	lung
+R58	MODIFY Arg1:T103 Arg2:E62	
+A6	POLARITY E62 NEG
+T105	Therapeutic_procedure 2110 2126	mini-thoracotomy
+E64	Therapeutic_procedure:T105 
+T104	Other_event 2145 2187	difficulty in manoeuvering the endostapler
+E63	Other_event:T104 
+T106	Disease_disorder 2210 2222	pneumothorax
+E65	Disease_disorder:T106 
+T107	Severity 2201 2209	moderate
+R59	MODIFY Arg1:T107 Arg2:E65	
+T108	Therapeutic_procedure 2227 2243	mini-thoracotomy
+E66	Therapeutic_procedure:T108 
+T109	Outcome 2273 2282	recovered
+E67	Outcome:T109 
+T110	Duration 2289 2295	5 days
+E68	Duration:T110 
+T111	Nonbiological_location 2303 2307	ward
+R60	MODIFY Arg1:T111 Arg2:E67	
+T112	Diagnostic_procedure 2318 2324	biopsy
+E69	Diagnostic_procedure:T112 
+T113	Biological_structure 2313 2317	lung
+T114	Disease_disorder 2368 2371	PAM
+E70	Disease_disorder:T114 
+#2	AnnotatorNotes E70	pulmonary alveolar microlithiasis
+T115	Sign_symptom 2387 2401	calcospherites
+E71	Sign_symptom:T115 
+T116	Biological_structure 2413 2428	alveolar spaces
+R61	MODIFY Arg1:T116 Arg2:E71	
+T117	Sign_symptom 2476 2485	congested
+E72	Sign_symptom:T117 
+T118	Biological_structure 2455 2470	alveolar septae
+R62	MODIFY Arg1:T118 Arg2:E72	
+T119	Sign_symptom 2502 2510	fibrosis
+E73	Sign_symptom:T119 
+T120	Severity 2497 2501	mild
+R63	MODIFY Arg1:T120 Arg2:E73	
+R64	MODIFY Arg1:T113 Arg2:E69	
+T121	Sign_symptom 2516 2527	infiltrates
+E74	Sign_symptom:T121 
+R65	MODIFY Arg1:T118 Arg2:E73	
+R66	MODIFY Arg1:T118 Arg2:E74	
+T122	Detailed_description 2538 2561	lymphoplasmacytic cells
+R67	MODIFY Arg1:T122 Arg2:E74	
+R68	AFTER Arg1:E1 Arg2:E2	
+R69	AFTER Arg1:E2 Arg2:E4	
+R70	BEFORE Arg1:E4 Arg2:E6	
+*	OVERLAP E6 E7
+R71	AFTER Arg1:E7 Arg2:E9	
+*	OVERLAP E9 E8 E10
+R72	BEFORE Arg1:E10 Arg2:E11	
+*	OVERLAP E11 E12 E13 E14 E15 E19 E20 E21 E22 E24 E28 E30 E32 E34 E37 E40 E42 E43 E45 E44 E47 E48 E49 E50 E51 E52 E53 E54 E55 E58 E56 E59 E60 E62 E64 E63
+R73	BEFORE Arg1:E63 Arg2:E65	
+R74	AFTER Arg1:E65 Arg2:E66	
+R75	BEFORE Arg1:E66 Arg2:E67	
+R76	MODIFY Arg1:E68 Arg2:E67	
+*	OVERLAP E67 E69 E70 E71 E72 E73 E74

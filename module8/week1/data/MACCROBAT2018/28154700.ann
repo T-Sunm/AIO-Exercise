@@ -1,0 +1,328 @@
+T1	Age 85 96	47-year-old
+T2	Personal_background 97 105	Tunisian
+T3	Sex 106 109	man
+T4	History 128 143	Crohn's disease
+T5	Disease_disorder 128 143	Crohn's disease
+E1	Disease_disorder:T5 
+T6	Clinical_event 148 156	admitted
+E2	Clinical_event:T6 
+T7	Nonbiological_location 164 183	University Hospital
+R1	MODIFY Arg1:T7 Arg2:E2	
+T8	Date 187 191	2015
+E3	Date:T8 
+T9	Sign_symptom 217 225	diarrhea
+E4	Sign_symptom:T9 
+T10	Detailed_description 209 216	chronic
+T11	Detailed_description 203 208	fluid
+R2	MODIFY Arg1:T11 Arg2:E4	
+R3	MODIFY Arg1:T10 Arg2:E4	
+T12	Diagnostic_procedure 233 247	stools per day
+E5	Diagnostic_procedure:T12 
+T13	Quantitative_concept 231 232	4
+R4	MODIFY Arg1:T13 Arg2:E5	
+T14	Qualitative_concept 248 260	daytime only
+R5	MODIFY Arg1:T14 Arg2:E5	
+T15	Other_event 270 277	ooddebr
+E6	Other_event:T15 
+A1	POLARITY E6 NEG
+#1	AnnotatorNotes E6	[f]ood debr[is]?
+T16	Duration 379 392	from 6 months
+E7	Duration:T16 
+T17	Sign_symptom 297 305	vomiting
+E8	Sign_symptom:T17 
+T18	Sign_symptom 325 329	pain
+E9	Sign_symptom:T18 
+T19	Sign_symptom 333 338	fever
+E10	Sign_symptom:T19 
+A2	POLARITY E10 NEG
+T20	Biological_structure 315 324	abdominal
+R6	MODIFY Arg1:T20 Arg2:E9	
+A3	POLARITY E9 NEG
+T21	Sign_symptom 346 357	weight loss
+E11	Sign_symptom:T21 
+T22	Diagnostic_procedure 394 410	Laboratory tests
+E12	Diagnostic_procedure:T22 
+T23	Qualitative_concept 416 422	normal
+R7	MODIFY Arg1:T23 Arg2:E12	
+T24	Diagnostic_procedure 456 474	pancreatic enzymes
+E13	Diagnostic_procedure:T24 
+T25	Biological_structure 450 455	serum
+R8	MODIFY Arg1:T25 Arg2:E13	
+T26	Qualitative_concept 436 446	elevations
+R9	MODIFY Arg1:T26 Arg2:E13	
+T27	Diagnostic_procedure 507 517	ultrasound
+E14	Diagnostic_procedure:T27 
+T28	Biological_structure 497 506	abdominal
+R10	MODIFY Arg1:T28 Arg2:E14	
+T29	Diagnostic_procedure 522 541	computed tomography
+E15	Diagnostic_procedure:T29 
+T30	Diagnostic_procedure 543 545	CT
+E16	Diagnostic_procedure:T30 
+R11	IDENTICAL Arg1:E16 Arg2:E15	
+T31	Diagnostic_procedure 863 867	size
+E17	Diagnostic_procedure:T31 
+T32	Biological_structure 875 879	head
+R12	MODIFY Arg1:T32 Arg2:E17	
+T33	Qualitative_concept 884 890	normal
+R13	MODIFY Arg1:T33 Arg2:E17	
+T34	Sign_symptom 906 914	enlarged
+E18	Sign_symptom:T34 
+A4	POLARITY E18 NEG
+T35	Biological_structure 915 926	lymph nodes
+R14	MODIFY Arg1:T35 Arg2:E18	
+T36	Disease_disorder 959 971	sacroiliitis
+E19	Disease_disorder:T36 
+T37	Disease_disorder 986 998	coxarthrosis
+E20	Disease_disorder:T37 
+T38	Detailed_description 976 985	bilateral
+T39	Detailed_description 949 958	bilateral
+R15	MODIFY Arg1:T39 Arg2:E19	
+R16	MODIFY Arg1:T38 Arg2:E20	
+T40	Disease_disorder 572 579	ileitis
+E21	Disease_disorder:T40 
+T41	Biological_structure 587 602	last ileal loop
+T42	Sign_symptom 603 611	extended
+E22	Sign_symptom:T42 
+T43	Distance 615 621	300 mm
+T44	Disease_disorder 21 37	pancreatic tumor
+E23	Disease_disorder:T44 
+T45	Disease_disorder 59 65	trauma
+E24	Disease_disorder:T45 
+A5	POLARITY E24 NEG
+T46	Disease_disorder 69 81	panceratitis
+E25	Disease_disorder:T46 
+A6	POLARITY E25 NEG
+T47	Diagnostic_procedure 1000 1003	MRI
+E26	Diagnostic_procedure:T47 
+T48	Diagnostic_procedure 1757 1778	post-operative course
+E27	Diagnostic_procedure:T48 
+T49	Diagnostic_procedure 1525 1551	Esophagogastroduodenoscopy
+E28	Diagnostic_procedure:T49 
+T50	Lab_value 1556 1562	normal
+E29	Lab_value:T50 
+R17	MODIFY Arg1:E29 Arg2:E28	
+R18	MODIFY Arg1:T41 Arg2:E22	
+R19	MODIFY Arg1:T43 Arg2:E22	
+T51	Sign_symptom 627 636	distended
+E30	Sign_symptom:T51 
+T52	Biological_structure 637 648	ileal loops
+T53	Detailed_description 649 657	upstream
+R20	MODIFY Arg1:T53 Arg2:E30	
+R21	MODIFY Arg1:T52 Arg2:E30	
+T54	Disease_disorder 1508 1523	Crohn's disease
+E31	Disease_disorder:T54 
+T55	Diagnostic_procedure 1429 1437	biopsies
+E32	Diagnostic_procedure:T55 
+T56	Clinical_event 1807 1817	discharged
+E33	Clinical_event:T56 
+T57	Nonbiological_location 1818 1822	home
+R22	MODIFY Arg1:T57 Arg2:E33	
+T58	History 38 81	without a history of trauma or panceratitis
+T59	Date 1823 1836	within 7 days
+E34	Date:T59 
+T60	Diagnostic_procedure 1847 1864	general condition
+E35	Diagnostic_procedure:T60 
+T61	Lab_value 1842 1846	good
+E36	Lab_value:T61 
+R23	MODIFY Arg1:E36 Arg2:E35	
+T62	Sign_symptom 1880 1911	symptoms of glucose intolerance
+E37	Sign_symptom:T62 
+A7	POLARITY E37 NEG
+T63	Therapeutic_procedure 1925 1929	diet
+E38	Therapeutic_procedure:T63 
+T64	Qualitative_concept 1918 1924	normal
+R24	MODIFY Arg1:T64 Arg2:E38	
+T65	Diagnostic_procedure 1950 1973	microscopic examination
+E39	Diagnostic_procedure:T65 
+T66	Disease_disorder 2010 2031	neuro endocrine tumor
+E40	Disease_disorder:T66 
+T67	Detailed_description 1983 2002	well differentiated
+T68	Detailed_description 2003 2009	cystic
+R25	MODIFY Arg1:T68 Arg2:E40	
+R26	MODIFY Arg1:T67 Arg2:E40	
+T69	Biological_structure 2039 2059	tail of the pancreas
+R27	MODIFY Arg1:T69 Arg2:E40	
+T70	Qualitative_concept 2060 2067	grade I
+R28	MODIFY Arg1:T70 Arg2:E40	
+T71	Clinical_event 2318 2343	out-patient consultations
+E41	Clinical_event:T71 
+T72	Biological_structure 2351 2359	hospital
+T73	Outcome 2364 2373	felt well
+E42	Outcome:T73 
+R29	MODIFY Arg1:T72 Arg2:E41	
+T74	Sign_symptom 2390 2400	complaints
+E43	Sign_symptom:T74 
+A8	POLARITY E43 NEG
+T75	Diagnostic_procedure 2447 2465	glucose metabolism
+E44	Diagnostic_procedure:T75 
+T76	Lab_value 2440 2446	normal
+E45	Lab_value:T76 
+R30	MODIFY Arg1:E45 Arg2:E44	
+T77	Diagnostic_procedure 2418 2435	periodic findings
+E46	Diagnostic_procedure:T77 
+T78	Lab_value 2410 2417	correct
+E47	Lab_value:T78 
+R31	MODIFY Arg1:E47 Arg2:E46	
+T79	Severity 2383 2389	severe
+R32	MODIFY Arg1:T79 Arg2:E43	
+T80	Disease_disorder 2160 2194	neuroendocrine hyperplasia lesions
+E48	Disease_disorder:T80 
+T81	Biological_structure 2198 2218	islets of Langerhans
+R33	MODIFY Arg1:T81 Arg2:E48	
+T82	Diagnostic_procedure 2220 2234	surgical limit
+E49	Diagnostic_procedure:T82 
+T83	Lab_value 2239 2246	healthy
+E50	Lab_value:T83 
+R34	MODIFY Arg1:E50 Arg2:E49	
+T84	Diagnostic_procedure 2248 2252	pTNM
+E51	Diagnostic_procedure:T84 
+#2	AnnotatorNotes E51	Pathological tumor-node-metastasis
+T85	Lab_value 2253 2256	pT2
+E52	Lab_value:T85 
+R35	MODIFY Arg1:E52 Arg2:E51	
+T86	Sign_symptom 2258 2265	ectopic
+E53	Sign_symptom:T86 
+T87	Biological_structure 2266 2272	spleen
+T88	Disease_disorder 2282 2295	cholecystitis
+E54	Disease_disorder:T88 
+T89	Detailed_description 2274 2281	chronic
+R36	MODIFY Arg1:T89 Arg2:E54	
+R37	MODIFY Arg1:T87 Arg2:E53	
+T90	Sign_symptom 1243 1253	gallstones
+E55	Sign_symptom:T90 
+T91	Sign_symptom 1258 1272	biliary sludge
+E56	Sign_symptom:T91 
+T92	Biological_structure 1213 1224	gallbladder
+T93	Detailed_description 1234 1242	multiple
+R38	MODIFY Arg1:T93 Arg2:E55	
+R39	MODIFY Arg1:T92 Arg2:E55	
+R40	MODIFY Arg1:T92 Arg2:E56	
+T94	Diagnostic_procedure 1274 1287	Tumor markers
+E57	Diagnostic_procedure:T94 
+T95	Lab_value 1292 1298	normal
+E58	Lab_value:T95 
+R41	MODIFY Arg1:E58 Arg2:E57	
+T96	Diagnostic_procedure 1321 1332	colonoscopy
+E59	Diagnostic_procedure:T96 
+T97	Sign_symptom 1356 1363	swollen
+E60	Sign_symptom:T97 
+T98	Sign_symptom 1365 1373	inflamed
+E61	Sign_symptom:T98 
+T99	Sign_symptom 1389 1400	ulcerations
+E62	Sign_symptom:T99 
+T100	Biological_structure 1333 1347	terminal ileum
+R42	MODIFY Arg1:T100 Arg2:E60	
+R43	MODIFY Arg1:T100 Arg2:E61	
+R44	MODIFY Arg1:T100 Arg2:E62	
+T101	Diagnostic_procedure 1405 1413	biopsies
+E63	Diagnostic_procedure:T101 
+T102	Biological_structure 1193 1200	Wirsung
+#3	AnnotatorNotes T102	duct of Wirsung, in the pancreas
+T103	Disease_disorder 1022 1029	ileitis
+E64	Disease_disorder:T103 
+T104	Disease_disorder 1484 1491	ileitis
+E65	Disease_disorder:T104 
+T105	Detailed_description 1460 1468	subacute
+T106	Detailed_description 1473 1483	ulcerative
+R45	MODIFY Arg1:T106 Arg2:E65	
+R46	MODIFY Arg1:T105 Arg2:E65	
+T107	Therapeutic_procedure 1592 1603	laparoscopy
+E66	Therapeutic_procedure:T107 
+T108	Therapeutic_procedure 1621 1635	pancreatectomy
+E67	Therapeutic_procedure:T108 
+T109	Therapeutic_procedure 1640 1655	cholecystectomy
+E68	Therapeutic_procedure:T109 
+T110	Sign_symptom 1671 1676	tumor
+E69	Sign_symptom:T110 
+T111	Distance 1657 1663	1.5 cm
+R47	MODIFY Arg1:T111 Arg2:E69	
+T112	Detailed_description 1664 1670	cystic
+R48	MODIFY Arg1:T112 Arg2:E69	
+T113	Biological_structure 1684 1700	tail of pancreas
+R49	MODIFY Arg1:T113 Arg2:E69	
+T114	Therapeutic_procedure 1705 1713	resected
+E70	Therapeutic_procedure:T114 
+T115	Diagnostic_procedure 1727 1751	pathological examination
+E71	Diagnostic_procedure:T115 
+T116	Diagnostic_procedure 2113 2120	mitosis
+E72	Diagnostic_procedure:T116 
+T117	Lab_value 2121 2129	<2/10CFG
+E73	Lab_value:T117 
+T118	Diagnostic_procedure 2134 2138	Ki67
+E74	Diagnostic_procedure:T118 
+T119	Lab_value 2138 2141	<2%
+E75	Lab_value:T119 
+R50	MODIFY Arg1:E73 Arg2:E72	
+R51	MODIFY Arg1:E75 Arg2:E74	
+T120	Biological_structure 1037 1052	last ileal loop
+R52	MODIFY Arg1:T120 Arg2:E64	
+T121	Sign_symptom 1091 1097	lesion
+E76	Sign_symptom:T121 
+A9	POLARITY E76 MAYBE_POS
+T122	Biological_structure 1080 1090	pancreatic
+R53	MODIFY Arg1:T122 Arg2:E76	
+T123	Sign_symptom 1113 1124	enhancement
+E77	Sign_symptom:T123 
+T124	Biological_structure 1132 1162	caudal portion of the pancreas
+T125	Sign_symptom 1177 1185	dilation
+E78	Sign_symptom:T125 
+T126	Severity 1170 1176	slight
+R54	MODIFY Arg1:T126 Arg2:E78	
+R55	MODIFY Arg1:T102 Arg2:E78	
+R56	MODIFY Arg1:T124 Arg2:E77	
+T127	Detailed_description 1104 1112	parietal
+R57	MODIFY Arg1:T127 Arg2:E77	
+T128	Detailed_description 1061 1074	cystic nature
+R58	MODIFY Arg1:T128 Arg2:E76	
+T129	Biological_structure 679 699	tail of the pancreas
+R59	MODIFY Arg1:T129 Arg2:E79	
+T130	Detailed_description 659 665	cystic
+T131	Sign_symptom 666 671	image
+E79	Sign_symptom:T131 
+R60	MODIFY Arg1:T130 Arg2:E79	
+T132	Sign_symptom 815 825	dilatation
+E80	Sign_symptom:T132 
+A10	POLARITY E80 NEG
+T133	Biological_structure 799 814	pancreatic duct
+R61	MODIFY Arg1:T133 Arg2:E80	
+T134	Area 837 846	28 x 22mm
+R62	MODIFY Arg1:T134 Arg2:E79	
+T135	Sign_symptom 716 727	uncalcified
+E81	Sign_symptom:T135 
+T136	Sign_symptom 787 795	bourgeon
+E82	Sign_symptom:T136 
+#4	AnnotatorNotes E82	growth
+T137	Biological_structure 775 786	endoluminal
+R63	MODIFY Arg1:T137 Arg2:E82	
+A11	POLARITY E82 NEG
+R64	AFTER Arg1:E23 Arg2:E24	
+*	OVERLAP E24 E25
+R65	AFTER Arg1:E25 Arg2:E1	
+R66	BEFORE Arg1:E1 Arg2:E2	
+*	OVERLAP E2 E3 E4 E5 E6 E8 E9 E10
+R67	AFTER Arg1:E10 Arg2:E11	
+*	OVERLAP E11 E7
+R68	BEFORE Arg1:E7 Arg2:E12	
+*	OVERLAP E12 E13
+R69	BEFORE Arg1:E13 Arg2:E14	
+*	OVERLAP E14 E15 E21 E22 E30 E79 E81 E82 E80 E17 E18 E19 E20 E26 E64 E76 E77 E78 E55 E56 E57 E59 E60 E61 E62 E63 E32 E65 E31 E28
+#5	AnnotatorNotes T32	head of the pancreas?
+A12	POLARITY E19 MAYBE_POS
+A13	POLARITY E20 MAYBE_POS
+R70	BEFORE Arg1:E28 Arg2:E66	
+*	OVERLAP E66 E67 E68 E69 E70 E71
+T138	Detailed_description 1614 1620	caudal
+R71	MODIFY Arg1:T138 Arg2:E67	
+R72	MODIFY Arg1:E69 Arg2:E70	
+R73	MODIFY Arg1:E69 Arg2:E71	
+R74	BEFORE Arg1:E71 Arg2:E27	
+T139	Lab_value 1783 1793	uneventful
+E83	Lab_value:T139 
+R75	MODIFY Arg1:E83 Arg2:E27	
+R76	BEFORE Arg1:E27 Arg2:E33	
+*	OVERLAP E33 E34 E35 E37
+R77	AFTER Arg1:E37 Arg2:E38	
+R78	AFTER Arg1:E38 Arg2:E39	
+*	OVERLAP E39 E40 E72 E74 E48 E49 E51 E53 E54
+R79	BEFORE Arg1:E54 Arg2:E41	
+*	OVERLAP E41 E42 E43 E46 E44

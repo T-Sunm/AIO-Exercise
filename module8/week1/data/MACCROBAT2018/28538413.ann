@@ -1,0 +1,411 @@
+T1	Age 2 13	63-year-old
+T2	Sex 14 18	male
+T3	History 27 62	without smoking or drinking history
+T4	Date 76 92	on June 11, 2014
+E1	Date:T4 
+T5	Clinical_event 67 75	admitted
+E2	Clinical_event:T5 
+R1	MODIFY Arg1:E1 Arg2:E2	
+T6	Sign_symptom 141 150	dysphagia
+E3	Sign_symptom:T6 
+T7	Sign_symptom 155 162	fatigue
+E4	Sign_symptom:T7 
+T8	Disease_disorder 180 199	obstructive disease
+E5	Disease_disorder:T8 
+A1	POLARITY E5 UNCERTAIN
+T9	Occupation 229 248	had been an athlete
+T10	Biological_structure 203 224	upper digestive tract
+R2	MODIFY Arg1:T10 Arg2:E5	
+T11	History 266 297	retired in good physical status
+T12	History 316 372	His family and social history indicated nothing abnormal
+T13	Diagnostic_procedure 383 403	physical examination
+E6	Diagnostic_procedure:T13 
+T14	Biological_structure 411 415	skin
+T15	Biological_structure 417 428	oral mucosa
+T16	Biological_structure 430 434	eyes
+T17	Biological_structure 440 453	genital areas
+R3	MODIFY Arg1:T14 Arg2:E6	
+R4	MODIFY Arg1:T15 Arg2:E6	
+R5	MODIFY Arg1:T16 Arg2:E6	
+R6	MODIFY Arg1:T17 Arg2:E6	
+T18	Sign_symptom 489 496	lesions
+E7	Sign_symptom:T18 
+A2	POLARITY E7 NEG
+T19	Diagnostic_procedure 512 528	laboratory tests
+E8	Diagnostic_procedure:T19 
+T20	Diagnostic_procedure 539 555	hepatic function
+E9	Diagnostic_procedure:T20 
+T21	Diagnostic_procedure 557 571	renal function
+E10	Diagnostic_procedure:T21 
+T22	Diagnostic_procedure 577 596	serum tumor markers
+E11	Diagnostic_procedure:T22 
+T23	Diagnostic_procedure 605 629	carcinoembryonic antigen
+E12	Diagnostic_procedure:T23 
+T24	Diagnostic_procedure 631 654	cytokeratin 19 fragment
+E13	Diagnostic_procedure:T24 
+T25	Diagnostic_procedure 656 679	squamous cell carcinoma
+E14	Diagnostic_procedure:T25 
+T26	Diagnostic_procedure 681 704	neuron-specific enolase
+E15	Diagnostic_procedure:T26 
+T27	Diagnostic_procedure 710 734	carbohydrate antigen 125
+E16	Diagnostic_procedure:T27 
+R7	SUB_PROCEDURE Arg1:E9 Arg2:E8	
+R8	SUB_PROCEDURE Arg1:E10 Arg2:E8	
+R9	SUB_PROCEDURE Arg1:E11 Arg2:E8	
+R10	SUB_PROCEDURE Arg1:E12 Arg2:E11	
+R11	SUB_PROCEDURE Arg1:E13 Arg2:E11	
+R12	SUB_PROCEDURE Arg1:E14 Arg2:E11	
+R13	SUB_PROCEDURE Arg1:E15 Arg2:E11	
+R14	SUB_PROCEDURE Arg1:E16 Arg2:E11	
+T28	Lab_value 744 759	in normal range
+R15	MODIFY Arg1:T28 Arg2:E16	
+R16	MODIFY Arg1:T28 Arg2:E15	
+R17	MODIFY Arg1:T28 Arg2:E14	
+R18	MODIFY Arg1:T28 Arg2:E13	
+R19	MODIFY Arg1:T28 Arg2:E12	
+R20	MODIFY Arg1:T28 Arg2:E10	
+R21	MODIFY Arg1:T28 Arg2:E9	
+T29	Diagnostic_procedure 808 820	examinations
+E17	Diagnostic_procedure:T29 
+T30	Detailed_description 795 807	radiological
+T31	Detailed_description 780 790	endoscopic
+R22	MODIFY Arg1:T30 Arg2:E17	
+R23	MODIFY Arg1:T31 Arg2:E17	
+T32	Diagnostic_procedure 862 884	Endoscopic examination
+E18	Diagnostic_procedure:T32 
+T33	Sign_symptom 926 930	mass
+E19	Sign_symptom:T33 
+T34	Detailed_description 916 925	irregular
+T35	Color 896 914	slightly pigmented
+R24	MODIFY Arg1:T34 Arg2:E19	
+R25	MODIFY Arg1:T35 Arg2:E19	
+T36	Biological_structure 953 968	lower esophagus
+R26	MODIFY Arg1:T36 Arg2:E19	
+T37	Area 980 995	5.0 cm × 3.0 cm
+R27	MODIFY Arg1:T37 Arg2:E19	
+T38	Diagnostic_procedure 1017 1023	biopsy
+E20	Diagnostic_procedure:T38 
+T39	Detailed_description 1005 1016	Fine needle
+R28	MODIFY Arg1:T39 Arg2:E20	
+T40	Coreference 1031 1037	lesion
+E21	Coreference:T40 
+R29	IDENTICAL Arg1:E21 Arg2:E19	
+R30	MODIFY Arg1:E21 Arg2:E20	
+T41	Disease_disorder 1058 1066	melanoma
+E22	Disease_disorder:T41 
+T42	Biological_structure 1047 1057	esophageal
+R31	MODIFY Arg1:T42 Arg2:E22	
+T43	Diagnostic_procedure 1091 1105	histopathology
+E23	Diagnostic_procedure:T43 
+T44	Diagnostic_procedure 1133 1152	computed tomography
+E24	Diagnostic_procedure:T44 
+T45	Diagnostic_procedure 1154 1156	CT
+E25	Diagnostic_procedure:T45 
+R32	IDENTICAL Arg1:E25 Arg2:E24	
+T46	Biological_structure 1125 1132	abdomen
+T47	Biological_structure 1115 1120	chest
+R33	MODIFY Arg1:T46 Arg2:E24	
+R34	MODIFY Arg1:T47 Arg2:E24	
+T48	Diagnostic_procedure 1176 1200	magnetic resonance image
+E26	Diagnostic_procedure:T48 
+T49	Biological_structure 1168 1175	cranial
+T50	Detailed_description 1159 1167	enhanced
+R35	MODIFY Arg1:T50 Arg2:E26	
+R36	MODIFY Arg1:T49 Arg2:E26	
+T51	Diagnostic_procedure 1202 1205	MRI
+E27	Diagnostic_procedure:T51 
+R37	IDENTICAL Arg1:E27 Arg2:E26	
+T52	Diagnostic_procedure 1216 1244	emission computed tomography
+E28	Diagnostic_procedure:T52 
+T53	Diagnostic_procedure 1246 1249	ECT
+E29	Diagnostic_procedure:T53 
+R38	IDENTICAL Arg1:E29 Arg2:E28	
+T54	Biological_structure 1211 1215	bone
+R39	MODIFY Arg1:T54 Arg2:E28	
+T55	Sign_symptom 1258 1266	enlarged
+E30	Sign_symptom:T55 
+T56	Biological_structure 1295 1306	lymph nodes
+R40	MODIFY Arg1:T56 Arg2:E30	
+T57	Biological_structure 1267 1278	mediastinal
+T58	Biological_structure 1288 1294	celiac
+R41	MODIFY Arg1:T58 Arg2:T56	
+R42	MODIFY Arg1:T57 Arg2:T56	
+T59	Sign_symptom 1333 1344	involvement
+E31	Sign_symptom:T59 
+A3	POLARITY E31 MAYBE_NEG
+T60	Biological_structure 1364 1375	lymph nodes
+T61	Biological_structure 1348 1363	supraclavicular
+R43	MODIFY Arg1:T61 Arg2:T60	
+R44	MODIFY Arg1:T60 Arg2:E31	
+T62	Diagnostic_procedure 1395 1397	CT
+E32	Diagnostic_procedure:T62 
+T63	Sign_symptom 1438 1443	tumor
+E33	Sign_symptom:T63 
+T64	Biological_structure 1428 1437	pulmonary
+T65	Detailed_description 1418 1427	irregular
+T66	Detailed_description 1408 1416	isolated
+R45	MODIFY Arg1:T64 Arg2:E33	
+R46	MODIFY Arg1:T65 Arg2:E33	
+R47	MODIFY Arg1:T66 Arg2:E33	
+T67	Diagnostic_procedure 1454 1482	Positron emission tomography
+E34	Diagnostic_procedure:T67 
+A4	POLARITY E34 NEG
+T68	Diagnostic_procedure 1596 1613	clinically staged
+E35	Diagnostic_procedure:T68 
+T69	Lab_value 1617 1624	cT3NxM1
+R48	MODIFY Arg1:T69 Arg2:E35	
+T70	Detailed_description 1642 1710	7th edition of American Joint Committee on Cancer TNM staging system
+R49	MODIFY Arg1:T70 Arg2:E35	
+T71	Disease_disorder 1715 1732	esophageal cancer
+E36	Disease_disorder:T71 
+T72	Diagnostic_procedure 1767 1773	biopsy
+E37	Diagnostic_procedure:T72 
+T73	Biological_structure 1757 1766	pulmonary
+T74	Detailed_description 1744 1756	percutaneous
+T75	Detailed_description 1734 1743	CT-guided
+R50	MODIFY Arg1:T73 Arg2:E37	
+R51	MODIFY Arg1:T74 Arg2:E37	
+R52	MODIFY Arg1:T75 Arg2:E37	
+T76	Therapeutic_procedure 1858 1867	resection
+E38	Therapeutic_procedure:T76 
+T77	Sign_symptom 1900 1907	lesions
+E39	Sign_symptom:T77 
+T78	Biological_structure 1875 1885	esophageal
+T79	Biological_structure 1890 1899	pulmonary
+R53	MODIFY Arg1:T79 Arg2:E39	
+R54	MODIFY Arg1:T78 Arg2:E39	
+T80	Detailed_description 1845 1857	Single-stage
+R55	MODIFY Arg1:T80 Arg2:E38	
+T81	Clinical_event 1961 1973	consultation
+E40	Clinical_event:T81 
+T82	Therapeutic_procedure 2239 2252	esophagectomy
+E41	Therapeutic_procedure:T82 
+T83	Therapeutic_procedure 2269 2278	lobectomy
+E42	Therapeutic_procedure:T83 
+T84	Therapeutic_procedure 2117 2136	targeted antibodies
+E43	Therapeutic_procedure:T84 
+A5	POLARITY E43 NEG
+T85	Detailed_description 2257 2268	right upper
+R56	MODIFY Arg1:T85 Arg2:E42	
+T86	Detailed_description 2228 2238	Ivor-Lewis
+T87	Detailed_description 2215 2227	simultaneous
+R57	MODIFY Arg1:T86 Arg2:E41	
+R58	MODIFY Arg1:T87 Arg2:E41	
+R59	MODIFY Arg1:T87 Arg2:E42	
+T88	Medication 2314 2332	general anesthesia
+E44	Medication:T88 
+T89	Therapeutic_procedure 2366 2376	intubation
+E45	Therapeutic_procedure:T89 
+T90	Detailed_description 2353 2365	endotracheal
+T91	Detailed_description 2340 2352	double-lumen
+R60	MODIFY Arg1:T90 Arg2:E45	
+R61	MODIFY Arg1:T91 Arg2:E45	
+T92	Therapeutic_procedure 2399 2409	dissection
+E46	Therapeutic_procedure:T92 
+T93	Detailed_description 2390 2398	systemic
+T94	Biological_structure 2413 2424	lymph nodes
+R62	MODIFY Arg1:T94 Arg2:E46	
+R63	MODIFY Arg1:T93 Arg2:E46	
+T95	Biological_structure 2436 2447	mediastinum
+T96	Biological_structure 2452 2459	abdomen
+R64	MODIFY Arg1:T95 Arg2:T94	
+R65	MODIFY Arg1:T96 Arg2:T94	
+T97	Duration 2542 2553	290 minutes
+E47	Duration:T97 
+T98	Sign_symptom 2571 2579	bleeding
+E48	Sign_symptom:T98 
+A6	POLARITY E48 NEG
+T99	Diagnostic_procedure 2614 2635	pathological staining
+E49	Diagnostic_procedure:T99 
+T100	Sign_symptom 2661 2678	pleomorphic cells
+E50	Sign_symptom:T100 
+T101	Sign_symptom 2692 2708	melanin granules
+E51	Sign_symptom:T101 
+T102	Diagnostic_procedure 2727 2752	immunohistochemical tests
+E52	Diagnostic_procedure:T102 
+T103	Diagnostic_procedure 2789 2812	human melanoma black 45
+E53	Diagnostic_procedure:T103 
+T104	Lab_value 2766 2785	positive expression
+R66	MODIFY Arg1:T104 Arg2:E53	
+T105	Diagnostic_procedure 2814 2819	HMB45
+E54	Diagnostic_procedure:T105 
+R67	IDENTICAL Arg1:E54 Arg2:E53	
+T106	Diagnostic_procedure 2822 2858	microtubule-associated protein tau 1
+E55	Diagnostic_procedure:T106 
+T107	Diagnostic_procedure 2860 2865	MAPT1
+E56	Diagnostic_procedure:T107 
+R68	IDENTICAL Arg1:E56 Arg2:E55	
+R69	MODIFY Arg1:T104 Arg2:E55	
+T108	Diagnostic_procedure 2868 2875	melan A
+E57	Diagnostic_procedure:T108 
+T109	Diagnostic_procedure 2880 2884	S100
+E58	Diagnostic_procedure:T109 
+R70	MODIFY Arg1:T104 Arg2:E58	
+R71	MODIFY Arg1:T104 Arg2:E57	
+T110	Lab_value 2890 2909	negative expression
+T111	Diagnostic_procedure 2913 2919	desmin
+E59	Diagnostic_procedure:T111 
+T112	Diagnostic_procedure 2921 2934	synaptophysin
+E60	Diagnostic_procedure:T112 
+T113	Diagnostic_procedure 2940 2967	epithelial membrane antigen
+E61	Diagnostic_procedure:T113 
+T114	Diagnostic_procedure 2969 2972	EMA
+E62	Diagnostic_procedure:T114 
+R72	IDENTICAL Arg1:E62 Arg2:E61	
+R73	MODIFY Arg1:T110 Arg2:E59	
+R74	MODIFY Arg1:T110 Arg2:E60	
+R75	MODIFY Arg1:T110 Arg2:E61	
+T115	Disease_disorder 3001 3009	melanoma
+E63	Disease_disorder:T115 
+T116	Biological_structure 3036 3057	dissected lymph nodes
+T117	Biological_structure 3015 3031	resection margin
+T118	Sign_symptom 3078 3083	tumor
+E64	Sign_symptom:T118 
+A7	POLARITY E64 NEG
+R76	MODIFY Arg1:T116 Arg2:E64	
+R77	MODIFY Arg1:T117 Arg2:E64	
+T119	Diagnostic_procedure 3107 3122	molecular study
+E65	Diagnostic_procedure:T119 
+T120	Sign_symptom 3148 3206	mutation of V-raf murine sarcoma viral oncogene homolog B1
+E66	Sign_symptom:T120 
+T121	Disease_disorder 3270 3274	PMME
+E67	Disease_disorder:T121 
+#1	AnnotatorNotes E67	primary malignant melanoma of the esophagus
+T122	Severity 3261 3269	advanced
+R78	MODIFY Arg1:T122 Arg2:E67	
+T123	Lab_value 3306 3314	stage IV
+T124	Lab_value 3316 3323	pT3N0M1
+R79	MODIFY Arg1:T123 Arg2:E67	
+R80	MODIFY Arg1:T124 Arg2:E67	
+T125	Therapeutic_procedure 3458 3480	postoperative recovery
+E68	Therapeutic_procedure:T125 
+T126	Lab_value 3485 3502	mainly uneventful
+R81	MODIFY Arg1:T126 Arg2:E68	
+T127	Clinical_event 3524 3534	discharged
+E69	Clinical_event:T127 
+T128	Date 3535 3556	14 days after surgery
+E70	Date:T128 
+T129	Medication 3606 3618	chemotherapy
+E71	Medication:T129 
+T130	Sign_symptom 3712 3728	thrombocytopenia
+E72	Sign_symptom:T130 
+T131	Sign_symptom 3730 3740	leukopenia
+E73	Sign_symptom:T131 
+T132	Sign_symptom 3742 3748	nausea
+E74	Sign_symptom:T132 
+T133	Sign_symptom 3750 3758	vomiting
+E75	Sign_symptom:T133 
+T134	Sign_symptom 3764 3772	diarrhea
+E76	Sign_symptom:T134 
+T135	Dosage 3572 3580	4 cycles
+R82	MODIFY Arg1:T135 Arg2:E71	
+T136	Dosage 3624 3646	an interval of 3 weeks
+R83	MODIFY Arg1:T136 Arg2:E71	
+T137	Detailed_description 3584 3592	adjuvant
+T138	Detailed_description 3593 3605	conventional
+R84	MODIFY Arg1:T138 Arg2:E71	
+R85	MODIFY Arg1:T137 Arg2:E71	
+T139	Sign_symptom 4289 4299	leukopenia
+E77	Sign_symptom:T139 
+T140	Sign_symptom 4301 4317	myelosuppression
+E78	Sign_symptom:T140 
+T141	Severity 4280 4288	moderate
+R86	MODIFY Arg1:T141 Arg2:E77	
+R87	MODIFY Arg1:T141 Arg2:E78	
+T142	Medication 4348 4360	chemotherapy
+E79	Medication:T142 
+T143	Sign_symptom 4369 4378	recovered
+E80	Sign_symptom:T143 
+T144	Medication 4415 4452	granulocyte colony-stimulating factor
+E81	Medication:T144 
+T145	Medication 4454 4459	G-CSF
+E82	Medication:T145 
+R88	BEFORE Arg1:E82 Arg2:E81	
+T146	Medication 4488 4513	human interferon alpha-2b
+E83	Medication:T146 
+T147	Administration 4613 4633	hypodermic injection
+R89	MODIFY Arg1:T147 Arg2:E83	
+T148	Dosage 4646 4669	6000 units every 3 days
+R90	MODIFY Arg1:T148 Arg2:E83	
+T149	Duration 4687 4697	for 1 year
+E84	Duration:T149 
+T150	Clinical_event 4715 4726	followed up
+E85	Clinical_event:T150 
+T151	Diagnostic_procedure 4777 4779	CT
+E86	Diagnostic_procedure:T151 
+T152	Biological_structure 4769 4776	abdomen
+T153	Biological_structure 4759 4764	Chest
+R91	MODIFY Arg1:T152 Arg2:E86	
+R92	MODIFY Arg1:T153 Arg2:E86	
+T154	Diagnostic_procedure 4789 4792	MRI
+E87	Diagnostic_procedure:T154 
+T155	Diagnostic_procedure 4799 4802	ECT
+E88	Diagnostic_procedure:T155 
+T156	Biological_structure 4781 4788	cranial
+T157	Biological_structure 4794 4798	bone
+R93	MODIFY Arg1:T156 Arg2:E87	
+R94	MODIFY Arg1:T157 Arg2:E88	
+T158	Diagnostic_procedure 4817 4837	physical examination
+E89	Diagnostic_procedure:T158 
+T159	Frequency 4855 4869	every 3 months
+R95	MODIFY Arg1:T159 Arg2:E89	
+R96	MODIFY Arg1:T159 Arg2:E88	
+R97	MODIFY Arg1:T159 Arg2:E87	
+R98	MODIFY Arg1:T159 Arg2:E86	
+T160	Outcome 4898 4906	survived
+E90	Outcome:T160 
+T161	Sign_symptom 4929 4939	recurrence
+E91	Sign_symptom:T161 
+A8	POLARITY E91 NEG
+T162	Sign_symptom 4950 4960	metastasis
+E92	Sign_symptom:T162 
+A9	POLARITY E92 NEG
+T163	Detailed_description 4943 4949	remote
+T164	Detailed_description 4915 4928	loco-regional
+R99	MODIFY Arg1:T164 Arg2:E91	
+R100	MODIFY Arg1:T163 Arg2:E92	
+T165	Clinical_event 4972 4981	follow-up
+E93	Clinical_event:T165 
+T166	Duration 4985 5005	two and a half years
+E94	Duration:T166 
+T167	Medication 3823 3842	paclitaxel liposome
+E95	Medication:T167 
+T168	Administration 3847 3856	injection
+T169	Medication 3985 3992	tegafur
+E96	Medication:T169 
+T170	Administration 3993 4002	injection
+R101	MODIFY Arg1:T168 Arg2:E95	
+R102	MODIFY Arg1:T170 Arg2:E96	
+T171	Medication 4125 4137	cis-platinum
+E97	Medication:T171 
+*	OVERLAP E2 E3 E4 E5 E6 E7 E8
+R103	BEFORE Arg1:E8 Arg2:E17	
+*	OVERLAP E17 E18 E19 E20 E22 E23 E24 E26 E28 E30 E31 E32 E33 E34 E35 E36 E37
+A10	POLARITY E37 NEG
+R104	BEFORE Arg1:E37 Arg2:E38	
+*	OVERLAP E38 E39
+R105	AFTER Arg1:E39 Arg2:E40	
+*	OVERLAP E40 E43
+R106	BEFORE Arg1:E43 Arg2:E41	
+*	OVERLAP E41 E42 E44 E45 E46 E47 E48
+R107	BEFORE Arg1:E48 Arg2:E49	
+*	OVERLAP E49 E50 E51 E52 E53 E55 E57 E58 E59 E60 E61 E63 E64 E65 E66 E67
+R108	BEFORE Arg1:E67 Arg2:E68	
+R109	BEFORE Arg1:E68 Arg2:E69	
+*	OVERLAP E69 E70
+R110	BEFORE Arg1:E70 Arg2:E71	
+*	OVERLAP E71 E72 E73 E74 E75 E76 E95 E96 E97 E77 E78 E79 E80 E81 E83 E84 E85
+R111	CAUSE Arg1:E81 Arg2:E80	
+R112	MODIFY Arg1:E84 Arg2:E83	
+R113	BEFORE Arg1:E85 Arg2:E86	
+*	OVERLAP E86 E87 E88 E89
+R114	BEFORE Arg1:E89 Arg2:E90	
+*	OVERLAP E90 E91 E92 E93 E94
+T172	Activity 35 42	smoking
+E98	Activity:T172 
+T173	Activity 46 54	drinking
+E99	Activity:T173 
+A11	POLARITY E98 NEG
+A12	POLARITY E99 NEG
+R115	BEFORE Arg1:E99 Arg2:E2	
+*	OVERLAP E98 E99

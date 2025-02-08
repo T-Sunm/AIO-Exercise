@@ -1,0 +1,175 @@
+T1	Age 2 13	66 year old
+T2	History 29 42	history of UC
+#1	AnnotatorNotes T2	ulcerative colitis
+T3	Medication 54 64	mesalazine
+E1	Medication:T3 
+T4	Duration 65 78	since 5 years
+E2	Duration:T4 
+T5	Clinical_event 79 88	consulted
+E3	Clinical_event:T5 
+T6	Date 92 101	July 2012
+E4	Date:T6 
+T7	Sign_symptom 129 137	swelling
+E5	Sign_symptom:T7 
+T8	Detailed_description 116 128	erythematous
+T9	Detailed_description 108 115	painful
+R1	MODIFY Arg1:T8 Arg2:E5	
+R2	MODIFY Arg1:T9 Arg2:E5	
+T10	Biological_structure 145 167	back of the right hand
+R3	MODIFY Arg1:T10 Arg2:E5	
+T11	Diagnostic_procedure 173 196	bacteriological samples
+E6	Diagnostic_procedure:T11 
+T12	Lab_value 202 210	negative
+R4	MODIFY Arg1:T12 Arg2:E6	
+T13	Coreference 216 222	lesion
+E7	Coreference:T13 
+R5	IDENTICAL Arg1:E7 Arg2:E5	
+T14	Medication 287 298	antibiotics
+E8	Medication:T14 
+T15	Medication 303 320	local antiseptics
+E9	Medication:T15 
+T16	Sign_symptom 329 340	improvement
+E10	Sign_symptom:T16 
+A1	POLARITY E10 NEG
+T17	Sign_symptom 244 253	abscesses
+E11	Sign_symptom:T17 
+A2	POLARITY E11 UNCERTAIN
+T18	Sign_symptom 427 448	centrifugal expansion
+E12	Sign_symptom:T18 
+T19	Detailed_description 411 426	vesiculobullous
+T20	Detailed_description 398 410	erythematous
+R6	MODIFY Arg1:T19 Arg2:E12	
+R7	MODIFY Arg1:T20 Arg2:E12	
+T21	Biological_structure 460 488	whole back of the right hand
+R8	MODIFY Arg1:T21 Arg2:E12	
+T22	Medication 514 533	various antibiotics
+E13	Medication:T22 
+T23	Frequency 497 510	several times
+R9	MODIFY Arg1:T23 Arg2:E13	
+T24	Diagnostic_procedure 550 556	Biopsy
+E14	Diagnostic_procedure:T24 
+T25	Lab_value 586 598	not specific
+R10	MODIFY Arg1:T25 Arg2:E14	
+T26	Date 603 615	October 2012
+E15	Date:T26 
+T27	Clinical_event 633 645	hospitalized
+E16	Clinical_event:T27 
+T28	Sign_symptom 650 655	fever
+E17	Sign_symptom:T28 
+T29	Sign_symptom 660 674	polyarthralgia
+E18	Sign_symptom:T29 
+T30	Sign_symptom 693 719	impaired general condition
+E19	Sign_symptom:T30 
+T31	Disease_disorder 740 750	UC disease
+E20	Disease_disorder:T31 
+T32	Detailed_description 730 739	quiescent
+R11	MODIFY Arg1:T32 Arg2:E20	
+T33	Diagnostic_procedure 756 772	skin examination
+E21	Diagnostic_procedure:T33 
+T34	Sign_symptom 795 801	plaque
+E22	Sign_symptom:T34 
+T35	Detailed_description 782 794	erythematous
+R12	MODIFY Arg1:T35 Arg2:E22	
+T36	Distance 805 810	10 cm
+R13	MODIFY Arg1:T36 Arg2:E22	
+T37	Detailed_description 831 844	raised border
+T38	Detailed_description 849 858	vesicules
+R14	MODIFY Arg1:T37 Arg2:E22	
+R15	MODIFY Arg1:T38 Arg2:E22	
+T39	Biological_structure 871 893	back of the right hand
+T40	Biological_structure 898 903	wrist
+R16	MODIFY Arg1:T39 Arg2:E22	
+R17	MODIFY Arg1:T40 Arg2:E22	
+T41	Sign_symptom 959 965	plaque
+E23	Sign_symptom:T41 
+T42	Detailed_description 934 945	infiltrated
+T43	Detailed_description 946 958	erythematous
+R18	MODIFY Arg1:T43 Arg2:E23	
+R19	MODIFY Arg1:T42 Arg2:E23	
+T44	Biological_structure 973 982	right leg
+R20	MODIFY Arg1:T44 Arg2:E23	
+T45	Biological_structure 1041 1051	left ankle
+R21	MODIFY Arg1:T45 Arg2:E23	
+T46	Detailed_description 1006 1033	topped with a large pustule
+R22	MODIFY Arg1:T46 Arg2:E23	
+T47	Disease_disorder 1088 1120	biological inflammatory syndrome
+E24	Disease_disorder:T47 
+T48	Sign_symptom 1130 1142	leukocytosis
+E25	Sign_symptom:T48 
+T49	Detailed_description 1143 1159	with neutrophils
+R23	MODIFY Arg1:T49 Arg2:E25	
+T50	Severity 1125 1129	high
+R24	MODIFY Arg1:T50 Arg2:E25	
+T51	Diagnostic_procedure 1161 1168	Hepatic
+E26	Diagnostic_procedure:T51 
+T52	Diagnostic_procedure 1173 1188	renal functions
+E27	Diagnostic_procedure:T52 
+T53	Lab_value 1194 1200	normal
+R25	MODIFY Arg1:T53 Arg2:E27	
+R26	MODIFY Arg1:T53 Arg2:E26	
+T54	Diagnostic_procedure 1202 1213	Skin biopsy
+E28	Diagnostic_procedure:T54 
+T55	Biological_structure 1228 1269	edge of the back of the closet right hand
+R27	MODIFY Arg1:T55 Arg2:E28	
+T56	Sign_symptom 1270 1289	ulcerated epidermis
+E29	Sign_symptom:T56 
+T57	Disease_disorder 1379 1381	PG
+E30	Disease_disorder:T57 
+#2	AnnotatorNotes E30	pyoderma gangrenosum
+T58	Disease_disorder 1622 1624	SS
+E31	Disease_disorder:T58 
+#3	AnnotatorNotes E31	Sweet's Syndrome
+T59	Sign_symptom 1358 1368	vasculitis
+E32	Sign_symptom:T59 
+T60	Detailed_description 1341 1357	leukocytoclastic
+R28	MODIFY Arg1:T60 Arg2:E32	
+T61	Detailed_description 1298 1335	dermis infiltrate rich in neutrophils
+R29	MODIFY Arg1:T61 Arg2:E29	
+T62	Diagnostic_procedure 1394 1408	Other biopsies
+E33	Diagnostic_procedure:T62 
+T63	Sign_symptom 1443 1450	plaques
+E34	Sign_symptom:T63 
+T64	Detailed_description 1430 1442	erythematous
+T65	Detailed_description 1418 1429	infiltrated
+R30	MODIFY Arg1:T64 Arg2:E34	
+R31	MODIFY Arg1:T65 Arg2:E34	
+T66	Biological_structure 1458 1463	ankle
+R32	MODIFY Arg1:T66 Arg2:E34	
+T67	Diagnostic_procedure 1480 1498	appearance of skin
+E35	Diagnostic_procedure:T67 
+T68	Lab_value 1473 1479	normal
+R33	MODIFY Arg1:T68 Arg2:E35	
+R34	SUB_PROCEDURE Arg1:E35 Arg2:E33	
+T69	Sign_symptom 1500 1505	edema
+E36	Sign_symptom:T69 
+T70	Biological_structure 1513 1531	superficial dermis
+R35	MODIFY Arg1:T70 Arg2:E36	
+T71	Detailed_description 1544 1574	infiltrate rich in neutrophils
+R36	MODIFY Arg1:T71 Arg2:T70	
+T72	Sign_symptom 1583 1593	vasculitis
+E37	Sign_symptom:T72 
+A3	POLARITY E37 NEG
+T73	Medication 1637 1651	Corticosteroid
+E38	Medication:T73 
+T74	Medication 1684 1696	prednisolone
+E39	Medication:T74 
+R37	SUB_PROCEDURE Arg1:E39 Arg2:E38	
+T75	Dosage 1710 1718	1mg/Kg/j
+R38	MODIFY Arg1:T75 Arg2:E39	
+T76	Date 1745 1769	since day 7 of treatment
+E40	Date:T76 
+T77	Sign_symptom 1777 1807	desinfiltration of the plaques
+E41	Sign_symptom:T77 
+T78	Sign_symptom 1824 1857	recovery of the general condition
+E42	Sign_symptom:T78 
+T79	Disease_disorder 1879 1911	biological inflammatory syndrome
+E43	Disease_disorder:T79 
+A4	POLARITY E43 NEG
+R39	BEFORE Arg1:E1 Arg2:E3	
+R40	MODIFY Arg1:E2 Arg2:E1	
+*	OVERLAP E3 E4 E5 E6 E11 E8 E9 E10 E12 E13 E14
+R41	BEFORE Arg1:E14 Arg2:E15	
+*	OVERLAP E15 E16 E17 E18 E19 E20 E21 E22 E23 E24 E25 E26 E27 E28 E29 E32 E30 E33 E34 E35 E36 E37 E31
+R42	BEFORE Arg1:E31 Arg2:E38	
+R43	BEFORE Arg1:E38 Arg2:E40	
+*	OVERLAP E40 E41 E42 E43

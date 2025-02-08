@@ -1,0 +1,269 @@
+T1	Age 36 47	60-year-old
+T2	Sex 48 51	man
+T3	Personal_background 57 70	San Francisco
+T5	Activity 103 112	traveling
+E1	Activity:T5 
+T6	Nonbiological_location 120 131	Philippines
+R1	MODIFY Arg1:T6 Arg2:E1	
+T7	Activity 79 96	consumed raw pork
+E2	Activity:T7 
+T8	Date 136 145	June 2003
+E3	Date:T8 
+T9	Sign_symptom 163 166	ill
+E4	Sign_symptom:T9 
+T10	Sign_symptom 172 177	fever
+E5	Sign_symptom:T10 
+T11	Sign_symptom 179 190	diaphoresis
+E6	Sign_symptom:T11 
+T12	Sign_symptom 192 200	headache
+E7	Sign_symptom:T12 
+T13	Sign_symptom 202 208	nausea
+E8	Sign_symptom:T13 
+T14	Sign_symptom 214 222	anorexia
+E9	Sign_symptom:T14 
+T15	Duration 252 259	7-month
+E10	Duration:T15 
+T16	Activity 236 244	returned
+E11	Activity:T16 
+T18	Nonbiological_location 276 287	Philippines
+T19	Date 289 320	Three days after symptoms onset
+E12	Date:T19 
+T20	Medication 347 358	doxycycline
+E13	Medication:T20 
+T22	Clinical_event 390 398	admitted
+E14	Clinical_event:T22 
+T23	Nonbiological_location 404 418	local hospital
+T24	Date 419 431	5 days later
+E15	Date:T24 
+T25	Lab_value 448 454	38.9°C
+T26	Sign_symptom 439 444	fever
+E16	Sign_symptom:T26 
+R3	MODIFY Arg1:T25 Arg2:E16	
+T27	Sign_symptom 456 471	nuchal rigidity
+E17	Sign_symptom:T27 
+T28	Sign_symptom 473 481	headache
+E18	Sign_symptom:T28 
+T29	Sign_symptom 495 502	malaise
+E19	Sign_symptom:T29 
+T30	History 563 600	past medical history was unremarkable
+T31	History 526 561	no recent contact with sick persons
+T32	Diagnostic_procedure 605 625	physical examination
+E20	Diagnostic_procedure:T32 
+T33	Sign_symptom 634 643	somnolent
+E21	Sign_symptom:T33 
+T34	Sign_symptom 648 662	fully oriented
+E22	Sign_symptom:T34 
+T35	Diagnostic_procedure 690 712	neurologic examination
+E23	Diagnostic_procedure:T35 
+T36	Sign_symptom 672 686	focal findings
+E24	Sign_symptom:T36 
+A1	POLARITY E24 NEG
+R4	MODIFY Arg1:E24 Arg2:E23	
+T37	Sign_symptom 729 744	nuchal rigidity
+E25	Sign_symptom:T37 
+T38	Severity 722 728	slight
+R5	MODIFY Arg1:T38 Arg2:E25	
+T39	Diagnostic_procedure 755 770	leukocyte count
+E26	Diagnostic_procedure:T39 
+T40	Lab_value 774 784	21,000/mm3
+T41	Diagnostic_procedure 807 818	neutrophils
+E27	Diagnostic_procedure:T41 
+T42	Lab_value 796 806	16,400/mm3
+T43	Biological_structure 820 839	Cerebrospinal fluid
+T44	Biological_structure 841 844	CSF
+T45	Diagnostic_procedure 853 868	leukocyte count
+E28	Diagnostic_procedure:T45 
+T46	Lab_value 872 878	487/μL
+T47	Lab_value 884 911	80% polymorphonuclear cells
+T48	Lab_value 916 931	18% lymphocytes
+T49	Diagnostic_procedure 937 944	glucose
+E29	Diagnostic_procedure:T49 
+T50	Diagnostic_procedure 949 956	protein
+E30	Diagnostic_procedure:T50 
+T51	Lab_value 964 973	<20 mg/dL
+R6	MODIFY Arg1:T51 Arg2:E29	
+T52	Lab_value 978 988	<167 mg/dL
+R7	MODIFY Arg1:T52 Arg2:E30	
+R8	MODIFY Arg1:T44 Arg2:E28	
+R9	IDENTICAL Arg1:T43 Arg2:T44	
+R10	MODIFY Arg1:T46 Arg2:E28	
+R11	MODIFY Arg1:T47 Arg2:E28	
+R12	MODIFY Arg1:T48 Arg2:E28	
+R13	MODIFY Arg1:T44 Arg2:E29	
+R14	MODIFY Arg1:T44 Arg2:E30	
+T53	Diagnostic_procedure 1004 1014	Gram stain
+E31	Diagnostic_procedure:T53 
+T54	Biological_structure 1018 1021	CSF
+T55	Sign_symptom 1029 1057	gram-positive cocci in pairs
+E32	Sign_symptom:T55 
+R15	MODIFY Arg1:T54 Arg2:E31	
+T56	Medication 1085 1096	ceftriaxone
+E33	Medication:T56 
+T57	Medication 1098 1108	vancomycin
+E34	Medication:T57 
+T58	Medication 1114 1124	ampicillin
+E35	Medication:T58 
+T59	Disease_disorder 1130 1150	bacterial meningitis
+E36	Disease_disorder:T59 
+T60	Diagnostic_procedure 1162 1187	Computed tomographic scan
+E37	Diagnostic_procedure:T60 
+T61	Biological_structure 1195 1199	head
+R16	MODIFY Arg1:T61 Arg2:E37	
+T62	Sign_symptom 1212 1221	sinusitis
+E38	Sign_symptom:T62 
+T63	Diagnostic_procedure 1241 1251	radiograph
+E39	Diagnostic_procedure:T63 
+T64	Biological_structure 1235 1240	chest
+R17	MODIFY Arg1:T64 Arg2:E39	
+T65	Diagnostic_procedure 1256 1286	transesophageal echocardiogram
+E40	Diagnostic_procedure:T65 
+T66	Lab_value 1292 1300	negative
+R18	MODIFY Arg1:T66 Arg2:E40	
+R19	MODIFY Arg1:T66 Arg2:E39	
+T67	Date 1305 1319	hospital day 2
+E41	Date:T67 
+T68	Diagnostic_procedure 1321 1335	blood cultures
+E42	Diagnostic_procedure:T68 
+T69	Sign_symptom 1341 1360	gram-positive cocci
+E43	Sign_symptom:T69 
+T70	Detailed_description 1364 1369	pairs
+R20	MODIFY Arg1:T70 Arg2:E43	
+T71	Detailed_description 1374 1380	chains
+R21	MODIFY Arg1:T71 Arg2:E43	
+T72	Sign_symptom 1386 1394	organism
+E44	Sign_symptom:T72 
+T73	Diagnostic_procedure 1399 1407	catalase
+E45	Diagnostic_procedure:T73 
+T74	Lab_value 1408 1416	negative
+R22	MODIFY Arg1:T74 Arg2:E45	
+T75	Diagnostic_procedure 1418 1430	bile esculin
+E46	Diagnostic_procedure:T75 
+T76	Lab_value 1431 1439	negative
+R23	MODIFY Arg1:T76 Arg2:E46	
+T77	Diagnostic_procedure 1445 1472	pyrrolidonyl aminopeptidase
+E47	Diagnostic_procedure:T77 
+T78	Lab_value 1473 1481	negative
+R24	MODIFY Arg1:T78 Arg2:E47	
+T79	Sign_symptom 1499 1516	Streptococcus spp
+E48	Sign_symptom:T79 
+R25	MODIFY Arg1:E45 Arg2:E44	
+R26	MODIFY Arg1:E46 Arg2:E44	
+R27	MODIFY Arg1:E47 Arg2:E44	
+T80	Diagnostic_procedure 1520 1544	latex agglutination test
+E49	Diagnostic_procedure:T80 
+T81	Sign_symptom 1560 1592	Streptococcus pneumoniae antigen
+E50	Sign_symptom:T81 
+A2	POLARITY E50 NEG
+T82	Diagnostic_procedure 1594 1630	Antimicrobial susceptibility testing
+E51	Diagnostic_procedure:T82 
+T83	Sign_symptom 1659 1724	sensitive to penicillin (MIC = 0.03), ceftriaxone, and vancomycin
+E52	Sign_symptom:T83 
+T84	Sign_symptom 1729 1770	resistant to tetracycline and clindamycin
+E53	Sign_symptom:T84 
+T85	Coreference 1647 1654	isolate
+E54	Coreference:T85 
+R28	IDENTICAL Arg1:E54 Arg2:E44	
+R29	MODIFY Arg1:E52 Arg2:E54	
+R30	MODIFY Arg1:E53 Arg2:E54	
+T86	Medication 1772 1793	Antimicrobial therapy
+E55	Medication:T86 
+T87	Medication 1809 1821	penicillin G
+E56	Medication:T87 
+T88	Dosage 1823 1839	24 million units
+T89	Administration 1840 1853	intravenously
+T90	Frequency 1854 1861	per day
+R31	MODIFY Arg1:T88 Arg2:E56	
+R32	MODIFY Arg1:T89 Arg2:E56	
+R33	MODIFY Arg1:T90 Arg2:E56	
+T91	Date 1866 1880	hospital day 5
+E57	Date:T91 
+R34	SUB_PROCEDURE Arg1:E56 Arg2:E55	
+T92	Sign_symptom 1908 1920	hearing loss
+E58	Sign_symptom:T92 
+T93	Biological_structure 1928 1936	left ear
+R35	MODIFY Arg1:T93 Arg2:E58	
+T94	Diagnostic_procedure 1949 1973	nasopharyngeal endoscopy
+E59	Diagnostic_procedure:T94 
+T95	Lab_value 1979 1987	negative
+R36	MODIFY Arg1:T95 Arg2:E59	
+T96	Date 1992 2006	hospital day 7
+E60	Date:T96 
+T97	Diagnostic_procedure 2043 2062	API 20 Strep System
+E61	Diagnostic_procedure:T97 
+T98	Sign_symptom 2104 2122	S. suis serotype 2
+E62	Sign_symptom:T98 
+T99	Occupation 2170 2177	butcher
+T100	Detailed_description 2185 2231	culinary preference for partially cooked pork,
+R37	MODIFY Arg1:T100 Arg2:T99	
+T101	Date 2270 2311	until the week prior to onset of symptoms
+E63	Date:T101 
+T103	Nonbiological_location 2258 2269	Philippines
+T104	Other_entity 2209 2230	partially cooked pork
+T105	Date 2316 2330	hospital day 9
+E64	Date:T105 
+T106	Diagnostic_procedure 2334 2361	formal audiology evaluation
+E65	Diagnostic_procedure:T106 
+T107	Sign_symptom 2376 2427	bilateral sensorineural high-frequency hearing loss
+E66	Sign_symptom:T107 
+T108	Severity 2369 2375	severe
+R40	MODIFY Arg1:T108 Arg2:E66	
+T109	Lab_value 2429 2435	–70 dB
+R41	MODIFY Arg1:T109 Arg2:E66	
+T110	Duration 2462 2475	10-day course
+E67	Duration:T110 
+T111	Medication 2479 2509	parenteral antimicrobial drugs
+E68	Medication:T111 
+T112	Clinical_event 2518 2528	discharged
+E69	Clinical_event:T112 
+T113	Medication 2542 2554	oral therapy
+E70	Medication:T113 
+T114	Detailed_description 2532 2541	continued
+R42	MODIFY Arg1:T114 Arg2:E70	
+T115	Date 2576 2602	Two months after discharge
+E71	Date:T115 
+T116	Sign_symptom 2625 2646	much improved hearing
+E72	Sign_symptom:T116 
+T117	Sign_symptom 2661 2669	sequelae
+E73	Sign_symptom:T117 
+A3	POLARITY E73 NEG
+T118	Coreference 2012 2020	organism
+E74	Coreference:T118 
+R43	IDENTICAL Arg1:E74 Arg2:E44	
+*	OVERLAP E2 E1
+R45	BEFORE Arg1:E1 Arg2:E3	
+*	OVERLAP E3 E4 E5 E6 E7 E8 E9
+R46	AFTER Arg1:E9 Arg2:E11	
+T17	Activity 260 268	vacation
+E75	Activity:T17 
+R2	MODIFY Arg1:E10 Arg2:E75	
+R44	MODIFY Arg1:T18 Arg2:E75	
+*	OVERLAP E11 E75
+R47	BEFORE Arg1:E75 Arg2:E12	
+*	OVERLAP E12 E13
+T119	Sign_symptom 360 378	Symptoms continued
+E76	Sign_symptom:T119 
+R48	BEFORE Arg1:E13 Arg2:E76	
+R49	MODIFY Arg1:T23 Arg2:E14	
+*	OVERLAP E76 E14 E15 E16 E17 E18 E19 E20 E21 E22 E24 E25 E26 E27 E28 E29 E30 E31 E32
+R50	MODIFY Arg1:T40 Arg2:E26	
+R51	MODIFY Arg1:T42 Arg2:E27	
+R52	BEFORE Arg1:E32 Arg2:E33	
+*	OVERLAP E33 E34 E35 E36 E37 E38 E39 E40
+R53	BEFORE Arg1:E40 Arg2:E41	
+*	OVERLAP E41 E42 E43 E44 E48 E49 E50 E51 E54 E55
+R54	BEFORE Arg1:E55 Arg2:E57	
+*	OVERLAP E57 E58 E59
+R55	BEFORE Arg1:E59 Arg2:E60	
+*	OVERLAP E60 E74 E61 E62
+R58	BEFORE Arg1:E63 Arg2:E64	
+*	OVERLAP E64 E65 E66
+R59	BEFORE Arg1:E66 Arg2:E67	
+*	OVERLAP E67 E68 E69 E70
+R60	BEFORE Arg1:E70 Arg2:E71	
+*	OVERLAP E71 E72 E73
+T4	Activity 2245 2250	eaten
+E77	Activity:T4 
+R38	MODIFY Arg1:T104 Arg2:E77	
+R39	MODIFY Arg1:T103 Arg2:E77	
+R56	AFTER Arg1:E62 Arg2:E77	
+R57	BEFORE Arg1:E77 Arg2:E63	

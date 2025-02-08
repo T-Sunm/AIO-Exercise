@@ -1,0 +1,225 @@
+T1	Age 18 29	50-year old
+T2	Sex 30 33	man
+T3	Sign_symptom 48 74	aortic valve insufficiency
+E1	Sign_symptom:T3 
+T4	Detailed_description 39 47	bicuspid
+R1	MODIFY Arg1:T4 Arg2:E1	
+T5	Sign_symptom 89 105	aorta dilatation
+E2	Sign_symptom:T5 
+T6	Detailed_description 79 88	ascending
+R2	MODIFY Arg1:T6 Arg2:E2	
+T7	Therapeutic_procedure 143 165	homograft implantation
+E3	Therapeutic_procedure:T7 
+T8	Biological_structure 136 142	aortic
+T9	Detailed_description 126 135	free-hand
+R3	MODIFY Arg1:T8 Arg2:E3	
+R4	MODIFY Arg1:T9 Arg2:E3	
+T10	Therapeutic_procedure 171 182	replacement
+E4	Therapeutic_procedure:T10 
+T11	Biological_structure 190 208	non-coronary sinus
+R5	MODIFY Arg1:T11 Arg2:E4	
+T12	Detailed_description 217 232	24-mm homograft
+R6	MODIFY Arg1:T12 Arg2:E4	
+T13	Date 236 240	2006
+E5	Date:T13 
+T14	Clinical_event 261 270	Follow-up
+E6	Clinical_event:T14 
+T15	Frequency 298 312	every 6 months
+R7	MODIFY Arg1:T15 Arg2:E6	
+T16	Sign_symptom 329 355	aortic valve insufficiency
+E7	Sign_symptom:T16 
+T17	Severity 324 328	mild
+R8	MODIFY Arg1:T17 Arg2:E7	
+T18	Clinical_event 374 383	follow-up
+E8	Clinical_event:T18 
+T19	Duration 363 370	8 years
+E9	Duration:T19 
+T20	Clinical_event 397 406	presented
+E10	Clinical_event:T20 
+T21	Nonbiological_location 410 418	hospital
+R9	MODIFY Arg1:T21 Arg2:E10	
+T22	Sign_symptom 424 429	fever
+E11	Sign_symptom:T22 
+T23	Diagnostic_procedure 438 454	echocardiography
+E12	Diagnostic_procedure:T23 
+T24	Sign_symptom 469 489	aortic insufficiency
+E13	Sign_symptom:T24 
+T25	Severity 462 468	severe
+R10	MODIFY Arg1:T25 Arg2:E13	
+T26	Sign_symptom 499 506	rupture
+E14	Sign_symptom:T26 
+T27	Biological_structure 510 543	one of the cusps of the homograft
+R11	MODIFY Arg1:T27 Arg2:E14	
+T28	Diagnostic_procedure 558 579	cardiac contractility
+E15	Diagnostic_procedure:T28 
+T29	Lab_value 545 554	worsening
+R12	MODIFY Arg1:T29 Arg2:E15	
+T30	Diagnostic_procedure 585 619	left ventricular ejection fraction
+E16	Diagnostic_procedure:T30 
+T31	Diagnostic_procedure 621 625	LVEF
+E17	Diagnostic_procedure:T31 
+R13	IDENTICAL Arg1:E17 Arg2:E16	
+T32	Lab_value 627 637	depression
+R14	MODIFY Arg1:T32 Arg2:E16	
+T33	Sign_symptom 651 683	dilatation of the left ventricle
+E18	Sign_symptom:T33 
+T34	Lab_value 639 645	40–45%
+R15	MODIFY Arg1:T34 Arg2:E16	
+T35	Lab_value 685 730	telediastolic/telesystolic diameters 60/42 mm
+R16	MODIFY Arg1:T35 Arg2:E18	
+T36	Sign_symptom 769 779	orthopnoea
+E19	Sign_symptom:T36 
+T37	Sign_symptom 784 795	hypotension
+E20	Sign_symptom:T37 
+T38	Medication 822 830	dopamine
+E21	Medication:T38 
+T39	Medication 835 844	diuretics
+E22	Medication:T39 
+T40	Administration 810 818	infusion
+R17	MODIFY Arg1:T40 Arg2:E21	
+R18	MODIFY Arg1:T40 Arg2:E22	
+T41	Diagnostic_procedure 846 865	Computed tomography
+E23	Diagnostic_procedure:T41 
+T42	Sign_symptom 878 892	calcifications
+E24	Sign_symptom:T42 
+T43	Biological_structure 900 909	homograft
+R19	MODIFY Arg1:T43 Arg2:E24	
+T44	Sign_symptom 911 928	pleural effusions
+E25	Sign_symptom:T44 
+T45	Sign_symptom 945 965	pericardial effusion
+E26	Sign_symptom:T45 
+A1	POLARITY E26 NEG
+T46	Diagnostic_procedure 985 1016	Dukes criteria for endocarditis
+E27	Diagnostic_procedure:T46 
+T47	Lab_value 1022 1035	not satisfied
+R20	MODIFY Arg1:T47 Arg2:E27	
+T48	Disease_disorder 1070 1094	structural deterioration
+E28	Disease_disorder:T48 
+T49	Biological_structure 1102 1111	homograft
+R21	MODIFY Arg1:T49 Arg2:E28	
+T50	Sign_symptom 1129 1142	calcification
+E29	Sign_symptom:T50 
+T51	Severity 1122 1128	severe
+R22	MODIFY Arg1:T51 Arg2:E29	
+R23	CAUSE Arg1:E29 Arg2:E28	
+T52	Therapeutic_procedure 1195 1207	resternotomy
+E30	Therapeutic_procedure:T52 
+T53	Detailed_description 1188 1194	median
+R24	MODIFY Arg1:T53 Arg2:E30	
+T54	Therapeutic_procedure 1245 1264	central cannulation
+E31	Therapeutic_procedure:T54 
+T55	Biological_structure 1226 1244	aorta-right atrium
+R25	MODIFY Arg1:T55 Arg2:E31	
+T56	Detailed_description 1217 1225	standard
+R26	MODIFY Arg1:T56 Arg2:E31	
+T57	Disease_disorder 1395 1407	endocarditis
+E32	Disease_disorder:T57 
+A2	POLARITY E32 NEG
+T58	Sign_symptom 1364 1378	calcifications
+E33	Sign_symptom:T58 
+T59	Severity 1357 1363	severe
+R27	MODIFY Arg1:T59 Arg2:E33	
+T60	Biological_structure 1305 1313	leaflets
+T61	Biological_structure 1337 1346	homograft
+T62	Biological_structure 1322 1329	annulus
+R28	MODIFY Arg1:T62 Arg2:T61	
+R29	MODIFY Arg1:T60 Arg2:T61	
+R30	MODIFY Arg1:T61 Arg2:E33	
+T63	Therapeutic_procedure 1470 1479	implanted
+E34	Therapeutic_procedure:T63 
+T64	Therapeutic_procedure 1439 1452	bioprosthesis
+E35	Therapeutic_procedure:T64 
+R31	SUB_PROCEDURE Arg1:E35 Arg2:E34	
+T65	Detailed_description 1423 1438	Edwards Intuity
+R32	MODIFY Arg1:T65 Arg2:E35	
+T66	Therapeutic_procedure 1493 1507	cross-clamping
+E36	Therapeutic_procedure:T66 
+T67	Therapeutic_procedure 1533 1555	cardiopulmonary bypass
+E37	Therapeutic_procedure:T67 
+R33	SUB_PROCEDURE Arg1:E36 Arg2:E34	
+R34	SUB_PROCEDURE Arg1:E37 Arg2:E34	
+T68	Duration 1565 1571	64 min
+E38	Duration:T68 
+T69	Duration 1517 1523	41 min
+E39	Duration:T69 
+R35	MODIFY Arg1:E39 Arg2:E36	
+R36	MODIFY Arg1:E38 Arg2:E37	
+T70	Medication 1594 1602	dopamine
+E40	Medication:T70 
+T71	Medication 1607 1617	adrenaline
+E41	Medication:T71 
+T72	Dosage 1621 1630	low doses
+R37	MODIFY Arg1:T72 Arg2:E41	
+R38	MODIFY Arg1:T72 Arg2:E40	
+T73	Sign_symptom 1654 1667	complications
+E42	Sign_symptom:T73 
+A3	POLARITY E42 NEG
+T74	Diagnostic_procedure 1710 1726	Echocardiography
+E43	Diagnostic_procedure:T74 
+T75	Clinical_event 1738 1747	discharge
+E44	Clinical_event:T75 
+T76	Sign_symptom 1770 1788	paravalvular leaks
+E45	Sign_symptom:T76 
+A4	POLARITY E45 NEG
+T77	Diagnostic_procedure 1792 1817	peak/mean aortic gradient
+E46	Diagnostic_procedure:T77 
+T78	Lab_value 1821 1831	34/20 mmHg
+R39	MODIFY Arg1:T78 Arg2:E46	
+T79	Diagnostic_procedure 1839 1843	LVEF
+E47	Diagnostic_procedure:T79 
+T80	Lab_value 1847 1850	33%
+R40	MODIFY Arg1:T80 Arg2:E47	
+T81	Diagnostic_procedure 1862 1878	echocardiography
+E48	Diagnostic_procedure:T81 
+T82	Date 1879 1893	after 3 months
+E49	Date:T82 
+T83	Sign_symptom 1928 1933	leaks
+E50	Sign_symptom:T83 
+A5	POLARITY E50 NEG
+T84	Sign_symptom 1938 1950	malfunctions
+E51	Sign_symptom:T84 
+A6	POLARITY E51 NEG
+T85	Biological_structure 1974 1984	prosthesis
+R41	MODIFY Arg1:T85 Arg2:E51	
+#1	AnnotatorNotes T85	Note this is a therapeutic above but a bio structure here; it is now part of the patient
+T86	Detailed_description 1958 1973	Edwards Intuity
+R42	MODIFY Arg1:T86 Arg2:T85	
+T87	Diagnostic_procedure 1988 2006	peak/mean gradient
+E52	Diagnostic_procedure:T87 
+T88	Lab_value 2010 2020	38/22 mmHg
+R43	MODIFY Arg1:T88 Arg2:E52	
+T89	Diagnostic_procedure 2049 2053	LVEF
+E53	Diagnostic_procedure:T89 
+T90	Lab_value 2025 2041	initial recovery
+R44	MODIFY Arg1:T90 Arg2:E53	
+T91	Lab_value 2062 2065	47%
+R45	MODIFY Arg1:T91 Arg2:E53	
+T92	Sign_symptom 2080 2092	asymptomatic
+E54	Sign_symptom:T92 
+*	OVERLAP E1 E2
+R46	BEFORE Arg1:E2 Arg2:E3	
+*	OVERLAP E3 E4 E5
+R47	BEFORE Arg1:E5 Arg2:E6	
+*	OVERLAP E6 E7
+R48	MODIFY Arg1:E9 Arg2:E8	
+R49	BEFORE Arg1:E7 Arg2:E9	
+*	OVERLAP E9 E8
+R50	BEFORE Arg1:E8 Arg2:E10	
+*	OVERLAP E10 E11 E12 E13 E14 E15 E16 E18 E19 E20 E21 E22 E23 E24 E25 E26 E27 E28 E29
+R51	CAUSE Arg1:E14 Arg2:E13	
+T93	Therapeutic_procedure 1156 1165	operation
+E55	Therapeutic_procedure:T93 
+R52	SUB_PROCEDURE Arg1:E30 Arg2:E55	
+R53	SUB_PROCEDURE Arg1:E31 Arg2:E55	
+R54	BEFORE Arg1:E29 Arg2:E55	
+*	OVERLAP E55 E33 E32 E34 E40 E41
+T94	Therapeutic_procedure 1688 1708	postoperative period
+E56	Therapeutic_procedure:T94 
+R55	BEFORE Arg1:E41 Arg2:E42	
+*	OVERLAP E42 E56
+R56	BEFORE Arg1:E56 Arg2:E43	
+R57	BEFORE Arg1:E43 Arg2:E44	
+R58	AFTER Arg1:E44 Arg2:E45	
+*	OVERLAP E45 E46 E47
+R59	BEFORE Arg1:E47 Arg2:E48	
+*	OVERLAP E48 E49 E50 E51 E52 E53 E54

@@ -1,0 +1,249 @@
+T1	Age 2 13	51-year-old
+T2	Sex 14 17	man
+T3	Clinical_event 22 30	referred
+E1	Clinical_event:T3 
+T4	Biological_structure 38 46	hospital
+R1	MODIFY Arg1:T4 Arg2:E1	
+T5	Severity 54 60	severe
+T6	Disease_disorder 72 85	heart failure
+E2	Disease_disorder:T6 
+T7	Detailed_description 61 71	congestive
+R2	MODIFY Arg1:T7 Arg2:E2	
+R3	MODIFY Arg1:T5 Arg2:E2	
+T8	Disease_disorder 102 113	arrhythmias
+E3	Disease_disorder:T8 
+T9	Biological_structure 90 101	ventricular
+R4	MODIFY Arg1:T9 Arg2:E3	
+T10	Date 117 127	March 2008
+E4	Date:T10 
+T11	Disease_disorder 156 169	heart failure
+E5	Disease_disorder:T11 
+T12	Sign_symptom 186 197	tachycardia
+E6	Sign_symptom:T12 
+T13	Biological_structure 174 185	ventricular
+R5	MODIFY Arg1:T13 Arg2:E6	
+T14	Duration 198 207	for years
+E7	Duration:T14 
+T15	Therapeutic_procedure 230 252	conventional treatment
+E8	Therapeutic_procedure:T15 
+T16	Medication 258 268	furosemide
+E9	Medication:T16 
+T17	Medication 270 288	lisinopril hydrate
+E10	Medication:T17 
+T18	Medication 290 300	pimobendan
+E11	Medication:T18 
+T19	Medication 302 320	warfarin potassium
+E12	Medication:T19 
+T20	Medication 322 332	carvedilol
+E13	Medication:T20 
+T21	Medication 334 346	metildigoxin
+E14	Medication:T21 
+T22	Medication 351 375	amiodarone hydrochloride
+E15	Medication:T22 
+R6	SUB_PROCEDURE Arg1:E9 Arg2:E8	
+R7	SUB_PROCEDURE Arg1:E10 Arg2:E8	
+R8	SUB_PROCEDURE Arg1:E11 Arg2:E8	
+R9	SUB_PROCEDURE Arg1:E12 Arg2:E8	
+R10	SUB_PROCEDURE Arg1:E13 Arg2:E8	
+R11	SUB_PROCEDURE Arg1:E14 Arg2:E8	
+R12	SUB_PROCEDURE Arg1:E15 Arg2:E8	
+T23	Height 393 399	161 cm
+T24	Weight 420 425	83 kg
+T25	Diagnostic_procedure 427 441	Blood pressure
+E16	Diagnostic_procedure:T25 
+T26	Lab_value 446 458	110/60 mm Hg
+R13	MODIFY Arg1:T26 Arg2:E16	
+T27	Diagnostic_procedure 464 485	fasting blood glucose
+E17	Diagnostic_procedure:T27 
+T28	Lab_value 490 499	107 mg/dl
+R14	MODIFY Arg1:T28 Arg2:E17	
+T29	Diagnostic_procedure 504 509	HbA1c
+E18	Diagnostic_procedure:T29 
+T30	Lab_value 514 518	6.3%
+R15	MODIFY Arg1:T30 Arg2:E18	
+T31	Diagnostic_procedure 530 535	x-ray
+E19	Diagnostic_procedure:T31 
+T32	Biological_structure 524 529	chest
+R16	MODIFY Arg1:T32 Arg2:E19	
+T33	Sign_symptom 543 555	cardiomegaly
+E20	Sign_symptom:T33 
+T34	Diagnostic_procedure 563 583	cardiothoracic ratio
+E21	Diagnostic_procedure:T34 
+T35	Lab_value 587 591	0.67
+R17	MODIFY Arg1:T35 Arg2:E21	
+T36	Diagnostic_procedure 605 608	ECG
+E22	Diagnostic_procedure:T36 
+T37	Sign_symptom 651 677	hypokinetic left ventricle
+E23	Sign_symptom:T37 
+T38	Detailed_description 642 650	diffused
+R18	MODIFY Arg1:T38 Arg2:E23	
+T39	Diagnostic_procedure 700 724	left ventricle dimension
+E24	Diagnostic_procedure:T39 
+T41	Diagnostic_procedure 726 738	end-diastole
+E25	Diagnostic_procedure:T41 
+T42	Lab_value 740 745	95 mm
+R20	MODIFY Arg1:T42 Arg2:E25	
+T43	Diagnostic_procedure 759 761	EF
+E26	Diagnostic_procedure:T43 
+T44	Lab_value 763 767	0.11
+R21	MODIFY Arg1:T44 Arg2:E26	
+#1	AnnotatorNotes E26	ejection fraction
+T45	Lab_value 751 758	reduced
+R22	MODIFY Arg1:T45 Arg2:E26	
+T46	Diagnostic_procedure 783 792	angiogram
+E27	Diagnostic_procedure:T46 
+T47	Biological_structure 774 782	coronary
+R23	MODIFY Arg1:T47 Arg2:E27	
+T48	Lab_value 797 803	normal
+R24	MODIFY Arg1:T48 Arg2:E27	
+T49	Diagnostic_procedure 818 824	biopsy
+E28	Diagnostic_procedure:T49 
+T50	Biological_structure 807 817	myocardial
+R25	MODIFY Arg1:T50 Arg2:E28	
+T51	Sign_symptom 1002 1021	thickening of hands
+E29	Sign_symptom:T51 
+T52	Nonbiological_location 1046 1070	endocrinology department
+T53	Clinical_event 1030 1038	referred
+E30	Clinical_event:T53 
+T54	Diagnostic_procedure 1076 1094	plasma level of GH
+E31	Diagnostic_procedure:T54 
+T55	Diagnostic_procedure 1113 1118	IGF-1
+E32	Diagnostic_procedure:T55 
+T56	Lab_value 1099 1108	8.2 ng/ml
+R26	MODIFY Arg1:T56 Arg2:E31	
+T57	Lab_value 1123 1132	504 ng/ml
+R27	MODIFY Arg1:T57 Arg2:E32	
+T58	Diagnostic_procedure 1134 1137	MRI
+E33	Diagnostic_procedure:T58 
+T59	Disease_disorder 1153 1165	macroadenoma
+E34	Disease_disorder:T59 
+T60	Biological_structure 1173 1182	pituitary
+R28	MODIFY Arg1:T60 Arg2:E34	
+T61	Therapeutic_procedure 919 945	cardioverter-defibrillator
+E35	Therapeutic_procedure:T61 
+T62	Detailed_description 907 918	implantable
+R29	MODIFY Arg1:T62 Arg2:E35	
+T63	Sign_symptom 883 891	fibrosis
+E36	Sign_symptom:T63 
+T64	Lab_value 839 865	over 50% of cardiomyocytes
+R30	MODIFY Arg1:T64 Arg2:E36	
+T65	Diagnostic_procedure 980 997	facial appearance
+E37	Diagnostic_procedure:T65 
+T66	Lab_value 972 979	typical
+R31	MODIFY Arg1:T66 Arg2:E37	
+T67	Disease_disorder 1210 1220	acromegaly
+E38	Disease_disorder:T67 
+T68	Medication 1242 1252	octreotide
+E39	Medication:T68 
+T69	Duration 1283 1291	8 months
+E40	Duration:T69 
+T70	Detailed_description 1253 1272	long-acting-release
+T71	Detailed_description 1274 1277	LAR
+R32	IDENTICAL Arg1:T71 Arg2:T70	
+R33	MODIFY Arg1:T70 Arg2:E39	
+T72	Therapeutic_procedure 1318 1342	trans-sphenoidal surgery
+E41	Therapeutic_procedure:T72 
+T73	Date 1346 1358	January 2009
+E42	Date:T73 
+T74	Medication 2066 2076	pimobendan
+E43	Medication:T74 
+T75	Diagnostic_procedure 1375 1394	plasma levels of GH
+E44	Diagnostic_procedure:T75 
+T76	Diagnostic_procedure 1399 1404	IGF-1
+E45	Diagnostic_procedure:T76 
+T77	Lab_value 1410 1419	decreased
+R34	MODIFY Arg1:T77 Arg2:E45	
+R35	MODIFY Arg1:T77 Arg2:E44	
+T78	Medication 1425 1435	octreotide
+E46	Medication:T78 
+T79	Diagnostic_procedure 1445 1470	basal plasma levels of GH
+E47	Diagnostic_procedure:T79 
+T80	Lab_value 1483 1500	more than 4 ng/ml
+R36	MODIFY Arg1:T80 Arg2:E47	
+T81	Diagnostic_procedure 1505 1524	plasma IGF-1 levels
+E48	Diagnostic_procedure:T81 
+T82	Lab_value 1530 1561	above the appropriate age range
+R37	MODIFY Arg1:T82 Arg2:E48	
+T83	Coreference 1580 1587	surgery
+E49	Coreference:T83 
+R38	IDENTICAL Arg1:E49 Arg2:E41	
+T84	Diagnostic_procedure 1594 1613	plasma levels of GH
+E50	Diagnostic_procedure:T84 
+T85	Diagnostic_procedure 1618 1623	IGF-1
+E51	Diagnostic_procedure:T85 
+T86	Lab_value 1624 1641	further decreased
+R39	MODIFY Arg1:T86 Arg2:E51	
+R40	MODIFY Arg1:T86 Arg2:E50	
+T87	Diagnostic_procedure 1643 1668	Basal plasma levels of GH
+E52	Diagnostic_procedure:T87 
+T88	Lab_value 1674 1700	mostly less than 0.5 ng/ml
+R41	MODIFY Arg1:T88 Arg2:E52	
+T89	Diagnostic_procedure 1705 1710	IGF-1
+E53	Diagnostic_procedure:T89 
+T90	Lab_value 1723 1743	within normal ranges
+R42	MODIFY Arg1:T90 Arg2:E53	
+T91	Coreference 1778 1781	LAR
+E54	Coreference:T91 
+R43	IDENTICAL Arg1:E54 Arg2:E46	
+T92	Detailed_description 1436 1439	LAR
+R44	MODIFY Arg1:T92 Arg2:E46	
+T93	Diagnostic_procedure 1787 1803	cardiac function
+E55	Diagnostic_procedure:T93 
+T94	Lab_value 1804 1822	improved partially
+R45	MODIFY Arg1:T94 Arg2:E55	
+T95	Diagnostic_procedure 1824 1844	cardiothoracic ratio
+E56	Diagnostic_procedure:T95 
+T96	Lab_value 1845 1849	0.58
+R46	MODIFY Arg1:T96 Arg2:E56	
+T97	Diagnostic_procedure 1851 1853	EF
+E57	Diagnostic_procedure:T97 
+T98	Lab_value 1854 1858	0.20
+R47	MODIFY Arg1:T98 Arg2:E57	
+T99	Date 1862 1876	September 2008
+E58	Date:T99 
+T100	Coreference 1885 1892	surgery
+E59	Coreference:T100 
+R48	IDENTICAL Arg1:E59 Arg2:E49	
+T101	Diagnostic_procedure 1898 1914	cardiac function
+E60	Diagnostic_procedure:T101 
+T102	Lab_value 1915 1935	improved drastically
+R49	MODIFY Arg1:T102 Arg2:E60	
+T103	Diagnostic_procedure 1937 1957	cardiothoracic ratio
+E61	Diagnostic_procedure:T103 
+T104	Lab_value 1958 1962	0.47
+R50	MODIFY Arg1:T104 Arg2:E61	
+T105	Diagnostic_procedure 1964 1966	EF
+E62	Diagnostic_procedure:T105 
+T106	Lab_value 1967 1971	0.55
+R51	MODIFY Arg1:T106 Arg2:E62	
+T107	Date 1975 1985	April 2009
+E63	Date:T107 
+T108	Disease_disorder 2040 2051	arrhythmias
+E64	Disease_disorder:T108 
+T109	Biological_structure 2028 2039	ventricular
+R52	MODIFY Arg1:T109 Arg2:E64	
+T110	Lab_value 2015 2024;2052 2061	Frequency decreased
+A1	TREND E43 DEC
+*	OVERLAP E1 E2 E3 E4
+R53	AFTER Arg1:E4 Arg2:E5	
+*	OVERLAP E5 E6 E7 E8
+R54	BEFORE Arg1:E8 Arg2:E16	
+*	OVERLAP E16 E17 E18 E19 E20 E21 E22 E23 E24 E25 E26 E27 E28 E36
+T40	Lab_value 683 699	markedly dilated
+R19	MODIFY Arg1:T40 Arg2:E24	
+R55	BEFORE Arg1:E36 Arg2:E35	
+*	OVERLAP E35 E37 E29
+R56	BEFORE Arg1:E29 Arg2:E30	
+R57	MODIFY Arg1:T52 Arg2:E30	
+*	OVERLAP E30 E31 E32 E33 E34 E38
+R58	BEFORE Arg1:E38 Arg2:E39	
+*	OVERLAP E39 E40
+R59	BEFORE Arg1:E40 Arg2:E41	
+*	OVERLAP E41 E42
+R60	AFTER Arg1:E42 Arg2:E44	
+*	OVERLAP E44 E45 E46 E47 E48
+R61	BEFORE Arg1:E48 Arg2:E49	
+R62	BEFORE Arg1:E49 Arg2:E50	
+*	OVERLAP E50 E51 E52 E53 E54 E55 E56 E57 E58
+R63	BEFORE Arg1:E58 Arg2:E59	
+*	OVERLAP E59 E60 E61 E62 E63 E64 E43

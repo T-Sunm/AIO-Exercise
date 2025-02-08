@@ -1,0 +1,157 @@
+T1	Age 17 28	57-year-old
+T2	Sex 29 34	woman
+T3	Sign_symptom 69 73	mass
+E1	Sign_symptom:T3 
+T4	Lab_value 51 68	rapidly enlarging
+R1	MODIFY Arg1:T4 Arg2:E1	
+T5	Biological_structure 81 102	left side of her neck
+R2	MODIFY Arg1:T5 Arg2:E1	
+T6	Date 106 110	2010
+E2	Date:T6 
+T7	Therapeutic_procedure 134 147	thyroidectomy
+E3	Therapeutic_procedure:T7 
+T8	Detailed_description 128 133	total
+R3	MODIFY Arg1:T8 Arg2:E3	
+T9	Therapeutic_procedure 165 175	dissection
+E4	Therapeutic_procedure:T9 
+T10	Biological_structure 152 164	central neck
+R4	MODIFY Arg1:T10 Arg2:E4	
+T11	Distance 194 200	3.8-cm
+T12	Disease_disorder 212 226	thyroid cancer
+E5	Disease_disorder:T12 
+T13	Detailed_description 201 211	anaplastic
+R5	MODIFY Arg1:T13 Arg2:E5	
+R6	MODIFY Arg1:T11 Arg2:E5	
+T14	Disease_disorder 300 314	thyroid cancer
+E6	Disease_disorder:T14 
+T15	Detailed_description 278 299	poorly differentiated
+R7	MODIFY Arg1:T15 Arg2:E6	
+T16	Detailed_description 257 274	oncocytic variant
+R8	MODIFY Arg1:T16 Arg2:E6	
+T17	Sign_symptom 485 493	involved
+E7	Sign_symptom:T17 
+T18	Biological_structure 468 479	lymph nodes
+T19	Lab_value 460 467	3 of 12
+R9	MODIFY Arg1:T19 Arg2:T18	
+R10	MODIFY Arg1:T18 Arg2:E7	
+T20	Diagnostic_procedure 423 440	Resection margins
+E8	Diagnostic_procedure:T20 
+T21	Lab_value 446 454	positive
+#1	AnnotatorNotes T21	positive for cancer cells, specifically
+R11	MODIFY Arg1:T21 Arg2:E8	
+T22	Date 498 511	3 weeks after
+E9	Date:T22 
+T23	Diagnostic_procedure 531 544	thyroglobulin
+E10	Diagnostic_procedure:T23 
+T24	Detailed_description 525 530	serum
+R12	MODIFY Arg1:T24 Arg2:E10	
+T25	Lab_value 555 577	17.2 ng per milliliter
+R13	MODIFY Arg1:T25 Arg2:E10	
+T26	Diagnostic_procedure 597 621	thyroglobulin antibodies
+E11	Diagnostic_procedure:T26 
+T27	Lab_value 584 596	undetectable
+R14	MODIFY Arg1:T27 Arg2:E11	
+T28	Therapeutic_procedure 655 672	radiation therapy
+E12	Therapeutic_procedure:T28 
+T29	Medication 684 695	carboplatin
+E13	Medication:T29 
+T30	Medication 700 710	paclitaxel
+E14	Medication:T30 
+T31	Medication 711 723	chemotherapy
+E15	Medication:T31 
+R15	SUB_PROCEDURE Arg1:E14 Arg2:E15	
+R16	SUB_PROCEDURE Arg1:E13 Arg2:E15	
+T32	Diagnostic_procedure 735 748	thyroglobulin
+E16	Diagnostic_procedure:T32 
+T33	Detailed_description 729 734	serum
+R17	MODIFY Arg1:T33 Arg2:E16	
+T34	Date 758 771	4 weeks after
+E17	Date:T34 
+T35	Lab_value 829 851	12.0 ng per milliliter
+R18	MODIFY Arg1:T35 Arg2:E16	
+T36	Diagnostic_procedure 863 868	scans
+E18	Diagnostic_procedure:T36 
+T37	Date 878 892	3 months later
+E19	Date:T37 
+T38	Sign_symptom 927 931	mass
+E20	Sign_symptom:T38 
+T39	Biological_structure 909 926	right-sided hilar
+R19	MODIFY Arg1:T39 Arg2:E20	
+T40	Medication 998 1008	everolimus
+E21	Medication:T40 
+T41	Dosage 1046 1057	10 mg daily
+R20	MODIFY Arg1:T41 Arg2:E21	
+T42	Date 1059 1074	Within 6 months
+E22	Date:T42 
+T43	Diagnostic_procedure 1086 1091	scans
+E23	Diagnostic_procedure:T43 
+T44	Clinical_event 1076 1085	follow-up
+E24	Clinical_event:T44 
+T45	Coreference 1108 1114	lesion
+E25	Coreference:T45 
+R21	IDENTICAL Arg1:E25 Arg2:E20	
+T46	Sign_symptom 1127 1145	diminished in size
+E26	Sign_symptom:T46 
+R22	MODIFY Arg1:E25 Arg2:E26	
+T47	Area 1152 1165	3.0 by 2.6 cm
+T48	Area 1169 1182	1.1 by 0.8 cm
+R23	MODIFY Arg1:T47 Arg2:E26	
+R24	MODIFY Arg1:T48 Arg2:E26	
+T49	Duration 1200 1209	18 months
+E27	Duration:T49 
+T50	Sign_symptom 1225 1233	response
+E28	Sign_symptom:T50 
+T51	Medication 1237 1247	everolimus
+E29	Medication:T51 
+T52	Diagnostic_procedure 1249 1254	scans
+E30	Diagnostic_procedure:T52 
+T53	Disease_disorder 1264 1283	progressive disease
+E31	Disease_disorder:T53 
+T54	Diagnostic_procedure 1318 1333	mediastinoscopy
+E32	Diagnostic_procedure:T54 
+T55	Therapeutic_procedure 1339 1346	removal
+E33	Therapeutic_procedure:T55 
+T56	Sign_symptom 1353 1361	enlarged
+E34	Sign_symptom:T56 
+T57	Biological_structure 1362 1372	lymph node
+R25	MODIFY Arg1:T57 Arg2:E34	
+R26	MODIFY Arg1:T57 Arg2:E33	
+T58	Disease_disorder 1412 1426	thyroid cancer
+E35	Disease_disorder:T58 
+T59	Detailed_description 1401 1411	anaplastic
+T60	Detailed_description 1390 1400	metastatic
+R27	MODIFY Arg1:T60 Arg2:E35	
+R28	MODIFY Arg1:T59 Arg2:E35	
+T61	Diagnostic_procedure 1489 1499	sequencing
+E36	Diagnostic_procedure:T61 
+T62	Detailed_description 1477 1488	Whole-exome
+R29	MODIFY Arg1:T62 Arg2:E36	
+T63	Diagnostic_procedure 1517 1523	biopsy
+E37	Diagnostic_procedure:T63 
+T64	Detailed_description 1539 1572	pretreatment and resistant tumors
+R30	MODIFY Arg1:T64 Arg2:E37	
+T65	Detailed_description 1589 1601	blood sample
+R31	MODIFY Arg1:T65 Arg2:E37	
+*	OVERLAP E1 E2
+R32	BEFORE Arg1:E2 Arg2:E3	
+*	OVERLAP E3 E4 E5 E6
+R33	BEFORE Arg1:E6 Arg2:E8	
+*	OVERLAP E8 E7
+R34	BEFORE Arg1:E7 Arg2:E9	
+*	OVERLAP E9 E10 E11
+R35	BEFORE Arg1:E11 Arg2:E12	
+*	OVERLAP E12 E15
+R36	BEFORE Arg1:E15 Arg2:E16	
+*	OVERLAP E16 E17
+R37	BEFORE Arg1:E17 Arg2:E18	
+*	OVERLAP E18 E19 E20 E38 E21
+T66	Clinical_event 980 994	clinical trial
+E38	Clinical_event:T66 
+T67	Detailed_description 972 979	phase 2
+R38	MODIFY Arg1:T67 Arg2:E38	
+R39	BEFORE Arg1:E21 Arg2:E22	
+*	OVERLAP E22 E24 E23 E25 E26
+R40	BEFORE Arg1:E26 Arg2:E27	
+*	OVERLAP E27 E28 E29
+R41	BEFORE Arg1:E29 Arg2:E30	
+*	OVERLAP E30 E31 E32 E33 E34 E35 E36 E37

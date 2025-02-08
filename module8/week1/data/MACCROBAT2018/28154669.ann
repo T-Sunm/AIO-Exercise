@@ -1,0 +1,117 @@
+T1	Age 3 14	82-year-old
+T2	Sex 15 19	male
+T3	Clinical_event 24 32	admitted
+E1	Clinical_event:T3 
+T4	Nonbiological_location 40 73	outside hospital’s emergency room
+T5	Sign_symptom 91 95	pain
+E2	Sign_symptom:T5 
+T6	Sign_symptom 100 105	faint
+E3	Sign_symptom:T6 
+T7	Biological_structure 81 90	abdominal
+R1	MODIFY Arg1:T7 Arg2:E2	
+T8	History 136 158	auricular fibrillation
+T9	Sign_symptom 136 158	auricular fibrillation
+E4	Sign_symptom:T9 
+T10	Medication 179 204	dicumarinic anticoagulant
+E5	Medication:T10 
+T11	Sign_symptom 241 245	pain
+E6	Sign_symptom:T11 
+T12	Biological_structure 231 240	abdominal
+R2	MODIFY Arg1:T12 Arg2:E6	
+T13	Disease_disorder 281 302	mesenchimal haematoma
+E7	Disease_disorder:T13 
+T14	Detailed_description 269 280	spontaneous
+R3	MODIFY Arg1:T14 Arg2:E7	
+T15	Therapeutic_procedure 307 330	treated non operatively
+E8	Therapeutic_procedure:T15 
+T16	Sign_symptom 354 360	trauma
+E9	Sign_symptom:T16 
+A1	POLARITY E9 NEG
+T17	Sign_symptom 373 384	hematemesis
+E10	Sign_symptom:T17 
+A2	POLARITY E10 NEG
+T18	Sign_symptom 388 394	melena
+E11	Sign_symptom:T18 
+A3	POLARITY E11 NEG
+T19	Diagnostic_procedure 399 419	physical examination
+E12	Diagnostic_procedure:T19 
+T20	Lab_value 436 442	stable
+R4	MODIFY Arg1:T20 Arg2:E12	
+T21	Sign_symptom 469 473	pain
+E13	Sign_symptom:T21 
+T22	Severity 461 468	intense
+R5	MODIFY Arg1:T22 Arg2:E13	
+T23	Biological_structure 481 500	right lower abdomen
+R6	MODIFY Arg1:T23 Arg2:E13	
+T24	Diagnostic_procedure 539 556	haemoglobin level
+E14	Diagnostic_procedure:T24 
+T25	Lab_value 560 567	10 g/dl
+R7	MODIFY Arg1:T25 Arg2:E14	
+T26	Diagnostic_procedure 518 529	Blood tests
+E15	Diagnostic_procedure:T26 
+R8	SUB_PROCEDURE Arg1:E14 Arg2:E15	
+T27	Diagnostic_procedure 569 580	Coagulation
+E16	Diagnostic_procedure:T27 
+T28	Lab_value 585 592	altered
+R9	MODIFY Arg1:T28 Arg2:E16	
+T29	Diagnostic_procedure 606 613	CT scan
+E17	Diagnostic_procedure:T29 
+T30	Sign_symptom 629 643	hemoperitoneum
+E18	Sign_symptom:T30 
+T31	Disease_disorder 677 696	mesenteric hematoma
+E19	Disease_disorder:T31 
+T32	Severity 621 628	massive
+R10	MODIFY Arg1:T32 Arg2:E18	
+T33	Disease_disorder 745 764	mesenteric hematoma
+E20	Disease_disorder:T33 
+T34	Detailed_description 735 744	expansive
+R11	MODIFY Arg1:T34 Arg2:E20	
+T35	Sign_symptom 778 786	bleeding
+E21	Sign_symptom:T35 
+T36	Detailed_description 770 777	ongoing
+R12	MODIFY Arg1:T36 Arg2:E21	
+T37	Therapeutic_procedure 789 799	laparotomy
+E22	Therapeutic_procedure:T37 
+T38	Volume 841 849	3 liters
+T39	Sign_symptom 853 878	fresh and old blood clots
+E23	Sign_symptom:T39 
+R13	MODIFY Arg1:T38 Arg2:E23	
+T40	Distance 894 903	90cm from
+T41	Biological_structure 908 923	ileocecal valve
+R14	MODIFY Arg1:T40 Arg2:T41	
+T42	Disease_disorder 953 972	meckel diverticulum
+E24	Disease_disorder:T42 
+T43	Detailed_description 926 937	torsionated
+T44	Detailed_description 942 952	perforated
+R15	MODIFY Arg1:T44 Arg2:E24	
+R16	MODIFY Arg1:T43 Arg2:E24	
+T45	Sign_symptom 996 1004	bleeding
+E25	Sign_symptom:T45 
+T46	Biological_structure 978 995	intradiverticular
+R17	MODIFY Arg1:T46 Arg2:E25	
+T47	Therapeutic_procedure 1045 1054	resection
+E26	Therapeutic_procedure:T47 
+T48	Biological_structure 1032 1044	diverticular
+R18	MODIFY Arg1:T48 Arg2:E26	
+T49	Therapeutic_procedure 1074 1087	postoperatory
+E27	Therapeutic_procedure:T49 
+T50	Lab_value 1092 1102	uneventful
+R19	MODIFY Arg1:T50 Arg2:E27	
+T51	Clinical_event 1123 1138	discharged home
+E28	Clinical_event:T51 
+T52	Date 1146 1167	9th postoperative day
+E29	Date:T52 
+R20	MODIFY Arg1:E29 Arg2:E28	
+R21	MODIFY Arg1:T4 Arg2:E1	
+*	OVERLAP E1 E2 E3
+R22	AFTER Arg1:E3 Arg2:E4	
+*	OVERLAP E4 E5
+R23	BEFORE Arg1:E5 Arg2:E6	
+*	OVERLAP E6 E7 E8
+R24	BEFORE Arg1:E8 Arg2:E9	
+*	OVERLAP E9 E10 E11 E12 E13 E15 E16 E17 E18 E19 E20 E21
+R25	BEFORE Arg1:E21 Arg2:E22	
+*	OVERLAP E22 E23 E24 E25 E26
+R26	BEFORE Arg1:E26 Arg2:E27	
+R27	BEFORE Arg1:E27 Arg2:E28	
+T53	History 179 204	dicumarinic anticoagulant

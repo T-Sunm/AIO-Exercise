@@ -1,0 +1,341 @@
+T1	Age 4 15	31-year-old
+T2	Personal_background 16 21	white
+T3	History 22 51	primipara with twin pregnancy
+T4	Clinical_event 56 64	admitted
+E1	Clinical_event:T4 
+T5	Date 84 106	38th week of gestation
+E2	Date:T5 
+T6	Sign_symptom 112 135	elevated blood pressure
+E3	Sign_symptom:T6 
+T7	Lab_value 137 149	150/100 mmHg
+T8	Medication 168 194	antihypertensive treatment
+E4	Medication:T8 
+T9	Diagnostic_procedure 195 209	blood pressure
+E5	Diagnostic_procedure:T9 
+T10	Lab_value 214 220	120/80
+R1	MODIFY Arg1:T10 Arg2:E5	
+R2	MODIFY Arg1:T7 Arg2:E3	
+T11	Diagnostic_procedure 226 273	laboratory variables, including plasma proteins
+E6	Diagnostic_procedure:T11 
+T12	Lab_value 280 323	within their respective reference intervals
+R4	MODIFY Arg1:T12 Arg2:E6	
+*	OVERLAP E1 E2 E3
+*	OVERLAP E4 E5 E6
+T13	Time 325 366	Few hours after admission to the hospital
+E7	Time:T13 
+T14	Sign_symptom 371 391	contractions started
+E8	Sign_symptom:T14 
+T15	Therapeutic_procedure 401 418	caesarean section
+E9	Therapeutic_procedure:T15 
+T16	Sign_symptom 444 483	vertex-transverse presentation of twins
+E10	Sign_symptom:T16 
+*	OVERLAP E8 E9 E12 E7 E10 E11
+T18	Sign_symptom 565 578	inconspicuous
+E12	Sign_symptom:T18 
+T19	Time 580 601	Four hours postpartum
+E13	Time:T19 
+T20	Sign_symptom 625 640	epigastric pain
+E14	Sign_symptom:T20 
+T21	Detailed_description 618 624	sudden
+R9	MODIFY Arg1:T21 Arg2:E14	
+T22	Subject 485 509	Liveborn female and male
+T17	Therapeutic_procedure 515 524	delivered
+E11	Therapeutic_procedure:T17 
+R6	MODIFY Arg1:T22 Arg2:E11	
+R10	SUB_PROCEDURE Arg1:E11 Arg2:E9	
+T23	Diagnostic_procedure 646 660	blood pressure
+E15	Diagnostic_procedure:T23 
+T24	Lab_value 669 676	190/130
+R12	MODIFY Arg1:T24 Arg2:E15	
+T25	Sign_symptom 705 715	haemolysis
+E16	Sign_symptom:T25 
+T26	Sign_symptom 717 733	thrombocytopenia
+E17	Sign_symptom:T26 
+T28	Diagnostic_procedure 678 697	Laboratory findings
+E19	Diagnostic_procedure:T28 
+T29	Medication 816 834	magnesium sulphate
+E20	Medication:T29 
+T30	Administration 804 815	Intravenous
+R14	MODIFY Arg1:T30 Arg2:E20	
+T31	Diagnostic_procedure 853 873	Abdominal ultrasound
+E21	Diagnostic_procedure:T31 
+T32	Biological_structure 893 907	uterine cavity
+T33	Detailed_description 887 892	empty
+T34	Sign_symptom 916 932	placenta residue
+E22	Sign_symptom:T34 
+A1	POLARITY E22 NEG
+R15	MODIFY Arg1:T33 Arg2:T32	
+*	OVERLAP E14 E15 E19 E16 E21 E17 E18 E40 E20 E22 E13
+R16	MODIFY Arg1:E22 Arg2:T32	
+T35	Time 934 955	Five hours postpartum
+E23	Time:T35 
+T36	Clinical_event 973 984	transferred
+E24	Clinical_event:T36 
+T37	Nonbiological_location 992 1011	intensive care unit
+T38	Sign_symptom 1023 1040	poor urine output
+E25	Sign_symptom:T38 
+T39	Sign_symptom 1042 1052	drowsiness
+E26	Sign_symptom:T39 
+T40	Disease_disorder 1071 1074	DIC
+E27	Disease_disorder:T40 
+T41	Detailed_description 1058 1067	suspicion
+R17	MODIFY Arg1:T41 Arg2:E27	
+R20	MODIFY Arg1:T37 Arg2:E24	
+*	OVERLAP E24 E25 E26 E27 E28 E29 E30 E34 E36 E39 E41 E42 E43 E44 E45 E23
+T42	Diagnostic_procedure 1079 1090	examination
+E28	Diagnostic_procedure:T42 
+T43	Sign_symptom 1099 1105	sleepy
+E29	Sign_symptom:T43 
+T44	Sign_symptom 1110 1121	disoriented
+E30	Sign_symptom:T44 
+T45	Coreference 1142 1152	haemolysis
+E31	Coreference:T45 
+R21	IDENTICAL Arg1:E31 Arg2:E16	
+T46	Coreference 1154 1170	thrombocytopenia
+E32	Coreference:T46 
+R22	IDENTICAL Arg1:E32 Arg2:E17	
+T47	Coreference 1176 1198	elevated liver enzymes
+E33	Coreference:T47 
+T48	Disease_disorder 1211 1236	postpartum HELLP syndrome
+E34	Disease_disorder:T48 
+T49	Coreference 1253 1256	DIC
+E35	Coreference:T49 
+R24	IDENTICAL Arg1:E35 Arg2:E27	
+T50	Therapeutic_procedure 1274 1284	rehydrated
+E36	Therapeutic_procedure:T50 
+T53	Detailed_description 1326 1332	frozen
+T54	Detailed_description 1320 1325	fresh
+T52	Biological_structure 1341 1349	red cell
+T55	Therapeutic_procedure 1350 1361	transfusion
+E38	Therapeutic_procedure:T55 
+R27	MODIFY Arg1:T52 Arg2:E38	
+T56	Detailed_description 1363 1368	fresh
+T58	Therapeutic_procedure 1290 1299	treatment
+E39	Therapeutic_procedure:T58 
+T60	Coreference 1396 1412	antithrombin III
+E37	Coreference:T60 
+T27	Diagnostic_procedure 754 770	serum creatinine
+E18	Diagnostic_procedure:T27 
+T61	Diagnostic_procedure 775 792	aminotransferases
+E40	Diagnostic_procedure:T61 
+R23	SUB_PROCEDURE Arg1:E18 Arg2:E19	
+R34	SUB_PROCEDURE Arg1:E40 Arg2:E19	
+T62	Lab_value 742 750	increase
+R35	MODIFY Arg1:T62 Arg2:E18	
+R36	MODIFY Arg1:T62 Arg2:E40	
+R37	IDENTICAL Arg1:E33 Arg2:E40	
+T63	Diagnostic_procedure 1420 1430	serum urea
+E41	Diagnostic_procedure:T63 
+T64	Diagnostic_procedure 1432 1442	creatinine
+E42	Diagnostic_procedure:T64 
+T65	Lab_value 1415 1419	High
+R38	MODIFY Arg1:T65 Arg2:E41	
+R39	MODIFY Arg1:T65 Arg2:E42	
+T66	Detailed_description 1448 1458	persistent
+T67	Sign_symptom 1459 1465	anuria
+E43	Sign_symptom:T67 
+T68	Disease_disorder 1493 1506	renal failure
+E44	Disease_disorder:T68 
+T69	Detailed_description 1487 1492	acute
+R40	MODIFY Arg1:T66 Arg2:E43	
+R41	MODIFY Arg1:T69 Arg2:E44	
+T70	Dosage 1510 1519	high dose
+T71	Medication 1523 1533	furosemide
+E45	Medication:T71 
+R42	MODIFY Arg1:T70 Arg2:E45	
+T72	Therapeutic_procedure 1544 1561	increase diuresis
+E46	Therapeutic_procedure:T72 
+A2	POLARITY E46 NEG
+R43	CAUSE Arg1:E45 Arg2:E46	
+T73	Time 1563 1587	Sixteen hours postpartum
+E47	Time:T73 
+T74	Diagnostic_procedure 1592 1606	blood pressure
+E48	Diagnostic_procedure:T74 
+T75	Lab_value 1611 1616	60/40
+T76	Diagnostic_procedure 1621 1638	oxygen saturation
+E49	Diagnostic_procedure:T76 
+T77	Lab_value 1639 1642	70%
+R44	BEFORE Arg1:E46 Arg2:E47	
+*	OVERLAP E47 E48 E49
+R45	MODIFY Arg1:T75 Arg2:E48	
+R46	MODIFY Arg1:T77 Arg2:E49	
+T78	Time 1644 1661	Few minutes later
+E50	Time:T78 
+R47	BEFORE Arg1:E49 Arg2:E50	
+T79	Disease_disorder 1684 1698	cardiac arrest
+E51	Disease_disorder:T79 
+T80	Detailed_description 1678 1683	acute
+R48	MODIFY Arg1:T80 Arg2:E51	
+T81	Therapeutic_procedure 1704 1717	resuscitation
+E52	Therapeutic_procedure:T81 
+*	OVERLAP E50 E51 E52 E54 E55 E56 E57 E59
+R5	BEFORE Arg1:E6 Arg2:E7	
+R7	BEFORE Arg1:E12 Arg2:E13	
+R11	BEFORE Arg1:E22 Arg2:E23	
+T82	Coreference 1727 1740	Resuscitation
+E53	Coreference:T82 
+R13	IDENTICAL Arg1:E53 Arg2:E52	
+T83	Sign_symptom 1761 1780	normal heart action
+E54	Sign_symptom:T83 
+T84	Detailed_description 1745 1755	successful
+R18	MODIFY Arg1:T84 Arg2:E53	
+T85	Diagnostic_procedure 1801 1815	blood pressure
+E55	Diagnostic_procedure:T85 
+T86	Lab_value 1824 1831	150/110
+R19	MODIFY Arg1:T86 Arg2:E55	
+T87	Diagnostic_procedure 1837 1854	oxygen saturation
+E56	Diagnostic_procedure:T87 
+T88	Lab_value 1859 1862	90%
+T89	Diagnostic_procedure 1864 1883	Laboratory findings
+E57	Diagnostic_procedure:T89 
+T90	Lab_value 1889 1901	deteriorated
+T91	Coreference 1928 1941	renal failure
+E58	Coreference:T91 
+T92	Detailed_description 1922 1927	acute
+R49	MODIFY Arg1:T92 Arg2:E58	
+T93	Therapeutic_procedure 1976 1984	dialysis
+E59	Therapeutic_procedure:T93 
+T94	Detailed_description 1969 1975	urgent
+R50	MODIFY Arg1:T94 Arg2:E59	
+R51	MODIFY Arg1:T90 Arg2:E57	
+R52	MODIFY Arg1:T88 Arg2:E56	
+T95	Time 1986 2004	Following dialysis
+E60	Time:T95 
+T96	Sign_symptom 2022 2028	stable
+E61	Sign_symptom:T96 
+T97	Diagnostic_procedure 2030 2047	oxygen saturation
+E62	Diagnostic_procedure:T97 
+T98	Lab_value 2048 2051	98%
+R53	MODIFY Arg1:T98 Arg2:E62	
+R54	BEFORE Arg1:E59 Arg2:E60	
+*	OVERLAP E60 E61 E62
+T99	Time 2053 2076	Twenty hours postpartum
+E63	Time:T99 
+T100	Disease_disorder 2101 2123	cardiopulmonary arrest
+E64	Disease_disorder:T100 
+R55	BEFORE Arg1:E62 Arg2:E63	
+*	OVERLAP E63 E64 E65 E66
+T101	Therapeutic_procedure 2133 2155	resuscitation attempts
+E65	Therapeutic_procedure:T101 
+T102	Outcome 2172 2178	lethal
+E66	Outcome:T102 
+T103	Diagnostic_procedure 2278 2298	medico-legal autopsy
+E67	Diagnostic_procedure:T103 
+T104	Clinical_event 2303 2310	ordered
+E68	Clinical_event:T104 
+T105	Coreference 2201 2206	death
+E69	Coreference:T105 
+R56	IDENTICAL Arg1:E69 Arg2:E66	
+T106	Nonbiological_location 2223 2231	hospital
+R57	MODIFY Arg1:T106 Arg2:E69	
+T107	Time 2234 2274	short time after a surgical intervention
+E70	Time:T107 
+R58	BEFORE Arg1:E66 Arg2:E70	
+*	OVERLAP E70 E67 E68
+T108	Coreference 2315 2322	autopsy
+E71	Coreference:T108 
+R59	IDENTICAL Arg1:E71 Arg2:E67	
+T109	Sign_symptom 2332 2338	oedema
+E72	Sign_symptom:T109 
+T110	Biological_structure 2346 2351	brain
+T111	Biological_structure 2356 2361	lungs
+T112	Sign_symptom 2373 2383	dilatation
+E73	Sign_symptom:T112 
+T113	Biological_structure 2388 2412	ight and left ventricles
+R60	MODIFY Arg1:T110 Arg2:E72	
+R61	MODIFY Arg1:T111 Arg2:E72	
+R62	MODIFY Arg1:T113 Arg2:E73	
+T114	Sign_symptom 2414 2425	Hydrothorax
+E74	Sign_symptom:T114 
+T115	Sign_symptom 2436 2451	hydroperitoneum
+E75	Sign_symptom:T115 
+T116	Sign_symptom 2467 2483	hydropericardium
+E76	Sign_symptom:T116 
+T117	Lab_value 2427 2433	900 mL
+T118	Lab_value 2453 2460	2500 mL
+T119	Lab_value 2485 2491	200 mL
+T120	Sign_symptom 2573 2611	Petechial and suffusional haemorrhages
+E77	Sign_symptom:T120 
+T121	Biological_structure 2636 2642	pleura
+T122	Biological_structure 2644 2655	endocardium
+T123	Biological_structure 2664 2671	mucosae
+T124	Biological_structure 2679 2691	renal pelvis
+R63	MODIFY Arg1:T124 Arg2:T123	
+T125	Biological_structure 2697 2707	peritoneum
+T126	Biological_structure 2715 2736	small and large bowel
+R64	MODIFY Arg1:T126 Arg2:T125	
+R65	MODIFY Arg1:T121 Arg2:E77	
+R66	MODIFY Arg1:T122 Arg2:E77	
+R67	MODIFY Arg1:T123 Arg2:E77	
+R68	MODIFY Arg1:T125 Arg2:E77	
+T127	Diagnostic_procedure 2738 2747	Histology
+E78	Diagnostic_procedure:T127 
+T128	Detailed_description 2757 2767	periportal
+T129	Biological_structure 2768 2782	hepatocellular
+T130	Sign_symptom 2783 2791	necrosis
+E79	Sign_symptom:T130 
+T131	Detailed_description 2793 2802	bloodless
+T132	Biological_structure 2803 2812	glomeruli
+R69	MODIFY Arg1:T129 Arg2:E79	
+R70	MODIFY Arg1:T128 Arg2:E79	
+T133	Detailed_description 2818 2825	swollen
+T134	Detailed_description 2830 2840	vacuolated
+T135	Biological_structure 2841 2861	intracapillary cells
+R71	MODIFY Arg1:T133 Arg2:T135	
+R72	MODIFY Arg1:T134 Arg2:T135	
+R73	MODIFY Arg1:T131 Arg2:T132	
+T136	Sign_symptom 2793 2861	bloodless glomeruli with swollen and vacuolated intracapillary cells
+E80	Sign_symptom:T136 
+T137	Sign_symptom 2884 2896	haemorrhages
+E81	Sign_symptom:T137 
+T138	Detailed_description 2874 2883	confluent
+T139	Biological_structure 2900 2907	kidneys
+T140	Biological_structure 2909 2914	liver
+T141	Biological_structure 2920 2926	spleen
+R74	MODIFY Arg1:T138 Arg2:E81	
+R75	MODIFY Arg1:T139 Arg2:E81	
+R76	MODIFY Arg1:T140 Arg2:E81	
+R77	MODIFY Arg1:T141 Arg2:E81	
+T142	Outcome 2928 2933	Death
+E82	Outcome:T142 
+R78	IDENTICAL Arg1:E82 Arg2:E69	
+T143	Detailed_description 2952 2960	multiple
+T144	Disease_disorder 2961 2974	organ failure
+E83	Disease_disorder:T144 
+T145	Disease_disorder 2982 2985	DIC
+E84	Disease_disorder:T145 
+T146	Disease_disorder 3006 3020	HELLP syndrome
+E85	Disease_disorder:T146 
+R79	CAUSE Arg1:E85 Arg2:E84	
+R80	CAUSE Arg1:E84 Arg2:E83	
+R81	MODIFY Arg1:T143 Arg2:E83	
+R82	CAUSE Arg1:E83 Arg2:E82	
+T147	Therapeutic_procedure 2537 2554	caesarean section
+E86	Therapeutic_procedure:T147 
+T148	Sign_symptom 2559 2571	unremarkable
+E87	Sign_symptom:T148 
+A3	POLARITY E87 NEG
+R83	BEFORE Arg1:E68 Arg2:E71	
+*	OVERLAP E71 E72 E73 E74 E75 E76 E86 E77 E78 E79 E80 E81
+R84	MODIFY Arg1:T117 Arg2:E74	
+R85	MODIFY Arg1:T118 Arg2:E75	
+R86	MODIFY Arg1:T119 Arg2:E76	
+R87	MODIFY Arg1:E87 Arg2:E86	
+R88	BEFORE Arg1:E81 Arg2:E82	
+R3	BEFORE Arg1:E3 Arg2:E4	
+T149	Detailed_description 530 550	postoperative course
+R8	MODIFY Arg1:T149 Arg2:E12	
+T51	Therapeutic_procedure 1333 1339	plasma
+E88	Therapeutic_procedure:T51 
+R28	MODIFY Arg1:T53 Arg2:E88	
+R29	MODIFY Arg1:T54 Arg2:E88	
+R32	SUB_PROCEDURE Arg1:E38 Arg2:E39	
+R33	SUB_PROCEDURE Arg1:E88 Arg2:E39	
+T57	Therapeutic_procedure 1369 1378	platelets
+E89	Therapeutic_procedure:T57 
+R26	MODIFY Arg1:T56 Arg2:E89	
+R30	SUB_PROCEDURE Arg1:E89 Arg2:E39	
+T59	Therapeutic_procedure 1384 1394	kybernin P
+E90	Therapeutic_procedure:T59 
+R25	IDENTICAL Arg1:E37 Arg2:E90	
+R31	SUB_PROCEDURE Arg1:E90 Arg2:E39	

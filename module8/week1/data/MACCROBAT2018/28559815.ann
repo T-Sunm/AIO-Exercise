@@ -1,0 +1,192 @@
+T1	Age 2 13	34-year-old
+T2	Sex 14 19	woman
+T3	History 21 38	1 week postpartum
+T4	Nonbiological_location 57 75	dermatology clinic
+T5	Clinical_event 40 49	presented
+E1	Clinical_event:T5 
+T6	Sign_symptom 115 119	rash
+E2	Sign_symptom:T6 
+T7	Detailed_description 103 114	generalized
+T8	Detailed_description 94 102	pruritic
+T9	Severity 84 93	intensely
+R1	MODIFY Arg1:T9 Arg2:T8	
+R2	MODIFY Arg1:T7 Arg2:E2	
+R3	MODIFY Arg1:T8 Arg2:E2	
+T10	Clinical_event 136 157	delivery of her child
+E3	Clinical_event:T10 
+T11	Sign_symptom 190 194	rash
+E4	Sign_symptom:T11 
+T12	Detailed_description 184 189	itchy
+R4	MODIFY Arg1:T12 Arg2:E4	
+T13	Biological_structure 202 209	abdomen
+R5	MODIFY Arg1:T13 Arg2:E4	
+T14	Date 121 135	Two days after
+E5	Date:T14 
+T15	Clinical_event 214 223	discharge
+E6	Clinical_event:T15 
+T16	Weight 574 579	72 kg
+T17	Detailed_description 551 563	prepregnancy
+R6	MODIFY Arg1:T17 Arg2:T16	
+T18	Sign_symptom 368 376	eruption
+E7	Sign_symptom:T18 
+T19	Detailed_description 381 401	progressively spread
+R7	MODIFY Arg1:T19 Arg2:E7	
+T20	Biological_structure 409 417	buttocks
+T21	Biological_structure 422 426	legs
+R8	MODIFY Arg1:T20 Arg2:E7	
+R9	MODIFY Arg1:T21 Arg2:E7	
+T22	Sign_symptom 435 442	itching
+E8	Sign_symptom:T22 
+A1	TREND E8 INC
+T23	Sign_symptom 477 492	prenatal course
+E9	Sign_symptom:T23 
+T24	Lab_value 497 507	uneventful
+R10	MODIFY Arg1:T24 Arg2:E9	
+T25	Sign_symptom 513 519	gained
+E10	Sign_symptom:T25 
+T26	Lab_value 520 525	13 kg
+R11	MODIFY Arg1:T26 Arg2:E10	
+T27	Detailed_description 526 542	during pregnancy
+R12	MODIFY Arg1:T27 Arg2:E10	
+T28	Subject 596 603	neonate
+T29	Detailed_description 583 590	healthy
+T30	Detailed_description 591 595	male
+R13	MODIFY Arg1:T30 Arg2:T28	
+R14	MODIFY Arg1:T29 Arg2:T28	
+T31	Therapeutic_procedure 621 638	caesarean section
+E11	Therapeutic_procedure:T31 
+T32	Lab_value 639 661	at 38 weeks' gestation
+R15	MODIFY Arg1:T32 Arg2:E11	
+T33	Sign_symptom 670 682	complication
+E12	Sign_symptom:T33 
+A2	POLARITY E12 NEG
+T34	History 698 730	medical history was unremarkable
+T35	Medication 765 776	medications
+E13	Medication:T35 
+A3	POLARITY E13 NEG
+T36	Sign_symptom 804 818	drug allergies
+E14	Sign_symptom:T36 
+A4	POLARITY E14 NEG
+T37	Diagnostic_procedure 823 843	physical examination
+E15	Diagnostic_procedure:T37 
+T38	Sign_symptom 864 865	b
+E16	Sign_symptom:T38 
+T39	Diagnostic_procedure 878 892	blood pressure
+E17	Diagnostic_procedure:T39 
+T40	Lab_value 897 903	normal
+R16	MODIFY Arg1:T40 Arg2:E17	
+T41	Diagnostic_procedure 905 928	Examination of the skin
+E18	Diagnostic_procedure:T41 
+T42	Sign_symptom 951 958	papules
+E19	Sign_symptom:T42 
+T43	Detailed_description 938 950	erythematous
+R17	MODIFY Arg1:T43 Arg2:E19	
+T44	Sign_symptom 974 981	plaques
+E20	Sign_symptom:T44 
+T45	Detailed_description 963 973	urticarial
+R18	MODIFY Arg1:T45 Arg2:E20	
+T46	Biological_structure 1018 1039	periumbilical sparing
+T47	Biological_structure 996 1012	abdominal striae
+#1	AnnotatorNotes T47	stretch marks, specifically
+R19	MODIFY Arg1:T47 Arg2:E20	
+R20	MODIFY Arg1:T46 Arg2:E20	
+T48	Sign_symptom 1049 1056	lesions
+E21	Sign_symptom:T48 
+T49	Biological_structure 1075 1079	legs
+T50	Biological_structure 1084 1092	buttocks
+R21	MODIFY Arg1:T49 Arg2:E21	
+R22	MODIFY Arg1:T50 Arg2:E21	
+T51	Biological_structure 1107 1111	face
+T52	Biological_structure 1113 1118	palms
+T53	Biological_structure 1124 1129	soles
+T55	Sign_symptom 1150 1158	vesicles
+E22	Sign_symptom:T55 
+T56	Sign_symptom 1162 1170	pustules
+E23	Sign_symptom:T56 
+A5	POLARITY E23 NEG
+A6	POLARITY E22 NEG
+T57	Disease_disorder 1276 1281	PUPPP
+E24	Disease_disorder:T57 
+#2	AnnotatorNotes E24	Pruritic Urticarial Papules and Plaques of Pregnancy
+T58	Therapeutic_procedure 1449 1462	AWB injection
+E25	Therapeutic_procedure:T58 
+#3	AnnotatorNotes E25	Autologous whole blood
+T59	Medication 1390 1401	medications
+E26	Medication:T59 
+A7	POLARITY E26 MAYBE_NEG
+T60	Volume 1518 1523	10 mL
+T61	Volume 1591 1595	5 mL
+T62	Date 1796 1809	after 12 days
+E27	Date:T62 
+T63	Sign_symptom 1879 1896	hyperpigmentation
+E28	Sign_symptom:T63 
+T64	Detailed_description 1862 1878	postinflammatory
+R26	MODIFY Arg1:T64 Arg2:E28	
+T65	Sign_symptom 1932 1941	infection
+E29	Sign_symptom:T65 
+A8	POLARITY E29 NEG
+T66	Sign_symptom 1943 1950	abscess
+E30	Sign_symptom:T66 
+A9	POLARITY E30 NEG
+T67	Sign_symptom 1965 1973	hematoma
+E31	Sign_symptom:T67 
+A10	POLARITY E31 NEG
+T68	Biological_structure 1991 2009	the injection site
+R27	MODIFY Arg1:T68 Arg2:E31	
+R28	MODIFY Arg1:T68 Arg2:E30	
+R29	MODIFY Arg1:T68 Arg2:E29	
+T69	Sign_symptom 1826 1834	symptoms
+E32	Sign_symptom:T69 
+T70	Lab_value 1839 1847	improved
+R30	MODIFY Arg1:T70 Arg2:E32	
+T71	Date 1638 1654	Seven days later
+E33	Date:T71 
+T72	Sign_symptom 1702 1710	symptoms
+E34	Sign_symptom:T72 
+T73	Lab_value 1686 1698	improvements
+R31	MODIFY Arg1:T73 Arg2:E34	
+T74	Therapeutic_procedure 1759 1772	AWB injection
+E35	Therapeutic_procedure:T74 
+T75	Lab_value 1741 1755	1 more session
+R32	MODIFY Arg1:T75 Arg2:E35	
+T76	Biological_structure 1502 1514	Venous blood
+R33	MODIFY Arg1:T60 Arg2:T76	
+T77	Therapeutic_procedure 1528 1533	drawn
+E36	Therapeutic_procedure:T77 
+R34	MODIFY Arg1:T76 Arg2:E36	
+T78	Biological_structure 1603 1608	blood
+T79	Biological_structure 1612 1636	each side of her buttock
+R35	MODIFY Arg1:T61 Arg2:T78	
+T80	Therapeutic_procedure 1578 1587	injection
+E37	Therapeutic_procedure:T80 
+T81	Administration 1564 1577	intramuscular
+R36	MODIFY Arg1:T81 Arg2:E37	
+R37	MODIFY Arg1:T78 Arg2:E37	
+R38	MODIFY Arg1:T79 Arg2:E37	
+R39	MODIFY Arg1:T4 Arg2:E1	
+*	OVERLAP E1 E2
+R40	MODIFY Arg1:E5 Arg2:E3	
+R41	AFTER Arg1:E2 Arg2:E5	
+R42	AFTER Arg1:E3 Arg2:E4	
+*	OVERLAP E5 E3
+R43	BEFORE Arg1:E4 Arg2:E6	
+*	OVERLAP E6 E7 E8
+R44	AFTER Arg1:E8 Arg2:E9	
+*	OVERLAP E9 E10
+R45	MODIFY Arg1:T28 Arg2:E11	
+R46	BEFORE Arg1:E10 Arg2:E11	
+*	OVERLAP E11 E12
+R47	BEFORE Arg1:E12 Arg2:E13	
+*	OVERLAP E13 E14 E15 E16 E17 E18 E19 E20 E21 E22 E23 E24 E38
+R48	BEFORE Arg1:E24 Arg2:E26	
+*	OVERLAP E26 E25 E36 E37
+T54	Sign_symptom 1135 1145	uninvolved
+E38	Sign_symptom:T54 
+R23	MODIFY Arg1:T53 Arg2:E38	
+R24	MODIFY Arg1:T52 Arg2:E38	
+R25	MODIFY Arg1:T51 Arg2:E38	
+#4	AnnotatorNotes E38	This should probably be an entity, but then it would not be connected
+R49	BEFORE Arg1:E37 Arg2:E33	
+*	OVERLAP E33 E34 E35
+R50	BEFORE Arg1:E35 Arg2:E27	
+*	OVERLAP E27 E32 E28 E29 E30 E31

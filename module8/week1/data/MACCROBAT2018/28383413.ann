@@ -1,0 +1,571 @@
+T1	Date 2 12	March 2015
+E1	Date:T1 
+T2	Age 16 27	62-year-old
+T3	Sex 28 33	woman
+T4	Clinical_event 38 46	admitted
+E2	Clinical_event:T4 
+T5	Nonbiological_location 54 62	hospital
+R1	MODIFY Arg1:T5 Arg2:E2	
+T6	Sign_symptom 94 112	visual disturbance
+E3	Sign_symptom:T6 
+T7	Detailed_description 82 93	progressive
+R2	MODIFY Arg1:T7 Arg2:E3	
+T8	Date 132 143	4 years ago
+E4	Date:T8 
+T9	Disease_disorder 163 171	cataract
+E5	Disease_disorder:T9 
+A1	POLARITY E5 UNCERTAIN
+T10	Nonbiological_location 175 189	local hospital
+R3	MODIFY Arg1:T10 Arg2:E5	
+T11	Sign_symptom 198 204	relief
+E6	Sign_symptom:T11 
+A2	POLARITY E6 NEG
+T12	Date 256 271	half a year ago
+E7	Date:T12 
+T13	Sign_symptom 236 244	symptoms
+E8	Sign_symptom:T13 
+A3	TREND E8 INC
+T14	Sign_symptom 287 295	headache
+E9	Sign_symptom:T14 
+T15	Sign_symptom 306 310	pain
+E10	Sign_symptom:T15 
+T16	Biological_structure 297 305	left eye
+R4	MODIFY Arg1:T16 Arg2:E10	
+T17	Sign_symptom 312 319	tearing
+E11	Sign_symptom:T17 
+T18	Sign_symptom 334 344	secretions
+E12	Sign_symptom:T18 
+A4	TREND E12 INC
+T19	Diagnostic_procedure 354 373	computed tomography
+E13	Diagnostic_procedure:T19 
+T20	Diagnostic_procedure 375 377	CT
+E14	Diagnostic_procedure:T20 
+R5	IDENTICAL Arg1:E14 Arg2:E13	
+T21	Biological_structure 391 396	brain
+R6	MODIFY Arg1:T21 Arg2:E13	
+T22	Nonbiological_location 400 414	local hospital
+R7	MODIFY Arg1:T22 Arg2:E13	
+T23	Sign_symptom 438 444	lesion
+E15	Sign_symptom:T23 
+T24	Biological_structure 424 437	sellar region
+R8	MODIFY Arg1:T24 Arg2:E15	
+T25	Date 455 470	2 years earlier
+E16	Date:T25 
+T26	Therapeutic_procedure 494 503	resection
+E17	Therapeutic_procedure:T26 
+T27	Disease_disorder 507 515	melanoma
+E18	Disease_disorder:T27 
+T28	Biological_structure 523 532	left heel
+R9	MODIFY Arg1:T28 Arg2:E18	
+T29	Lab_value 534 540	T2N0M0
+R10	MODIFY Arg1:T29 Arg2:E18	
+T30	Lab_value 542 551	ki67 3–5%
+T31	Lab_value 553 561	Stage II
+R11	MODIFY Arg1:T30 Arg2:E18	
+R12	MODIFY Arg1:T31 Arg2:E18	
+T32	Therapeutic_procedure 576 585	resection
+E19	Therapeutic_procedure:T32 
+T33	Disease_disorder 602 610	melanoma
+E20	Disease_disorder:T33 
+T34	Detailed_description 593 601	recurred
+R13	MODIFY Arg1:T34 Arg2:E20	
+T35	Biological_structure 611 634	nearby the primary site
+R14	MODIFY Arg1:T35 Arg2:E20	
+T36	Date 635 650	15 months later
+E21	Date:T36 
+T37	Lab_value 652 658	T3N3M0
+R15	MODIFY Arg1:T37 Arg2:E20	
+T38	Lab_value 660 669	Stage III
+R16	MODIFY Arg1:T38 Arg2:E20	
+T39	Therapeutic_procedure 680 695	lymphadenectomy
+E22	Therapeutic_procedure:T39 
+A5	POLARITY E22 NEG
+T40	Family_history 705 734	no family history of melanoma
+T41	Diagnostic_procedure 739 759	physical examination
+E23	Diagnostic_procedure:T41 
+T42	Sign_symptom 796 807	hemianopsia
+E24	Sign_symptom:T42 
+T43	Detailed_description 787 795	temporal
+T44	Detailed_description 777 786	bilateral
+R17	MODIFY Arg1:T43 Arg2:E24	
+R18	MODIFY Arg1:T44 Arg2:E24	
+T45	Diagnostic_procedure 813 834	right finger counting
+E25	Diagnostic_procedure:T45 
+T46	Lab_value 839 842	1 m
+R19	MODIFY Arg1:T46 Arg2:E25	
+T47	Diagnostic_procedure 852 872	left finger counting
+E26	Diagnostic_procedure:T47 
+T48	Lab_value 877 895	no more than 0.5 m
+R20	MODIFY Arg1:T48 Arg2:E26	
+T49	Sign_symptom 897 905	Enlarged
+E27	Sign_symptom:T49 
+T50	Biological_structure 906 917	lymph nodes
+R21	MODIFY Arg1:T50 Arg2:E27	
+T51	Biological_structure 939 950	right groin
+R22	MODIFY Arg1:T51 Arg2:E27	
+T52	Diagnostic_procedure 955 981	ophthalmologic examination
+E28	Diagnostic_procedure:T52 
+T53	Diagnostic_procedure 999 1011	right vision
+E29	Diagnostic_procedure:T53 
+T54	Lab_value 1015 1018	0.4
+R23	MODIFY Arg1:T54 Arg2:E29	
+R24	SUB_PROCEDURE Arg1:E29 Arg2:E28	
+T55	Diagnostic_procedure 1023 1034	left vision
+E30	Diagnostic_procedure:T55 
+T56	Lab_value 1038 1042	0.08
+R25	MODIFY Arg1:T56 Arg2:E30	
+T57	Diagnostic_procedure 1058 1078	intraocular pressure
+E31	Diagnostic_procedure:T57 
+T58	Lab_value 1079 1087	15 mm Hg
+R26	MODIFY Arg1:T58 Arg2:E31	
+T59	Detailed_description 1088 1099	bilaterally
+R27	MODIFY Arg1:T59 Arg2:T58	
+R28	SUB_PROCEDURE Arg1:E31 Arg2:E28	
+T60	Diagnostic_procedure 1105 1114	optometry
+E32	Diagnostic_procedure:T60 
+T61	Lab_value 1138 1157	+6.00DS/+0.25DC∗65°
+T62	Lab_value 1178 1197	+6.25DS/+0.50DC∗20°
+T63	Biological_structure 1166 1174	left eye
+R29	MODIFY Arg1:T63 Arg2:T62	
+T64	Biological_structure 1125 1134	right eye
+R30	MODIFY Arg1:T64 Arg2:T61	
+R31	MODIFY Arg1:T61 Arg2:E32	
+R32	MODIFY Arg1:T62 Arg2:E32	
+T65	Disease_disorder 1215 1226	maculopathy
+E33	Disease_disorder:T65 
+T66	Biological_structure 1230 1239	both eyes
+R33	MODIFY Arg1:T66 Arg2:E33	
+T67	Disease_disorder 1244 1257	optic atrophy
+E34	Disease_disorder:T67 
+T68	Biological_structure 1265 1273	left eye
+R34	MODIFY Arg1:T68 Arg2:E34	
+T69	Diagnostic_procedure 1275 1287	Light reflex
+E35	Diagnostic_procedure:T69 
+T70	Diagnostic_procedure 1292 1304	eye movement
+E36	Diagnostic_procedure:T70 
+T71	Biological_structure 1308 1317	both eyes
+R35	MODIFY Arg1:T71 Arg2:E36	
+R36	MODIFY Arg1:T71 Arg2:E35	
+T72	Lab_value 1323 1329	normal
+R37	MODIFY Arg1:T72 Arg2:E36	
+R38	MODIFY Arg1:T72 Arg2:E35	
+T73	Diagnostic_procedure 1331 1333	CT
+E37	Diagnostic_procedure:T73 
+T74	Biological_structure 1347 1363	brain parenchyma
+R39	MODIFY Arg1:T74 Arg2:E37	
+T75	Biological_structure 1365 1372	orbital
+T76	Biological_structure 1378 1383	chest
+R40	MODIFY Arg1:T75 Arg2:E37	
+R41	MODIFY Arg1:T76 Arg2:E37	
+T77	Lab_value 1389 1401	unremarkable
+R42	MODIFY Arg1:T77 Arg2:E37	
+T78	Diagnostic_procedure 1403 1405	CT
+E38	Diagnostic_procedure:T78 
+T79	Diagnostic_procedure 1415 1425	ultrasound
+E39	Diagnostic_procedure:T79 
+T80	Biological_structure 1445 1452	abdomen
+R43	MODIFY Arg1:T80 Arg2:E39	
+R44	MODIFY Arg1:T80 Arg2:E38	
+T81	Date 5128 5146	late January, 2017
+E40	Date:T81 
+T82	Sign_symptom 5164 5169	alive
+E41	Sign_symptom:T82 
+T83	Sign_symptom 5181 5189	symptoms
+E42	Sign_symptom:T83 
+A6	TREND E42 INC
+T84	Sign_symptom 5199 5215	sensory deficits
+E43	Sign_symptom:T84 
+T85	Biological_structure 5219 5228	both legs
+R45	MODIFY Arg1:T85 Arg2:E43	
+T86	Sign_symptom 5236 5250	could not move
+E44	Sign_symptom:T86 
+R46	MODIFY Arg1:T85 Arg2:E44	
+T87	Sign_symptom 5252 5264	hyperalgesia
+E45	Sign_symptom:T87 
+T88	Biological_structure 5268 5273	hands
+T89	Biological_structure 5278 5283	mouth
+T90	Sign_symptom 5285 5306	impaired intelligence
+E46	Sign_symptom:T90 
+R47	MODIFY Arg1:T88 Arg2:E45	
+R48	MODIFY Arg1:T89 Arg2:E45	
+T91	Clinical_event 5355 5362	nursing
+E47	Clinical_event:T91 
+T92	Subject 5370 5378	daughter
+R49	MODIFY Arg1:T92 Arg2:E47	
+T93	Sign_symptom 1495 1511	lymphadenectasis
+E48	Sign_symptom:T93 
+T94	Biological_structure 1479 1494	retroperitoneal
+T95	Biological_structure 1460 1474	hepatic portal
+R50	MODIFY Arg1:T94 Arg2:E48	
+R51	MODIFY Arg1:T95 Arg2:E48	
+T96	Sign_symptom 1516 1524	enlarged
+E49	Sign_symptom:T96 
+T97	Biological_structure 1525 1547	left lobe of the liver
+R52	MODIFY Arg1:T97 Arg2:E49	
+T98	Sign_symptom 1577 1584	lesions
+E50	Sign_symptom:T98 
+T99	Detailed_description 1565 1576	placeholder
+T100	Severity 1553 1564	substantial
+R53	MODIFY Arg1:T99 Arg2:E50	
+R54	MODIFY Arg1:T100 Arg2:E50	
+T101	Diagnostic_procedure 1586 1596	Ultrasound
+E51	Diagnostic_procedure:T101 
+T102	Biological_structure 1622 1642	inguinal lymph nodes
+T103	Detailed_description 1612 1621	bilateral
+R55	MODIFY Arg1:T103 Arg2:T102	
+R56	MODIFY Arg1:T102 Arg2:E51	
+T104	Sign_symptom 1663 1684	low echo light groups
+E52	Sign_symptom:T104 
+T105	Detailed_description 1654 1662	multiple
+R57	MODIFY Arg1:T105 Arg2:E52	
+T106	Distance 1690 1716	largest of which was 31 mm
+R58	MODIFY Arg1:T106 Arg2:E52	
+T107	Detailed_description 1735 1752	hilus of the echo
+R59	MODIFY Arg1:T107 Arg2:E52	
+T108	Sign_symptom 1770 1780	thickening
+E53	Sign_symptom:T108 
+T109	Biological_structure 1788 1792	skin
+R60	MODIFY Arg1:T109 Arg2:E53	
+T110	Detailed_description 1757 1769	asymmetrical
+R61	MODIFY Arg1:T110 Arg2:E53	
+T111	Diagnostic_procedure 1794 1796	CT
+E54	Diagnostic_procedure:T111 
+T112	Biological_structure 1805 1818	sellar region
+R62	MODIFY Arg1:T112 Arg2:E54	
+T113	Sign_symptom 1837 1841	mass
+E55	Sign_symptom:T113 
+T114	Texture 1830 1836	crumby
+R63	MODIFY Arg1:T114 Arg2:E55	
+T115	Biological_structure 1865 1879	sphenoid sinus
+R64	MODIFY Arg1:T115 Arg2:E55	
+T116	Detailed_description 1886 1902	obscure boundary
+T117	Detailed_description 1907 1923	bone destruction
+R65	MODIFY Arg1:T116 Arg2:E55	
+R66	MODIFY Arg1:T117 Arg2:E55	
+T118	Diagnostic_procedure 1941 1949	CT value
+E56	Diagnostic_procedure:T118 
+T119	Sign_symptom 1957 1961	mass
+E57	Sign_symptom:T119 
+R67	MODIFY Arg1:E57 Arg2:E56	
+T120	Lab_value 1966 1971	46 HU
+R68	MODIFY Arg1:T120 Arg2:E56	
+T121	Detailed_description 1933 1940	average
+R69	MODIFY Arg1:T121 Arg2:E56	
+T122	Diagnostic_procedure 2015 2018	MRI
+E58	Diagnostic_procedure:T122 
+T123	Diagnostic_procedure 1987 2013	magnetic resonance imaging
+E59	Diagnostic_procedure:T123 
+R70	IDENTICAL Arg1:E58 Arg2:E59	
+T124	Biological_structure 1973 1986	Sellar region
+R71	MODIFY Arg1:T124 Arg2:E59	
+T125	Sign_symptom 2037 2041	mass
+E60	Sign_symptom:T125 
+T126	Shape 2031 2036	round
+R72	MODIFY Arg1:T126 Arg2:E60	
+T127	Distance 2045 2050	30 mm
+R73	MODIFY Arg1:T127 Arg2:E60	
+T128	Biological_structure 2070 2085	enlarged sellae
+R74	MODIFY Arg1:T128 Arg2:E60	
+T129	Coreference 2103 2107	mass
+E61	Coreference:T129 
+R75	IDENTICAL Arg1:E61 Arg2:E60	
+T130	Sign_symptom 2115 2125	isointense
+E62	Sign_symptom:T130 
+T131	Diagnostic_procedure 2129 2147	T1-weighted images
+E63	Diagnostic_procedure:T131 
+T132	Diagnostic_procedure 2149 2154	T1-WI
+E64	Diagnostic_procedure:T132 
+T133	Diagnostic_procedure 2160 2178	T2-weighted images
+E65	Diagnostic_procedure:T133 
+T134	Diagnostic_procedure 2180 2185	T2-WI
+E66	Diagnostic_procedure:T134 
+R76	IDENTICAL Arg1:E64 Arg2:E63	
+R77	IDENTICAL Arg1:E66 Arg2:E65	
+T135	Sign_symptom 2205 2216	enhancement
+E67	Sign_symptom:T135 
+T136	Detailed_description 2193 2204	homogeneous
+R78	MODIFY Arg1:T136 Arg2:E67	
+T137	Detailed_description 2223 2248	Gadolinium-DTPA injection
+R79	MODIFY Arg1:T137 Arg2:E67	
+T138	Detailed_description 2254 2269	dural tail sign
+R80	MODIFY Arg1:T138 Arg2:E67	
+T139	Coreference 2302 2307	tumor
+E68	Coreference:T139 
+R81	IDENTICAL Arg1:E68 Arg2:E61	
+T140	Sign_symptom 2315 2335	hyperintense signals
+E69	Sign_symptom:T140 
+T141	Diagnostic_procedure 2339 2344	T1-WI
+E70	Diagnostic_procedure:T141 
+T142	Diagnostic_procedure 2372 2377	T2-WI
+E71	Diagnostic_procedure:T142 
+T143	Detailed_description 2379 2398	without enhancement
+R82	MODIFY Arg1:T143 Arg2:E71	
+T144	Sign_symptom 2349 2368	hypointense signals
+E72	Sign_symptom:T144 
+T145	Coreference 2425 2429	mass
+E73	Coreference:T145 
+R83	IDENTICAL Arg1:E73 Arg2:E68	
+T146	Biological_structure 2441 2449	meninges
+R84	MODIFY Arg1:T146 Arg2:E73	
+T147	Biological_structure 2466 2494	left internal carotid artery
+T148	Biological_structure 2521 2537	left optic nerve
+R85	MODIFY Arg1:T147 Arg2:E73	
+R86	MODIFY Arg1:T148 Arg2:E73	
+T149	Sign_symptom 2562 2569	shorter
+E74	Sign_symptom:T149 
+T150	Biological_structure 2539 2554	Pituitary stalk
+R87	MODIFY Arg1:T150 Arg2:E74	
+T151	Detailed_description 2577 2595	right displacement
+R88	MODIFY Arg1:T151 Arg2:E74	
+T152	Diagnostic_procedure 2597 2616	Laboratory findings
+E75	Diagnostic_procedure:T152 
+T153	Diagnostic_procedure 2646 2655	prolactin
+E76	Diagnostic_procedure:T153 
+T154	Lab_value 2657 2668	119.08 μg/L
+R89	MODIFY Arg1:T154 Arg2:E76	
+R90	SUB_PROCEDURE Arg1:E76 Arg2:E75	
+T155	Diagnostic_procedure 2704 2712	cortisol
+E77	Diagnostic_procedure:T155 
+T156	Lab_value 2714 2727	677.10 nmol/L
+R91	MODIFY Arg1:T156 Arg2:E77	
+R92	SUB_PROCEDURE Arg1:E77 Arg2:E75	
+T157	Lab_value 2768 2777	decreased
+T158	Lab_value 2626 2635	increased
+R93	MODIFY Arg1:T158 Arg2:E76	
+R94	MODIFY Arg1:T158 Arg2:E77	
+T159	Diagnostic_procedure 2788 2802	free thyroxine
+E78	Diagnostic_procedure:T159 
+T160	Diagnostic_procedure 2804 2807	FT4
+E79	Diagnostic_procedure:T160 
+R95	IDENTICAL Arg1:E79 Arg2:E78	
+T161	Lab_value 2810 2821	6.04 pmol/L
+R96	MODIFY Arg1:T161 Arg2:E78	
+R97	MODIFY Arg1:T157 Arg2:E78	
+T162	Diagnostic_procedure 2860 2881	free triiodothyronine
+E80	Diagnostic_procedure:T162 
+T163	Diagnostic_procedure 2883 2886	FT3
+E81	Diagnostic_procedure:T163 
+T164	Lab_value 2889 2900	2.09 pmol/L
+R98	IDENTICAL Arg1:E81 Arg2:E80	
+R99	MODIFY Arg1:T157 Arg2:E80	
+R100	MODIFY Arg1:T164 Arg2:E80	
+R101	SUB_PROCEDURE Arg1:E78 Arg2:E75	
+R102	SUB_PROCEDURE Arg1:E80 Arg2:E75	
+T165	Disease_disorder 2973 2985	prolactinoma
+E82	Disease_disorder:T165 
+T166	Detailed_description 2967 2972	giant
+R103	MODIFY Arg1:T166 Arg2:E82	
+T167	Therapeutic_procedure 3036 3043	surgery
+E83	Therapeutic_procedure:T167 
+T168	Detailed_description 3020 3035	transsphenoidal
+T169	Detailed_description 3009 3019	transnasal
+R104	MODIFY Arg1:T168 Arg2:E83	
+R105	MODIFY Arg1:T169 Arg2:E83	
+T170	Sign_symptom 3151 3156	tumor
+E84	Sign_symptom:T170 
+T171	Biological_structure 3180 3215	left interval of the sphenoid sinus
+R106	MODIFY Arg1:T171 Arg2:E84	
+T172	Biological_structure 3229 3249	bone in sellar floor
+R107	MODIFY Arg1:T172 Arg2:E84	
+T173	Biological_structure 3254 3274	left side parasellar
+R108	MODIFY Arg1:T173 Arg2:E84	
+T174	Sign_symptom 3279 3288	destroyed
+E85	Sign_symptom:T174 
+T175	Sign_symptom 3293 3301	absorbed
+E86	Sign_symptom:T175 
+R109	MODIFY Arg1:T173 Arg2:E85	
+R110	MODIFY Arg1:T173 Arg2:E86	
+T176	Biological_structure 3378 3392	sellar turcica
+T177	Coreference 3365 3370	tumor
+E87	Coreference:T177 
+R111	IDENTICAL Arg1:E87 Arg2:E84	
+T178	Detailed_description 3305 3361	little normal pituitary tissue was seen in the top right
+R112	MODIFY Arg1:T178 Arg2:E87	
+T179	Coreference 3398 3403	tumor
+E88	Coreference:T179 
+R113	IDENTICAL Arg1:E88 Arg2:E87	
+T180	Color 3408 3421	reddish black
+R114	MODIFY Arg1:T180 Arg2:E88	
+T181	Detailed_description 3427 3454	extremely rich blood supply
+R115	MODIFY Arg1:T181 Arg2:E88	
+T182	Detailed_description 3463 3506	close adhesion to the surrounding structure
+R116	MODIFY Arg1:T182 Arg2:E88	
+T183	Coreference 3541 3546	tumor
+E89	Coreference:T183 
+R117	IDENTICAL Arg1:E89 Arg2:E88	
+T184	Texture 3551 3555	soft
+R118	MODIFY Arg1:T184 Arg2:E89	
+T185	Texture 3560 3585	much tougher over the rim
+R119	MODIFY Arg1:T185 Arg2:E89	
+T186	Diagnostic_procedure 3602 3628	frozen-section examination
+E90	Diagnostic_procedure:T186 
+T187	Detailed_description 3587 3601	Intraoperative
+R120	MODIFY Arg1:T187 Arg2:E90	
+T188	Sign_symptom 3635 3651	melanin granules
+E91	Sign_symptom:T188 
+T189	Disease_disorder 3681 3699	malignant melanoma
+E92	Disease_disorder:T189 
+T190	Disease_disorder 3703 3713	meningioma
+E93	Disease_disorder:T190 
+T191	Activity 5056 5060	walk
+E94	Activity:T191 
+A7	POLARITY E94 NEG
+T192	Disease_disorder 5089 5098	depressed
+E95	Disease_disorder:T192 
+T193	Clinical_event 5002 5011	follow-up
+E96	Clinical_event:T193 
+T194	Date 5015 5032	late January 2016
+E97	Date:T194 
+T195	Activity 5065 5080	live by herself
+E98	Activity:T195 
+A8	POLARITY E98 NEG
+T196	Sign_symptom 4865 4881	metastatic sites
+E99	Sign_symptom:T196 
+T197	Disease_disorder 4856 4864	melanoma
+E100	Disease_disorder:T197 
+T198	Biological_structure 4889 4911	skin of lower left leg
+T199	Biological_structure 4924 4938	upper left leg
+T200	Biological_structure 4944 4954	left groin
+T201	Biological_structure 4963 4974	right groin
+T202	Biological_structure 4984 4993	right leg
+R121	MODIFY Arg1:T198 Arg2:E99	
+R122	MODIFY Arg1:T199 Arg2:E99	
+R123	MODIFY Arg1:T200 Arg2:E99	
+R124	MODIFY Arg1:T201 Arg2:E99	
+R125	MODIFY Arg1:T202 Arg2:E99	
+T203	Clinical_event 4719 4729	discharged
+E101	Clinical_event:T203 
+T204	Nonbiological_location 4739 4747	hospital
+R126	MODIFY Arg1:T204 Arg2:E101	
+T205	Date 4787 4801	2 months after
+E102	Date:T205 
+T206	Disease_disorder 4768 4775	disease
+E103	Disease_disorder:T206 
+A9	POLARITY E103 NEG
+T207	Detailed_description 3748 3786	eosinophilic staining epithelial cells
+T208	Coreference 3719 3730	tumor cells
+E104	Coreference:T208 
+R127	IDENTICAL Arg1:E104 Arg2:E89	
+R128	MODIFY Arg1:T207 Arg2:E104	
+T209	Diagnostic_procedure 3796 3807	cell nuclei
+E105	Diagnostic_procedure:T209 
+T210	Sign_symptom 3944 3952	necrosis
+E106	Sign_symptom:T210 
+A10	POLARITY E106 NEG
+T211	Diagnostic_procedure 4003 4028	melanoma-specific markers
+E107	Diagnostic_procedure:T211 
+T212	Shape 3813 3818	round
+R129	MODIFY Arg1:T212 Arg2:E105	
+T213	Lab_value 3831 3839	reniform
+T214	Lab_value 3844 3858	hippocrepiform
+T215	Diagnostic_procedure 3886 3901	nuclear fission
+E108	Diagnostic_procedure:T215 
+R130	SUB_PROCEDURE Arg1:E105 Arg2:E90	
+R131	MODIFY Arg1:T213 Arg2:E105	
+R132	MODIFY Arg1:T214 Arg2:E105	
+T216	Diagnostic_procedure 3872 3880	nucleoli
+E109	Diagnostic_procedure:T216 
+T217	Lab_value 3864 3871	evident
+R133	MODIFY Arg1:T217 Arg2:E109	
+R134	SUB_PROCEDURE Arg1:E109 Arg2:E105	
+R135	SUB_PROCEDURE Arg1:E108 Arg2:E90	
+T218	Lab_value 3906 3910	seen
+R136	MODIFY Arg1:T218 Arg2:E108	
+T219	Lab_value 3976 3990	immunopositive
+R137	MODIFY Arg1:T219 Arg2:E107	
+T220	Detailed_description 3991 3998	focally
+R138	MODIFY Arg1:T220 Arg2:T219	
+T221	Diagnostic_procedure 4037 4042	S-100
+E110	Diagnostic_procedure:T221 
+T222	Diagnostic_procedure 4044 4049	HMB45
+E111	Diagnostic_procedure:T222 
+T223	Diagnostic_procedure 4055 4063	Vimentin
+E112	Diagnostic_procedure:T223 
+R139	SUB_PROCEDURE Arg1:E110 Arg2:E107	
+R140	SUB_PROCEDURE Arg1:E111 Arg2:E107	
+R141	SUB_PROCEDURE Arg1:E112 Arg2:E107	
+T224	Diagnostic_procedure 4088 4116	neuroendocrine tumor markers
+E113	Diagnostic_procedure:T224 
+T225	Lab_value 4069 4083	immunopositive
+R142	MODIFY Arg1:T225 Arg2:E113	
+T226	Diagnostic_procedure 4125 4128	CgA
+E114	Diagnostic_procedure:T226 
+T227	Diagnostic_procedure 4133 4136	Syn
+E115	Diagnostic_procedure:T227 
+R143	SUB_PROCEDURE Arg1:E114 Arg2:E113	
+R144	SUB_PROCEDURE Arg1:E115 Arg2:E113	
+T228	Diagnostic_procedure 4150 4160	Ki67 index
+E116	Diagnostic_procedure:T228 
+T229	Lab_value 4165 4173	3% to 5%
+R145	MODIFY Arg1:T229 Arg2:E116	
+T230	Lab_value 4182 4188	higher
+T231	Detailed_description 4192 4245	metastatic melanoma than in the adenomatous component
+R146	MODIFY Arg1:T231 Arg2:T230	
+R147	MODIFY Arg1:T230 Arg2:E116	
+T232	Disease_disorder 4375 4379	MMPA
+E117	Disease_disorder:T232 
+#1	AnnotatorNotes E117	Melanoma metastases to the pituitary adenoma
+T235	Diagnostic_procedure 4427 4439	visual field
+E119	Diagnostic_procedure:T235 
+T233	Sign_symptom 4444 4452	headache
+E118	Sign_symptom:T233 
+A11	TREND E118 DEC
+T234	Lab_value 4408 4414	relief
+R148	MODIFY Arg1:T234 Arg2:E119	
+T236	Diagnostic_procedure 4471 4480	prolactin
+E120	Diagnostic_procedure:T236 
+T237	Diagnostic_procedure 4482 4490	cortisol
+E121	Diagnostic_procedure:T237 
+T238	Diagnostic_procedure 4496 4499	FT4
+E122	Diagnostic_procedure:T238 
+T239	Lab_value 4512 4518	normal
+R149	MODIFY Arg1:T239 Arg2:E120	
+R150	MODIFY Arg1:T239 Arg2:E121	
+R151	MODIFY Arg1:T239 Arg2:E122	
+T240	Medication 4524 4551	hormone replacement therapy
+E123	Medication:T240 
+T241	Therapeutic_procedure 4669 4690	surgical intervention
+E124	Therapeutic_procedure:T241 
+A12	POLARITY E124 NEG
+T242	Sign_symptom 4625 4635	discomfort
+E125	Sign_symptom:T242 
+A13	POLARITY E125 MAYBE_NEG
+*	OVERLAP E1 E2
+R152	AFTER Arg1:E2 Arg2:E3	
+*	OVERLAP E3 E4 E5 E6
+R153	BEFORE Arg1:E6 Arg2:E8	
+*	OVERLAP E8 E7 E9 E10 E11 E12 E13 E15
+R154	AFTER Arg1:E15 Arg2:E16	
+*	OVERLAP E16 E17 E18
+R155	BEFORE Arg1:E18 Arg2:E19	
+*	OVERLAP E19 E20 E21 E22
+R156	BEFORE Arg1:E22 Arg2:E23	
+*	OVERLAP E23 E24 E25 E26 E27 E28 E32 E33 E34 E35 E36 E37 E38 E39 E48 E49 E50 E51 E52 E53 E54 E55 E56 E57 E59 E60 E61 E62 E63 E65 E67 E68 E69 E70 E72 E71 E73 E74 E75
+R157	SUB_PROCEDURE Arg1:E30 Arg2:E28	
+R158	MODIFY Arg1:E72 Arg2:E71	
+R159	MODIFY Arg1:E69 Arg2:E70	
+R160	MODIFY Arg1:E62 Arg2:E63	
+R161	MODIFY Arg1:E62 Arg2:E65	
+R162	BEFORE Arg1:E75 Arg2:E82	
+R163	BEFORE Arg1:E82 Arg2:E83	
+*	OVERLAP E83 E84 E85 E86 E87 E88 E89 E90 E91 E92 E93 E104 E126 E106 E107 E113 E116 E117
+T243	Coreference 3916 3921	tumor
+E126	Coreference:T243 
+R164	IDENTICAL Arg1:E126 Arg2:E104	
+R165	MODIFY Arg1:E126 Arg2:E106	
+R166	BEFORE Arg1:E117 Arg2:E119	
+*	OVERLAP E119 E118
+R167	BEFORE Arg1:E118 Arg2:E120	
+*	OVERLAP E120 E121 E122 E123
+R168	BEFORE Arg1:E123 Arg2:E125	
+*	OVERLAP E125 E124
+R169	BEFORE Arg1:E124 Arg2:E101	
+R170	BEFORE Arg1:E101 Arg2:E103	
+R171	BEFORE Arg1:E103 Arg2:E102	
+*	OVERLAP E102 E100 E99
+R172	BEFORE Arg1:E99 Arg2:E96	
+*	OVERLAP E96 E97 E94 E98 E95
+T244	Clinical_event 5114 5123	follow-up
+E127	Clinical_event:T244 
+R173	BEFORE Arg1:E95 Arg2:E127	
+*	OVERLAP E127 E40 E41 E42 E43 E44 E45 E46 E47

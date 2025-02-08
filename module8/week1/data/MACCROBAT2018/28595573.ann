@@ -1,0 +1,270 @@
+T1	Age 33 44	45-year old
+T2	Sex 45 50	woman
+T3	Biological_structure 79 98	university hospital
+T4	Date 99 115	at the age of 35
+E1	Date:T4 
+T5	History 154 163	pregnancy
+T6	History 173 192	congenital deafness
+T7	History 260 268	epilepsy
+T8	Clinical_event 62 71	presented
+E2	Clinical_event:T8 
+R1	MODIFY Arg1:T3 Arg2:E2	
+T9	Sign_symptom 212 219	syncope
+E3	Sign_symptom:T9 
+T10	Date 227 235	age of 3
+E4	Date:T10 
+T11	Medication 291 316	anti-epilepsy medications
+E5	Medication:T11 
+T12	Sign_symptom 377 384	syncope
+E6	Sign_symptom:T12 
+T13	Detailed_description 356 373	several instances
+R2	MODIFY Arg1:T13 Arg2:E6	
+T14	Date 393 402	age of 13
+E7	Date:T14 
+T15	Sign_symptom 414 421	syncope
+E8	Sign_symptom:T15 
+T16	Disease_disorder 457 461	JLNS
+E9	Disease_disorder:T16 
+#1	AnnotatorNotes E9	Jervell and Lange-Nielsen syndrome
+T17	Sign_symptom 501 522	prolonged QT interval
+E10	Sign_symptom:T17 
+T18	Sign_symptom 528 535	syncope
+E11	Sign_symptom:T18 
+T19	Date 689 698	age of 29
+E12	Date:T19 
+T20	Sign_symptom 658 681	subarachnoid hemorrhage
+E13	Sign_symptom:T20 
+T21	Clinical_event 715 724	presented
+E14	Clinical_event:T21 
+T22	Nonbiological_location 732 740	hospital
+R3	MODIFY Arg1:T22 Arg2:E14	
+T23	Medication 761 774	beta-blockers
+E15	Medication:T23 
+A1	POLARITY E15 NEG
+T24	History 800 806	asthma
+T25	Medication 823 833	mexiletine
+E16	Medication:T25 
+T26	Medication 849 858	phenytoin
+E17	Medication:T26 
+T27	Sign_symptom 556 574	arrhythmic episode
+E18	Sign_symptom:T27 
+A2	POLARITY E18 UNCERTAIN
+T28	Disease_disorder 616 624	epilepsy
+E19	Disease_disorder:T28 
+A3	POLARITY E19 UNCERTAIN
+T29	Sign_symptom 597 608	tachycardia
+E20	Sign_symptom:T29 
+T30	Diagnostic_procedure 864 867	QTc
+E21	Diagnostic_procedure:T30 
+T31	Lab_value 884 893	prolonged
+T32	Lab_value 895 901	584 ms
+R4	MODIFY Arg1:T31 Arg2:E21	
+R5	MODIFY Arg1:T32 Arg2:E21	
+T33	Clinical_event 906 918	presentation
+E22	Clinical_event:T33 
+T34	Medication 941 949	atenolol
+E23	Medication:T34 
+T35	Clinical_event 969 978	delivered
+E24	Clinical_event:T35 
+T36	Therapeutic_procedure 1013 1032	Caesarean operation
+E25	Therapeutic_procedure:T36 
+T37	Nonbiological_location 1040 1048	hospital
+R6	MODIFY Arg1:E25 Arg2:E24	
+R7	MODIFY Arg1:T37 Arg2:E24	
+T38	Date 1056 1065	age of 35
+E26	Date:T38 
+R8	MODIFY Arg1:E26 Arg2:E24	
+T39	Date 1067 1072	At 37
+E27	Date:T39 
+T40	Subject 983 987	baby
+R9	MODIFY Arg1:T40 Arg2:E24	
+T41	Clinical_event 1078 1087	delivered
+E28	Clinical_event:T41 
+T42	Subject 1092 1103	second baby
+R10	MODIFY Arg1:T42 Arg2:E28	
+T43	Therapeutic_procedure 1129 1148	Caesarean operation
+E29	Therapeutic_procedure:T43 
+T44	Nonbiological_location 1156 1164	hospital
+R11	MODIFY Arg1:T44 Arg2:E28	
+R12	MODIFY Arg1:E27 Arg2:E28	
+R13	MODIFY Arg1:E29 Arg2:E28	
+T45	Medication 1192 1205	beta-blockers
+E30	Medication:T45 
+T46	Diagnostic_procedure 1211 1214	QTc
+E31	Diagnostic_procedure:T46 
+T47	Lab_value 1224 1233	prolonged
+T48	Lab_value 1235 1243	600 msec
+R14	MODIFY Arg1:T47 Arg2:E31	
+R15	MODIFY Arg1:T48 Arg2:E31	
+T49	Lab_value 1262 1270	780 msec
+R16	MODIFY Arg1:T49 Arg2:E31	
+T50	Date 1251 1260	age of 37
+E32	Date:T50 
+T51	Date 1251 1257;1274 1276	age of 44
+E33	Date:T51 
+R17	MODIFY Arg1:E32 Arg2:T48	
+R18	MODIFY Arg1:E33 Arg2:T49	
+T52	Sign_symptom 1458 1465	syncope
+E34	Sign_symptom:T52 
+T53	Detailed_description 1447 1457	occasional
+R19	MODIFY Arg1:T53 Arg2:E34	
+T54	Therapeutic_procedure 1491 1529	implantable cardioverter defibrillator
+E35	Therapeutic_procedure:T54 
+T55	Therapeutic_procedure 1531 1534	ICD
+E36	Therapeutic_procedure:T55 
+R20	IDENTICAL Arg1:E36 Arg2:E35	
+T56	Date 1549 1564	38 years of age
+E37	Date:T56 
+T57	Sign_symptom 1592 1617	stable clinical condition
+E38	Sign_symptom:T57 
+T58	Disease_disorder 1656 1660	JLNS
+E39	Disease_disorder:T58 
+A4	POLARITY E39 UNCERTAIN
+A5	POLARITY E9 UNCERTAIN
+T59	Subject 1665 1677	both infants
+T60	Family_history 1684 1744	measured QTc of 500 ms or greater within 1 month after birth
+R21	MODIFY Arg1:T60 Arg2:T59	
+T61	Family_history 1803 1836	stable condition at ages 10 and 8
+R22	MODIFY Arg1:T61 Arg2:T59	
+T62	Family_history 1746 1759	beta blockers
+R23	MODIFY Arg1:T62 Arg2:T59	
+#2	AnnotatorNotes T59	Note that most material in this sentence is about the children, not the patient
+T63	Subject 1868 1871	son
+T64	Family_history 1857 1860	QTc
+T65	Family_history 1905 1933	500 ms one month after birth
+R24	MODIFY Arg1:T65 Arg2:T64	
+T66	Subject 1956 1962	sister
+T67	Family_history 1945 1948	QTc
+T68	Family_history 1975 1990	530 ms at birth
+R25	MODIFY Arg1:T68 Arg2:T67	
+T69	History 1992 2059	The father (I-1) and mother (I-2) of the proband were first cousins
+#3	AnnotatorNotes T69	Medically relevant for the patient, not her parents
+T70	Subject 2149 2173	immediate family members
+T71	Family_history 2070 2141	no history of sudden unexplained syncope or death of children or adults
+R26	MODIFY Arg1:T71 Arg2:T70	
+T72	Nonbiological_location 2311 2336	Chiba University Hospital
+T73	Diagnostic_procedure 2218 2237	Clinical evaluation
+E40	Diagnostic_procedure:T73 
+T74	Clinical_event 2242 2254	consultation
+E41	Clinical_event:T74 
+R27	MODIFY Arg1:T72 Arg2:E41	
+R28	MODIFY Arg1:T72 Arg2:E40	
+T75	Diagnostic_procedure 2425 2428	ECG
+E42	Diagnostic_procedure:T75 
+T76	Diagnostic_procedure 2398 2419	physical examinations
+E43	Diagnostic_procedure:T76 
+T77	Diagnostic_procedure 2430 2443	Blood samples
+E44	Diagnostic_procedure:T77 
+T78	Clinical_event 2509 2527	genetic counseling
+E45	Clinical_event:T78 
+T79	Diagnostic_procedure 2599 2610	Genomic DNA
+E46	Diagnostic_procedure:T79 
+T80	Biological_structure 2629 2657	peripheral blood lymphocytes
+R29	MODIFY Arg1:T80 Arg2:E46	
+T81	Diagnostic_procedure 2915 2940	polymerase chain reaction
+E47	Diagnostic_procedure:T81 
+T82	Diagnostic_procedure 2942 2945	PCR
+E48	Diagnostic_procedure:T82 
+R30	IDENTICAL Arg1:E48 Arg2:E47	
+T83	Detailed_description 2789 2794	KCNQ1
+R31	MODIFY Arg1:T83 Arg2:E47	
+T84	Detailed_description 2827 2846	LQT causative genes
+R32	MODIFY Arg1:T84 Arg2:E47	
+T85	Detailed_description 2848 2895	KCNH2, SCN5A, KCNE1, KCNE2, KCNJ2, SCN4B, KCNJ5
+R33	IDENTICAL Arg1:T85 Arg2:T84	
+T86	Detailed_description 3011 3035	30–100 ng of genomic DNA
+T87	Coreference 3053 3070	PCR amplification
+E49	Coreference:T87 
+R34	IDENTICAL Arg1:E49 Arg2:E47	
+R35	MODIFY Arg1:T86 Arg2:E49	
+T88	Detailed_description 3076 3090	DNA polymerase
+T89	Detailed_description 3092 3153	PrimeSTAR GXL DNA Polymerase; Takara Bio Inc., Kusatsu, Japan
+R36	MODIFY Arg1:T88 Arg2:E49	
+R37	MODIFY Arg1:T89 Arg2:E49	
+T90	Detailed_description 3159 3170	primer sets
+R38	MODIFY Arg1:T90 Arg2:E49	
+T91	Diagnostic_procedure 3217 3227	sequencing
+E50	Diagnostic_procedure:T91 
+T92	Detailed_description 3204 3216	conventional
+T93	Detailed_description 3233 3250	Sanger sequencers
+R39	MODIFY Arg1:T92 Arg2:E50	
+R40	MODIFY Arg1:T93 Arg2:E50	
+T94	Detailed_description 3176 3185	amplicons
+R41	MODIFY Arg1:T94 Arg2:E50	
+T95	Detailed_description 3252 3338	Applied Biosystems 3730/3130 DNA analyzers; Thermo Fisher Scientific, Waltham, MA, USA
+R42	MODIFY Arg1:T95 Arg2:T93	
+T96	Detailed_description 3364 3409	processed with Gene Codes Sequencher Software
+T97	Detailed_description 3411 3426	Takara Bio Inc.
+R43	MODIFY Arg1:T96 Arg2:E50	
+R44	MODIFY Arg1:T97 Arg2:T96	
+T98	Detailed_description 3432 3467	mapped to the human genome sequence
+R45	MODIFY Arg1:T98 Arg2:E50	
+T99	Detailed_description 3469 3486	build GRCh37/hg19
+R46	MODIFY Arg1:T99 Arg2:T98	
+T100	Diagnostic_procedure 3489 3505	Genetic analysis
+E51	Diagnostic_procedure:T100 
+T101	Detailed_description 3585 3595	KCNQ1 gene
+T102	Detailed_description 3668 3687	LQT causative genes
+R47	MODIFY Arg1:T101 Arg2:E51	
+R48	MODIFY Arg1:T102 Arg2:E51	
+T103	Detailed_description 3689 3736	KCNH2, SCN5A, KCNE1, KCNE2, KCNJ2, SCN4B, KCNJ5
+R49	IDENTICAL Arg1:T103 Arg2:T102	
+T104	Sign_symptom 3759 3786	homozygous nonsense variant
+E52	Sign_symptom:T104 
+T105	Sign_symptom 3882 3907	homozygous common variant
+E53	Sign_symptom:T105 
+T106	Detailed_description 3788 3810	NM_000218.2:c.115G > T
+R50	MODIFY Arg1:T106 Arg2:E52	
+T107	Detailed_description 3909 3932	NM_000218.2:c.1343C > G
+R51	MODIFY Arg1:T107 Arg2:E53	
+T108	Diagnostic_procedure 3978 3995	Genetic screening
+E54	Diagnostic_procedure:T108 
+T109	Subject 4003 4009	mother
+T110	Subject 4020 4028	children
+R52	MODIFY Arg1:T109 Arg2:E54	
+R53	MODIFY Arg1:T110 Arg2:E54	
+T111	Family_history 4071 4108	heterozygous for the nonsense variant
+R54	MODIFY Arg1:T111 Arg2:T110	
+R55	MODIFY Arg1:T111 Arg2:T109	
+T112	Subject 4122 4129	husband
+T113	Family_history 4171 4206	heterozygous for the common variant
+R56	MODIFY Arg1:T113 Arg2:T112	
+T114	History 4247 4298	The proband is a child from a first-cousin marriage
+T115	Disease_disorder 4389 4394	JLNS1
+E55	Disease_disorder:T115 
+T116	Sign_symptom 4326 4353	homozygous nonsense variant
+E56	Sign_symptom:T116 
+R57	CAUSE Arg1:E56 Arg2:E55	
+T117	Sign_symptom 4425 4473	pathogenic variants in other LQT causative genes
+E57	Sign_symptom:T117 
+A6	POLARITY E57 NEG
+*	OVERLAP E2 E1
+R58	AFTER Arg1:E1 Arg2:E3	
+*	OVERLAP E3 E4 E5
+R59	BEFORE Arg1:E5 Arg2:E6	
+R60	BEFORE Arg1:E6 Arg2:E7	
+*	OVERLAP E7 E8 E9 E10 E11 E18 E20 E19
+R61	BEFORE Arg1:E19 Arg2:E13	
+*	OVERLAP E13 E12
+R62	BEFORE Arg1:E12 Arg2:E14	
+*	OVERLAP E14 E15 E16 E17 E21 E22 E23
+R63	BEFORE Arg1:E23 Arg2:E24	
+*	OVERLAP E24 E26
+R64	BEFORE Arg1:E26 Arg2:E27	
+*	OVERLAP E27 E28
+R65	BEFORE Arg1:E28 Arg2:E30	
+*	OVERLAP E30 E31
+R66	BEFORE Arg1:E31 Arg2:E34	
+R67	BEFORE Arg1:E34 Arg2:E35	
+*	OVERLAP E35 E37
+R68	BEFORE Arg1:E37 Arg2:E38	
+R69	BEFORE Arg1:E38 Arg2:E39	
+R70	BEFORE Arg1:E39 Arg2:E40	
+*	OVERLAP E40 E43 E42
+R71	BEFORE Arg1:E42 Arg2:E44	
+R72	AFTER Arg1:E44 Arg2:E45	
+R73	BEFORE Arg1:E45 Arg2:E46	
+*	OVERLAP E46 E47 E50 E51 E52 E53
+R74	BEFORE Arg1:E53 Arg2:E54	
+R75	BEFORE Arg1:E54 Arg2:E56	
+*	OVERLAP E56 E57

@@ -1,0 +1,446 @@
+T1	Age 2 13	54-year-old
+T2	Sign_symptom 39 44	fever
+E1	Sign_symptom:T2 
+T3	Sign_symptom 46 54	diarrhea
+E2	Sign_symptom:T3 
+T4	Disease_disorder 66 79	renal failure
+E3	Disease_disorder:T4 
+T5	Detailed_description 60 65	acute
+R1	MODIFY Arg1:T5 Arg2:E3	
+T6	Clinical_event 26 34	admitted
+E4	Clinical_event:T6 
+T7	History 88 118	no significant medical history
+T8	Medication 137 147	medication
+E5	Medication:T8 
+A1	POLARITY E5 NEG
+T9	History 153 178	had not traveled recently
+T10	Family_history 187 215	no relevant familial history
+T11	Date 217 236	Fifteen days before
+E6	Date:T11 
+T12	Sign_symptom 265 270	fever
+E7	Sign_symptom:T12 
+T13	Sign_symptom 282 286	rash
+E8	Sign_symptom:T13 
+T14	Sign_symptom 288 296	diarrhea
+E9	Sign_symptom:T14 
+T15	Sign_symptom 302 306	pain
+E10	Sign_symptom:T15 
+T16	Biological_structure 314 320	joints
+R2	MODIFY Arg1:T16 Arg2:E10	
+T17	Detailed_description 272 281	fluctuant
+R3	MODIFY Arg1:T17 Arg2:E8	
+T18	Clinical_event 325 334	admission
+E11	Clinical_event:T18 
+T19	Diagnostic_procedure 336 350	blood pressure
+E12	Diagnostic_procedure:T19 
+T20	Lab_value 355 367	140/70 mm Hg
+T21	Diagnostic_procedure 369 380	temperature
+E13	Diagnostic_procedure:T21 
+T22	Lab_value 381 385	39°C
+R4	MODIFY Arg1:T22 Arg2:E13	
+R5	MODIFY Arg1:T20 Arg2:E12	
+T23	Diagnostic_procedure 387 407	Physical examination
+E14	Diagnostic_procedure:T23 
+T24	Sign_symptom 422 427	edema
+E15	Sign_symptom:T24 
+T25	Severity 415 421	severe
+R6	MODIFY Arg1:T25 Arg2:E15	
+T26	Biological_structure 443 464	lower and upper limbs
+R7	MODIFY Arg1:T26 Arg2:E15	
+T27	Sign_symptom 477 484	ascites
+E16	Sign_symptom:T27 
+T28	Sign_symptom 489 505	pleural effusion
+E17	Sign_symptom:T28 
+T29	Disease_disorder 545 562	lymphadenopathies
+E18	Disease_disorder:T29 
+T30	Qualitative_concept 528 544	infracentimetric
+#1	AnnotatorNotes T30	smaller than a centimeter in diameter
+R8	MODIFY Arg1:T30 Arg2:E18	
+T31	Biological_structure 520 527	axillar
+T32	Biological_structure 507 515	Cervical
+R9	MODIFY Arg1:T31 Arg2:E18	
+R10	MODIFY Arg1:T32 Arg2:E18	
+T33	Disease_disorder 591 609	hepatosplenomegaly
+E19	Disease_disorder:T33 
+T34	Diagnostic_procedure 624 643	computed tomography
+E20	Diagnostic_procedure:T34 
+T35	Diagnostic_procedure 645 647	CT
+E21	Diagnostic_procedure:T35 
+R11	IDENTICAL Arg1:E21 Arg2:E20	
+T36	Disease_disorder 665 674	arthritis
+E22	Disease_disorder:T36 
+T37	Detailed_description 655 664	Bilateral
+R12	MODIFY Arg1:T37 Arg2:E22	
+T38	Biological_structure 682 688	ankles
+R13	MODIFY Arg1:T38 Arg2:E22	
+A2	POLARITY E22 NEG
+T39	Diagnostic_procedure 713 727	Blood analysis
+E23	Diagnostic_procedure:T39 
+T40	Sign_symptom 758 770	leukocytosis
+E24	Sign_symptom:T40 
+T41	Diagnostic_procedure 779 789	hemoglobin
+E25	Diagnostic_procedure:T41 
+T43	Diagnostic_procedure 794 802	platelet
+E26	Diagnostic_procedure:T43 
+T44	Sign_symptom 835 844	hemolysis
+E27	Sign_symptom:T44 
+A3	POLARITY E27 NEG
+T45	Diagnostic_procedure 855 873	C-reactive protein
+E28	Diagnostic_procedure:T45 
+T47	Diagnostic_procedure 879 886	albumin
+E29	Diagnostic_procedure:T47 
+T49	Diagnostic_procedure 903 912	creatinin
+E30	Diagnostic_procedure:T49 
+T50	Detailed_description 897 902	serum
+R18	MODIFY Arg1:T50 Arg2:E30	
+T52	Sign_symptom 919 930	proteinuria
+E31	Sign_symptom:T52 
+T53	Severity 914 918	mild
+R20	MODIFY Arg1:T53 Arg2:E31	
+T54	Sign_symptom 938 947	hematuria
+E32	Sign_symptom:T54 
+A4	POLARITY E32 NEG
+R21	SUB_PROCEDURE Arg1:E25 Arg2:E23	
+R22	SUB_PROCEDURE Arg1:E26 Arg2:E23	
+R23	SUB_PROCEDURE Arg1:E28 Arg2:E23	
+R24	SUB_PROCEDURE Arg1:E29 Arg2:E23	
+R25	SUB_PROCEDURE Arg1:E30 Arg2:E23	
+T55	Therapeutic_procedure 969 980	rehydration
+E33	Therapeutic_procedure:T55 
+T56	Detailed_description 957 968	intravenous
+R26	MODIFY Arg1:T56 Arg2:E33	
+T57	Medication 987 993	saline
+E34	Medication:T57 
+T58	Medication 998 1005	albumin
+E35	Medication:T58 
+R27	SUB_PROCEDURE Arg1:E34 Arg2:E33	
+R28	SUB_PROCEDURE Arg1:E35 Arg2:E33	
+T59	Diagnostic_procedure 1007 1021	renal function
+E36	Diagnostic_procedure:T59 
+T61	Therapeutic_procedure 1056 1064	dialysis
+E37	Therapeutic_procedure:T61 
+T62	Disease_disorder 1114 1124	hemiplegia
+E38	Disease_disorder:T62 
+T63	Diagnostic_procedure 1141 1144	MRI
+E39	Diagnostic_procedure:T63 
+T64	Biological_structure 1135 1140	brain
+R30	MODIFY Arg1:T64 Arg2:E39	
+T65	Sign_symptom 1172 1179	lesions
+E40	Sign_symptom:T65 
+T66	Detailed_description 1163 1171	ischemic
+T67	Detailed_description 1152 1162	multifocal
+R31	MODIFY Arg1:T66 Arg2:E40	
+R32	MODIFY Arg1:T67 Arg2:E40	
+T68	Diagnostic_procedure 1209 1216	studies
+E41	Diagnostic_procedure:T68 
+T69	Detailed_description 1197 1208	rythmologic
+T70	Detailed_description 1181 1192	Echographic
+R33	MODIFY Arg1:T69 Arg2:E41	
+R34	MODIFY Arg1:T70 Arg2:E41	
+T71	Disease_disorder 1257 1263	stroke
+E42	Disease_disorder:T71 
+T72	Disease_disorder 1231 1248	cardiologic cause
+E43	Disease_disorder:T72 
+A5	POLARITY E43 NEG
+T73	Diagnostic_procedure 1273 1279	biopsy
+E44	Diagnostic_procedure:T73 
+T74	Biological_structure 1267 1272	renal
+R35	MODIFY Arg1:T74 Arg2:E44	
+T75	Diagnostic_procedure 1310 1330	Periodic acid–Schiff
+E45	Diagnostic_procedure:T75 
+T76	Diagnostic_procedure 1332 1335	PAS
+E46	Diagnostic_procedure:T76 
+R36	IDENTICAL Arg1:E46 Arg2:E45	
+T77	Disease_disorder 1353 1366	endotheliosis
+E47	Disease_disorder:T77 
+T78	Biological_structure 1374 1383	glomeruli
+R37	MODIFY Arg1:T78 Arg2:E47	
+T79	Disease_disorder 1418 1431	mesangiolysis
+E48	Disease_disorder:T79 
+T80	Sign_symptom 1436 1451	double contours
+E49	Sign_symptom:T80 
+T81	Diagnostic_procedure 1455 1470	silver staining
+E50	Diagnostic_procedure:T81 
+T82	Sign_symptom 1507 1515	thrombus
+E51	Sign_symptom:T82 
+A6	POLARITY E51 NEG
+T83	Biological_structure 1496 1506	arteriolar
+R38	MODIFY Arg1:T83 Arg2:E51	
+T84	Clinical_event 3235 3245	discharged
+E52	Clinical_event:T84 
+T85	Date 3246 3259	43 days after
+E53	Date:T85 
+T86	Disease_disorder 3274 3292	neurological event
+E54	Disease_disorder:T86 
+A7	POLARITY E54 NEG
+T87	Clinical_event 241 250	admission
+E55	Clinical_event:T87 
+T46	Lab_value 846 854	elevated
+E56	Lab_value:T46 
+R16	MODIFY Arg1:E56 Arg2:E28	
+T42	Lab_value 772 778	normal
+E57	Lab_value:T42 
+R14	MODIFY Arg1:E57 Arg2:E25	
+R15	MODIFY Arg1:E57 Arg2:E26	
+T48	Lab_value 875 878	low
+E58	Lab_value:T48 
+R17	MODIFY Arg1:E58 Arg2:E29	
+T51	Lab_value 888 896	elevated
+E59	Lab_value:T51 
+R19	MODIFY Arg1:E59 Arg2:E30	
+T60	Lab_value 1022 1030	worsened
+E60	Lab_value:T60 
+R29	MODIFY Arg1:E60 Arg2:E36	
+T88	Diagnostic_procedure 1072 1097	diagnostic investigations
+E61	Diagnostic_procedure:T88 
+T89	Sign_symptom 1534 1557	B lymphocyte infiltrate
+E62	Sign_symptom:T89 
+T90	Detailed_description 1528 1533	CD20+
+T91	Severity 1519 1527	moderate
+R39	MODIFY Arg1:T91 Arg2:E62	
+R40	MODIFY Arg1:T90 Arg2:E62	
+T92	Biological_structure 1577 1589	interstitium
+R41	MODIFY Arg1:T92 Arg2:E62	
+T93	Sign_symptom 1598 1621	peritubularcapillaritis
+E63	Sign_symptom:T93 
+#2	AnnotatorNotes E63	should be "peritubular capillaritis"
+T94	Diagnostic_procedure 1623 1647	Immunofluorescence study
+E64	Diagnostic_procedure:T94 
+T95	Sign_symptom 1665 1672	deposit
+E65	Sign_symptom:T95 
+A8	POLARITY E65 NEG
+T96	Diagnostic_procedure 1685 1691	biopsy
+E66	Diagnostic_procedure:T96 
+T97	Biological_structure 1674 1684	Lymph node
+R42	MODIFY Arg1:T97 Arg2:E66	
+T98	Sign_symptom 1714 1722	abnormal
+E67	Sign_symptom:T98 
+T99	Biological_structure 1723 1732	follicles
+R43	MODIFY Arg1:T99 Arg2:E67	
+T100	Sign_symptom 1738 1751	hyalinization
+E68	Sign_symptom:T100 
+T101	Biological_structure 1755 1770	germinal center
+R44	MODIFY Arg1:T101 Arg2:E68	
+T102	Sign_symptom 1779 1796	onion-skin aspect
+E69	Sign_symptom:T102 
+T103	Biological_structure 1804 1815	mantle zone
+R45	MODIFY Arg1:T103 Arg2:E69	
+T104	Disease_disorder 1934 1937	MCD
+E70	Disease_disorder:T104 
+T105	Disease_disorder 1902 1932	multicentric Castleman disease
+E71	Disease_disorder:T105 
+R46	IDENTICAL Arg1:E70 Arg2:E71	
+T106	Detailed_description 1885 1901	hyaline-vascular
+R47	MODIFY Arg1:T106 Arg2:E71	
+T107	Diagnostic_procedure 3352 3354	CT
+E72	Diagnostic_procedure:T107 
+T108	Biological_structure 3334 3351	Thoraco-abdominal
+R48	MODIFY Arg1:T108 Arg2:E72	
+T109	Diagnostic_procedure 3441 3445	size
+E73	Diagnostic_procedure:T109 
+T110	Biological_structure 3424 3429	liver
+R49	MODIFY Arg1:T110 Arg2:E73	
+T111	Biological_structure 3434 3440	spleen
+R50	MODIFY Arg1:T111 Arg2:E73	
+T112	Lab_value 3417 3423	normal
+E74	Lab_value:T112 
+R51	MODIFY Arg1:E74 Arg2:E73	
+T113	Sign_symptom 3464 3475	enlargement
+E75	Sign_symptom:T113 
+A9	POLARITY E75 NEG
+T114	Biological_structure 3453 3463	lymph node
+R52	MODIFY Arg1:T114 Arg2:E75	
+T115	Medication 3393 3405	chemotherapy
+E76	Medication:T115 
+T116	Quantitative_concept 3380 3389	6 courses
+R53	MODIFY Arg1:T116 Arg2:E76	
+T117	Disease_disorder 3520 3523	MCD
+E77	Disease_disorder:T117 
+T118	Diagnostic_procedure 1854 1863	histology
+E78	Diagnostic_procedure:T118 
+T119	Biological_structure 1843 1853	lymph node
+R54	MODIFY Arg1:T119 Arg2:E78	
+T120	Diagnostic_procedure 1954 1962	serology
+E79	Diagnostic_procedure:T120 
+T121	Detailed_description 1948 1953	HHV-8
+T122	Detailed_description 1940 1943	HIV
+R55	MODIFY Arg1:T121 Arg2:E79	
+R56	MODIFY Arg1:T122 Arg2:E79	
+T123	Diagnostic_procedure 1992 2007	tissue staining
+E80	Diagnostic_procedure:T123 
+T124	Biological_structure 1981 1991	lymph node
+T125	Detailed_description 1975 1980	HHV-8
+R57	MODIFY Arg1:T124 Arg2:E80	
+R58	MODIFY Arg1:T125 Arg2:E80	
+T126	Lab_value 2014 2022	negative
+E81	Lab_value:T126 
+R59	MODIFY Arg1:E81 Arg2:E80	
+R60	MODIFY Arg1:E81 Arg2:E79	
+T127	Medication 2770 2782	chemotherapy
+E82	Medication:T127 
+T128	Medication 2806 2815	rituximab
+E83	Medication:T128 
+T129	Dosage 2817 2826	375 mg/m2
+R61	MODIFY Arg1:T129 Arg2:E83	
+T130	Medication 2829 2845	cyclophosphamide
+E84	Medication:T130 
+T131	Dosage 2847 2856	750 mg/m2
+R62	MODIFY Arg1:T131 Arg2:E84	
+T132	Medication 2863 2876	dexamethasone
+E85	Medication:T132 
+T133	Dosage 2878 2887	40 mg/day
+R63	MODIFY Arg1:T133 Arg2:E85	
+T134	Duration 2893 2907	day 1 to day 4
+E86	Duration:T134 
+R64	MODIFY Arg1:E86 Arg2:E85	
+T135	Therapeutic_procedure 2935 2951	plasma exchanges
+E87	Therapeutic_procedure:T135 
+T136	Frequency 3040 3053	every 3 weeks
+T137	Coreference 3017 3024	Courses
+E88	Coreference:T137 
+R65	IDENTICAL Arg1:E88 Arg2:E82	
+R66	MODIFY Arg1:T136 Arg2:E88	
+T138	Disease_disorder 3082 3104	vascular leak syndrome
+E89	Disease_disorder:T138 
+A10	TREND E89 DEC
+T139	Diagnostic_procedure 3116 3130	renal function
+E90	Diagnostic_procedure:T139 
+T140	Lab_value 3131 3141	normalized
+E91	Lab_value:T140 
+R67	MODIFY Arg1:E91 Arg2:E90	
+T141	Diagnostic_procedure 3153 3157	VEGF
+E92	Diagnostic_procedure:T141 
+T142	Lab_value 3177 3186	825 pg/mL
+E93	Lab_value:T142 
+R68	MODIFY Arg1:E93 Arg2:E92	
+T143	Lab_value 3164 3173	decreased
+E94	Lab_value:T143 
+R69	MODIFY Arg1:E94 Arg2:E92	
+T144	Medication 3205 3217	chemotherapy
+E95	Medication:T144 
+T145	Quantitative_concept 3193 3201	1 course
+R70	MODIFY Arg1:T145 Arg2:E95	
+T146	Detailed_description 3147 3152	serum
+R71	MODIFY Arg1:T146 Arg2:E92	
+T147	Diagnostic_procedure 3549 3559	creatinine
+E96	Diagnostic_procedure:T147 
+T148	Detailed_description 3542 3548	plasma
+R72	MODIFY Arg1:T148 Arg2:E96	
+T149	Lab_value 3563 3572	86 μmol/L
+E97	Lab_value:T149 
+R73	MODIFY Arg1:E97 Arg2:E96	
+T150	Sign_symptom 3582 3593	proteinuria
+E98	Sign_symptom:T150 
+A11	POLARITY E98 NEG
+T151	Diagnostic_procedure 2066 2070	VEGF
+E99	Diagnostic_procedure:T151 
+T152	Diagnostic_procedure 2030 2064	vascular endothelium growth factor
+E100	Diagnostic_procedure:T152 
+T153	Lab_value 2076 2091	highly elevated
+E101	Lab_value:T153 
+R74	MODIFY Arg1:E101 Arg2:E100	
+T154	Detailed_description 2024 2029	Serum
+R75	MODIFY Arg1:T154 Arg2:E100	
+R76	IDENTICAL Arg1:E99 Arg2:E100	
+T155	Disease_disorder 2132 2158	thrombotic microangiopathy
+E102	Disease_disorder:T155 
+T156	Disease_disorder 2160 2163	TMA
+E103	Disease_disorder:T156 
+R77	IDENTICAL Arg1:E103 Arg2:E102	
+T157	Diagnostic_procedure 2180 2186	biopsy
+E104	Diagnostic_procedure:T157 
+T158	Diagnostic_procedure 2197 2200	MRI
+E105	Diagnostic_procedure:T158 
+T159	Biological_structure 2174 2179	renal
+T160	Biological_structure 2191 2196	brain
+R78	MODIFY Arg1:T159 Arg2:E104	
+R79	MODIFY Arg1:T160 Arg2:E105	
+T161	Disease_disorder 2248 2251	TMA
+E106	Disease_disorder:T161 
+T162	Biological_structure 2237 2247	neurologic
+T163	Biological_structure 2222 2232	glomerular
+R80	MODIFY Arg1:T162 Arg2:E106	
+R81	MODIFY Arg1:T163 Arg2:E106	
+T164	Sign_symptom 2299 2324	microvascular involvement
+E107	Sign_symptom:T164 
+T165	Detailed_description 2288 2298	thrombotic
+R82	MODIFY Arg1:T165 Arg2:E107	
+T166	Disease_disorder 2386 2413	shiga toxin-producing germs
+E108	Disease_disorder:T166 
+A12	POLARITY E108 NEG
+T167	Diagnostic_procedure 2415 2433	ADAMTS-13 activity
+E109	Diagnostic_procedure:T167 
+T168	Lab_value 2438 2447	decreased
+E110	Lab_value:T168 
+T169	Lab_value 2471 2479	above 5%
+E111	Lab_value:T169 
+T170	Lab_value 2448 2457	up to 14%
+E112	Lab_value:T170 
+R83	MODIFY Arg1:E110 Arg2:E109	
+R84	MODIFY Arg1:E112 Arg2:E109	
+R85	MODIFY Arg1:E111 Arg2:E109	
+T171	Diagnostic_procedure 2489 2519	alternative complement pathway
+E113	Diagnostic_procedure:T171 
+T172	Lab_value 2524 2530	normal
+E114	Lab_value:T172 
+R86	MODIFY Arg1:E114 Arg2:E113	
+T173	Therapeutic_procedure 2532 2547	Plasma exchange
+E115	Therapeutic_procedure:T173 
+T174	Sign_symptom 2593 2600	lesions
+E116	Sign_symptom:T174 
+T175	Biological_structure 2573 2579	kidney
+R87	MODIFY Arg1:T175 Arg2:E116	
+T176	Sign_symptom 2635 2642	lesions
+E117	Sign_symptom:T176 
+T177	Biological_structure 2629 2634	brain
+R88	MODIFY Arg1:T177 Arg2:E117	
+T178	Detailed_description 2620 2628	ischemic
+T179	Detailed_description 2609 2619	multifocal
+R89	MODIFY Arg1:T178 Arg2:E117	
+R90	MODIFY Arg1:T179 Arg2:E117	
+T180	Date 2664 2677	after 1 month
+E118	Date:T180 
+T181	Diagnostic_procedure 2730 2739	condition
+E119	Diagnostic_procedure:T181 
+T182	Lab_value 2749 2755	stable
+E120	Lab_value:T182 
+R91	MODIFY Arg1:E120 Arg2:E119	
+T183	Detailed_description 2651 2663	discontinued
+R92	MODIFY Arg1:E118 Arg2:T183	
+R93	MODIFY Arg1:T183 Arg2:E115	
+*	OVERLAP E4 E1 E2 E3 E5
+R94	AFTER Arg1:E5 Arg2:E6	
+R95	BEFORE Arg1:E6 Arg2:E55	
+R96	AFTER Arg1:E55 Arg2:E7	
+*	OVERLAP E7 E8 E9 E10
+R97	BEFORE Arg1:E10 Arg2:E11	
+*	OVERLAP E11 E12 E13 E14 E15 E16 E17 E18 E19 E20
+R98	BEFORE Arg1:E20 Arg2:E22	
+*	OVERLAP E22 E23 E27 E31 E32
+R99	BEFORE Arg1:E32 Arg2:E33	
+R100	BEFORE Arg1:E33 Arg2:E36	
+*	OVERLAP E36 E37 E61 E38 E39 E40 E41 E43 E42 E44 E45 E47 E48 E49 E50 E51 E62 E63 E64 E65 E66 E67 E68 E69 E78 E71 E79 E80 E100 E102 E104 E105 E106 E107 E108 E109 E113
+R101	BEFORE Arg1:E113 Arg2:E115	
+*	OVERLAP E115 E116 E117
+R102	BEFORE Arg1:E117 Arg2:E118	
+*	OVERLAP E118 E119
+R103	AFTER Arg1:E119 Arg2:E82	
+R104	SUB_PROCEDURE Arg1:E83 Arg2:E82	
+R105	SUB_PROCEDURE Arg1:E84 Arg2:E82	
+R106	SUB_PROCEDURE Arg1:E85 Arg2:E82	
+*	OVERLAP E82 E87 E88
+R107	BEFORE Arg1:E88 Arg2:E89	
+*	OVERLAP E89 E90 E92 E95
+R108	BEFORE Arg1:E95 Arg2:E52	
+*	OVERLAP E52 E53 E54 E72
+R109	AFTER Arg1:E72 Arg2:E76	
+R110	BEFORE Arg1:E76 Arg2:E73	
+*	OVERLAP E73 E75
+T184	Date 3477 3491	One year after
+E121	Date:T184 
+T185	Clinical_event 3496 3505	diagnosis
+E122	Clinical_event:T185 
+R111	BEFORE Arg1:E75 Arg2:E121	
+R112	AFTER Arg1:E121 Arg2:E122	
+R113	BEFORE Arg1:E122 Arg2:E77	
+*	OVERLAP E77 E96 E98

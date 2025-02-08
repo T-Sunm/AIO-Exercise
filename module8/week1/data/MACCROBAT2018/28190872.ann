@@ -1,0 +1,340 @@
+T1	Age 2 13	37-year-old
+T2	Personal_background 14 30	African American
+T3	Sex 31 37	female
+T4	Disease_disorder 90 101	sarcoidosis
+E1	Disease_disorder:T4 
+T5	History 82 101	stage 1 sarcoidosis
+T6	Lab_value 82 89	stage 1
+R1	MODIFY Arg1:T6 Arg2:E1	
+T7	Clinical_event 102 111	presented
+E2	Clinical_event:T7 
+T8	Nonbiological_location 119 127	facility
+R2	MODIFY Arg1:T8 Arg2:E2	
+T9	Sign_symptom 154 173	shortness of breath
+E3	Sign_symptom:T9 
+T10	Date 175 190	Ten years prior
+E4	Date:T10 
+T11	Clinical_event 196 205	presented
+E5	Clinical_event:T11 
+T12	Disease_disorder 221 228	uveitis
+E6	Disease_disorder:T12 
+T13	Detailed_description 211 220	bilateral
+R3	MODIFY Arg1:T13 Arg2:E6	
+T14	Sign_symptom 233 245	lupus pernio
+E7	Sign_symptom:T14 
+T15	Sign_symptom 247 249	LP
+E8	Sign_symptom:T15 
+R4	IDENTICAL Arg1:E8 Arg2:E7	
+T16	Biological_structure 258 267	right ear
+R5	MODIFY Arg1:T16 Arg2:E7	
+T17	Disease_disorder 304 315	sarcoidosis
+E9	Disease_disorder:T17 
+T18	Therapeutic_procedure 338 345	treated
+E10	Therapeutic_procedure:T18 
+T19	Lab_value 325 337	successfully
+R6	MODIFY Arg1:T19 Arg2:E10	
+T20	Disease_disorder 375 386	sarcoidosis
+E11	Disease_disorder:T20 
+T21	Lab_value 396 405	quiescent
+R7	MODIFY Arg1:T21 Arg2:E11	
+T22	Date 412 427	three years ago
+E12	Date:T22 
+T23	Nonbiological_location 441 460	outside institution
+T24	Clinical_event 470 480	discovered
+E13	Clinical_event:T24 
+R8	MODIFY Arg1:T23 Arg2:E13	
+T25	Sign_symptom 499 510	involvement
+E14	Sign_symptom:T25 
+T26	Biological_structure 489 498	laryngeal
+R9	MODIFY Arg1:T26 Arg2:E14	
+T27	Therapeutic_procedure 520 527	treated
+E15	Therapeutic_procedure:T27 
+T28	Medication 533 543	prednisone
+E16	Medication:T28 
+T29	Dosage 544 555	60 mg daily
+R10	MODIFY Arg1:T29 Arg2:E16	
+R11	SUB_PROCEDURE Arg1:E16 Arg2:E15	
+T30	Duration 560 574	several months
+E17	Duration:T30 
+R12	MODIFY Arg1:E17 Arg2:E16	
+T31	Dosage 601 612	10 mg daily
+R13	MODIFY Arg1:T31 Arg2:E16	
+T32	Date 579 589	eventually
+E18	Date:T32 
+R14	MODIFY Arg1:E18 Arg2:T31	
+T33	Disease_disorder 618 629	sarcoidosis
+E19	Disease_disorder:T33 
+T34	Lab_value 639 654	well-controlled
+R15	MODIFY Arg1:T34 Arg2:E19	
+T35	Medication 683 693	prednisone
+E20	Medication:T35 
+T36	Date 700 716	six months prior
+E21	Date:T36 
+T37	Medication 758 768	prednisone
+E22	Medication:T37 
+A1	POLARITY E22 NEG
+T38	Lab_value 736 753	self-discontinued
+R16	MODIFY Arg1:T38 Arg2:E22	
+T39	Medication 807 827	Nopalea cactus juice
+E23	Medication:T39 
+T40	Therapeutic_procedure 785 806	homeopathic treatment
+E24	Therapeutic_procedure:T40 
+R17	SUB_PROCEDURE Arg1:E23 Arg2:E24	
+T41	Sign_symptom 929 936	dyspnea
+E25	Sign_symptom:T41 
+T42	Detailed_description 937 948	on exertion
+R18	MODIFY Arg1:T42 Arg2:E25	
+T43	Sign_symptom 964 971	dyspnea
+E26	Sign_symptom:T43 
+T44	Detailed_description 972 979	at rest
+R19	MODIFY Arg1:T44 Arg2:E26	
+T47	Sign_symptom 1076 1097	difficulty swallowing
+E28	Sign_symptom:T47 
+T48	Frequency 1055 1063	frequent
+R21	MODIFY Arg1:T48 Arg2:E28	
+T49	Nonbiological_location 1106 1126	emergency department
+T50	Diagnostic_procedure 1132 1152	physical examination
+E29	Diagnostic_procedure:T50 
+R22	MODIFY Arg1:T49 Arg2:E29	
+T51	Sign_symptom 1172 1192	respiratory distress
+E30	Sign_symptom:T51 
+T52	Sign_symptom 1215 1234	inspiratory stridor
+E31	Sign_symptom:T52 
+T53	Sign_symptom 1239 1249	hoarseness
+E32	Sign_symptom:T53 
+T54	Sign_symptom 1293 1300	lesions
+E33	Sign_symptom:T54 
+T55	Lab_value 1283 1292	indurated
+T56	Lab_value 1264 1281	chronic-appearing
+R23	MODIFY Arg1:T56 Arg2:E33	
+R24	MODIFY Arg1:T55 Arg2:E33	
+T57	Biological_structure 1308 1317	right ear
+R25	MODIFY Arg1:T57 Arg2:E33	
+T58	Disease_disorder 1347 1367	upper airway disease
+E34	Disease_disorder:T58 
+A2	POLARITY E34 MAYBE_POS
+T59	Diagnostic_procedure 1423 1435	laryngoscopy
+E35	Diagnostic_procedure:T59 
+T60	Detailed_description 1415 1422	bedside
+T61	Detailed_description 1406 1414	emergent
+R26	MODIFY Arg1:T60 Arg2:E35	
+R27	MODIFY Arg1:T61 Arg2:E35	
+T62	Disease_disorder 1382 1401	respiratory failure
+E36	Disease_disorder:T62 
+A3	POLARITY E36 UNCERTAIN
+T63	Lab_value 1372 1381	impending
+R28	MODIFY Arg1:T63 Arg2:E36	
+T64	Disease_disorder 1464 1474	obstructed
+E37	Disease_disorder:T64 
+T65	Biological_structure 1475 1481	airway
+R29	MODIFY Arg1:T65 Arg2:E37	
+T45	Sign_symptom 1028 1034	hoarse
+E27	Sign_symptom:T45 
+A4	TREND E27 INC
+T46	Activity 1002 1007	voice
+E38	Activity:T46 
+R20	MODIFY Arg1:E27 Arg2:E38	
+T66	Sign_symptom 1502 1513	retroflexed
+E39	Sign_symptom:T66 
+T67	Biological_structure 1491 1501	epiglottis
+R30	MODIFY Arg1:T67 Arg2:E39	
+T68	Biological_structure 1523 1530	glottis
+R31	MODIFY Arg1:T68 Arg2:E39	
+T69	Sign_symptom 1547 1552	edema
+E40	Sign_symptom:T69 
+T70	Lab_value 1535 1546	significant
+R32	MODIFY Arg1:T70 Arg2:E40	
+T71	Biological_structure 1560 1570	arytenoids
+T72	Biological_structure 1575 1594	aryepiglottic folds
+R33	MODIFY Arg1:T71 Arg2:E40	
+R34	MODIFY Arg1:T72 Arg2:E40	
+T73	Medication 1651 1664	dexamethasone
+E41	Medication:T73 
+T74	Administration 1639 1650	intravenous
+T75	Dosage 1629 1638	high-dose
+R35	MODIFY Arg1:T74 Arg2:E41	
+R36	MODIFY Arg1:T75 Arg2:E41	
+T76	Clinical_event 1669 1674	taken
+E42	Clinical_event:T76 
+T77	Nonbiological_location 1693 1707	operating room
+R37	MODIFY Arg1:T77 Arg2:E42	
+T78	Nonbiological_location 1709 1711	OR
+R38	IDENTICAL Arg1:T78 Arg2:T77	
+T79	Disease_disorder 1772 1783	obstruction
+E43	Disease_disorder:T79 
+T80	Biological_structure 1759 1771	upper airway
+T81	Lab_value 1750 1758	complete
+R39	MODIFY Arg1:T81 Arg2:E43	
+R40	MODIFY Arg1:T80 Arg2:E43	
+T82	Therapeutic_procedure 1716 1722	secure
+E44	Therapeutic_procedure:T82 
+T83	Biological_structure 1727 1733	airway
+R41	MODIFY Arg1:T83 Arg2:E44	
+T84	Diagnostic_procedure 1810 1830	direct visualization
+E45	Diagnostic_procedure:T84 
+T85	Biological_structure 1838 1844	larynx
+R42	MODIFY Arg1:T85 Arg2:E45	
+T86	Nonbiological_location 1852 1854	OR
+R43	MODIFY Arg1:T86 Arg2:E45	
+T87	Therapeutic_procedure 1864 1873	intubated
+E46	Therapeutic_procedure:T87 
+T88	Therapeutic_procedure 1880 1895	surgical airway
+E47	Therapeutic_procedure:T88 
+R44	SUB_PROCEDURE Arg1:E46 Arg2:E47	
+T89	Diagnostic_procedure 1914 1922	biopsies
+E48	Diagnostic_procedure:T89 
+T90	Biological_structure 1955 1965	epiglottis
+R45	MODIFY Arg1:T90 Arg2:E48	
+T91	Biological_structure 1932 1947	lingual surface
+R46	MODIFY Arg1:T91 Arg2:T90	
+T92	Therapeutic_procedure 1987 1999	tracheostomy
+E49	Therapeutic_procedure:T92 
+T93	Detailed_description 1979 1985	Shiley
+T94	Detailed_description 1969 1978	#4 cuffed
+R47	MODIFY Arg1:T93 Arg2:E49	
+R48	MODIFY Arg1:T94 Arg2:E49	
+T95	Diagnostic_procedure 2016 2034	respiratory status
+E50	Diagnostic_procedure:T95 
+T96	Lab_value 2047 2057	stabilized
+R49	MODIFY Arg1:T96 Arg2:E50	
+T97	Therapeutic_procedure 2063 2072	extubated
+E51	Therapeutic_procedure:T97 
+T98	Clinical_event 2078 2089	transferred
+E52	Clinical_event:T98 
+T99	Nonbiological_location 2097 2124	medical intensive care unit
+R50	MODIFY Arg1:T99 Arg2:E52	
+T100	Therapeutic_procedure 2130 2142	tracheostomy
+E53	Therapeutic_procedure:T100 
+T101	Detailed_description 2174 2180	Shiley
+T102	Detailed_description 2162 2173	#4 cuffless
+R51	MODIFY Arg1:T102 Arg2:E53	
+R52	MODIFY Arg1:T101 Arg2:E53	
+T103	Date 2198 2203	day 5
+E54	Date:T103 
+T104	Medication 2260 2273	dexamethasone
+E55	Medication:T104 
+A5	POLARITY E55 NEG
+T105	Medication 2277 2287	prednisone
+E56	Medication:T105 
+T106	Dosage 2288 2299	60 mg daily
+R53	MODIFY Arg1:T106 Arg2:E56	
+T107	Administration 2248 2259	intravenous
+R54	MODIFY Arg1:T107 Arg2:E55	
+T108	Diagnostic_procedure 2301 2309	Biopsies
+E57	Diagnostic_procedure:T108 
+T109	Sign_symptom 2358 2368	granulomas
+E58	Sign_symptom:T109 
+T110	Disease_disorder 2385 2396	sarcoidosis
+E59	Disease_disorder:T110 
+T111	Detailed_description 2346 2357	epithelioid
+T112	Detailed_description 2330 2345	non-necrotizing
+R55	MODIFY Arg1:T111 Arg2:E58	
+R56	MODIFY Arg1:T112 Arg2:E58	
+T113	Dosage 2433 2442	high-dose
+T114	Medication 2443 2453	prednisone
+E60	Medication:T114 
+T115	Duration 2458 2470	three months
+E61	Duration:T115 
+T116	Clinical_event 2538 2548	discharged
+E62	Clinical_event:T116 
+T117	Nonbiological_location 2549 2553	home
+R57	MODIFY Arg1:T117 Arg2:E62	
+T118	Therapeutic_procedure 2506 2528	self-tracheostomy care
+E63	Therapeutic_procedure:T118 
+T119	Clinical_event 2492 2501	education
+E64	Clinical_event:T119 
+R58	MODIFY Arg1:E63 Arg2:E64	
+T120	Date 2573 2582	one-month
+E65	Date:T120 
+T121	Date 2587 2598	three-month
+E66	Date:T121 
+T122	Clinical_event 2599 2608	follow-up
+E67	Clinical_event:T122 
+T123	Sign_symptom 2640 2658	respiratory issues
+E68	Sign_symptom:T123 
+A6	POLARITY E68 NEG
+T124	Diagnostic_procedure 2667 2681	laryngoscopies
+E69	Diagnostic_procedure:T124 
+T125	Lab_value 2701 2712	improvement
+R59	MODIFY Arg1:T125 Arg2:E69	
+T126	Sign_symptom 2720 2725	edema
+E70	Sign_symptom:T126 
+A7	POLARITY E70 MAYBE_NEG
+T127	Biological_structure 2733 2743	arytenoids
+R60	MODIFY Arg1:T127 Arg2:E70	
+T128	Biological_structure 2748 2767	aryepiglottic folds
+R61	MODIFY Arg1:T128 Arg2:E70	
+T129	Disease_disorder 2801 2808	obscure
+E71	Disease_disorder:T129 
+T130	Biological_structure 2777 2787	epiglottis
+R62	MODIFY Arg1:T130 Arg2:E71	
+T131	Biological_structure 2813 2820	glottis
+R63	MODIFY Arg1:T131 Arg2:E71	
+T132	Medication 2852 2862	prednisone
+E72	Medication:T132 
+T133	Dosage 2842 2851	high-dose
+R64	MODIFY Arg1:T133 Arg2:E72	
+T134	Medication 2864 2876	Methotrexate
+E73	Medication:T134 
+T135	Medication 2897 2907	prednisone
+E74	Medication:T135 
+T136	Dosage 2923 2934	10 mg daily
+R65	MODIFY Arg1:T136 Arg2:E74	
+T137	Medication 2973 2983	prednisone
+E75	Medication:T137 
+T138	Dosage 3008 3019	20 mg daily
+R66	MODIFY Arg1:T138 Arg2:E75	
+T139	Therapeutic_procedure 3058 3076	surgical treatment
+E76	Therapeutic_procedure:T139 
+A8	POLARITY E76 NEG
+T140	Therapeutic_procedure 3125 3150	immunosuppressive therapy
+E77	Therapeutic_procedure:T140 
+T141	Therapeutic_procedure 3101 3119	medical management
+E78	Therapeutic_procedure:T141 
+R67	SUB_PROCEDURE Arg1:E77 Arg2:E78	
+R68	BEFORE Arg1:E1 Arg2:E2	
+*	OVERLAP E2 E3
+R69	AFTER Arg1:E3 Arg2:E4	
+*	OVERLAP E4 E5 E6 E7 E9
+R70	BEFORE Arg1:E9 Arg2:E10	
+*	OVERLAP E10 E11
+R71	BEFORE Arg1:E11 Arg2:E12	
+*	OVERLAP E12 E13 E14
+R72	BEFORE Arg1:E14 Arg2:E15	
+*	OVERLAP E15 E17 E18
+R73	BEFORE Arg1:E18 Arg2:E19	
+*	OVERLAP E19 E20
+T142	Dosage 663 679	maintenance dose
+R74	MODIFY Arg1:T142 Arg2:E20	
+R75	BEFORE Arg1:E20 Arg2:E21	
+*	OVERLAP E21 E22 E24
+R76	BEFORE Arg1:E24 Arg2:E25	
+R77	BEFORE Arg1:E25 Arg2:E26	
+*	OVERLAP E26 E38 E27 E28
+R78	BEFORE Arg1:E28 Arg2:E29	
+*	OVERLAP E29 E30 E31 E32 E33 E34 E36 E35 E37 E39 E40
+R79	BEFORE Arg1:E40 Arg2:E41	
+R80	BEFORE Arg1:E41 Arg2:E42	
+*	OVERLAP E42 E44 E43 E45 E46 E48 E49
+R81	BEFORE Arg1:E49 Arg2:E50	
+*	OVERLAP E50 E51
+R82	BEFORE Arg1:E51 Arg2:E52	
+R83	BEFORE Arg1:E52 Arg2:E53	
+*	OVERLAP E53 E54 E55 E56
+R84	BEFORE Arg1:E56 Arg2:E57	
+*	OVERLAP E57 E58 E59
+R85	BEFORE Arg1:E59 Arg2:E60	
+R86	MODIFY Arg1:T113 Arg2:E60	
+*	OVERLAP E60 E61
+R87	BEFORE Arg1:E61 Arg2:E64	
+R88	BEFORE Arg1:E64 Arg2:E62	
+R89	BEFORE Arg1:E62 Arg2:E65	
+R90	MODIFY Arg1:E65 Arg2:E67	
+R91	MODIFY Arg1:E66 Arg2:E67	
+R92	BEFORE Arg1:E65 Arg2:E66	
+*	OVERLAP E66 E68 E69 E70 E71 E72
+R93	BEFORE Arg1:E72 Arg2:E73	
+*	OVERLAP E73 E74
+R94	BEFORE Arg1:E74 Arg2:E75	
+R95	BEFORE Arg1:E75 Arg2:E76	
+*	OVERLAP E76 E78

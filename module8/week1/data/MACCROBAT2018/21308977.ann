@@ -1,0 +1,362 @@
+T1	Age 18 28	3-year-old
+T2	Sex 29 33	girl
+T3	Diagnostic_procedure 65 84	VACTERL association
+E1	Diagnostic_procedure:T3 
+T8	Subject 554 564	her father
+T9	Disease_disorder 626 648	Ehlers–Danlos syndrome
+E6	Disease_disorder:T9 
+T10	History 626 648	Ehlers–Danlos syndrome
+T12	Detailed_description 609 625	hypermobile type
+R2	MODIFY Arg1:T12 Arg2:E6	
+T13	Disease_disorder 485 503	limb malformations
+E8	Disease_disorder:T13 
+A1	POLARITY E8 NEG
+T14	Disease_disorder 512 539	other major organ anomalies
+E9	Disease_disorder:T14 
+T15	Disease_disorder 474 481;490 503	cardiac malformations
+E10	Disease_disorder:T15 
+A2	POLARITY E10 NEG
+*	OVERLAP E10 E8 E1
+T16	Disease_disorder 734 747	Ehlers–Danlos
+E11	Disease_disorder:T16 
+T17	Detailed_description 717 733	hypermobile type
+R5	MODIFY Arg1:T17 Arg2:E11	
+T18	Diagnostic_procedure 2831 2853	DNA Polymerase Gamma 1
+E12	Diagnostic_procedure:T18 
+T19	Diagnostic_procedure 2831 2851;2858 2859	DNA Polymerase Gamma 2
+E13	Diagnostic_procedure:T19 
+T20	Diagnostic_procedure 2861 2866	POLG1
+E14	Diagnostic_procedure:T20 
+T21	Diagnostic_procedure 2871 2876	POLG2
+E15	Diagnostic_procedure:T21 
+R6	IDENTICAL Arg1:E15 Arg2:E13	
+R7	IDENTICAL Arg1:E14 Arg2:E12	
+T22	Diagnostic_procedure 2882 2905	Thymidine Phosphorylase
+E16	Diagnostic_procedure:T22 
+T23	Diagnostic_procedure 2817 2827	sequencing
+E17	Diagnostic_procedure:T23 
+R8	SUB_PROCEDURE Arg1:E13 Arg2:E17	
+R9	SUB_PROCEDURE Arg1:E13 Arg2:E17	
+R10	SUB_PROCEDURE Arg1:E16 Arg2:E17	
+A3	POLARITY E12 NEG
+A4	POLARITY E13 NEG
+A5	POLARITY E16 NEG
+T24	Diagnostic_procedure 2794 2811	genome sequencing
+E18	Diagnostic_procedure:T24 
+T25	Biological_structure 2780 2793	mitochondrial
+T26	Detailed_description 2774 2779	Whole
+R11	MODIFY Arg1:T26 Arg2:T25	
+R12	MODIFY Arg1:T25 Arg2:E18	
+*	OVERLAP E18 E17 E21
+T27	Diagnostic_procedure 2637 2662	Citrate synthase activity
+E19	Diagnostic_procedure:T27 
+T28	Lab_value 2701 2707	normal
+T29	Diagnostic_procedure 2725 2739	sample quality
+E20	Diagnostic_procedure:T29 
+T30	Diagnostic_procedure 2751 2772	mitochondrial content
+E21	Diagnostic_procedure:T30 
+T31	Lab_value 2744 2750	normal
+T32	Lab_value 2720 2724	good
+R13	MODIFY Arg1:T32 Arg2:E20	
+R14	MODIFY Arg1:T31 Arg2:E21	
+T33	Coreference 2678 2695	both ETC analyses
+E22	Coreference:T33 
+T34	Diagnostic_procedure 2637 2653;2667 2674	Citrate synthase content
+E23	Diagnostic_procedure:T34 
+T35	Diagnostic_procedure 2538 2550	ETC analysis
+E24	Diagnostic_procedure:T35 
+T36	Detailed_description 2531 2537	Repeat
+T37	Biological_structure 2563 2575	mitochondria
+T38	Detailed_description 2554 2562	isolated
+R15	MODIFY Arg1:T38 Arg2:T37	
+R16	MODIFY Arg1:T36 Arg2:E24	
+R17	MODIFY Arg1:T37 Arg2:E24	
+T39	Disease_disorder 2614 2635	complex IV deficiency
+E25	Disease_disorder:T39 
+T40	Severity 2588 2596	profound
+T41	Detailed_description 2601 2613	reproducible
+R18	MODIFY Arg1:T41 Arg2:E25	
+R19	MODIFY Arg1:T40 Arg2:E25	
+R20	MODIFY Arg1:E25 Arg2:E24	
+T42	Diagnostic_procedure 2296 2320;2327 2335	electron transport chain activity
+E26	Diagnostic_procedure:T42 
+T43	Diagnostic_procedure 2321 2335	(ETC) activity
+E27	Diagnostic_procedure:T43 
+R21	IDENTICAL Arg1:E27 Arg2:E26	
+T44	Diagnostic_procedure 2392 2402	complex IV
+E28	Diagnostic_procedure:T44 
+T45	Diagnostic_procedure 2362 2373	complexes I
+E29	Diagnostic_procedure:T45 
+T46	Diagnostic_procedure 2362 2371;2375 2377	complexes II
+E30	Diagnostic_procedure:T46 
+T47	Diagnostic_procedure 2362 2371;2383 2386	complexes III
+E31	Diagnostic_procedure:T47 
+T48	Lab_value 2343 2349	normal
+R22	SUB_PROCEDURE Arg1:E29 Arg2:E26	
+R23	SUB_PROCEDURE Arg1:E30 Arg2:E26	
+R24	SUB_PROCEDURE Arg1:E31 Arg2:E26	
+R25	SUB_PROCEDURE Arg1:E28 Arg2:E26	
+R26	MODIFY Arg1:T48 Arg2:E31	
+R27	MODIFY Arg1:T48 Arg2:E30	
+R28	MODIFY Arg1:T48 Arg2:E29	
+T49	Diagnostic_procedure 2407 2427	cytochrome c oxidase
+E32	Diagnostic_procedure:T49 
+R29	IDENTICAL Arg1:E32 Arg2:E28	
+T50	Lab_value 2442 2464	45.4 lmol/min/g weight
+R30	MODIFY Arg1:T50 Arg2:E32	
+T51	Diagnostic_procedure 2123 2129	biopsy
+E33	Diagnostic_procedure:T51 
+T52	Biological_structure 2116 2122	Muscle
+R31	MODIFY Arg1:T52 Arg2:E33	
+T53	Diagnostic_procedure 2156 2178	fiber size variability
+E34	Diagnostic_procedure:T53 
+T54	Lab_value 2144 2152	increase
+T55	Severity 2139 2143	mild
+R32	MODIFY Arg1:T55 Arg2:T54	
+R33	MODIFY Arg1:T54 Arg2:E34	
+R34	SUB_PROCEDURE Arg1:E34 Arg2:E33	
+T56	Diagnostic_procedure 2254 2273	electron microscopy
+E35	Diagnostic_procedure:T56 
+T58	Age 1820 1836	13 months of age
+T59	Sign_symptom 1854 1869	muscle weakness
+E37	Sign_symptom:T59 
+T60	Detailed_description 1842 1853	progressive
+R36	MODIFY Arg1:T60 Arg2:E37	
+T61	Disease_disorder 1871 1894	autonomic dysregulation
+E38	Disease_disorder:T61 
+T62	Disease_disorder 1896 1917	hypoglycemic episodes
+E39	Disease_disorder:T62 
+T63	Disease_disorder 1919 1950	exocrine pancreatic dysfunction
+E40	Disease_disorder:T63 
+T64	Diagnostic_procedure 1967 1992	gastrointestinal function
+E41	Diagnostic_procedure:T64 
+T65	Detailed_description 1956 1963	decline
+R37	MODIFY Arg1:T65 Arg2:E41	
+T66	Disease_disorder 2070 2082	hyperalgesia
+E42	Disease_disorder:T66 
+T67	Biological_structure 2061 2069	visceral
+R38	MODIFY Arg1:T67 Arg2:E42	
+T68	Disease_disorder 2084 2095	dysmotility
+E43	Disease_disorder:T68 
+T69	Disease_disorder 2101 2114	malabsorption
+E44	Disease_disorder:T69 
+T70	Disease_disorder 2033 2053	nutrition dependency
+E45	Disease_disorder:T70 
+T71	Severity 2016 2021	total
+T72	Detailed_description 2022 2032	parenteral
+R39	MODIFY Arg1:T72 Arg2:E45	
+R40	MODIFY Arg1:T71 Arg2:T72	
+T73	Diagnostic_procedure 1165 1169	FISH
+E46	Diagnostic_procedure:T73 
+T74	Diagnostic_procedure 907 913	biopsy
+E47	Diagnostic_procedure:T74 
+T75	Biological_structure 902 906	Skin
+R41	MODIFY Arg1:T75 Arg2:E47	
+T76	Disease_disorder 1021 1043	Ehlers–Danlos syndrome
+E48	Disease_disorder:T76 
+T77	Diagnostic_procedure 980 989	mutations
+E49	Diagnostic_procedure:T77 
+A7	POLARITY E49 NEG
+T78	Detailed_description 1006 1017	other forms
+R42	MODIFY Arg1:T78 Arg2:E48	
+T79	Biological_structure 948 964	peripheral blood
+T80	Diagnostic_procedure 937 944	testing
+E50	Diagnostic_procedure:T80 
+R43	MODIFY Arg1:T79 Arg2:E50	
+A8	POLARITY E47 NEG
+T81	Texture 837 841	soft
+T82	Texture 843 850	fragile
+T83	Lab_value 832 836	very
+R44	MODIFY Arg1:T83 Arg2:T81	
+R45	MODIFY Arg1:T83 Arg2:T82	
+T84	Biological_structure 851 855	skin
+R46	MODIFY Arg1:T81 Arg2:T84	
+R47	MODIFY Arg1:T82 Arg2:T84	
+T85	Detailed_description 861 877	unusual scarring
+R48	MODIFY Arg1:T85 Arg2:T84	
+T86	Detailed_description 888 900	skin healing
+T87	Lab_value 883 887	poor
+R49	MODIFY Arg1:T87 Arg2:T86	
+R50	MODIFY Arg1:T86 Arg2:T84	
+T88	Diagnostic_procedure 1045 1064	Microarray analysis
+E51	Diagnostic_procedure:T88 
+T89	Biological_structure 1117 1123	4q35.1
+#1	AnnotatorNotes T89	Chromosome location
+T90	Diagnostic_procedure 1105 1113	deletion
+E52	Diagnostic_procedure:T90 
+T91	Detailed_description 1084 1104	maternally-inherited
+R51	MODIFY Arg1:T91 Arg2:E52	
+R52	MODIFY Arg1:T89 Arg2:E52	
+R53	SUB_PROCEDURE Arg1:E52 Arg2:E51	
+T92	Diagnostic_procedure 1138 1147	one clone
+E53	Diagnostic_procedure:T92 
+T93	Disease_disorder 775 788	hypermobility
+E54	Disease_disorder:T93 
+T94	Diagnostic_procedure 801 829	Beighton hypermobility scale
+E55	Diagnostic_procedure:T94 
+T95	Lab_value 790 793	9/9
+R54	MODIFY Arg1:T95 Arg2:E55	
+R55	MODIFY Arg1:E55 Arg2:E54	
+T96	Disease_disorder 1785 1810	mitochondrial dysfunction
+E56	Disease_disorder:T96 
+T97	Diagnostic_procedure 1214 1252	180K custom oligonucleotide microarray
+E57	Diagnostic_procedure:T97 
+T98	Nonbiological_location 1254 1310	Baylor College of Medicine Medical Genetics Laboratories
+T99	Lab_value 1353 1376	maximum size of 1.37 Mb
+T100	Lab_value 218 223	three
+T101	Subject 1707 1717	her mother
+T104	Detailed_description 1719 1755	from whom the deletion was inherited
+R57	MODIFY Arg1:T104 Arg2:T101	
+T105	Diagnostic_procedure 1599 1605	CYP4V2
+E59	Diagnostic_procedure:T105 
+T106	Diagnostic_procedure 1607 1612	KLKB2
+E60	Diagnostic_procedure:T106 
+T107	Diagnostic_procedure 1614 1617	F11
+E61	Diagnostic_procedure:T107 
+T108	Diagnostic_procedure 1619 1626	MTRNR1A
+E62	Diagnostic_procedure:T108 
+T109	Diagnostic_procedure 1632 1636	FAT1
+E63	Diagnostic_procedure:T109 
+*	OVERLAP E62 E61 E60 E59
+T4	Biological_structure 120 136	lumbar vertebrae
+T5	Biological_structure 93 104	C1 vertebra
+T110	Detailed_description 86 92	absent
+T111	Detailed_description 106 119	supernumerary
+R58	MODIFY Arg1:T110 Arg2:T5	
+R59	MODIFY Arg1:T111 Arg2:T4	
+T6	Biological_structure 150 156	sacrum
+T112	Biological_structure 157 163	coccyx
+T113	Detailed_description 138 149	hypoplastic
+R60	MODIFY Arg1:T113 Arg2:T6	
+R61	MODIFY Arg1:T113 Arg2:T112	
+T114	Biological_structure 171 186	filum terminale
+T115	Biological_structure 201 212	spinal cord
+T116	Biological_structure 230 234	ribs
+T117	Detailed_description 224 229	fused
+R62	MODIFY Arg1:T117 Arg2:T116	
+R63	MODIFY Arg1:T100 Arg2:T116	
+T118	Detailed_description 192 200	tethered
+T119	Detailed_description 165 170	fatty
+R64	MODIFY Arg1:T119 Arg2:T114	
+R65	MODIFY Arg1:T118 Arg2:T115	
+T7	Disease_disorder 239 261	anorectal malformation
+E2	Disease_disorder:T7 
+T11	Biological_structure 274 280	cloaca
+T120	Biological_structure 334 340	vagina
+T121	Biological_structure 304 320	urogenital sinus
+T122	Detailed_description 297 303	common
+R1	MODIFY Arg1:T122 Arg2:T121	
+T123	Detailed_description 327 333	duplex
+R4	MODIFY Arg1:T123 Arg2:T120	
+T124	Detailed_description 346 360	midline septum
+R66	MODIFY Arg1:T124 Arg2:T120	
+T125	Disease_disorder 369 379	TE fistula
+E3	Disease_disorder:T125 
+T126	Detailed_description 362 368	type C
+R67	MODIFY Arg1:T126 Arg2:E3	
+T127	Disease_disorder 393 401	agenesis
+E4	Disease_disorder:T127 
+T128	Biological_structure 381 392	right renal
+R68	MODIFY Arg1:T128 Arg2:E4	
+T129	Disease_disorder 421 435	hydronephrosis
+E5	Disease_disorder:T129 
+T130	Disease_disorder 440 461	vesicoureteral reflux
+E7	Disease_disorder:T130 
+T131	Severity 407 415	moderate
+T132	Detailed_description 416 420	left
+R69	MODIFY Arg1:T132 Arg2:E5	
+R70	MODIFY Arg1:T131 Arg2:E5	
+R71	MODIFY Arg1:T5 Arg2:E1	
+R72	MODIFY Arg1:T4 Arg2:E1	
+R73	MODIFY Arg1:T6 Arg2:E1	
+R74	MODIFY Arg1:T112 Arg2:E1	
+R75	MODIFY Arg1:T114 Arg2:E1	
+R76	MODIFY Arg1:T115 Arg2:E1	
+R77	MODIFY Arg1:T116 Arg2:E1	
+R78	MODIFY Arg1:E2 Arg2:E1	
+R79	MODIFY Arg1:T11 Arg2:E2	
+R80	MODIFY Arg1:T121 Arg2:T11	
+R81	MODIFY Arg1:T120 Arg2:T11	
+R82	MODIFY Arg1:E3 Arg2:E1	
+R83	MODIFY Arg1:E4 Arg2:E1	
+R84	BEFORE Arg1:E5 Arg2:E1	
+R85	MODIFY Arg1:E7 Arg2:E1	
+A9	POLARITY E9 NEG
+R86	BEFORE Arg1:E10 Arg2:E9	
+R87	MODIFY Arg1:E54 Arg2:E11	
+R88	MODIFY Arg1:T84 Arg2:E11	
+R89	MODIFY Arg1:T86 Arg2:E11	
+*	OVERLAP E11 E47 E50 E9
+R90	SUB_PROCEDURE Arg1:E49 Arg2:E50	
+R91	MODIFY Arg1:E48 Arg2:E49	
+*	OVERLAP E48 E51
+R92	SUB_PROCEDURE Arg1:E53 Arg2:E52	
+R93	SUB_PROCEDURE Arg1:E46 Arg2:E52	
+T133	Diagnostic_procedure 1170 1183	(RP11-173M11)
+E64	Diagnostic_procedure:T133 
+R94	IDENTICAL Arg1:E64 Arg2:E46	
+R95	BEFORE Arg1:E64 Arg2:E57	
+R96	MODIFY Arg1:T98 Arg2:E57	
+T134	Diagnostic_procedure 1383 1392	karyotype
+E65	Diagnostic_procedure:T134 
+T135	Detailed_description 1404 1459	46,XX,arr cgh 4q35.1q35.2 (187,321-768-188,694-589) 3 1
+R97	MODIFY Arg1:T135 Arg2:E65	
+R98	SUB_PROCEDURE Arg1:E65 Arg2:E57	
+T136	Diagnostic_procedure 1324 1347	deleted region deletion
+E66	Diagnostic_procedure:T136 
+R99	MODIFY Arg1:T99 Arg2:E66	
+R100	SUB_PROCEDURE Arg1:E66 Arg2:E57	
+*	OVERLAP E53 E46
+T137	Diagnostic_procedure 1461 1466	Genes
+E67	Diagnostic_procedure:T137 
+T138	Detailed_description 1474 1488	deleted region
+R101	MODIFY Arg1:T138 Arg2:E67	
+R102	SUB_PROCEDURE Arg1:E59 Arg2:E67	
+R103	SUB_PROCEDURE Arg1:E60 Arg2:E67	
+R104	SUB_PROCEDURE Arg1:E61 Arg2:E67	
+R105	SUB_PROCEDURE Arg1:E62 Arg2:E67	
+R106	SUB_PROCEDURE Arg1:E63 Arg2:E67	
+T103	Disease_disorder 1760 1770	unaffected
+E68	Disease_disorder:T103 
+A10	POLARITY E68 NEG
+T139	Family_history 1760 1770	unaffected
+R56	MODIFY Arg1:E68 Arg2:T101	
+R107	AFTER Arg1:E67 Arg2:E56	
+R108	MODIFY Arg1:E37 Arg2:E56	
+*	OVERLAP E37 E38 E39 E40 E41
+R109	BEFORE Arg1:E41 Arg2:E45	
+R110	CAUSE Arg1:E42 Arg2:E45	
+R111	CAUSE Arg1:E43 Arg2:E45	
+R112	CAUSE Arg1:E44 Arg2:E45	
+*	OVERLAP E42 E43 E44 E33
+R113	MODIFY Arg1:E41 Arg2:E56	
+R114	MODIFY Arg1:E40 Arg2:E56	
+R115	MODIFY Arg1:E39 Arg2:E56	
+R116	MODIFY Arg1:E38 Arg2:E56	
+R117	MODIFY Arg1:E37 Arg2:E56	
+T57	Diagnostic_procedure 2186 2200	other findings
+E36	Diagnostic_procedure:T57 
+A6	POLARITY E36 NEG
+T102	Detailed_description 2201 2238	consistent with mitochondrial disease
+R35	MODIFY Arg1:T102 Arg2:E36	
+R118	SUB_PROCEDURE Arg1:E35 Arg2:E36	
+R119	SUB_PROCEDURE Arg1:E36 Arg2:E33	
+*	OVERLAP E34 E36
+*	OVERLAP E35 E26
+T140	Detailed_description 2466 2494	well below the control range
+R120	MODIFY Arg1:T140 Arg2:T50	
+*	OVERLAP E32 E24
+*	OVERLAP E25 E19
+R121	IDENTICAL Arg1:E22 Arg2:E27	
+R122	IDENTICAL Arg1:E22 Arg2:E24	
+R123	SUB_PROCEDURE Arg1:E23 Arg2:E22	
+R124	SUB_PROCEDURE Arg1:E19 Arg2:E22	
+R125	MODIFY Arg1:T28 Arg2:E19	
+R126	MODIFY Arg1:T28 Arg2:E23	
+R127	SUB_PROCEDURE Arg1:E20 Arg2:E22	
+R128	SUB_PROCEDURE Arg1:E21 Arg2:E22	
+T141	Family_history 626 648	Ehlers–Danlos syndrome
+R3	MODIFY Arg1:E6 Arg2:T8	
+T142	Other_entity 546 549	she
+#2	AnnotatorNotes T142	Patient herself
+R129	MODIFY Arg1:E6 Arg2:T142	

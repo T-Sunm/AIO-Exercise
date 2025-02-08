@@ -1,0 +1,487 @@
+T1	Age 2 14	14-month-old
+T2	Sex 15 18	boy
+T3	Clinical_event 23 31	referred
+E1	Clinical_event:T3 
+T4	Nonbiological_location 39 47	hospital
+R1	MODIFY Arg1:T4 Arg2:E1	
+T5	Nonbiological_location 48 69	from another hospital
+R2	MODIFY Arg1:T5 Arg2:E1	
+T6	Sign_symptom 81 88	dilated
+E2	Sign_symptom:T6 
+T7	Sign_symptom 93 106	hypertrophied
+E3	Sign_symptom:T7 
+T8	Biological_structure 107 121	left ventricle
+R3	MODIFY Arg1:T8 Arg2:E3	
+R4	MODIFY Arg1:T8 Arg2:E2	
+T9	Biological_structure 123 125	LV
+R5	IDENTICAL Arg1:T9 Arg2:T8	
+T10	Sign_symptom 128 139	neutropenia
+E4	Sign_symptom:T10 
+T11	Disease_disorder 145 164	developmental delay
+E5	Disease_disorder:T11 
+T12	Date 168 183	27 October 2011
+E6	Date:T12 
+T13	Clinical_event 192 196	born
+E7	Clinical_event:T13 
+T14	Detailed_description 200 209	full term
+R6	MODIFY Arg1:T14 Arg2:E7	
+T16	Date 241 259	Sixteen days after
+E8	Date:T16 
+T17	Clinical_event 274 286	hospitalized
+E9	Clinical_event:T17 
+T18	Sign_symptom 307 319	irritability
+E10	Sign_symptom:T18 
+T19	Detailed_description 296 306	persistent
+R7	MODIFY Arg1:T19 Arg2:E10	
+T20	Diagnostic_procedure 329 339	radiograph
+E11	Diagnostic_procedure:T20 
+T21	Biological_structure 323 328	chest
+R8	MODIFY Arg1:T21 Arg2:E11	
+T22	Sign_symptom 347 359	cardiomegaly
+E12	Sign_symptom:T22 
+T23	Diagnostic_procedure 368 382	echocardiogram
+E13	Diagnostic_procedure:T23 
+T24	Diagnostic_procedure 402 418	LV contractility
+E14	Diagnostic_procedure:T24 
+T25	Qualitative_concept 392 401	decreased
+R9	MODIFY Arg1:T25 Arg2:E14	
+T26	Diagnostic_procedure 420 437	ejection fraction
+E15	Diagnostic_procedure:T26 
+T27	Clinical_event 518 530	presentation
+E16	Clinical_event:T27 
+T28	Nonbiological_location 538 546	hospital
+R10	MODIFY Arg1:T28 Arg2:E16	
+T29	Therapeutic_procedure 494 501	managed
+E17	Therapeutic_procedure:T29 
+T30	Duration 506 510	1 yr
+E18	Duration:T30 
+T31	Sign_symptom 577 595	feeding difficulty
+E19	Sign_symptom:T31 
+T32	Sign_symptom 600 619	developmental delay
+E20	Sign_symptom:T32 
+T33	Clinical_event 661 669	admitted
+E21	Clinical_event:T33 
+T34	Nonbiological_location 673 688	other hospitals
+R11	MODIFY Arg1:T34 Arg2:E21	
+T35	Frequency 689 696	7 times
+R12	MODIFY Arg1:T35 Arg2:E21	
+T36	Disease_disorder 708 717	infection
+E22	Disease_disorder:T36 
+T37	Medication 742 752	furosemide
+E23	Medication:T37 
+T38	Medication 754 768	spironolactone
+E24	Medication:T38 
+T39	Medication 770 779	enalapril
+E25	Medication:T39 
+T40	Medication 785 795	carvedilol
+E26	Medication:T40 
+T41	Clinical_event 825 833	referred
+E27	Clinical_event:T41 
+T42	Nonbiological_location 841 849	hospital
+R13	MODIFY Arg1:T42 Arg2:E27	
+T43	Date 853 866	14 months old
+E28	Date:T43 
+T44	Diagnostic_procedure 872 883	body weight
+E29	Diagnostic_procedure:T44 
+T45	Lab_value 888 892	6 kg
+R14	MODIFY Arg1:T45 Arg2:E29	
+T46	Disease_disorder 469 480	myocarditis
+E30	Disease_disorder:T46 
+A1	POLARITY E30 UNCERTAIN
+T47	Outcome 3336 3340	died
+E31	Outcome:T47 
+T15	Diagnostic_procedure 218 229	body weight
+E32	Diagnostic_procedure:T15 
+T48	Lab_value 233 239	3.2 kg
+E33	Lab_value:T48 
+R15	MODIFY Arg1:E33 Arg2:E32	
+T49	Diagnostic_procedure 985 1002	motor development
+E34	Diagnostic_procedure:T49 
+T50	Lab_value 1007 1014	delayed
+E35	Lab_value:T50 
+R16	MODIFY Arg1:E35 Arg2:E34	
+T51	Activity 1033 1042	sit alone
+E36	Activity:T51 
+A2	POLARITY E36 NEG
+T52	Activity 1047 1075	could say "mama" and "papa."
+E37	Activity:T52 
+T53	Diagnostic_procedure 1089 1103	blood pressure
+E38	Diagnostic_procedure:T53 
+T54	Diagnostic_procedure 1108 1118	heart rate
+E39	Diagnostic_procedure:T54 
+T55	Lab_value 1124 1134	94/30 mmHg
+E40	Lab_value:T55 
+T56	Lab_value 1139 1159	132 beats per minute
+E41	Lab_value:T56 
+R17	MODIFY Arg1:E40 Arg2:E38	
+R18	MODIFY Arg1:E41 Arg2:E39	
+T57	Diagnostic_procedure 1178 1198	physical examination
+E42	Diagnostic_procedure:T57 
+T58	Sign_symptom 1212 1224	heart murmur
+E43	Sign_symptom:T58 
+A3	POLARITY E43 NEG
+T59	Sign_symptom 1259 1267	palpable
+E44	Sign_symptom:T59 
+A4	POLARITY E44 NEG
+T60	Biological_structure 1245 1250	liver
+R19	MODIFY Arg1:T60 Arg2:E44	
+T61	Sign_symptom 1295 1306	neutropenia
+E45	Sign_symptom:T61 
+T62	Detailed_description 1284 1294	persistent
+R20	MODIFY Arg1:T62 Arg2:E45	
+T63	Clinical_event 1333 1337	stay
+E46	Clinical_event:T63 
+T64	Nonbiological_location 1345 1362	previous hospital
+R21	MODIFY Arg1:T64 Arg2:E46	
+T65	Diagnostic_procedure 1368 1371	WBC
+E47	Diagnostic_procedure:T65 
+T66	Diagnostic_procedure 1376 1386	neutrophil
+E48	Diagnostic_procedure:T66 
+T67	Lab_value 1399 1407	8,800/µL
+E49	Lab_value:T67 
+T68	Lab_value 1417 1419	2%
+E50	Lab_value:T68 
+T69	Lab_value 1421 1427	176/µL
+E51	Lab_value:T69 
+R22	MODIFY Arg1:E49 Arg2:E47	
+R23	MODIFY Arg1:E50 Arg2:E48	
+R24	MODIFY Arg1:E51 Arg2:E48	
+T70	Diagnostic_procedure 1448 1469	B-natriuretic peptide
+E52	Diagnostic_procedure:T70 
+T71	Lab_value 1480 1491	1,045 pg/mL
+E53	Lab_value:T71 
+R25	MODIFY Arg1:E53 Arg2:E52	
+T72	Diagnostic_procedure 1501 1511	radiograph
+E54	Diagnostic_procedure:T72 
+T73	Biological_structure 1495 1500	chest
+R26	MODIFY Arg1:T73 Arg2:E54	
+T74	Sign_symptom 1524 1536	cardiomegaly
+E55	Sign_symptom:T74 
+T75	Severity 1519 1523	mild
+R27	MODIFY Arg1:T75 Arg2:E55	
+T76	Diagnostic_procedure 1538 1558	cardiothoracic ratio
+E56	Diagnostic_procedure:T76 
+T77	Lab_value 1560 1565	62.8%
+E57	Lab_value:T77 
+R28	MODIFY Arg1:E57 Arg2:E56	
+T78	Diagnostic_procedure 1583 1600	electrocardiogram
+E58	Diagnostic_procedure:T78 
+T79	Diagnostic_procedure 1614 1625	QRS voltage
+E59	Diagnostic_procedure:T79 
+T80	Lab_value 1610 1613	low
+E60	Lab_value:T80 
+R29	MODIFY Arg1:E60 Arg2:E59	
+T81	Diagnostic_procedure 1633 1643	limb leads
+E61	Diagnostic_procedure:T81 
+R30	SUB_PROCEDURE Arg1:E61 Arg2:E58	
+R31	SUB_PROCEDURE Arg1:E59 Arg2:E61	
+T82	Diagnostic_procedure 1648 1662	echocardiogram
+E62	Diagnostic_procedure:T82 
+T83	Sign_symptom 1686 1699	hypertrophied
+E63	Sign_symptom:T83 
+T84	Sign_symptom 1674 1681	dilated
+E64	Sign_symptom:T84 
+T85	Sign_symptom 1719 1732	hypertrophied
+E65	Sign_symptom:T85 
+T86	Sign_symptom 1754 1773	hyper-trabeculation
+E66	Sign_symptom:T86 
+T87	Sign_symptom 1700 1708	globular
+E67	Sign_symptom:T87 
+T88	Biological_structure 1709 1711	LV
+R32	MODIFY Arg1:T88 Arg2:E67	
+R33	MODIFY Arg1:T88 Arg2:E63	
+R34	MODIFY Arg1:T88 Arg2:E64	
+T89	Biological_structure 1733 1749	papillary muscle
+R35	MODIFY Arg1:T89 Arg2:E65	
+T90	Disease_disorder 1813 1827	non-compaction
+E68	Disease_disorder:T90 
+A5	POLARITY E68 NEG
+T91	Biological_structure 1810 1812	LV
+R36	MODIFY Arg1:T91 Arg2:E68	
+T92	Diagnostic_procedure 1839 1867	echocardiographic parameters
+E69	Diagnostic_procedure:T92 
+T93	Disease_disorder 3406 3419	heart failure
+E70	Disease_disorder:T93 
+T94	Disease_disorder 3361 3379	metabolic acidosis
+E71	Disease_disorder:T94 
+T95	Date 3420 3432	7 days after
+E72	Date:T95 
+T96	Clinical_event 3441 3445	care
+E73	Clinical_event:T96 
+T97	Nonbiological_location 3437 3440	ICU
+R37	MODIFY Arg1:T97 Arg2:E73	
+T98	Clinical_event 3458 3462	stay
+E74	Clinical_event:T98 
+T99	Nonbiological_location 3466 3469	ICU
+R38	MODIFY Arg1:T99 Arg2:E74	
+T100	Diagnostic_procedure 3484 3500	genetic analysis
+E75	Diagnostic_procedure:T100 
+T101	Detailed_description 3501 3519	for Barth syndrome
+T102	Disease_disorder 3505 3519	Barth syndrome
+E76	Disease_disorder:T102 
+R39	MODIFY Arg1:T101 Arg2:E75	
+T103	Disease_disorder 3551 3565	cardiomyopathy
+E77	Disease_disorder:T103 
+T104	Sign_symptom 3567 3578	neutropenia
+E78	Sign_symptom:T104 
+T105	Disease_disorder 3584 3603	developmental delay
+E79	Disease_disorder:T105 
+T106	Diagnostic_procedure 1888 1917	internal diameter at diastole
+E80	Diagnostic_procedure:T106 
+T107	Biological_structure 1885 1887	LV
+R40	MODIFY Arg1:T107 Arg2:E80	
+T108	Lab_value 1919 1926	37.7 mm
+E81	Lab_value:T108 
+R41	MODIFY Arg1:E81 Arg2:E80	
+T109	Diagnostic_procedure 1939 1956	ejection fraction
+E82	Diagnostic_procedure:T109 
+T110	Lab_value 1958 1963	36.6%
+E83	Lab_value:T110 
+R42	MODIFY Arg1:E83 Arg2:E82	
+T111	Diagnostic_procedure 1972 1982	mass index
+E84	Diagnostic_procedure:T111 
+T112	Biological_structure 1969 1971	LV
+R43	MODIFY Arg1:T112 Arg2:E84	
+T113	Lab_value 1984 1990	75.6 g
+E85	Lab_value:T113 
+*	OVERLAP E85 E84
+T114	Diagnostic_procedure 3609 3631	gene sequence analysis
+E86	Diagnostic_procedure:T114 
+T115	Lab_value 3698 3706	mutation
+E87	Lab_value:T115 
+T116	Lab_value 3708 3717	c.227delC
+E88	Lab_value:T116 
+T117	Detailed_description 3650 3658	TAZ gene
+R44	MODIFY Arg1:T117 Arg2:E86	
+R45	MODIFY Arg1:E87 Arg2:E86	
+T118	Detailed_description 3676 3686	hemizygous
+T119	Detailed_description 3687 3697	frameshift
+T120	Lab_value 3719 3733	p.Pro76LeufsX7
+E89	Lab_value:T120 
+T121	Subject 3764 3770	mother
+R46	MODIFY Arg1:T119 Arg2:E87	
+R47	MODIFY Arg1:T118 Arg2:E87	
+R48	MODIFY Arg1:E88 Arg2:E86	
+R49	MODIFY Arg1:E89 Arg2:E88	
+T122	Detailed_description 3745 3754	inherited
+R50	MODIFY Arg1:T121 Arg2:T122	
+R51	MODIFY Arg1:T122 Arg2:E86	
+T123	Therapeutic_procedure 3243 3253	ventilator
+E90	Therapeutic_procedure:T123 
+T124	Medication 3268 3284	inotropic agents
+E91	Medication:T124 
+T125	Quantitative_concept 3260 3267	several
+R52	MODIFY Arg1:T125 Arg2:E91	
+T126	Therapeutic_procedure 3296 3311	supportive care
+E92	Therapeutic_procedure:T126 
+T127	Sign_symptom 2060 2073	hypertrophied
+E93	Sign_symptom:T127 
+T128	Sign_symptom 2048 2055	dilated
+E94	Sign_symptom:T128 
+T129	Diagnostic_procedure 2111 2131	computed tomographic
+E95	Diagnostic_procedure:T129 
+T130	Diagnostic_procedure 2133 2135	CT
+E96	Diagnostic_procedure:T130 
+R53	IDENTICAL Arg1:E96 Arg2:E95	
+T131	Diagnostic_procedure 2137 2148	angiography
+E97	Diagnostic_procedure:T131 
+T132	Detailed_description 2154 2166	contrast dye
+R54	MODIFY Arg1:T132 Arg2:E97	
+T133	Detailed_description 2093 2110	thoraco-abdominal
+R55	MODIFY Arg1:T133 Arg2:E95	
+T134	Diagnostic_procedure 2172 2174	CT
+E98	Diagnostic_procedure:T134 
+T135	Sign_symptom 2194 2205	abnormality
+E99	Sign_symptom:T135 
+A6	POLARITY E99 NEG
+T136	Biological_structure 2213 2219	kidney
+R56	MODIFY Arg1:T136 Arg2:E99	
+T137	Biological_structure 2230 2236	organs
+T138	Biological_structure 2241 2248	vessels
+R57	MODIFY Arg1:T137 Arg2:E99	
+R58	MODIFY Arg1:T138 Arg2:E99	
+T139	Diagnostic_procedure 2276 2278	CT
+E100	Diagnostic_procedure:T139 
+T140	Diagnostic_procedure 2279 2290	angiography
+E101	Diagnostic_procedure:T140 
+T141	Sign_symptom 2337 2342	fever
+E102	Sign_symptom:T141 
+T142	Sign_symptom 2375 2383	diarrhea
+E103	Sign_symptom:T142 
+T143	Volume 2385 2399	800 cc per day
+R59	MODIFY Arg1:T143 Arg2:E103	
+T144	Disease_disorder 2417 2435	metabolic acidosis
+E104	Disease_disorder:T144 
+T145	Severity 2318 2328	high-grade
+T146	Detailed_description 2329 2336	spiking
+T147	Detailed_description 2311 2317	abrupt
+R60	MODIFY Arg1:T146 Arg2:E102	
+R61	MODIFY Arg1:T145 Arg2:E102	
+R62	MODIFY Arg1:T147 Arg2:E102	
+T148	Detailed_description 2365 2374	secretory
+R63	MODIFY Arg1:T148 Arg2:E103	
+T149	Diagnostic_procedure 2455 2458	WBC
+E105	Diagnostic_procedure:T149 
+T150	Diagnostic_procedure 2463 2473	neutrophil
+E106	Diagnostic_procedure:T150 
+T151	Lab_value 2481 2490	decreased
+E107	Lab_value:T151 
+T152	Lab_value 2494 2502	3,290/µL
+E108	Lab_value:T152 
+T153	Lab_value 2507 2509	1%
+E109	Lab_value:T153 
+T154	Lab_value 2511 2516	33/µL
+E110	Lab_value:T154 
+R64	MODIFY Arg1:E107 Arg2:E106	
+R65	MODIFY Arg1:E107 Arg2:E105	
+R66	MODIFY Arg1:E108 Arg2:E105	
+R67	MODIFY Arg1:E109 Arg2:E106	
+R68	MODIFY Arg1:E110 Arg2:E106	
+T155	Diagnostic_procedure 2537 2558	B-natriuretic peptide
+E111	Diagnostic_procedure:T155 
+T156	Lab_value 2569 2593	greater than 4,901 pg/mL
+E112	Lab_value:T156 
+R69	MODIFY Arg1:E112 Arg2:E111	
+T157	Sign_symptom 2622 2642	respiratory symptoms
+E113	Sign_symptom:T157 
+A7	POLARITY E113 NEG
+T158	Diagnostic_procedure 2696 2709	viral studies
+E114	Diagnostic_procedure:T158 
+T159	Lab_value 2715 2723	negative
+E115	Lab_value:T159 
+R70	MODIFY Arg1:E115 Arg2:E114	
+T160	Detailed_description 2663 2674	respiratory
+T161	Detailed_description 2679 2695	gastrointestinal
+R71	MODIFY Arg1:T161 Arg2:E114	
+R72	MODIFY Arg1:T160 Arg2:E114	
+T162	Diagnostic_procedure 2749 2757	cultures
+E116	Diagnostic_procedure:T162 
+T163	Detailed_description 2733 2738	blood
+T164	Detailed_description 2743 2748	stool
+R73	MODIFY Arg1:T164 Arg2:E116	
+R74	MODIFY Arg1:T163 Arg2:E116	
+T165	Lab_value 2763 2771	negative
+E117	Lab_value:T165 
+R75	MODIFY Arg1:E117 Arg2:E116	
+T166	Diagnostic_procedure 2791 2809	C-reactive protein
+E118	Diagnostic_procedure:T166 
+T167	Lab_value 2820 2830	7.08 mg/dL
+E119	Lab_value:T167 
+R76	MODIFY Arg1:E119 Arg2:E118	
+T168	Medication 2878 2897	fluid resuscitation
+E120	Medication:T168 
+T169	Therapeutic_procedure 2840 2855	supportive care
+E121	Therapeutic_procedure:T169 
+T170	Administration 2866 2877	intravenous
+R77	MODIFY Arg1:T170 Arg2:E120	
+T171	Medication 2912 2923	antibiotics
+E122	Medication:T171 
+T172	Detailed_description 2902 2911	empirical
+R78	MODIFY Arg1:T172 Arg2:E122	
+T173	Diagnostic_procedure 2939 2948	condition
+E123	Diagnostic_procedure:T173 
+T174	Lab_value 2949 2957	worsened
+E124	Lab_value:T174 
+R79	MODIFY Arg1:E124 Arg2:E123	
+T175	Disease_disorder 2975 2993	metabolic acidosis
+E125	Disease_disorder:T175 
+T176	Sign_symptom 2998 3020	respiratory difficulty
+E126	Sign_symptom:T176 
+T177	Clinical_event 3032 3040	transfer
+E127	Clinical_event:T177 
+T178	Nonbiological_location 3048 3067	intensive care unit
+T179	Nonbiological_location 3069 3072	ICU
+R80	IDENTICAL Arg1:T179 Arg2:T178	
+R81	MODIFY Arg1:T178 Arg2:E127	
+T180	Clinical_event 3095 3103	transfer
+E128	Clinical_event:T180 
+T181	Nonbiological_location 3091 3094	ICU
+R82	MODIFY Arg1:T181 Arg2:E128	
+T182	Diagnostic_procedure 3115 3117	pH
+E129	Diagnostic_procedure:T182 
+T183	Detailed_description 3109 3114	serum
+T184	Lab_value 3122 3127	6.881
+E130	Lab_value:T184 
+R83	MODIFY Arg1:E130 Arg2:E129	
+R84	MODIFY Arg1:T183 Arg2:E129	
+T185	Diagnostic_procedure 3129 3140	bicarbonate
+E131	Diagnostic_procedure:T185 
+T186	Lab_value 3148 3158	7.8 mmol/L
+E132	Lab_value:T186 
+R85	MODIFY Arg1:E132 Arg2:E131	
+T187	Diagnostic_procedure 3170 3173	CO2
+E133	Diagnostic_procedure:T187 
+T188	Lab_value 3178 3188	41.4 mm Hg
+E134	Lab_value:T188 
+R86	MODIFY Arg1:E134 Arg2:E133	
+*	OVERLAP E1 E2 E3 E4 E5 E6
+R87	AFTER Arg1:E6 Arg2:E7	
+*	OVERLAP E7 E32
+R88	BEFORE Arg1:E32 Arg2:E8	
+*	OVERLAP E8 E9 E10 E11 E12 E13 E14 E15
+T189	Lab_value 439 442	24%
+E135	Lab_value:T189 
+R89	MODIFY Arg1:E135 Arg2:E15	
+R90	BEFORE Arg1:E15 Arg2:E30	
+*	OVERLAP E30 E17 E18
+R91	BEFORE Arg1:E18 Arg2:E16	
+R92	AFTER Arg1:E16 Arg2:E19	
+T190	Clinical_event 625 630	birth
+E136	Clinical_event:T190 
+*	OVERLAP E19 E20
+R93	AFTER Arg1:E20 Arg2:E136	
+T191	Clinical_event 639 647	referral
+E137	Clinical_event:T191 
+R94	BEFORE Arg1:E136 Arg2:E137	
+R95	AFTER Arg1:E137 Arg2:E21	
+*	OVERLAP E21 E22 E23 E24 E25 E26
+T192	Clinical_event 803 811	referral
+E138	Clinical_event:T192 
+R96	BEFORE Arg1:E26 Arg2:E138	
+*	OVERLAP E138 E27 E28 E29 E139 E34 E36 E37 E38 E39 E42 E43 E44 E45
+T193	Diagnostic_procedure 928 934	height
+E139	Diagnostic_procedure:T193 
+T194	Lab_value 894 918	less than 3rd percentile
+E140	Lab_value:T194 
+R97	MODIFY Arg1:E140 Arg2:E29	
+T195	Lab_value 939 944	71 cm
+E141	Lab_value:T195 
+T196	Lab_value 946 970	less than 3rd percentile
+E142	Lab_value:T196 
+R98	MODIFY Arg1:E141 Arg2:E139	
+R99	MODIFY Arg1:E142 Arg2:E139	
+R100	AFTER Arg1:E45 Arg2:E46	
+R101	BEFORE Arg1:E46 Arg2:E47	
+*	OVERLAP E47 E48 E52 E54 E56 E58 E62
+R102	BEFORE Arg1:E62 Arg2:E64	
+*	OVERLAP E64 E63 E67 E65 E66 E68 E69 E94 E93
+R103	SUB_PROCEDURE Arg1:E80 Arg2:E69	
+R104	SUB_PROCEDURE Arg1:E82 Arg2:E69	
+R105	SUB_PROCEDURE Arg1:E84 Arg2:E69	
+T197	Biological_structure 2074 2076	LV
+R106	MODIFY Arg1:T197 Arg2:E93	
+R107	BEFORE Arg1:E93 Arg2:E95	
+*	OVERLAP E95 E97 E98
+R108	BEFORE Arg1:E98 Arg2:E99	
+R109	AFTER Arg1:E99 Arg2:E100	
+*	OVERLAP E100 E101
+R110	BEFORE Arg1:E101 Arg2:E102	
+*	OVERLAP E102 E103 E104 E105 E106 E111 E113 E114 E116 E118
+R111	BEFORE Arg1:E118 Arg2:E121	
+*	OVERLAP E121 E120 E122
+R112	BEFORE Arg1:E122 Arg2:E123	
+*	OVERLAP E123 E125 E126
+R113	BEFORE Arg1:E126 Arg2:E127	
+*	OVERLAP E127 E128
+R114	AFTER Arg1:E128 Arg2:E129	
+*	OVERLAP E129 E131 E133 E90 E91 E92
+R115	BEFORE Arg1:E92 Arg2:E31	
+R116	AFTER Arg1:E31 Arg2:E71	
+T198	Detailed_description 3350 3360	aggravated
+R117	MODIFY Arg1:T198 Arg2:E71	
+T199	Detailed_description 3384 3405	acutely decompensated
+R118	MODIFY Arg1:T199 Arg2:E70	
+*	OVERLAP E71 E70 E72
+R119	AFTER Arg1:E72 Arg2:E73	
+*	OVERLAP E73 E74 E75 E76 E77 E78 E79 E86
+A8	POLARITY E76 UNCERTAIN

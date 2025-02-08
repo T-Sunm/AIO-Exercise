@@ -1,0 +1,164 @@
+T1	Age 2 13	73-year-old
+T2	Sex 14 19	woman
+T3	Clinical_event 34 42	referred
+E1	Clinical_event:T3 
+T4	Date 43 57	19 months prio
+E2	Date:T4 
+T5	Disease_disorder 188 191	CNV
+E3	Disease_disorder:T5 
+#1	AnnotatorNotes E3	Choroidal neovascularization
+T6	Biological_structure 199 207	left eye
+R1	MODIFY Arg1:T6 Arg2:E3	
+T7	Detailed_description 219 246	not been previously treated
+R2	MODIFY Arg1:T7 Arg2:E3	
+T8	Detailed_description 180 187	classic
+T9	Detailed_description 170 179	subfoveal
+R3	MODIFY Arg1:T9 Arg2:E3	
+T10	Detailed_description 157 169	medium-sized
+R4	MODIFY Arg1:T10 Arg2:E3	
+T11	Diagnostic_procedure 136 147	angiography
+E4	Diagnostic_procedure:T11 
+T12	Detailed_description 118 135	indocyanine green
+T13	Detailed_description 102 113	fluorescein
+R5	MODIFY Arg1:T12 Arg2:E4	
+R6	MODIFY Arg1:T13 Arg2:E4	
+T14	Therapeutic_procedure 271 280	treatment
+E5	Therapeutic_procedure:T14 
+A1	POLARITY E5 NEG
+T15	Sign_symptom 328 344	decreased vision
+E6	Sign_symptom:T15 
+T16	Biological_structure 352 360	left eye
+R7	MODIFY Arg1:T16 Arg2:E6	
+T17	Diagnostic_procedure 366 394	best-corrected visual acuity
+E7	Diagnostic_procedure:T17 
+T18	Diagnostic_procedure 396 400	BCVA
+E8	Diagnostic_procedure:T18 
+R8	IDENTICAL Arg1:E8 Arg2:E7	
+T19	Lab_value 406 412	20/100
+R9	MODIFY Arg1:T19 Arg2:E7	
+T20	Diagnostic_procedure 414 435	Slit lamp examination
+E9	Diagnostic_procedure:T20 
+T21	Sign_symptom 461 466	patch
+E10	Sign_symptom:T21 
+T22	Color 451 460	yellowish
+T23	Detailed_description 445 450	small
+R10	MODIFY Arg1:T22 Arg2:E10	
+R11	MODIFY Arg1:T23 Arg2:E10	
+T24	Biological_structure 474 491	perifoveal region
+R12	MODIFY Arg1:T24 Arg2:E10	
+T25	Sign_symptom 496 509	retinal edema
+E11	Sign_symptom:T25 
+T26	Diagnostic_procedure 522 525	OCT
+E12	Diagnostic_procedure:T26 
+#2	AnnotatorNotes E12	Optical coherence tomography
+T27	Sign_symptom 539 556	retinal elevation
+E13	Sign_symptom:T27 
+T28	Detailed_description 511 521	Structural
+R13	MODIFY Arg1:T28 Arg2:E12	
+T29	Sign_symptom 558 574	subretinal fluid
+E14	Sign_symptom:T29 
+T30	Sign_symptom 598 612	elongated area
+E15	Sign_symptom:T30 
+T31	Biological_structure 581 597	hyper-reflective
+R14	MODIFY Arg1:T31 Arg2:E15	
+T32	Biological_structure 613 622	above RPE
+#3	AnnotatorNotes T32	Retinal pigment epithelium
+R15	MODIFY Arg1:T32 Arg2:E15	
+T33	Disease_disorder 642 645	CNV
+E16	Disease_disorder:T33 
+T34	Lab_value 634 641	type II
+R16	MODIFY Arg1:T34 Arg2:E16	
+T35	Therapeutic_procedure 647 672	Anti-angiogenic treatment
+E17	Therapeutic_procedure:T35 
+T36	Medication 691 702	aflibercept
+E18	Medication:T36 
+T37	Administration 678 690	intravitreal
+R17	MODIFY Arg1:T37 Arg2:E18	
+T38	Administration 703 713	injections
+R18	MODIFY Arg1:T38 Arg2:E18	
+T39	Detailed_description 739 763	treat-and-extend regimen
+R19	MODIFY Arg1:T39 Arg2:E17	
+R20	SUB_PROCEDURE Arg1:E18 Arg2:E17	
+T40	Diagnostic_procedure 765 768	OCT
+E19	Diagnostic_procedure:T40 
+T41	Detailed_description 769 779	angiograms
+R21	MODIFY Arg1:T41 Arg2:E19	
+T42	Diagnostic_procedure 819 832	CNV flow area
+E20	Diagnostic_procedure:T42 
+T43	Lab_value 795 815	noticeable reduction
+R22	MODIFY Arg1:T43 Arg2:E20	
+T44	Date 836 849	1–2 days post
+E21	Date:T44 
+T45	Lab_value 866 885	continued reduction
+R23	MODIFY Arg1:E21 Arg2:T43	
+R24	MODIFY Arg1:T45 Arg2:E20	
+T46	Date 889 907	1 week and 2 weeks
+E22	Date:T46 
+R25	MODIFY Arg1:E22 Arg2:T45	
+T47	Diagnostic_procedure 909 922	CNV flow area
+E23	Diagnostic_procedure:T47 
+T48	Diagnostic_procedure 927 941	vessel density
+E24	Diagnostic_procedure:T48 
+T49	Lab_value 947 954	reduced
+R26	MODIFY Arg1:T49 Arg2:E24	
+R27	MODIFY Arg1:T49 Arg2:E23	
+T50	Disease_disorder 1069 1072	CNV
+E25	Disease_disorder:T50 
+T51	Lab_value 1052 1065	re-appearance
+T52	Severity 1040 1051	Significant
+R28	MODIFY Arg1:T51 Arg2:E25	
+R29	MODIFY Arg1:T52 Arg2:E25	
+T53	Date 1091 1098	4 weeks
+E26	Date:T53 
+T54	Date 1138 1145	6 weeks
+E27	Date:T54 
+T55	Disease_disorder 1214 1217	CNV
+E28	Disease_disorder:T55 
+T56	Detailed_description 1202 1213	re-enlarged
+R30	MODIFY Arg1:T56 Arg2:E28	
+T57	Diagnostic_procedure 1580 1583	OCT
+E29	Diagnostic_procedure:T57 
+T58	Detailed_description 1584 1595	angiography
+R31	MODIFY Arg1:T58 Arg2:E29	
+T59	Diagnostic_procedure 1625 1638	CNV flow area
+E30	Diagnostic_procedure:T59 
+T60	Lab_value 1612 1621	reduction
+R32	MODIFY Arg1:T60 Arg2:E30	
+T61	Diagnostic_procedure 1643 1653	flow index
+E31	Diagnostic_procedure:T61 
+R33	MODIFY Arg1:T60 Arg2:E31	
+T62	Duration 1654 1676	over the first 2 weeks
+E32	Duration:T62 
+T63	Sign_symptom 1915 1935	fluid re-accumulated
+E33	Sign_symptom:T63 
+T64	Biological_structure 1936 1952	under the retina
+R34	MODIFY Arg1:T64 Arg2:E33	
+T65	Date 1953 1960	6 weeks
+E34	Date:T65 
+T66	Sign_symptom 1701 1718	Retinal thickness
+E35	Sign_symptom:T66 
+T67	Duration 1756 1778	over the first 4 weeks
+E36	Duration:T67 
+T68	Date 1828 1835	2 weeks
+E37	Date:T68 
+T69	Diagnostic_procedure 1986 1999	Visual acuity
+E38	Diagnostic_procedure:T69 
+T70	Lab_value 2009 2029	continued to improve
+R35	MODIFY Arg1:T70 Arg2:E38	
+*	OVERLAP E1 E2 E4 E3
+R36	BEFORE Arg1:E3 Arg2:E5	
+R37	BEFORE Arg1:E5 Arg2:E6	
+*	OVERLAP E6 E7 E9 E10 E11 E12 E13 E14 E15 E16 E17
+R38	BEFORE Arg1:E17 Arg2:E19	
+*	OVERLAP E19 E20 E21
+R39	BEFORE Arg1:E21 Arg2:E22	
+*	OVERLAP E22 E23 E24
+R40	BEFORE Arg1:E24 Arg2:E25	
+*	OVERLAP E25 E26
+R41	BEFORE Arg1:E26 Arg2:E27	
+R42	MODIFY Arg1:E26 Arg2:E25	
+R43	MODIFY Arg1:E27 Arg2:E25	
+*	OVERLAP E27 E28 E29 E30 E31 E32 E35 E36 E37
+R44	AFTER Arg1:E37 Arg2:E33	
+*	OVERLAP E33 E34
+R45	BEFORE Arg1:E34 Arg2:E38	

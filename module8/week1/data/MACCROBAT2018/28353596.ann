@@ -1,0 +1,325 @@
+T1	Age 2 13	47-year-old
+T2	Sex 14 20	female
+T3	Clinical_event 29 38	presented
+E1	Clinical_event:T3 
+T4	Sign_symptom 63 67	pain
+E2	Sign_symptom:T4 
+T5	Biological_structure 75 85	chest wall
+T6	Biological_structure 87 91	back
+T7	Sign_symptom 136 151	muscle weakness
+E3	Sign_symptom:T7 
+T8	Detailed_description 39 62	progressively worsening
+R1	MODIFY Arg1:T8 Arg2:E2	
+R2	MODIFY Arg1:T5 Arg2:E2	
+R3	MODIFY Arg1:T6 Arg2:E2	
+T9	Biological_structure 97 124	bilateral lower extremities
+R4	MODIFY Arg1:T9 Arg2:E2	
+T10	Family_history 157 215	did not have a family history of bone disease or fractures
+T11	Diagnostic_procedure 217 237	Physical examination
+E4	Diagnostic_procedure:T11 
+T12	Lab_value 242 254	unremarkable
+R5	MODIFY Arg1:T12 Arg2:E4	
+T13	Detailed_description 255 296	excluding bone and muscular abnormalities
+R6	MODIFY Arg1:T13 Arg2:E4	
+T14	Diagnostic_procedure 303 315	scintigraphy
+E5	Diagnostic_procedure:T14 
+T15	Biological_structure 298 302	Bone
+R7	MODIFY Arg1:T15 Arg2:E5	
+T16	Detailed_description 316 357	using technetium-99m methylenediphosphate
+R8	MODIFY Arg1:T16 Arg2:E5	
+T17	Sign_symptom 375 381	uptake
+E6	Sign_symptom:T17 
+T18	Biological_structure 389 397	shoulder
+T19	Biological_structure 399 412	multiple ribs
+T20	Biological_structure 414 440	thoracic and lumbar spines
+R9	MODIFY Arg1:T20 Arg2:E6	
+R10	MODIFY Arg1:T18 Arg2:E6	
+R11	MODIFY Arg1:T19 Arg2:E6	
+T21	Biological_structure 442 469	bilateral sacroiliac joints
+R12	MODIFY Arg1:T21 Arg2:E6	
+T22	Biological_structure 471 481	left ilium
+R13	MODIFY Arg1:T22 Arg2:E6	
+T23	Biological_structure 487 496	left foot
+R14	MODIFY Arg1:T23 Arg2:E6	
+T24	Diagnostic_procedure 512 523	radiographs
+E7	Diagnostic_procedure:T24 
+T25	Detailed_description 506 511	Plain
+R15	MODIFY Arg1:T25 Arg2:E7	
+T26	Disease_disorder 533 545	osteoporosis
+E8	Disease_disorder:T26 
+T27	Biological_structure 556 581	thoracic and lumbar spine
+R16	MODIFY Arg1:T27 Arg2:E8	
+T28	Sign_symptom 593 604	compression
+E9	Sign_symptom:T28 
+T29	Biological_structure 615 629	several spines
+R17	MODIFY Arg1:T29 Arg2:E9	
+T30	Diagnostic_procedure 659 685	magnetic resonance imaging
+E10	Diagnostic_procedure:T30 
+T31	Diagnostic_procedure 690 709	computed tomography
+E11	Diagnostic_procedure:T31 
+T32	Diagnostic_procedure 711 713	CT
+E12	Diagnostic_procedure:T32 
+R18	IDENTICAL Arg1:E12 Arg2:E11	
+T33	Diagnostic_procedure 734 743	bone mass
+E13	Diagnostic_procedure:T33 
+T34	Lab_value 724 733	Decreased
+R19	MODIFY Arg1:T34 Arg2:E13	
+T35	Biological_structure 765 777	lumbar spine
+T36	Biological_structure 795 807	femoral neck
+T37	Biological_structure 829 832	hip
+T38	Lab_value 779 792	T-score: −3.4
+T39	Lab_value 809 822	T-score: −3.1
+T40	Lab_value 834 847	T-score: −3.5
+R20	MODIFY Arg1:T35 Arg2:T38	
+R21	MODIFY Arg1:T36 Arg2:T39	
+R22	MODIFY Arg1:T37 Arg2:T40	
+R23	MODIFY Arg1:T38 Arg2:E13	
+R24	MODIFY Arg1:T39 Arg2:E13	
+R25	MODIFY Arg1:T40 Arg2:E13	
+T41	Sign_symptom 911 927	hypophosphatemia
+E14	Sign_symptom:T41 
+T42	Sign_symptom 929 940	hypokalemia
+E15	Sign_symptom:T42 
+T43	Sign_symptom 942 954	hypouricemia
+E16	Sign_symptom:T43 
+T44	Diagnostic_procedure 974 977	ALP
+E17	Diagnostic_procedure:T44 
+T45	Diagnostic_procedure 979 993	C-telopeptides
+E18	Diagnostic_procedure:T45 
+T46	Diagnostic_procedure 998 1006	chloride
+E19	Diagnostic_procedure:T46 
+T47	Lab_value 956 964	elevated
+R26	MODIFY Arg1:T47 Arg2:E17	
+R27	MODIFY Arg1:T47 Arg2:E18	
+R28	MODIFY Arg1:T47 Arg2:E19	
+T48	Diagnostic_procedure 1022 1052	carbon dioxide combining power
+E20	Diagnostic_procedure:T48 
+T49	Lab_value 1012 1021	decreased
+R29	MODIFY Arg1:T49 Arg2:E20	
+T50	Diagnostic_procedure 1058 1068	urinalysis
+E21	Diagnostic_procedure:T50 
+T51	Diagnostic_procedure 1085 1087	pH
+E22	Diagnostic_procedure:T51 
+T52	Lab_value 1080 1084	high
+R30	MODIFY Arg1:T52 Arg2:E22	
+R31	SUB_PROCEDURE Arg1:E22 Arg2:E21	
+T53	Diagnostic_procedure 1114 1123	potassium
+E23	Diagnostic_procedure:T53 
+T54	Diagnostic_procedure 1148 1164	specific gravity
+E24	Diagnostic_procedure:T54 
+T55	Diagnostic_procedure 1166 1174	chlorine
+E25	Diagnostic_procedure:T55 
+T56	Diagnostic_procedure 1180 1189	phosphate
+E26	Diagnostic_procedure:T56 
+T57	Lab_value 1095 1104	increased
+R32	MODIFY Arg1:T57 Arg2:E23	
+T58	Lab_value 1129 1138	decreased
+R33	MODIFY Arg1:T58 Arg2:E24	
+R34	MODIFY Arg1:T58 Arg2:E25	
+R35	MODIFY Arg1:T58 Arg2:E26	
+R36	SUB_PROCEDURE Arg1:E23 Arg2:E21	
+R37	SUB_PROCEDURE Arg1:E24 Arg2:E21	
+R38	SUB_PROCEDURE Arg1:E25 Arg2:E21	
+R39	SUB_PROCEDURE Arg1:E26 Arg2:E21	
+T59	Sign_symptom 1202 1212	glycosuria
+E27	Sign_symptom:T59 
+T60	Sign_symptom 1217 1228	proteinuria
+E28	Sign_symptom:T60 
+T61	Detailed_description 1191 1201	Persistent
+R40	MODIFY Arg1:T61 Arg2:E27	
+T62	Diagnostic_procedure 1267 1272	HbA1c
+E29	Diagnostic_procedure:T62 
+T63	Lab_value 1260 1266	normal
+R41	MODIFY Arg1:T63 Arg2:E29	
+T64	Diagnostic_procedure 1277 1291	plasma glucose
+E30	Diagnostic_procedure:T64 
+R42	MODIFY Arg1:T63 Arg2:E30	
+T65	Diagnostic_procedure 1305 1320	laboratory test
+E31	Diagnostic_procedure:T65 
+T66	Diagnostic_procedure 1339 1355	thyroid function
+E32	Diagnostic_procedure:T66 
+T67	Diagnostic_procedure 1362 1387	serum parathyroid hormone
+E33	Diagnostic_procedure:T67 
+T68	Diagnostic_procedure 1389 1408	25-hydroxyvitamin D
+E34	Diagnostic_procedure:T68 
+T69	Diagnostic_procedure 1414 1437	protein electrophoresis
+E35	Diagnostic_procedure:T69 
+T70	Lab_value 1443 1462	within normal range
+R43	MODIFY Arg1:T70 Arg2:E35	
+R44	MODIFY Arg1:T70 Arg2:E34	
+R45	MODIFY Arg1:T70 Arg2:E33	
+R46	MODIFY Arg1:T70 Arg2:E32	
+R47	SUB_PROCEDURE Arg1:E32 Arg2:E31	
+R48	SUB_PROCEDURE Arg1:E33 Arg2:E31	
+R49	SUB_PROCEDURE Arg1:E34 Arg2:E31	
+R50	SUB_PROCEDURE Arg1:E35 Arg2:E31	
+T71	Diagnostic_procedure 1484 1503	serum tumor markers
+E36	Diagnostic_procedure:T71 
+T72	Lab_value 1509 1517	negative
+R51	MODIFY Arg1:T72 Arg2:E36	
+T73	Diagnostic_procedure 1578 1611	serum fibroblast growth factor 23
+E37	Diagnostic_procedure:T73 
+A1	POLARITY E37 NEG
+T74	Disease_disorder 1644 1646	HO
+E38	Disease_disorder:T74 
+#1	AnnotatorNotes E38	hypophosphatemic osteomalacia
+T75	Diagnostic_procedure 1696 1715	computed tomography
+E39	Diagnostic_procedure:T75 
+T76	Diagnostic_procedure 1648 1695	fluorodeoxyglucose positron emission tomography
+E40	Diagnostic_procedure:T76 
+T77	Diagnostic_procedure 1717 1728	18F-FDG PET
+E41	Diagnostic_procedure:T77 
+T78	Diagnostic_procedure 1729 1731	CT
+E42	Diagnostic_procedure:T78 
+R52	IDENTICAL Arg1:E41 Arg2:E40	
+R53	IDENTICAL Arg1:E42 Arg2:E39	
+T79	Diagnostic_procedure 1775 1787	scintigraphy
+E43	Diagnostic_procedure:T79 
+T80	Detailed_description 1737 1762	technetium-99m octreotide
+T81	Detailed_description 1764 1773	99mTc-OCT
+R54	IDENTICAL Arg1:T81 Arg2:T80	
+R55	MODIFY Arg1:T80 Arg2:E43	
+T82	Sign_symptom 1843 1848	tumor
+E44	Sign_symptom:T82 
+A2	POLARITY E44 UNCERTAIN
+T83	Detailed_description 1826 1832	occult
+T84	Detailed_description 1833 1842	causative
+R56	MODIFY Arg1:T84 Arg2:E44	
+R57	MODIFY Arg1:T83 Arg2:E44	
+T85	Coreference 1880 1893	these 2 tests
+E45	Coreference:T85 
+R58	IDENTICAL Arg1:E45 Arg2:E43	
+R59	IDENTICAL Arg1:E45 Arg2:E40	
+R60	IDENTICAL Arg1:E45 Arg2:E39	
+T86	Lab_value 1899 1907	negative
+R61	MODIFY Arg1:T86 Arg2:E45	
+T87	Sign_symptom 1925 1931	uptake
+E46	Sign_symptom:T87 
+T88	Biological_structure 1939 1950	seventh rib
+T89	Severity 1920 1924	mild
+R62	MODIFY Arg1:T89 Arg2:E46	
+R63	MODIFY Arg1:T88 Arg2:E46	
+T90	Diagnostic_procedure 1964 1967	PET
+E47	Diagnostic_procedure:T90 
+T91	Diagnostic_procedure 1968 1970	CT
+E48	Diagnostic_procedure:T91 
+T92	Sign_symptom 2017 2023	lesion
+E49	Sign_symptom:T92 
+A3	POLARITY E49 NEG
+T93	Detailed_description 2006 2016	neoplastic
+R64	MODIFY Arg1:T93 Arg2:E49	
+T94	Diagnostic_procedure 2068 2093	immunological examination
+E50	Diagnostic_procedure:T94 
+T95	Diagnostic_procedure 2119 2128	serum IgG
+E51	Diagnostic_procedure:T95 
+T96	Diagnostic_procedure 2130 2133	IgM
+E52	Diagnostic_procedure:T96 
+T97	Diagnostic_procedure 2139 2142	IgA
+E53	Diagnostic_procedure:T97 
+R65	SUB_PROCEDURE Arg1:E51 Arg2:E50	
+R66	SUB_PROCEDURE Arg1:E52 Arg2:E50	
+R67	SUB_PROCEDURE Arg1:E53 Arg2:E50	
+T98	Diagnostic_procedure 2164 2184	antinuclear antibody
+E54	Diagnostic_procedure:T98 
+T99	Lab_value 2101 2109	elevated
+R68	MODIFY Arg1:T99 Arg2:E51	
+R69	MODIFY Arg1:T99 Arg2:E52	
+R70	MODIFY Arg1:T99 Arg2:E53	
+T100	Diagnostic_procedure 2186 2203	anti-SSA antibody
+E55	Diagnostic_procedure:T100 
+T101	Diagnostic_procedure 2209 2225	rheumatic factor
+E56	Diagnostic_procedure:T101 
+T102	Lab_value 2155 2163	positive
+R71	MODIFY Arg1:T102 Arg2:E54	
+R72	MODIFY Arg1:T102 Arg2:E55	
+R73	MODIFY Arg1:T102 Arg2:E56	
+R74	SUB_PROCEDURE Arg1:E54 Arg2:E50	
+R75	SUB_PROCEDURE Arg1:E55 Arg2:E50	
+R76	SUB_PROCEDURE Arg1:E56 Arg2:E50	
+T103	Diagnostic_procedure 2241 2254	Schirmer test
+E57	Diagnostic_procedure:T103 
+T104	Lab_value 2259 2267	abnormal
+R77	MODIFY Arg1:T104 Arg2:E57	
+T105	Diagnostic_procedure 2276 2282	biopsy
+E58	Diagnostic_procedure:T105 
+T106	Biological_structure 2272 2275	lip
+R78	MODIFY Arg1:T106 Arg2:E58	
+T107	Disease_disorder 2310 2312	SS
+E59	Disease_disorder:T107 
+#2	AnnotatorNotes E59	Sjogren's syndrome
+T108	Disease_disorder 2366 2368	HO
+E60	Disease_disorder:T108 
+T109	Disease_disorder 2382 2384	SS
+E61	Disease_disorder:T109 
+T110	Therapeutic_procedure 2416 2430	alkalinization
+E62	Therapeutic_procedure:T110 
+T111	Medication 2432 2439	citrate
+E63	Medication:T111 
+T112	Dosage 2440 2447	4 g/day
+R79	MODIFY Arg1:T112 Arg2:E63	
+T113	Medication 2452 2469	potassium citrate
+E64	Medication:T113 
+T114	Dosage 2470 2477	3 g/day
+R80	MODIFY Arg1:T114 Arg2:E64	
+T115	Duration 2482 2489	2 weeks
+E65	Duration:T115 
+T116	Medication 2492 2500	steroids
+E66	Medication:T116 
+R81	SUB_PROCEDURE Arg1:E63 Arg2:E62	
+R82	SUB_PROCEDURE Arg1:E64 Arg2:E62	
+T117	Medication 2502 2512	prednisone
+E67	Medication:T117 
+T118	Dosage 2513 2522	20 mg/day
+T119	Duration 2527 2534	1 month
+E68	Duration:T119 
+R83	MODIFY Arg1:T118 Arg2:E67	
+R84	SUB_PROCEDURE Arg1:E67 Arg2:E66	
+T120	Dosage 2536 2545	10 mg/day
+R85	MODIFY Arg1:T120 Arg2:E67	
+T121	Duration 2550 2558	4 months
+E69	Duration:T121 
+R86	MODIFY Arg1:E68 Arg2:T118	
+R87	MODIFY Arg1:E69 Arg2:T120	
+R88	MODIFY Arg1:E65 Arg2:T114	
+T122	Medication 2561 2578	neutral phosphate
+E70	Medication:T122 
+T123	Dosage 2580 2589	1.0 g/day
+R89	MODIFY Arg1:T123 Arg2:E70	
+T124	Duration 2594 2602	5 months
+E71	Duration:T124 
+R90	MODIFY Arg1:E71 Arg2:T123	
+T125	Medication 2605 2624	calcium supplements
+E72	Medication:T125 
+T126	Dosage 2626 2636	600 mg/day
+R91	MODIFY Arg1:T126 Arg2:E72	
+T127	Duration 2641 2649	5 months
+E73	Duration:T127 
+R92	MODIFY Arg1:E73 Arg2:T126	
+T128	Medication 2670 2689	activated vitamin D
+E74	Medication:T128 
+T129	Dosage 2691 2700	0.5 g/day
+T130	Duration 2705 2713	5 months
+E75	Duration:T130 
+R93	MODIFY Arg1:T129 Arg2:E74	
+R94	MODIFY Arg1:E75 Arg2:T129	
+T131	Sign_symptom 2728 2737	recovered
+E76	Sign_symptom:T131 
+T132	Sign_symptom 2765 2769	pain
+E77	Sign_symptom:T132 
+A4	POLARITY E77 NEG
+T133	Diagnostic_procedure 2784 2800	serum phosphorus
+E78	Diagnostic_procedure:T133 
+T134	Lab_value 2774 2783	increased
+R95	MODIFY Arg1:T134 Arg2:E78	
+R96	AFTER Arg1:E1 Arg2:E2	
+*	OVERLAP E2 E3
+R97	BEFORE Arg1:E3 Arg2:E4	
+*	OVERLAP E4 E5 E6 E7 E8 E9 E10 E11 E13 E14 E15 E16 E17 E18 E19 E20 E21 E27 E28 E29 E30 E31 E36 E37
+R98	BEFORE Arg1:E37 Arg2:E38	
+*	OVERLAP E38 E40 E39 E43 E44 E45 E46 E47 E48 E49 E50
+R99	BEFORE Arg1:E50 Arg2:E57	
+*	OVERLAP E57 E58 E59
+R100	BEFORE Arg1:E59 Arg2:E60	
+*	OVERLAP E60 E61 E62 E65 E66 E68 E69 E70 E71 E72 E73 E74 E75
+R101	BEFORE Arg1:E75 Arg2:E76	
+*	OVERLAP E76 E77 E78

@@ -1,0 +1,241 @@
+T1	Age 2 13	78-year-old
+T2	Sex 33 37	male
+T3	History 38 50	heavy smoker
+T4	History 14 32	previously healthy
+T5	Clinical_event 51 60	presented
+E1	Clinical_event:T5 
+T6	Nonbiological_location 68 88	Emergency Department
+R1	MODIFY Arg1:T6 Arg2:E1	
+T7	Sign_symptom 106 114	jaundice
+E2	Sign_symptom:T7 
+T8	Biological_structure 116 122	sclera
+T9	Biological_structure 127 131	skin
+R2	MODIFY Arg1:T8 Arg2:E2	
+R3	MODIFY Arg1:T9 Arg2:E2	
+T10	Detailed_description 94 105	generalized
+R4	MODIFY Arg1:T10 Arg2:E2	
+T11	Sign_symptom 134 141	ascites
+E3	Sign_symptom:T11 
+T12	Disease_disorder 147 159	hepatic coma
+E4	Disease_disorder:T12 
+T13	Disease_disorder 212 237	urinary bladder carcinoma
+E5	Disease_disorder:T13 
+T14	Date 288 303	3 months before
+E6	Date:T14 
+A1	POLARITY E5 UNCERTAIN
+T15	History 212 237	urinary bladder carcinoma
+T16	Sign_symptom 415 423	jaundice
+E7	Sign_symptom:T16 
+T17	Sign_symptom 425 435	somnolence
+E8	Sign_symptom:T17 
+T18	Sign_symptom 451 472	loss of consciousness
+E9	Sign_symptom:T18 
+T19	Detailed_description 441 450	temporary
+R5	MODIFY Arg1:T19 Arg2:E9	
+T20	Detailed_description 403 414	progressive
+R6	MODIFY Arg1:T20 Arg2:E7	
+T21	History 403 423	progressive jaundice
+T22	History 425 435	somnolence
+T23	History 441 472	temporary loss of consciousness
+T24	Duration 384 391	2-month
+E10	Duration:T24 
+R7	MODIFY Arg1:E10 Arg2:E7	
+R8	MODIFY Arg1:E10 Arg2:E8	
+R9	MODIFY Arg1:E10 Arg2:E9	
+T25	Sign_symptom 477 488	weight loss
+E11	Sign_symptom:T25 
+A2	POLARITY E11 NEG
+T26	Disease_disorder 543 558	viral hepatitis
+E12	Disease_disorder:T26 
+A3	POLARITY E12 NEG
+T27	Clinical_event 562 573	drug excess
+E13	Clinical_event:T27 
+A4	POLARITY E13 NEG
+T28	Family_history 588 615	No family history of cancer
+T29	Diagnostic_procedure 670 677	CT scan
+E14	Diagnostic_procedure:T29 
+T30	Biological_structure 660 669	abdominal
+R10	MODIFY Arg1:T30 Arg2:E14	
+T31	Sign_symptom 692 704	hepatomegaly
+E15	Sign_symptom:T31 
+T32	Sign_symptom 725 732	nodules
+E16	Sign_symptom:T32 
+T33	Detailed_description 719 724	small
+T34	Detailed_description 710 718	multiple
+R11	MODIFY Arg1:T33 Arg2:E16	
+R12	MODIFY Arg1:T34 Arg2:E16	
+T35	Distance 734 741	2–10 mm
+R13	MODIFY Arg1:T35 Arg2:E16	
+T36	Sign_symptom 787 797	metastases
+E17	Sign_symptom:T36 
+A5	POLARITY E17 UNCERTAIN
+T37	Biological_structure 779 786	hepatic
+R14	MODIFY Arg1:T37 Arg2:E17	
+T38	Disease_disorder 807 824	bladder carcinoma
+E18	Disease_disorder:T38 
+R15	CAUSE Arg1:E18 Arg2:E17	
+T39	Biological_structure 830 838	thoracic
+T40	Diagnostic_procedure 839 844	x-ray
+E19	Diagnostic_procedure:T40 
+R16	MODIFY Arg1:T39 Arg2:E19	
+T41	Sign_symptom 864 880	bronchopneumonia
+E20	Sign_symptom:T41 
+T42	Detailed_description 854 863	bilateral
+R17	MODIFY Arg1:T42 Arg2:E20	
+T43	Sign_symptom 898 907	opacities
+E21	Sign_symptom:T43 
+T44	Lab_value 889 897	abnormal
+R18	MODIFY Arg1:T44 Arg2:E21	
+T45	Clinical_event 921 925	died
+E22	Clinical_event:T45 
+T46	Disease_disorder 931 953	hepatic encephalopathy
+E23	Disease_disorder:T46 
+T47	Time 957 970	7 hours after
+E24	Time:T47 
+T48	Diagnostic_procedure 995 1002	autopsy
+E25	Diagnostic_procedure:T48 
+T49	Diagnostic_procedure 1172 1195	macroscopic examination
+E26	Diagnostic_procedure:T49 
+T50	Diagnostic_procedure 1210 1215	liver
+E27	Diagnostic_procedure:T50 
+T51	Lab_value 1205 1209	huge
+R19	MODIFY Arg1:T51 Arg2:E27	
+T52	Mass 1217 1223	6.5 kg
+R20	MODIFY Arg1:T52 Arg2:E27	
+T53	Sign_symptom 1255 1262	nodules
+E28	Sign_symptom:T53 
+T54	Color 1249 1254	white
+R21	MODIFY Arg1:T54 Arg2:E28	
+T55	Detailed_description 1266 1279	varying sizes
+R22	MODIFY Arg1:T55 Arg2:E28	
+T56	Detailed_description 1230 1248	widely distributed
+R23	MODIFY Arg1:T56 Arg2:E28	
+T57	Diagnostic_procedure 1293 1308	urinary bladder
+E29	Diagnostic_procedure:T57 
+T58	Lab_value 1313 1325	not modified
+R24	MODIFY Arg1:T58 Arg2:E29	
+T59	Sign_symptom 1358 1364	nodule
+E30	Sign_symptom:T59 
+T60	Biological_structure 1349 1357	prostate
+R25	MODIFY Arg1:T60 Arg2:E30	
+T61	Volume 1333 1348	30 × 30 × 50 mm
+R26	MODIFY Arg1:T61 Arg2:E30	
+T62	Detailed_description 1370 1389	infiltrative aspect
+R27	MODIFY Arg1:T62 Arg2:E30	
+T63	Sign_symptom 1426 1442	bronchopneumonia
+E31	Sign_symptom:T63 
+T64	Detailed_description 1416 1425	bilateral
+R28	MODIFY Arg1:T64 Arg2:E31	
+T65	Sign_symptom 1478 1488	tumor mass
+E32	Sign_symptom:T65 
+A6	POLARITY E32 NEG
+T66	Detailed_description 1470 1477	central
+R29	MODIFY Arg1:T66 Arg2:E32	
+T67	Sign_symptom 1504 1510	nodule
+E33	Sign_symptom:T67 
+T68	Color 1498 1503	white
+T69	Distance 1492 1497	10-mm
+R30	MODIFY Arg1:T68 Arg2:E33	
+R31	MODIFY Arg1:T69 Arg2:E33	
+T70	Biological_structure 1537 1551	small bronchus
+T71	Biological_structure 1561 1590	middle lobe of the right lung
+R32	MODIFY Arg1:T71 Arg2:T70	
+R33	MODIFY Arg1:T70 Arg2:E33	
+T72	Sign_symptom 1600 1618	peripheral nodules
+E34	Sign_symptom:T72 
+A7	POLARITY E34 NEG
+T73	Sign_symptom 1648 1653	edema
+E35	Sign_symptom:T73 
+T74	Severity 1639 1647	moderate
+R34	MODIFY Arg1:T74 Arg2:E35	
+T75	Sign_symptom 1670 1677	lesions
+E36	Sign_symptom:T75 
+A8	POLARITY E36 NEG
+T76	Biological_structure 1664 1669	brain
+R35	MODIFY Arg1:T76 Arg2:E36	
+T77	Sign_symptom 1725 1738	modifications
+E37	Sign_symptom:T77 
+A9	POLARITY E37 NEG
+T78	Biological_structure 1699 1711	other organs
+R36	MODIFY Arg1:T78 Arg2:E37	
+T79	Diagnostic_procedure 1853 1876	Microscopic examination
+E38	Diagnostic_procedure:T79 
+T80	Biological_structure 1884 1892	prostate
+R37	MODIFY Arg1:T80 Arg2:E38	
+T81	Disease_disorder 1931 1945	adenocarcinoma
+E39	Disease_disorder:T81 
+T82	Detailed_description 1924 1930	occult
+R38	MODIFY Arg1:T82 Arg2:E39	
+T83	Diagnostic_procedure 1902 1921	3+3 Gleason's grade
+E40	Diagnostic_procedure:T83 
+T84	Lab_value 1922 1923	2
+R39	MODIFY Arg1:T84 Arg2:E40	
+R40	MODIFY Arg1:E39 Arg2:E40	
+T85	Sign_symptom 2402 2412	metastases
+E41	Sign_symptom:T85 
+A10	POLARITY E41 NEG
+T86	Biological_structure 2396 2401	brain
+R41	MODIFY Arg1:T86 Arg2:E41	
+T87	Disease_disorder 2564 2568	SCLC
+E42	Disease_disorder:T87 
+T88	Disease_disorder 2140 2144	SCLC
+E43	Disease_disorder:T88 
+T89	Biological_structure 2126 2139	peribronchial
+R42	MODIFY Arg1:T89 Arg2:E43	
+T90	Sign_symptom 2159 2171	tumor emboli
+E44	Sign_symptom:T90 
+T91	Biological_structure 2180 2185	veins
+T92	Biological_structure 2190 2207	lymphatic vessels
+R43	MODIFY Arg1:T91 Arg2:E44	
+R44	MODIFY Arg1:T92 Arg2:E44	
+T93	Detailed_description 2150 2158	multiple
+R45	MODIFY Arg1:T93 Arg2:E44	
+T94	Sign_symptom 2235 2240	tumor
+E45	Sign_symptom:T94 
+T95	Shape 2222 2233	coin-shaped
+R46	MODIFY Arg1:T95 Arg2:E45	
+T96	Biological_structure 2274 2290	below the pleura
+T97	Distance 2252 2261	1 to 2 mm
+R47	MODIFY Arg1:T97 Arg2:T96	
+R48	MODIFY Arg1:T96 Arg2:E45	
+T98	Shape 2543 2552	coin-like
+T99	Biological_structure 2525 2538	peribronchial
+T100	Detailed_description 2553 2563	peripheral
+R49	MODIFY Arg1:T100 Arg2:E42	
+R50	MODIFY Arg1:T98 Arg2:E42	
+R51	MODIFY Arg1:T99 Arg2:E42	
+T101	Disease_disorder 2597 2605	invasion
+E46	Disease_disorder:T101 
+T102	Biological_structure 2582 2596	angiolymphatic
+T103	Severity 2574 2581	massive
+R52	MODIFY Arg1:T102 Arg2:E46	
+R53	MODIFY Arg1:T103 Arg2:E46	
+T104	Sign_symptom 2610 2620	metastases
+E47	Sign_symptom:T104 
+T105	Biological_structure 2628 2639	lymph nodes
+T106	Biological_structure 2641 2646	liver
+T107	Biological_structure 2651 2655	bone
+R54	MODIFY Arg1:T105 Arg2:E47	
+R55	MODIFY Arg1:T106 Arg2:E47	
+R56	MODIFY Arg1:T107 Arg2:E47	
+T108	Disease_disorder 2673 2687	encephalopathy
+E48	Disease_disorder:T108 
+T109	Disease_disorder 2711 2725	adenocarcinoma
+E49	Disease_disorder:T109 
+T110	Biological_structure 2733 2741	prostate
+R57	MODIFY Arg1:T110 Arg2:E49	
+T111	Detailed_description 2692 2703	synchronous
+T112	Detailed_description 2704 2710	occult
+R58	MODIFY Arg1:T112 Arg2:E49	
+R59	MODIFY Arg1:T111 Arg2:E49	
+*	OVERLAP E1 E2 E3 E4
+R60	AFTER Arg1:E4 Arg2:E5	
+*	OVERLAP E5 E6
+R61	BEFORE Arg1:E6 Arg2:E10	
+*	OVERLAP E10 E7 E8 E9 E11 E12 E13
+R62	BEFORE Arg1:E13 Arg2:E14	
+*	OVERLAP E14 E15 E16 E17 E18 E19 E20 E21
+R63	BEFORE Arg1:E21 Arg2:E22	
+*	OVERLAP E22 E23 E24
+R64	BEFORE Arg1:E24 Arg2:E25	
+*	OVERLAP E25 E26 E27 E28 E29 E30 E31 E32 E33 E34 E35 E36 E37 E38 E40 E39 E43 E44 E45 E41 E42 E46 E47 E48 E49

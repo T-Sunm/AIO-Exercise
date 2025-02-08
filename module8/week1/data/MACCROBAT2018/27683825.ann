@@ -1,0 +1,197 @@
+T1	Age 17 28	19-year-old
+T2	Sex 29 34	woman
+T3	Family_history 82 113	family history was unremarkable
+T4	Family_history 36 76	first child of healthy unrelated parents
+T5	History 123 160	born at term after a normal pregnancy
+T6	Diagnostic_procedure 206 223	early development
+E1	Diagnostic_procedure:T6 
+T7	Lab_value 243 249	normal
+R1	MODIFY Arg1:T7 Arg2:E1	
+T8	Diagnostic_procedure 166 182	perinatal period
+E2	Diagnostic_procedure:T8 
+T9	Lab_value 187 197	uneventful
+R2	MODIFY Arg1:T9 Arg2:E2	
+T10	Date 261 274	1 year of age
+E3	Date:T10 
+T11	Disease_disorder 276 293	psychomotor delay
+E4	Disease_disorder:T11 
+T12	Diagnostic_procedure 367 374	balance
+E5	Diagnostic_procedure:T12 
+T13	Lab_value 362 366	poor
+R3	MODIFY Arg1:T13 Arg2:E5	
+T14	Sign_symptom 388 393	falls
+E6	Sign_symptom:T14 
+T15	Frequency 379 387	frequent
+R4	MODIFY Arg1:T15 Arg2:E6	
+T16	Date 346 355	22 months
+E7	Date:T16 
+T17	Activity 322 329	walking
+E8	Activity:T17 
+T18	Detailed_description 330 342	autonomously
+R5	MODIFY Arg1:T18 Arg2:E8	
+T19	Date 398 412	3 years of age
+E9	Date:T19 
+T20	Disease_disorder 430 467	demyelinating sensorimotor neuropathy
+E10	Disease_disorder:T20 
+T21	Diagnostic_procedure 480 483	MRI
+E11	Diagnostic_procedure:T21 
+T22	Biological_structure 474 479	brain
+R6	MODIFY Arg1:T22 Arg2:E11	
+T23	Disease_disorder 509 523	leukodystrophy
+E12	Disease_disorder:T23 
+T24	Biological_structure 494 508	supratentorial
+R7	MODIFY Arg1:T24 Arg2:E12	
+T25	Diagnostic_procedure 551 565	clinical signs
+E13	Diagnostic_procedure:T25 
+T26	Lab_value 575 581	stable
+R8	MODIFY Arg1:T26 Arg2:E13	
+T27	Date 586 594	10 years
+E14	Date:T27 
+T28	Disease_disorder 600 620	walking difficulties
+E15	Disease_disorder:T28 
+A1	TREND E15 INC
+T29	Lab_value 621 629	worsened
+R9	MODIFY Arg1:T29 Arg2:E15	
+T30	Sign_symptom 640 648	weakness
+E16	Sign_symptom:T30 
+T31	Biological_structure 635 639	limb
+R10	MODIFY Arg1:T31 Arg2:E16	
+T32	Sign_symptom 653 659	tremor
+E17	Sign_symptom:T32 
+T33	Diagnostic_procedure 672 695	neurological evaluation
+E18	Diagnostic_procedure:T33 
+T34	Sign_symptom 703 713	dysarthria
+E19	Sign_symptom:T34 
+T35	Sign_symptom 715 724	dysmetria
+E20	Sign_symptom:T35 
+T36	Diagnostic_procedure 733 737	gait
+E21	Diagnostic_procedure:T36 
+T37	Lab_value 726 732	ataxic
+R11	MODIFY Arg1:T37 Arg2:E21	
+T38	Sign_symptom 742 754	hyporeflexia
+E22	Sign_symptom:T38 
+T39	Biological_structure 762 772	four limbs
+R12	MODIFY Arg1:T39 Arg2:E22	
+T40	Disease_disorder 778 792	muscle wasting
+E23	Disease_disorder:T40 
+T41	Diagnostic_procedure 857 861	gait
+E24	Diagnostic_procedure:T41 
+T42	Lab_value 850 856	ataxic
+R13	MODIFY Arg1:T42 Arg2:E24	
+T43	Disease_disorder 868 888	cognitive impairment
+E25	Disease_disorder:T43 
+T44	Severity 863 867	Mild
+R14	MODIFY Arg1:T44 Arg2:E25	
+T45	Diagnostic_procedure 905 907	IQ
+E26	Diagnostic_procedure:T45 
+T46	Detailed_description 912 924	WISC-R scale
+R15	MODIFY Arg1:T46 Arg2:E26	
+T47	Lab_value 908 910	75
+R16	MODIFY Arg1:T47 Arg2:E26	
+T48	Activity 810 814	walk
+E27	Activity:T48 
+T49	Lab_value 821 841	only for a few steps
+T50	Detailed_description 815 820	alone
+R17	MODIFY Arg1:T50 Arg2:E27	
+R18	MODIFY Arg1:T49 Arg2:E27	
+T51	Diagnostic_procedure 927 948	Histological analysis
+E28	Diagnostic_procedure:T51 
+T52	Diagnostic_procedure 961 967	biopsy
+E29	Diagnostic_procedure:T52 
+T53	Biological_structure 954 960	muscle
+R19	MODIFY Arg1:T53 Arg2:E29	
+R20	SUB_PROCEDURE Arg1:E29 Arg2:E28	
+T54	Sign_symptom 975 987	hypo/atrophy
+E30	Sign_symptom:T54 
+T55	Biological_structure 991 997	fibres
+R21	MODIFY Arg1:T55 Arg2:E30	
+T56	Diagnostic_procedure 1003 1021	clinical evolution
+E31	Diagnostic_procedure:T56 
+T57	Lab_value 1026 1044	slowly progressive
+R22	MODIFY Arg1:T57 Arg2:E31	
+T58	Clinical_event 1058 1067	follow-up
+E32	Clinical_event:T58 
+T59	Date 1084 1099	19 years of age
+E33	Date:T59 
+T60	Activity 1117 1121	walk
+E34	Activity:T60 
+T61	Detailed_description 1122 1127	alone
+R23	MODIFY Arg1:T61 Arg2:E34	
+T62	Therapeutic_procedure 1149 1162	orthotic aids
+E35	Therapeutic_procedure:T62 
+T63	Detailed_description 1138 1148	ankle-foot
+R24	MODIFY Arg1:T63 Arg2:E35	
+R25	MODIFY Arg1:E35 Arg2:E34	
+T64	Disease_disorder 1204 1213	scoliosis
+E36	Disease_disorder:T64 
+T65	Biological_structure 1190 1203	dorsal-lumbar
+R26	MODIFY Arg1:T65 Arg2:E36	
+T66	Severity 1183 1189	marked
+R27	MODIFY Arg1:T66 Arg2:E36	
+T67	Diagnostic_procedure 1221 1235	clinical signs
+E37	Diagnostic_procedure:T67 
+T68	Lab_value 1241 1247	stable
+R28	MODIFY Arg1:T68 Arg2:E37	
+T69	Diagnostic_procedure 1249 1275	Neurophysiological studies
+E38	Diagnostic_procedure:T69 
+T70	Disease_disorder 1316 1351	demyelinating peripheral neuropathy
+E39	Disease_disorder:T70 
+T71	Lab_value 1286 1295	worsening
+T72	Biological_structure 1309 1315	axonal
+T73	Detailed_description 1303 1308	mixed
+R29	MODIFY Arg1:T72 Arg2:E39	
+R30	MODIFY Arg1:T73 Arg2:E39	
+R31	MODIFY Arg1:T71 Arg2:E39	
+A2	TREND E39 INC
+T74	Diagnostic_procedure 1375 1378	MRI
+E40	Diagnostic_procedure:T74 
+T75	Biological_structure 1363 1374	spinal cord
+T76	Biological_structure 1353 1358	Brain
+R32	MODIFY Arg1:T75 Arg2:E40	
+R33	MODIFY Arg1:T76 Arg2:E40	
+T77	Sign_symptom 1404 1424	signal abnormalities
+E41	Sign_symptom:T77 
+T78	Sign_symptom 1439 1450	cavitations
+E42	Sign_symptom:T78 
+T79	Severity 1429 1438	extensive
+T80	Lab_value 1391 1400	extension
+T81	Severity 1386 1390	mild
+R34	MODIFY Arg1:T81 Arg2:T80	
+R35	MODIFY Arg1:T79 Arg2:E42	
+R36	MODIFY Arg1:T80 Arg2:E41	
+T82	Biological_structure 1458 1479	cerebral white matter
+R37	MODIFY Arg1:T82 Arg2:E42	
+T83	Sign_symptom 1573 1580	lesions
+E43	Sign_symptom:T83 
+A3	POLARITY E43 NEG
+T84	Detailed_description 1567 1572	focal
+R38	MODIFY Arg1:T84 Arg2:E43	
+T85	Diagnostic_procedure 1594 1608	Plasma lactate
+E44	Diagnostic_procedure:T85 
+T86	Lab_value 1613 1619	2.9 mM
+R39	MODIFY Arg1:T86 Arg2:E44	
+T87	Sign_symptom 1546 1550	thin
+E45	Sign_symptom:T87 
+T88	Biological_structure 1530 1541	spinal cord
+R40	MODIFY Arg1:T88 Arg2:E45	
+R41	MODIFY Arg1:T88 Arg2:E43	
+T89	Sign_symptom 1515 1521	spared
+E46	Sign_symptom:T89 
+T90	Biological_structure 1500 1509	brainstem
+T91	Biological_structure 1485 1495	cerebellum
+R42	MODIFY Arg1:T90 Arg2:E46	
+R43	MODIFY Arg1:T91 Arg2:E46	
+R44	BEFORE Arg1:E2 Arg2:E1	
+R45	BEFORE Arg1:E1 Arg2:E3	
+*	OVERLAP E3 E4
+T92	Severity 301 308	evident
+R46	MODIFY Arg1:T92 Arg2:E4	
+R47	BEFORE Arg1:E4 Arg2:E8	
+*	OVERLAP E8 E7 E5 E6
+R48	BEFORE Arg1:E6 Arg2:E9	
+*	OVERLAP E9 E10 E11 E12
+R49	BEFORE Arg1:E12 Arg2:E13	
+R50	BEFORE Arg1:E13 Arg2:E14	
+*	OVERLAP E14 E15 E16 E17 E18 E19 E20 E21 E22 E23 E27 E24 E25 E26 E28 E30 E31
+R51	BEFORE Arg1:E31 Arg2:E32	
+*	OVERLAP E32 E33 E34 E35 E36 E37 E38 E39 E40 E41 E42 E46 E45 E43 E44

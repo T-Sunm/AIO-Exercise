@@ -1,0 +1,91 @@
+T1	Age 2 13	77-year-old
+T2	Sex 14 19	woman
+T3	Clinical_event 35 44	presented
+E1	Clinical_event:T3 
+T4	Sign_symptom 25 34	dysphagia
+E2	Sign_symptom:T4 
+T5	Duration 52 68	two-week history
+E3	Duration:T5 
+T6	Sign_symptom 72 76	rash
+E4	Sign_symptom:T6 
+T7	Sign_symptom 100 107	plaques
+E5	Sign_symptom:T7 
+T8	Color 94 99	brown
+R1	MODIFY Arg1:T8 Arg2:E5	
+T9	Detailed_description 113 133	erythematous borders
+R2	MODIFY Arg1:T9 Arg2:E5	
+T10	Detailed_description 138 160	overlying thick scales
+R3	MODIFY Arg1:T10 Arg2:E5	
+T11	Biological_structure 175 179	face
+R4	MODIFY Arg1:T11 Arg2:E5	
+T12	Sign_symptom 281 292	involvement
+E6	Sign_symptom:T12 
+A1	POLARITY E6 NEG
+T13	Biological_structure 260 264	oral
+T14	Biological_structure 268 280	conjunctival
+R5	MODIFY Arg1:T14 Arg2:E6	
+R6	MODIFY Arg1:T13 Arg2:E6	
+T15	Diagnostic_procedure 192 227	percutaneous endoscopic gastrostomy
+E7	Diagnostic_procedure:T15 
+T16	Diagnostic_procedure 229 232	PEG
+E8	Diagnostic_procedure:T16 
+R7	IDENTICAL Arg1:E8 Arg2:E7	
+T17	Biological_structure 239 243	site
+R8	MODIFY Arg1:T17 Arg2:E5	
+R9	CAUSE Arg1:E7 Arg2:T17	
+#1	AnnotatorNotes T17	The Diagnostic_procedure modifies the site here because the site only exists due to the procedure
+T18	Medication 329 349	parenteral nutrition
+E9	Medication:T18 
+T19	Duration 354 364	two months
+E10	Duration:T19 
+T20	Diagnostic_procedure 390 398	PEG tube
+E11	Diagnostic_procedure:T20 
+A2	POLARITY E11 NEG
+T21	Disease_disorder 406 415	infection
+E12	Disease_disorder:T21 
+T22	Disease_disorder 462 483	drug hypersensitivity
+E13	Disease_disorder:T22 
+A3	POLARITY E13 UNCERTAIN
+T23	Disease_disorder 485 505	autoimmune disorders
+E14	Disease_disorder:T23 
+A4	POLARITY E14 UNCERTAIN
+T24	Disease_disorder 510 532	nutritional deficiency
+E15	Disease_disorder:T24 
+A5	POLARITY E15 UNCERTAIN
+T25	Sign_symptom 538 542	rash
+E16	Sign_symptom:T25 
+T26	Disease_disorder 579 607	acrodermatitis enteropathica
+E17	Disease_disorder:T26 
+T27	Disease_disorder 635 650	zinc deficiency
+E18	Disease_disorder:T27 
+R10	CAUSE Arg1:E18 Arg2:E17	
+T28	Sign_symptom 613 621	eruption
+E19	Sign_symptom:T28 
+T29	Diagnostic_procedure 662 666	zinc
+E20	Diagnostic_procedure:T29 
+T30	Detailed_description 656 661	serum
+R11	MODIFY Arg1:T30 Arg2:E20	
+T31	Lab_value 677 686	12 mcg/dL
+R12	MODIFY Arg1:T31 Arg2:E20	
+T32	Sign_symptom 720 724	rash
+E21	Sign_symptom:T32 
+A6	POLARITY E21 NEG
+T33	Date 734 749	within one week
+E22	Date:T33 
+T34	Medication 764 784	zinc supplementation
+E23	Medication:T34 
+T35	Administration 753 763	parenteral
+R13	MODIFY Arg1:T35 Arg2:E23	
+R14	BEFORE Arg1:E2 Arg2:E1	
+R15	AFTER Arg1:E1 Arg2:E3	
+*	OVERLAP E3 E4 E5
+R16	AFTER Arg1:E5 Arg2:E7	
+R17	BEFORE Arg1:E7 Arg2:E6	
+R18	AFTER Arg1:E6 Arg2:E9	
+*	OVERLAP E9 E10
+R19	AFTER Arg1:E10 Arg2:E11	
+*	OVERLAP E11 E12
+R20	BEFORE Arg1:E12 Arg2:E13	
+*	OVERLAP E13 E14 E15 E16 E17 E19 E18 E20
+R21	BEFORE Arg1:E20 Arg2:E21	
+*	OVERLAP E21 E22 E23

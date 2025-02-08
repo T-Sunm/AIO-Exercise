@@ -1,0 +1,412 @@
+T1	Age 2 13	34-year-old
+T2	Personal_background 14 22	Japanese
+T3	Sex 23 28	woman
+T4	Disease_disorder 48 52	MCTD
+E1	Disease_disorder:T4 
+#1	AnnotatorNotes E1	mixed connective tissue disease
+T5	Disease_disorder 74 94	Raynaud's phenomenon
+E2	Disease_disorder:T5 
+T6	Sign_symptom 96 108	pancytopenia
+E3	Sign_symptom:T6 
+T7	Diagnostic_procedure 126 143	creatinine kinase
+E4	Diagnostic_procedure:T7 
+T8	Detailed_description 119 125	plasma
+R1	MODIFY Arg1:T8 Arg2:E4	
+T10	Diagnostic_procedure 168 188	U1-ribonucleoprotein
+E5	Diagnostic_procedure:T10 
+T12	Date 192 196	2005
+E6	Date:T12 
+T13	Medication 219 231	prednisolone
+E7	Medication:T13 
+T14	Dosage 210 215	10 mg
+T15	Dosage 232 237	daily
+R4	MODIFY Arg1:T15 Arg2:E7	
+R5	MODIFY Arg1:T14 Arg2:E7	
+T9	Lab_value 110 118	elevated
+E8	Lab_value:T9 
+R2	MODIFY Arg1:E8 Arg2:E4	
+T11	Lab_value 149 167	antibodies against
+E9	Lab_value:T11 
+R3	MODIFY Arg1:E9 Arg2:E5	
+T16	Diagnostic_procedure 239 275	Pulmonary arterial systolic pressure
+E10	Diagnostic_procedure:T16 
+T18	Diagnostic_procedure 289 305	echocardiography
+E11	Diagnostic_procedure:T18 
+R7	SUB_PROCEDURE Arg1:E11 Arg2:E10	
+T19	Lab_value 310 327	slightly elevated
+E12	Lab_value:T19 
+T20	Lab_value 329 336	48 mmHg
+E13	Lab_value:T20 
+R8	MODIFY Arg1:E12 Arg2:E10	
+R9	MODIFY Arg1:E13 Arg2:E10	
+T21	Date 341 345	2006
+E14	Date:T21 
+T22	Sign_symptom 368 387	shortness of breath
+E15	Sign_symptom:T22 
+T23	Activity 391 406	physical effort
+E16	Activity:T23 
+T24	Detailed_description 356 367	progressive
+R10	MODIFY Arg1:T24 Arg2:E15	
+T25	Date 410 414	2011
+E17	Date:T25 
+T28	Diagnostic_procedure 478 510	mean pulmonary arterial pressure
+E19	Diagnostic_procedure:T28 
+T26	Disease_disorder 416 447	Pulmonary arterial hypertension
+E18	Disease_disorder:T26 
+T27	Lab_value 467 474	74 mmHg
+E20	Lab_value:T27 
+T30	Diagnostic_procedure 512 516	mPAP
+E21	Diagnostic_procedure:T30 
+R12	IDENTICAL Arg1:E21 Arg2:E19	
+R11	MODIFY Arg1:E20 Arg2:E19	
+T29	Diagnostic_procedure 531 558	right heart catheterization
+E22	Diagnostic_procedure:T29 
+T31	Diagnostic_procedure 560 563	RHC
+E23	Diagnostic_procedure:T31 
+R14	IDENTICAL Arg1:E23 Arg2:E22	
+T32	Date 568 572	2012
+E24	Date:T32 
+T33	Medication 597 622	immunosuppressive therapy
+E25	Medication:T33 
+T34	Medication 574 590	Cyclophosphamide
+E26	Medication:T34 
+R15	SUB_PROCEDURE Arg1:E26 Arg2:E25	
+A1	POLARITY E25 NEG
+T35	Sign_symptom 674 693	menopausal symptoms
+E27	Sign_symptom:T35 
+A2	POLARITY E27 UNCERTAIN
+T36	Detailed_description 668 673	early
+R16	MODIFY Arg1:T36 Arg2:E27	
+T37	Dosage 710 720	250 mg/day
+T38	Medication 724 732	bosentan
+E28	Medication:T38 
+T39	Dosage 737 747	120 μg/day
+T40	Medication 751 760	beraprost
+E29	Medication:T40 
+R17	MODIFY Arg1:T39 Arg2:E29	
+R18	MODIFY Arg1:T37 Arg2:E28	
+T41	Date 788 800	January 2014
+E30	Date:T41 
+T42	Sign_symptom 806 813	dyspnea
+E31	Sign_symptom:T42 
+A3	TREND E31 INC
+T43	Diagnostic_procedure 828 848	WHO functional class
+E32	Diagnostic_procedure:T43 
+T44	Lab_value 849 851	IV
+E33	Lab_value:T44 
+R19	MODIFY Arg1:E33 Arg2:E32	
+T45	Clinical_event 866 874	admitted
+E34	Clinical_event:T45 
+T46	Nonbiological_location 882 890	hospital
+R20	MODIFY Arg1:T46 Arg2:E34	
+T47	Diagnostic_procedure 894 914	physical examination
+E35	Diagnostic_procedure:T47 
+T48	Diagnostic_procedure 926 949	systemic blood pressure
+E36	Diagnostic_procedure:T48 
+T49	Lab_value 922 925	low
+E37	Lab_value:T49 
+T50	Lab_value 951 961	89/61 mmHg
+E38	Lab_value:T50 
+R21	MODIFY Arg1:E38 Arg2:E36	
+R22	MODIFY Arg1:E37 Arg2:E36	
+T51	Sign_symptom 964 975	tachycardia
+E39	Sign_symptom:T51 
+T52	Lab_value 977 984	104/min
+E40	Lab_value:T52 
+R23	MODIFY Arg1:E40 Arg2:E39	
+T53	Diagnostic_procedure 991 1009	blood oxygen level
+E41	Diagnostic_procedure:T53 
+T54	Lab_value 987 990	low
+E42	Lab_value:T54 
+R24	MODIFY Arg1:E42 Arg2:E41	
+T55	Diagnostic_procedure 1011 1041	percutaneous oxygen saturation
+E43	Diagnostic_procedure:T55 
+R25	SUB_PROCEDURE Arg1:E43 Arg2:E41	
+T56	Diagnostic_procedure 1043 1047	SpO2
+E44	Diagnostic_procedure:T56 
+R26	IDENTICAL Arg1:E44 Arg2:E43	
+T57	Lab_value 1049 1052	95%
+E45	Lab_value:T57 
+R27	MODIFY Arg1:E45 Arg2:E43	
+T58	Sign_symptom 1070 1080	distension
+E46	Sign_symptom:T58 
+T59	Biological_structure 1055 1069	jugular venous
+R28	MODIFY Arg1:T59 Arg2:E46	
+T60	Sign_symptom 1102 1107	edema
+E47	Sign_symptom:T60 
+T61	Detailed_description 1093 1101	systemic
+T62	Severity 1086 1092	severe
+R29	MODIFY Arg1:T62 Arg2:E47	
+R30	MODIFY Arg1:T61 Arg2:E47	
+T63	Sign_symptom 1116 1124	crackles
+E48	Sign_symptom:T63 
+T64	Detailed_description 1109 1115	Coarse
+R31	MODIFY Arg1:T64 Arg2:E48	
+T65	Detailed_description 1129 1133	loud
+T66	Sign_symptom 1134 1163	pulmonic valve closure sounds
+E49	Sign_symptom:T66 
+R32	MODIFY Arg1:T65 Arg2:E49	
+T67	Diagnostic_procedure 1209 1227	6-minute walk test
+E50	Diagnostic_procedure:T67 
+A4	POLARITY E50 NEG
+T68	Sign_symptom 1242 1249	dyspnea
+E51	Sign_symptom:T68 
+T69	Severity 1235 1241	severe
+R33	MODIFY Arg1:T69 Arg2:E51	
+T70	Diagnostic_procedure 1251 1274	Laboratory examinations
+E52	Diagnostic_procedure:T70 
+T71	Diagnostic_procedure 1298 1323	brain natriuretic peptide
+E53	Diagnostic_procedure:T71 
+T72	Detailed_description 1291 1297	plasma
+R34	MODIFY Arg1:T72 Arg2:E53	
+T73	Lab_value 1282 1290	elevated
+E54	Lab_value:T73 
+T74	Diagnostic_procedure 1325 1328	BNP
+E55	Diagnostic_procedure:T74 
+R35	IDENTICAL Arg1:E55 Arg2:E53	
+R36	MODIFY Arg1:E54 Arg2:E53	
+T75	Lab_value 1337 1348	929.4 pg/mL
+E56	Lab_value:T75 
+R37	MODIFY Arg1:E56 Arg2:E53	
+T76	Sign_symptom 1351 1360	hypoxemia
+E57	Sign_symptom:T76 
+T77	Diagnostic_procedure 1362 1366	PaO2
+E58	Diagnostic_procedure:T77 
+T78	Lab_value 1367 1376	62.5 mmHg
+E59	Lab_value:T78 
+R38	MODIFY Arg1:E59 Arg2:E58	
+T79	Diagnostic_procedure 1378 1383	PaCO2
+E60	Diagnostic_procedure:T79 
+T80	Lab_value 1384 1393	27.1 mmHg
+E61	Lab_value:T80 
+R39	SUB_PROCEDURE Arg1:E53 Arg2:E52	
+R40	SUB_PROCEDURE Arg1:E58 Arg2:E52	
+R41	SUB_PROCEDURE Arg1:E60 Arg2:E52	
+R42	MODIFY Arg1:E61 Arg2:E60	
+T81	Lab_value 1404 1434	presence of antibodies against
+E62	Lab_value:T81 
+T82	Diagnostic_procedure 1435 1455	U1-ribonucleoprotein
+E63	Diagnostic_procedure:T82 
+R43	MODIFY Arg1:E62 Arg2:E63	
+T83	Lab_value 1457 1466	97.9 U/mL
+E64	Lab_value:T83 
+R44	MODIFY Arg1:E64 Arg2:E63	
+R45	SUB_PROCEDURE Arg1:E63 Arg2:E52	
+T84	Diagnostic_procedure 1479 1501	antinuclear antibodies
+E65	Diagnostic_procedure:T84 
+T85	Lab_value 1503 1508	1:640
+E66	Lab_value:T85 
+T86	Lab_value 1510 1526	speckled pattern
+E67	Lab_value:T86 
+R46	MODIFY Arg1:E66 Arg2:E65	
+R47	MODIFY Arg1:E67 Arg2:E65	
+R48	SUB_PROCEDURE Arg1:E65 Arg2:E52	
+T87	Diagnostic_procedure 1537 1542	X-ray
+E68	Diagnostic_procedure:T87 
+T88	Biological_structure 1531 1536	chest
+R49	MODIFY Arg1:T88 Arg2:E68	
+T89	Sign_symptom 1550 1558	enlarged
+E69	Sign_symptom:T89 
+T90	Biological_structure 1559 1577	pulmonary arteries
+R50	MODIFY Arg1:T90 Arg2:E69	
+T91	Sign_symptom 1582 1594	cardiomegaly
+E70	Sign_symptom:T91 
+T92	Diagnostic_procedure 1605 1622	Electrocardiogram
+E71	Diagnostic_procedure:T92 
+T93	Sign_symptom 1630 1646	P wave elevation
+E72	Sign_symptom:T93 
+T94	Detailed_description 1654 1665	V1-V2 leads
+R51	MODIFY Arg1:T94 Arg2:E72	
+T95	Diagnostic_procedure 1667 1670	RHC
+E73	Diagnostic_procedure:T95 
+T96	Diagnostic_procedure 1693 1697	mPAP
+E74	Diagnostic_procedure:T96 
+T97	Lab_value 1684 1692	elevated
+E75	Lab_value:T97 
+T98	Lab_value 1699 1706	65 mmHg
+E76	Lab_value:T98 
+R52	MODIFY Arg1:E75 Arg2:E74	
+R53	MODIFY Arg1:E76 Arg2:E74	
+T99	Diagnostic_procedure 1720 1753	pulmonary arterial wedge pressure
+E77	Diagnostic_procedure:T99 
+T17	Lab_value 1755 1762	12 mmHg
+E78	Lab_value:T17 
+T100	Lab_value 1713 1719	normal
+E79	Lab_value:T100 
+R6	MODIFY Arg1:E79 Arg2:E77	
+R54	MODIFY Arg1:E78 Arg2:E77	
+T101	Lab_value 1765 1769	high
+E80	Lab_value:T101 
+T102	Diagnostic_procedure 1770 1799	pulmonary vascular resistance
+E81	Diagnostic_procedure:T102 
+T103	Lab_value 1801 1820	1,547 dyne・sec・cm-5
+E82	Lab_value:T103 
+R55	MODIFY Arg1:E82 Arg2:E81	
+R56	MODIFY Arg1:E80 Arg2:E81	
+T104	Lab_value 1827 1836	decreased
+E83	Lab_value:T104 
+T105	Diagnostic_procedure 1837 1851	cardiac output
+E84	Diagnostic_procedure:T105 
+T106	Lab_value 1853 1880	cardiac index 1.69 L/min/m2
+E85	Lab_value:T106 
+R13	MODIFY Arg1:E85 Arg2:E84	
+R57	MODIFY Arg1:E83 Arg2:E84	
+T107	Diagnostic_procedure 1885 1911	ventilation/perfusion scan
+E86	Diagnostic_procedure:T107 
+T108	Disease_disorder 1931 1956	pulmonary thromboembolism
+E87	Disease_disorder:T108 
+A5	POLARITY E87 NEG
+T109	Disease_disorder 1970 2007	chronic obstructive pulmonary disease
+E88	Disease_disorder:T109 
+A6	POLARITY E88 NEG
+T110	Disease_disorder 2011 2037	interstitial lung diseases
+E89	Disease_disorder:T110 
+A7	POLARITY E89 NEG
+T111	Diagnostic_procedure 2054 2073	computed tomography
+E90	Diagnostic_procedure:T111 
+T112	Sign_symptom 2079 2086	dyspnea
+E91	Sign_symptom:T112 
+T113	Disease_disorder 2141 2144	PAH
+E92	Disease_disorder:T113 
+#2	AnnotatorNotes E92	pulmonary arterial hypertension
+T114	Disease_disorder 2125 2129	MCTD
+E93	Disease_disorder:T114 
+R58	CAUSE Arg1:E93 Arg2:E92	
+R59	CAUSE Arg1:E92 Arg2:E91	
+T115	Medication 2169 2177	bosentan
+E94	Medication:T115 
+T116	Medication 2182 2191	beraprost
+E95	Medication:T116 
+T117	Therapeutic_procedure 2216 2234	supportive therapy
+E96	Therapeutic_procedure:T117 
+T118	Therapeutic_procedure 2240 2262	oxygen supplementation
+E97	Therapeutic_procedure:T118 
+R60	SUB_PROCEDURE Arg1:E97 Arg2:E96	
+T119	Medication 2267 2276	diuretics
+E98	Medication:T119 
+R61	SUB_PROCEDURE Arg1:E98 Arg2:E96	
+T120	Dosage 2278 2287	40 mg/day
+T121	Medication 2291 2301	furosemide
+E99	Medication:T121 
+R62	MODIFY Arg1:T120 Arg2:E99	
+T122	Dosage 2318 2327	60 mg/day
+T123	Medication 2331 2341	sildenafil
+E100	Medication:T123 
+R64	MODIFY Arg1:T122 Arg2:E100	
+T124	Medication 2386 2395	beraprost
+E101	Medication:T124 
+T125	Dosage 2353 2382	gradual increment in the dose
+R65	MODIFY Arg1:T125 Arg2:E101	
+T126	Sign_symptom 2448 2455	dyspnea
+E102	Sign_symptom:T126 
+A8	TREND E102 STAY
+T127	Diagnostic_procedure 2491 2494	BNP
+E103	Diagnostic_procedure:T127 
+T128	Detailed_description 2484 2490	plasma
+R66	MODIFY Arg1:T128 Arg2:E103	
+T129	Lab_value 2501 2510	increased
+E104	Lab_value:T129 
+R67	MODIFY Arg1:E104 Arg2:E103	
+T130	Medication 2512 2516	IVCY
+E105	Medication:T130 
+#3	AnnotatorNotes E105	Intravenous cyclophosphamide
+T131	Dosage 2518 2542	750 mg/m2, every 4 weeks
+R68	MODIFY Arg1:T131 Arg2:E105	
+T132	Medication 2575 2587	prednisolone
+E106	Medication:T132 
+T133	Dosage 2605 2616	60 mg daily
+R69	MODIFY Arg1:T133 Arg2:E106	
+T134	Sign_symptom 2622 2629	dyspnea
+E107	Sign_symptom:T134 
+A9	POLARITY E107 NEG
+T135	Diagnostic_procedure 2683 2701	6-minute walk test
+E108	Diagnostic_procedure:T135 
+T136	Lab_value 2703 2708	260 m
+E109	Lab_value:T136 
+T137	Diagnostic_procedure 2710 2722	minimum SpO2
+E110	Diagnostic_procedure:T137 
+T138	Lab_value 2723 2727	95 %
+E111	Lab_value:T138 
+R70	MODIFY Arg1:E109 Arg2:E108	
+R71	MODIFY Arg1:E111 Arg2:E110	
+T139	Diagnostic_procedure 2741 2744	BNP
+E112	Diagnostic_procedure:T139 
+T140	Detailed_description 2734 2740	plasma
+R72	MODIFY Arg1:T140 Arg2:E112	
+T141	Lab_value 2756 2765	decreased
+E113	Lab_value:T141 
+R73	MODIFY Arg1:E113 Arg2:E112	
+T142	Medication 2790 2794	IVCY
+E114	Medication:T142 
+T143	Date 2805 2821	Six months after
+E115	Date:T143 
+T144	Clinical_event 2826 2835	admission
+E116	Clinical_event:T144 
+T145	Diagnostic_procedure 2849 2852	RHC
+E117	Diagnostic_procedure:T145 
+T146	Diagnostic_procedure 2871 2875	mPAP
+E118	Diagnostic_procedure:T146 
+T147	Lab_value 2862 2870	improved
+E119	Lab_value:T147 
+T148	Lab_value 2883 2890	53 mmHg
+E120	Lab_value:T148 
+R74	MODIFY Arg1:E120 Arg2:E118	
+R75	MODIFY Arg1:E119 Arg2:E118	
+T149	Diagnostic_procedure 2893 2922	pulmonary vascular resistance
+E121	Diagnostic_procedure:T149 
+R76	MODIFY Arg1:E119 Arg2:E121	
+T150	Lab_value 2933 2952	1,116 dyne・sec・cm-5
+E122	Lab_value:T150 
+R77	MODIFY Arg1:E122 Arg2:E121	
+T151	Diagnostic_procedure 2959 2972	cardiac index
+E123	Diagnostic_procedure:T151 
+T152	Lab_value 2982 2995	1.83 L/min/m2
+E124	Lab_value:T152 
+R78	MODIFY Arg1:E124 Arg2:E123	
+R79	MODIFY Arg1:E119 Arg2:E123	
+T153	Sign_symptom 3025 3031	stable
+E125	Sign_symptom:T153 
+T154	Date 3072 3087	18 months after
+E126	Date:T154 
+T155	Clinical_event 3092 3101	admission
+E127	Clinical_event:T155 
+T156	Medication 3134 3145	prostanoids
+E128	Medication:T156 
+A10	POLARITY E128 UNCERTAIN
+T157	Administration 3123 3133	parenteral
+R80	MODIFY Arg1:T157 Arg2:E128	
+T158	Therapeutic_procedure 3149 3169	lung transplantation
+E129	Therapeutic_procedure:T158 
+A11	POLARITY E129 UNCERTAIN
+*	OVERLAP E1 E2 E3 E4 E5 E6
+R81	BEFORE Arg1:E6 Arg2:E7	
+R82	BEFORE Arg1:E7 Arg2:E10	
+*	OVERLAP E10 E14
+R83	BEFORE Arg1:E14 Arg2:E15	
+R84	CAUSE Arg1:E16 Arg2:E15	
+*	OVERLAP E15 E16 E17
+R85	BEFORE Arg1:E17 Arg2:E18	
+*	OVERLAP E18 E19 E22 E24 E26 E27
+R86	BEFORE Arg1:E27 Arg2:E28	
+*	OVERLAP E28 E29
+R87	BEFORE Arg1:E29 Arg2:E30	
+*	OVERLAP E30 E31 E32 E34 E35 E36 E39 E41 E46 E47 E48 E49 E50 E51 E52 E57 E68 E69 E70 E71 E72 E73 E74 E77 E81 E84 E86 E87 E88 E89 E90 E91 E93 E92 E94 E95
+R88	BEFORE Arg1:E95 Arg2:E96	
+R63	SUB_PROCEDURE Arg1:E99 Arg2:E98	
+*	OVERLAP E96 E100 E101
+R89	BEFORE Arg1:E101 Arg2:E102	
+*	OVERLAP E102 E103
+R90	BEFORE Arg1:E103 Arg2:E105	
+*	OVERLAP E105 E106
+R91	BEFORE Arg1:E106 Arg2:E107	
+*	OVERLAP E107 E108 E110 E112
+R92	AFTER Arg1:E112 Arg2:E114	
+R93	BEFORE Arg1:E114 Arg2:E115	
+R94	AFTER Arg1:E115 Arg2:E116	
+R95	BEFORE Arg1:E116 Arg2:E117	
+*	OVERLAP E117 E118 E121 E123
+R96	BEFORE Arg1:E123 Arg2:E125	
+*	OVERLAP E125 E126
+R97	AFTER Arg1:E126 Arg2:E127	
+R98	BEFORE Arg1:E127 Arg2:E128	
+*	OVERLAP E128 E129

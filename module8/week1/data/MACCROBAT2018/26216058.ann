@@ -1,0 +1,222 @@
+T1	Age 3 14	11-year-old
+T2	Sex 15 18	boy
+T3	Clinical_event 19 28	presented
+E1	Clinical_event:T3 
+T4	Duration 96 110	several months
+E2	Duration:T4 
+T5	Sign_symptom 47 56	headaches
+E3	Sign_symptom:T5 
+T6	Sign_symptom 61 69	vomiting
+E4	Sign_symptom:T6 
+T7	Disease_disorder 140 151	papilledema
+E5	Disease_disorder:T7 
+T8	Disease_disorder 186 207	neurological deficits
+E6	Disease_disorder:T8 
+A1	POLARITY E6 NEG
+T9	Diagnostic_procedure 112 132	Physical examination
+E7	Diagnostic_procedure:T9 
+T10	Diagnostic_procedure 209 235	Magnetic resonance imaging
+E8	Diagnostic_procedure:T10 
+T11	Diagnostic_procedure 237 240	MRI
+E9	Diagnostic_procedure:T11 
+R1	IDENTICAL Arg1:E9 Arg2:E8	
+T12	Sign_symptom 270 274	mass
+E10	Sign_symptom:T12 
+T13	Biological_structure 259 269	prepontine
+T14	Detailed_description 253 258	large
+R2	MODIFY Arg1:T13 Arg2:E10	
+R3	MODIFY Arg1:T14 Arg2:E10	
+T15	Sign_symptom 287 299	displacement
+E11	Sign_symptom:T15 
+T16	Detailed_description 280 286	dorsal
+T17	Biological_structure 307 316	brainstem
+R4	MODIFY Arg1:T16 Arg2:E11	
+R5	MODIFY Arg1:T17 Arg2:E11	
+T18	Disease_disorder 345 358	hydrocephalus
+E12	Disease_disorder:T18 
+T19	Detailed_description 333 344	obstructive
+T20	Detailed_description 323 332	secondary
+R6	MODIFY Arg1:T19 Arg2:E12	
+R7	MODIFY Arg1:T20 Arg2:E12	
+T21	Sign_symptom 366 377	compression
+E13	Sign_symptom:T21 
+T22	Biological_structure 385 393	aqueduct
+R8	MODIFY Arg1:T22 Arg2:E13	
+R9	CAUSE Arg1:E13 Arg2:E12	
+T23	Coreference 399 405	lesion
+E14	Coreference:T23 
+R10	IDENTICAL Arg1:E14 Arg2:E10	
+T24	Sign_symptom 427 445	hypointense aspect
+E15	Sign_symptom:T24 
+T25	Detailed_description 413 426	inhomogeneous
+R11	MODIFY Arg1:T25 Arg2:E15	
+T26	Diagnostic_procedure 453 470	T1-weighted image
+E16	Diagnostic_procedure:T26 
+R12	SUB_PROCEDURE Arg1:E16 Arg2:E8	
+T27	Diagnostic_procedure 472 476	T1WI
+E17	Diagnostic_procedure:T27 
+R13	IDENTICAL Arg1:E17 Arg2:E16	
+T28	Sign_symptom 499 518	hyperintense aspect
+E18	Sign_symptom:T28 
+T29	Diagnostic_procedure 526 543	T2-weighted image
+E19	Diagnostic_procedure:T29 
+T30	Diagnostic_procedure 545 549	T2WI
+E20	Diagnostic_procedure:T30 
+R14	IDENTICAL Arg1:E20 Arg2:E19	
+R15	SUB_PROCEDURE Arg1:E19 Arg2:E8	
+R16	MODIFY Arg1:E18 Arg2:E19	
+R17	MODIFY Arg1:E15 Arg2:E16	
+T31	Detailed_description 485 498	inhomogeneous
+R18	MODIFY Arg1:T31 Arg2:E18	
+T32	Medication 579 589	gadolinium
+E21	Medication:T32 
+T33	Administration 576 578	IV
+R19	MODIFY Arg1:T33 Arg2:E21	
+T34	Sign_symptom 620 631	enhancement
+E22	Sign_symptom:T34 
+T35	Detailed_description 606 619	inhomogeneous
+R20	MODIFY Arg1:T35 Arg2:E22	
+T36	Diagnostic_procedure 641 660	Computed tomography
+E23	Diagnostic_procedure:T36 
+T37	Diagnostic_procedure 662 664	CT
+E24	Diagnostic_procedure:T37 
+R21	IDENTICAL Arg1:E24 Arg2:E23	
+T38	Sign_symptom 684 700	bone involvement
+E25	Sign_symptom:T38 
+A2	POLARITY E25 NEG
+T39	Therapeutic_procedure 753 758	shunt
+E26	Therapeutic_procedure:T39 
+T40	Detailed_description 732 752	ventriculoperitoneal
+R22	MODIFY Arg1:T40 Arg2:E26	
+T41	Biological_structure 781 804	right lateral ventricle
+R23	MODIFY Arg1:T41 Arg2:E26	
+T42	Coreference 818 831	hydrocephalus
+E27	Coreference:T42 
+R24	IDENTICAL Arg1:E27 Arg2:E12	
+T43	Therapeutic_procedure 990 1011	transsylvian approach
+E28	Therapeutic_procedure:T43 
+T44	Detailed_description 975 989	frontotemporal
+T45	Detailed_description 970 974	left
+R25	MODIFY Arg1:T44 Arg2:E28	
+R26	MODIFY Arg1:T45 Arg2:E28	
+T46	Disease_disorder 2274 2282	chordoma
+E29	Disease_disorder:T46 
+T47	Sign_symptom 1060 1066	tumour
+E30	Sign_symptom:T47 
+T48	Detailed_description 1071 1091	well-defined margins
+T49	Biological_structure 1124 1140	intradural plane
+R27	MODIFY Arg1:T48 Arg2:E30	
+R28	MODIFY Arg1:T49 Arg2:E30	
+T50	Sign_symptom 1156 1167	attachments
+E31	Sign_symptom:T50 
+A3	POLARITY E31 NEG
+T51	Biological_structure 1175 1189	cranial nerves
+T52	Biological_structure 1193 1202	brainstem
+R29	MODIFY Arg1:T51 Arg2:E31	
+R30	MODIFY Arg1:T52 Arg2:E31	
+T53	Therapeutic_procedure 1227 1236	resection
+E32	Therapeutic_procedure:T53 
+T54	Detailed_description 1206 1217	macroscopic
+T55	Detailed_description 1218 1226	complete
+R31	MODIFY Arg1:T55 Arg2:E32	
+R32	MODIFY Arg1:T54 Arg2:E32	
+T56	Disease_disorder 1313 1324	nerve palsy
+E33	Disease_disorder:T56 
+T57	Biological_structure 1297 1312	left oculomotor
+R33	MODIFY Arg1:T57 Arg2:E33	
+T58	Date 1353 1376	within the next 4 weeks
+E34	Date:T58 
+T59	Sign_symptom 1343 1352	recovered
+E35	Sign_symptom:T59 
+T60	Diagnostic_procedure 1396 1399	MRI
+E36	Diagnostic_procedure:T60 
+T61	Sign_symptom 1433 1439	tumour
+E37	Sign_symptom:T61 
+A4	POLARITY E37 NEG
+T62	Detailed_description 1409 1425	complete removal
+R34	MODIFY Arg1:T62 Arg2:E37	
+T63	Therapeutic_procedure 1564 1581	radiation therapy
+E38	Therapeutic_procedure:T63 
+A5	POLARITY E38 NEG
+T64	Clinical_event 1586 1595	follow-up
+E39	Clinical_event:T64 
+T65	Date 1596 1622	one and a half years later
+E40	Date:T65 
+T66	Sign_symptom 1663 1675	asymptomatic
+E41	Sign_symptom:T66 
+T67	Sign_symptom 1700 1717	tumour recurrence
+E42	Sign_symptom:T67 
+A6	POLARITY E42 NEG
+T68	Diagnostic_procedure 1725 1728	MRI
+E43	Diagnostic_procedure:T68 
+T69	Clinical_event 1740 1749	follow-up
+E44	Clinical_event:T69 
+T70	Date 1753 1770	more than 6 years
+E45	Date:T70 
+T71	Sign_symptom 1817 1834	tumour recurrence
+E46	Sign_symptom:T71 
+A7	POLARITY E46 NEG
+T72	Diagnostic_procedure 1842 1845	MRI
+E47	Diagnostic_procedure:T72 
+T73	Sign_symptom 1905 1911	tumour
+E48	Sign_symptom:T73 
+T74	Diagnostic_procedure 1852 1876	Histological examination
+E49	Diagnostic_procedure:T74 
+T75	Shape 1886 1904	slightly lobulated
+R35	MODIFY Arg1:T75 Arg2:E48	
+T76	Detailed_description 1928 1948	chondromyxoid matrix
+R36	MODIFY Arg1:T76 Arg2:E48	
+T77	Coreference 1954 1966	tumour cells
+E50	Coreference:T77 
+R37	IDENTICAL Arg1:E50 Arg2:E48	
+T78	Diagnostic_procedure 1996 2005	cytoplasm
+E51	Diagnostic_procedure:T78 
+T79	Lab_value 1976 1986	vacuolated
+T80	Lab_value 1991 1995	pale
+R38	MODIFY Arg1:T80 Arg2:E51	
+R39	MODIFY Arg1:T79 Arg2:E51	
+R40	SUB_PROCEDURE Arg1:E51 Arg2:E49	
+T81	Sign_symptom 2016 2036	nuclear polymorphism
+E52	Sign_symptom:T81 
+T82	Severity 2007 2015	Moderate
+R41	MODIFY Arg1:T82 Arg2:E52	
+T83	Sign_symptom 2065 2081	mitotic activity
+E53	Sign_symptom:T83 
+A8	POLARITY E53 NEG
+T84	Sign_symptom 2096 2110	calcifications
+E54	Sign_symptom:T84 
+T85	Diagnostic_procedure 2160 2171	pan-keratin
+E55	Diagnostic_procedure:T85 
+T86	Diagnostic_procedure 2173 2178	S-100
+E56	Diagnostic_procedure:T86 
+T87	Diagnostic_procedure 2183 2210	epithelial membrane antigen
+E57	Diagnostic_procedure:T87 
+T88	Diagnostic_procedure 2212 2215	EMA
+E58	Diagnostic_procedure:T88 
+R42	IDENTICAL Arg1:E58 Arg2:E57	
+T89	Lab_value 2147 2155	positive
+R43	MODIFY Arg1:T89 Arg2:E55	
+R44	MODIFY Arg1:T89 Arg2:E56	
+R45	MODIFY Arg1:T89 Arg2:E57	
+T90	Coreference 2126 2138	tumour cells
+E59	Coreference:T90 
+R46	IDENTICAL Arg1:E59 Arg2:E50	
+R47	AFTER Arg1:E1 Arg2:E3	
+*	OVERLAP E3 E4 E2
+R48	BEFORE Arg1:E2 Arg2:E7	
+*	OVERLAP E7 E5 E6 E8 E10 E11 E12 E13 E15 E18
+R49	BEFORE Arg1:E18 Arg2:E21	
+*	OVERLAP E21 E22 E23 E25
+R50	BEFORE Arg1:E25 Arg2:E26	
+*	OVERLAP E26 E28 E30 E31 E32
+R51	BEFORE Arg1:E32 Arg2:E33	
+R52	BEFORE Arg1:E33 Arg2:E35	
+*	OVERLAP E35 E34
+R53	AFTER Arg1:E34 Arg2:E36	
+*	OVERLAP E36 E37 E38
+R54	BEFORE Arg1:E38 Arg2:E39	
+*	OVERLAP E39 E40 E41 E42 E43
+R55	BEFORE Arg1:E43 Arg2:E44	
+*	OVERLAP E44 E45 E46 E47
+R56	BEFORE Arg1:E47 Arg2:E49	
+*	OVERLAP E49 E48 E50 E51 E52 E53 E54 E59 E55 E56 E57 E29

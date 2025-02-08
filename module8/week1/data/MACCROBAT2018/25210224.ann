@@ -1,0 +1,378 @@
+T1	Age 2 12	7-year-old
+T2	Sex 13 16	boy
+T3	Disease_disorder 22 40	Goldenhar syndrome
+E1	Disease_disorder:T3 
+T4	Nonbiological_location 95 118	Department of Radiology
+T5	Clinical_event 79 87	referred
+E2	Clinical_event:T5 
+T6	Diagnostic_procedure 123 136	imaging study
+E3	Diagnostic_procedure:T6 
+T7	Biological_structure 144 157	temporal bone
+T8	Diagnostic_procedure 183 193	3D-CT scan
+E4	Diagnostic_procedure:T8 
+T9	Nonbiological_location 221 272	Philips Medical Systems, Amsterdam, The Netherlands
+T10	Diagnostic_procedure 195 219	Brilliance CT-64-channel
+E5	Diagnostic_procedure:T10 
+R1	MODIFY Arg1:T9 Arg2:E5	
+T11	Lab_value 311 317	120 kV
+T12	Lab_value 335 341	150 mA
+T13	Diagnostic_procedure 343 358	Slice thickness
+E6	Diagnostic_procedure:T13 
+T14	Distance 377 381	1-mm
+T15	Distance 389 395	0.5-mm
+T16	Diagnostic_procedure 396 405	increment
+E7	Diagnostic_procedure:T16 
+T17	Coreference 362 372	the images
+E8	Coreference:T17 
+R2	MODIFY Arg1:T14 Arg2:E6	
+R3	MODIFY Arg1:T15 Arg2:E7	
+T18	Detailed_description 417 429	DICOM format
+T19	Diagnostic_procedure 407 413	Images
+E9	Diagnostic_procedure:T19 
+R4	MODIFY Arg1:T18 Arg2:E9	
+T20	Diagnostic_procedure 492 524	three-dimensional reconstruction
+E10	Diagnostic_procedure:T20 
+T21	Biological_structure 528 547	skeletal structures
+R5	MODIFY Arg1:T21 Arg2:E10	
+R6	SUB_PROCEDURE Arg1:E10 Arg2:E9	
+T22	Biological_structure 625 632	auricle
+T23	Disease_disorder 607 617	hypoplasia
+E11	Disease_disorder:T23 
+R7	MODIFY Arg1:T22 Arg2:E11	
+T24	Biological_structure 700 712	left auricle
+T25	Diagnostic_procedure 725 735	dimensions
+E12	Diagnostic_procedure:T25 
+T26	Diagnostic_procedure 740 750	morphology
+E13	Diagnostic_procedure:T26 
+R8	MODIFY Arg1:T24 Arg2:E12	
+R9	MODIFY Arg1:T24 Arg2:E13	
+T27	Lab_value 717 724	regular
+R10	MODIFY Arg1:T27 Arg2:E12	
+R11	MODIFY Arg1:T27 Arg2:E13	
+T28	Disease_disorder 752 759	Atresia
+E14	Disease_disorder:T28 
+T29	Biological_structure 767 789	right auditory conduit
+T30	Biological_structure 803 824	left auditory conduit
+T31	Lab_value 796 802	normal
+R12	MODIFY Arg1:T31 Arg2:T30	
+R13	MODIFY Arg1:E14 Arg2:T29	
+T32	Biological_structure 2154 2173	right mastoid cells
+T33	Biological_structure 1215 1231	mandibular plane
+T34	Biological_structure 1196 1210	occlusal plane
+T35	Diagnostic_procedure 1070 1086	Skeletal studies
+E15	Diagnostic_procedure:T35 
+T36	Biological_structure 892 899	cranium
+T37	Biological_structure 1018 1030	inferior lip
+T38	Biological_structure 1101 1119	mandibular condyle
+T39	Biological_structure 1101 1111;1121 1126	mandibular ramus
+T40	Biological_structure 1101 1111;1131 1137	mandibular corpus
+T41	Biological_structure 1314 1333	Mandibular condyles
+T42	Biological_structure 1338 1363	temporo-mandibular joints
+T43	Detailed_description 1377 1387	asymmetric
+R14	MODIFY Arg1:T43 Arg2:T42	
+R15	MODIFY Arg1:T43 Arg2:T41	
+T44	Biological_structure 1411 1424	right condyle
+T45	Biological_attribute 1429 1437	deformed
+R16	MODIFY Arg1:T45 Arg2:T44	
+T46	Lab_value 1439 1446;1457 1476	shorter than the other side
+T47	Lab_value 1451 1476	wider than the other side
+T48	Area 1513 1522	11 × 7 mm
+T49	Area 1533 1542	14 × 7 mm
+T50	Detailed_description 1523 1528	right
+T51	Detailed_description 1543 1547	left
+T52	Biological_structure 1478 1496	mandibular condyle
+R17	MODIFY Arg1:T50 Arg2:T48	
+R18	MODIFY Arg1:T51 Arg2:T49	
+R19	MODIFY Arg1:T48 Arg2:E40	
+R20	MODIFY Arg1:T49 Arg2:E40	
+R22	MODIFY Arg1:T46 Arg2:T44	
+R21	MODIFY Arg1:T47 Arg2:T44	
+T53	Biological_structure 1942 1955	temporal bone
+T54	Biological_structure 1590 1605	skeleton planes
+T55	Biological_structure 1749 1760	medial axis
+T56	Biological_structure 1816 1841	right mandibular condyles
+T57	Biological_structure 1984 2007	external auditory canal
+T58	Disease_disorder 2008 2015	atresia
+E16	Disease_disorder:T58 
+T59	Detailed_description 1970 1980	right side
+R23	MODIFY Arg1:T59 Arg2:T53	
+R24	MODIFY Arg1:T57 Arg2:E16	
+T60	Biological_structure 2031 2046	tympanic cavity
+T61	Disease_disorder 2017 2027	hypoplasia
+E17	Disease_disorder:T61 
+R25	MODIFY Arg1:T60 Arg2:E17	
+T62	Biological_structure 2247 2267	left tympanic cavity
+T63	Biological_structure 2175 2203	Left external auditory canal
+T64	Diagnostic_procedure 2204 2214	dimensions
+E18	Diagnostic_procedure:T64 
+T65	Diagnostic_procedure 2219 2229	morphology
+E19	Diagnostic_procedure:T65 
+T66	Lab_value 2235 2241	normal
+R26	MODIFY Arg1:T66 Arg2:E19	
+R27	MODIFY Arg1:T66 Arg2:E18	
+R28	MODIFY Arg1:T63 Arg2:E18	
+R29	MODIFY Arg1:T63 Arg2:E19	
+T67	Disease_disorder 2124 2138	pneumatization
+E20	Disease_disorder:T67 
+A1	POLARITY E20 NEG
+T68	Biological_structure 2362 2371	left ears
+T69	Biological_structure 2352 2357;2367 2371	right ears
+T70	Disease_disorder 2388 2398	hypoplasia
+E21	Disease_disorder:T70 
+T71	Severity 2382 2387	minor
+R30	MODIFY Arg1:T71 Arg2:E21	
+T72	Biological_structure 2402 2415	auricle bones
+T73	Detailed_description 2423 2433	right side
+R31	MODIFY Arg1:T73 Arg2:T72	
+R32	MODIFY Arg1:T72 Arg2:E21	
+T74	Biological_structure 2516 2528	malleus head
+T75	Biological_structure 2591 2596	incus
+T76	Detailed_description 2582 2590	deformed
+T77	Biological_structure 2653 2665	left malleus
+T78	Biological_structure 2670 2675	incus
+T79	Biological_structure 2772 2779	staples
+T80	Biological_structure 2640 2647	staples
+T81	Detailed_description 2618 2635	impossible to see
+R33	MODIFY Arg1:T81 Arg2:T80	
+T82	Diagnostic_procedure 2844 2854	Dimensions
+E22	Diagnostic_procedure:T82 
+T83	Diagnostic_procedure 2859 2869	morphology
+E23	Diagnostic_procedure:T83 
+T84	Biological_structure 2873 2900	cochlea semicircular canals
+T85	Biological_structure 2873 2880;2902 2912	cochlea vestibulum
+T86	Biological_structure 2873 2880;2917 2926	cochlea utriculum
+T87	Biological_structure 3045 3053	condyles
+T88	Diagnostic_procedure 2978 2993	3D-CT valuation
+E24	Diagnostic_procedure:T88 
+T89	Detailed_description 3028 3037	asymmetry
+R34	MODIFY Arg1:T89 Arg2:T87	
+T90	Biological_structure 3074 3087	right condyle
+T91	Detailed_description 3092 3102	dysmorphic
+R35	MODIFY Arg1:T91 Arg2:T90	
+T92	Other_event 872 884	ossification
+E25	Other_event:T92 
+#1	AnnotatorNotes E25	Biological (bone formation) process; should there be a separate category for recuperative processes and conditions?
+T93	Severity 864 871	partial
+R36	MODIFY Arg1:T93 Arg2:E25	
+R37	MODIFY Arg1:T36 Arg2:E25	
+T94	Detailed_description 900 925	typical in paediatric age
+R38	MODIFY Arg1:T94 Arg2:E25	
+T96	Diagnostic_procedure 977 991	convex profile
+E27	Diagnostic_procedure:T96 
+T97	Severity 972 976	very
+R39	MODIFY Arg1:T97 Arg2:E27	
+T95	Detailed_description 955 971	typical II class
+R40	MODIFY Arg1:T95 Arg2:E27	
+T98	Lab_value 1037 1044	reduced
+T100	Detailed_description 997 1010	interposition
+R42	MODIFY Arg1:T100 Arg2:T37	
+T101	Biological_structure 3124 3131	auricle
+T102	Biological_structure 3139 3157	right external ear
+T103	Disease_disorder 3162 3173	hypoplastic
+E28	Disease_disorder:T103 
+T104	Biological_structure 3216 3232	right middle ear
+T105	Biological_structure 3251 3266	tympanic cavity
+T106	Disease_disorder 3239 3250	hypoplastic
+E29	Disease_disorder:T106 
+R43	MODIFY Arg1:E29 Arg2:T105	
+T107	Biological_structure 3272 3290	right internal ear
+T108	Disease_disorder 3298 3305	atresic
+E30	Disease_disorder:T108 
+T109	Biological_structure 3306 3322	auditory conduit
+R44	MODIFY Arg1:E30 Arg2:T109	
+R45	MODIFY Arg1:T104 Arg2:T105	
+R46	MODIFY Arg1:T107 Arg2:T109	
+T110	Diagnostic_procedure 46 74	post-natal genetic diagnosis
+E31	Diagnostic_procedure:T110 
+R47	SUB_PROCEDURE Arg1:E5 Arg2:E4	
+T111	Coreference 292 300	protocol
+E32	Coreference:T111 
+R48	IDENTICAL Arg1:E32 Arg2:E5	
+R49	MODIFY Arg1:T11 Arg2:E32	
+R50	MODIFY Arg1:T12 Arg2:E32	
+R51	SUB_PROCEDURE Arg1:E7 Arg2:E8	
+R52	SUB_PROCEDURE Arg1:E6 Arg2:E8	
+R53	IDENTICAL Arg1:E8 Arg2:E4	
+T112	Detailed_description 435 478	processed on a PC using commercial software
+R54	MODIFY Arg1:T112 Arg2:E9	
+T113	History 22 40	Goldenhar syndrome
+T114	History 46 74	post-natal genetic diagnosis
+R55	MODIFY Arg1:T7 Arg2:E3	
+R56	SUB_PROCEDURE Arg1:E4 Arg2:E3	
+*	OVERLAP E7 E9
+T115	Biological_structure 589 599	skin plans
+T116	Diagnostic_procedure 553 581	3-dimensional reconstruction
+E33	Diagnostic_procedure:T116 
+*	OVERLAP E10 E33
+R57	MODIFY Arg1:T115 Arg2:E33	
+R58	MODIFY Arg1:E11 Arg2:E33	
+T117	Detailed_description 645 655	right side
+T118	Detailed_description 671 677	simple
+R59	MODIFY Arg1:T117 Arg2:T22	
+*	OVERLAP E12 E13 E34 E14
+T119	Sign_symptom 678 694	dysmorphic rough
+E34	Sign_symptom:T119 
+#2	AnnotatorNotes E34	Seems to refer to a sign, though may be a disease/disorder
+R60	MODIFY Arg1:T118 Arg2:E34	
+R61	MODIFY Arg1:E34 Arg2:T117	
+T120	Diagnostic_procedure 850 856	images
+E35	Diagnostic_procedure:T120 
+#3	AnnotatorNotes E35	Seems to refer to figures in report
+T121	Detailed_description 844 849	upper
+R62	MODIFY Arg1:T121 Arg2:E35	
+R63	MODIFY Arg1:E25 Arg2:E35	
+*	OVERLAP E25 E27 E15 E42
+R64	MODIFY Arg1:T37 Arg2:E27	
+T99	Biological_structure 1045 1060	neck-chin angle
+R41	MODIFY Arg1:T98 Arg2:T99	
+R65	MODIFY Arg1:T99 Arg2:E27	
+T122	Diagnostic_procedure 830 838	observed
+E26	Diagnostic_procedure:T122 
+R66	MODIFY Arg1:T30 Arg2:E26	
+R67	MODIFY Arg1:T29 Arg2:E26	
+*	OVERLAP E26 E35
+T123	Detailed_description 1143 1171	shorter on the affected side
+R68	MODIFY Arg1:T123 Arg2:T40	
+R69	MODIFY Arg1:T123 Arg2:T39	
+R70	MODIFY Arg1:T123 Arg2:T38	
+R71	MODIFY Arg1:T39 Arg2:E15	
+R72	MODIFY Arg1:T40 Arg2:E15	
+R73	MODIFY Arg1:T38 Arg2:E15	
+T124	Biological_structure 1184 1194	oral rhyme
+#4	AnnotatorNotes T124	Based on context; need confirmation on what this is
+T125	Detailed_description 1173 1180	Tilting
+R74	MODIFY Arg1:T125 Arg2:T124	
+R75	MODIFY Arg1:T125 Arg2:T34	
+R76	MODIFY Arg1:T125 Arg2:T33	
+T126	Diagnostic_procedure 1554 1582	3-dimensional reconstruction
+E36	Diagnostic_procedure:T126 
+T127	Diagnostic_procedure 1686 1714	3-dimensional reconstruction
+E37	Diagnostic_procedure:T127 
+T128	Biological_structure 1675 1685	Mandibular
+R77	MODIFY Arg1:T128 Arg2:E37	
+T129	Detailed_description 1780 1790	right side
+T130	Disease_disorder 1768 1779	hypoplastic
+E38	Disease_disorder:T130 
+R78	MODIFY Arg1:E38 Arg2:T129	
+T131	Detailed_description 1799 1808	asymmetry
+R79	MODIFY Arg1:T131 Arg2:T56	
+T132	Biological_structure 1655 1673	left hemimandibula
+T133	Biological_structure 1645 1650;1660 1673	right hemimandibula
+T134	Diagnostic_procedure 1627 1637	morphology
+E39	Diagnostic_procedure:T134 
+R80	SUB_PROCEDURE Arg1:E39 Arg2:E36	
+R81	MODIFY Arg1:T54 Arg2:E36	
+R82	MODIFY Arg1:T133 Arg2:E39	
+R83	MODIFY Arg1:T132 Arg2:E39	
+T135	Diagnostic_procedure 1497 1507	dimensions
+E40	Diagnostic_procedure:T135 
+R84	MODIFY Arg1:T52 Arg2:E40	
+T136	Disease_disorder 1256 1274	form abnormalities
+E41	Disease_disorder:T136 
+A2	POLARITY E41 NEG
+T137	Diagnostic_procedure 1297 1312	mixed dentition
+E42	Diagnostic_procedure:T137 
+T138	Disease_disorder 1246 1252;1261 1274	Number abnormalities
+E43	Disease_disorder:T138 
+A3	POLARITY E43 NEG
+R85	BEFORE Arg1:E41 Arg2:E42	
+R86	BEFORE Arg1:E43 Arg2:E42	
+R87	MODIFY Arg1:T124 Arg2:E15	
+R88	MODIFY Arg1:T34 Arg2:E15	
+R89	MODIFY Arg1:T33 Arg2:E15	
+*	OVERLAP E39 E37
+T139	Detailed_description 1736 1741	shift
+R90	MODIFY Arg1:T139 Arg2:T55	
+T140	Lab_value 1866 1871	short
+T141	Lab_value 1876 1880	wide
+T142	Detailed_description 1855 1865	dysmorphic
+T143	Detailed_description 2272 2287	normally formed
+T144	Detailed_description 2487 2508	normal representation
+R91	MODIFY Arg1:T144 Arg2:T74	
+T145	Sign_symptom 2560 2576	dysmorphic rough
+E44	Sign_symptom:T145 
+R92	MODIFY Arg1:T76 Arg2:T75	
+R93	MODIFY Arg1:T75 Arg2:E44	
+R94	MODIFY Arg1:E44 Arg2:T74	
+T146	Sign_symptom 3182 3198	dysmorphic rough
+E45	Sign_symptom:T146 
+R95	MODIFY Arg1:T87 Arg2:E24	
+R96	MODIFY Arg1:T90 Arg2:T87	
+T147	Lab_value 3104 3109	short
+T148	Lab_value 3114 3118	wide
+R97	MODIFY Arg1:T147 Arg2:T90	
+R98	MODIFY Arg1:T148 Arg2:T90	
+R99	MODIFY Arg1:T102 Arg2:T101	
+R100	MODIFY Arg1:E28 Arg2:T101	
+R101	MODIFY Arg1:T101 Arg2:E24	
+R102	MODIFY Arg1:E45 Arg2:E24	
+R103	MODIFY Arg1:T105 Arg2:E24	
+R104	MODIFY Arg1:T109 Arg2:E24	
+R105	MODIFY Arg1:T85 Arg2:E23	
+R106	MODIFY Arg1:T85 Arg2:E22	
+R107	MODIFY Arg1:T84 Arg2:E23	
+R108	MODIFY Arg1:T84 Arg2:E22	
+R109	MODIFY Arg1:T86 Arg2:E23	
+R110	MODIFY Arg1:T86 Arg2:E22	
+T149	Detailed_description 2932 2941	unaltered
+R111	MODIFY Arg1:T149 Arg2:E23	
+R112	MODIFY Arg1:T149 Arg2:E22	
+A4	TREND E23 STAY
+A5	TREND E22 STAY
+*	OVERLAP E22 E23 E24 E46
+T150	Detailed_description 2681 2688	visible
+T151	Detailed_description 2708 2741	articulated in an abnormal manner
+T152	Detailed_description 2743 2765	reduce contact surface
+R113	MODIFY Arg1:T152 Arg2:T151	
+R114	MODIFY Arg1:T150 Arg2:T78	
+R115	MODIFY Arg1:T150 Arg2:T77	
+R116	MODIFY Arg1:T151 Arg2:T78	
+R117	MODIFY Arg1:T151 Arg2:T77	
+T153	Detailed_description 2824 2831	regular
+T154	Diagnostic_procedure 2832 2842	morphology
+E46	Diagnostic_procedure:T154 
+R118	MODIFY Arg1:T79 Arg2:E46	
+R119	MODIFY Arg1:T153 Arg2:E46	
+T155	Detailed_description 2784 2804	difficult to observe
+R120	MODIFY Arg1:T155 Arg2:T79	
+R121	MODIFY Arg1:T143 Arg2:T62	
+T156	Detailed_description 2292 2345	totally occupied by dense materials from soft tissues
+R122	MODIFY Arg1:T156 Arg2:T62	
+R123	MODIFY Arg1:T32 Arg2:E20	
+*	OVERLAP E20 E18 E19 E17 E21 E50
+T157	Disease_disorder 2060 2071	pneumatized
+E47	Disease_disorder:T157 
+A6	POLARITY E47 NEG
+T158	Detailed_description 2076 2119	occupied by dense materials from soft parts
+R125	MODIFY Arg1:T158 Arg2:E17	
+T159	Coreference 1929 1934	study
+E48	Coreference:T159 
+R126	IDENTICAL Arg1:E48 Arg2:E3	
+R127	MODIFY Arg1:T53 Arg2:E48	
+R128	MODIFY Arg1:E16 Arg2:T59	
+R129	MODIFY Arg1:E17 Arg2:T59	
+#5	AnnotatorNotes E47	May be diso
+R124	MODIFY Arg1:E47 Arg2:E17	
+T160	Diagnostic_procedure 1902 1911	scansions
+E49	Diagnostic_procedure:T160 
+T161	Detailed_description 1884 1889	axial
+T162	Detailed_description 1894 1901	coronal
+R130	MODIFY Arg1:T162 Arg2:E49	
+R131	MODIFY Arg1:T161 Arg2:E49	
+R132	MODIFY Arg1:T142 Arg2:T56	
+R133	MODIFY Arg1:T140 Arg2:T56	
+R134	MODIFY Arg1:T141 Arg2:T56	
+R135	MODIFY Arg1:T56 Arg2:E49	
+R136	MODIFY Arg1:T139 Arg2:T129	
+R137	MODIFY Arg1:T55 Arg2:E37	
+R138	MODIFY Arg1:T56 Arg2:E37	
+R139	SUB_PROCEDURE Arg1:E49 Arg2:E37	
+*	OVERLAP E49 E48
+T163	Coreference 2471 2485	our instrument
+E50	Coreference:T163 
+R140	IDENTICAL Arg1:E50 Arg2:E5	
+R141	MODIFY Arg1:T74 Arg2:E50	
+R142	MODIFY Arg1:T80 Arg2:E50	
+*	OVERLAP E2 E3
+R143	BEFORE Arg1:E31 Arg2:E2	
+*	OVERLAP E1 E31

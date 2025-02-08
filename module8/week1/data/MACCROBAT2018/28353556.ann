@@ -1,0 +1,408 @@
+T1	Age 2 13	33-year-old
+T2	Personal_background 14 22	Moroccan
+T3	Sex 23 26	man
+T4	Sign_symptom 88 99	temperature
+E1	Sign_symptom:T4 
+#1	AnnotatorNotes E1	presumably a high temperature - "temperature" is not a symptom by itself
+T5	Sign_symptom 101 108	myalgia
+E2	Sign_symptom:T5 
+T6	Sign_symptom 110 115	cough
+E3	Sign_symptom:T6 
+T7	Sign_symptom 121 131	hemoptysis
+E4	Sign_symptom:T7 
+T8	Disease_disorder 63 72	sinusitis
+E5	Disease_disorder:T8 
+T9	Duration 34 41	5-month
+E6	Duration:T9 
+T10	Diagnostic_procedure 142 162	physical examination
+E7	Diagnostic_procedure:T10 
+T11	Biological_structure 133 141	Thoracic
+R1	MODIFY Arg1:T11 Arg2:E7	
+T12	Diagnostic_procedure 180 196	vesicular murmur
+E8	Diagnostic_procedure:T12 
+T13	Lab_value 172 179	reduced
+R2	MODIFY Arg1:T13 Arg2:E8	
+T14	Diagnostic_procedure 208 213	X-ray
+E9	Diagnostic_procedure:T14 
+T15	Biological_structure 202 207	chest
+R3	MODIFY Arg1:T15 Arg2:E9	
+T16	Sign_symptom 248 259	infiltrates
+E10	Sign_symptom:T16 
+T17	Detailed_description 221 230	bilateral
+T18	Detailed_description 231 238	diffuse
+T19	Biological_structure 239 247	alveolar
+R4	MODIFY Arg1:T19 Arg2:E10	
+R5	MODIFY Arg1:T18 Arg2:E10	
+R6	MODIFY Arg1:T17 Arg2:E10	
+T20	Diagnostic_procedure 261 280	Laboratory analyses
+E11	Diagnostic_procedure:T20 
+T21	Diagnostic_procedure 301 321	acute-phase proteins
+E12	Diagnostic_procedure:T21 
+T22	Diagnostic_procedure 323 326	CRP
+E13	Diagnostic_procedure:T22 
+T23	Lab_value 327 335	26 mg/dL
+R7	MODIFY Arg1:T23 Arg2:E13	
+R8	SUB_PROCEDURE Arg1:E13 Arg2:E12	
+T24	Lab_value 288 297	elevation
+R9	MODIFY Arg1:T24 Arg2:E12	
+R10	SUB_PROCEDURE Arg1:E12 Arg2:E11	
+T25	Diagnostic_procedure 341 351	creatinine
+E14	Diagnostic_procedure:T25 
+T26	Lab_value 353 362	1.2 mg/dL
+R11	MODIFY Arg1:T26 Arg2:E14	
+R12	SUB_PROCEDURE Arg1:E14 Arg2:E11	
+R13	MODIFY Arg1:T24 Arg2:E14	
+T27	Sign_symptom 382 393	proteinuria
+E15	Sign_symptom:T27 
+T28	Detailed_description 369 381	nonnephrotic
+R14	MODIFY Arg1:T28 Arg2:E15	
+T29	Sign_symptom 421 430	hematuria
+E16	Sign_symptom:T29 
+T30	Detailed_description 398 409	microscopic
+T31	Detailed_description 410 420	glomerular
+R15	MODIFY Arg1:T31 Arg2:E16	
+R16	MODIFY Arg1:T30 Arg2:E16	
+T32	Medication 435 453	antibiotic therapy
+E17	Medication:T32 
+T33	Clinical_event 2664 2673	follow-up
+E18	Clinical_event:T33 
+T34	Medication 506 518	levofloxacin
+E19	Medication:T34 
+T35	Dosage 519 531	500 mg daily
+T36	Administration 532 534	iv
+R17	MODIFY Arg1:T35 Arg2:E19	
+R18	MODIFY Arg1:T36 Arg2:E19	
+T37	Disease_disorder 490 500	pneumoniae
+E20	Disease_disorder:T37 
+A1	POLARITY E20 UNCERTAIN
+T38	Detailed_description 458 476	community acquired
+T39	Detailed_description 481 489	atypical
+R19	MODIFY Arg1:T39 Arg2:E20	
+R20	MODIFY Arg1:T38 Arg2:E20	
+R21	SUB_PROCEDURE Arg1:E19 Arg2:E17	
+T40	Date 563 570	3rd day
+E21	Date:T40 
+T41	Disease_disorder 608 627	respiratory failure
+E22	Disease_disorder:T41 
+T42	Therapeutic_procedure 656 667	ventilation
+E23	Therapeutic_procedure:T42 
+T43	Detailed_description 644 655	noninvasive
+R22	MODIFY Arg1:T43 Arg2:E23	
+T44	Therapeutic_procedure 682 691	intubated
+E24	Therapeutic_procedure:T44 
+T45	Diagnostic_procedure 750 769	computed tomography
+E25	Diagnostic_procedure:T45 
+T46	Disease_disorder 944 947	GPA
+E26	Disease_disorder:T46 
+#2	AnnotatorNotes E26	Granulomatosis with polyangiitis
+T47	Therapeutic_procedure 965 984	ventilatory support
+E27	Therapeutic_procedure:T47 
+T48	Detailed_description 957 964	maximal
+R23	MODIFY Arg1:T48 Arg2:E27	
+T49	Diagnostic_procedure 986 998	gas exchange
+E28	Diagnostic_procedure:T49 
+T50	Lab_value 999 1014	did not improve
+R24	MODIFY Arg1:T50 Arg2:E28	
+T51	Sign_symptom 800 808	bleeding
+E29	Sign_symptom:T51 
+T52	Biological_structure 792 799	airways
+T53	Detailed_description 784 791	diffuse
+R25	MODIFY Arg1:T52 Arg2:E29	
+R26	MODIFY Arg1:T53 Arg2:E29	
+T54	Diagnostic_procedure 823 835	bronchoscopy
+E30	Diagnostic_procedure:T54 
+T55	Detailed_description 812 822	fiberoptic
+R27	MODIFY Arg1:T55 Arg2:E30	
+T56	Sign_symptom 853 859	anemia
+E31	Sign_symptom:T56 
+T57	Severity 837 841	mild
+T58	Detailed_description 842 852	normocytic
+R28	MODIFY Arg1:T58 Arg2:E31	
+R29	MODIFY Arg1:T57 Arg2:E31	
+T59	Diagnostic_procedure 853 859	anemia
+E32	Diagnostic_procedure:T59 
+T60	Lab_value 861 867	9 g/dL
+R30	MODIFY Arg1:T60 Arg2:E32	
+T61	Diagnostic_procedure 874 882	ANCA-PR3
+E33	Diagnostic_procedure:T61 
+T62	Lab_value 883 893	positivity
+T63	Lab_value 895 904	18.9 U/mL
+R31	MODIFY Arg1:T62 Arg2:E33	
+R32	MODIFY Arg1:T63 Arg2:E33	
+T64	Sign_symptom 709 723	consolidations
+E34	Sign_symptom:T64 
+T65	Biological_structure 699 703	lung
+T66	Color 693 698	White
+R33	MODIFY Arg1:T66 Arg2:T65	
+R34	MODIFY Arg1:T65 Arg2:E34	
+T67	Sign_symptom 728 746	ground glass areas
+E35	Sign_symptom:T67 
+T68	Diagnostic_procedure 1016 1018	pH
+E36	Diagnostic_procedure:T68 
+T69	Diagnostic_procedure 1025 1029	PaO2
+E37	Diagnostic_procedure:T69 
+T70	Diagnostic_procedure 1040 1045	PaCO2
+E38	Diagnostic_procedure:T70 
+T71	Diagnostic_procedure 1056 1060	HCO3
+E39	Diagnostic_procedure:T71 
+T72	Diagnostic_procedure 1073 1077	SaO2
+E40	Diagnostic_procedure:T72 
+T73	Lab_value 1078 1081	94%
+R35	MODIFY Arg1:T73 Arg2:E40	
+T74	Lab_value 1062 1071	25 mmol/L
+R36	MODIFY Arg1:T74 Arg2:E39	
+T75	Lab_value 1046 1054	51 mm Hg
+R37	MODIFY Arg1:T75 Arg2:E38	
+T76	Lab_value 1019 1023	7.33
+R38	MODIFY Arg1:T76 Arg2:E36	
+T77	Lab_value 1030 1038	71 mm Hg
+R39	MODIFY Arg1:T77 Arg2:E37	
+R40	SUB_PROCEDURE Arg1:E36 Arg2:E28	
+R41	SUB_PROCEDURE Arg1:E37 Arg2:E28	
+R42	SUB_PROCEDURE Arg1:E38 Arg2:E28	
+R43	SUB_PROCEDURE Arg1:E39 Arg2:E28	
+R44	SUB_PROCEDURE Arg1:E40 Arg2:E28	
+T78	Therapeutic_procedure 1130 1134	ECMO
+E41	Therapeutic_procedure:T78 
+T79	Therapeutic_procedure 1093 1128	extracorporeal membrane oxygenation
+E42	Therapeutic_procedure:T79 
+R45	IDENTICAL Arg1:E41 Arg2:E42	
+T80	Medication 1162 1180	methylprednisolone
+E43	Medication:T80 
+T81	Dosage 1182 1191	1 g daily
+R46	MODIFY Arg1:T81 Arg2:E43	
+T82	Dosage 1152 1161	high-dose
+R47	MODIFY Arg1:T82 Arg2:E43	
+T83	Duration 1196 1202	3 days
+E44	Duration:T83 
+R48	MODIFY Arg1:E44 Arg2:T81	
+T84	Dosage 1207 1220	1 mg/kg daily
+R49	MODIFY Arg1:T84 Arg2:E43	
+T85	Medication 1234 1250	cyclophosphamide
+E45	Medication:T85 
+T86	Dosage 1252 1298	1.2 g/pulse every 2 weeks for the 1st 3 pulses
+T87	Dosage 1322 1357	every 3 weeks for the next 2 pulses
+R50	MODIFY Arg1:T87 Arg2:E45	
+R51	MODIFY Arg1:T86 Arg2:E45	
+T88	Therapeutic_procedure 1364 1379	plasma exchange
+E46	Therapeutic_procedure:T88 
+T89	Therapeutic_procedure 1381 1383	PE
+E47	Therapeutic_procedure:T89 
+T90	Detailed_description 1399 1446	European vasculitis study group recommendations
+R52	MODIFY Arg1:T90 Arg2:E46	
+R53	IDENTICAL Arg1:E47 Arg2:E46	
+T91	Diagnostic_procedure 1480 1491	respiratory
+E48	Diagnostic_procedure:T91 
+T92	Lab_value 1492 1503	improvement
+R54	MODIFY Arg1:T92 Arg2:E48	
+T93	Therapeutic_procedure 1517 1521	ECMO
+E49	Therapeutic_procedure:T93 
+A2	POLARITY E49 NEG
+T94	Therapeutic_procedure 1526 1542	orotracheal tube
+E50	Therapeutic_procedure:T94 
+A3	POLARITY E50 NEG
+T95	Clinical_event 1569 1578	discharge
+E51	Clinical_event:T95 
+T96	Nonbiological_location 1584 1603	intensive care unit
+R55	MODIFY Arg1:T96 Arg2:E51	
+T97	Date 1605 1617	After 9 days
+E52	Date:T97 
+T98	Diagnostic_procedure 1650 1658	ANCA-PR3
+E53	Diagnostic_procedure:T98 
+T99	Lab_value 1666 1676	normalized
+T100	Lab_value 1678 1684	3 U/mL
+R56	MODIFY Arg1:T99 Arg2:E53	
+R57	MODIFY Arg1:T100 Arg2:E53	
+T101	Date 1687 1703	Two months later
+E54	Date:T101 
+T102	Medication 1754 1764	prednisone
+E55	Medication:T102 
+T103	Dosage 1765 1778	0.3 mg/kg/day
+R58	MODIFY Arg1:T103 Arg2:E55	
+T104	Medication 1728 1744	cyclophosphamide
+E56	Medication:T104 
+T105	Detailed_description 1715 1724	5th bolus
+R59	MODIFY Arg1:T105 Arg2:E56	
+T106	Sign_symptom 1803 1816	arthromyalgia
+E57	Sign_symptom:T106 
+T107	Sign_symptom 1832 1836	pain
+E58	Sign_symptom:T107 
+T108	Biological_structure 1821 1831	testicular
+R60	MODIFY Arg1:T108 Arg2:E58	
+T109	Sign_symptom 1842 1847	edema
+E59	Sign_symptom:T109 
+T110	Sign_symptom 1849 1854	cough
+E60	Sign_symptom:T110 
+T111	Sign_symptom 1860 1879	shortness of breath
+E61	Sign_symptom:T111 
+T112	Diagnostic_procedure 1881 1896	laboratory data
+E62	Diagnostic_procedure:T112 
+T113	Diagnostic_procedure 1917 1931	renal function
+E63	Diagnostic_procedure:T113 
+T114	Lab_value 1904 1913	worsening
+R61	MODIFY Arg1:T114 Arg2:E63	
+T115	Sign_symptom 1938 1944	anemia
+E64	Sign_symptom:T115 
+T116	Severity 1933 1937	mild
+R62	MODIFY Arg1:T116 Arg2:E64	
+T117	Sign_symptom 1950 1959	hypoxemia
+E65	Sign_symptom:T117 
+T118	Diagnostic_procedure 1961 1965	PaO2
+E66	Diagnostic_procedure:T118 
+T119	Lab_value 1966 1974	61 mm Hg
+R63	MODIFY Arg1:T119 Arg2:E66	
+T120	Disease_disorder 1977 1989	Epididymitis
+E67	Disease_disorder:T120 
+T121	Diagnostic_procedure 2007 2017	ultrasound
+E68	Diagnostic_procedure:T121 
+T122	Disease_disorder 2050 2063	renal failure
+E69	Disease_disorder:T122 
+T123	Diagnostic_procedure 2075 2101	glomerular filtration rate
+E70	Diagnostic_procedure:T123 
+T124	Lab_value 2102 2111	35 mL/min
+R64	MODIFY Arg1:T124 Arg2:E70	
+T125	Detailed_description 2030 2049	rapidly progressive
+R65	MODIFY Arg1:T125 Arg2:E69	
+T126	Diagnostic_procedure 2119 2125	biopsy
+E71	Diagnostic_procedure:T126 
+T127	Biological_structure 2113 2118	renal
+R66	MODIFY Arg1:T127 Arg2:E71	
+T128	Sign_symptom 2195 2208	proliferation
+E72	Sign_symptom:T128 
+T129	Biological_structure 2161 2175	intracapillary
+T130	Biological_structure 2180 2194	extracapillary
+R67	MODIFY Arg1:T130 Arg2:E72	
+R68	MODIFY Arg1:T129 Arg2:E72	
+T131	Severity 2151 2160	prominent
+R69	MODIFY Arg1:T131 Arg2:E72	
+T132	Sign_symptom 2281 2289	necrosis
+E73	Sign_symptom:T132 
+T133	Biological_structure 2271 2280	capillary
+T134	Detailed_description 2265 2270	focal
+R70	MODIFY Arg1:T134 Arg2:E73	
+R71	MODIFY Arg1:T133 Arg2:E73	
+T135	Sign_symptom 2237 2260	fibrocellular crescents
+E74	Sign_symptom:T135 
+T136	Diagnostic_procedure 2304 2323	computed tomography
+E75	Diagnostic_procedure:T136 
+T137	Biological_structure 2299 2303	Lung
+R72	MODIFY Arg1:T137 Arg2:E75	
+T138	Diagnostic_procedure 2344 2356	bronchoscopy
+E76	Diagnostic_procedure:T138 
+T139	Detailed_description 2333 2343	fiberoptic
+R73	MODIFY Arg1:T139 Arg2:E76	
+T140	Sign_symptom 2381 2391	hemorrhage
+E77	Sign_symptom:T140 
+T141	Biological_structure 2372 2380	alveolar
+R74	MODIFY Arg1:T141 Arg2:E77	
+T142	Detailed_description 2392 2399	relapse
+R75	MODIFY Arg1:T142 Arg2:E77	
+T143	Medication 2426 2444	methylprednisolone
+E78	Medication:T143 
+T144	Dosage 2416 2425	high-dose
+R76	MODIFY Arg1:T144 Arg2:E78	
+T145	Dosage 2446 2455	1 g daily
+T146	Duration 2460 2478	3 consecutive days
+E79	Duration:T146 
+R77	MODIFY Arg1:T145 Arg2:E78	
+T147	Medication 2484 2493	rituximab
+E80	Medication:T147 
+T148	Dosage 2495 2511	375 mg/m2 weekly
+T149	Duration 2516 2523	4 weeks
+E81	Duration:T149 
+R78	MODIFY Arg1:E81 Arg2:T148	
+R79	MODIFY Arg1:T148 Arg2:E80	
+R80	MODIFY Arg1:E79 Arg2:T145	
+T150	Sign_symptom 2585 2596	involvement
+E82	Sign_symptom:T150 
+A4	POLARITY E82 NEG
+T151	Biological_structure 2562 2570	urologic
+T152	Biological_structure 2575 2584	pulmonary
+R81	MODIFY Arg1:T152 Arg2:E82	
+R82	MODIFY Arg1:T151 Arg2:E82	
+T153	Diagnostic_procedure 2636 2650	renal function
+E83	Diagnostic_procedure:T153 
+T154	Lab_value 2613 2632	partial improvement
+T155	Detailed_description 2601 2608	delayed
+R83	MODIFY Arg1:T155 Arg2:T154	
+R84	MODIFY Arg1:T154 Arg2:E83	
+T156	Sign_symptom 2690 2695	alive
+E84	Sign_symptom:T156 
+T157	Medication 2721 2733	azathioprine
+E85	Medication:T157 
+T158	Dosage 2735 2747	150 mg daily
+R85	MODIFY Arg1:T158 Arg2:E85	
+T159	Medication 2753 2763	prednisone
+E86	Medication:T159 
+T160	Dosage 2765 2776	15 mg daily
+R86	MODIFY Arg1:T160 Arg2:E86	
+T161	Diagnostic_procedure 2779 2793	Renal function
+E87	Diagnostic_procedure:T161 
+T162	Date 2657 2663	1-year
+E88	Date:T162 
+T163	Lab_value 2798 2815	markedly improved
+R87	MODIFY Arg1:T163 Arg2:E87	
+T164	Diagnostic_procedure 2827 2853	glomerular filtration rate
+E89	Diagnostic_procedure:T164 
+T165	Lab_value 2854 2863	94 mL/min
+R88	MODIFY Arg1:T165 Arg2:E89	
+T166	Diagnostic_procedure 2873 2885	gas-exchange
+E90	Diagnostic_procedure:T166 
+T167	Diagnostic_procedure 2887 2889	pH
+E91	Diagnostic_procedure:T167 
+T168	Diagnostic_procedure 2896 2900	PaO2
+E92	Diagnostic_procedure:T168 
+T169	Diagnostic_procedure 2911 2916	PaCO2
+E93	Diagnostic_procedure:T169 
+T170	Diagnostic_procedure 2927 2931	HCO3
+E94	Diagnostic_procedure:T170 
+T171	Diagnostic_procedure 2944 2948	SaO2
+E95	Diagnostic_procedure:T171 
+T172	Lab_value 2949 2952	95%
+R89	MODIFY Arg1:T172 Arg2:E95	
+T173	Lab_value 2933 2942	23 mmol/L
+R90	MODIFY Arg1:T173 Arg2:E94	
+T174	Lab_value 2917 2925	36 mm Hg
+R91	MODIFY Arg1:T174 Arg2:E93	
+T175	Lab_value 2901 2909	86 mm Hg
+R92	MODIFY Arg1:T175 Arg2:E92	
+T176	Lab_value 2890 2894	7.42
+R93	MODIFY Arg1:T176 Arg2:E91	
+R94	SUB_PROCEDURE Arg1:E91 Arg2:E90	
+R95	SUB_PROCEDURE Arg1:E92 Arg2:E90	
+R96	SUB_PROCEDURE Arg1:E93 Arg2:E90	
+R97	SUB_PROCEDURE Arg1:E94 Arg2:E90	
+R98	SUB_PROCEDURE Arg1:E95 Arg2:E90	
+*	OVERLAP E6 E5
+T177	Detailed_description 53 62	recurring
+R99	MODIFY Arg1:T177 Arg2:E5	
+R100	BEFORE Arg1:E5 Arg2:E1	
+*	OVERLAP E1 E2 E3 E4
+R101	BEFORE Arg1:E4 Arg2:E7	
+*	OVERLAP E7 E8 E9 E10 E11 E15 E16
+R102	BEFORE Arg1:E16 Arg2:E17	
+*	OVERLAP E17 E20
+R103	BEFORE Arg1:E20 Arg2:E21	
+*	OVERLAP E21 E22 E23 E24 E34 E35 E25 E29 E30 E31 E32 E33 E26
+R104	BEFORE Arg1:E26 Arg2:E27	
+*	OVERLAP E27 E28
+R105	BEFORE Arg1:E28 Arg2:E42	
+R106	BEFORE Arg1:E42 Arg2:E43	
+*	OVERLAP E43 E44 E45 E46 E48
+R107	BEFORE Arg1:E48 Arg2:E49	
+*	OVERLAP E49 E50
+R108	BEFORE Arg1:E50 Arg2:E51	
+R109	BEFORE Arg1:E51 Arg2:E52	
+*	OVERLAP E52 E53
+R110	BEFORE Arg1:E53 Arg2:E54	
+R111	AFTER Arg1:E54 Arg2:E56	
+*	OVERLAP E56 E55
+R112	BEFORE Arg1:E55 Arg2:E57	
+*	OVERLAP E57 E58 E59 E60 E61 E62 E63 E64 E65 E66 E67 E68 E69 E70 E71 E72 E74 E73 E75 E76 E77
+R113	BEFORE Arg1:E77 Arg2:E78	
+*	OVERLAP E78 E79 E80 E81
+R114	BEFORE Arg1:E81 Arg2:E82	
+*	OVERLAP E82 E83
+R115	BEFORE Arg1:E83 Arg2:E88	
+*	OVERLAP E88 E18 E84 E85 E86 E87 E90
+R116	SUB_PROCEDURE Arg1:E89 Arg2:E87	

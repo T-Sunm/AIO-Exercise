@@ -1,0 +1,304 @@
+T1	Age 2 13	58-year-old
+T2	Sex 14 17	man
+T3	Disease_disorder 67 79	hypertension
+E1	Disease_disorder:T3 
+T4	History 67 79	hypertension
+T5	Detailed_description 49 66	poorly controlled
+R1	MODIFY Arg1:T5 Arg2:E1	
+T6	Disease_disorder 84 99	type 2 diabetes
+E2	Disease_disorder:T6 
+T7	History 84 99	type 2 diabetes
+T8	Clinical_event 101 110	presented
+E3	Clinical_event:T8 
+T9	Nonbiological_location 118 121	ICU
+R2	MODIFY Arg1:T9 Arg2:E3	
+T10	Disease_disorder 128 145	cardiogenic shock
+E4	Disease_disorder:T10 
+T11	Disease_disorder 165 186	myocardial infarction
+E5	Disease_disorder:T11 
+T12	Detailed_description 159 164	acute
+R3	MODIFY Arg1:T12 Arg2:E5	
+T13	Diagnostic_procedure 188 208	Physical examination
+E6	Diagnostic_procedure:T13 
+T14	Diagnostic_procedure 226 248	level of consciousness
+E7	Diagnostic_procedure:T14 
+T15	Lab_value 218 225	reduced
+R4	MODIFY Arg1:T15 Arg2:E7	
+T16	Diagnostic_procedure 250 268	Glasgow Coma Scale
+E8	Diagnostic_procedure:T16 
+T17	Lab_value 269 274	10/15
+R5	MODIFY Arg1:T17 Arg2:E8	
+T18	Diagnostic_procedure 285 296	vital signs
+E9	Diagnostic_procedure:T18 
+T19	Lab_value 280 284	weak
+R6	MODIFY Arg1:T19 Arg2:E9	
+T20	Diagnostic_procedure 300 314	blood pressure
+E10	Diagnostic_procedure:T20 
+T21	Lab_value 318 328	80/50 mmHg
+R7	MODIFY Arg1:T21 Arg2:E10	
+R8	SUB_PROCEDURE Arg1:E10 Arg2:E9	
+T22	Diagnostic_procedure 337 354	oxygen saturation
+E11	Diagnostic_procedure:T22 
+T23	Lab_value 330 333	80%
+R9	MODIFY Arg1:T23 Arg2:E11	
+R10	SUB_PROCEDURE Arg1:E11 Arg2:E9	
+T24	Diagnostic_procedure 366 379	blood glucose
+E12	Diagnostic_procedure:T24 
+T25	Detailed_description 356 365	capillary
+R11	MODIFY Arg1:T25 Arg2:E12	
+T26	Lab_value 383 391	2.26 g/L
+R12	MODIFY Arg1:T26 Arg2:E12	
+T27	Diagnostic_procedure 395 405	heart rate
+E13	Diagnostic_procedure:T27 
+T28	Lab_value 406 418	over 125 bpm
+R13	MODIFY Arg1:T28 Arg2:E13	
+R14	SUB_PROCEDURE Arg1:E12 Arg2:E9	
+R15	SUB_PROCEDURE Arg1:E13 Arg2:E9	
+T29	Sign_symptom 424 433	crackling
+E14	Sign_symptom:T29 
+T30	Diagnostic_procedure 437 459	pulmonary auscultation
+E15	Diagnostic_procedure:T30 
+T31	Diagnostic_procedure 461 487	Cardiovascular examination
+E16	Diagnostic_procedure:T31 
+T32	Sign_symptom 503 517	cardiac murmur
+E17	Sign_symptom:T32 
+A1	POLARITY E17 NEG
+T33	Sign_symptom 522 550	signs of right heart failure
+E18	Sign_symptom:T33 
+A2	POLARITY E18 NEG
+T34	Diagnostic_procedure 552 555	ECG
+E19	Diagnostic_procedure:T34 
+T35	Clinical_event 559 568	admission
+E20	Clinical_event:T35 
+T36	Diagnostic_procedure 589 595	rhythm
+E21	Diagnostic_procedure:T36 
+T37	Lab_value 576 582	normal
+R16	MODIFY Arg1:T37 Arg2:E21	
+T38	Detailed_description 583 588	sinus
+R17	MODIFY Arg1:T38 Arg2:E21	
+T39	Diagnostic_procedure 602 612	heart rate
+E22	Diagnostic_procedure:T39 
+T40	Lab_value 616 623	125 bpm
+R18	MODIFY Arg1:T40 Arg2:E22	
+T41	Sign_symptom 628 649	extended ST-elevation
+E23	Sign_symptom:T41 
+T42	Detailed_description 653 671	anterior territory
+R19	MODIFY Arg1:T42 Arg2:E23	
+T43	Diagnostic_procedure 673 691	Laboratory results
+E24	Diagnostic_procedure:T43 
+T44	Diagnostic_procedure 705 715	Troponin I
+E25	Diagnostic_procedure:T44 
+T45	Lab_value 725 735	6.41 ng/ml
+R20	MODIFY Arg1:T45 Arg2:E25	
+T46	Diagnostic_procedure 737 754	creatinine kinase
+E26	Diagnostic_procedure:T46 
+T47	Diagnostic_procedure 756 760	CKMB
+E27	Diagnostic_procedure:T47 
+R21	IDENTICAL Arg1:E27 Arg2:E26	
+T48	Lab_value 766 773	67 UI/L
+R22	MODIFY Arg1:T48 Arg2:E26	
+T49	Diagnostic_procedure 775 797	Lactate deshydrogenase
+E28	Diagnostic_procedure:T49 
+T50	Lab_value 802 810	281 UI/L
+T51	Diagnostic_procedure 812 819	glucose
+E29	Diagnostic_procedure:T51 
+R23	MODIFY Arg1:T50 Arg2:E28	
+T52	Lab_value 826 834	2.70 g/l
+R24	MODIFY Arg1:T52 Arg2:E29	
+T53	Diagnostic_procedure 836 840	urea
+E30	Diagnostic_procedure:T53 
+T54	Lab_value 841 849	0.40 g/l
+R25	MODIFY Arg1:T54 Arg2:E30	
+T55	Diagnostic_procedure 854 864	creatinine
+E31	Diagnostic_procedure:T55 
+T56	Lab_value 865 876	18.6 mg / L
+R26	MODIFY Arg1:T56 Arg2:E31	
+R27	SUB_PROCEDURE Arg1:E25 Arg2:E24	
+R28	SUB_PROCEDURE Arg1:E26 Arg2:E24	
+R29	SUB_PROCEDURE Arg1:E28 Arg2:E24	
+R30	SUB_PROCEDURE Arg1:E29 Arg2:E24	
+R31	SUB_PROCEDURE Arg1:E30 Arg2:E24	
+R32	SUB_PROCEDURE Arg1:E31 Arg2:E24	
+T57	Therapeutic_procedure 894 903	intubated
+E32	Therapeutic_procedure:T57 
+T58	Therapeutic_procedure 908 915	sedated
+E33	Therapeutic_procedure:T58 
+T59	Medication 917 933	inotropic agents
+E34	Medication:T59 
+T60	Medication 948 962	norepinephrine
+E35	Medication:T60 
+T61	Medication 980 990	dobutamine
+E36	Medication:T61 
+R33	SUB_PROCEDURE Arg1:E35 Arg2:E34	
+R34	SUB_PROCEDURE Arg1:E36 Arg2:E34	
+T62	Dosage 963 975	0.4µg/kg/min
+T63	Dosage 991 1002	20µg/kg/min
+R35	MODIFY Arg1:T62 Arg2:E35	
+R36	MODIFY Arg1:T63 Arg2:E36	
+T64	Diagnostic_procedure 1011 1017	X-rays
+E37	Diagnostic_procedure:T64 
+T65	Biological_structure 1005 1010	Chest
+R37	MODIFY Arg1:T65 Arg2:E37	
+T66	Disease_disorder 1033 1050	alveolar syndrome
+E38	Disease_disorder:T66 
+T67	Detailed_description 1025 1032	diffuse
+R38	MODIFY Arg1:T67 Arg2:E38	
+T68	Diagnostic_procedure 1066 1082	echocardiography
+E39	Diagnostic_procedure:T68 
+T69	Biological_structure 1052 1065	Transthoracic
+R39	MODIFY Arg1:T69 Arg2:E39	
+T70	Sign_symptom 1092 1117	wall motion abnormalities
+E40	Sign_symptom:T70 
+T71	Sign_symptom 1135 1143	akinesis
+E41	Sign_symptom:T71 
+T72	Severity 1125 1134	extensive
+R40	MODIFY Arg1:T72 Arg2:E41	
+T73	Biological_structure 1192 1197	walls
+T74	Biological_structure 1147 1159	anteroseptal
+T75	Biological_structure 1161 1169	anterior
+T76	Biological_structure 1171 1178	lateral
+T77	Biological_structure 1183 1191	inferior
+R41	MODIFY Arg1:T73 Arg2:E41	
+R42	MODIFY Arg1:T74 Arg2:T73	
+R43	MODIFY Arg1:T77 Arg2:T73	
+R44	MODIFY Arg1:T76 Arg2:T73	
+R45	MODIFY Arg1:T75 Arg2:T73	
+T78	Severity 1203 1209	severe
+T79	Sign_symptom 1210 1247	left ventricular systolic dysfunction
+E42	Sign_symptom:T79 
+T80	Diagnostic_procedure 1249 1266	ejection fraction
+E43	Diagnostic_procedure:T80 
+T81	Lab_value 1270 1273	29%
+R46	MODIFY Arg1:T81 Arg2:E43	
+T82	Therapeutic_procedure 1276 1294	Medical management
+E44	Therapeutic_procedure:T82 
+T83	Medication 1310 1323	anticoagulant
+E45	Medication:T83 
+T84	Medication 1383 1403	acetylsalicylic acid
+E46	Medication:T84 
+T85	Dosage 1373 1379	500 mg
+R47	MODIFY Arg1:T85 Arg2:E46	
+T86	Administration 1408 1420	subcutaneous
+T87	Medication 1421 1449	low-molecular-weight heparin
+E47	Medication:T87 
+R48	MODIFY Arg1:T86 Arg2:E47	
+T88	Medication 1460 1470	enoxaparin
+E48	Medication:T88 
+R49	IDENTICAL Arg1:E48 Arg2:E47	
+T89	Dosage 1451 1456	0.6ml
+R50	MODIFY Arg1:T89 Arg2:E48	
+R51	SUB_PROCEDURE Arg1:E46 Arg2:E45	
+R52	SUB_PROCEDURE Arg1:E47 Arg2:E45	
+T90	Disease_disorder 1336 1359	acute coronary syndrome
+E49	Disease_disorder:T90 
+T91	Therapeutic_procedure 1502 1530	myocardial revascularization
+E50	Therapeutic_procedure:T91 
+T92	Therapeutic_procedure 1543 1554	angioplasty
+E51	Therapeutic_procedure:T92 
+T93	Biological_structure 1534 1542	coronary
+R53	MODIFY Arg1:T93 Arg2:E51	
+R54	SUB_PROCEDURE Arg1:E51 Arg2:E50	
+T94	Diagnostic_procedure 1586 1605	neurological status
+E52	Diagnostic_procedure:T94 
+T95	Lab_value 1567 1582	non-improvement
+R55	MODIFY Arg1:T95 Arg2:E52	
+T96	Sign_symptom 1624 1632	seizures
+E53	Sign_symptom:T96 
+T97	Diagnostic_procedure 1642 1644	CT
+E54	Diagnostic_procedure:T97 
+T98	Biological_structure 1636 1641	brain
+R56	MODIFY Arg1:T98 Arg2:E54	
+T99	Sign_symptom 1695 1705	hemorrhage
+E55	Sign_symptom:T99 
+T100	Detailed_description 1687 1694	diffuse
+T101	Biological_structure 1672 1686	infratentorial
+R57	MODIFY Arg1:T101 Arg2:E55	
+R58	MODIFY Arg1:T100 Arg2:E55	
+T102	Diagnostic_procedure 1707 1719	Fisher grade
+E56	Diagnostic_procedure:T102 
+T103	Lab_value 1720 1723	III
+R59	MODIFY Arg1:T103 Arg2:E56	
+T104	Diagnostic_procedure 1746 1757	angiography
+E57	Diagnostic_procedure:T104 
+T105	Biological_structure 1737 1745	Cerebral
+R60	MODIFY Arg1:T105 Arg2:E57	
+T106	Disease_disorder 1770 1789	dissecting aneurysm
+E58	Disease_disorder:T106 
+T107	Biological_structure 1796 1814	anastomotic branch
+R61	MODIFY Arg1:T107 Arg2:E58	
+T108	Biological_structure 1823 1832	left PICA
+T109	Biological_structure 1841 1876	V4 segment of left vertebral artery
+R62	MODIFY Arg1:T109 Arg2:E58	
+R63	MODIFY Arg1:T108 Arg2:E58	
+T110	Therapeutic_procedure 1908 1917	embolized
+E59	Therapeutic_procedure:T110 
+T111	Date 1919 1933	After 24 hours
+E60	Date:T111 
+T112	Medication 1975 1991	vasoactive drugs
+E61	Medication:T112 
+A3	POLARITY E61 NEG
+T113	Date 1995 2003	24 hours
+E62	Date:T113 
+#1	AnnotatorNotes E62	Assuming this is a second 24-hour period
+T114	Sign_symptom 2024 2032	seizures
+E63	Sign_symptom:T114 
+T115	Biological_structure 2005 2023	Left hemicorporeal
+R64	MODIFY Arg1:T115 Arg2:E63	
+T116	Medication 2051 2065	anticonvulsant
+E64	Medication:T116 
+T117	Diagnostic_procedure 2091 2093	CT
+E65	Diagnostic_procedure:T117 
+T118	Biological_structure 2085 2090	brain
+R65	MODIFY Arg1:T118 Arg2:E65	
+T119	Sign_symptom 2109 2119	rebleeding
+E66	Sign_symptom:T119 
+A4	POLARITY E66 NEG
+T120	Diagnostic_procedure 2124 2135	angiography
+E67	Diagnostic_procedure:T120 
+T121	Disease_disorder 2169 2177	aneurysm
+E68	Disease_disorder:T121 
+A5	POLARITY E68 NEG
+T122	Diagnostic_procedure 2188 2191	EEG
+E69	Diagnostic_procedure:T122 
+T123	Disease_disorder 2211 2223	brain damage
+E70	Disease_disorder:T123 
+T124	Detailed_description 2203 2210	diffuse
+R66	MODIFY Arg1:T124 Arg2:E70	
+T125	Date 2225 2238	10 days after
+E71	Date:T125 
+T126	Clinical_event 2266 2276	discharged
+E72	Clinical_event:T126 
+T127	Diagnostic_procedure 2287 2296	condition
+E73	Diagnostic_procedure:T127 
+T128	Lab_value 2280 2286	stable
+R67	MODIFY Arg1:T128 Arg2:E73	
+T129	Disease_disorder 2320 2327	amnesia
+E74	Disease_disorder:T129 
+*	OVERLAP E1 E2
+R68	BEFORE Arg1:E2 Arg2:E3	
+*	OVERLAP E3 E4 E5
+R69	BEFORE Arg1:E5 Arg2:E6	
+*	OVERLAP E6 E7 E8 E9 E14 E15 E16 E17 E18
+R70	AFTER Arg1:E18 Arg2:E19	
+*	OVERLAP E19 E20 E21 E22 E23
+R71	BEFORE Arg1:E23 Arg2:E24	
+R72	BEFORE Arg1:E24 Arg2:E32	
+*	OVERLAP E32 E33 E34 E37 E38 E39 E40 E41 E42 E43
+R73	MODIFY Arg1:T78 Arg2:E42	
+R74	BEFORE Arg1:E43 Arg2:E44	
+*	OVERLAP E44 E45 E49
+R75	BEFORE Arg1:E49 Arg2:E50	
+R76	BEFORE Arg1:E50 Arg2:E52	
+*	OVERLAP E52 E53
+R77	BEFORE Arg1:E53 Arg2:E54	
+*	OVERLAP E54 E55 E56 E57 E58
+R78	BEFORE Arg1:E58 Arg2:E59	
+R79	BEFORE Arg1:E59 Arg2:E60	
+T130	Sign_symptom 1947 1955	improved
+E75	Sign_symptom:T130 
+*	OVERLAP E60 E75
+R80	BEFORE Arg1:E75 Arg2:E61	
+*	OVERLAP E61 E62 E63 E64 E65 E66 E67 E68 E69 E70
+R81	BEFORE Arg1:E70 Arg2:E71	
+*	OVERLAP E71 E72 E73
+R82	BEFORE Arg1:E73 Arg2:E74	

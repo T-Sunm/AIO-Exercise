@@ -1,0 +1,362 @@
+T1	Age 2 13	57-year-old
+T2	Sex 14 18	male
+T3	Clinical_event 23 31	admitted
+E1	Clinical_event:T3 
+T4	Nonbiological_location 39 47	hospital
+T5	Duration 53 61	5 months
+E2	Duration:T5 
+T6	Sign_symptom 89 97	bleeding
+E3	Sign_symptom:T6 
+T7	Biological_structure 82 88	rectal
+R1	MODIFY Arg1:T7 Arg2:E3	
+T8	Severity 74 81	massive
+R2	MODIFY Arg1:T8 Arg2:E3	
+T9	Duration 178 191	last 55 years
+E4	Duration:T9 
+T10	History 121 192	past history of passage of fresh blood mixed stool since last 55 years.
+T11	History 53 112	5 months’ history of massive rectal bleeding (rectorrhagia)
+T12	Sign_symptom 137 171	passage of fresh blood mixed stool
+E5	Sign_symptom:T12 
+T13	History 216 247	rectal bleeding at the age of 2
+T14	Sign_symptom 223 231	bleeding
+E6	Sign_symptom:T14 
+T15	Date 239 247	age of 2
+E7	Date:T15 
+T16	Biological_structure 216 222	rectal
+R3	MODIFY Arg1:T16 Arg2:E6	
+T17	Nonbiological_location 257 265	hospital
+R4	MODIFY Arg1:T4 Arg2:E1	
+T18	Coreference 290 297	symptom
+E8	Coreference:T18 
+R5	IDENTICAL Arg1:E8 Arg2:E6	
+T19	Therapeutic_procedure 308 321	interventions
+E9	Therapeutic_procedure:T19 
+T20	Family_history 1330 1369	no history of similar illness in family
+T21	Sign_symptom 1231 1240	dizziness
+E10	Sign_symptom:T21 
+T22	Detailed_description 1244 1252	standing
+R6	MODIFY Arg1:T22 Arg2:E10	
+T23	Sign_symptom 1254 1273	shortness of breath
+E11	Sign_symptom:T23 
+T24	Sign_symptom 1279 1290	palpitation
+E12	Sign_symptom:T24 
+T25	Detailed_description 1294 1318	walking a short distance
+R7	MODIFY Arg1:T25 Arg2:E12	
+T26	Clinical_event 252 256	went
+E13	Clinical_event:T26 
+R8	MODIFY Arg1:T17 Arg2:E13	
+T27	History 449 485	diagnosed and treated as hemorrhoids
+T28	Sign_symptom 491 498	symptom
+E14	Sign_symptom:T28 
+A1	POLARITY E14 NEG
+T29	Duration 516 523	a while
+E15	Duration:T29 
+T30	Sign_symptom 533 541	recurred
+E16	Sign_symptom:T30 
+T31	Date 549 565	Thirty years ago
+E17	Date:T31 
+T32	Disease_disorder 594 604	hemangioma
+E18	Disease_disorder:T32 
+T33	Biological_structure 587 593	rectal
+R9	MODIFY Arg1:T33 Arg2:E18	
+T34	Therapeutic_procedure 622 633	cryotherapy
+E19	Therapeutic_procedure:T34 
+T35	Nonbiological_location 641 649	hospital
+R10	MODIFY Arg1:T35 Arg2:E19	
+T36	Duration 696 705	few years
+E20	Duration:T36 
+T37	Sign_symptom 684 691	symptom
+E21	Sign_symptom:T37 
+A2	POLARITY E21 NEG
+T38	Sign_symptom 713 721	recurred
+E22	Sign_symptom:T38 
+T39	Clinical_event 738 747	consulted
+E23	Clinical_event:T39 
+T40	Nonbiological_location 748 768	many other hospitals
+R11	MODIFY Arg1:T40 Arg2:E23	
+T41	Duration 858 872	Since 5 months
+E24	Duration:T41 
+T42	Sign_symptom 897 905	bleeding
+E25	Sign_symptom:T42 
+A3	TREND E25 INC
+T43	Biological_structure 890 896	rectal
+R12	MODIFY Arg1:T43 Arg2:E25	
+T44	Clinical_event 925 929	went
+E26	Clinical_event:T44 
+T45	Nonbiological_location 933 947	local hospital
+R13	MODIFY Arg1:T45 Arg2:E26	
+T46	Therapeutic_procedure 954 966	intervention
+E27	Therapeutic_procedure:T46 
+T47	Medication 1048 1053	fluid
+E28	Medication:T47 
+T48	Therapeutic_procedure 1058 1075	blood transfusion
+E29	Therapeutic_procedure:T48 
+T49	Administration 1036 1047	intravenous
+R14	MODIFY Arg1:T49 Arg2:E28	
+T50	Therapeutic_procedure 1000 1021	symptomatic treatment
+E30	Therapeutic_procedure:T50 
+T51	Clinical_event 1088 1096	referred
+E31	Clinical_event:T51 
+T52	Nonbiological_location 1104 1112	hospital
+R15	MODIFY Arg1:T52 Arg2:E31	
+T53	Diagnostic_procedure 1374 1393	general examination
+E32	Diagnostic_procedure:T53 
+T54	Sign_symptom 1412 1416	pale
+E33	Sign_symptom:T54 
+T55	Diagnostic_procedure 1426 1436	heart rate
+E34	Diagnostic_procedure:T55 
+T56	Diagnostic_procedure 1441 1455	blood pressure
+E35	Diagnostic_procedure:T56 
+T57	Lab_value 1461 1480	within normal limit
+R16	MODIFY Arg1:T57 Arg2:E35	
+R17	MODIFY Arg1:T57 Arg2:E34	
+R18	SUB_PROCEDURE Arg1:E34 Arg2:E32	
+R19	SUB_PROCEDURE Arg1:E35 Arg2:E32	
+T58	Duration 1526 1546	during last 5 months
+E36	Duration:T58 
+T59	Diagnostic_procedure 1551 1569	rectal examination
+E37	Diagnostic_procedure:T59 
+T60	Diagnostic_procedure 1514 1525	body weight
+E38	Diagnostic_procedure:T60 
+T61	Lab_value 1497 1506	lost 5 kg
+R20	MODIFY Arg1:T61 Arg2:E38	
+T62	Sign_symptom 1571 1582	fresh blood
+E39	Sign_symptom:T62 
+T63	Biological_structure 1592 1610	around anal region
+R21	MODIFY Arg1:T63 Arg2:E39	
+T64	Sign_symptom 1620 1624	mass
+E40	Sign_symptom:T64 
+T65	Texture 1615 1619	soft
+R22	MODIFY Arg1:T65 Arg2:E40	
+T66	Diagnostic_procedure 1637 1663	digital rectal examination
+E41	Diagnostic_procedure:T66 
+R23	SUB_PROCEDURE Arg1:E41 Arg2:E37	
+T67	Diagnostic_procedure 1668 1679	proctoscopy
+E42	Diagnostic_procedure:T67 
+T68	Biological_structure 1681 1692	anal cavity
+R24	MODIFY Arg1:T68 Arg2:E43	
+T69	Sign_symptom 1726 1737	fresh blood
+E43	Sign_symptom:T69 
+T70	Biological_structure 1697 1703	rectum
+R25	MODIFY Arg1:T70 Arg2:E43	
+T71	Sign_symptom 1743 1766	active site of bleeding
+E44	Sign_symptom:T71 
+A4	POLARITY E44 NEG
+T72	Sign_symptom 1768 1773	polyp
+E45	Sign_symptom:T72 
+A5	POLARITY E45 NEG
+T73	Sign_symptom 1778 1783	ulcer
+E46	Sign_symptom:T73 
+A6	POLARITY E46 NEG
+T74	Diagnostic_procedure 1805 1827	laboratory examination
+E47	Diagnostic_procedure:T74 
+T75	Diagnostic_procedure 1829 1849	red blood cell count
+E48	Diagnostic_procedure:T75 
+T76	Lab_value 1854 1867	3.09 × 1012/L
+R26	MODIFY Arg1:T76 Arg2:E48	
+T77	Diagnostic_procedure 1901 1911	hemoglobin
+E49	Diagnostic_procedure:T77 
+T78	Lab_value 1916 1922	86 g/L
+R27	MODIFY Arg1:T78 Arg2:E49	
+T79	Diagnostic_procedure 1946 1966	All other parameters
+E50	Diagnostic_procedure:T79 
+T80	Lab_value 1972 1991	within normal limit
+R28	MODIFY Arg1:T80 Arg2:E50	
+T81	Diagnostic_procedure 2007 2009	CT
+E51	Diagnostic_procedure:T81 
+T82	Detailed_description 1993 2006	None enhanced
+#1	AnnotatorNotes T82	non-enhanced?
+R29	MODIFY Arg1:T82 Arg2:E51	
+T83	Sign_symptom 2056 2066	thickening
+E52	Sign_symptom:T83 
+T84	Biological_structure 2045 2055	bowel wall
+R30	MODIFY Arg1:T84 Arg2:E52	
+T85	Detailed_description 2034 2044	homogenous
+R31	MODIFY Arg1:T85 Arg2:E52	
+T86	Detailed_description 2017 2025	isodense
+T87	Lab_value 2027 2032	35 HU
+R32	MODIFY Arg1:T87 Arg2:T86	
+R33	MODIFY Arg1:T86 Arg2:E52	
+T88	Diagnostic_procedure 2093 2095	CT
+E53	Diagnostic_procedure:T88 
+T89	Detailed_description 2075 2092	contrast-enhanced
+R34	MODIFY Arg1:T89 Arg2:E53	
+T90	Sign_symptom 2109 2117	enhances
+E54	Sign_symptom:T90 
+T91	Detailed_description 2096 2108	venous phase
+T92	Detailed_description 2118 2133	heterogeneously
+R35	MODIFY Arg1:T92 Arg2:E54	
+R36	MODIFY Arg1:T91 Arg2:E54	
+T93	Sign_symptom 2144 2158	calcifications
+E55	Sign_symptom:T93 
+T94	Detailed_description 2135 2143	Multiple
+R37	MODIFY Arg1:T94 Arg2:E55	
+T95	Biological_structure 2176 2196	thickened bowel wall
+R38	MODIFY Arg1:T95 Arg2:E55	
+T96	Biological_structure 2212 2228	peri-rectal area
+R39	MODIFY Arg1:T96 Arg2:E55	
+T97	Sign_symptom 2230 2236	Lesion
+E56	Sign_symptom:T97 
+T98	Biological_structure 2261 2275	distal sigmoid
+T99	Biological_structure 2279 2298	whole of the rectum
+R40	MODIFY Arg1:T98 Arg2:E56	
+R41	MODIFY Arg1:T99 Arg2:E56	
+T100	Sign_symptom 2327 2334	lesions
+E57	Sign_symptom:T100 
+T101	Detailed_description 2308 2316	Multiple
+T102	Detailed_description 2317 2326	hypodense
+R42	MODIFY Arg1:T102 Arg2:E57	
+R43	MODIFY Arg1:T101 Arg2:E57	
+T103	Biological_structure 2353 2359	spleen
+R44	MODIFY Arg1:T103 Arg2:E57	
+T104	Sign_symptom 2397 2403	anemia
+E58	Sign_symptom:T104 
+T105	Therapeutic_procedure 2437 2447	laparotomy
+E59	Therapeutic_procedure:T105 
+T106	Therapeutic_procedure 2460 2477	surgical excision
+E60	Therapeutic_procedure:T106 
+T107	Biological_structure 2427 2436	abdominal
+R45	MODIFY Arg1:T107 Arg2:E59	
+T108	Sign_symptom 2506 2512	lesion
+E61	Sign_symptom:T108 
+T109	Distance 2495 2500	25 cm
+R46	MODIFY Arg1:T109 Arg2:E61	
+T110	Therapeutic_procedure 2383 2393	management
+E62	Therapeutic_procedure:T110 
+T111	Biological_structure 2538 2552	distal sigmoid
+T112	Biological_structure 2556 2575	whole of the rectum
+R47	MODIFY Arg1:T111 Arg2:E61	
+R48	MODIFY Arg1:T112 Arg2:E61	
+T113	Therapeutic_procedure 2657 2668	anastomosis
+E63	Therapeutic_procedure:T113 
+T114	Detailed_description 2644 2656	sigmoid-anus
+R49	MODIFY Arg1:T114 Arg2:E63	
+T115	Therapeutic_procedure 2632 2639	excised
+E64	Therapeutic_procedure:T115 
+T116	Biological_structure 2601 2626	part of the sigmoid colon
+T117	Biological_structure 2577 2596	Whole of the rectum
+R50	MODIFY Arg1:T116 Arg2:E64	
+R51	MODIFY Arg1:T117 Arg2:E64	
+T118	Diagnostic_procedure 2692 2721	histopathological examination
+E65	Diagnostic_procedure:T118 
+T119	Detailed_description 2725 2741	excised specimen
+R52	MODIFY Arg1:T119 Arg2:E65	
+T120	Diagnostic_procedure 2975 2995	Immunohistochemistry
+E66	Diagnostic_procedure:T120 
+T121	Diagnostic_procedure 3046 3051	CD 31
+E67	Diagnostic_procedure:T121 
+T122	Diagnostic_procedure 3056 3061	CD 34
+E68	Diagnostic_procedure:T122 
+T123	Lab_value 3033 3041	positive
+R53	MODIFY Arg1:T123 Arg2:E67	
+R54	MODIFY Arg1:T123 Arg2:E68	
+T124	Biological_structure 3015 3032	endothelial cells
+R55	MODIFY Arg1:T124 Arg2:T123	
+R56	SUB_PROCEDURE Arg1:E67 Arg2:E66	
+R57	SUB_PROCEDURE Arg1:E68 Arg2:E66	
+T125	Diagnostic_procedure 3092 3097	D2–40
+E69	Diagnostic_procedure:T125 
+T126	Diagnostic_procedure 3130 3135	D2–40
+E70	Diagnostic_procedure:T126 
+R58	SUB_PROCEDURE Arg1:E69 Arg2:E66	
+R59	SUB_PROCEDURE Arg1:E70 Arg2:E66	
+T127	Biological_structure 3063 3073	Some cells
+T128	Biological_structure 3105 3111	others
+#2	AnnotatorNotes T128	other cells
+T129	Lab_value 3117 3125	negative
+T130	Lab_value 3079 3087	positive
+R60	MODIFY Arg1:T130 Arg2:E69	
+R61	MODIFY Arg1:T129 Arg2:E70	
+R62	MODIFY Arg1:T128 Arg2:T129	
+R63	MODIFY Arg1:T127 Arg2:T130	
+T131	Disease_disorder 3212 3228	hemolymphangioma
+E71	Disease_disorder:T131 
+T132	Disease_disorder 3300 3309	infection
+E72	Disease_disorder:T132 
+T133	Biological_structure 3289 3299	intestinal
+R64	MODIFY Arg1:T133 Arg2:E72	
+T134	Clinical_event 3349 3359	discharged
+E73	Clinical_event:T134 
+T135	Nonbiological_location 3365 3373	hospital
+R65	MODIFY Arg1:T135 Arg2:E73	
+T136	Date 3381 3389	23rd day
+E74	Date:T136 
+T137	Sign_symptom 3425 3437	complication
+E75	Sign_symptom:T137 
+A7	POLARITY E75 NEG
+T138	Sign_symptom 3441 3451	recurrence
+E76	Sign_symptom:T138 
+A8	POLARITY E76 NEG
+T139	Duration 3471 3480	6 months’
+E77	Duration:T139 
+T140	Clinical_event 3481 3490	follow-up
+E78	Clinical_event:T140 
+T141	Detailed_description 2749 2787	submucosal multiple thin-walled vessel
+T142	Lab_value 2791 2803	varying size
+T143	Lab_value 2809 2826	interposed stroma
+R66	MODIFY Arg1:T141 Arg2:T119	
+R67	MODIFY Arg1:T142 Arg2:T141	
+R68	MODIFY Arg1:T143 Arg2:T141	
+T144	Lab_value 2828 2871	Some vessels lumen consisted of blood cells
+T145	Lab_value 2912 2942	other consisted of clear fluid
+R69	MODIFY Arg1:T144 Arg2:T141	
+R70	MODIFY Arg1:T145 Arg2:T141	
+R71	AFTER Arg1:E1 Arg2:E2	
+*	OVERLAP E2 E3
+R72	AFTER Arg1:E3 Arg2:E5	
+*	OVERLAP E5 E4 E6 E7
+R73	BEFORE Arg1:E7 Arg2:E13	
+*	OVERLAP E13 E8 E9
+R74	BEFORE Arg1:E9 Arg2:E14	
+*	OVERLAP E14 E15
+R75	BEFORE Arg1:E15 Arg2:E16	
+R76	BEFORE Arg1:E16 Arg2:E17	
+*	OVERLAP E17 E18 E19
+R77	BEFORE Arg1:E19 Arg2:E21	
+*	OVERLAP E21 E20
+R78	BEFORE Arg1:E20 Arg2:E22	
+R79	BEFORE Arg1:E22 Arg2:E23	
+T146	Sign_symptom 800 818	symptomatic relief
+E79	Sign_symptom:T146 
+A9	POLARITY E79 UNCERTAIN
+T147	Detailed_description 789 799	short-term
+R80	MODIFY Arg1:T147 Arg2:E79	
+*	OVERLAP E23 E79
+R81	BEFORE Arg1:E79 Arg2:E24	
+*	OVERLAP E24 E25
+R82	BEFORE Arg1:E25 Arg2:E26	
+*	OVERLAP E26 E27 E80 E30 E28 E29
+T148	Sign_symptom 987 995	bleeding
+E80	Sign_symptom:T148 
+R83	BEFORE Arg1:E29 Arg2:E31	
+T149	Sign_symptom 1157 1165	bleeding
+E81	Sign_symptom:T149 
+T150	Detailed_description 1169 1180	fresh blood
+R84	MODIFY Arg1:T150 Arg2:E81	
+T151	Biological_structure 1150 1156	rectal
+R85	MODIFY Arg1:T151 Arg2:E81	
+T152	Severity 1137 1149	Intermediate
+R86	MODIFY Arg1:T152 Arg2:E81	
+T153	Clinical_event 1198 1207	admission
+E82	Clinical_event:T153 
+R87	BEFORE Arg1:E31 Arg2:E81	
+*	OVERLAP E81 E82 E10 E11 E12 E32 E33
+R88	AFTER Arg1:E33 Arg2:E38	
+*	OVERLAP E38 E36
+R89	BEFORE Arg1:E36 Arg2:E37	
+*	OVERLAP E37 E39 E40 E42 E43 E44 E45 E46 E47 E50 E51 E52 E53 E54 E55 E56 E57
+R90	SUB_PROCEDURE Arg1:E48 Arg2:E47	
+R91	SUB_PROCEDURE Arg1:E49 Arg2:E47	
+R92	BEFORE Arg1:E57 Arg2:E62	
+*	OVERLAP E62 E58
+R93	BEFORE Arg1:E58 Arg2:E59	
+*	OVERLAP E59 E60 E61 E64 E63
+R94	BEFORE Arg1:E63 Arg2:E65	
+*	OVERLAP E65 E66 E71
+R95	BEFORE Arg1:E71 Arg2:E72	
+T154	Therapeutic_procedure 3321 3328	managed
+E83	Therapeutic_procedure:T154 
+R96	BEFORE Arg1:E72 Arg2:E83	
+*	OVERLAP E83 E73
+R97	BEFORE Arg1:E73 Arg2:E75	
+*	OVERLAP E75 E76 E77 E78

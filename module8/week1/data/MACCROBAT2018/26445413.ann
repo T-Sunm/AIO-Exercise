@@ -1,0 +1,222 @@
+T1	Age 2 13	33-year-old
+T2	Sex 14 17	man
+T3	Sign_symptom 49 53	ache
+E1	Sign_symptom:T3 
+T4	Detailed_description 44 48	dull
+R1	MODIFY Arg1:T4 Arg2:E1	
+T5	Biological_structure 33 43	left flank
+R2	MODIFY Arg1:T5 Arg2:E1	
+T6	Diagnostic_procedure 72 91	computed tomography
+E2	Diagnostic_procedure:T6 
+T7	Biological_structure 62 71	abdominal
+R3	MODIFY Arg1:T7 Arg2:E2	
+T8	Sign_symptom 107 111	mass
+E3	Sign_symptom:T8 
+T9	Biological_structure 101 106	renal
+T10	Detailed_description 95 100	solid
+R4	MODIFY Arg1:T9 Arg2:E3	
+R5	MODIFY Arg1:T10 Arg2:E3	
+T11	Biological_structure 119 151	upper portion of the left kidney
+R6	MODIFY Arg1:T11 Arg2:E3	
+T12	Coreference 172 176	mass
+E4	Coreference:T12 
+R7	IDENTICAL Arg1:E4 Arg2:E3	
+T13	Volume 190 214	2.8 cm × 2.8 cm × 2.5 cm
+R8	MODIFY Arg1:T13 Arg2:E4	
+T14	Detailed_description 228 240	well-defined
+R9	MODIFY Arg1:T14 Arg2:E4	
+T15	Sign_symptom 261 284	other abnormal findings
+E5	Sign_symptom:T15 
+A1	POLARITY E5 NEG
+T16	Sign_symptom 312 322	metastasis
+E6	Sign_symptom:T16 
+A2	POLARITY E6 NEG
+T17	Detailed_description 304 311	distant
+R10	MODIFY Arg1:T17 Arg2:E6	
+T18	Sign_symptom 337 347	metastasis
+E7	Sign_symptom:T18 
+A3	POLARITY E7 NEG
+T19	Biological_structure 326 336	lymph node
+R11	MODIFY Arg1:T19 Arg2:E7	
+T20	Therapeutic_procedure 357 368	nephrectomy
+E8	Therapeutic_procedure:T20 
+T21	Detailed_description 349 356	Radical
+R12	MODIFY Arg1:T21 Arg2:E8	
+T22	Date 386 395	14/9/2005
+E9	Date:T22 
+T23	Diagnostic_procedure 400 417	gross examination
+E10	Diagnostic_procedure:T23 
+T24	Detailed_description 423 443	nephrectomy specimen
+T25	Volume 453 478	11.5 cm × 6.5 cm × 4.5 cm
+R13	MODIFY Arg1:T25 Arg2:T24	
+R14	MODIFY Arg1:T24 Arg2:E10	
+T26	Coreference 487 492	tumor
+E11	Coreference:T26 
+R15	IDENTICAL Arg1:E11 Arg2:E4	
+T27	Color 506 519	grayish-brown
+T28	Coreference 520 524	mass
+E12	Coreference:T28 
+R16	IDENTICAL Arg1:E12 Arg2:E11	
+T29	Detailed_description 499 504	solid
+R17	MODIFY Arg1:T29 Arg2:E12	
+R18	MODIFY Arg1:T27 Arg2:E12	
+T30	Volume 534 558	3.5 cm × 2.5 cm × 2.2 cm
+R19	MODIFY Arg1:T30 Arg2:E12	
+T31	Diagnostic_procedure 568 590	Histologic examination
+E13	Diagnostic_procedure:T31 
+T37	Diagnostic_procedure 673 682	cytoplasm
+E16	Diagnostic_procedure:T37 
+R23	SUB_PROCEDURE Arg1:E16 Arg2:E13	
+T32	Lab_value 604 638	trabecular and ribbonlike patterns
+T33	Lab_value 644 667	minimal fibrotic stroma
+R20	MODIFY Arg1:T32 Arg2:E13	
+R21	MODIFY Arg1:T33 Arg2:E13	
+T34	Lab_value 687 695	granular
+T35	Lab_value 700 712	eosinophilic
+R22	MODIFY Arg1:T34 Arg2:E16	
+R24	MODIFY Arg1:T35 Arg2:E16	
+T36	Lab_value 718 746	uniform round to oval nuclei
+R25	MODIFY Arg1:T36 Arg2:E16	
+T38	Lab_value 752 777	finely stippled chromatin
+T39	Lab_value 782 804	inconspicuous nucleoli
+R26	MODIFY Arg1:T38 Arg2:E16	
+R27	MODIFY Arg1:T39 Arg2:E16	
+T40	Diagnostic_procedure 861 870	H&E stain
+E14	Diagnostic_procedure:T40 
+T41	Lab_value 819 828	not found
+T42	Lab_value 830 856	0 per 10 high-power fields
+T43	Diagnostic_procedure 882 904	pathologic examination
+E15	Diagnostic_procedure:T43 
+T44	Disease_disorder 936 968	neuroendocrine (carcinoid) tumor
+E17	Disease_disorder:T44 
+T45	Detailed_description 916 935	well-differentiated
+R30	MODIFY Arg1:T45 Arg2:E17	
+T46	Biological_structure 985 991	kidney
+R31	MODIFY Arg1:T46 Arg2:E17	
+T47	Diagnostic_procedure 1001 1027	Immunohistochemical stains
+E18	Diagnostic_procedure:T47 
+T48	Diagnostic_procedure 1055 1067	chromogranin
+E19	Diagnostic_procedure:T48 
+T49	Diagnostic_procedure 1069 1092	neuron-specific enolase
+E20	Diagnostic_procedure:T49 
+T50	Diagnostic_procedure 1097 1110	synaptophysin
+E21	Diagnostic_procedure:T50 
+T51	Lab_value 1041 1049	labeling
+R32	MODIFY Arg1:T51 Arg2:E19	
+R33	MODIFY Arg1:T51 Arg2:E20	
+R34	MODIFY Arg1:T51 Arg2:E21	
+R35	SUB_PROCEDURE Arg1:E19 Arg2:E18	
+R36	SUB_PROCEDURE Arg1:E20 Arg2:E18	
+R37	SUB_PROCEDURE Arg1:E21 Arg2:E18	
+T52	Diagnostic_procedure 1128 1147	proliferation index
+E22	Diagnostic_procedure:T52 
+T53	Lab_value 1152 1165	less than 2 %
+R38	MODIFY Arg1:T53 Arg2:E22	
+T54	Diagnostic_procedure 1181 1211	immunohistochemistry for Ki-67
+E23	Diagnostic_procedure:T54 
+R39	SUB_PROCEDURE Arg1:E23 Arg2:E22	
+T55	Therapeutic_procedure 1221 1230	radiation
+E24	Therapeutic_procedure:T55 
+A4	POLARITY E24 NEG
+T56	Medication 1235 1247	chemotherapy
+E25	Medication:T56 
+A5	POLARITY E25 NEG
+T57	Date 1267 1283	Nine years after
+E26	Date:T57 
+T58	Diagnostic_procedure 1305 1324	computed tomography
+E27	Diagnostic_procedure:T58 
+T59	Biological_structure 1332 1339	abdomen
+R40	MODIFY Arg1:T59 Arg2:E27	
+T60	Sign_symptom 1374 1378	mass
+E28	Sign_symptom:T60 
+T61	Detailed_description 1369 1373	cyst
+T62	Area 1355 1368	2 cm × 1.8 cm
+R41	MODIFY Arg1:T62 Arg2:E28	
+R42	MODIFY Arg1:T61 Arg2:E28	
+T63	Biological_structure 1386 1397	right liver
+R43	MODIFY Arg1:T63 Arg2:E28	
+T64	Sign_symptom 1411 1430	high density shadow
+E29	Sign_symptom:T64 
+T65	Detailed_description 1402 1410	multiple
+R44	MODIFY Arg1:T65 Arg2:E29	
+T66	Biological_structure 1434 1445	gallbladder
+R45	MODIFY Arg1:T66 Arg2:E29	
+T67	Sign_symptom 1450 1458	enlarged
+E30	Sign_symptom:T67 
+T68	Biological_structure 1459 1470	lymph nodes
+R46	MODIFY Arg1:T68 Arg2:E30	
+A6	POLARITY E30 NEG
+T69	Biological_structure 1489 1505	abdominal cavity
+R47	MODIFY Arg1:T69 Arg2:E30	
+T70	Therapeutic_procedure 1507 1522	Cholecystectomy
+E31	Therapeutic_procedure:T70 
+T71	Therapeutic_procedure 1527 1538	extirpation
+E32	Therapeutic_procedure:T71 
+T72	Disease_disorder 1543 1555	hepatic cyst
+E33	Disease_disorder:T72 
+T73	Therapeutic_procedure 1574 1593	laparoscopy surgery
+E34	Therapeutic_procedure:T73 
+R48	SUB_PROCEDURE Arg1:E34 Arg2:E32	
+R49	SUB_PROCEDURE Arg1:E34 Arg2:E31	
+T74	Diagnostic_procedure 1595 1617	Histologic examination
+E35	Diagnostic_procedure:T74 
+T75	Lab_value 1631 1662	trabecular and glandlike growth
+R50	MODIFY Arg1:T75 Arg2:E35	
+T76	Lab_value 1672 1699	moderate and uniform nuclei
+R51	MODIFY Arg1:T76 Arg2:E35	
+T78	Diagnostic_procedure 806 813	Mitoses
+E36	Diagnostic_procedure:T78 
+R28	SUB_PROCEDURE Arg1:E36 Arg2:E14	
+R29	MODIFY Arg1:T41 Arg2:E36	
+R52	MODIFY Arg1:T42 Arg2:E36	
+T77	Diagnostic_procedure 1704 1711	mitoses
+E37	Diagnostic_procedure:T77 
+T79	Lab_value 1712 1725	weren't found
+R53	MODIFY Arg1:T79 Arg2:E37	
+T80	Lab_value 1727 1753	0 per 10 high-power fields
+R54	MODIFY Arg1:T80 Arg2:E37	
+T81	Diagnostic_procedure 1765 1785	immunohistochemistry
+E38	Diagnostic_procedure:T81 
+T82	Detailed_description 1756 1764	Advanced
+R55	MODIFY Arg1:T82 Arg2:E38	
+T83	Coreference 1804 1810	lesion
+E39	Coreference:T83 
+#1	AnnotatorNotes E39	Not actually sure which of two lesions this refers to
+R56	IDENTICAL Arg1:E39 Arg2:E33	
+T84	Lab_value 1815 1823	positive
+T85	Diagnostic_procedure 1828 1841	synaptophysin
+E40	Diagnostic_procedure:T85 
+T86	Diagnostic_procedure 1877 1889	chromogranin
+E41	Diagnostic_procedure:T86 
+T87	Diagnostic_procedure 1894 1917	neuron-specific enolase
+E42	Diagnostic_procedure:T87 
+T88	Lab_value 1864 1872	negative
+R57	MODIFY Arg1:T84 Arg2:E40	
+R58	SUB_PROCEDURE Arg1:E40 Arg2:E38	
+R59	SUB_PROCEDURE Arg1:E41 Arg2:E38	
+R60	SUB_PROCEDURE Arg1:E42 Arg2:E38	
+R61	MODIFY Arg1:T88 Arg2:E41	
+R62	MODIFY Arg1:T88 Arg2:E42	
+T89	Disease_disorder 1953 1973	neuroendocrine tumor
+E43	Disease_disorder:T89 
+T90	Disease_disorder 2119 2134	carcinoid tumor
+E44	Disease_disorder:T90 
+T91	Biological_structure 2142 2153	left kidney
+R63	MODIFY Arg1:T91 Arg2:E44	
+T92	Sign_symptom 2165 2175	metastasis
+E45	Sign_symptom:T92 
+T93	Biological_structure 2159 2164	liver
+R64	MODIFY Arg1:T93 Arg2:E45	
+T94	Clinical_event 18 27	presented
+E46	Clinical_event:T94 
+*	OVERLAP E46 E1 E2 E3 E5 E6 E7
+R65	BEFORE Arg1:E7 Arg2:E8	
+*	OVERLAP E8 E10 E13 E14
+R66	BEFORE Arg1:E14 Arg2:E15	
+*	OVERLAP E15 E17 E18 E22
+R67	BEFORE Arg1:E22 Arg2:E24	
+*	OVERLAP E24 E25
+R68	BEFORE Arg1:E25 Arg2:E26	
+*	OVERLAP E26 E27 E28 E29 E30 E31 E32 E33 E35 E37 E38 E43
+R69	BEFORE Arg1:E43 Arg2:E44	
+*	OVERLAP E44 E45

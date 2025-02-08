@@ -1,0 +1,367 @@
+T1	Age 2 13	3-month-old
+T2	Personal_background 21 33	from the UAE
+T3	History 41 97	genetically-confirmed diagnosis of Jarcho-Levin syndrome
+T4	History 102 149	dependent on mechanical ventilation since birth
+T5	Therapeutic_procedure 185 207	implantation of VEPTRs
+E1	Therapeutic_procedure:T5 
+#1	AnnotatorNotes E1	vertical expandable prosthetic titanium rib
+T6	Therapeutic_procedure 224 233	intubated
+E2	Therapeutic_procedure:T6 
+T7	Therapeutic_procedure 256 266	ventilated
+E3	Therapeutic_procedure:T7 
+T8	Detailed_description 243 255	mechanically
+R1	MODIFY Arg1:T8 Arg2:E3	
+T9	Detailed_description 272 294	volume-controlled mode
+R2	MODIFY Arg1:T9 Arg2:E3	
+T10	Lab_value 303 340	0.30–0.45 fraction of inspired oxygen
+R3	MODIFY Arg1:T10 Arg2:E3	
+T11	Lab_value 349 397	peak inspiratory pressures (PIP) of 23–45 cm H2O
+T12	Lab_value 399 450	positive end-expiratory pressure (PEEP) of 7 cm H2O
+T13	Lab_value 452 486	backup respiratory rate (RR) of 34
+R4	MODIFY Arg1:T11 Arg2:E3	
+R5	MODIFY Arg1:T12 Arg2:E3	
+R6	MODIFY Arg1:T13 Arg2:E3	
+T14	Diagnostic_procedure 497 502	X-ray
+E4	Diagnostic_procedure:T14 
+T15	Biological_structure 491 496	chest
+T16	Biological_structure 510 516	thorax
+R7	MODIFY Arg1:T15 Arg2:E4	
+R8	MODIFY Arg1:T16 Arg2:E4	
+T17	Clinical_event 534 543	admission
+E5	Clinical_event:T17 
+T18	Date 561 574	a month after
+E6	Date:T18 
+T19	Disease_disorder 653 664	atelectasis
+E7	Disease_disorder:T19 
+A1	TREND E7 DEC
+T20	Biological_structure 672 689	base of the lungs
+R9	MODIFY Arg1:T20 Arg2:E7	
+T21	Detailed_description 643 652	posterior
+R10	MODIFY Arg1:T21 Arg2:E7	
+T22	Detailed_description 633 642	bilateral
+R11	MODIFY Arg1:T22 Arg2:E7	
+T23	Sign_symptom 4926 4938	able to walk
+E8	Sign_symptom:T23 
+T24	Diagnostic_procedure 4947 4963	neurodevelopment
+E9	Diagnostic_procedure:T24 
+T25	Lab_value 4976 4982	normal
+R12	MODIFY Arg1:T25 Arg2:E9	
+T26	Therapeutic_procedure 837 849	bronchoscopy
+E10	Therapeutic_procedure:T26 
+T27	Disease_disorder 873 887	bronchomalacia
+E11	Disease_disorder:T27 
+T28	Biological_structure 905 929	both upper lobar bronchi
+R13	MODIFY Arg1:T28 Arg2:E11	
+T29	Therapeutic_procedure 955 966	ventilation
+E12	Therapeutic_procedure:T29 
+T30	Detailed_description 944 954	mechanical
+T31	Detailed_description 934 943	prolonged
+R14	MODIFY Arg1:T30 Arg2:E12	
+R15	MODIFY Arg1:T31 Arg2:E12	
+T32	Therapeutic_procedure 983 995	tracheostomy
+E13	Therapeutic_procedure:T32 
+T33	Diagnostic_procedure 1039 1041	CT
+E14	Diagnostic_procedure:T33 
+T34	Diagnostic_procedure 1072 1074	CT
+E15	Diagnostic_procedure:T34 
+T35	Date 1092 1105	a month after
+E16	Date:T35 
+T36	Disease_disorder 1161 1172	atelectasis
+E17	Disease_disorder:T36 
+A2	POLARITY E17 NEG
+T37	Detailed_description 1145 1160	posterior-basal
+R16	MODIFY Arg1:T37 Arg2:E17	
+T38	Diagnostic_procedure 1204 1208	FiO2
+E18	Diagnostic_procedure:T38 
+T39	Lab_value 1192 1200	decrease
+R17	MODIFY Arg1:T39 Arg2:E18	
+T40	Lab_value 1212 1216	0.21
+R18	MODIFY Arg1:T40 Arg2:E18	
+T41	Therapeutic_procedure 1266 1276	ventilator
+E19	Therapeutic_procedure:T41 
+T42	Detailed_description 1258 1265	Servo-i
+R19	MODIFY Arg1:T42 Arg2:E19	
+T43	Detailed_description 1282 1304	volume-controlled mode
+R20	MODIFY Arg1:T43 Arg2:E19	
+T44	Diagnostic_procedure 1325 1329	PIPs
+E20	Diagnostic_procedure:T44 
+T45	Detailed_description 1316 1324	variable
+R21	MODIFY Arg1:T45 Arg2:E20	
+T46	Lab_value 1330 1354	between 25 and 45 cm H2O
+T47	Lab_value 1374 1385	7–11 cm H2O
+T48	Diagnostic_procedure 1359 1363	PEEP
+E21	Diagnostic_procedure:T48 
+#2	AnnotatorNotes E21	Positive End Expiratory Pressure
+R22	MODIFY Arg1:T47 Arg2:E21	
+#3	AnnotatorNotes E20	Peak inspiratory pressure
+R23	MODIFY Arg1:T46 Arg2:E20	
+T49	Medication 1551 1564	sedoanalgesia
+E22	Medication:T49 
+T50	Sign_symptom 1620 1632	desaturation
+E23	Sign_symptom:T50 
+T51	Sign_symptom 1657 1668	bradycardia
+E24	Sign_symptom:T51 
+T52	Disease_disorder 1684 1702	bronchial collapse
+E25	Disease_disorder:T52 
+T53	Sign_symptom 1725 1735	asynchrony
+E26	Sign_symptom:T53 
+T54	Medication 1762 1770	sedation
+E27	Medication:T54 
+T55	Medication 1830 1838	fentanyl
+E28	Medication:T55 
+T56	Medication 1843 1852	midazolam
+E29	Medication:T56 
+T57	Administration 1863 1887	continuous infusion pump
+R24	MODIFY Arg1:T57 Arg2:E29	
+R25	MODIFY Arg1:T57 Arg2:E28	
+T58	Dosage 1893 1926	progressive increase in the doses
+R26	MODIFY Arg1:T58 Arg2:E28	
+R27	MODIFY Arg1:T58 Arg2:E29	
+T59	Medication 1949 1962	cisatracurium
+E30	Medication:T59 
+T60	Dosage 1938 1948	continuous
+R28	MODIFY Arg1:T60 Arg2:E30	
+T61	Medication 1968 1985	muscular relaxant
+E31	Medication:T61 
+R29	SUB_PROCEDURE Arg1:E30 Arg2:E31	
+T62	Sign_symptom 2036 2058	clinical stabilisation
+E32	Sign_symptom:T62 
+T63	Medication 2077 2094	muscular relaxant
+E33	Medication:T63 
+A3	POLARITY E33 NEG
+T64	Medication 2139 2147	sedation
+E34	Medication:T64 
+A4	TREND E34 DEC
+T65	Dosage 2115 2135	progressive decrease
+R30	MODIFY Arg1:T65 Arg2:E34	
+T66	Sign_symptom 2248 2262	ocular flutter
+E35	Sign_symptom:T66 
+T67	Diagnostic_procedure 2369 2372	EEG
+E36	Diagnostic_procedure:T67 
+T68	Lab_value 2362 2368	normal
+R31	MODIFY Arg1:T68 Arg2:E36	
+T69	Diagnostic_procedure 2374 2388	ophthalmoscopy
+E37	Diagnostic_procedure:T69 
+T70	Diagnostic_procedure 2390 2406	metabolic workup
+E38	Diagnostic_procedure:T70 
+T71	Diagnostic_procedure 2419 2422	MRI
+E39	Diagnostic_procedure:T71 
+T72	Biological_structure 2411 2418	cranial
+R32	MODIFY Arg1:T72 Arg2:E39	
+T73	Date 2427 2442	5 months of age
+E40	Date:T73 
+T74	Duration 2701 2713	for 7 months
+E41	Duration:T74 
+T75	Date 4908 4921	19 months old
+E42	Date:T75 
+T76	Clinical_event 154 162	admitted
+E43	Clinical_event:T76 
+T77	Nonbiological_location 170 176	centre
+R33	MODIFY Arg1:T77 Arg2:E43	
+T78	Therapeutic_procedure 2448 2457	NAVA mode
+E44	Therapeutic_procedure:T78 
+T79	Diagnostic_procedure 2491 2519	adaptation to the ventilator
+E45	Diagnostic_procedure:T79 
+T80	Lab_value 2469 2476	improve
+R34	MODIFY Arg1:T80 Arg2:E45	
+T81	Therapeutic_procedure 2541 2555	neural trigger
+E46	Therapeutic_procedure:T81 
+R35	SUB_PROCEDURE Arg1:E46 Arg2:E44	
+T82	Therapeutic_procedure 2561 2574	NAVA catheter
+E47	Therapeutic_procedure:T82 
+R36	SUB_PROCEDURE Arg1:E47 Arg2:E44	
+T83	Detailed_description 2588 2618	costs around €200 per catheter
+R37	MODIFY Arg1:T83 Arg2:E47	
+T84	Other_entity 2620 2683	according to the manufacturer it should be changed every 5 days
+#4	AnnotatorNotes T84	ignored
+T85	Therapeutic_procedure 2732 2754	catheters were changed
+E48	Therapeutic_procedure:T85 
+T86	Frequency 2755 2768	every 15 days
+R38	MODIFY Arg1:T86 Arg2:E48	
+T87	Sign_symptom 2789 2820	deterioration of the Edi signal
+E49	Sign_symptom:T87 
+A5	POLARITY E49 NEG
+T88	Other_entity 2822 3092	According to the literature, Jarcho-Levin syndrome does not appear with mental retardation and life expectancy is pretty long, so ethically, we considered that this patient should have an opportunity to overcome his thoracic insufficiency if it were technically possible
+#5	AnnotatorNotes T88	ignored as discussion
+T89	Sign_symptom 3094 3104	Tachypnoea
+E50	Sign_symptom:T89 
+T90	Diagnostic_procedure 3135 3137	RR
+E51	Diagnostic_procedure:T90 
+#6	AnnotatorNotes E51	respiratory rate
+T91	Lab_value 3141 3143	55
+R39	MODIFY Arg1:T91 Arg2:E51	
+T92	Sign_symptom 3183 3200	work of breathing
+E52	Sign_symptom:T92 
+A6	POLARITY E52 NEG
+T93	Diagnostic_procedure 3209 3211	RR
+E53	Diagnostic_procedure:T93 
+T94	Lab_value 3235 3241	normal
+R40	MODIFY Arg1:T94 Arg2:E53	
+T95	Lab_value 3255 3257	40
+R41	MODIFY Arg1:T95 Arg2:E53	
+#7	AnnotatorNotes T95	this is a challenging example: it looks like it's saying the patient's age is 40
+T96	Medication 3364 3377	sedoanalgesia
+E54	Medication:T96 
+A7	TREND E54 DEC
+T98	Coreference 3396 3398	it
+E56	Coreference:T98 
+R42	IDENTICAL Arg1:E56 Arg2:E54	
+A8	POLARITY E56 NEG
+T97	Date 3427 3434	10 days
+E55	Date:T97 
+T99	Medication 3470 3478	sedation
+E57	Medication:T99 
+A9	POLARITY E57 NEG
+T100	Therapeutic_procedure 3315 3325	ventilator
+E58	Therapeutic_procedure:T100 
+T101	Sign_symptom 3287 3296	synchrony
+E59	Sign_symptom:T101 
+T102	Sign_symptom 3547 3561	ocular flutter
+E60	Sign_symptom:T102 
+A10	POLARITY E60 NEG
+T103	Diagnostic_procedure 3616 3639	psychomotor development
+E61	Diagnostic_procedure:T103 
+T104	Lab_value 3600 3608	progress
+R43	MODIFY Arg1:T104 Arg2:E61	
+#8	AnnotatorNotes E44	Neurally Adjusted Ventilatory Assist
+T107	Diagnostic_procedure 3744 3757	tidal volumes
+E63	Diagnostic_procedure:T107 
+T108	Diagnostic_procedure 3759 3761	Vt
+E64	Diagnostic_procedure:T108 
+R45	IDENTICAL Arg1:E64 Arg2:E63	
+T109	Lab_value 3766 3775	6–7 mL/kg
+R46	MODIFY Arg1:T109 Arg2:E63	
+T110	Date 3788 3801	After 10 days
+E65	Date:T110 
+T111	Therapeutic_procedure 3809 3818	NAVA mode
+E66	Therapeutic_procedure:T111 
+T112	Medication 3851 3859	sedation
+E67	Medication:T112 
+A11	POLARITY E67 NEG
+T113	Disease_disorder 3889 3907	bronchial collapse
+E68	Disease_disorder:T113 
+A12	POLARITY E68 MAYBE_NEG
+T114	Diagnostic_procedure 3947 3951	PEEP
+E69	Diagnostic_procedure:T114 
+T115	Lab_value 3955 3964	20 cm H2O
+R47	MODIFY Arg1:T115 Arg2:E69	
+T116	Therapeutic_procedure 3975 3986	ventilation
+E70	Therapeutic_procedure:T116 
+T117	Detailed_description 3968 3974	manual
+R48	MODIFY Arg1:T117 Arg2:E70	
+T118	Detailed_description 3996 4014	self-inflating bag
+R49	MODIFY Arg1:T118 Arg2:E70	
+T119	Therapeutic_procedure 4046 4055	NAVA mode
+E71	Therapeutic_procedure:T119 
+T124	Diagnostic_procedure 4186 4188	CT
+E74	Diagnostic_procedure:T124 
+T125	Biological_structure 4176 4185	pulmonary
+T126	Detailed_description 4166 4175	posterior
+R52	MODIFY Arg1:T125 Arg2:E74	
+R53	MODIFY Arg1:T126 Arg2:E74	
+T127	Date 4204 4218	2 months after
+E75	Date:T127 
+T128	Disease_disorder 4360 4371	atelectases
+E76	Disease_disorder:T128 
+A13	TREND E76 DEC
+T129	Detailed_description 4347 4359	posterobasal
+R54	MODIFY Arg1:T129 Arg2:E76	
+T130	Date 4420 4430	1 year old
+E77	Date:T130 
+T131	Diagnostic_procedure 4755 4759	PIPs
+E78	Diagnostic_procedure:T131 
+T132	Lab_value 4765 4781	around 30 cm H2O
+R55	MODIFY Arg1:T132 Arg2:E78	
+T133	Sign_symptom 4794 4802	tolerate
+E79	Sign_symptom:T133 
+A14	POLARITY E79 NEG
+T134	Therapeutic_procedure 4870 4880	ventilator
+E80	Therapeutic_procedure:T134 
+T135	Detailed_description 4840 4860	short disconnections
+R56	MODIFY Arg1:T135 Arg2:E80	
+R57	CAUSE Arg1:E80 Arg2:E79	
+T136	Diagnostic_procedure 4817 4821	PEEP
+E81	Diagnostic_procedure:T136 
+T137	Lab_value 4822 4836	below 9 cm H2O
+T138	Lab_value 4805 4813	decrease
+R58	MODIFY Arg1:T138 Arg2:E81	
+R59	MODIFY Arg1:T137 Arg2:E81	
+R60	CAUSE Arg1:E81 Arg2:E79	
+T139	Therapeutic_procedure 4460 4477	different devices
+E82	Therapeutic_procedure:T139 
+A15	POLARITY E82 MAYBE_POS
+T140	Detailed_description 4478 4499	Trilogy 100 (Philips)
+T141	Detailed_description 4501 4520	Astral 150 (ResMed)
+R61	MODIFY Arg1:T140 Arg2:E82	
+R62	MODIFY Arg1:T141 Arg2:E82	
+T142	Therapeutic_procedure 4563 4574	ventilation
+E83	Therapeutic_procedure:T142 
+T143	Detailed_description 4552 4562	mechanical
+R63	MODIFY Arg1:T143 Arg2:E83	
+T144	Detailed_description 4582 4597	home ventilator
+T145	Detailed_description 4599 4623	Monnal T-50, Air Liquide
+R64	MODIFY Arg1:T144 Arg2:E83	
+R65	MODIFY Arg1:T145 Arg2:T144	
+T146	Detailed_description 4630 4689	volume assisted/controlled mode with the following settings
+R66	MODIFY Arg1:T146 Arg2:E83	
+T105	Lab_value 3665 3690	NAVA level of 1 cm H2O/µV
+T106	Lab_value 3692 3706	PEEP 11 cm H2O
+T120	Lab_value 3708 3726	Edi trigger 0.5 µV
+#9	AnnotatorNotes T105	these resemble diagnostics but are actually settings for the ventilator
+R44	MODIFY Arg1:T105 Arg2:E58	
+R50	MODIFY Arg1:T106 Arg2:E58	
+R51	MODIFY Arg1:T120 Arg2:E58	
+T121	Lab_value 4691 4709	Vt 80 mL (9 mL/kg)
+T122	Lab_value 4711 4725	PEEP 10 cm H2O
+T123	Lab_value 4727 4749	flow trigger 0.5 L/min
+R67	MODIFY Arg1:T121 Arg2:E83	
+R68	MODIFY Arg1:T122 Arg2:E83	
+R69	MODIFY Arg1:T123 Arg2:E83	
+R70	BEFORE Arg1:E43 Arg2:E1	
+R71	AFTER Arg1:E1 Arg2:E2	
+*	OVERLAP E2 E3
+R72	BEFORE Arg1:E3 Arg2:E4	
+*	OVERLAP E4 E5
+R73	BEFORE Arg1:E5 Arg2:E6	
+T147	Therapeutic_procedure 585 592	surgery
+E62	Therapeutic_procedure:T147 
+*	OVERLAP E6 E62
+R74	AFTER Arg1:E62 Arg2:E7	
+*	OVERLAP E7 E10 E11
+R75	BEFORE Arg1:E11 Arg2:E12	
+R76	AFTER Arg1:E12 Arg2:E13	
+*	OVERLAP E13 E14
+R77	BEFORE Arg1:E14 Arg2:E15	
+*	OVERLAP E15 E16 E17 E18
+R78	BEFORE Arg1:E18 Arg2:E19	
+*	OVERLAP E19 E20 E21
+R79	BEFORE Arg1:E21 Arg2:E22	
+*	OVERLAP E22 E23 E24 E25
+R80	BEFORE Arg1:E25 Arg2:E26	
+*	OVERLAP E26 E27 E28 E29 E30
+R81	BEFORE Arg1:E30 Arg2:E32	
+*	OVERLAP E32 E33 E34 E35 E36 E37 E38 E39
+R82	BEFORE Arg1:E39 Arg2:E40	
+*	OVERLAP E40 E44 E45
+R83	BEFORE Arg1:E45 Arg2:E41	
+*	OVERLAP E41 E48 E49 E50 E51 E52
+R84	BEFORE Arg1:E52 Arg2:E53	
+*	OVERLAP E53 E59 E58 E54
+R85	BEFORE Arg1:E54 Arg2:E56	
+*	OVERLAP E56 E55 E57 E60 E61 E63 E65 E66 E67 E68 E69 E70 E71 E72 E73
+T148	Diagnostic_procedure 4061 4064	PIP
+E72	Diagnostic_procedure:T148 
+T149	Lab_value 4077 4101	between 15 and 45 cm H2O
+R86	MODIFY Arg1:T149 Arg2:E72	
+T150	Lab_value 4109 4126	NAVA level of 0.4
+R87	MODIFY Arg1:T150 Arg2:E71	
+T151	Diagnostic_procedure 4131 4140	Edi peaks
+E73	Diagnostic_procedure:T151 
+T152	Lab_value 4141 4162	between 15 and 100 µV
+R88	MODIFY Arg1:T152 Arg2:E73	
+R89	BEFORE Arg1:E73 Arg2:E74	
+*	OVERLAP E74 E75 E76
+R90	BEFORE Arg1:E76 Arg2:E77	
+*	OVERLAP E77 E82 E83 E78 E79 E81 E80
+R91	BEFORE Arg1:E80 Arg2:E42	
+*	OVERLAP E42 E8 E9
