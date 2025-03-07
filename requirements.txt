@@ -19,3 +19,4 @@ ultralytics==8.3.65
 loguru==0.7.3
 seqeval==1.2.2
 sacrebleu==2.5.1
+sentencepiece==0.2.0
