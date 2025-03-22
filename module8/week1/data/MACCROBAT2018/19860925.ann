@@ -1,0 +1,168 @@
+T1	Age 4 15	24-year-old
+T2	Sex 28 32	male
+T3	History 16 27	non-smoking
+T4	Clinical_event 41 50	presented
+E1	Clinical_event:T4 
+T5	Sign_symptom 65 75	hemoptysis
+E2	Sign_symptom:T5 
+T6	Detailed_description 56 64	repeated
+R1	MODIFY Arg1:T6 Arg2:E2	
+T7	Date 79 87	May 2008
+E3	Date:T7 
+T8	Duration 93 99	4 days
+E4	Duration:T8 
+T9	Sign_symptom 130 134	pain
+E5	Sign_symptom:T9 
+T10	Biological_structure 115 129	right thoracic
+R2	MODIFY Arg1:T10 Arg2:E5	
+T11	Detailed_description 135 168	which intensified while breathing
+R3	MODIFY Arg1:T11 Arg2:E5	
+T12	Detailed_description 103 114	concomitant
+R4	MODIFY Arg1:T12 Arg2:E5	
+T13	History 177 205	holidays in his home country
+T14	Personal_background 212 217	Cuban
+T15	Sign_symptom 242 246	cold
+E6	Sign_symptom:T15 
+T16	Sign_symptom 252 257	fever
+E7	Sign_symptom:T16 
+T17	Sign_symptom 271 276	cough
+E8	Sign_symptom:T17 
+T18	Severity 264 270	strong
+R5	MODIFY Arg1:T18 Arg2:E8	
+T19	Coreference 293 298	cough
+E9	Coreference:T19 
+R6	IDENTICAL Arg1:E9 Arg2:E8	
+T20	Texture 289 292	dry
+R7	MODIFY Arg1:T20 Arg2:E9	
+T21	Severity 282 288	strong
+R8	MODIFY Arg1:T21 Arg2:E9	
+T22	Detailed_description 299 308	persisted
+R9	MODIFY Arg1:T22 Arg2:E9	
+T23	Date 309 338	after recovery from the cold.
+E10	Date:T23 
+T24	Sign_symptom 370 384	loss of weight
+E11	Sign_symptom:T24 
+A1	POLARITY E11 NEG
+T25	Diagnostic_procedure 398 405	CT scan
+E12	Diagnostic_procedure:T25 
+T26	Biological_structure 413 419	thorax
+R10	MODIFY Arg1:T26 Arg2:E12	
+T27	Area 429 438	12 × 4 cm
+T28	Sign_symptom 445 449	mass
+E13	Sign_symptom:T28 
+T29	Detailed_description 439 444	solid
+R11	MODIFY Arg1:T29 Arg2:E13	
+T30	Sign_symptom 511 521	metastases
+E14	Sign_symptom:T30 
+A2	POLARITY E14 NEG
+R12	MODIFY Arg1:E14 Arg2:E13	
+T31	Biological_structure 477 489	lower thorax
+R13	MODIFY Arg1:T31 Arg2:E13	
+T32	Biological_structure 450 469	paravertebral right
+R14	MODIFY Arg1:T32 Arg2:T31	
+T33	Diagnostic_procedure 538 550	bronchoscopy
+E15	Diagnostic_procedure:T33 
+T34	Diagnostic_procedure 581 587	biopsy
+E16	Diagnostic_procedure:T34 
+T35	Detailed_description 568 580	non-bleeding
+R15	MODIFY Arg1:T35 Arg2:E16	
+T36	Coreference 599 603	mass
+E17	Coreference:T36 
+R16	IDENTICAL Arg1:E17 Arg2:E13	
+T37	Biological_structure 611 631	lower right bronchus
+R17	MODIFY Arg1:T37 Arg2:E17	
+T38	Diagnostic_procedure 638 652	histologically
+E18	Diagnostic_procedure:T38 
+T39	Diagnostic_procedure 657 677	immunohistologically
+E19	Diagnostic_procedure:T39 
+T40	Disease_disorder 701 714;730 735	granular cell tumor
+E20	Disease_disorder:T40 
+T41	Disease_disorder 718 735	Abrikossoff tumor
+E21	Disease_disorder:T41 
+A3	POLARITY E20 UNCERTAIN
+A4	POLARITY E21 UNCERTAIN
+T42	Diagnostic_procedure 745 761	bronchial lavage
+E22	Diagnostic_procedure:T42 
+T43	Lab_value 781 789	negative
+T44	Biological_structure 794 809	malignant cells
+R18	MODIFY Arg1:T44 Arg2:T43	
+R19	MODIFY Arg1:T43 Arg2:E22	
+T45	Clinical_event 827 837	discharged
+E23	Clinical_event:T45 
+T46	Date 877 902	Four days after discharge
+E24	Date:T46 
+T47	Sign_symptom 917 927	hemothorax
+E25	Sign_symptom:T47 
+T48	Detailed_description 905 916	spontaneous
+R20	MODIFY Arg1:T48 Arg2:E25	
+T49	Clinical_event 964 974	readmitted
+E26	Clinical_event:T49 
+T50	Therapeutic_procedure 998 1005	drained
+E27	Therapeutic_procedure:T50 
+T51	Coreference 983 993	hemothorax
+E28	Coreference:T51 
+R21	IDENTICAL Arg1:E28 Arg2:E25	
+R22	MODIFY Arg1:E28 Arg2:E27	
+T52	Diagnostic_procedure 1047 1070	cytological examination
+E29	Diagnostic_procedure:T52 
+T53	Biological_structure 1078 1092	drained liquid
+R23	MODIFY Arg1:T53 Arg2:E29	
+T54	Sign_symptom 1010 1025	malignant cells
+E30	Sign_symptom:T54 
+A5	POLARITY E30 NEG
+T55	Sign_symptom 1143 1151	hematoma
+E31	Sign_symptom:T55 
+T56	Lab_value 1125 1135	decreasing
+R24	MODIFY Arg1:T56 Arg2:E31	
+T57	Therapeutic_procedure 1167 1174	excised
+E32	Therapeutic_procedure:T57 
+T58	Sign_symptom 1157 1162	tumor
+E33	Sign_symptom:T58 
+T59	Therapeutic_procedure 1191 1212	lower right lobectomy
+E34	Therapeutic_procedure:T59 
+R25	SUB_PROCEDURE Arg1:E34 Arg2:E32	
+T60	Date 1213 1250	6 months after the initial admission.
+E35	Date:T60 
+T61	Diagnostic_procedure 1261 1285	histological examination
+E36	Diagnostic_procedure:T61 
+T62	Coreference 1343 1348	tumor
+E37	Coreference:T62 
+R26	IDENTICAL Arg1:E37 Arg2:E33	
+T63	Biological_structure 1298 1311	peribronchial
+R27	MODIFY Arg1:T63 Arg2:E37	
+T64	Detailed_description 1316 1328	infiltrating
+R28	MODIFY Arg1:T64 Arg2:E37	
+T65	Diagnostic_procedure 1329 1333	S100
+E38	Diagnostic_procedure:T65 
+T66	Lab_value 1334 1342	positive
+R29	MODIFY Arg1:T66 Arg2:E38	
+R30	MODIFY Arg1:E38 Arg2:E37	
+T67	Diagnostic_procedure 1405 1416	growth rate
+E39	Diagnostic_procedure:T67 
+T68	Lab_value 1420 1422	2%
+T69	Lab_value 1396 1404	very low
+R31	MODIFY Arg1:T69 Arg2:E39	
+T70	Diagnostic_procedure 1429 1433	size
+E40	Diagnostic_procedure:T70 
+T71	Distance 1437 1442	15 mm
+R32	MODIFY Arg1:T71 Arg2:E40	
+R33	MODIFY Arg1:T68 Arg2:E39	
+R34	MODIFY Arg1:E37 Arg2:E39	
+R35	MODIFY Arg1:E37 Arg2:E40	
+*	OVERLAP E1 E2 E3
+R36	AFTER Arg1:E3 Arg2:E4	
+*	OVERLAP E4 E5
+R37	AFTER Arg1:E5 Arg2:E6	
+*	OVERLAP E6 E7 E8 E9 E10
+R38	BEFORE Arg1:E10 Arg2:E11	
+*	OVERLAP E11 E12 E13 E15 E16 E17 E18 E19 E20 E21 E22
+R39	MODIFY Arg1:T27 Arg2:E13	
+R40	BEFORE Arg1:E22 Arg2:E23	
+R41	BEFORE Arg1:E23 Arg2:E24	
+*	OVERLAP E24 E25
+R42	BEFORE Arg1:E25 Arg2:E26	
+*	OVERLAP E26 E27 E30 E29
+R43	BEFORE Arg1:E29 Arg2:E31	
+*	OVERLAP E31 E33 E32 E35
+R44	BEFORE Arg1:E35 Arg2:E36	
+*	OVERLAP E36 E37

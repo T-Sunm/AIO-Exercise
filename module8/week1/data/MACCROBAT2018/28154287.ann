@@ -1,0 +1,457 @@
+T1	Age 2 13	73-year-old
+T2	Sex 14 17	man
+T3	History 46 88	type 2 diabetes mellitus at 35 year of age
+T4	Date 208 217	first day
+E1	Date:T4 
+T5	Clinical_event 235 242	visited
+E2	Clinical_event:T5 
+T6	Nonbiological_location 247 261	emergency room
+R1	MODIFY Arg1:T6 Arg2:E2	
+T7	Sign_symptom 157 177	respiratory distress
+E3	Sign_symptom:T7 
+T8	Sign_symptom 195 199	pain
+E4	Sign_symptom:T8 
+T9	Biological_structure 189 194	chest
+R2	MODIFY Arg1:T9 Arg2:E4	
+T10	Detailed_description 182 188	sudden
+R3	MODIFY Arg1:T10 Arg2:E4	
+T11	Diagnostic_procedure 265 285	physical examination
+E5	Diagnostic_procedure:T11 
+T12	Clinical_event 3662 3666	died
+E6	Clinical_event:T12 
+T13	Date 3604 3610	day 87
+E7	Date:T13 
+T14	Disease_disorder 3612 3636	ventricular fibrillation
+E8	Disease_disorder:T14 
+T15	Diagnostic_procedure 3668 3675	Autopsy
+E9	Diagnostic_procedure:T15 
+A1	POLARITY E9 NEG
+T16	Diagnostic_procedure 304 320	body temperature
+E10	Diagnostic_procedure:T16 
+T17	Lab_value 325 331	35.4°C
+R4	MODIFY Arg1:T17 Arg2:E10	
+T18	Diagnostic_procedure 337 347	heart rate
+E11	Diagnostic_procedure:T18 
+T19	Lab_value 352 364	90 beats/min
+T20	Lab_value 372 386	regular rhythm
+R5	MODIFY Arg1:T19 Arg2:E11	
+R6	MODIFY Arg1:T20 Arg2:E11	
+T21	Diagnostic_procedure 396 410	blood pressure
+E12	Diagnostic_procedure:T21 
+T22	Lab_value 415 426	130/77 mmHg
+R7	MODIFY Arg1:T22 Arg2:E12	
+R8	SUB_PROCEDURE Arg1:E10 Arg2:E5	
+R9	SUB_PROCEDURE Arg1:E11 Arg2:E5	
+R10	SUB_PROCEDURE Arg1:E12 Arg2:E5	
+T23	Diagnostic_procedure 430 450	physical examination
+E13	Diagnostic_procedure:T23 
+T24	Sign_symptom 467 475	crackles
+E14	Sign_symptom:T24 
+T25	Detailed_description 460 466	coarse
+R11	MODIFY Arg1:T25 Arg2:E14	
+T26	Diagnostic_procedure 489 506	lung auscultation
+E15	Diagnostic_procedure:T26 
+R12	SUB_PROCEDURE Arg1:E15 Arg2:E13	
+T27	Detailed_description 479 488	bilateral
+R13	MODIFY Arg1:T27 Arg2:E15	
+T28	Diagnostic_procedure 512 527	laboratory data
+E16	Diagnostic_procedure:T28 
+T29	Diagnostic_procedure 537 540	WBC
+E17	Diagnostic_procedure:T29 
+T30	Lab_value 550 558	8,800/μL
+R14	MODIFY Arg1:T30 Arg2:E17	
+T31	Diagnostic_procedure 585 596	neutrophils
+E18	Diagnostic_procedure:T31 
+T32	Lab_value 566 583	shift to the left
+R15	MODIFY Arg1:T32 Arg2:E17	
+T33	Lab_value 597 600	82%
+R16	MODIFY Arg1:T33 Arg2:E18	
+R17	SUB_PROCEDURE Arg1:E17 Arg2:E16	
+R18	SUB_PROCEDURE Arg1:E18 Arg2:E17	
+T34	Diagnostic_procedure 603 605	Hb
+E19	Diagnostic_procedure:T34 
+T35	Lab_value 606 615	10.2 g/dL
+R19	MODIFY Arg1:T35 Arg2:E19	
+T36	Diagnostic_procedure 617 636	blood urea nitrogen
+E20	Diagnostic_procedure:T36 
+T37	Diagnostic_procedure 638 641	BUN
+E21	Diagnostic_procedure:T37 
+R20	IDENTICAL Arg1:E21 Arg2:E20	
+R21	SUB_PROCEDURE Arg1:E19 Arg2:E16	
+R22	SUB_PROCEDURE Arg1:E20 Arg2:E16	
+T38	Lab_value 643 653	82.2 mg/dL
+R23	MODIFY Arg1:T38 Arg2:E20	
+T39	Diagnostic_procedure 655 665	creatinine
+E22	Diagnostic_procedure:T39 
+T40	Diagnostic_procedure 667 670	Cre
+E23	Diagnostic_procedure:T40 
+R24	IDENTICAL Arg1:E23 Arg2:E22	
+T41	Lab_value 672 682	6.50 mg/dL
+R25	MODIFY Arg1:T41 Arg2:E22	
+T42	Diagnostic_procedure 684 689	HbA1c
+E24	Diagnostic_procedure:T42 
+T43	Lab_value 690 694	5.9%
+R26	MODIFY Arg1:T43 Arg2:E24	
+R27	SUB_PROCEDURE Arg1:E22 Arg2:E16	
+R28	SUB_PROCEDURE Arg1:E24 Arg2:E16	
+T44	Diagnostic_procedure 696 711	creatine kinase
+E25	Diagnostic_procedure:T44 
+T45	Diagnostic_procedure 713 715	CK
+E26	Diagnostic_procedure:T45 
+T46	Lab_value 717 725	189 IU/L
+R29	MODIFY Arg1:T46 Arg2:E25	
+R30	IDENTICAL Arg1:E26 Arg2:E25	
+R31	SUB_PROCEDURE Arg1:E25 Arg2:E16	
+T47	Diagnostic_procedure 727 745	C-reactive protein
+E27	Diagnostic_procedure:T47 
+T48	Diagnostic_procedure 747 750	CRP
+E28	Diagnostic_procedure:T48 
+R32	IDENTICAL Arg1:E28 Arg2:E27	
+T49	Lab_value 752 762	8.51 mg/dL
+R33	MODIFY Arg1:T49 Arg2:E28	
+R34	SUB_PROCEDURE Arg1:E27 Arg2:E16	
+T50	Diagnostic_procedure 764 794	brain-type natriuretic peptide
+E29	Diagnostic_procedure:T50 
+T51	Diagnostic_procedure 796 799	BNP
+E30	Diagnostic_procedure:T51 
+R35	IDENTICAL Arg1:E30 Arg2:E29	
+T52	Lab_value 801 812	127.4 pg/mL
+R36	MODIFY Arg1:T52 Arg2:E29	
+R37	SUB_PROCEDURE Arg1:E29 Arg2:E16	
+T53	Diagnostic_procedure 822 832	radiograph
+E31	Diagnostic_procedure:T53 
+T54	Biological_structure 816 821	chest
+R38	MODIFY Arg1:T54 Arg2:E31	
+T55	Sign_symptom 852 866	consolidations
+E32	Sign_symptom:T55 
+T56	Detailed_description 842 851	perihilar
+R39	MODIFY Arg1:T56 Arg2:E32	
+T57	Sign_symptom 875 887	bronchograms
+E33	Sign_symptom:T57 
+T58	Detailed_description 871 874	air
+R40	MODIFY Arg1:T58 Arg2:E33	
+T59	Diagnostic_procedure 900 917	electrocardiogram
+E34	Diagnostic_procedure:T59 
+T60	Sign_symptom 927 947	ST-segment elevation
+E35	Sign_symptom:T60 
+T61	Sign_symptom 952 975	poor R-wave progression
+E36	Sign_symptom:T61 
+T62	Detailed_description 979 990	leads V1-V3
+R41	MODIFY Arg1:T62 Arg2:E36	
+T63	Diagnostic_procedure 996 1012	echocardiography
+E37	Diagnostic_procedure:T63 
+T64	Sign_symptom 1022 1053	apical and ventricular asynergy
+E38	Sign_symptom:T64 
+T65	Disease_disorder 1102 1123	myocardial infarction
+E39	Disease_disorder:T65 
+T66	Detailed_description 1096 1101	acute
+R42	MODIFY Arg1:T66 Arg2:E39	
+T67	Disease_disorder 1139 1152	heart failure
+E40	Disease_disorder:T67 
+T68	Detailed_description 1128 1138	congestive
+R43	MODIFY Arg1:T68 Arg2:E40	
+T69	Diagnostic_procedure 1163 1174	angiography
+E41	Diagnostic_procedure:T69 
+T70	Biological_structure 1154 1162	Coronary
+R44	MODIFY Arg1:T70 Arg2:E41	
+T71	Sign_symptom 1207 1220	angiostenosis
+E42	Sign_symptom:T71 
+T72	Biological_structure 1228 1241	septal branch
+R45	MODIFY Arg1:T72 Arg2:E42	
+T73	Therapeutic_procedure 1243 1246	PCI
+E43	Therapeutic_procedure:T73 
+#1	AnnotatorNotes E43	percutaneous coronary intervention
+T74	Therapeutic_procedure 1316 1324	dialysis
+E44	Therapeutic_procedure:T74 
+T75	Detailed_description 1304 1315	maintenance
+T76	Detailed_description 1293 1303	continuous
+R46	MODIFY Arg1:T75 Arg2:E44	
+R47	MODIFY Arg1:T76 Arg2:E44	
+T77	Date 1333 1346	following day
+E45	Date:T77 
+T78	Disease_disorder 1370 1394	cardiorespiratory arrest
+E46	Disease_disorder:T78 
+T79	Therapeutic_procedure 1399 1428	cardiopulmonary resuscitation
+E47	Therapeutic_procedure:T79 
+T80	Therapeutic_procedure 1467 1478	ventilation
+E48	Therapeutic_procedure:T80 
+T81	Detailed_description 1456 1466	mechanical
+R48	MODIFY Arg1:T81 Arg2:E48	
+T82	Date 1483 1488	day 8
+E49	Date:T82 
+T83	Therapeutic_procedure 1490 1500	ventilator
+E50	Therapeutic_procedure:T83 
+A2	POLARITY E50 NEG
+T84	Sign_symptom 1584 1590	sputum
+E51	Sign_symptom:T84 
+T85	Lab_value 1563 1580	increasing volume
+R49	MODIFY Arg1:T85 Arg2:E51	
+T86	Lab_value 1614 1622	purulent
+R50	MODIFY Arg1:T86 Arg2:E51	
+T87	Sign_symptom 1624 1646	Pseudomonas aeruginosa
+E52	Sign_symptom:T87 
+T88	Diagnostic_procedure 1669 1683	sputum culture
+E53	Diagnostic_procedure:T88 
+T89	Medication 1689 1712	tazobactam/piperacillin
+E54	Medication:T89 
+T90	Medication 1714 1722	TAZ/PIPC
+E55	Medication:T90 
+R51	IDENTICAL Arg1:E55 Arg2:E54	
+T91	Dosage 1725 1734	4.5g q12h
+R52	MODIFY Arg1:T91 Arg2:E54	
+T92	Diagnostic_procedure 1790 1811	respiratory condition
+E56	Diagnostic_procedure:T92 
+T93	Lab_value 1812 1820	worsened
+R53	MODIFY Arg1:T93 Arg2:E56	
+T94	Diagnostic_procedure 1833 1852	computed tomography
+E57	Diagnostic_procedure:T94 
+T95	Biological_structure 1827 1832	chest
+R54	MODIFY Arg1:T95 Arg2:E57	
+T96	Diagnostic_procedure 1854 1856	CT
+E58	Diagnostic_procedure:T96 
+R55	IDENTICAL Arg1:E58 Arg2:E57	
+T97	Date 1866 1872	day 15
+E59	Date:T97 
+T98	Sign_symptom 1902 1911	opacities
+E60	Sign_symptom:T98 
+T99	Disease_disorder 1913 1929	pleural effusion
+E61	Disease_disorder:T99 
+T100	Disease_disorder 1935 1946	atelectasis
+E62	Disease_disorder:T100 
+T101	Detailed_description 1892 1901	perihilar
+T102	Detailed_description 1882 1891	bilateral
+R56	MODIFY Arg1:T101 Arg2:E60	
+R57	MODIFY Arg1:T102 Arg2:E60	
+T103	Diagnostic_procedure 2067 2083	sputum culturing
+E63	Diagnostic_procedure:T103 
+T104	Diagnostic_procedure 2088 2108	serum fungal antigen
+E64	Diagnostic_procedure:T104 
+T105	Disease_disorder 2034 2047	pneumomycosis
+E65	Disease_disorder:T105 
+A3	POLARITY E65 UNCERTAIN
+T106	Disease_disorder 2010 2032	microbial substitution
+E66	Disease_disorder:T106 
+A4	POLARITY E66 UNCERTAIN
+T107	Medication 2138 2146	TAZ/PIPC
+E67	Medication:T107 
+A5	POLARITY E67 NEG
+T108	Medication 2162 2171	meropenem
+E68	Medication:T108 
+T109	Dosage 2173 2182	0.5 g/day
+R58	MODIFY Arg1:T109 Arg2:E68	
+T110	Date 2188 2194	day 16
+E69	Date:T110 
+T111	Diagnostic_procedure 2210 2215	serum
+E70	Diagnostic_procedure:T111 
+T112	Diagnostic_procedure 2236 2256	Cryptococcus antigen
+E71	Diagnostic_procedure:T112 
+R59	SUB_PROCEDURE Arg1:E71 Arg2:E70	
+T113	Lab_value 2223 2231	positive
+R60	MODIFY Arg1:T113 Arg2:E71	
+T114	Date 2261 2267	day 21
+E72	Date:T114 
+T115	Diagnostic_procedure 2320 2334	blood cultures
+E73	Diagnostic_procedure:T115 
+T116	Detailed_description 2308 2316	two sets
+R61	MODIFY Arg1:T116 Arg2:E73	
+T117	Sign_symptom 2269 2288	cryptococcal bodies
+E74	Sign_symptom:T117 
+T118	Medication 2339 2363	liposomal amphotericin B
+E75	Medication:T118 
+T119	Medication 2365 2370	L-AMB
+E76	Medication:T119 
+R62	IDENTICAL Arg1:E76 Arg2:E75	
+T120	Dosage 2373 2384	3 mg/kg/day
+R63	MODIFY Arg1:T120 Arg2:E75	
+T121	Date 2407 2413	day 23
+E77	Date:T121 
+T122	Sign_symptom 2415 2434	cryptococcal bodies
+E78	Sign_symptom:T122 
+T123	Diagnostic_procedure 2458 2464	sputum
+E79	Diagnostic_procedure:T123 
+T124	Diagnostic_procedure 2466 2485	cerebrospinal fluid
+E80	Diagnostic_procedure:T124 
+T125	Diagnostic_procedure 2501 2517	pleural effusion
+E81	Diagnostic_procedure:T125 
+#2	AnnotatorNotes E81	this is a test of the fluid in the lungs, but also indicates the condition is still present
+T126	Disease_disorder 2501 2517	pleural effusion
+E82	Disease_disorder:T126 
+T127	Detailed_description 2491 2500	bilateral
+R64	MODIFY Arg1:T127 Arg2:E82	
+T128	Disease_disorder 2581 2595	cryptococcosis
+E83	Disease_disorder:T128 
+T129	Detailed_description 2568 2580	disseminated
+R65	MODIFY Arg1:T129 Arg2:E83	
+T130	Date 2600 2606	day 25
+E84	Date:T130 
+T131	Diagnostic_procedure 2614 2616	CT
+E85	Diagnostic_procedure:T131 
+T132	Biological_structure 2608 2613	brain
+R66	MODIFY Arg1:T132 Arg2:E85	
+T133	Sign_symptom 2654 2666	hypertension
+E86	Sign_symptom:T133 
+A6	POLARITY E86 NEG
+T134	Biological_structure 2641 2653	intracranial
+R67	MODIFY Arg1:T134 Arg2:E86	
+T135	Disease_disorder 2679 2686	abscess
+E87	Disease_disorder:T135 
+T136	Biological_structure 2673 2678	brain
+R68	MODIFY Arg1:T136 Arg2:E87	
+T137	Disease_disorder 2722 2750	human immunodeficiency virus
+E88	Disease_disorder:T137 
+A7	POLARITY E88 NEG
+T138	Disease_disorder 2752 2755	HIV
+E89	Disease_disorder:T138 
+A8	POLARITY E89 NEG
+R69	IDENTICAL Arg1:E89 Arg2:E88	
+T139	Medication 2780 2785	L-AMB
+E90	Medication:T139 
+T140	Dosage 2787 2798	3 mg/kg/day
+R70	MODIFY Arg1:T140 Arg2:E90	
+T141	Date 2818 2824	day 31
+E91	Date:T141 
+T142	Diagnostic_procedure 2832 2834	CT
+E92	Diagnostic_procedure:T142 
+T143	Biological_structure 2826 2831	chest
+R71	MODIFY Arg1:T143 Arg2:E92	
+T144	Sign_symptom 2855 2861	nodule
+E93	Sign_symptom:T144 
+T145	Detailed_description 2846 2854	solitary
+R72	MODIFY Arg1:T145 Arg2:E93	
+T146	Biological_structure 2869 2890	left lingular segment
+R73	MODIFY Arg1:T146 Arg2:E93	
+T147	Disease_disorder 2949 2968	cryptococcus lesion
+E94	Disease_disorder:T147 
+A9	POLARITY E94 UNCERTAIN
+T148	Biological_structure 2939 2948	pulmonary
+R74	MODIFY Arg1:T148 Arg2:E94	
+T149	Date 2979 2997	After several days
+E95	Date:T149 
+T150	Diagnostic_procedure 3071 3085	fluid cultures
+E96	Diagnostic_procedure:T150 
+T151	Detailed_description 3025 3034	bilateral
+T155	Lab_value 3093 3101	negative
+R80	MODIFY Arg1:T155 Arg2:E96	
+T156	Disease_disorder 3035 3051	pleural effusion
+E97	Disease_disorder:T156 
+R75	MODIFY Arg1:T151 Arg2:E97	
+T152	Diagnostic_procedure 3018 3023	blood
+E98	Diagnostic_procedure:T152 
+T153	Diagnostic_procedure 3010 3016	sputum
+E99	Diagnostic_procedure:T153 
+T154	Diagnostic_procedure 3035 3051	pleural effusion
+E100	Diagnostic_procedure:T154 
+T157	Diagnostic_procedure 3057 3070	cerebrospinal
+E101	Diagnostic_procedure:T157 
+R76	SUB_PROCEDURE Arg1:E101 Arg2:E96	
+R77	SUB_PROCEDURE Arg1:E100 Arg2:E96	
+R78	SUB_PROCEDURE Arg1:E98 Arg2:E96	
+R79	SUB_PROCEDURE Arg1:E99 Arg2:E96	
+T158	Date 3106 3112	day 52
+E102	Date:T158 
+T159	Diagnostic_procedure 3120 3122	CT
+E103	Diagnostic_procedure:T159 
+T160	Sign_symptom 3145 3151	nodule
+E104	Sign_symptom:T160 
+T161	Biological_structure 3140 3144	lung
+R81	MODIFY Arg1:T161 Arg2:E104	
+T162	Biological_structure 3114 3119	chest
+R82	MODIFY Arg1:T162 Arg2:E103	
+T163	Biological_structure 3159 3188	right pulmonary apical region
+R83	MODIFY Arg1:T163 Arg2:E104	
+T164	Sign_symptom 3196 3203	nodules
+E105	Sign_symptom:T164 
+A10	TREND E105 DEC
+T165	Date 3238 3244	day 79
+E106	Date:T165 
+T166	Lab_value 3214 3231	decreased in size
+R84	MODIFY Arg1:T166 Arg2:E105	
+T167	Medication 3270 3275	L-AMB
+E107	Medication:T167 
+T168	Diagnostic_procedure 3306 3324	C-reactive protein
+E108	Diagnostic_procedure:T168 
+T169	Lab_value 3340 3348	elevated
+R85	MODIFY Arg1:T169 Arg2:E108	
+T170	Disease_disorder 3367 3383	pleural effusion
+E109	Disease_disorder:T170 
+A11	TREND E109 INC
+T171	Detailed_description 3357 3366	bilateral
+R86	MODIFY Arg1:T171 Arg2:E109	
+T172	Sign_symptom 3420 3438	lost consciousness
+E110	Sign_symptom:T172 
+T173	Diagnostic_procedure 3460 3474	vital capacity
+E111	Diagnostic_procedure:T173 
+T174	Lab_value 3450 3459	decreased
+R87	MODIFY Arg1:T174 Arg2:E111	
+T175	Disease_disorder 3501 3517	pleural effusion
+E112	Disease_disorder:T175 
+A12	TREND E112 INC
+T176	Detailed_description 3491 3500	bilateral
+R88	MODIFY Arg1:T176 Arg2:E112	
+T177	Disease_disorder 3541 3553	CO2 narcosis
+E113	Disease_disorder:T177 
+T178	Diagnostic_procedure 3569 3586	general condition
+E114	Diagnostic_procedure:T178 
+T179	Lab_value 3587 3599	deteriorated
+R89	MODIFY Arg1:T179 Arg2:E114	
+T180	Diagnostic_procedure 3824 3840	genetic analysis
+E115	Diagnostic_procedure:T180 
+T181	Detailed_description 3716 3736	Cryptococcus isolate
+R90	MODIFY Arg1:T181 Arg2:E115	
+T182	Disease_disorder 3770 3818	Cryptococcus neoformans var. grubii (serotype A)
+E116	Disease_disorder:T182 
+*	OVERLAP E1 E2 E3 E4 E5 E13 E14 E16 E31 E32 E33 E34 E35 E36 E37 E38 E39 E40
+R91	BEFORE Arg1:E40 Arg2:E41	
+*	OVERLAP E41 E42 E43 E44
+R92	BEFORE Arg1:E44 Arg2:E45	
+*	OVERLAP E45 E46
+R93	BEFORE Arg1:E47 Arg2:E48	
+R94	BEFORE Arg1:E48 Arg2:E49	
+*	OVERLAP E49 E50 E51 E52 E53 E54
+R95	BEFORE Arg1:E54 Arg2:E56	
+*	OVERLAP E56 E57 E59 E60 E61 E62 E66 E65 E63 E64 E67 E68
+R96	BEFORE Arg1:E68 Arg2:E69	
+*	OVERLAP E69 E70
+R97	BEFORE Arg1:E70 Arg2:E72	
+*	OVERLAP E72 E74 E73 E75
+R98	BEFORE Arg1:E75 Arg2:E77	
+*	OVERLAP E77 E78 E79 E80 E81 E82 E83
+R99	BEFORE Arg1:E83 Arg2:E84	
+*	OVERLAP E84 E85 E86 E87 E88 E90
+R100	BEFORE Arg1:E90 Arg2:E91	
+*	OVERLAP E91 E92 E93 E94
+R101	BEFORE Arg1:E94 Arg2:E95	
+*	OVERLAP E95 E97 E96
+R102	BEFORE Arg1:E96 Arg2:E102	
+*	OVERLAP E102 E103 E104
+R103	BEFORE Arg1:E104 Arg2:E105	
+R104	BEFORE Arg1:E105 Arg2:E106	
+*	OVERLAP E106 E107 E108 E109
+R105	BEFORE Arg1:E109 Arg2:E110	
+*	OVERLAP E110 E111 E112
+R106	BEFORE Arg1:E112 Arg2:E113	
+R107	BEFORE Arg1:E113 Arg2:E114	
+R108	BEFORE Arg1:E114 Arg2:E7	
+*	OVERLAP E7 E8 E6
+R109	BEFORE Arg1:E6 Arg2:E9	
+R110	BEFORE Arg1:E9 Arg2:E117	
+*	OVERLAP E116 E115 E117
+T183	Date 3695 3710	At a later date
+E117	Date:T183 
+T184	Date 74 88	35 year of age
+E118	Date:T184 
+T185	History 98 124	severe diabetic neuropathy
+T186	History 129 142	diabetic-ESRD
+T187	Disease_disorder 46 70	type 2 diabetes mellitus
+E119	Disease_disorder:T187 
+*	OVERLAP E119 E118
+T188	Disease_disorder 105 124	diabetic neuropathy
+E120	Disease_disorder:T188 
+T189	Severity 98 104	severe
+R111	MODIFY Arg1:T189 Arg2:E120	
+T190	Disease_disorder 129 142	diabetic-ESRD
+E121	Disease_disorder:T190 
+#3	AnnotatorNotes E121	diabetic end-stage renal disease
+R112	BEFORE Arg1:E118 Arg2:E120	
+*	OVERLAP E120 E121
+R113	BEFORE Arg1:E121 Arg2:E3	

@@ -1,0 +1,307 @@
+T1	Date 0 7	In 2013
+E1	Date:T1 
+T2	Age 11 22	50-year-old
+T3	Sex 23 26	man
+T4	Clinical_event 35 42	visited
+E2	Clinical_event:T4 
+T5	Nonbiological_location 43 51	hospital
+T6	Sign_symptom 78 82	pain
+E3	Sign_symptom:T6 
+T7	Biological_structure 73 77	bone
+T8	Biological_structure 90 98	left leg
+T9	Detailed_description 67 72	local
+R1	MODIFY Arg1:T8 Arg2:E3	
+R2	MODIFY Arg1:T7 Arg2:E3	
+R3	MODIFY Arg1:T9 Arg2:E3	
+T10	Date 103 118	August 14, 2013
+E4	Date:T10 
+T11	Disease_disorder 292 304	osteosarcoma
+E5	Disease_disorder:T11 
+T12	Detailed_description 279 291	osteoblastic
+R4	MODIFY Arg1:T12 Arg2:E5	
+T13	Therapeutic_procedure 178 187	resection
+E6	Therapeutic_procedure:T13 
+T14	Detailed_description 170 177	en bloc
+R5	MODIFY Arg1:T14 Arg2:E6	
+T15	Sign_symptom 164 169	tumor
+E7	Sign_symptom:T15 
+T16	Biological_structure 144 163	left distal femoral
+R6	MODIFY Arg1:T16 Arg2:E7	
+T17	Therapeutic_procedure 192 206	reconstruction
+E8	Therapeutic_procedure:T17 
+T18	Detailed_description 214 247	modular femoral prosthetic system
+R7	MODIFY Arg1:T18 Arg2:E8	
+T19	Diagnostic_procedure 249 268	Pathology diagnosis
+E9	Diagnostic_procedure:T19 
+T20	Medication 339 351	chemotherapy
+E10	Medication:T20 
+T21	Detailed_description 327 338	neoadjuvant
+R8	MODIFY Arg1:T21 Arg2:E10	
+T22	Dosage 314 323	One cycle
+R9	MODIFY Arg1:T22 Arg2:E10	
+T23	Dosage 356 364	4 cycles
+T24	Detailed_description 368 376	adjuvant
+T25	Medication 377 389	chemotherapy
+E11	Medication:T25 
+R10	MODIFY Arg1:T24 Arg2:E11	
+R11	MODIFY Arg1:T23 Arg2:E11	
+T26	Medication 395 406	MAP regimen
+E12	Medication:T26 
+T27	Medication 418 430	methotrexate
+E13	Medication:T27 
+T28	Dosage 408 417	high-dose
+R12	MODIFY Arg1:T28 Arg2:E13	
+R13	SUB_PROCEDURE Arg1:E13 Arg2:E12	
+T29	Medication 432 441	cisplatin
+E14	Medication:T29 
+T30	Medication 447 458	doxorubicin
+E15	Medication:T30 
+R14	SUB_PROCEDURE Arg1:E14 Arg2:E12	
+R15	SUB_PROCEDURE Arg1:E15 Arg2:E12	
+T31	Date 482 494	January 2015
+E16	Date:T31 
+T32	Sign_symptom 498 502	mass
+E17	Sign_symptom:T32 
+T33	Biological_structure 520 540	left upper crus area
+R16	MODIFY Arg1:T33 Arg2:E17	
+T34	Sign_symptom 548 558	recurrence
+E18	Sign_symptom:T34 
+T35	Diagnostic_procedure 576 582	biopsy
+E19	Diagnostic_procedure:T35 
+T36	Date 586 602	January 23, 2015
+E20	Date:T36 
+T37	Therapeutic_procedure 633 643	amputation
+E21	Therapeutic_procedure:T37 
+T38	Biological_structure 621 632	upper femur
+R17	MODIFY Arg1:T38 Arg2:E21	
+T39	Therapeutic_procedure 688 705	joint replacement
+E22	Therapeutic_procedure:T39 
+A1	POLARITY E22 NEG
+T40	Biological_structure 684 687	hip
+R18	MODIFY Arg1:T40 Arg2:E22	
+T41	Therapeutic_procedure 713 726	wound healing
+E23	Therapeutic_procedure:T41 
+T42	Clinical_event 740 768	went back to his normal life
+E24	Clinical_event:T42 
+T44	Therapeutic_procedure 784 799	artificial limb
+E25	Therapeutic_procedure:T44 
+#1	AnnotatorNotes E25	not a therapy per se
+T45	Medication 832 844	chemotherapy
+E26	Medication:T45 
+A2	POLARITY E26 NEG
+T46	Date 967 984	half a year after
+E27	Date:T46 
+T47	Sign_symptom 1028 1033	cough
+E28	Sign_symptom:T47 
+T48	Sign_symptom 1044 1053	tightness
+E29	Sign_symptom:T48 
+T49	Biological_structure 1038 1043	chest
+T50	Detailed_description 1017 1027	occasional
+R20	MODIFY Arg1:T50 Arg2:E28	
+R21	MODIFY Arg1:T49 Arg2:E29	
+T51	Diagnostic_procedure 1073 1092	computed tomography
+E30	Diagnostic_procedure:T51 
+T52	Diagnostic_procedure 1094 1096	CT
+E31	Diagnostic_procedure:T52 
+T53	Biological_structure 1067 1072	chest
+T54	Detailed_description 1062 1066	thin
+R22	MODIFY Arg1:T53 Arg2:E30	
+R23	MODIFY Arg1:T54 Arg2:E30	
+R24	IDENTICAL Arg1:E31 Arg2:E30	
+T55	Date 1115 1128	July 15, 2015
+E32	Date:T55 
+T56	Sign_symptom 1173 1180	nodules
+E33	Sign_symptom:T56 
+T57	Biological_structure 1163 1172	pulmonary
+T58	Detailed_description 1154 1162	multiple
+R25	MODIFY Arg1:T57 Arg2:E33	
+R26	MODIFY Arg1:T58 Arg2:E33	
+T59	Sign_symptom 1224 1234	metastases
+E34	Sign_symptom:T59 
+A3	POLARITY E34 UNCERTAIN
+T60	Medication 1271 1283	chemotherapy
+E35	Medication:T60 
+A4	POLARITY E35 NEG
+T61	Diagnostic_procedure 1285 1300	Immunophenotype
+E36	Diagnostic_procedure:T61 
+T62	Sign_symptom 1335 1340	tumor
+E37	Sign_symptom:T62 
+T63	Detailed_description 1329 1334	CD34+
+T64	Detailed_description 1319 1324	CD31+
+R27	MODIFY Arg1:T63 Arg2:E37	
+R28	MODIFY Arg1:T64 Arg2:E37	
+T65	Coreference 1374 1379	cells
+E38	Coreference:T65 
+R29	IDENTICAL Arg1:E38 Arg2:E37	
+T66	Diagnostic_procedure 1403 1423	staining for VEGFR-2
+E39	Diagnostic_procedure:T66 
+T67	Lab_value 1387 1402	strong positive
+R30	MODIFY Arg1:T67 Arg2:E39	
+R31	MODIFY Arg1:E38 Arg2:E39	
+T68	Medication 1433 1441	Apatinib
+E40	Medication:T68 
+T69	Dosage 1472 1484	500 mg daily
+R32	MODIFY Arg1:T69 Arg2:E40	
+T70	Activity 3025 3032	driving
+E41	Activity:T70 
+T71	Date 1486 1504	Half a month later
+E42	Date:T71 
+T72	Sign_symptom 1510 1518	symptoms
+E43	Sign_symptom:T72 
+A5	POLARITY E43 NEG
+T73	Sign_symptom 1550 1564	wound necrosis
+E44	Sign_symptom:T73 
+T74	Detailed_description 1538 1549	progressive
+R33	MODIFY Arg1:T74 Arg2:E44	
+T75	Therapeutic_procedure 1577 1596	debridement surgery
+E45	Therapeutic_procedure:T75 
+T76	Therapeutic_procedure 1669 1677	resected
+E46	Therapeutic_procedure:T76 
+T77	Sign_symptom 1626 1634	enlarged
+E47	Sign_symptom:T77 
+T78	Biological_structure 1635 1645	lymph node
+R34	MODIFY Arg1:T78 Arg2:E47	
+T79	Biological_structure 1646 1664	near iliac vessels
+R35	MODIFY Arg1:T79 Arg2:T78	
+T80	Date 1681 1698	February 24, 2016
+E48	Date:T80 
+R36	MODIFY Arg1:T78 Arg2:E46	
+T81	Diagnostic_procedure 1730 1754	pathological examination
+E49	Diagnostic_procedure:T81 
+T82	Sign_symptom 1780 1791	hyperplasia
+E50	Sign_symptom:T82 
+T83	Detailed_description 1767 1779	inflammatory
+R37	MODIFY Arg1:T83 Arg2:E50	
+T84	Biological_structure 1792 1802	lymph node
+R38	MODIFY Arg1:T84 Arg2:E50	
+T85	Medication 1804 1812	Apatinib
+E51	Medication:T85 
+A6	POLARITY E51 NEG
+T86	Duration 1851 1858	3 weeks
+E52	Duration:T86 
+T87	Therapeutic_procedure 1862 1875	wound healing
+E53	Therapeutic_procedure:T87 
+T88	Diagnostic_procedure 1899 1901	CT
+E54	Diagnostic_procedure:T88 
+T89	Biological_structure 1893 1898	chest
+T90	Detailed_description 1888 1892	thin
+R39	MODIFY Arg1:T89 Arg2:E54	
+R40	MODIFY Arg1:T90 Arg2:E54	
+T91	Date 1916 1931	7 and 11 months
+E55	Date:T91 
+T92	Clinical_event 1982 1991	follow-up
+E56	Clinical_event:T92 
+T93	Date 1974 1981	7-month
+E57	Date:T93 
+T94	Lab_value 2658 2660	PR
+#2	AnnotatorNotes T94	partial response
+T95	Diagnostic_procedure 2581 2592	measurement
+E58	Diagnostic_procedure:T95 
+T96	Detailed_description 2574 2580	lesion
+R41	MODIFY Arg1:T96 Arg2:E58	
+T97	Diagnostic_procedure 2610 2629	RECIST 1.1 standard
+E59	Diagnostic_procedure:T97 
+R42	SUB_PROCEDURE Arg1:E59 Arg2:E58	
+R43	MODIFY Arg1:T94 Arg2:E59	
+T98	Disease_disorder 2715 2733	hand-foot syndrome
+E60	Disease_disorder:T98 
+T99	Severity 2710 2714	mild
+R44	MODIFY Arg1:T99 Arg2:E60	
+T100	Sign_symptom 2745 2764	high blood pressure
+E61	Sign_symptom:T100 
+T101	Severity 2738 2744	slight
+R45	MODIFY Arg1:T101 Arg2:E61	
+T102	Lab_value 2776 2819	well controlled after appropriate treatment
+R46	MODIFY Arg1:T102 Arg2:E60	
+R47	MODIFY Arg1:T102 Arg2:E61	
+T103	Sign_symptom 2831 2841	toxicities
+E62	Sign_symptom:T103 
+A7	POLARITY E62 NEG
+T104	Sign_symptom 2870 2884	adverse events
+E63	Sign_symptom:T104 
+A8	POLARITY E63 NEG
+T105	Severity 2824 2830	severe
+R48	MODIFY Arg1:T105 Arg2:E62	
+T106	Detailed_description 2852 2869	treatment-related
+R49	MODIFY Arg1:T106 Arg2:E63	
+T107	Medication 2929 2937	apatinib
+E64	Medication:T107 
+T108	Sign_symptom 2975 2988	toxic effects
+E65	Sign_symptom:T108 
+A9	POLARITY E65 NEG
+T109	Clinical_event 2994 3018	went back to normal life
+E66	Clinical_event:T109 
+T111	Detailed_description 3036 3049	automatic car
+#3	AnnotatorNotes T111	why is this relevant
+R51	MODIFY Arg1:T111 Arg2:E41	
+T112	Sign_symptom 2057 2064	lesions
+E67	Sign_symptom:T112 
+A10	POLARITY E67 NEG
+T113	Lab_value 2004 2025	2 out of 5 measurable
+T114	Lab_value 2030 2056	9 out of 17 non-measurable
+R52	MODIFY Arg1:T114 Arg2:E67	
+R53	MODIFY Arg1:T113 Arg2:E67	
+T115	Sign_symptom 2099 2105	nodule
+E68	Sign_symptom:T115 
+T116	Sign_symptom 2131 2138	lesions
+E69	Sign_symptom:T116 
+T117	Lab_value 2082 2098	1 new measurable
+R54	MODIFY Arg1:T117 Arg2:E68	
+T118	Lab_value 2110 2130	6 new non-measurable
+R55	MODIFY Arg1:T118 Arg2:E69	
+T119	Diagnostic_procedure 2209 2253	Response Evaluation Criteria in Solid Tumors
+E70	Diagnostic_procedure:T119 
+T120	Diagnostic_procedure 2255 2261	RECIST
+E71	Diagnostic_procedure:T120 
+R56	IDENTICAL Arg1:E71 Arg2:E70	
+T121	Detailed_description 2263 2266	1.1
+R57	MODIFY Arg1:T121 Arg2:E70	
+T122	Lab_value 2189 2191	PD
+R58	MODIFY Arg1:T122 Arg2:E70	
+T123	Clinical_event 2302 2311	follow-up
+E72	Clinical_event:T123 
+T124	Date 2293 2301	11-month
+E73	Date:T124 
+T125	Sign_symptom 2337 2344	lesions
+E74	Sign_symptom:T125 
+A11	POLARITY E74 NEG
+T126	Lab_value 2335 2336	9
+R59	MODIFY Arg1:T126 Arg2:E74	
+T127	Lab_value 2368 2387	1 measurable nodule
+R60	MODIFY Arg1:T127 Arg2:E74	
+T128	Lab_value 2392 2416	2 non-measurable lesions
+R61	MODIFY Arg1:T128 Arg2:E74	
+T129	Lab_value 2464 2489	6 non-measureable lesions
+R62	MODIFY Arg1:T129 Arg2:E74	
+R63	MODIFY Arg1:T5 Arg2:E2	
+*	OVERLAP E1 E2 E3
+R64	BEFORE Arg1:E3 Arg2:E4	
+*	OVERLAP E4 E7 E6 E8 E9 E5
+R65	BEFORE Arg1:E5 Arg2:E10	
+*	OVERLAP E10 E11 E12
+R66	BEFORE Arg1:E12 Arg2:E16	
+*	OVERLAP E16 E17
+R67	BEFORE Arg1:E17 Arg2:E18	
+*	OVERLAP E18 E19 E20
+R68	BEFORE Arg1:E20 Arg2:E21	
+*	OVERLAP E21 E22
+R69	BEFORE Arg1:E22 Arg2:E23	
+R70	BEFORE Arg1:E23 Arg2:E24	
+*	OVERLAP E24 E25 E26
+R71	BEFORE Arg1:E26 Arg2:E27	
+*	OVERLAP E27 E28 E29
+R72	BEFORE Arg1:E29 Arg2:E30	
+*	OVERLAP E30 E32 E33 E34 E35 E36 E37 E38 E39
+R73	BEFORE Arg1:E39 Arg2:E40	
+R74	BEFORE Arg1:E40 Arg2:E42	
+*	OVERLAP E42 E43 E44
+R75	BEFORE Arg1:E44 Arg2:E45	
+*	OVERLAP E45 E47 E46 E48 E49 E50
+R76	BEFORE Arg1:E50 Arg2:E51	
+*	OVERLAP E51 E52 E53
+R77	BEFORE Arg1:E53 Arg2:E54	
+*	OVERLAP E54 E55 E57 E56 E67 E68 E69 E70
+R78	BEFORE Arg1:E70 Arg2:E73	
+*	OVERLAP E73 E72 E74 E58 E60 E61 E62 E63
+R79	BEFORE Arg1:E63 Arg2:E64	
+*	OVERLAP E64 E65 E66 E41

@@ -1,0 +1,377 @@
+T1	Age 2 13	52-year-old
+T2	Sex 14 17	man
+T3	History 25 51	30-year history of smoking
+T4	Sign_symptom 79 85	nodule
+E1	Sign_symptom:T4 
+T5	Detailed_description 70 78	abnormal
+R1	MODIFY Arg1:T5 Arg2:E1	
+T6	Area 96 108	0.8 × 1.5 cm
+R2	MODIFY Arg1:T6 Arg2:E1	
+T7	Biological_structure 116 136	left upper lung lobe
+R3	MODIFY Arg1:T7 Arg2:E1	
+T8	Diagnostic_procedure 158 177	computed tomography
+E2	Diagnostic_procedure:T8 
+T9	Biological_structure 152 157	chest
+R4	MODIFY Arg1:T9 Arg2:E2	
+T10	Diagnostic_procedure 179 181	CT
+E3	Diagnostic_procedure:T10 
+R5	IDENTICAL Arg1:E3 Arg2:E2	
+T11	Date 195 205	March 2012
+E4	Date:T11 
+T12	Nonbiological_location 211 229	community hospital
+T13	Clinical_event 52 61	presented
+E5	Clinical_event:T13 
+R6	MODIFY Arg1:T12 Arg2:E5	
+T14	History 238 311	previously been well without any additional relevant or abnormal symptoms
+T15	Diagnostic_procedure 313 333	Physical examination
+E6	Diagnostic_procedure:T15 
+T16	Sign_symptom 359 372	abnormalities
+E7	Sign_symptom:T16 
+A1	POLARITY E7 NEG
+T17	Diagnostic_procedure 374 393	Laboratory findings
+E8	Diagnostic_procedure:T17 
+T18	Lab_value 399 418	within normal range
+R7	MODIFY Arg1:T18 Arg2:E8	
+T19	Diagnostic_procedure 433 457	carcinoembryonic antigen
+E9	Diagnostic_procedure:T19 
+T20	Diagnostic_procedure 459 462	CEA
+E10	Diagnostic_procedure:T20 
+R8	IDENTICAL Arg1:E10 Arg2:E9	
+R9	SUB_PROCEDURE Arg1:E9 Arg2:E8	
+T21	Lab_value 473 484	30.25 ng/mL
+R10	MODIFY Arg1:T21 Arg2:E9	
+T22	Biological_structure 524 529	serum
+R11	MODIFY Arg1:T22 Arg2:T21	
+T23	Diagnostic_procedure 547 575	positron emission tomography
+E11	Diagnostic_procedure:T23 
+T24	Diagnostic_procedure 577 580	PET
+E12	Diagnostic_procedure:T24 
+R12	IDENTICAL Arg1:E12 Arg2:E11	
+T25	Diagnostic_procedure 582 584	CT
+E13	Diagnostic_procedure:T25 
+T26	Sign_symptom 604 610	lesion
+E14	Sign_symptom:T26 
+T27	Biological_structure 599 603	lung
+R13	MODIFY Arg1:T27 Arg2:E14	
+T28	Diagnostic_procedure 618 643	standardized uptake value
+E15	Diagnostic_procedure:T28 
+T29	Lab_value 647 651	7.94
+R14	MODIFY Arg1:T29 Arg2:E15	
+R15	MODIFY Arg1:E14 Arg2:E15	
+T30	Disease_disorder 688 703	malignant tumor
+E16	Disease_disorder:T30 
+T31	Therapeutic_procedure 756 765	lobectomy
+E17	Therapeutic_procedure:T31 
+T32	Biological_structure 740 755	left upper lung
+R16	MODIFY Arg1:T32 Arg2:E17	
+T33	Therapeutic_procedure 770 791	lymph node dissection
+E18	Therapeutic_procedure:T33 
+T34	Diagnostic_procedure 807 831	pathological examination
+E19	Diagnostic_procedure:T34 
+T35	Disease_disorder 844 858	adenocarcinoma
+E20	Disease_disorder:T35 
+T36	Disease_disorder 860 863	ADC
+E21	Disease_disorder:T36 
+R17	IDENTICAL Arg1:E21 Arg2:E20	
+T37	Diagnostic_procedure 875 895	Immunohistochemistry
+E22	Diagnostic_procedure:T37 
+T38	Diagnostic_procedure 897 900	IHC
+E23	Diagnostic_procedure:T38 
+R18	IDENTICAL Arg1:E23 Arg2:E22	
+T39	Diagnostic_procedure 937 940	CK7
+E24	Diagnostic_procedure:T39 
+T40	Diagnostic_procedure 942 947	TTF-1
+E25	Diagnostic_procedure:T40 
+T41	Diagnostic_procedure 949 952	p63
+E26	Diagnostic_procedure:T41 
+T42	Diagnostic_procedure 958 965	NapsinA
+E27	Diagnostic_procedure:T42 
+T43	Diagnostic_procedure 983 989	CK 5/6
+E28	Diagnostic_procedure:T43 
+T44	Diagnostic_procedure 991 994	Syn
+E29	Diagnostic_procedure:T44 
+T45	Diagnostic_procedure 996 999	cgA
+E30	Diagnostic_procedure:T45 
+T46	Diagnostic_procedure 1005 1010	Ki-67
+E31	Diagnostic_procedure:T46 
+T47	Lab_value 970 978	negative
+R19	MODIFY Arg1:T47 Arg2:E28	
+R20	MODIFY Arg1:T47 Arg2:E29	
+R21	MODIFY Arg1:T47 Arg2:E30	
+R22	MODIFY Arg1:T47 Arg2:E31	
+T48	Lab_value 924 932	positive
+R23	MODIFY Arg1:T48 Arg2:E24	
+R24	MODIFY Arg1:T48 Arg2:E25	
+R25	MODIFY Arg1:T48 Arg2:E26	
+R26	SUB_PROCEDURE Arg1:E24 Arg2:E22	
+R27	SUB_PROCEDURE Arg1:E25 Arg2:E22	
+R28	SUB_PROCEDURE Arg1:E26 Arg2:E22	
+R29	SUB_PROCEDURE Arg1:E27 Arg2:E22	
+R30	SUB_PROCEDURE Arg1:E28 Arg2:E22	
+R31	SUB_PROCEDURE Arg1:E29 Arg2:E22	
+R32	SUB_PROCEDURE Arg1:E30 Arg2:E22	
+R33	SUB_PROCEDURE Arg1:E31 Arg2:E22	
+T49	Diagnostic_procedure 1026 1040	clinical stage
+E32	Diagnostic_procedure:T49 
+T50	Lab_value 1059 1062	IA2
+R34	MODIFY Arg1:T50 Arg2:E32	
+T51	Lab_value 1064 1072	pT1bN0M0
+R35	MODIFY Arg1:T51 Arg2:E32	
+T52	Coreference 1087 1092	tumor
+E33	Coreference:T52 
+R36	IDENTICAL Arg1:E33 Arg2:E14	
+T53	Medication 1150 1168	adjuvant treatment
+E34	Medication:T53 
+A2	POLARITY E34 NEG
+T54	Detailed_description 1109 1120	early stage
+R37	MODIFY Arg1:T54 Arg2:E33	
+T55	Therapeutic_procedure 1189 1198	monitored
+E35	Therapeutic_procedure:T55 
+T56	Clinical_event 1224 1230	visits
+E36	Clinical_event:T56 
+T57	Frequency 1231 1245	every 3 months
+R38	MODIFY Arg1:T57 Arg2:E36	
+T58	Nonbiological_location 1215 1223	hospital
+R39	MODIFY Arg1:T58 Arg2:E36	
+T59	Diagnostic_procedure 1261 1270	condition
+E37	Diagnostic_procedure:T59 
+T60	Lab_value 1280 1286	stable
+R40	MODIFY Arg1:T60 Arg2:E37	
+T61	Sign_symptom 1317 1321	pain
+E38	Sign_symptom:T61 
+T62	Biological_structure 1306 1316	left chest
+R41	MODIFY Arg1:T62 Arg2:E38	
+T63	Date 1325 1335	April 2015
+E39	Date:T63 
+T64	Clinical_event 1353 1364	transferred
+E40	Clinical_event:T64 
+T65	Nonbiological_location 1372 1380	hospital
+T66	Nonbiological_location 1384 1406	tertiary care hospital
+R42	MODIFY Arg1:T65 Arg2:E40	
+R43	MODIFY Arg1:T66 Arg2:E40	
+T67	Diagnostic_procedure 1431 1451	Physical examination
+E41	Diagnostic_procedure:T67 
+T68	Sign_symptom 1476 1488	tender point
+E42	Sign_symptom:T68 
+T69	Biological_structure 1496 1511	left chest wall
+R44	MODIFY Arg1:T69 Arg2:E42	
+T70	Severity 1464 1475	significant
+R45	MODIFY Arg1:T70 Arg2:E42	
+T71	Diagnostic_procedure 1513 1532	Laboratory findings
+E43	Diagnostic_procedure:T71 
+T72	Diagnostic_procedure 1594 1629	cytokeratin19 fragment antigen 21–1
+E44	Diagnostic_procedure:T72 
+T73	Diagnostic_procedure 1631 1640	CYFRA21–1
+E45	Diagnostic_procedure:T73 
+R46	IDENTICAL Arg1:E45 Arg2:E44	
+T74	Lab_value 1652 1663	17.45 ng/mL
+T75	Biological_structure 1671 1676	serum
+R47	MODIFY Arg1:T75 Arg2:T74	
+R48	MODIFY Arg1:T74 Arg2:E44	
+R49	SUB_PROCEDURE Arg1:E44 Arg2:E43	
+T76	Diagnostic_procedure 1707 1709	CT
+E46	Diagnostic_procedure:T76 
+T77	Diagnostic_procedure 1714 1717	PET
+E47	Diagnostic_procedure:T77 
+T78	Diagnostic_procedure 1718 1720	CT
+E48	Diagnostic_procedure:T78 
+T79	Sign_symptom 1751 1762	involvement
+E49	Sign_symptom:T79 
+T80	Severity 1743 1750	serious
+R50	MODIFY Arg1:T80 Arg2:E49	
+T81	Biological_structure 1766 1777	left pleura
+R51	MODIFY Arg1:T81 Arg2:E49	
+T82	Sign_symptom 1802 1809	lesions
+E50	Sign_symptom:T82 
+T83	Biological_structure 1797 1801	lung
+T84	Detailed_description 1787 1796	bilateral
+R52	MODIFY Arg1:T84 Arg2:E50	
+R53	MODIFY Arg1:T83 Arg2:E50	
+T85	Diagnostic_procedure 1845 1859	clinical stage
+E51	Diagnostic_procedure:T85 
+T86	Lab_value 1864 1872	upgraded
+T87	Lab_value 1876 1879	IVB
+R54	MODIFY Arg1:T86 Arg2:E51	
+R55	MODIFY Arg1:T87 Arg2:E51	
+T88	Therapeutic_procedure 1913 1921	puncture
+E52	Therapeutic_procedure:T88 
+T89	Biological_structure 1901 1912	left pleura
+T90	Detailed_description 1891 1900	CT-guided
+R56	MODIFY Arg1:T89 Arg2:E52	
+R57	MODIFY Arg1:T90 Arg2:E52	
+T91	Diagnostic_procedure 1936 1948	IHC analysis
+E53	Diagnostic_procedure:T91 
+T92	Diagnostic_procedure 1978 1981	p63
+E54	Diagnostic_procedure:T92 
+T93	Diagnostic_procedure 1983 1986	p40
+E55	Diagnostic_procedure:T93 
+T94	Diagnostic_procedure 1988 1992	CK 7
+E56	Diagnostic_procedure:T94 
+T95	Diagnostic_procedure 1998 2004	CK 5/6
+E57	Diagnostic_procedure:T95 
+T96	Diagnostic_procedure 2012 2017	TTF-1
+E58	Diagnostic_procedure:T96 
+T97	Diagnostic_procedure 2022 2029	NapsinA
+E59	Diagnostic_procedure:T97 
+T98	Disease_disorder 2078 2101	squamous cell carcinoma
+E60	Disease_disorder:T98 
+T99	Disease_disorder 2103 2106	SCC
+E61	Disease_disorder:T99 
+R58	IDENTICAL Arg1:E61 Arg2:E60	
+T100	Lab_value 1956 1964	positive
+R59	MODIFY Arg1:T100 Arg2:E54	
+R60	MODIFY Arg1:T100 Arg2:E55	
+R61	MODIFY Arg1:T100 Arg2:E56	
+R62	MODIFY Arg1:T100 Arg2:E57	
+T101	Lab_value 2044 2050	absent
+R63	MODIFY Arg1:T101 Arg2:E59	
+R64	MODIFY Arg1:T101 Arg2:E58	
+R65	SUB_PROCEDURE Arg1:E54 Arg2:E53	
+R66	SUB_PROCEDURE Arg1:E55 Arg2:E53	
+R67	SUB_PROCEDURE Arg1:E56 Arg2:E53	
+R68	SUB_PROCEDURE Arg1:E57 Arg2:E53	
+R69	SUB_PROCEDURE Arg1:E58 Arg2:E53	
+R70	SUB_PROCEDURE Arg1:E59 Arg2:E53	
+T102	Diagnostic_procedure 2129 2149	molecular evaluation
+E62	Diagnostic_procedure:T102 
+T103	Sign_symptom 2163 2177	L858R mutation
+E63	Sign_symptom:T103 
+T104	Sign_symptom 2195 2209	T790M mutation
+E64	Sign_symptom:T104 
+T105	Detailed_description 2213 2220	exon 20
+T106	Detailed_description 2181 2188	exon 21
+R71	MODIFY Arg1:T106 Arg2:E63	
+R72	MODIFY Arg1:T105 Arg2:E64	
+T107	Other_entity 2237 2437	Considering the pathology of the SCC was quite distinct compared with that of the originally resected NSCLC specimen, we retrospectively reassessed the surgery specimen to verify our primary diagnosis
+#1	AnnotatorNotes T107	Discussion
+T108	Other_entity 2439 2605	The morphologic and IHC results were in complete agreement with the initial diagnoses, but an L858R mutation was identified using the newly added molecular evaluation
+#2	AnnotatorNotes T108	Discussion
+T109	Therapeutic_procedure 2696 2736	three-dimensional conformal radiotherapy
+E65	Therapeutic_procedure:T109 
+T110	Therapeutic_procedure 2738 2744	3D-CRT
+E66	Therapeutic_procedure:T110 
+R73	IDENTICAL Arg1:E66 Arg2:E65	
+T111	Detailed_description 2685 2695	palliative
+R74	MODIFY Arg1:T111 Arg2:E65	
+T112	Dosage 2800 2818	42 Gy/14 fractions
+R75	MODIFY Arg1:T112 Arg2:E65	
+T113	Frequency 2824 2834	once daily
+T114	Dosage 2839 2846	5f/week
+R76	MODIFY Arg1:T113 Arg2:T112	
+R77	MODIFY Arg1:T114 Arg2:E65	
+T115	Sign_symptom 2760 2766	lesion
+E67	Sign_symptom:T115 
+T116	Biological_structure 2754 2759	chest
+R78	MODIFY Arg1:T116 Arg2:E67	
+T117	Medication 3510 3519	gefitinib
+E68	Medication:T117 
+T118	Dosage 3521 3530	150 mg qd
+R79	MODIFY Arg1:T118 Arg2:E68	
+T119	Date 3566 3584	from November 2015
+E69	Date:T119 
+T120	Medication 3615 3633	Ibandronate sodium
+E70	Medication:T120 
+T121	Frequency 3644 3651	monthly
+R80	MODIFY Arg1:T121 Arg2:E70	
+T122	Sign_symptom 3656 3679	skeletal-related events
+E71	Sign_symptom:T122 
+T123	Diagnostic_procedure 3730 3732	SD
+E72	Diagnostic_procedure:T123 
+T124	Diagnostic_procedure 3757 3759	PS
+E73	Diagnostic_procedure:T124 
+T125	Lab_value 3770 3771	0
+R81	MODIFY Arg1:T125 Arg2:E73	
+R82	MODIFY Arg1:T125 Arg2:E72	
+T126	Clinical_event 3706 3724	under surveillance
+E74	Clinical_event:T126 
+T127	Diagnostic_procedure 2860 2891	volume over radiation dose 5 Gy
+E75	Diagnostic_procedure:T127 
+T128	Lab_value 2945 2948	20%
+T129	Lab_value 2950 2952	0%
+T130	Lab_value 2958 2962	7.8%
+T131	Biological_structure 2911 2915	left
+T132	Biological_structure 2917 2922	right
+T133	Biological_structure 2928 2939	total lungs
+R83	MODIFY Arg1:T131 Arg2:T128	
+R84	MODIFY Arg1:T132 Arg2:T129	
+R85	MODIFY Arg1:T133 Arg2:T130	
+R86	MODIFY Arg1:T128 Arg2:E75	
+R87	MODIFY Arg1:T129 Arg2:E75	
+R88	MODIFY Arg1:T130 Arg2:E75	
+T134	Diagnostic_procedure 2982 3014	volume over radiation dose 20 Gy
+E76	Diagnostic_procedure:T134 
+T135	Lab_value 3033 3036	10%
+T136	Lab_value 3038 3040	0%
+T137	Lab_value 3046 3048	5%
+R89	MODIFY Arg1:T135 Arg2:E76	
+R90	MODIFY Arg1:T136 Arg2:E76	
+R91	MODIFY Arg1:T137 Arg2:E76	
+T138	Diagnostic_procedure 3068 3082	mean lung dose
+E77	Diagnostic_procedure:T138 
+T139	Lab_value 3093 3097	5 Gy
+R92	MODIFY Arg1:T139 Arg2:E77	
+T140	Diagnostic_procedure 3084 3087	MLD
+E78	Diagnostic_procedure:T140 
+R93	IDENTICAL Arg1:E78 Arg2:E77	
+T141	Medication 3178 3193	GP chemotherapy
+E79	Medication:T141 
+T142	Medication 3195 3204	cisplatin
+E80	Medication:T142 
+T143	Medication 3218 3229	gemcitabine
+E81	Medication:T143 
+T144	Dosage 3205 3216	75 mg/m2 d1
+T145	Dosage 3230 3247	1250 mg/m2 d1, d8
+R94	MODIFY Arg1:T144 Arg2:E80	
+R95	MODIFY Arg1:T145 Arg2:E81	
+T146	Lab_value 3277 3285	4 cycles
+R96	MODIFY Arg1:T146 Arg2:E79	
+R97	SUB_PROCEDURE Arg1:E80 Arg2:E79	
+R98	SUB_PROCEDURE Arg1:E81 Arg2:E79	
+T147	Detailed_description 3253 3271	21 days as a cycle
+R99	MODIFY Arg1:T147 Arg2:T146	
+T148	Sign_symptom 3320 3329	remission
+E82	Sign_symptom:T148 
+A3	POLARITY E82 MAYBE_POS
+T149	Detailed_description 3312 3319	partial
+R100	MODIFY Arg1:T149 Arg2:E82	
+T150	Date 3335 3349	after 2 cycles
+E83	Date:T150 
+T151	Disease_disorder 3363 3377	stable disease
+E84	Disease_disorder:T151 
+T152	Disease_disorder 3379 3381	SD
+E85	Disease_disorder:T152 
+R101	IDENTICAL Arg1:E85 Arg2:E84	
+T153	Date 3383 3397	after 4 cycles
+E86	Date:T153 
+T154	Diagnostic_procedure 3445 3489	response evaluation criteria in solid tumors
+E87	Diagnostic_procedure:T154 
+T155	Diagnostic_procedure 3491 3497	RECIST
+E88	Diagnostic_procedure:T155 
+R102	IDENTICAL Arg1:E88 Arg2:E87	
+T156	Detailed_description 3499 3502	1.1
+R103	MODIFY Arg1:T156 Arg2:E87	
+*	OVERLAP E5 E1 E2 E4 E6 E8 E11 E13 E14 E15 E16
+R104	BEFORE Arg1:E16 Arg2:E17	
+*	OVERLAP E17 E18
+R105	BEFORE Arg1:E18 Arg2:E19	
+*	OVERLAP E19 E20 E22 E32
+R106	BEFORE Arg1:E32 Arg2:E33	
+*	OVERLAP E33 E34 E35 E36
+R107	BEFORE Arg1:E36 Arg2:E37	
+R108	BEFORE Arg1:E37 Arg2:E38	
+*	OVERLAP E38 E39
+R109	BEFORE Arg1:E39 Arg2:E40	
+*	OVERLAP E40 E41 E42 E43 E46 E47 E48 E49 E50 E51
+R110	BEFORE Arg1:E51 Arg2:E52	
+R111	BEFORE Arg1:E52 Arg2:E53	
+*	OVERLAP E53 E60 E62 E63 E64
+R112	BEFORE Arg1:E64 Arg2:E65	
+*	OVERLAP E65 E67 E75 E76 E77 E79
+R113	BEFORE Arg1:E79 Arg2:E82	
+*	OVERLAP E82 E83
+R114	BEFORE Arg1:E83 Arg2:E84	
+*	OVERLAP E84 E86 E87
+R115	BEFORE Arg1:E87 Arg2:E68	
+*	OVERLAP E68 E69 E70 E71
+R116	BEFORE Arg1:E71 Arg2:E74	
+*	OVERLAP E74 E72 E73

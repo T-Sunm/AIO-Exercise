@@ -1,0 +1,257 @@
+T1	Age 0 13	A 49-year-old
+T2	Sex 14 17	man
+T3	History 24 53	no history of cardiac disease
+T4	Sign_symptom 82 89	dyspnea
+E1	Sign_symptom:T4 
+T5	Detailed_description 70 81	progressive
+R1	MODIFY Arg1:T5 Arg2:E1	
+T6	Duration 93 113	one month's duration
+E2	Duration:T6 
+T7	History 161 248	blunt chest trauma, the result of an accidental fall from scaffolding 15 months earlier
+T8	Disease_disorder 173 179	trauma
+E3	Disease_disorder:T8 
+T9	Biological_structure 167 172	chest
+T10	Detailed_description 161 166	blunt
+R2	MODIFY Arg1:T9 Arg2:E3	
+R3	MODIFY Arg1:T10 Arg2:E3	
+T11	Date 231 248	15 months earlier
+E4	Date:T11 
+T12	Activity 198 213	accidental fall
+E5	Activity:T12 
+R4	CAUSE Arg1:E5 Arg2:E3	
+T13	Sign_symptom 393 405	pneumothorax
+E6	Sign_symptom:T13 
+T14	Detailed_description 383 392	bilateral
+R5	MODIFY Arg1:T14 Arg2:E6	
+T15	Sign_symptom 430 438	hematoma
+E7	Sign_symptom:T15 
+T16	Biological_structure 407 429	right iliopsoas muscle
+R6	MODIFY Arg1:T16 Arg2:E7	
+T17	Sign_symptom 462 471	fractures
+E8	Sign_symptom:T17 
+T18	Biological_structure 449 461	right costal
+T19	Detailed_description 440 448	multiple
+R7	MODIFY Arg1:T18 Arg2:E8	
+R8	MODIFY Arg1:T19 Arg2:E8	
+T20	Sign_symptom 473 481	fracture
+E9	Sign_symptom:T20 
+T21	Biological_structure 489 506	L3 vertebral body
+R9	MODIFY Arg1:T21 Arg2:E9	
+T22	Biological_structure 515 533	transverse process
+R10	MODIFY Arg1:T22 Arg2:E9	
+T23	Sign_symptom 549 558	fractures
+E10	Sign_symptom:T23 
+T24	Biological_structure 566 580	right clavicle
+R11	MODIFY Arg1:T24 Arg2:E10	
+T25	Detailed_description 539 548	displaced
+R12	MODIFY Arg1:T25 Arg2:E10	
+T26	Clinical_event 587 602	hospitalization
+E11	Clinical_event:T26 
+T27	Duration 614 621	40 days
+E12	Duration:T27 
+T28	Sign_symptom 677 683	murmur
+E13	Sign_symptom:T28 
+A1	POLARITY E13 NEG
+T29	Diagnostic_procedure 699 717	cardiac evaluation
+E14	Diagnostic_procedure:T29 
+A2	POLARITY E14 NEG
+T30	Activity 743 760	normal activities
+E15	Activity:T30 
+T31	Date 761 774	4 weeks after
+E16	Date:T31 
+T32	Clinical_event 775 784	discharge
+E17	Clinical_event:T32 
+T33	Nonbiological_location 794 802	hospital
+R13	MODIFY Arg1:T33 Arg2:E17	
+T34	Sign_symptom 816 828	asymptomatic
+E18	Sign_symptom:T34 
+T35	Clinical_event 852 859	arrival
+E19	Clinical_event:T35 
+T36	Nonbiological_location 867 877	department
+R14	MODIFY Arg1:T36 Arg2:E19	
+T37	Diagnostic_procedure 879 891	auscultation
+E20	Diagnostic_procedure:T37 
+T38	Sign_symptom 911 916	rales
+E21	Sign_symptom:T38 
+T39	Sign_symptom 935 941	murmur
+E22	Sign_symptom:T39 
+T40	Detailed_description 923 934	pansystolic
+T41	Detailed_description 901 910	bibasilar
+R15	MODIFY Arg1:T40 Arg2:E22	
+R16	MODIFY Arg1:T41 Arg2:E21	
+T42	Diagnostic_procedure 949 960	radiography
+E23	Diagnostic_procedure:T42 
+T43	Biological_structure 943 948	Chest
+R17	MODIFY Arg1:T43 Arg2:E23	
+T44	Sign_symptom 978 988	congestion
+E24	Sign_symptom:T44 
+T45	Biological_structure 973 977	lung
+T46	Severity 968 972	mild
+R18	MODIFY Arg1:T45 Arg2:E24	
+R19	MODIFY Arg1:T46 Arg2:E24	
+T47	Diagnostic_procedure 1008 1024	echocardiography
+E25	Diagnostic_procedure:T47 
+T48	Biological_structure 994 1007	transthoracic
+R20	MODIFY Arg1:T48 Arg2:E25	
+T49	Sign_symptom 1093 1113	mitral regurgitation
+E26	Sign_symptom:T49 
+T50	Detailed_description 1083 1092	eccentric
+T51	Severity 1075 1081	severe
+R21	MODIFY Arg1:T50 Arg2:E26	
+R22	MODIFY Arg1:T51 Arg2:E26	
+T52	Detailed_description 1026 1064	limited by suboptimal acoustic windows
+R23	MODIFY Arg1:T52 Arg2:E25	
+T53	Sign_symptom 1226 1233	dilated
+E27	Sign_symptom:T53 
+T54	Biological_structure 1198 1209	left atrium
+T55	Severity 1219 1225	mildly
+R24	MODIFY Arg1:T55 Arg2:E27	
+R25	MODIFY Arg1:T54 Arg2:E27	
+T56	Sign_symptom 1169 1188	structurally normal
+E28	Sign_symptom:T56 
+T57	Biological_structure 1119 1127	valvular
+T58	Biological_structure 1132 1153	subvalvular apparatus
+R26	MODIFY Arg1:T58 Arg2:E28	
+R27	MODIFY Arg1:T57 Arg2:E28	
+T59	Medication 1276 1285	diuretics
+E29	Medication:T59 
+T60	Administration 1264 1275	intravenous
+R28	MODIFY Arg1:T60 Arg2:E29	
+T61	Sign_symptom 1296 1328	signs and symptoms of congestion
+E30	Sign_symptom:T61 
+A3	POLARITY E30 NEG
+T62	Diagnostic_procedure 1353 1364	angiography
+E31	Diagnostic_procedure:T62 
+T63	Biological_structure 1344 1352	Coronary
+R29	MODIFY Arg1:T63 Arg2:E31	
+T64	Disease_disorder 1400 1416	coronary disease
+E32	Disease_disorder:T64 
+A4	POLARITY E32 NEG
+T65	Therapeutic_procedure 1474 1493	mitral valve repair
+E33	Therapeutic_procedure:T65 
+T66	History 250 355	He had fallen approximately 8 feet and had landed on the right side of his back and on his right shoulder
+T67	Diagnostic_procedure 1537 1569	transesophageal echocardiography
+E34	Diagnostic_procedure:T67 
+T68	Diagnostic_procedure 1571 1574	TEE
+E35	Diagnostic_procedure:T68 
+R30	IDENTICAL Arg1:E35 Arg2:E34	
+T69	Detailed_description 1522 1536	intraoperative
+R31	MODIFY Arg1:T69 Arg2:E34	
+T70	Sign_symptom 1612 1634	mitral regurgitant jet
+E36	Sign_symptom:T70 
+T71	Sign_symptom 1648 1676	perivalvular regurgitant jet
+E37	Sign_symptom:T71 
+T72	Severity 1641 1647	severe
+T73	Severity 1596 1603	trivial
+T74	Detailed_description 1604 1611	central
+R32	MODIFY Arg1:T74 Arg2:E36	
+R33	MODIFY Arg1:T73 Arg2:E36	
+R34	MODIFY Arg1:T72 Arg2:E37	
+T75	Sign_symptom 1724 1747	fistulous communication
+E38	Sign_symptom:T75 
+T76	Biological_structure 1707 1723	ventriculoatrial
+T77	Biological_structure 1748 1769	behind the P1 scallop
+R35	MODIFY Arg1:T77 Arg2:E38	
+R36	MODIFY Arg1:T76 Arg2:E38	
+R37	CAUSE Arg1:E38 Arg2:E37	
+T78	Disease_disorder 1824 1842	structural disease
+E39	Disease_disorder:T78 
+A5	POLARITY E39 NEG
+T79	Biological_structure 1857 1872	mitral leaflets
+T80	Biological_structure 1876 1897	subvalvular apparatus
+R38	MODIFY Arg1:T79 Arg2:E39	
+R39	MODIFY Arg1:T80 Arg2:E39	
+T81	Therapeutic_procedure 1905 1922	surgical exposure
+E40	Therapeutic_procedure:T81 
+T82	Biological_structure 1930 1942	mitral valve
+R40	MODIFY Arg1:T82 Arg2:E40	
+T83	Sign_symptom 1952 1956	tear
+E41	Sign_symptom:T83 
+T84	Lab_value 1946 1951	small
+T85	Distance 1958 1972	length, 6–7 mm
+R41	MODIFY Arg1:T85 Arg2:E41	
+R42	MODIFY Arg1:T84 Arg2:E41	
+T86	Biological_structure 1988 2016	behind the posterior leaflet
+R43	MODIFY Arg1:T86 Arg2:E41	
+T87	Detailed_description 2023 2039	lateral position
+R44	MODIFY Arg1:T87 Arg2:E41	
+T88	Biological_structure 2060 2067	annulus
+T89	Biological_structure 2076 2092	left atrial wall
+R45	MODIFY Arg1:T88 Arg2:E41	
+R46	MODIFY Arg1:T89 Arg2:E41	
+T90	Sign_symptom 2188 2205	perivalvular leak
+E42	Sign_symptom:T90 
+T91	Sign_symptom 2117 2130	abnormalities
+E43	Sign_symptom:T91 
+A6	POLARITY E43 NEG
+T92	Sign_symptom 2134 2145	vegetations
+E44	Sign_symptom:T92 
+A7	POLARITY E44 NEG
+T93	Biological_structure 2109 2116	leaflet
+R47	MODIFY Arg1:T93 Arg2:E43	
+R48	MODIFY Arg1:T93 Arg2:E44	
+T94	Detailed_description 2160 2180	posttraumatic origin
+R49	MODIFY Arg1:T94 Arg2:E42	
+T95	Therapeutic_procedure 2207 2222	Valvular repair
+E45	Therapeutic_procedure:T95 
+T96	Therapeutic_procedure 2259 2265	suture
+E46	Therapeutic_procedure:T96 
+R50	SUB_PROCEDURE Arg1:E46 Arg2:E45	
+T97	Therapeutic_procedure 2395 2404	extubated
+E47	Therapeutic_procedure:T97 
+T98	Therapeutic_procedure 2426 2445	postsurgical course
+E48	Therapeutic_procedure:T98 
+T99	Lab_value 2450 2463	uncomplicated
+R51	MODIFY Arg1:T99 Arg2:E48	
+T100	Date 2465 2479	One year later
+E49	Date:T100 
+T101	Sign_symptom 2488 2500	asymptomatic
+E50	Sign_symptom:T101 
+T102	Clinical_event 2519 2528	follow-up
+E51	Clinical_event:T102 
+T103	Diagnostic_procedure 2543 2557	echocardiogram
+E52	Diagnostic_procedure:T103 
+T104	Biological_structure 2529 2542	transthoracic
+R52	MODIFY Arg1:T104 Arg2:E52	
+T105	Lab_value 2558 2588	confirmed the excellent result
+R53	MODIFY Arg1:T105 Arg2:E52	
+T106	Therapeutic_procedure 2301 2309	stitches
+E53	Therapeutic_procedure:T106 
+T107	Detailed_description 2289 2300	5-0 Prolene
+T108	Detailed_description 2283 2288	three
+R54	MODIFY Arg1:T107 Arg2:E53	
+R55	MODIFY Arg1:T108 Arg2:E53	
+R56	SUB_PROCEDURE Arg1:E53 Arg2:E46	
+T109	Therapeutic_procedure 2353 2377	mitral annuloplasty ring
+E54	Therapeutic_procedure:T109 
+R57	SUB_PROCEDURE Arg1:E54 Arg2:E45	
+T110	Distance 2347 2352	30-mm
+R58	MODIFY Arg1:T110 Arg2:E54	
+T111	Clinical_event 55 64	presented
+E55	Clinical_event:T111 
+R59	AFTER Arg1:E55 Arg2:E1	
+*	OVERLAP E1 E2
+R60	AFTER Arg1:E2 Arg2:E3	
+*	OVERLAP E3 E5 E4 E6 E7 E8 E9 E10 E11 E12 E13 E14
+R61	BEFORE Arg1:E14 Arg2:E15	
+*	OVERLAP E15 E16
+R62	AFTER Arg1:E16 Arg2:E17	
+R63	BEFORE Arg1:E17 Arg2:E18	
+T112	Duration 833 841	one year
+E56	Duration:T112 
+*	OVERLAP E18 E56
+R64	BEFORE Arg1:E56 Arg2:E19	
+*	OVERLAP E19 E20 E21 E22 E23 E24 E25 E26 E28 E27 E29
+R65	BEFORE Arg1:E29 Arg2:E30	
+*	OVERLAP E30 E31 E32 E57 E33
+T113	Clinical_event 1431 1438	planned
+E57	Clinical_event:T113 
+R66	BEFORE Arg1:E33 Arg2:E34	
+*	OVERLAP E34 E36 E37 E38 E39 E40 E41 E43 E44 E42
+R67	BEFORE Arg1:E42 Arg2:E45	
+R68	BEFORE Arg1:E45 Arg2:E47	
+R69	BEFORE Arg1:E47 Arg2:E48	
+R70	BEFORE Arg1:E48 Arg2:E49	
+*	OVERLAP E49 E50 E51 E52 E58
+T114	Outcome 2572 2588	excellent result
+E58	Outcome:T114 

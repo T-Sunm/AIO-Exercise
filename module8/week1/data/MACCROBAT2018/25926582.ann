@@ -1,0 +1,101 @@
+T1	Age 2 13	35-year-old
+T2	Sex 14 19	woman
+T3	Nonbiological_location 37 79	ear, nose and throat outpatient department
+T4	Sign_symptom 85 93	headache
+E1	Sign_symptom:T4 
+T5	Sign_symptom 136 145	epistaxis
+E2	Sign_symptom:T5 
+T6	Duration 150 157	2 years
+E3	Duration:T6 
+T7	Sign_symptom 100 130	blocked left-sided nasal canal
+E4	Sign_symptom:T7 
+T8	Clinical_event 20 29	presented
+E5	Clinical_event:T8 
+T9	Sign_symptom 194 205	amenorrhoea
+E6	Sign_symptom:T9 
+T10	History 184 227	secondary amenorrhoea for the past 19 years
+T11	Detailed_description 184 193	secondary
+R1	MODIFY Arg1:T11 Arg2:E6	
+T12	Duration 219 227	19 years
+E7	Duration:T12 
+R2	MODIFY Arg1:E7 Arg2:E6	
+T13	Sign_symptom 233 279	regression of secondary sexual characteristics
+E8	Sign_symptom:T13 
+T14	Sign_symptom 288 301	galactorrhoea
+E9	Sign_symptom:T14 
+A1	POLARITY E9 NEG
+T15	Diagnostic_procedure 303 311	Physical
+E10	Diagnostic_procedure:T15 
+T16	Diagnostic_procedure 316 345	ophthalmological examinations
+E11	Diagnostic_procedure:T16 
+T17	Lab_value 351 371	within normal limits
+R3	MODIFY Arg1:T17 Arg2:E11	
+R4	MODIFY Arg1:T17 Arg2:E10	
+T18	Diagnostic_procedure 373 390	Nasal examination
+E12	Diagnostic_procedure:T18 
+T19	Sign_symptom 421 425	mass
+E13	Sign_symptom:T19 
+T20	Biological_structure 413 420	choanal
+#1	AnnotatorNotes T20	rear of the nasal passage
+T21	Biological_structure 402 412	left-sided
+R5	MODIFY Arg1:T20 Arg2:E13	
+R6	MODIFY Arg1:T21 Arg2:E13	
+T22	Coreference 434 438	mass
+E14	Coreference:T22 
+R7	IDENTICAL Arg1:E14 Arg2:E13	
+T23	Detailed_description 443 464	bleeding on palpation
+R8	MODIFY Arg1:T23 Arg2:E14	
+T24	Diagnostic_procedure 466 473	imaging
+E15	Diagnostic_procedure:T24 
+A2	POLARITY E15 UNCERTAIN
+T25	Diagnostic_procedure 516 519	MRI
+E16	Diagnostic_procedure:T25 
+T26	Biological_structure 527 531	head
+R9	MODIFY Arg1:T26 Arg2:E16	
+T27	Sign_symptom 565 569	mass
+E17	Sign_symptom:T27 
+T28	Biological_structure 541 547	sellar
+#2	AnnotatorNotes T28	part of the sphenoid bone
+T29	Biological_structure 552 564	infra-sellar
+R10	MODIFY Arg1:T29 Arg2:E17	
+R11	MODIFY Arg1:T28 Arg2:E17	
+T30	Biological_structure 570 600	extending into the nasopharynx
+R12	MODIFY Arg1:T30 Arg2:E17	
+T31	Nonbiological_location 650 665	endocrinologist
+T32	Diagnostic_procedure 678 700	hormonal investigation
+E18	Diagnostic_procedure:T32 
+T33	Clinical_event 634 642	referred
+E19	Clinical_event:T33 
+T34	Diagnostic_procedure 706 721	serum prolactin
+E20	Diagnostic_procedure:T34 
+T35	Lab_value 726 735	very high
+T36	Lab_value 736 745	7443 µg/L
+R13	MODIFY Arg1:T35 Arg2:E20	
+R14	MODIFY Arg1:T36 Arg2:E20	
+T37	Diagnostic_procedure 754 778	Other pituitary hormones
+E21	Diagnostic_procedure:T37 
+T38	Lab_value 784 804	within normal limits
+R15	MODIFY Arg1:T38 Arg2:E21	
+T39	Disease_disorder 827 845	giant prolactinoma
+E22	Disease_disorder:T39 
+T40	Medication 886 897	cabergoline
+E23	Medication:T40 
+T41	Dosage 898 920	0.25 mg twice per week
+R16	MODIFY Arg1:T41 Arg2:E23	
+R17	MODIFY Arg1:T3 Arg2:E5	
+*	OVERLAP E5 E1 E4 E2
+R18	MODIFY Arg1:E3 Arg2:E2	
+R19	MODIFY Arg1:E3 Arg2:E4	
+R20	MODIFY Arg1:E3 Arg2:E1	
+R21	AFTER Arg1:E2 Arg2:E6	
+*	OVERLAP E6 E8 E9
+R22	BEFORE Arg1:E9 Arg2:E10	
+*	OVERLAP E10 E11 E12 E13 E15
+R23	BEFORE Arg1:E15 Arg2:E16	
+*	OVERLAP E16 E17
+R24	BEFORE Arg1:E17 Arg2:E19	
+R25	MODIFY Arg1:T31 Arg2:E19	
+*	OVERLAP E19 E18 E20 E21
+R26	BEFORE Arg1:E21 Arg2:E22	
+*	OVERLAP E22 E23
+T42	History 233 301	regression of secondary sexual characteristics with no galactorrhoea

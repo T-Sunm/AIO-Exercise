@@ -1,0 +1,213 @@
+T1	Age 18 29	68-year-old
+T2	Sex 30 35	woman
+T4	History 88 157	no history of gastroesophageal reflux disease or esophageal disorders
+T5	Sign_symptom 213 219	nodule
+E2	Sign_symptom:T5 
+T6	Biological_structure 203 212	pulmonary
+T7	Detailed_description 194 202	solitary
+T8	Detailed_description 182 193	progressive
+R1	MODIFY Arg1:T6 Arg2:E2	
+R2	MODIFY Arg1:T7 Arg2:E2	
+R3	MODIFY Arg1:T8 Arg2:E2	
+T9	Area 221 228	1×1.3cm
+R4	MODIFY Arg1:T9 Arg2:E2	
+T10	Therapeutic_procedure 251 260	resection
+E3	Therapeutic_procedure:T10 
+T11	Detailed_description 233 250	right lower wedge
+R5	MODIFY Arg1:T11 Arg2:E3	
+T12	Date 278 291	December 2011
+E4	Date:T12 
+T13	Nonbiological_location 300 339	University of Iowa pathology department
+T14	Coreference 355 360	tumor
+E5	Coreference:T14 
+R6	IDENTICAL Arg1:E5 Arg2:E2	
+T15	Disease_disorder 366 371	LCNEC
+E6	Disease_disorder:T15 
+#1	AnnotatorNotes E6	Large cell neuroendocrine carcinoma
+T16	Date 387 403	six months after
+E7	Date:T16 
+T17	Sign_symptom 465 474	dysphagia
+E8	Sign_symptom:T17 
+T18	Detailed_description 446 464	slowly progressing
+R7	MODIFY Arg1:T18 Arg2:E8	
+T19	Detailed_description 475 502	for both solids and liquids
+R8	MODIFY Arg1:T19 Arg2:E8	
+T20	Diagnostic_procedure 506 534	positron emission tomography
+E9	Diagnostic_procedure:T20 
+T21	Diagnostic_procedure 536 539	PET
+E10	Diagnostic_procedure:T21 
+R9	IDENTICAL Arg1:E10 Arg2:E9	
+T22	Date 559 563	2012
+E11	Date:T22 
+T23	Date 565 586	one year post surgery
+E12	Date:T23 
+T24	Lab_value 592 604	unremarkable
+R10	MODIFY Arg1:T24 Arg2:E9	
+T25	Diagnostic_procedure 642 661	computed tomography
+E13	Diagnostic_procedure:T25 
+T26	Diagnostic_procedure 663 665	CT
+E14	Diagnostic_procedure:T26 
+R11	IDENTICAL Arg1:E14 Arg2:E13	
+T27	Date 670 679	June 2013
+E15	Date:T27 
+T28	Date 681 703	18 months post surgery
+E16	Date:T28 
+T29	Sign_symptom 722 732	recurrence
+E17	Sign_symptom:T29 
+A1	POLARITY E17 NEG
+R12	MODIFY Arg1:E17 Arg2:E13	
+T30	Diagnostic_procedure 764 790	esophagogastroduodenoscopy
+E18	Diagnostic_procedure:T30 
+T31	Diagnostic_procedure 792 795	EGD
+E19	Diagnostic_procedure:T31 
+R13	IDENTICAL Arg1:E19 Arg2:E18	
+T32	Diagnostic_procedure 801 815	barium swallow
+E20	Diagnostic_procedure:T32 
+R14	SUB_PROCEDURE Arg1:E20 Arg2:E18	
+T33	Sign_symptom 833 842	stricture
+E21	Sign_symptom:T33 
+T34	Biological_structure 850 859	esophagus
+A2	POLARITY E21 NEG
+R15	MODIFY Arg1:T34 Arg2:E21	
+T35	Sign_symptom 864 871	failure
+E22	Sign_symptom:T35 
+T36	Biological_structure 875 914	primary and secondary peristaltic waves
+T37	Biological_structure 919 925	reflux
+R16	MODIFY Arg1:T36 Arg2:E22	
+R17	MODIFY Arg1:T37 Arg2:E22	
+T38	Date 930 939	July 2013
+E23	Date:T38 
+T39	Diagnostic_procedure 941 961	esophageal manometry
+E24	Diagnostic_procedure:T39 
+T40	Sign_symptom 968 975	failure
+E25	Sign_symptom:T40 
+T41	Detailed_description 983 1018	lower esophageal sphincter to relax
+T42	Diagnostic_procedure 1027 1044	residual pressure
+E26	Diagnostic_procedure:T42 
+T43	Lab_value 1048 1054	32mmHg
+R18	MODIFY Arg1:T43 Arg2:E26	
+R19	MODIFY Arg1:T41 Arg2:E25	
+R20	SUB_PROCEDURE Arg1:E26 Arg2:E24	
+R21	MODIFY Arg1:E25 Arg2:E24	
+T44	Medication 1085 1109	calcium channel blockers
+E27	Medication:T44 
+T45	Sign_symptom 1123 1129	relief
+E28	Sign_symptom:T45 
+A3	POLARITY E28 MAYBE_POS
+T46	Duration 1141 1161	up to 18 months post
+E29	Duration:T46 
+T47	Diagnostic_procedure 1215 1221	weight
+E30	Diagnostic_procedure:T47 
+T48	Lab_value 1202 1210	maintain
+R22	MODIFY Arg1:T48 Arg2:E30	
+T49	Diagnostic_procedure 1230 1257	basic laboratory parameters
+E31	Diagnostic_procedure:T49 
+T50	Diagnostic_procedure 1269 1279	hemoglobin
+E32	Diagnostic_procedure:T50 
+T51	Diagnostic_procedure 1281 1288	albumin
+E33	Diagnostic_procedure:T51 
+T52	Diagnostic_procedure 1293 1304	cholesterol
+E34	Diagnostic_procedure:T52 
+R23	SUB_PROCEDURE Arg1:E32 Arg2:E31	
+R24	SUB_PROCEDURE Arg1:E33 Arg2:E31	
+R25	SUB_PROCEDURE Arg1:E34 Arg2:E31	
+R26	MODIFY Arg1:T48 Arg2:E31	
+T53	Date 1325 1337	January 2014
+E35	Date:T53 
+T54	Sign_symptom 1362 1371	dysphagia
+E36	Sign_symptom:T54 
+A4	TREND E36 INC
+T55	Sign_symptom 1376 1387	weight loss
+E37	Sign_symptom:T55 
+T56	Lab_value 1391 1396	10lbs
+R27	MODIFY Arg1:T56 Arg2:E37	
+T57	Duration 1397 1423	over a period of one month
+E38	Duration:T57 
+T58	Clinical_event 1433 1441	referred
+E39	Clinical_event:T58 
+T59	Nonbiological_location 1449 1455	center
+R28	MODIFY Arg1:T59 Arg2:E39	
+T60	Disease_disorder 1485 1494	achalasia
+E40	Disease_disorder:T60 
+T61	Diagnostic_procedure 1505 1525	esophageal manometry
+E41	Diagnostic_procedure:T61 
+T62	Diagnostic_procedure 1545 1580	lower esophageal sphincter pressure
+E42	Diagnostic_procedure:T62 
+T63	Lab_value 1536 1544	elevated
+T64	Lab_value 1584 1590	50mmHg
+R29	MODIFY Arg1:T64 Arg2:E42	
+R30	MODIFY Arg1:T63 Arg2:E42	
+T65	Sign_symptom 1632 1644	contractions
+E43	Sign_symptom:T65 
+T66	Detailed_description 1616 1631	non-peristaltic
+T67	Detailed_description 1599 1614	non-propagative
+R31	MODIFY Arg1:T66 Arg2:E43	
+R32	MODIFY Arg1:T67 Arg2:E43	
+T68	Biological_structure 1660 1682	esophageal musculature
+R33	MODIFY Arg1:T68 Arg2:E43	
+T69	Diagnostic_procedure 1704 1707	EGD
+E44	Diagnostic_procedure:T69 
+T70	Therapeutic_procedure 1749 1767	pneumatic dilation
+E45	Therapeutic_procedure:T70 
+A5	POLARITY E45 UNCERTAIN
+T71	Sign_symptom 1821 1825	mass
+E46	Sign_symptom:T71 
+T72	Detailed_description 1811 1820	fungating
+T73	Detailed_description 1800 1809	ulcerated
+T74	Detailed_description 1777 1799	nearly circumferential
+R34	MODIFY Arg1:T72 Arg2:E46	
+R35	MODIFY Arg1:T73 Arg2:E46	
+R36	MODIFY Arg1:T74 Arg2:E46	
+T75	Biological_structure 1871 1896	gastroesophageal junction
+R37	MODIFY Arg1:T75 Arg2:E46	
+T76	Distance 1831 1849	approximately 36cm
+R38	MODIFY Arg1:T76 Arg2:E46	
+T77	Distance 1897 1904	at 39cm
+R39	MODIFY Arg1:T77 Arg2:T75	
+T78	Disease_disorder 1926 1931	LCNEC
+E47	Disease_disorder:T78 
+T79	Diagnostic_procedure 1906 1914	Biopsies
+E48	Diagnostic_procedure:T79 
+T80	Detailed_description 1937 1991	similar features to the primary tumor resected in 2011
+R40	MODIFY Arg1:T80 Arg2:E47	
+T81	Sign_symptom 2019 2029	metastasis
+E49	Sign_symptom:T81 
+T82	Diagnostic_procedure 2054 2061	CT scan
+E50	Diagnostic_procedure:T82 
+T83	Disease_disorder 2091 2109	metastatic disease
+E51	Disease_disorder:T83 
+T84	Detailed_description 2083 2090	diffuse
+T85	Detailed_description 2071 2082	progressive
+R41	MODIFY Arg1:T84 Arg2:E51	
+R42	MODIFY Arg1:T85 Arg2:E51	
+T86	Medication 2148 2160	chemotherapy
+E52	Medication:T86 
+T87	Detailed_description 2133 2144	two courses
+R43	MODIFY Arg1:T87 Arg2:E52	
+T88	Outcome 2165 2169	died
+E53	Outcome:T88 
+T89	Date 2187 2203	after six months
+E54	Date:T89 
+T3	History 41 78	chronic obstructive pulmonary disease
+R44	BEFORE Arg1:E2 Arg2:E3	
+*	OVERLAP E3 E4 E6
+R45	MODIFY Arg1:T13 Arg2:E6	
+R46	BEFORE Arg1:E6 Arg2:E7	
+*	OVERLAP E7 E8
+R47	BEFORE Arg1:E8 Arg2:E9	
+*	OVERLAP E9 E11 E12
+R48	BEFORE Arg1:E12 Arg2:E13	
+*	OVERLAP E13 E15 E16 E17 E18 E21 E22
+R49	BEFORE Arg1:E22 Arg2:E23	
+*	OVERLAP E23 E24 E27 E28
+R50	BEFORE Arg1:E28 Arg2:E29	
+*	OVERLAP E29 E30 E31
+R51	BEFORE Arg1:E31 Arg2:E35	
+*	OVERLAP E35 E36 E37 E38
+R52	BEFORE Arg1:E38 Arg2:E39	
+T90	Therapeutic_procedure 1468 1477	treatment
+E1	Therapeutic_procedure:T90 
+*	OVERLAP E39 E1 E40 E41 E42 E43 E44 E45 E46 E48 E47 E49 E50 E51
+R53	BEFORE Arg1:E51 Arg2:E52	
+R54	BEFORE Arg1:E52 Arg2:E53	
+*	OVERLAP E53 E54

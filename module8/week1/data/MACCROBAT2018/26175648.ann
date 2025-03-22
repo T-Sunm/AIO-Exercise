@@ -1,0 +1,423 @@
+T1	Date 3 13	March 2009
+E1	Date:T1 
+T2	Age 17 28	21-year-old
+T3	Sex 29 32	man
+T4	Activity 37 45	admitted
+E2	Activity:T4 
+T5	Nonbiological_location 49 68	another institution
+R1	MODIFY Arg1:T5 Arg2:E2	
+T6	Sign_symptom 99 104	fever
+E3	Sign_symptom:T6 
+T7	Frequency 86 98	intermittent
+R2	MODIFY Arg1:T7 Arg2:E3	
+T8	Sign_symptom 106 114	headache
+E4	Sign_symptom:T8 
+T9	Sign_symptom 116 131	polyarthralgias
+E5	Sign_symptom:T9 
+T10	Sign_symptom 138 142	rash
+E6	Sign_symptom:T10 
+T11	Biological_structure 133 137	skin
+T12	Biological_structure 152 157	trunk
+R3	MODIFY Arg1:T12 Arg2:E6	
+R4	MODIFY Arg1:T11 Arg2:E6	
+T13	Sign_symptom 163 172	petechiae
+E7	Sign_symptom:T13 
+T14	Sign_symptom 226 233	healthy
+E8	Sign_symptom:T14 
+T15	History 215 233	previously healthy
+T16	History 239 263	no history of drug abuse
+T17	History 274 295	no regular medication
+T18	History 309 316	no pets
+T19	History 321 346	had not traveled recently
+T20	Sign_symptom 446 451	fever
+E9	Sign_symptom:T20 
+T21	Severity 441 445	high
+R5	MODIFY Arg1:T21 Arg2:E9	
+T22	Diagnostic_procedure 463 491	maximum axillary temperature
+E10	Diagnostic_procedure:T22 
+T23	Quantitative_concept 493 499	>39 °C
+R6	MODIFY Arg1:T23 Arg2:E10	
+T24	Biological_structure 180 187	fingers
+T25	Biological_structure 192 197	palms
+R7	MODIFY Arg1:T24 Arg2:E7	
+R8	MODIFY Arg1:T25 Arg2:E7	
+T26	Sign_symptom 527 536	headaches
+E11	Sign_symptom:T26 
+T27	Date 395 411	one month before
+E12	Date:T27 
+T28	Activity 412 421	admission
+E13	Activity:T28 
+T29	Sign_symptom 562 572	arthralgia
+E14	Sign_symptom:T29 
+T30	Detailed_description 552 561	symmetric
+T31	Detailed_description 538 547	bilateral
+T32	Biological_structure 580 586	wrists
+T33	Biological_structure 591 596	hands
+R9	MODIFY Arg1:T32 Arg2:E14	
+R10	MODIFY Arg1:T33 Arg2:E14	
+R11	MODIFY Arg1:T30 Arg2:E14	
+R12	MODIFY Arg1:T31 Arg2:E14	
+T34	Date 3349 3365	Ten months after
+E15	Date:T34 
+T35	Activity 3389 3398	presented
+E16	Activity:T35 
+T36	Nonbiological_location 3406 3417	institution
+R13	MODIFY Arg1:T36 Arg2:E16	
+T37	Activity 3424 3439	follow-up visit
+E17	Activity:T37 
+T38	Activity 3106 3116	discharged
+E18	Activity:T38 
+T39	Nonbiological_location 3126 3134	hospital
+R14	MODIFY Arg1:T39 Arg2:E18	
+T40	Medication 3151 3161	prednisone
+E19	Medication:T40 
+T41	Sign_symptom 753 757	rash
+E20	Sign_symptom:T41 
+T42	Detailed_description 726 736	evanescent
+T43	Color 738 752	salmon-colored
+R15	MODIFY Arg1:T43 Arg2:E20	
+R16	MODIFY Arg1:T42 Arg2:E20	
+T44	Detailed_description 606 626	inflammatory pattern
+R17	MODIFY Arg1:T44 Arg2:E14	
+T45	Sign_symptom 629 638	petechiae
+E21	Sign_symptom:T45 
+T46	Biological_structure 648 653	palms
+R18	MODIFY Arg1:T46 Arg2:E21	
+T47	Biological_structure 658 665	fingers
+R19	MODIFY Arg1:T47 Arg2:E21	
+T48	Sign_symptom 682 686	rash
+E22	Sign_symptom:T48 
+T49	Color 667 681	salmon-colored
+R20	MODIFY Arg1:T49 Arg2:E22	
+T50	Biological_structure 694 699	trunk
+R21	MODIFY Arg1:T50 Arg2:E22	
+T51	Sign_symptom 701 707	nausea
+E23	Sign_symptom:T51 
+T52	Sign_symptom 713 721	vomiting
+E24	Sign_symptom:T52 
+T53	Biological_structure 778 783	chest
+T54	Biological_structure 788 795	abdomen
+R22	MODIFY Arg1:T53 Arg2:E20	
+R23	MODIFY Arg1:T54 Arg2:E20	
+T55	Distance 801 805	2-mm
+T56	Sign_symptom 806 815	petechiae
+E25	Sign_symptom:T56 
+R24	MODIFY Arg1:T55 Arg2:E25	
+T57	Biological_structure 828 833	palms
+T58	Biological_structure 842 849	fingers
+R25	MODIFY Arg1:T57 Arg2:E25	
+R26	MODIFY Arg1:T58 Arg2:E25	
+T59	Disease_disorder 870 879	arthritis
+E26	Disease_disorder:T59 
+A1	POLARITY E26 NEG
+T60	Sign_symptom 898 913	lymphadenopathy
+E27	Sign_symptom:T60 
+A2	POLARITY E27 NEG
+T61	Sign_symptom 917 935	hepatosplenomegaly
+E28	Sign_symptom:T61 
+A3	POLARITY E28 NEG
+T62	Diagnostic_procedure 937 950	Blood testing
+E29	Diagnostic_procedure:T62 
+T63	Diagnostic_procedure 967 987	inflammatory markers
+E30	Diagnostic_procedure:T63 
+T64	Qualitative_concept 958 966	elevated
+R27	MODIFY Arg1:T64 Arg2:E30	
+R28	SUB_PROCEDURE Arg1:E30 Arg2:E29	
+T65	Diagnostic_procedure 1004 1024	electrocardiographic
+E31	Diagnostic_procedure:T65 
+T66	Diagnostic_procedure 1026 1029	ECG
+E32	Diagnostic_procedure:T66 
+R29	IDENTICAL Arg1:E32 Arg2:E31	
+T67	Biological_structure 1035 1040	chest
+T68	Diagnostic_procedure 1041 1053	radiographic
+E33	Diagnostic_procedure:T68 
+R30	MODIFY Arg1:T67 Arg2:E33	
+T70	Medication 1075 1084	Ibuprofen
+E34	Medication:T70 
+T71	Dosage 1086 1096	1,200 mg/d
+T72	Medication 1102 1115	acetaminophen
+E35	Medication:T72 
+T73	Sign_symptom 1152 1163	symptomatic
+E36	Sign_symptom:T73 
+A4	POLARITY E36 MAYBE_NEG
+T74	Diagnostic_procedure 1185 1195	evaluation
+E37	Diagnostic_procedure:T74 
+T75	Diagnostic_procedure 1221 1235	blood cultures
+E38	Diagnostic_procedure:T75 
+T76	Diagnostic_procedure 1257 1274	serologic studies
+E39	Diagnostic_procedure:T76 
+T77	Detailed_description 1237 1256	viral and bacterial
+R33	MODIFY Arg1:T77 Arg2:E39	
+T78	Diagnostic_procedure 1276 1297	immunologic screening
+E40	Diagnostic_procedure:T78 
+T79	Diagnostic_procedure 1299 1316	rheumatoid factor
+E41	Diagnostic_procedure:T79 
+T80	Diagnostic_procedure 1321 1343	antinuclear antibodies
+E42	Diagnostic_procedure:T80 
+T81	Diagnostic_procedure 1350 1370	computed tomographic
+E43	Diagnostic_procedure:T81 
+T82	Diagnostic_procedure 1372 1374	CT
+E44	Diagnostic_procedure:T82 
+R34	IDENTICAL Arg1:E44 Arg2:E43	
+T83	Biological_structure 1391 1396	chest
+T84	Biological_structure 1398 1405	abdomen
+T85	Biological_structure 1407 1413	pelvis
+T86	Biological_structure 1419 1426	cranium
+R35	MODIFY Arg1:T83 Arg2:E43	
+R36	MODIFY Arg1:T84 Arg2:E43	
+R37	MODIFY Arg1:T85 Arg2:E43	
+R38	MODIFY Arg1:T86 Arg2:E43	
+T87	Diagnostic_procedure 1474 1502	transthoracic echocardiogram
+E45	Diagnostic_procedure:T87 
+T88	Diagnostic_procedure 1504 1507	TTE
+E46	Diagnostic_procedure:T88 
+R39	IDENTICAL Arg1:E46 Arg2:E45	
+T89	Sign_symptom 1538 1558	pericardial effusion
+E47	Sign_symptom:T89 
+T90	Severity 1533 1537	mild
+R40	MODIFY Arg1:T90 Arg2:E47	
+T91	Detailed_description 1516 1531	circumferential
+R41	MODIFY Arg1:T91 Arg2:E47	
+T92	Sign_symptom 1602 1611	tamponade
+E48	Sign_symptom:T92 
+A5	POLARITY E48 NEG
+T93	Diagnostic_procedure 1560 1576	maximal diameter
+E49	Diagnostic_procedure:T93 
+T94	Lab_value 1578 1582	8 mm
+E50	Lab_value:T94 
+R42	MODIFY Arg1:E50 Arg2:E49	
+T95	Sign_symptom 1684 1688	pain
+E51	Sign_symptom:T95 
+T96	Sign_symptom 1658 1665	dyspnea
+E52	Sign_symptom:T96 
+T97	Biological_structure 1678 1683	chest
+R43	MODIFY Arg1:T97 Arg2:E51	
+T98	Detailed_description 1670 1677	diffuse
+R44	MODIFY Arg1:T98 Arg2:E51	
+T99	Date 1640 1656	A few days later
+E53	Date:T99 
+T100	Sign_symptom 1704 1708	pain
+E54	Sign_symptom:T100 
+A6	POLARITY E54 NEG
+T101	Activity 1731 1742	anteflexion
+E55	Activity:T101 
+T102	Biological_structure 1725 1730	chest
+R45	MODIFY Arg1:T102 Arg2:E55	
+T103	Activity 1766 1777	inspiration
+E56	Activity:T103 
+T104	Detailed_description 1761 1765	deep
+R46	MODIFY Arg1:T104 Arg2:E56	
+T105	Activity 1785 1797	lying supine
+E57	Activity:T105 
+T106	Sign_symptom 1815 1826	hypotensive
+E58	Sign_symptom:T106 
+T107	Sign_symptom 1828 1839	tachycardic
+E59	Sign_symptom:T107 
+T108	Sign_symptom 1845 1855	hyperpneic
+E60	Sign_symptom:T108 
+T109	Sign_symptom 1890 1900	distention
+E61	Sign_symptom:T109 
+T110	Biological_structure 1875 1889	jugular venous
+R47	MODIFY Arg1:T110 Arg2:E61	
+T111	Diagnostic_procedure 1906 1909	ECG
+E62	Diagnostic_procedure:T111 
+T112	Sign_symptom 1947 1967	ST-segment elevation
+E63	Sign_symptom:T112 
+T113	Sign_symptom 1923 1934	tachycardia
+E64	Sign_symptom:T113 
+T114	Detailed_description 1917 1922	sinus
+R48	MODIFY Arg1:T114 Arg2:E64	
+T115	Detailed_description 1939 1946	diffuse
+R49	MODIFY Arg1:T115 Arg2:E63	
+T116	Diagnostic_procedure 1987 1997	radiograph
+E65	Diagnostic_procedure:T116 
+T117	Biological_structure 1981 1986	chest
+R50	MODIFY Arg1:T117 Arg2:E65	
+T118	Sign_symptom 2010 2018	enlarged
+E66	Sign_symptom:T118 
+T119	Biological_structure 2019 2026	cardiac
+R51	MODIFY Arg1:T119 Arg2:E66	
+T120	Diagnostic_procedure 2055 2075	inflammatory markers
+E67	Diagnostic_procedure:T120 
+T121	Lab_value 2087 2095	elevated
+E68	Lab_value:T121 
+R52	MODIFY Arg1:E68 Arg2:E67	
+T122	Diagnostic_procedure 2117 2120	TTE
+E69	Diagnostic_procedure:T122 
+T123	Sign_symptom 2147 2167	pericardial effusion
+E70	Sign_symptom:T123 
+A7	TREND E70 INC
+T124	Distance 2187 2192	12 mm
+R53	MODIFY Arg1:T124 Arg2:E70	
+T125	Sign_symptom 2206 2214	collapse
+E71	Sign_symptom:T125 
+T126	Biological_structure 2222 2242	right heart chambers
+R54	MODIFY Arg1:T126 Arg2:E71	
+T127	Therapeutic_procedure 2254 2272	pericardiocentesis
+E72	Therapeutic_procedure:T127 
+T128	Detailed_description 2244 2253	Emergency
+R55	MODIFY Arg1:T128 Arg2:E72	
+T129	Sign_symptom 2290 2311	serosanguineous fluid
+E73	Sign_symptom:T129 
+T130	Volume 2281 2286	60 mL
+R56	MODIFY Arg1:T130 Arg2:E73	
+T131	Diagnostic_procedure 2328 2330	CT
+E74	Diagnostic_procedure:T131 
+T132	Biological_structure 2338 2343	chest
+T133	Biological_structure 2348 2355	abdomen
+T134	Sign_symptom 2392 2408	pleural effusion
+E75	Sign_symptom:T134 
+T135	Sign_symptom 2426 2433	ascites
+E76	Sign_symptom:T135 
+T136	Severity 2421 2425	mild
+R57	MODIFY Arg1:T136 Arg2:E76	
+T137	Severity 2365 2369	mild
+T138	Detailed_description 2370 2375	right
+T139	Severity 2380 2386	severe
+T140	Detailed_description 2387 2391	left
+R58	MODIFY Arg1:T140 Arg2:E75	
+R59	MODIFY Arg1:T138 Arg2:E75	
+R60	MODIFY Arg1:T139 Arg2:T140	
+R61	MODIFY Arg1:T137 Arg2:T138	
+T141	Therapeutic_procedure 2435 2450	Thoracocentesis
+E77	Therapeutic_procedure:T141 
+T142	Sign_symptom 2494 2523	serosanguineous pleural fluid
+E78	Sign_symptom:T142 
+T143	Volume 2484 2490	350 mL
+R62	MODIFY Arg1:T143 Arg2:E78	
+T144	Diagnostic_procedure 2600 2625	microbiologic examination
+E79	Diagnostic_procedure:T144 
+T145	Lab_value 2591 2599	negative
+E80	Lab_value:T145 
+R63	MODIFY Arg1:E80 Arg2:E79	
+T146	Diagnostic_procedure 2653 2672	histologic analysis
+E81	Diagnostic_procedure:T146 
+T147	Lab_value 2635 2647	unremarkable
+E82	Lab_value:T147 
+R64	MODIFY Arg1:E82 Arg2:E81	
+T148	Detailed_description 2557 2563	fluids
+T149	Biological_structure 2552 2556	lung
+T150	Biological_structure 2542 2547	heart
+R65	MODIFY Arg1:T149 Arg2:T148	
+R66	MODIFY Arg1:T150 Arg2:T148	
+R67	MODIFY Arg1:T148 Arg2:E79	
+R68	MODIFY Arg1:T148 Arg2:E81	
+T151	Disease_disorder 2691 2695	AOSD
+E83	Disease_disorder:T151 
+#1	AnnotatorNotes E83	Adult-onset Still's disease
+T152	Detailed_description 428 440	intermittent
+R69	MODIFY Arg1:T152 Arg2:E9	
+T153	Medication 2733 2742	medicated
+E84	Medication:T153 
+T154	Medication 2748 2758	prednisone
+E85	Medication:T154 
+T155	Dosage 2760 2771	0.5 mg/kg/d
+R70	MODIFY Arg1:T155 Arg2:E85	
+T156	Sign_symptom 2809 2820	improvement
+E86	Sign_symptom:T156 
+T157	Sign_symptom 2848 2872	ST-segment normalization
+E87	Sign_symptom:T157 
+T158	Diagnostic_procedure 2892 2906	echocardiogram
+E88	Diagnostic_procedure:T158 
+T159	Severity 2919 2923	mild
+T160	Sign_symptom 2924 2944	pericardial effusion
+E89	Sign_symptom:T160 
+R71	MODIFY Arg1:T159 Arg2:E89	
+T161	Distance 2946 2952	2–3 mm
+R72	MODIFY Arg1:T161 Arg2:E89	
+T162	Disease_disorder 2963 2985	hemodynamic compromise
+E90	Disease_disorder:T162 
+A8	POLARITY E90 NEG
+T163	Diagnostic_procedure 2987 2996	Screening
+E91	Diagnostic_procedure:T163 
+T164	Disease_disorder 3027 3036	disorders
+E92	Disease_disorder:T164 
+A9	POLARITY E92 NEG
+T165	Detailed_description 3016 3026	infectious
+T166	Detailed_description 3001 3011	autoimmune
+R73	MODIFY Arg1:T165 Arg2:E92	
+R74	MODIFY Arg1:T166 Arg2:E92	
+T167	Sign_symptom 3213 3221	effusion
+E93	Sign_symptom:T167 
+T168	Detailed_description 3205 3212	pleural
+T169	Detailed_description 3189 3200	pericardial
+R75	MODIFY Arg1:T168 Arg2:E93	
+R76	MODIFY Arg1:T169 Arg2:E93	
+T170	Date 3222 3236	2 months after
+E94	Date:T170 
+T171	Clinical_event 3237 3246	discharge
+E95	Clinical_event:T171 
+T172	Medication 3254 3268	corticosteroid
+E96	Medication:T172 
+A10	POLARITY E96 NEG
+T173	Medication 3329 3339	prednisone
+E97	Medication:T173 
+T174	Outcome 3448 3460	asymptomatic
+E98	Outcome:T174 
+T175	Medication 3483 3497	corticosteroid
+E99	Medication:T175 
+T176	Diagnostic_procedure 3517 3520	ECG
+E100	Diagnostic_procedure:T176 
+T177	Diagnostic_procedure 3525 3528	TTE
+E101	Diagnostic_procedure:T177 
+T178	Lab_value 3536 3558	no significant changes
+E102	Lab_value:T178 
+T179	Lab_value 3055 3077	no significant changes
+E103	Lab_value:T179 
+R77	MODIFY Arg1:E103 Arg2:E91	
+R78	MODIFY Arg1:E102 Arg2:E101	
+R79	MODIFY Arg1:E102 Arg2:E100	
+*	OVERLAP E1 E2 E3 E4 E5 E6 E7
+R80	AFTER Arg1:E7 Arg2:E8	
+R81	BEFORE Arg1:E8 Arg2:E12	
+R82	BEFORE Arg1:E12 Arg2:E13	
+R83	AFTER Arg1:E13 Arg2:E9	
+*	OVERLAP E9 E10 E11 E14 E21 E22 E23 E24 E20 E25 E26 E27 E28
+R84	BEFORE Arg1:E28 Arg2:E29	
+*	OVERLAP E29 E31 E33
+T69	Lab_value 1067 1073	normal
+E104	Lab_value:T69 
+R31	MODIFY Arg1:E104 Arg2:E33	
+R32	MODIFY Arg1:E104 Arg2:E31	
+R85	BEFORE Arg1:E33 Arg2:E34	
+R86	MODIFY Arg1:T71 Arg2:E34	
+T180	Dosage 1117 1126	as needed
+R87	MODIFY Arg1:T180 Arg2:E35	
+*	OVERLAP E34 E35
+R88	BEFORE Arg1:E35 Arg2:E36	
+*	OVERLAP E36 E37 E38 E39 E40 E43 E45 E47 E49 E48
+R89	SUB_PROCEDURE Arg1:E41 Arg2:E40	
+R90	SUB_PROCEDURE Arg1:E42 Arg2:E40	
+T181	Lab_value 1428 1450	No significant changes
+E105	Lab_value:T181 
+R91	MODIFY Arg1:E105 Arg2:E37	
+R92	BEFORE Arg1:E48 Arg2:E53	
+*	OVERLAP E53 E52 E51
+R93	BEFORE Arg1:E51 Arg2:E54	
+*	OVERLAP E54 E55 E106 E56 E57 E58 E59 E60 E61 E62 E64 E63 E65 E66 E67 E69 E70 E71
+T182	Therapeutic_procedure 1731 1742	anteflexion
+E106	Therapeutic_procedure:T182 
+R94	BEFORE Arg1:E71 Arg2:E72	
+*	OVERLAP E72 E73 E74 E75 E76
+R95	MODIFY Arg1:T132 Arg2:E74	
+R96	MODIFY Arg1:T133 Arg2:E74	
+R97	BEFORE Arg1:E76 Arg2:E77	
+*	OVERLAP E77 E78 E79 E81
+R98	BEFORE Arg1:E81 Arg2:E83	
+*	OVERLAP E83 E84
+R99	SUB_PROCEDURE Arg1:E85 Arg2:E84	
+R100	BEFORE Arg1:E84 Arg2:E86	
+T183	Detailed_description 2798 2808	laboratory
+T184	Detailed_description 2785 2793	clinical
+R101	MODIFY Arg1:T184 Arg2:E86	
+R102	MODIFY Arg1:T183 Arg2:E86	
+*	OVERLAP E86 E87 E88 E89 E90 E91 E92
+R103	BEFORE Arg1:E92 Arg2:E18	
+*	OVERLAP E18 E19
+R104	BEFORE Arg1:E19 Arg2:E93	
+*	OVERLAP E93 E94
+R105	AFTER Arg1:E94 Arg2:E95	
+*	OVERLAP E95 E96
+R106	BEFORE Arg1:E96 Arg2:E97	
+R107	BEFORE Arg1:E97 Arg2:E15	
+*	OVERLAP E15 E16 E17 E98 E99 E100 E101

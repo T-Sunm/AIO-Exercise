@@ -1,0 +1,346 @@
+T1	Age 2 13	23 year old
+T2	Personal_background 14 19	white
+T3	Sex 20 24	male
+T4	History 32 65	4 year history of Crohn's disease
+T5	Disease_disorder 50 65	Crohn's disease
+E1	Disease_disorder:T5 
+T6	Duration 32 38	4 year
+E2	Duration:T6 
+T7	Sign_symptom 109 116	malaise
+E3	Sign_symptom:T7 
+#1	AnnotatorNotes E3	Note that this isn't clinical history as it's the beginning of the story here.
+T8	Sign_symptom 118 123	fever
+E4	Sign_symptom:T8 
+T9	Sign_symptom 135 139	pain
+E5	Sign_symptom:T9 
+T10	Biological_structure 125 134	abdominal
+R1	MODIFY Arg1:T10 Arg2:E5	
+T11	Sign_symptom 141 149	vomiting
+E6	Sign_symptom:T11 
+T12	Biological_structure 154 160	stomal
+#2	AnnotatorNotes T12	The patient presumably has a colostomy or ileostomy
+T13	Sign_symptom 161 170	diarrhoea
+E7	Sign_symptom:T13 
+R2	MODIFY Arg1:T12 Arg2:E7	
+T14	Duration 90 97	two day
+E8	Duration:T14 
+R3	MODIFY Arg1:E2 Arg2:E1	
+R4	MODIFY Arg1:E8 Arg2:E3	
+R5	MODIFY Arg1:E8 Arg2:E4	
+R6	MODIFY Arg1:E8 Arg2:E5	
+R7	MODIFY Arg1:E8 Arg2:E6	
+R8	MODIFY Arg1:E8 Arg2:E7	
+T15	Sign_symptom 195 200	pains
+E9	Sign_symptom:T15 
+T16	Biological_structure 189 194	joint
+R9	MODIFY Arg1:T16 Arg2:E9	
+T17	Biological_structure 215 224	shoulders
+T18	Biological_structure 226 232	elbows
+T19	Biological_structure 234 240	wrists
+T20	Biological_structure 242 262	metacarpophalangeals
+T21	Biological_structure 264 269	knees
+T22	Biological_structure 274 280	ankles
+R10	MODIFY Arg1:T17 Arg2:E9	
+R11	MODIFY Arg1:T18 Arg2:E9	
+R12	MODIFY Arg1:T19 Arg2:E9	
+R13	MODIFY Arg1:T20 Arg2:E9	
+R14	MODIFY Arg1:T21 Arg2:E9	
+R15	MODIFY Arg1:T22 Arg2:E9	
+T23	Sign_symptom 299 303	rash
+E10	Sign_symptom:T23 
+T24	Biological_structure 311 317	elbows
+R16	MODIFY Arg1:T24 Arg2:E10	
+T25	Biological_structure 319 325	ankles
+T26	Biological_structure 330 334	feet
+R17	MODIFY Arg1:T25 Arg2:E10	
+R18	MODIFY Arg1:T26 Arg2:E10	
+T27	Sign_symptom 364 371	macules
+E11	Sign_symptom:T27 
+T28	Detailed_description 351 363	erythematous
+R19	MODIFY Arg1:T28 Arg2:E11	
+T29	Sign_symptom 403 410	lesions
+E12	Sign_symptom:T29 
+T30	Sign_symptom 423 431	crusting
+E13	Sign_symptom:T30 
+T31	Detailed_description 387 402	vesico-pustular
+R20	MODIFY Arg1:T31 Arg2:E12	
+T32	History 443 472	no history of sexual exposure
+T33	Sign_symptom 493 502	infection
+E14	Sign_symptom:T33 
+A1	POLARITY E14 NEG
+T34	Medication 514 535	no regular medication
+E15	Medication:T34 
+A2	POLARITY E15 NEG
+T35	Medication 558 565	Pentasa
+E16	Medication:T35 
+#3	AnnotatorNotes E16	Nonsteroidal anti-Inflammatory drug
+T36	Date 566 582	4 months earlier
+E17	Date:T36 
+T37	Date 584 601	One month earlier
+E18	Date:T37 
+T38	Therapeutic_procedure 621 631	laparotomy
+E19	Therapeutic_procedure:T38 
+T39	Sign_symptom 667 674	fistula
+E20	Sign_symptom:T39 
+T40	Detailed_description 652 666	ileo-cutaneous
+T41	Detailed_description 644 651	complex
+R21	MODIFY Arg1:T40 Arg2:E20	
+R22	MODIFY Arg1:T41 Arg2:E20	
+T42	Detailed_description 680 692	blind tracts
+R23	MODIFY Arg1:T42 Arg2:E20	
+T43	Date 698 715	two weeks earlier
+E21	Date:T43 
+T44	Therapeutic_procedure 732 741	ileostomy
+E22	Therapeutic_procedure:T44 
+T45	Detailed_description 718 731	defunctioning
+R24	MODIFY Arg1:T45 Arg2:E22	
+T46	Sign_symptom 791 795	pain
+E23	Sign_symptom:T46 
+T47	Biological_structure 781 790	abdominal
+R25	MODIFY Arg1:T47 Arg2:E23	
+T48	Detailed_description 770 780	persistent
+R26	MODIFY Arg1:T48 Arg2:E23	
+T50	Biological_structure 801 810	cutaneous
+T51	Duration 819 846	had been present for a year
+E24	Duration:T51 
+T52	Duration 923 951	of at least 2 years duration
+E25	Duration:T52 
+T53	Sign_symptom 915 922	fistula
+E26	Sign_symptom:T53 
+T54	Sign_symptom 889 898	stricture
+E27	Sign_symptom:T54 
+T55	Biological_structure 883 888	ileal
+T56	Detailed_description 874 882	terminal
+R28	MODIFY Arg1:T55 Arg2:E27	
+R29	MODIFY Arg1:T56 Arg2:E27	
+T57	Biological_structure 903 914	ileo-rectal
+R30	MODIFY Arg1:T57 Arg2:E26	
+T58	Coreference 957 970	bowel disease
+E28	Coreference:T58 
+R31	IDENTICAL Arg1:E28 Arg2:E1	
+T59	Medication 1027 1039	azathioprine
+E29	Medication:T59 
+T60	Medication 1041 1057	corticosteroiods
+E30	Medication:T60 
+T61	Medication 1081 1091	Infliximab
+E31	Medication:T61 
+T62	Date 1092 1106	a year earlier
+E32	Date:T62 
+T63	Dosage 1062 1077	three infusions
+R32	MODIFY Arg1:T63 Arg2:E31	
+T64	Sign_symptom 1123 1157	no extra-intestinal manifestations
+E33	Sign_symptom:T64 
+A3	POLARITY E33 NEG
+T65	Clinical_event 1162 1171	admission
+E34	Clinical_event:T65 
+T66	Nonbiological_location 1179 1187	hospital
+T67	Sign_symptom 1196 1200	thin
+E35	Sign_symptom:T67 
+T68	Sign_symptom 1202 1210	afebrile
+E36	Sign_symptom:T68 
+T69	Sign_symptom 1226 1237	tachycardia
+E37	Sign_symptom:T69 
+T70	Detailed_description 1218 1225	resting
+R33	MODIFY Arg1:T70 Arg2:E37	
+T71	Lab_value 1241 1251	125/minute
+R34	MODIFY Arg1:T71 Arg2:E37	
+#4	AnnotatorNotes T71	Actually a heart rate, implied by "tachycardia"
+T72	Diagnostic_procedure 1269 1299	cardio-respiratory examination
+E38	Diagnostic_procedure:T72 
+T74	Biological_structure 1316 1323	abdomen
+T75	Sign_symptom 1338 1344	tender
+E40	Sign_symptom:T75 
+T76	Severity 1328 1337	minimally
+R35	MODIFY Arg1:T76 Arg2:E40	
+T77	Biological_structure 1356 1365	ileostomy
+R36	MODIFY Arg1:T77 Arg2:E40	
+T80	Diagnostic_procedure 1406 1429	Examination of the skin
+E43	Diagnostic_procedure:T80 
+T81	Sign_symptom 1444 1452	pustules
+E44	Sign_symptom:T81 
+T82	Sign_symptom 1457 1463	crusts
+E45	Sign_symptom:T82 
+T83	Biological_structure 1475 1481	elbows
+T84	Biological_structure 1483 1489	ankles
+T85	Biological_structure 1494 1498	feet
+T86	Sign_symptom 1570 1579	synovitis
+E46	Sign_symptom:T86 
+T87	Biological_structure 1587 1593	wrists
+T88	Other_event 1515 1540	The buttocks were spared.
+E47	Other_event:T88 
+#5	AnnotatorNotes E47	Kind of a strange way to say that
+T89	Biological_structure 1595 1619	proximal interphalangeal
+T90	Biological_structure 1624 1643	metacarpophalangeal
+T91	Biological_structure 1644 1650	joints
+R39	MODIFY Arg1:T90 Arg2:T91	
+R40	MODIFY Arg1:T89 Arg2:T91	
+T92	Biological_structure 1661 1672	both ankles
+R41	MODIFY Arg1:T87 Arg2:E46	
+R42	MODIFY Arg1:T91 Arg2:E46	
+R43	MODIFY Arg1:T92 Arg2:E46	
+T93	Diagnostic_procedure 1689 1705	laboratory tests
+E48	Diagnostic_procedure:T93 
+T94	Diagnostic_procedure 1715 1726	haemoglobin
+E49	Diagnostic_procedure:T94 
+T95	Diagnostic_procedure 1742 1759	white blood count
+E50	Diagnostic_procedure:T95 
+T96	Diagnostic_procedure 1774 1783	platelets
+E51	Diagnostic_procedure:T96 
+T97	Diagnostic_procedure 1797 1816	C- reactive protein
+E52	Diagnostic_procedure:T97 
+T98	Diagnostic_procedure 1831 1861	erythrocyte sedimentation rate
+E53	Diagnostic_procedure:T98 
+T99	Lab_value 1730 1740	13.1 gm/dl
+T100	Lab_value 1760 1772	15.8 × 109/L
+T101	Lab_value 1784 1795	585 × 109/L
+T102	Lab_value 1817 1826	37.7 mg/L
+T103	Lab_value 1862 1870	69 mm/hr
+R44	MODIFY Arg1:T103 Arg2:E53	
+R45	MODIFY Arg1:T102 Arg2:E52	
+R46	MODIFY Arg1:T101 Arg2:E51	
+R47	MODIFY Arg1:T100 Arg2:E50	
+R48	MODIFY Arg1:T99 Arg2:E49	
+R49	SUB_PROCEDURE Arg1:E49 Arg2:E48	
+R50	SUB_PROCEDURE Arg1:E50 Arg2:E48	
+R51	SUB_PROCEDURE Arg1:E51 Arg2:E48	
+R52	SUB_PROCEDURE Arg1:E52 Arg2:E48	
+R53	SUB_PROCEDURE Arg1:E53 Arg2:E48	
+T104	Diagnostic_procedure 1872 1876	Urea
+E54	Diagnostic_procedure:T104 
+T105	Diagnostic_procedure 1881 1893	electrolytes
+E55	Diagnostic_procedure:T105 
+T106	Diagnostic_procedure 1895 1905	complement
+E56	Diagnostic_procedure:T106 
+T107	Diagnostic_procedure 1907 1921	urine analysis
+E57	Diagnostic_procedure:T107 
+T108	Diagnostic_procedure 1926 1936	microscopy
+E58	Diagnostic_procedure:T108 
+T110	Lab_value 2074 2082	negative
+T111	Diagnostic_procedure 1950 1967	Rheumatoid factor
+E60	Diagnostic_procedure:T111 
+T113	Diagnostic_procedure 2098 2112	echocardiogram
+E62	Diagnostic_procedure:T113 
+T114	Biological_structure 2084 2097	Transthoracic
+R54	MODIFY Arg1:T114 Arg2:E62	
+T115	Sign_symptom 2120 2144	no signs of endocarditis
+E63	Sign_symptom:T115 
+A6	POLARITY E63 NEG
+T116	Diagnostic_procedure 2150 2173	multiple blood cultures
+E64	Diagnostic_procedure:T116 
+T117	Lab_value 2179 2186	sterile
+R55	MODIFY Arg1:T117 Arg2:E64	
+T118	Diagnostic_procedure 2195 2201	biopsy
+E65	Diagnostic_procedure:T118 
+T119	Biological_structure 2190 2194	skin
+R56	MODIFY Arg1:T119 Arg2:E65	
+T120	Biological_structure 2228 2240	perivascular
+T121	Biological_structure 2241 2258	lymphohistiocytic
+T122	Disease_disorder 2377 2387	vasculitis
+E66	Disease_disorder:T122 
+T123	Detailed_description 2359 2375	leukocytoclastic
+R57	MODIFY Arg1:T123 Arg2:E66	
+T124	Biological_structure 2259 2269	infiltrate
+R58	MODIFY Arg1:T121 Arg2:T124	
+R59	MODIFY Arg1:T120 Arg2:T124	
+T125	Biological_structure 2285 2296	neutrophils
+T126	Sign_symptom 2322 2330	necrosis
+E67	Sign_symptom:T126 
+T127	Detailed_description 2312 2321	fibrinoid
+R60	MODIFY Arg1:T127 Arg2:E67	
+T128	Biological_structure 2334 2341	vessels
+R61	MODIFY Arg1:T128 Arg2:E67	
+T129	Medication 2415 2427	prednisolone
+E68	Medication:T129 
+T130	Dosage 2409 2414	60 mg
+R62	MODIFY Arg1:T130 Arg2:E68	
+T131	Dosage 2428 2435	per day
+R63	MODIFY Arg1:T131 Arg2:E68	
+T132	Sign_symptom 2467 2493	resolution of all features
+E69	Sign_symptom:T132 
+T133	Detailed_description 2458 2466	complete
+T134	Detailed_description 2447 2453	prompt
+R64	MODIFY Arg1:T134 Arg2:E69	
+R65	MODIFY Arg1:T133 Arg2:E69	
+R66	CAUSE Arg1:E68 Arg2:E69	
+T135	Medication 2507 2519	prednisolone
+E70	Medication:T135 
+T136	Duration 2632 2658	over the following 3 years
+E71	Duration:T136 
+T137	Sign_symptom 2609 2631	without any recurrence
+E72	Sign_symptom:T137 
+A7	POLARITY E72 NEG
+T138	Duration 2540 2568	over the course of one month
+E73	Duration:T138 
+T139	Clinical_event 2532 2539	tapered
+E74	Clinical_event:T139 
+R67	MODIFY Arg1:E74 Arg2:E70	
+R68	MODIFY Arg1:E73 Arg2:E74	
+T112	Diagnostic_procedure 2000 2022	cytoplasmic antibodies
+E61	Diagnostic_procedure:T112 
+T140	Detailed_description 1985 1999	antineutrophil
+R69	MODIFY Arg1:T140 Arg2:E61	
+T141	Detailed_description 1969 1980	antinuclear
+R70	MODIFY Arg1:T141 Arg2:E61	
+T142	Diagnostic_procedure 2024 2037	cryoglobulins
+E75	Diagnostic_procedure:T142 
+T143	Diagnostic_procedure 2042 2068	Hepatitis B and C serology
+E76	Diagnostic_procedure:T143 
+T144	Clinical_event 66 75	presented
+E77	Clinical_event:T144 
+R71	BEFORE Arg1:E1 Arg2:E77	
+*	OVERLAP E77 E8 E3 E4 E5 E6 E7 E9 E10 E11 E12 E13 E14 E15
+A8	POLARITY E16 MAYBE_NEG
+R72	BEFORE Arg1:E17 Arg2:E18	
+R73	AFTER Arg1:E15 Arg2:E16	
+*	OVERLAP E16 E17
+*	OVERLAP E18 E19 E20
+R74	BEFORE Arg1:E20 Arg2:E21	
+*	OVERLAP E21 E22 E23
+T49	Sign_symptom 811 818	fistula
+E78	Sign_symptom:T49 
+#6	AnnotatorNotes E78	this isn't really a symptom, but it's relevant
+R27	MODIFY Arg1:T50 Arg2:E78	
+R75	AFTER Arg1:E23 Arg2:E78	
+R76	MODIFY Arg1:E24 Arg2:E78	
+*	OVERLAP E78 E27
+R77	AFTER Arg1:E27 Arg2:E26	
+R78	MODIFY Arg1:E25 Arg2:E26	
+R79	BEFORE Arg1:E26 Arg2:E29	
+*	OVERLAP E29 E30 E31 E32
+R80	BEFORE Arg1:E32 Arg2:E33	
+R81	BEFORE Arg1:E33 Arg2:E34	
+R82	MODIFY Arg1:T66 Arg2:E34	
+*	OVERLAP E34 E35 E36 E37 E38 E40 E43 E44 E45 E47 E46
+T73	Lab_value 1304 1310	normal
+R83	MODIFY Arg1:T73 Arg2:E38	
+R84	MODIFY Arg1:T74 Arg2:E40	
+T78	Detailed_description 1366 1382	without guarding
+T79	Detailed_description 1366 1373;1386 1404	without rebound tenderness
+R37	MODIFY Arg1:T78 Arg2:E40	
+R38	MODIFY Arg1:T79 Arg2:E40	
+R85	MODIFY Arg1:T83 Arg2:E43	
+R86	MODIFY Arg1:T84 Arg2:E43	
+R87	MODIFY Arg1:T85 Arg2:E43	
+R88	BEFORE Arg1:E46 Arg2:E48	
+T109	Lab_value 1942 1948	normal
+R89	MODIFY Arg1:T109 Arg2:E58	
+R90	MODIFY Arg1:T109 Arg2:E57	
+R91	MODIFY Arg1:T109 Arg2:E56	
+R92	MODIFY Arg1:T109 Arg2:E55	
+R93	MODIFY Arg1:T109 Arg2:E54	
+*	OVERLAP E48 E54 E55 E56 E57 E58 E60 E61 E75 E76
+R94	MODIFY Arg1:T110 Arg2:E60	
+R95	MODIFY Arg1:T110 Arg2:E61	
+R96	MODIFY Arg1:T110 Arg2:E75	
+R97	MODIFY Arg1:T110 Arg2:E76	
+R98	BEFORE Arg1:E76 Arg2:E62	
+*	OVERLAP E62 E63 E64
+R99	BEFORE Arg1:E64 Arg2:E65	
+R100	MODIFY Arg1:T124 Arg2:E65	
+R101	MODIFY Arg1:T125 Arg2:T124	
+*	OVERLAP E65 E67 E66
+R102	BEFORE Arg1:E66 Arg2:E68	
+R103	BEFORE Arg1:E68 Arg2:E69	
+R104	BEFORE Arg1:E69 Arg2:E70	
+R105	BEFORE Arg1:E70 Arg2:E72	
+R106	MODIFY Arg1:E71 Arg2:E72	

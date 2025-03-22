@@ -1,0 +1,291 @@
+T1	Age 2 13	60-year-old
+T2	Personal_background 14 19	white
+T3	Personal_background 20 29	Brazilian
+T4	Sex 30 33	man
+T5	Clinical_event 3127 3137	discharged
+E1	Clinical_event:T5 
+T6	Time 3142 3154	next morning
+E2	Time:T6 
+T7	History 40 63	controlled hypertension
+T8	History 68 83	stage 2 obesity
+T9	Clinical_event 84 93	presented
+E3	Clinical_event:T9 
+T10	Nonbiological_location 101 112	institution
+R1	MODIFY Arg1:T10 Arg2:E3	
+T11	Sign_symptom 145 152	fatigue
+E4	Sign_symptom:T11 
+T12	Detailed_description 158 184	moderate to light exertion
+R2	MODIFY Arg1:T12 Arg2:E4	
+T13	Detailed_description 133 144	progressive
+R3	MODIFY Arg1:T13 Arg2:E4	
+T14	Duration 188 208	approximately 1 year
+E5	Duration:T14 
+T15	Diagnostic_procedure 279 291	scintigraphy
+E6	Diagnostic_procedure:T15 
+T16	Detailed_description 258 278	myocardial perfusion
+R4	MODIFY Arg1:T16 Arg2:E6	
+T17	Disease_disorder 312 340	obstructive ischemic disease
+E7	Disease_disorder:T17 
+A1	POLARITY E7 NEG
+T18	Disease_disorder 382 395	heart failure
+E8	Disease_disorder:T18 
+A2	POLARITY E8 NEG
+T19	Detailed_description 373 381	systolic
+R5	MODIFY Arg1:T19 Arg2:E8	
+T20	Date 450 468	3 years previously
+E9	Date:T20 
+T21	Therapeutic_procedure 425 449	mitral valve replacement
+E10	Therapeutic_procedure:T21 
+T22	Detailed_description 414 424	biological
+R6	MODIFY Arg1:T22 Arg2:E10	
+T23	Disease_disorder 473 494	mitral valve stenosis
+E11	Disease_disorder:T23 
+T24	Therapeutic_procedure 513 521	ablation
+E12	Therapeutic_procedure:T24 
+T25	Date 568 588	18 months previously
+E13	Date:T25 
+T26	Sign_symptom 556 567	tachycardia
+E14	Sign_symptom:T26 
+T27	Biological_structure 525 555	atrioventricular nodal reentry
+R7	MODIFY Arg1:T27 Arg2:E14	
+T28	Disease_disorder 658 689	pulmonary arterial hypertension
+E15	Disease_disorder:T28 
+A3	POLARITY E15 NEG
+T30	Medication 730 737	aspirin
+E16	Medication:T30 
+T31	Dosage 738 748	100 mg/day
+R9	MODIFY Arg1:T31 Arg2:E16	
+T32	Medication 750 760	carvedilol
+E17	Medication:T32 
+T33	Dosage 761 770	50 mg/day
+R10	MODIFY Arg1:T33 Arg2:E17	
+T34	Medication 772 784	atorvastatin
+E18	Medication:T34 
+T35	Dosage 785 794	10 mg/day
+R11	MODIFY Arg1:T35 Arg2:E18	
+T36	Medication 800 808	losartan
+E19	Medication:T36 
+T37	Dosage 809 818	25 mg/day
+R12	MODIFY Arg1:T37 Arg2:E19	
+T38	Diagnostic_procedure 824 838	echocardiogram
+E20	Diagnostic_procedure:T38 
+T39	Lab_value 846 861	normal function
+T40	Biological_structure 867 884	mitral prosthesis
+R13	MODIFY Arg1:T39 Arg2:E20	
+R14	MODIFY Arg1:T40 Arg2:T39	
+T41	Diagnostic_procedure 886 927	global left ventricular systolic function
+E21	Diagnostic_procedure:T41 
+R15	SUB_PROCEDURE Arg1:E21 Arg2:E20	
+T42	Lab_value 928 948	within normal limits
+R16	MODIFY Arg1:T42 Arg2:E21	
+T43	Diagnostic_procedure 950 984	left ventricular ejection fraction
+E22	Diagnostic_procedure:T43 
+T44	Detailed_description 999 1025	using the Teichholz method
+R17	MODIFY Arg1:T44 Arg2:E22	
+T45	Lab_value 985 989	62 %
+R18	MODIFY Arg1:T45 Arg2:E22	
+T46	Disease_disorder 1036 1057	diastolic dysfunction
+E23	Disease_disorder:T46 
+T47	Lab_value 1028 1035	stage I
+R19	MODIFY Arg1:T47 Arg2:E23	
+T48	Diagnostic_procedure 1096 1110	blood pressure
+E24	Diagnostic_procedure:T48 
+T49	Detailed_description 1087 1095	systolic
+T50	Biological_structure 1068 1086	pulmonary arterial
+T51	Detailed_description 1063 1067	mean
+R20	MODIFY Arg1:T49 Arg2:E24	
+R21	MODIFY Arg1:T50 Arg2:E24	
+R22	MODIFY Arg1:T51 Arg2:E24	
+T52	Lab_value 1114 1121	50 mmHg
+R23	MODIFY Arg1:T52 Arg2:E24	
+T53	Diagnostic_procedure 1139 1148	walk test
+E25	Diagnostic_procedure:T53 
+T54	Detailed_description 1130 1138	6-minute
+R24	MODIFY Arg1:T54 Arg2:E25	
+T55	Lab_value 1169 1179	104 meters
+R25	MODIFY Arg1:T55 Arg2:E25	
+T56	Diagnostic_procedure 1191 1206	Catheterization
+E26	Diagnostic_procedure:T56 
+T57	Biological_structure 1214 1234	right heart chambers
+R26	MODIFY Arg1:T57 Arg2:E26	
+T58	Biological_structure 1239 1257	pulmonary arteries
+R27	MODIFY Arg1:T58 Arg2:E26	
+T29	Disease_disorder 1285 1307	pulmonary hypertension
+E27	Disease_disorder:T29 
+T59	Coreference 605 622	valve replacement
+E28	Coreference:T59 
+R8	IDENTICAL Arg1:E28 Arg2:E10	
+T60	Clinical_event 1330 1339	follow-up
+E29	Clinical_event:T60 
+T61	Medication 1361 1371	nifedipine
+E30	Medication:T61 
+T62	Medication 1376 1386	sildenafil
+E31	Medication:T62 
+T63	Sign_symptom 1430 1441	hypotension
+E32	Sign_symptom:T63 
+T64	Detailed_description 1418 1429	orthostatic
+R28	MODIFY Arg1:T64 Arg2:E32	
+T65	Therapeutic_procedure 1487 1495	ablation
+E33	Therapeutic_procedure:T65 
+T66	Detailed_description 1472 1486	radiofrequency
+R29	MODIFY Arg1:T66 Arg2:E33	
+T67	Biological_structure 1503 1525	pulmonary artery trunk
+R30	MODIFY Arg1:T67 Arg2:E33	
+T68	Clinical_event 1459 1467	referred
+E34	Clinical_event:T68 
+T69	Disease_disorder 1558 1580	pulmonary hypertension
+E35	Disease_disorder:T69 
+T70	Detailed_description 1547 1557	refractory
+R31	MODIFY Arg1:T70 Arg2:E35	
+T71	Nonbiological_location 1617 1643	catheterization laboratory
+R32	MODIFY Arg1:T71 Arg2:E33	
+T72	Detailed_description 1649 1715	direct visualization using fluoroscopy and radiopaque contrast dye
+R33	MODIFY Arg1:T72 Arg2:E33	
+T73	Therapeutic_procedure 1756 1764	sedation
+E36	Therapeutic_procedure:T73 
+T74	Sign_symptom 3170 3177	changes
+E37	Sign_symptom:T74 
+A4	POLARITY E37 NEG
+T75	Clinical_event 3218 3227	discharge
+E38	Clinical_event:T75 
+T76	Detailed_description 3245 3300	radiographic or echocardiographic laboratory parameters
+R34	MODIFY Arg1:T76 Arg2:E37	
+T77	Diagnostic_procedure 3326 3340	blood pressure
+E39	Diagnostic_procedure:T77 
+T78	Biological_structure 3344 3373	both the right heart chambers
+T79	Biological_structure 3382 3398	pulmonary artery
+R35	MODIFY Arg1:T78 Arg2:E39	
+R36	MODIFY Arg1:T79 Arg2:E39	
+T80	Detailed_description 3415 3436	using catheterization
+R37	MODIFY Arg1:T80 Arg2:E39	
+T81	Date 3451 3471	3 and 6 months after
+E40	Date:T81 
+T82	Date 3538 3545	3-month
+E41	Date:T82 
+T83	Clinical_event 3546 3555	follow-up
+E42	Clinical_event:T83 
+T84	Diagnostic_procedure 3597 3645	functional class for fatigue with major exertion
+E43	Diagnostic_procedure:T84 
+T85	Lab_value 3582 3593	improvement
+R38	MODIFY Arg1:T85 Arg2:E43	
+T86	Diagnostic_procedure 3713 3722	walk test
+E44	Diagnostic_procedure:T86 
+T87	Detailed_description 3704 3712	6-minute
+R39	MODIFY Arg1:T87 Arg2:E44	
+T88	Lab_value 3671 3689	increased distance
+R40	MODIFY Arg1:T88 Arg2:E44	
+T89	Diagnostic_procedure 3744 3753	pressures
+E45	Diagnostic_procedure:T89 
+T90	Lab_value 3727 3736	reduction
+R41	MODIFY Arg1:T90 Arg2:E45	
+T91	Biological_structure 3766 3780	right cavities
+T92	Biological_structure 3789 3805	pulmonary artery
+R42	MODIFY Arg1:T91 Arg2:E45	
+R43	MODIFY Arg1:T92 Arg2:E45	
+T93	Duration 3823 3831	6 months
+E46	Duration:T93 
+T94	Clinical_event 3844 3853	follow-up
+E47	Clinical_event:T94 
+T95	Diagnostic_procedure 3892 3917	functional classification
+E48	Diagnostic_procedure:T95 
+T96	Lab_value 3877 3888	improvement
+R44	MODIFY Arg1:T96 Arg2:E48	
+T97	Activity 3925 3945	pedaling his bicycle
+E49	Activity:T97 
+T98	Diagnostic_procedure 1766 1781	Catheterization
+E50	Diagnostic_procedure:T98 
+T99	Biological_structure 1789 1809	right femoral artery
+R45	MODIFY Arg1:T99 Arg2:E50	
+T100	Detailed_description 1818 1846	standard Seldinger technique
+R46	MODIFY Arg1:T100 Arg2:E50	
+T101	Detailed_description 1861 1898	using an 8-French valved short sheath
+R47	MODIFY Arg1:T101 Arg2:E50	
+T102	Medication 1933 1949	local anesthetic
+E51	Medication:T102 
+T103	Administration 1918 1927	injection
+T104	Administration 1905 1917	subcutaneous
+R48	MODIFY Arg1:T103 Arg2:E51	
+R49	MODIFY Arg1:T104 Arg2:E51	
+T105	Detailed_description 1970 2018	sheath was replaced with a steerable long sheath
+T106	Detailed_description 2020 2064	Agilis®; St. Jude Medical, St. Paul, MN, USA
+T107	Detailed_description 2066 2108	using the standard over-the-wire technique
+R50	MODIFY Arg1:T106 Arg2:T105	
+R51	MODIFY Arg1:T107 Arg2:T105	
+R52	MODIFY Arg1:T105 Arg2:E50	
+T108	Medication 2110 2132	Unfractionated heparin
+E52	Medication:T108 
+T109	Administration 2150 2163	intravenously
+R53	MODIFY Arg1:T109 Arg2:E52	
+T110	Diagnostic_procedure 2178 2204	activated coagulation time
+E53	Diagnostic_procedure:T110 
+T111	Lab_value 2205 2232	between 250 and 350 seconds
+R54	MODIFY Arg1:T111 Arg2:E53	
+T112	Diagnostic_procedure 2234 2264	Electroanatomic reconstruction
+E54	Diagnostic_procedure:T112 
+T113	Biological_structure 2277 2308	right ventricular outflow tract
+T114	Biological_structure 2313 2329	pulmonary artery
+R55	MODIFY Arg1:T113 Arg2:E54	
+R56	MODIFY Arg1:T114 Arg2:E54	
+T115	Detailed_description 2354 2392	EnSite Velocity Cardiac Mapping System
+R57	MODIFY Arg1:T115 Arg2:E54	
+T116	Detailed_description 2394 2409	St.Jude Medical
+R58	MODIFY Arg1:T116 Arg2:E54	
+T117	Detailed_description 2417 2450	direct fluoroscopic visualization
+R59	MODIFY Arg1:T117 Arg2:E54	
+T118	Diagnostic_procedure 2530 2561	computed tomography angiography
+E55	Diagnostic_procedure:T118 
+T119	Biological_structure 2522 2529	cardiac
+R60	MODIFY Arg1:T119 Arg2:E55	
+T120	Therapeutic_procedure 2729 2746	ablation catheter
+E56	Therapeutic_procedure:T120 
+T121	Diagnostic_procedure 2583 2602	sheath was advanced
+E57	Diagnostic_procedure:T121 
+T122	Detailed_description 2575 2582	Agilis®
+R61	MODIFY Arg1:T122 Arg2:E57	
+T123	Biological_structure 2612 2643	right ventricular outflow tract
+R62	MODIFY Arg1:T123 Arg2:E57	
+T124	Biological_structure 2649 2684	before reaching the pulmonary valve
+R63	MODIFY Arg1:T124 Arg2:E57	
+T125	Detailed_description 2755 2773	open irrigated tip
+R64	MODIFY Arg1:T125 Arg2:E56	
+T126	Detailed_description 2775 2790	St.Jude Medical
+R65	MODIFY Arg1:T126 Arg2:T125	
+T127	Lab_value 2877 2889	power of 5 W
+R66	MODIFY Arg1:T127 Arg2:E56	
+T128	Lab_value 2891 2919	maximum temperature of 48 °C
+R67	MODIFY Arg1:T128 Arg2:E56	
+T129	Lab_value 2921 2952	60-second duration in each spot
+R68	MODIFY Arg1:T129 Arg2:E56	
+T130	Lab_value 2954 3010	maximum impedance variation of 10 % from baseline values
+R69	MODIFY Arg1:T130 Arg2:E56	
+T131	Lab_value 3019 3055	irrigation flow rate of 17 ml/minute
+R70	MODIFY Arg1:T131 Arg2:E56	
+T132	Therapeutic_procedure 3063 3079	created a circle
+E58	Therapeutic_procedure:T132 
+R71	SUB_PROCEDURE Arg1:E58 Arg2:E56	
+T133	Biological_structure 3087 3109	pulmonary artery trunk
+R72	MODIFY Arg1:T133 Arg2:E58	
+R73	AFTER Arg1:E3 Arg2:E4	
+*	OVERLAP E4 E5 E6 E7 E8
+R74	AFTER Arg1:E8 Arg2:E10	
+*	OVERLAP E10 E9 E11
+R75	AFTER Arg1:E11 Arg2:E12	
+*	OVERLAP E12 E14 E13
+R76	BEFORE Arg1:E13 Arg2:E28	
+*	OVERLAP E28 E15
+R77	BEFORE Arg1:E15 Arg2:E16	
+*	OVERLAP E16 E17 E18 E19 E20 E22 E23 E24 E25 E26 E27
+R78	BEFORE Arg1:E27 Arg2:E29	
+*	OVERLAP E29 E30 E31 E32
+A5	POLARITY E31 MAYBE_POS
+A6	POLARITY E30 MAYBE_POS
+R79	BEFORE Arg1:E32 Arg2:E34	
+*	OVERLAP E34 E33 E35
+R80	BEFORE Arg1:E35 Arg2:E36	
+*	OVERLAP E36 E50 E51 E52 E53 E54 E55 E57 E56
+R81	BEFORE Arg1:E56 Arg2:E1	
+*	OVERLAP E1 E2 E37 E38
+R82	BEFORE Arg1:E38 Arg2:E39	
+*	OVERLAP E39 E40 E41 E42 E43 E44 E45
+R83	BEFORE Arg1:E45 Arg2:E46	
+*	OVERLAP E46 E47 E48 E49

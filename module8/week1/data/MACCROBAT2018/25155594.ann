@@ -1,0 +1,184 @@
+T1	Age 2 13	20-year-old
+T2	Sex 14 18	male
+T3	History 24 39	cystic fibrosis
+T4	Clinical_event 44 55	transferred
+E1	Clinical_event:T4 
+T5	Nonbiological_location 59 85	Houston Methodist Hospital
+R1	MODIFY Arg1:T5 Arg2:E1	
+T6	Date 89 101	January 2013
+E2	Date:T6 
+T7	Clinical_event 108 117	evaluated
+E3	Clinical_event:T7 
+T8	Therapeutic_procedure 138 148	transplant
+E4	Therapeutic_procedure:T8 
+T9	Biological_structure 131 137	kidney
+T10	Biological_structure 122 126	lung
+T11	Disease_disorder 327 351	pancreatic insufficiency
+E5	Disease_disorder:T11 
+T12	Sign_symptom 327 351	pancreatic insufficiency
+E6	Sign_symptom:T12 
+T13	Disease_disorder 483 505	respiratory infections
+E7	Disease_disorder:T13 
+T14	Medication 973 982	meropenem
+E8	Medication:T14 
+R2	MODIFY Arg1:T10 Arg2:E4	
+R3	MODIFY Arg1:T9 Arg2:E4	
+T15	History 327 351	pancreatic insufficiency
+T16	Therapeutic_procedure 359 374	transplantation
+E9	Therapeutic_procedure:T16 
+T17	Biological_structure 353 358	liver
+R4	MODIFY Arg1:T17 Arg2:E9	
+T18	Date 378 382	2004
+E10	Date:T18 
+T19	History 353 382	liver transplantation in 2004
+T20	Disease_disorder 400 408	diabetes
+E11	Disease_disorder:T20 
+T21	Medication 384 391	steroid
+E12	Medication:T21 
+R5	CAUSE Arg1:E12 Arg2:E11	
+T22	History 384 408	steroid-induced diabetes
+T23	Disease_disorder 410 433	end-stage renal disease
+E13	Disease_disorder:T23 
+T24	History 410 433	end-stage renal disease
+T25	Disease_disorder 439 456	testicular cancer
+E14	Disease_disorder:T25 
+T26	History 439 456	testicular cancer
+T27	History 483 563	respiratory infections with several multidrug-resistant bacteria, including MRSA
+T28	Disease_disorder 559 563	MRSA
+E15	Disease_disorder:T28 
+T29	Disease_disorder 519 547	multidrug-resistant bacteria
+E16	Disease_disorder:T29 
+R6	CAUSE Arg1:E16 Arg2:E7	
+R7	CAUSE Arg1:E15 Arg2:E7	
+T30	Medication 585 596	ceftaroline
+E17	Medication:T30 
+T31	Nonbiological_location 603 619	outside hospital
+R8	MODIFY Arg1:T31 Arg2:E17	
+T32	Clinical_event 641 649	transfer
+E18	Clinical_event:T32 
+T33	Nonbiological_location 653 679	Houston Methodist Hospital
+R9	MODIFY Arg1:T33 Arg2:E18	
+T34	Clinical_event 710 722	hospitalized
+E19	Clinical_event:T34 
+T35	Frequency 697 709	periodically
+R10	MODIFY Arg1:T35 Arg2:E19	
+T36	Duration 728 748	January to July 2013
+E20	Duration:T36 
+T37	Disease_disorder 812 822	infections
+E21	Disease_disorder:T37 
+T38	Detailed_description 795 811	catheter-related
+T39	Biological_structure 779 790	respiratory
+R11	MODIFY Arg1:T38 Arg2:E21	
+R12	MODIFY Arg1:T39 Arg2:E21	
+T40	Disease_disorder 833 837	MRSA
+E22	Disease_disorder:T40 
+R13	CAUSE Arg1:E22 Arg2:E21	
+T41	Disease_disorder 842 884	multidrug-resistant Pseudomonas aeruginosa
+E23	Disease_disorder:T41 
+R14	CAUSE Arg1:E23 Arg2:E21	
+T42	Medication 890 900	antibiotic
+E24	Medication:T42 
+T43	Medication 984 995	ceftazidime
+E25	Medication:T43 
+T44	Medication 997 1008	doxycycline
+E26	Medication:T44 
+T45	Medication 1010 1020	vancomycin
+E27	Medication:T45 
+T46	Medication 1022 1031	linezolid
+E28	Medication:T46 
+T47	Medication 1033 1041	cefepime
+E29	Medication:T47 
+T48	Medication 1043 1056	ciprofloxacin
+E30	Medication:T48 
+T49	Medication 1083 1091	colistin
+E31	Medication:T49 
+T50	Medication 1096 1106	tobramycin
+E32	Medication:T50 
+T51	Administration 1062 1069	inhaled
+T52	Administration 1074 1082	systemic
+R15	MODIFY Arg1:T52 Arg2:E31	
+R16	MODIFY Arg1:T52 Arg2:E32	
+R17	MODIFY Arg1:T51 Arg2:E31	
+R18	MODIFY Arg1:T51 Arg2:E32	
+T53	Clinical_event 1128 1138	readmitted
+E33	Clinical_event:T53 
+T54	Nonbiological_location 1146 1154	hospital
+R19	MODIFY Arg1:T54 Arg2:E33	
+T55	Date 1158 1167	June 2013
+E34	Date:T55 
+T56	Disease_disorder 1169 1173	MRSA
+E35	Disease_disorder:T56 
+T57	Diagnostic_procedure 1189 1197	cultures
+E36	Diagnostic_procedure:T57 
+T58	Biological_structure 1201 1206	blood
+T59	Biological_structure 1211 1232	respiratory specimens
+R20	MODIFY Arg1:T59 Arg2:E36	
+R21	MODIFY Arg1:T58 Arg2:E36	
+T60	Coreference 1244 1252	isolates
+E37	Coreference:T60 
+R22	IDENTICAL Arg1:E37 Arg2:E36	
+T61	Diagnostic_procedure 1271 1282	clindamycin
+E38	Diagnostic_procedure:T61 
+#1	AnnotatorNotes E38	Note that these are diagnostics here because they are being tested for resistance, not being administered to the patient
+T62	Diagnostic_procedure 1284 1293	linezolid
+E39	Diagnostic_procedure:T62 
+T63	Diagnostic_procedure 1295 1304	oxacillin
+E40	Diagnostic_procedure:T63 
+T64	Diagnostic_procedure 1310 1339	trimethoprim-sulfamethoxazole
+E41	Diagnostic_procedure:T64 
+T65	Diagnostic_procedure 1386 1396	vancomycin
+E42	Diagnostic_procedure:T65 
+T66	Diagnostic_procedure 1372 1380	rifampin
+E43	Diagnostic_procedure:T66 
+T67	Diagnostic_procedure 1359 1370	minocycline
+E44	Diagnostic_procedure:T67 
+T68	Lab_value 1344 1355	susceptible
+R23	MODIFY Arg1:T68 Arg2:E44	
+R24	MODIFY Arg1:T68 Arg2:E43	
+R25	MODIFY Arg1:T68 Arg2:E42	
+T69	Lab_value 1258 1267	resistant
+R26	MODIFY Arg1:T69 Arg2:E38	
+R27	MODIFY Arg1:T69 Arg2:E39	
+R28	MODIFY Arg1:T69 Arg2:E40	
+R29	MODIFY Arg1:T69 Arg2:E41	
+T70	Diagnostic_procedure 1408 1415	isolate
+E45	Diagnostic_procedure:T70 
+T71	Biological_structure 1402 1407	blood
+R30	MODIFY Arg1:T71 Arg2:E45	
+T72	Diagnostic_procedure 1444 1467	ceftaroline Etest strip
+E46	Diagnostic_procedure:T72 
+T73	Lab_value 1416 1432	grew confluently
+T74	Lab_value 1481 1500	MIC of >32 mg/liter
+R31	MODIFY Arg1:T73 Arg2:E46	
+R32	MODIFY Arg1:T74 Arg2:E46	
+R33	SUB_PROCEDURE Arg1:E46 Arg2:E45	
+T75	Diagnostic_procedure 1546 1554	isolates
+E47	Diagnostic_procedure:T75 
+T76	Biological_structure 1528 1545	respiratory tract
+R34	MODIFY Arg1:T76 Arg2:E47	
+T77	Disease_disorder 1518 1527	S. aureus
+E48	Disease_disorder:T77 
+R35	MODIFY Arg1:E48 Arg2:E47	
+T78	Lab_value 1502 1506	Five
+R36	MODIFY Arg1:T78 Arg2:E47	
+*	OVERLAP E1 E2 E3
+R37	BEFORE Arg1:E3 Arg2:E4	
+A1	POLARITY E4 UNCERTAIN
+#2	AnnotatorNotes E4	This transplant may not have been done
+R38	AFTER Arg1:E4 Arg2:E5	
+*	OVERLAP E5 E6 E9 E10 E12 E11 E13 E14 E7 E16 E15
+R39	BEFORE Arg1:E15 Arg2:E17	
+R40	BEFORE Arg1:E17 Arg2:E18	
+R41	BEFORE Arg1:E18 Arg2:E19	
+*	OVERLAP E19 E20 E21 E22 E23 E24
+R42	SUB_PROCEDURE Arg1:E8 Arg2:E24	
+R43	SUB_PROCEDURE Arg1:E25 Arg2:E24	
+R44	SUB_PROCEDURE Arg1:E26 Arg2:E24	
+R45	SUB_PROCEDURE Arg1:E27 Arg2:E24	
+R46	SUB_PROCEDURE Arg1:E28 Arg2:E24	
+R47	SUB_PROCEDURE Arg1:E29 Arg2:E24	
+R48	SUB_PROCEDURE Arg1:E30 Arg2:E24	
+R49	SUB_PROCEDURE Arg1:E31 Arg2:E24	
+R50	SUB_PROCEDURE Arg1:E32 Arg2:E24	
+R51	BEFORE Arg1:E24 Arg2:E33	
+*	OVERLAP E33 E34 E35 E36 E37 E38 E39 E40 E41 E44 E43 E42 E45 E46 E48 E47

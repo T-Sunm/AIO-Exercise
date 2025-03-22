@@ -1,0 +1,352 @@
+T1	Age 43 54	28-year-old
+T2	Sex 55 60	woman
+T3	Personal_background 62 76	Afro-Brazilian
+T4	History 24 42	previously healthy
+T5	History 85 100	first pregnancy
+T6	Clinical_event 207 216	presented
+E1	Clinical_event:T6 
+T7	Nonbiological_location 224 244	emergency department
+R1	MODIFY Arg1:T7 Arg2:E1	
+T8	History 180 201	allergy to diclofenac
+T9	Sign_symptom 278 282	pain
+E2	Sign_symptom:T9 
+T10	Sign_symptom 284 292	jaundice
+E3	Sign_symptom:T10 
+T11	Sign_symptom 294 300	nausea
+E4	Sign_symptom:T11 
+T12	Sign_symptom 305 313	vomiting
+E5	Sign_symptom:T12 
+T13	Disease_disorder 332 346	encephalopathy
+E6	Disease_disorder:T13 
+A1	POLARITY E6 NEG
+T14	Biological_structure 268 277	abdominal
+R2	MODIFY Arg1:T14 Arg2:E2	
+T15	Clinical_event 2593 2603	discharged
+E7	Clinical_event:T15 
+T16	Clinical_event 2670 2680	discharged
+E8	Clinical_event:T16 
+T17	Date 147 166	36th pregnancy week
+E9	Date:T17 
+T18	Detailed_description 253 258	acute
+R3	MODIFY Arg1:T18 Arg2:E2	
+R4	MODIFY Arg1:T18 Arg2:E3	
+R5	MODIFY Arg1:T18 Arg2:E4	
+R6	MODIFY Arg1:T18 Arg2:E5	
+T19	Diagnostic_procedure 352 375	arterial blood pressure
+E10	Diagnostic_procedure:T19 
+T20	Lab_value 380 390	110/60mmHg
+E11	Lab_value:T20 
+R7	MODIFY Arg1:E11 Arg2:E10	
+T21	Diagnostic_procedure 392 402	heart rate
+E12	Diagnostic_procedure:T21 
+T22	Lab_value 407 412	98bpm
+E13	Lab_value:T22 
+R8	MODIFY Arg1:E13 Arg2:E12	
+T23	Diagnostic_procedure 414 434	axillary temperature
+E14	Diagnostic_procedure:T23 
+T24	Lab_value 439 443	35°C
+E15	Lab_value:T24 
+R9	MODIFY Arg1:E15 Arg2:E14	
+T25	Sign_symptom 462 472	dehydrated
+E16	Sign_symptom:T25 
+T26	Severity 453 461	severely
+R10	MODIFY Arg1:T26 Arg2:E16	
+T27	Diagnostic_procedure 492 512	peripheral perfusion
+E17	Diagnostic_procedure:T27 
+T28	Lab_value 482 491	decreased
+E18	Lab_value:T28 
+R11	MODIFY Arg1:E18 Arg2:E17	
+T29	Diagnostic_procedure 518 541	laboratory examinations
+E19	Diagnostic_procedure:T29 
+T30	Diagnostic_procedure 551 561	hemoglobin
+E20	Diagnostic_procedure:T30 
+T31	Lab_value 562 570	12.3g/dL
+E21	Lab_value:T31 
+R12	MODIFY Arg1:E21 Arg2:E20	
+T32	Diagnostic_procedure 572 582	leukocytes
+E22	Diagnostic_procedure:T32 
+T33	Lab_value 583 594	13 × 109/mL
+E23	Lab_value:T33 
+R13	MODIFY Arg1:E23 Arg2:E22	
+T34	Diagnostic_procedure 596 605	platelets
+E24	Diagnostic_procedure:T34 
+T35	Lab_value 606 618	97 × 103/mm3
+E25	Lab_value:T35 
+R14	MODIFY Arg1:E25 Arg2:E24	
+T36	Diagnostic_procedure 620 652	international nationalized ratio
+E26	Diagnostic_procedure:T36 
+T37	Diagnostic_procedure 654 657	INR
+E27	Diagnostic_procedure:T37 
+R15	IDENTICAL Arg1:E27 Arg2:E26	
+T38	Lab_value 659 662	6.9
+E28	Lab_value:T38 
+R16	MODIFY Arg1:E28 Arg2:E26	
+T39	Diagnostic_procedure 664 674	fibrinogen
+E29	Diagnostic_procedure:T39 
+T40	Diagnostic_procedure 684 699	total bilirubin
+E30	Diagnostic_procedure:T40 
+T41	Diagnostic_procedure 717 727	creatinine
+E31	Diagnostic_procedure:T41 
+T42	Diagnostic_procedure 744 770	aspartate aminotransferase
+E32	Diagnostic_procedure:T42 
+T43	Diagnostic_procedure 772 775	AST
+E33	Diagnostic_procedure:T43 
+R17	IDENTICAL Arg1:E33 Arg2:E32	
+T44	Diagnostic_procedure 791 815	alanine aminotransferase
+E34	Diagnostic_procedure:T44 
+T45	Diagnostic_procedure 817 820	ALP
+E35	Diagnostic_procedure:T45 
+R18	IDENTICAL Arg1:E35 Arg2:E34	
+T46	Diagnostic_procedure 830 850	arterial bicarbonate
+E36	Diagnostic_procedure:T46 
+T47	Diagnostic_procedure 860 871	arterial pH
+E37	Diagnostic_procedure:T47 
+T48	Diagnostic_procedure 878 891	blood glucose
+E38	Diagnostic_procedure:T48 
+T49	Diagnostic_procedure 904 917	ionic calcium
+E39	Diagnostic_procedure:T49 
+T50	Lab_value 675 682	98mg/dL
+E40	Lab_value:T50 
+T51	Lab_value 700 709	14.2mg/dL
+E41	Lab_value:T51 
+R19	MODIFY Arg1:E40 Arg2:E29	
+R20	MODIFY Arg1:E41 Arg2:E30	
+T52	Detailed_description 711 716	serum
+R21	MODIFY Arg1:T52 Arg2:E31	
+T53	Lab_value 728 736	3.4mg/dL
+E42	Lab_value:T53 
+R22	MODIFY Arg1:E42 Arg2:E31	
+T54	Detailed_description 738 743	serum
+R23	MODIFY Arg1:T54 Arg2:E32	
+T55	Lab_value 777 783	306U/L
+E43	Lab_value:T55 
+R24	MODIFY Arg1:E43 Arg2:E32	
+T56	Detailed_description 785 790	serum
+R25	MODIFY Arg1:T56 Arg2:E34	
+T57	Lab_value 822 828	302U/L
+E44	Lab_value:T57 
+R26	MODIFY Arg1:E44 Arg2:E34	
+T58	Lab_value 851 858	11mEq/L
+E45	Lab_value:T58 
+R27	MODIFY Arg1:E45 Arg2:E36	
+T59	Lab_value 872 876	7.21
+E46	Lab_value:T59 
+R28	MODIFY Arg1:E46 Arg2:E37	
+T60	Lab_value 892 899	65mg/dL
+E47	Lab_value:T60 
+R29	MODIFY Arg1:E47 Arg2:E38	
+T61	Lab_value 918 928	1.02mmol/L
+E48	Lab_value:T61 
+R30	MODIFY Arg1:E48 Arg2:E39	
+R31	SUB_PROCEDURE Arg1:E20 Arg2:E19	
+R32	SUB_PROCEDURE Arg1:E22 Arg2:E19	
+R33	SUB_PROCEDURE Arg1:E24 Arg2:E19	
+R34	SUB_PROCEDURE Arg1:E26 Arg2:E19	
+R35	SUB_PROCEDURE Arg1:E29 Arg2:E19	
+R36	SUB_PROCEDURE Arg1:E30 Arg2:E19	
+R37	SUB_PROCEDURE Arg1:E31 Arg2:E19	
+R38	SUB_PROCEDURE Arg1:E32 Arg2:E19	
+R39	SUB_PROCEDURE Arg1:E34 Arg2:E19	
+R40	SUB_PROCEDURE Arg1:E36 Arg2:E19	
+R41	SUB_PROCEDURE Arg1:E37 Arg2:E19	
+R42	SUB_PROCEDURE Arg1:E38 Arg2:E19	
+R43	SUB_PROCEDURE Arg1:E39 Arg2:E19	
+T62	Diagnostic_procedure 943 953	ultrasound
+E49	Diagnostic_procedure:T62 
+T63	Biological_structure 933 942	abdominal
+R44	MODIFY Arg1:T63 Arg2:E49	
+T64	Sign_symptom 963 981	fatty infiltration
+E50	Sign_symptom:T64 
+T65	Biological_structure 989 994	liver
+R45	MODIFY Arg1:T65 Arg2:E50	
+T66	Diagnostic_procedure 1009 1024	fetal viability
+E51	Diagnostic_procedure:T66 
+T67	Lab_value 999 1008	confirmed
+E52	Lab_value:T67 
+R46	MODIFY Arg1:E52 Arg2:E51	
+T69	Medication 1058 1068	fluid load
+E54	Medication:T69 
+T68	Medication 1074 1086	crystalloids
+E53	Medication:T68 
+R47	SUB_PROCEDURE Arg1:E53 Arg2:E54	
+T70	Diagnostic_procedure 1092 1099	calcium
+E55	Diagnostic_procedure:T70 
+T71	Diagnostic_procedure 1101 1108	glucose
+E56	Diagnostic_procedure:T71 
+T72	Disease_disorder 1113 1124	hypothermia
+E57	Disease_disorder:T72 
+A2	POLARITY E57 NEG
+T73	Lab_value 1130 1138	reversed
+E58	Lab_value:T73 
+R48	MODIFY Arg1:E58 Arg2:E56	
+R49	MODIFY Arg1:E58 Arg2:E55	
+T74	Disease_disorder 1157 1161	AFLP
+E59	Disease_disorder:T74 
+#1	AnnotatorNotes E59	Acute fatty liver of pregnancy
+T75	Diagnostic_procedure 1190 1208	Swansea’s criteria
+E60	Diagnostic_procedure:T75 
+T76	Therapeutic_procedure 1227 1243	cesarean section
+E61	Therapeutic_procedure:T76 
+T77	Therapeutic_procedure 1261 1279	thromboelastometry
+E62	Therapeutic_procedure:T77 
+T78	Detailed_description 1281 1320	ROTEM®, Pentapharm Co., Munich, Germany
+R50	MODIFY Arg1:T78 Arg2:E62	
+T79	Coreference 1360 1367	surgery
+E63	Coreference:T79 
+R51	IDENTICAL Arg1:E63 Arg2:E61	
+T80	Diagnostic_procedure 1373 1400	thromboelastometry analysis
+E64	Diagnostic_procedure:T80 
+T81	Sign_symptom 1442 1462	hypocoagulable state
+E65	Sign_symptom:T81 
+T82	Detailed_description 1431 1441	structural
+T83	Detailed_description 1419 1426	kinetic
+T84	Severity 1411 1418	intense
+R52	MODIFY Arg1:T82 Arg2:E65	
+R53	MODIFY Arg1:T83 Arg2:E65	
+R54	MODIFY Arg1:T84 Arg2:E65	
+T85	Diagnostic_procedure 1488 1494	FIBTEM
+E66	Diagnostic_procedure:T85 
+R55	SUB_PROCEDURE Arg1:E66 Arg2:E64	
+T86	Diagnostic_procedure 1559 1564	EXTEM
+E67	Diagnostic_procedure:T86 
+R56	SUB_PROCEDURE Arg1:E67 Arg2:E64	
+T87	Disease_disorder 1507 1548	impairment in fibrinogen function quality
+E68	Disease_disorder:T87 
+T88	Disease_disorder 1576 1605	coagulation factor deficiency
+E69	Disease_disorder:T88 
+T89	Diagnostic_procedure 1654 1660	FIBTEM
+E70	Diagnostic_procedure:T89 
+R57	SUB_PROCEDURE Arg1:E70 Arg2:E64	
+T90	Diagnostic_procedure 1661 1682	maximum clot firmness
+E71	Diagnostic_procedure:T90 
+R58	SUB_PROCEDURE Arg1:E71 Arg2:E70	
+T91	Diagnostic_procedure 1684 1687	MCF
+E72	Diagnostic_procedure:T91 
+R59	IDENTICAL Arg1:E72 Arg2:E71	
+T92	Lab_value 1690 1693	0mm
+E73	Lab_value:T92 
+R60	MODIFY Arg1:E73 Arg2:E71	
+T93	Diagnostic_procedure 1708 1713	EXTEM
+E74	Diagnostic_procedure:T93 
+R61	SUB_PROCEDURE Arg1:E74 Arg2:E64	
+T94	Diagnostic_procedure 1714 1727	clotting time
+E75	Diagnostic_procedure:T94 
+R62	SUB_PROCEDURE Arg1:E75 Arg2:E74	
+T95	Diagnostic_procedure 1729 1731	CT
+E76	Diagnostic_procedure:T95 
+R63	IDENTICAL Arg1:E76 Arg2:E75	
+T96	Lab_value 1734 1738	228s
+E77	Lab_value:T96 
+R64	MODIFY Arg1:E77 Arg2:E75	
+T97	Medication 1758 1768	fibrinogen
+E78	Medication:T97 
+T98	Dosage 1750 1754	4.0g
+R65	MODIFY Arg1:T98 Arg2:E78	
+T99	Administration 1769 1780	concentrate
+R66	MODIFY Arg1:T99 Arg2:E78	
+T100	Dosage 1837 1843	1000UI
+T101	Medication 1847 1866	prothrombin complex
+E79	Medication:T101 
+R67	MODIFY Arg1:T100 Arg2:E79	
+T102	Administration 1867 1878	concentrate
+R68	MODIFY Arg1:T102 Arg2:E79	
+T103	Detailed_description 1782 1831	Haemocomplettan® P, CSL Behring, Marburg, Germany
+R69	MODIFY Arg1:T103 Arg2:E78	
+T104	Detailed_description 1880 1930	Beriplex® P/N 500UI, CSL Behring, Marburg, Germany
+R70	MODIFY Arg1:T104 Arg2:E79	
+T105	Therapeutic_procedure 1974 1990	cesarean section
+E80	Therapeutic_procedure:T105 
+T106	Medication 1996 2007	fluid input
+E81	Medication:T106 
+T107	Medication 2009 2021	crystalloids
+E82	Medication:T107 
+R71	SUB_PROCEDURE Arg1:E82 Arg2:E81	
+T108	Diagnostic_procedure 2027 2033	output
+E83	Diagnostic_procedure:T108 
+#2	AnnotatorNotes E83	fluid output
+T109	Therapeutic_procedure 2045 2062	caesarian section
+E84	Therapeutic_procedure:T109 
+T110	Dosage 2083 2089	2000mL
+R72	MODIFY Arg1:T110 Arg2:E81	
+T111	Lab_value 2094 2099	200mL
+E85	Lab_value:T111 
+R73	MODIFY Arg1:E85 Arg2:E83	
+T112	Therapeutic_procedure 2105 2121	cesarean section
+E86	Therapeutic_procedure:T112 
+T113	Lab_value 2122 2131	succeeded
+E87	Lab_value:T113 
+R74	MODIFY Arg1:E87 Arg2:E86	
+T114	Sign_symptom 2146 2154	bleeding
+E88	Sign_symptom:T114 
+A3	POLARITY E88 NEG
+T115	Severity 2140 2145	major
+R75	MODIFY Arg1:T115 Arg2:E88	
+T116	Therapeutic_procedure 2165 2183	hemostatic therapy
+E89	Therapeutic_procedure:T116 
+T117	Medication 2196 2209	hemocomponent
+E90	Medication:T117 
+A4	POLARITY E90 NEG
+T118	Administration 2210 2221	transfusion
+R76	MODIFY Arg1:T118 Arg2:E90	
+T119	Medication 2231 2250	fresh frozen plasma
+E91	Medication:T119 
+T120	Medication 2258 2273	cryoprecipitate
+E92	Medication:T120 
+T121	Medication 2275 2284	platelets
+E93	Medication:T121 
+T122	Medication 2288 2306	blood concentrates
+E94	Medication:T122 
+T123	Medication 2252 2255	FFP
+E95	Medication:T123 
+R77	IDENTICAL Arg1:E95 Arg2:E91	
+R78	SUB_PROCEDURE Arg1:E91 Arg2:E90	
+R79	SUB_PROCEDURE Arg1:E92 Arg2:E90	
+R80	SUB_PROCEDURE Arg1:E93 Arg2:E90	
+R81	SUB_PROCEDURE Arg1:E94 Arg2:E90	
+T124	Diagnostic_procedure 2336 2363	thromboelastometry analysis
+E96	Diagnostic_procedure:T124 
+T125	Coreference 2392 2399	surgery
+E97	Coreference:T125 
+R82	IDENTICAL Arg1:E97 Arg2:E86	
+T126	Sign_symptom 2439 2460	hypocoagulation state
+E98	Sign_symptom:T126 
+T127	Severity 2434 2438	mild
+R83	MODIFY Arg1:T127 Arg2:E98	
+T128	Clinical_event 2478 2486	admitted
+E99	Clinical_event:T128 
+T129	Nonbiological_location 2494 2513	intensive care unit
+T130	Nonbiological_location 2515 2518	ICU
+R84	IDENTICAL Arg1:T130 Arg2:T129	
+R85	MODIFY Arg1:T129 Arg2:E99	
+T131	Sign_symptom 2533 2539	stable
+E100	Sign_symptom:T131 
+T132	Sign_symptom 2549 2557	bleeding
+E101	Sign_symptom:T132 
+A5	POLARITY E101 NEG
+T133	Therapeutic_procedure 2569 2583	recovery phase
+E102	Therapeutic_procedure:T133 
+T134	Nonbiological_location 2613 2616	ICU
+R86	MODIFY Arg1:T134 Arg2:E7	
+T135	Date 2617 2629	3 days after
+E103	Date:T135 
+T136	Clinical_event 2630 2639	admission
+E104	Clinical_event:T136 
+T137	Date 2649 2661	3 days later
+E105	Date:T137 
+T138	Nonbiological_location 2690 2698	hospital
+R87	MODIFY Arg1:T138 Arg2:E8	
+*	OVERLAP E9 E1 E2 E3 E4 E5 E6 E10 E12 E14 E16 E17 E19 E49 E50 E51
+R88	BEFORE Arg1:E51 Arg2:E54	
+R89	BEFORE Arg1:E54 Arg2:E55	
+*	OVERLAP E55 E56 E57 E59 E60
+R90	BEFORE Arg1:E60 Arg2:E61	
+*	OVERLAP E61 E62 E63 E64 E78 E79 E81 E83 E84 E86 E88 E89 E90 E96 E97 E98
+R91	BEFORE Arg1:E98 Arg2:E99	
+*	OVERLAP E99 E100
+R92	BEFORE Arg1:E100 Arg2:E101	
+*	OVERLAP E101 E102
+R93	BEFORE Arg1:E102 Arg2:E7	
+*	OVERLAP E7 E103
+R94	AFTER Arg1:E103 Arg2:E104	
+R95	BEFORE Arg1:E104 Arg2:E105	
+*	OVERLAP E105 E8

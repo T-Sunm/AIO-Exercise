@@ -1,0 +1,295 @@
+T1	Age 2 13	68-year-old
+T2	Sex 14 17	man
+T3	Clinical_event 18 26	referred
+E1	Clinical_event:T3 
+T4	Nonbiological_location 34 62	Internal Medicine Department
+T5	Nonbiological_location 66 79	Razi Hospital
+R1	MODIFY Arg1:T4 Arg2:E1	
+R2	MODIFY Arg1:T5 Arg2:T4	
+T6	Nonbiological_location 83 88	Rasht
+R3	MODIFY Arg1:T6 Arg2:T5	
+T7	Nonbiological_location 90 117	a city in the north of Iran
+R4	MODIFY Arg1:T7 Arg2:T6	
+T8	Sign_symptom 145 155	discomfort
+E2	Sign_symptom:T8 
+T9	Biological_structure 126 144	hypogastric region
+R5	MODIFY Arg1:T9 Arg2:E2	
+T10	Biological_structure 175 195	right lower quadrant
+R6	MODIFY Arg1:T10 Arg2:E2	
+T11	Duration 200 209	one month
+E3	Duration:T11 
+T12	Coreference 215 219	pain
+E4	Coreference:T12 
+R7	IDENTICAL Arg1:E4 Arg2:E2	
+T13	Detailed_description 226 238	colicky form
+R8	MODIFY Arg1:T13 Arg2:E4	
+T14	Frequency 249 272	a few episodes each day
+R9	MODIFY Arg1:T14 Arg2:E4	
+T15	Detailed_description 274 310	each episode lasting for 4–5 minutes
+R10	MODIFY Arg1:T15 Arg2:E4	
+T16	Coreference 316 320	pain
+E5	Coreference:T16 
+R11	IDENTICAL Arg1:E5 Arg2:E4	
+T17	Nonbiological_location 337 341	back
+R12	MODIFY Arg1:T17 Arg2:E5	
+T18	Activity 364 383	resting to one side
+E6	Activity:T18 
+T19	Sign_symptom 350 360	alleviated
+E7	Sign_symptom:T19 
+R13	CAUSE Arg1:E6 Arg2:E7	
+T20	History 385 440	No association between the pain, defecation, and eating
+T21	Sign_symptom 504 515	weight loss
+E8	Sign_symptom:T21 
+T22	Sign_symptom 552 560	anorexia
+E9	Sign_symptom:T22 
+T23	Duration 525 539	last one month
+E10	Duration:T23 
+T24	Lab_value 497 503	2–3 kg
+R14	MODIFY Arg1:T24 Arg2:E8	
+T25	Sign_symptom 586 592	nausea
+E11	Sign_symptom:T25 
+A1	POLARITY E11 NEG
+T26	Sign_symptom 594 602	vomiting
+E12	Sign_symptom:T26 
+A2	POLARITY E12 NEG
+T27	Sign_symptom 604 609	fever
+E13	Sign_symptom:T27 
+A3	POLARITY E13 NEG
+T28	Sign_symptom 614 628	shaking chills
+E14	Sign_symptom:T28 
+A4	POLARITY E14 NEG
+T29	Clinical_event 661 669	admitted
+E15	Clinical_event:T29 
+T30	Nonbiological_location 673 687	another center
+R15	MODIFY Arg1:T30 Arg2:E15	
+T31	Duration 692 698	a week
+E16	Duration:T31 
+T32	Clinical_event 709 717	referred
+E17	Clinical_event:T32 
+T33	Nonbiological_location 721 733	our hospital
+R16	MODIFY Arg1:T33 Arg2:E17	
+T34	Therapeutic_procedure 786 793	surgery
+E18	Therapeutic_procedure:T34 
+T35	Therapeutic_procedure 798 811	prostatectomy
+E19	Therapeutic_procedure:T35 
+R17	SUB_PROCEDURE Arg1:E19 Arg2:E18	
+T36	Date 812 830	seven years before
+E20	Date:T36 
+T37	Clinical_event 835 847	presentation
+E21	Clinical_event:T37 
+T38	Nonbiological_location 851 861	our center
+R18	MODIFY Arg1:T38 Arg2:E21	
+T39	History 786 811	surgery for prostatectomy
+T40	History 889 898	endoscopy
+T41	Diagnostic_procedure 889 898	endoscopy
+E22	Diagnostic_procedure:T41 
+T42	Date 899 917	five years earlier
+E23	Date:T42 
+T43	Disease_disorder 925 934	dyspepsia
+E24	Disease_disorder:T43 
+T44	Diagnostic_procedure 958 977	Helicobacter pylori
+E25	Diagnostic_procedure:T44 
+T45	Lab_value 978 986	positive
+R19	MODIFY Arg1:T45 Arg2:E25	
+T46	Sign_symptom 1014 1024	eradicated
+E26	Sign_symptom:T46 
+T47	Therapeutic_procedure 1033 1049	treatment course
+E27	Therapeutic_procedure:T47 
+T48	History 1051 1111	No history of HIV, diabetes, smoking, or alcohol consumption
+T49	Diagnostic_procedure 1130 1141	vital signs
+E28	Diagnostic_procedure:T49 
+T50	Lab_value 1147 1153	normal
+R20	MODIFY Arg1:T50 Arg2:E28	
+T51	Diagnostic_procedure 1183 1203	physical examination
+E29	Diagnostic_procedure:T51 
+T54	Sign_symptom 1240 1250	distention
+E31	Sign_symptom:T54 
+A5	POLARITY E31 NEG
+T55	Diagnostic_procedure 1256 1268	bowel sounds
+E32	Diagnostic_procedure:T55 
+T56	Lab_value 1274 1285	normoactive
+R23	MODIFY Arg1:T56 Arg2:E32	
+T57	Sign_symptom 1296 1306	tenderness
+E33	Sign_symptom:T57 
+T58	Biological_structure 1314 1349	right lower quadrant of the abdomen
+R24	MODIFY Arg1:T58 Arg2:E33	
+T59	Diagnostic_procedure 1358 1371	rebound state
+E34	Diagnostic_procedure:T59 
+T60	Lab_value 1355 1357	no
+R25	MODIFY Arg1:T60 Arg2:E34	
+R26	MODIFY Arg1:T58 Arg2:E34	
+T61	Diagnostic_procedure 1387 1412	peripheral blood analysis
+E35	Diagnostic_procedure:T61 
+T62	Diagnostic_procedure 1434 1451	Stool examination
+E36	Diagnostic_procedure:T62 
+T63	Diagnostic_procedure 1453 1467	urine analysis
+E37	Diagnostic_procedure:T63 
+T64	Diagnostic_procedure 1473 1499	evaluation of electrolytes
+E38	Diagnostic_procedure:T64 
+T65	Lab_value 1509 1515	normal
+R27	MODIFY Arg1:T65 Arg2:E38	
+R28	MODIFY Arg1:T65 Arg2:E37	
+R29	MODIFY Arg1:T65 Arg2:E36	
+T66	Diagnostic_procedure 1530 1532	CT
+E39	Diagnostic_procedure:T66 
+T67	Biological_structure 1520 1529	abdominal
+R30	MODIFY Arg1:T67 Arg2:E39	
+T68	Sign_symptom 1587 1591	mass
+E40	Sign_symptom:T68 
+T69	Detailed_description 1578 1586	solitary
+T70	Detailed_description 1567 1577	homogenous
+T71	Detailed_description 1547 1562	well-demarcated
+R31	MODIFY Arg1:T69 Arg2:E40	
+R32	MODIFY Arg1:T70 Arg2:E40	
+R33	MODIFY Arg1:T70 Arg2:E40	
+T72	Biological_structure 1599 1604	cecum
+R34	MODIFY Arg1:T72 Arg2:E40	
+T73	Sign_symptom 1613 1623	distention
+E41	Sign_symptom:T73 
+A6	POLARITY E41 NEG
+T74	Biological_structure 1631 1636	ileum
+R35	MODIFY Arg1:T74 Arg2:E41	
+T52	Sign_symptom 1221 1225	soft
+E30	Sign_symptom:T52 
+T53	Biological_structure 1209 1216	abdomen
+R21	MODIFY Arg1:T53 Arg2:E30	
+T75	Sign_symptom 1657 1666	thickened
+E42	Sign_symptom:T75 
+T76	Biological_structure 1642 1652	ileum wall
+R22	MODIFY Arg1:T76 Arg2:E42	
+T77	Diagnostic_procedure 1681 1692	colonoscopy
+E43	Diagnostic_procedure:T77 
+T78	Sign_symptom 1720 1726	lesion
+E44	Sign_symptom:T78 
+T79	Lab_value 1704 1709	large
+T80	Detailed_description 1710 1719	mass like
+R36	MODIFY Arg1:T80 Arg2:E44	
+R37	MODIFY Arg1:T79 Arg2:E44	
+T81	Biological_structure 1734 1739	cecum
+R38	MODIFY Arg1:T81 Arg2:E44	
+T82	Diagnostic_procedure 1775 1781	biopsy
+E45	Diagnostic_procedure:T82 
+T83	Biological_structure 1801 1806	cecum
+R39	MODIFY Arg1:T83 Arg2:E45	
+T84	Biological_structure 1812 1826	lamina propria
+T85	Sign_symptom 1831 1842	infiltrated
+E46	Sign_symptom:T85 
+T87	Biological_structure 1880 1891	eosinophils
+T86	Biological_structure 1858 1863	PMNCs
+#1	AnnotatorNotes T86	polymorphonuclear cells
+R40	MODIFY Arg1:T86 Arg2:E46	
+R41	MODIFY Arg1:T87 Arg2:E46	
+T88	Diagnostic_procedure 1904 1934	Immunohistochemical evaluation
+E47	Diagnostic_procedure:T88 
+T89	Diagnostic_procedure 1952 1960	vimentin
+E48	Diagnostic_procedure:T89 
+T90	Diagnostic_procedure 1965 1969	CD68
+E49	Diagnostic_procedure:T90 
+T91	Lab_value 1939 1947	positive
+R42	MODIFY Arg1:T91 Arg2:E48	
+R43	MODIFY Arg1:T91 Arg2:E49	
+R44	SUB_PROCEDURE Arg1:E48 Arg2:E47	
+R45	SUB_PROCEDURE Arg1:E49 Arg2:E47	
+T92	Diagnostic_procedure 1971 1976	C-Kit
+E50	Diagnostic_procedure:T92 
+T93	Diagnostic_procedure 1978 1983	CD117
+E51	Diagnostic_procedure:T93 
+R46	IDENTICAL Arg1:E51 Arg2:E50	
+T94	Lab_value 1989 1997	negative
+R47	MODIFY Arg1:T94 Arg2:E50	
+T95	Diagnostic_procedure 2004 2008	CD34
+E52	Diagnostic_procedure:T95 
+T96	Diagnostic_procedure 2010 2029	smooth muscle actin
+E53	Diagnostic_procedure:T96 
+T97	Diagnostic_procedure 2031 2034	SMA
+E54	Diagnostic_procedure:T97 
+T98	Diagnostic_procedure 2041 2044	ALK
+E55	Diagnostic_procedure:T98 
+R48	IDENTICAL Arg1:E54 Arg2:E53	
+T99	Lab_value 2050 2066	focally positive
+R49	MODIFY Arg1:T99 Arg2:E55	
+R50	MODIFY Arg1:T99 Arg2:E53	
+R51	MODIFY Arg1:T99 Arg2:E52	
+T100	Diagnostic_procedure 2093 2102	cyclin D1
+E56	Diagnostic_procedure:T100 
+T101	Diagnostic_procedure 2104 2110	desmin
+E57	Diagnostic_procedure:T101 
+T102	Diagnostic_procedure 2115 2129	pancytokeratin
+E58	Diagnostic_procedure:T102 
+T103	Lab_value 2079 2089	no reports
+R52	MODIFY Arg1:T103 Arg2:E56	
+R53	MODIFY Arg1:T103 Arg2:E57	
+R54	MODIFY Arg1:T103 Arg2:E58	
+T104	Disease_disorder 2245 2260	malignant tumor
+E59	Disease_disorder:T104 
+T105	Disease_disorder 2297 2300	IMT
+E60	Disease_disorder:T105 
+#2	AnnotatorNotes E60	Inflammatory Myofibroblastic Tumor
+T106	Therapeutic_procedure 2331 2338	surgery
+E61	Therapeutic_procedure:T106 
+T107	Clinical_event 2318 2326	referred
+E62	Clinical_event:T107 
+T108	Coreference 2371 2378	surgery
+E63	Coreference:T108 
+R55	IDENTICAL Arg1:E63 Arg2:E61	
+T109	Volume 2394 2399	40 mL
+T110	Sign_symptom 2400 2407	ascites
+E64	Sign_symptom:T110 
+T111	Biological_structure 2426 2433	abdomen
+R56	MODIFY Arg1:T111 Arg2:E64	
+R57	MODIFY Arg1:T109 Arg2:E64	
+T112	Sign_symptom 2437 2441	mass
+E65	Sign_symptom:T112 
+T113	Biological_structure 2458 2463	cecum
+R58	MODIFY Arg1:T113 Arg2:E65	
+T114	Sign_symptom 2479 2494	intussusception
+E66	Sign_symptom:T114 
+T115	Biological_structure 2469 2478	ileocolic
+R59	MODIFY Arg1:T115 Arg2:E66	
+T116	Therapeutic_procedure 2536 2549	hemicolectomy
+E67	Therapeutic_procedure:T116 
+T117	Detailed_description 2530 2535	right
+R60	MODIFY Arg1:T117 Arg2:E67	
+T118	Therapeutic_procedure 2569 2593	anastomosis of ileocolic
+E68	Therapeutic_procedure:T118 
+T119	Detailed_description 2558 2568	end-to-end
+R61	MODIFY Arg1:T119 Arg2:E68	
+R62	SUB_PROCEDURE Arg1:E68 Arg2:E67	
+T120	Sign_symptom 2598 2605	enlarge
+E69	Sign_symptom:T120 
+T121	Biological_structure 2606 2617	lymph nodes
+R63	MODIFY Arg1:T121 Arg2:E69	
+T122	Clinical_event 2649 2659	discharged
+E70	Clinical_event:T122 
+T123	Date 2660 2676	seven days after
+E71	Date:T123 
+T124	Sign_symptom 2696 2709	complications
+E72	Sign_symptom:T124 
+A7	POLARITY E72 NEG
+T125	Clinical_event 2717 2726	follow-up
+E73	Clinical_event:T125 
+R64	AFTER Arg1:E1 Arg2:E2	
+*	OVERLAP E2 E4 E5 E7
+R65	AFTER Arg1:E7 Arg2:E8	
+*	OVERLAP E8 E10
+R66	BEFORE Arg1:E10 Arg2:E9	
+R67	BEFORE Arg1:E9 Arg2:E11	
+*	OVERLAP E11 E12 E13 E14
+R68	BEFORE Arg1:E14 Arg2:E15	
+*	OVERLAP E15 E16 E17
+R69	AFTER Arg1:E17 Arg2:E18	
+*	OVERLAP E18 E20
+R70	BEFORE Arg1:E20 Arg2:E21	
+R71	AFTER Arg1:E21 Arg2:E22	
+*	OVERLAP E22 E23 E24 E25
+R72	BEFORE Arg1:E25 Arg2:E26	
+R73	AFTER Arg1:E26 Arg2:E27	
+R74	BEFORE Arg1:E27 Arg2:E28	
+*	OVERLAP E28 E29 E30 E31 E32 E33 E34 E35 E36 E37 E38 E39 E40 E41 E42 E43 E44 E45 E46 E47 E50 E52 E53 E55 E56 E57 E58 E59 E60
+R75	MODIFY Arg1:T84 Arg2:E46	
+R76	BEFORE Arg1:E60 Arg2:E62	
+*	OVERLAP E62 E61 E64 E65 E66 E67 E69
+R77	BEFORE Arg1:E69 Arg2:E70	
+*	OVERLAP E70 E71
+R78	BEFORE Arg1:E71 Arg2:E72	
+*	OVERLAP E72 E73

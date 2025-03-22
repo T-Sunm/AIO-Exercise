@@ -1,0 +1,519 @@
+T1	Age 2 13	37-year-old
+T2	Personal_background 14 23	Caucasian
+T3	Sex 24 27	man
+T4	Clinical_event 4321 4330	discharge
+E1	Clinical_event:T4 
+T5	Diagnostic_procedure 4332 4353	laboratory parameters
+E2	Diagnostic_procedure:T5 
+T6	Lab_value 4359 4382	significantly decreased
+E3	Lab_value:T6 
+R1	MODIFY Arg1:E3 Arg2:E2	
+T7	Nonbiological_location 48 58	department
+T8	Nonbiological_location 59 84	from an external hospital
+T9	Clinical_event 32 40	referred
+E4	Clinical_event:T9 
+R2	MODIFY Arg1:T7 Arg2:E4	
+R3	MODIFY Arg1:T8 Arg2:E4	
+T10	Sign_symptom 113 117	pain
+E5	Sign_symptom:T10 
+T11	Biological_structure 103 112	abdominal
+T12	Severity 96 102	severe
+R4	MODIFY Arg1:T12 Arg2:E5	
+R5	MODIFY Arg1:T11 Arg2:E5	
+T13	Qualitative_concept 121 138	unclear aetiology
+R6	MODIFY Arg1:T13 Arg2:E5	
+T14	Disease_disorder 166 185	Friedreich's ataxia
+E6	Disease_disorder:T14 
+T15	History 166 185	Friedreich's ataxia
+T16	Diagnostic_procedure 220 236	echocardiography
+E7	Diagnostic_procedure:T16 
+T17	Biological_structure 206 219	transthoracic
+R7	MODIFY Arg1:T17 Arg2:E7	
+T18	Date 255 271	day of admission
+E8	Date:T18 
+T19	Disease_disorder 290 304	cardiomyopathy
+E9	Disease_disorder:T19 
+T20	Detailed_description 282 289	dilated
+R8	MODIFY Arg1:T20 Arg2:E9	
+T21	Diagnostic_procedure 315 340	left ventricular function
+E10	Diagnostic_procedure:T21 
+T22	Lab_value 306 314	impaired
+E11	Lab_value:T22 
+R9	MODIFY Arg1:E11 Arg2:E10	
+T23	Diagnostic_procedure 349 366	ejection fraction
+E12	Diagnostic_procedure:T23 
+T24	Lab_value 370 373	30%
+E13	Lab_value:T24 
+R10	MODIFY Arg1:E13 Arg2:E12	
+T25	Diagnostic_procedure 380 405	pulmonary artery pressure
+E14	Diagnostic_procedure:T25 
+T26	Lab_value 409 417	55 mm Hg
+E15	Lab_value:T26 
+R11	MODIFY Arg1:E15 Arg2:E14	
+T27	History 492 525	lived alone in a residential home
+T28	History 534 559	mobile using a wheelchair
+T29	Activity 492 497	lived
+E16	Activity:T29 
+T30	Detailed_description 498 503	alone
+R12	MODIFY Arg1:T30 Arg2:E16	
+T31	Nonbiological_location 509 525	residential home
+R13	MODIFY Arg1:T31 Arg2:E16	
+T32	Activity 534 540	mobile
+E17	Activity:T32 
+T33	Detailed_description 549 559	wheelchair
+R14	MODIFY Arg1:T33 Arg2:E17	
+T34	Clinical_event 564 571	arrival
+E18	Clinical_event:T34 
+T35	Biological_structure 579 599	emergency department
+R15	MODIFY Arg1:T35 Arg2:E18	
+T36	Sign_symptom 617 626	somnolent
+E19	Sign_symptom:T36 
+T37	Sign_symptom 631 642	disoriented
+E20	Sign_symptom:T37 
+T38	Diagnostic_procedure 657 673	body temperature
+E21	Diagnostic_procedure:T38 
+T39	Biological_structure 648 656	axillary
+R16	MODIFY Arg1:T39 Arg2:E21	
+T40	Lab_value 678 685	35.7 °C
+E22	Lab_value:T40 
+R17	MODIFY Arg1:E22 Arg2:E21	
+T41	Diagnostic_procedure 703 717	blood pressure
+E23	Diagnostic_procedure:T41 
+T42	Biological_structure 694 702	arterial
+R18	MODIFY Arg1:T42 Arg2:E23	
+T43	Lab_value 718 730	125/89 mm Hg
+E24	Lab_value:T43 
+R19	MODIFY Arg1:E24 Arg2:E23	
+T44	Diagnostic_procedure 739 749	pulse rate
+E25	Diagnostic_procedure:T44 
+T45	Lab_value 753 774	84 rhythmic beats/min
+E26	Lab_value:T45 
+R20	MODIFY Arg1:E26 Arg2:E25	
+T46	Sign_symptom 826 830	pain
+E27	Sign_symptom:T46 
+T47	Biological_structure 816 825	abdominal
+A1	TREND E27 INC
+T48	Detailed_description 808 815	diffuse
+T49	Detailed_description 796 806	increasing
+R21	MODIFY Arg1:T48 Arg2:E27	
+R22	MODIFY Arg1:T47 Arg2:E27	
+R23	MODIFY Arg1:T49 Arg2:E27	
+T50	Detailed_description 831 851	during the whole day
+R24	MODIFY Arg1:T50 Arg2:E27	
+T51	Sign_symptom 867 886	absence of appetite
+E28	Sign_symptom:T51 
+T52	Sign_symptom 891 899	vomiting
+E29	Sign_symptom:T52 
+T53	Frequency 905 920	single occasion
+R25	MODIFY Arg1:T53 Arg2:E29	
+T54	Medication 932 942	medication
+E30	Medication:T54 
+T55	Medication 947 958	perindopril
+E31	Medication:T55 
+T56	Medication 967 977	torasemide
+E32	Medication:T56 
+T57	Medication 989 1001	esomeprazole
+E33	Medication:T57 
+T58	Dosage 926 931	daily
+T59	Diagnostic_procedure 1012 1032	physical examination
+E34	Diagnostic_procedure:T59 
+T60	Dosage 959 965	2.5 mg
+T61	Dosage 978 984	7.5 mg
+T62	Dosage 1002 1007	40 mg
+R26	MODIFY Arg1:T58 Arg2:E30	
+R27	MODIFY Arg1:T60 Arg2:E31	
+R28	MODIFY Arg1:T61 Arg2:E32	
+R29	MODIFY Arg1:T62 Arg2:E33	
+R30	SUB_PROCEDURE Arg1:E31 Arg2:E30	
+R31	SUB_PROCEDURE Arg1:E32 Arg2:E30	
+R32	SUB_PROCEDURE Arg1:E33 Arg2:E30	
+T63	Sign_symptom 1045 1051	tender
+E35	Sign_symptom:T63 
+T64	Biological_structure 1052 1059	abdomen
+R33	MODIFY Arg1:T64 Arg2:E35	
+T65	Sign_symptom 1065 1072	painful
+E36	Sign_symptom:T65 
+T66	Biological_structure 1073 1083	epigastric
+T67	Diagnostic_procedure 1084 1093	palpation
+E37	Diagnostic_procedure:T67 
+R34	MODIFY Arg1:T66 Arg2:E36	
+T68	Diagnostic_procedure 1120 1131	auscultated
+E38	Diagnostic_procedure:T68 
+T69	Diagnostic_procedure 1102 1114	bowel sounds
+E39	Diagnostic_procedure:T69 
+T70	Lab_value 1095 1101	Normal
+E40	Lab_value:T70 
+R35	SUB_PROCEDURE Arg1:E39 Arg2:E38	
+R36	MODIFY Arg1:E40 Arg2:E39	
+T71	Biological_structure 1139 1175	upper right and lower left quadrants
+R37	MODIFY Arg1:T71 Arg2:E39	
+T72	Diagnostic_procedure 1211 1220	palpation
+E41	Diagnostic_procedure:T72 
+T73	Sign_symptom 1203 1207	pain
+E42	Sign_symptom:T73 
+A2	POLARITY E42 NEG
+T74	Biological_structure 1181 1190	renal bed
+R38	MODIFY Arg1:T74 Arg2:E42	
+T75	Diagnostic_procedure 1233 1245	auscultation
+E43	Diagnostic_procedure:T75 
+T76	Biological_structure 1225 1232	cardiac
+R39	MODIFY Arg1:T76 Arg2:E43	
+T77	Sign_symptom 1262 1268	murmur
+E44	Sign_symptom:T77 
+T78	Detailed_description 1253 1261	systolic
+T79	Lab_value 1249 1252	2/6
+E45	Lab_value:T79 
+R40	MODIFY Arg1:E45 Arg2:E44	
+R41	MODIFY Arg1:T78 Arg2:E44	
+T80	Diagnostic_procedure 1287 1299	auscultation
+E46	Diagnostic_procedure:T80 
+T81	Biological_structure 1282 1286	Lung
+R42	MODIFY Arg1:T81 Arg2:E46	
+T82	Diagnostic_procedure 1314 1325	respiration
+E47	Diagnostic_procedure:T82 
+T83	Lab_value 1307 1313	normal
+E48	Lab_value:T83 
+R43	MODIFY Arg1:E48 Arg2:E47	
+R44	SUB_PROCEDURE Arg1:E47 Arg2:E46	
+T84	Diagnostic_procedure 1327 1346	Laboratory findings
+E49	Diagnostic_procedure:T84 
+T85	Diagnostic_procedure 1370 1388	C reactive protein
+E50	Diagnostic_procedure:T85 
+T86	Diagnostic_procedure 1390 1393	CRP
+E51	Diagnostic_procedure:T86 
+R45	IDENTICAL Arg1:E51 Arg2:E50	
+R46	SUB_PROCEDURE Arg1:E50 Arg2:E49	
+T87	Lab_value 1352 1369	slightly elevated
+E52	Lab_value:T87 
+T88	Lab_value 1398 1405	16 mg/l
+E53	Lab_value:T88 
+R47	MODIFY Arg1:E53 Arg2:E50	
+R48	MODIFY Arg1:E52 Arg2:E50	
+T89	Lab_value 1425 1433	elevated
+E54	Lab_value:T89 
+T90	Diagnostic_procedure 1434 1447	troponin-T-hs
+E55	Diagnostic_procedure:T90 
+R49	SUB_PROCEDURE Arg1:E55 Arg2:E49	
+R50	MODIFY Arg1:E54 Arg2:E55	
+T91	Lab_value 1451 1461	0.070 µg/l
+E56	Lab_value:T91 
+R51	MODIFY Arg1:E56 Arg2:E55	
+T92	Lab_value 1488 1503	highly elevated
+E57	Lab_value:T92 
+T93	Diagnostic_procedure 1504 1534	pro-B-type natriuretic peptide
+E58	Diagnostic_procedure:T93 
+T94	Lab_value 1538 1548	7382 pg/ml
+E59	Lab_value:T94 
+R52	MODIFY Arg1:E59 Arg2:E58	
+R53	MODIFY Arg1:E57 Arg2:E58	
+R54	SUB_PROCEDURE Arg1:E58 Arg2:E49	
+T95	Diagnostic_procedure 1570 1596	Kidney function parameters
+E60	Diagnostic_procedure:T95 
+T96	Lab_value 1609 1627	upper normal range
+E61	Lab_value:T96 
+R55	MODIFY Arg1:E61 Arg2:E60	
+T97	Diagnostic_procedure 1634 1644	creatinine
+E62	Diagnostic_procedure:T97 
+R56	SUB_PROCEDURE Arg1:E62 Arg2:E60	
+T98	Lab_value 1648 1658	100 µmol/l
+E63	Lab_value:T98 
+R57	MODIFY Arg1:E63 Arg2:E62	
+T99	Diagnostic_procedure 1665 1702	calculated glomerular filtration rate
+E64	Diagnostic_procedure:T99 
+T100	Lab_value 1706 1715	73 ml/min
+E65	Lab_value:T100 
+R58	MODIFY Arg1:E65 Arg2:E64	
+R59	SUB_PROCEDURE Arg1:E64 Arg2:E60	
+T101	Diagnostic_procedure 1717 1728	Blood count
+E66	Diagnostic_procedure:T101 
+T102	Sign_symptom 1738 1750	leucocytosis
+E67	Sign_symptom:T102 
+T103	Lab_value 1754 1768	15.6×109/litre
+E68	Lab_value:T103 
+R60	MODIFY Arg1:E68 Arg2:E67	
+T104	Diagnostic_procedure 1780 1796	thyroid function
+E69	Diagnostic_procedure:T104 
+T105	Diagnostic_procedure 1798 1825	thyroid-stimulating hormone
+E70	Diagnostic_procedure:T105 
+R61	SUB_PROCEDURE Arg1:E70 Arg2:E69	
+T106	Diagnostic_procedure 1827 1831	f-T3
+E71	Diagnostic_procedure:T106 
+T107	Diagnostic_procedure 1836 1840	f-T4
+E72	Diagnostic_procedure:T107 
+R62	SUB_PROCEDURE Arg1:E71 Arg2:E69	
+R63	SUB_PROCEDURE Arg1:E72 Arg2:E69	
+T108	Lab_value 1846 1868	in the reference range
+E73	Lab_value:T108 
+R64	MODIFY Arg1:E73 Arg2:E72	
+R65	MODIFY Arg1:E73 Arg2:E71	
+R66	MODIFY Arg1:E73 Arg2:E70	
+T109	Diagnostic_procedure 1870 1884	Urine analysis
+E74	Diagnostic_procedure:T109 
+T110	Disease_disorder 1895 1904	pathology
+E75	Disease_disorder:T110 
+A3	POLARITY E75 NEG
+T111	Diagnostic_procedure 1919 1929	sonography
+E76	Diagnostic_procedure:T111 
+T112	Biological_structure 1909 1918	abdominal
+R67	MODIFY Arg1:T112 Arg2:E76	
+T113	Biological_structure 1970 1977	kidneys
+R68	MODIFY Arg1:T113 Arg2:E76	
+T114	Lab_value 1947 1953	normal
+E77	Lab_value:T114 
+R69	MODIFY Arg1:E77 Arg2:E76	
+T115	Sign_symptom 1982 1992	free fluid
+E78	Sign_symptom:T115 
+A4	POLARITY E78 NEG
+T116	Diagnostic_procedure 4222 4225	CRP
+E79	Diagnostic_procedure:T116 
+T117	Lab_value 4226 4234	increase
+E80	Lab_value:T117 
+T118	Lab_value 4244 4252	200 mg/l
+E81	Lab_value:T118 
+R70	MODIFY Arg1:E80 Arg2:E79	
+R71	MODIFY Arg1:E81 Arg2:E79	
+T119	Diagnostic_procedure 3802 3813	Urine tests
+E82	Diagnostic_procedure:T119 
+T120	Disease_disorder 3838 3847	porphyria
+E83	Disease_disorder:T120 
+A5	POLARITY E83 NEG
+T121	Clinical_event 3856 3871	hospitalisation
+E84	Clinical_event:T121 
+T122	Diagnostic_procedure 3910 3932	cardiological function
+E85	Diagnostic_procedure:T122 
+T123	Lab_value 3893 3899	stable
+E86	Lab_value:T123 
+R72	MODIFY Arg1:E86 Arg2:E85	
+T124	Medication 3940 3949	diuretics
+E87	Medication:T124 
+T125	Medication 4038 4050	levofloxacin
+E88	Medication:T125 
+T126	Disease_disorder 4065 4074	infection
+E89	Disease_disorder:T126 
+T127	Biological_structure 4055 4064	pneumonic
+R73	MODIFY Arg1:T127 Arg2:E89	
+T128	Clinical_event 4084 4099	hospitalisation
+E90	Clinical_event:T128 
+T129	Coreference 4105 4125	antibiotic treatment
+E91	Coreference:T129 
+R74	IDENTICAL Arg1:E91 Arg2:E88	
+A6	TREND E91 STAY
+T130	Diagnostic_procedure 4162 4185	inflammatory parameters
+E92	Diagnostic_procedure:T130 
+T131	Lab_value 4151 4161	increasing
+E93	Lab_value:T131 
+R75	MODIFY Arg1:E93 Arg2:E92	
+T132	Sign_symptom 2032 2036	pain
+E94	Sign_symptom:T132 
+T133	Severity 2025 2031	severe
+R76	MODIFY Arg1:T133 Arg2:E94	
+T134	Medication 2081 2092	paracetamol
+E95	Medication:T134 
+T135	Medication 2098 2108	metamizole
+E96	Medication:T135 
+T136	Medication 2117 2126	pethidine
+E97	Medication:T136 
+T137	Diagnostic_procedure 2164 2166	CT
+E98	Diagnostic_procedure:T137 
+T138	Detailed_description 2136 2153	contrast-enhanced
+R77	MODIFY Arg1:T138 Arg2:E98	
+T139	Biological_structure 2154 2163	abdominal
+R78	MODIFY Arg1:T139 Arg2:E98	
+T140	Dosage 2093 2096	1 g
+T141	Dosage 2109 2112	1 g
+T142	Dosage 2127 2132	75 µg
+R79	MODIFY Arg1:T140 Arg2:E95	
+R80	MODIFY Arg1:T141 Arg2:E96	
+R81	MODIFY Arg1:T142 Arg2:E97	
+T143	Therapeutic_procedure 2066 2075	analgesia
+E99	Therapeutic_procedure:T143 
+R82	SUB_PROCEDURE Arg1:E95 Arg2:E99	
+R83	SUB_PROCEDURE Arg1:E96 Arg2:E99	
+R84	SUB_PROCEDURE Arg1:E97 Arg2:E99	
+T144	Disease_disorder 2191 2201	infarction
+E100	Disease_disorder:T144 
+T145	Biological_structure 2209 2221	right kidney
+R85	MODIFY Arg1:T145 Arg2:E100	
+T146	Sign_symptom 2243 2257	hypodense area
+E101	Sign_symptom:T146 
+T147	Sign_symptom 2310 2314	open
+E102	Sign_symptom:T147 
+A7	POLARITY E102 UNCERTAIN
+T148	Biological_structure 2267 2292	kidney arteries and veins
+R86	MODIFY Arg1:T148 Arg2:E102	
+T149	Diagnostic_procedure 2765 2781	cardiolipin test
+E103	Diagnostic_procedure:T149 
+T150	Lab_value 2756 2764	negative
+E104	Lab_value:T150 
+R87	MODIFY Arg1:E104 Arg2:E103	
+T151	Disease_disorder 3080 3095	Hypovitaminosis
+E105	Disease_disorder:T151 
+A8	POLARITY E105 NEG
+T152	Disease_disorder 2791 2805	tabetic crises
+E106	Disease_disorder:T152 
+A9	POLARITY E106 NEG
+T153	Disease_disorder 2335 2354	Cardiac dysfunction
+E107	Disease_disorder:T153 
+T154	Outcome 2385 2390	death
+E108	Outcome:T154 
+T155	Disease_disorder 2415 2434	Friedreich's ataxia
+E109	Disease_disorder:T155 
+T156	Disease_disorder 2466 2479	heart failure
+E110	Disease_disorder:T156 
+T157	Disease_disorder 2483 2493	arrhythmia
+E111	Disease_disorder:T157 
+T158	Detailed_description 2455 2465	congestive
+R88	MODIFY Arg1:T158 Arg2:E110	
+T159	Disease_disorder 2508 2516	embolism
+E112	Disease_disorder:T159 
+T160	Biological_structure 2495 2507	Renal artery
+R89	MODIFY Arg1:T160 Arg2:E112	
+T161	Disease_disorder 2641 2650	porphyria
+E113	Disease_disorder:T161 
+T162	Disease_disorder 2661 2680	Mediterranean fever
+E114	Disease_disorder:T162 
+T163	Disease_disorder 2682 2703	diabetic ketoacidosis
+E115	Disease_disorder:T163 
+T164	Disease_disorder 2705 2726	tocopherol deficiency
+E116	Disease_disorder:T164 
+A10	POLARITY E113 NEG
+A11	POLARITY E114 NEG
+A12	POLARITY E115 NEG
+A13	POLARITY E116 NEG
+T165	Sign_symptom 2628 2632	pain
+E117	Sign_symptom:T165 
+T166	Severity 2603 2609	severe
+T167	Detailed_description 2610 2617	diffuse
+T168	Biological_structure 2618 2627	abdominal
+R90	MODIFY Arg1:T168 Arg2:E117	
+R91	MODIFY Arg1:T167 Arg2:E117	
+R92	MODIFY Arg1:T166 Arg2:E117	
+T169	Disease_disorder 2836 2845	porphyria
+E118	Disease_disorder:T169 
+A14	POLARITY E118 NEG
+T170	Detailed_description 2823 2835	pre-existing
+R93	MODIFY Arg1:T170 Arg2:E118	
+T171	Diagnostic_procedure 2905 2926	δ-aminolevulinic acid
+E119	Diagnostic_procedure:T171 
+T172	Diagnostic_procedure 2928 2943	porphobilinogen
+E120	Diagnostic_procedure:T172 
+T173	Diagnostic_procedure 2948 2957	porphyrin
+E121	Diagnostic_procedure:T173 
+T174	Detailed_description 2961 2971	24-h urine
+R94	MODIFY Arg1:T174 Arg2:E121	
+R95	MODIFY Arg1:T174 Arg2:E120	
+R96	MODIFY Arg1:T174 Arg2:E119	
+T175	Lab_value 2976 2984	negative
+E122	Lab_value:T175 
+R97	MODIFY Arg1:E122 Arg2:E121	
+R98	MODIFY Arg1:E122 Arg2:E120	
+R99	MODIFY Arg1:E122 Arg2:E119	
+T176	Diagnostic_procedure 2994 3011	genetic diagnosis
+E123	Diagnostic_procedure:T176 
+T177	Disease_disorder 3036 3053	clotting disorder
+E124	Disease_disorder:T177 
+A15	POLARITY E124 UNCERTAIN
+T178	Lab_value 3064 3078	not conclusive
+E125	Lab_value:T178 
+R100	MODIFY Arg1:E125 Arg2:E123	
+T179	Disease_disorder 3132 3148	endocrinopathies
+E126	Disease_disorder:T179 
+A16	POLARITY E126 NEG
+T180	Disease_disorder 3166 3174	diabetes
+E127	Disease_disorder:T180 
+A17	POLARITY E127 NEG
+T181	Disease_disorder 3195 3208	hypothyreosis
+E128	Disease_disorder:T181 
+A18	POLARITY E128 NEG
+T182	Disease_disorder 3212 3226	hyperthyreosis
+E129	Disease_disorder:T182 
+A19	POLARITY E129 NEG
+T183	Clinical_event 3244 3256	hospitalised
+E130	Clinical_event:T183 
+T184	Nonbiological_location 3278 3302	department of nephrology
+R101	MODIFY Arg1:T184 Arg2:E130	
+T185	Medication 3314 3329	anticoagulation
+E131	Medication:T185 
+T186	Medication 3335 3342	heparin
+E132	Medication:T186 
+R102	SUB_PROCEDURE Arg1:E132 Arg2:E131	
+T187	Duration 3379 3387	lifelong
+E133	Duration:T187 
+T188	Medication 3393 3408	anticoagulation
+E134	Medication:T188 
+T189	Medication 3414 3427	phenprocoumon
+E135	Medication:T189 
+R103	SUB_PROCEDURE Arg1:E135 Arg2:E134	
+T190	Administration 3388 3392	oral
+R104	MODIFY Arg1:T190 Arg2:E134	
+R105	MODIFY Arg1:E133 Arg2:E134	
+T191	Duration 3436 3443	11 days
+E136	Duration:T191 
+T192	Clinical_event 3447 3462	hospitalisation
+E137	Clinical_event:T192 
+T193	Disease_disorder 3467 3480	complications
+E138	Disease_disorder:T193 
+A20	POLARITY E138 NEG
+T194	Diagnostic_procedure 3491 3517	Kidney function parameters
+E139	Diagnostic_procedure:T194 
+T195	Lab_value 3527 3533	normal
+E140	Lab_value:T195 
+R106	MODIFY Arg1:E140 Arg2:E139	
+T196	Biological_structure 3535 3551	Transoesophageal
+T197	Diagnostic_procedure 3552 3568	echocardiography
+E141	Diagnostic_procedure:T197 
+R107	MODIFY Arg1:T196 Arg2:E141	
+T198	Date 3576 3585	fifth day
+E142	Date:T198 
+T199	Disease_disorder 3604 3612	thrombus
+E143	Disease_disorder:T199 
+A21	POLARITY E143 NEG
+T200	Biological_structure 3596 3603	cardiac
+R108	MODIFY Arg1:T200 Arg2:E143	
+T201	Disease_disorder 3620 3640	patent foramen ovale
+E144	Disease_disorder:T201 
+A22	POLARITY E144 NEG
+T202	Disease_disorder 3642 3662	Deep vein thrombosis
+E145	Disease_disorder:T202 
+A23	POLARITY E145 NEG
+T203	Diagnostic_procedure 3688 3698	sonography
+E146	Diagnostic_procedure:T203 
+T204	Detailed_description 3681 3687	duplex
+R109	MODIFY Arg1:T204 Arg2:E146	
+T205	Diagnostic_procedure 3700 3732	Anticardiolipin antibody testing
+E147	Diagnostic_procedure:T205 
+T206	Diagnostic_procedure 3737 3752	genetic testing
+E148	Diagnostic_procedure:T206 
+T207	Detailed_description 3763 3781	clotting disorders
+R110	MODIFY Arg1:T207 Arg2:E148	
+T208	Lab_value 3792 3800	negative
+E149	Lab_value:T208 
+R111	MODIFY Arg1:E149 Arg2:E148	
+R112	MODIFY Arg1:E149 Arg2:E147	
+*	OVERLAP E4 E5
+R113	AFTER Arg1:E5 Arg2:E6	
+R114	BEFORE Arg1:E6 Arg2:E7	
+*	OVERLAP E7 E8 E9 E10 E12 E14
+R115	AFTER Arg1:E14 Arg2:E16	
+*	OVERLAP E16 E17
+R116	BEFORE Arg1:E17 Arg2:E18	
+*	OVERLAP E18 E19 E20 E21 E23 E25 E27 E28 E29 E30 E34 E35 E36 E37 E39 E42 E41 E43 E44 E46 E49 E60 E66 E67 E69 E74 E75 E76 E78
+R117	BEFORE Arg1:E78 Arg2:E94	
+T209	Duration 2047 2056	all night
+E150	Duration:T209 
+*	OVERLAP E94 E150 E99 E98 E100 E101 E102 E117 E113 E114 E115 E116 E103 E106 E118 E119 E120 E121 E123 E105
+R118	MODIFY Arg1:E105 Arg2:E126	
+*	OVERLAP E126 E127 E128 E129
+R119	BEFORE Arg1:E129 Arg2:E130	
+*	OVERLAP E130 E131
+R120	BEFORE Arg1:E131 Arg2:E134	
+R121	AFTER Arg1:E134 Arg2:E136	
+*	OVERLAP E136 E137 E138 E139 E141 E142 E143 E144 E145 E146 E147 E148 E82 E83 E84 E85 E87
+T210	Detailed_description 3955 3994	adjusted according to the fluid balance
+R122	MODIFY Arg1:T210 Arg2:E87	
+R123	AFTER Arg1:E87 Arg2:E88	
+*	OVERLAP E88 E89
+R124	BEFORE Arg1:E89 Arg2:E90	
+*	OVERLAP E90 E91 E92 E79
+R125	BEFORE Arg1:E79 Arg2:E1	
+*	OVERLAP E1 E2

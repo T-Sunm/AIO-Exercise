@@ -1,0 +1,253 @@
+T1	Age 5 16	73-year-old
+T2	Sex 17 23	female
+T3	History 32 66	history of coronary artery disease
+T4	History 71 85	situs inversus
+T5	Sign_symptom 126 134	weakness
+E1	Sign_symptom:T5 
+T6	Detailed_description 117 125	exercise
+T7	Biological_structure 108 116	left arm
+R1	MODIFY Arg1:T7 Arg2:E1	
+R2	MODIFY Arg1:T6 Arg2:E1	
+T8	Diagnostic_procedure 140 168	magnetic resonance angiogram
+E2	Diagnostic_procedure:T8 
+T9	Diagnostic_procedure 173 192	computer tomography
+E3	Diagnostic_procedure:T9 
+T10	Biological_structure 200 218	upper limb vessels
+R3	MODIFY Arg1:T10 Arg2:E3	
+R4	MODIFY Arg1:T10 Arg2:E2	
+T11	Sign_symptom 235 243	stenosis
+E4	Sign_symptom:T11 
+T12	Severity 226 234	critical
+R5	MODIFY Arg1:T12 Arg2:E4	
+T13	Biological_structure 251 264	left-side SCA
+#1	AnnotatorNotes T13	Superior cerebellar artery
+R6	MODIFY Arg1:T13 Arg2:E4	
+T14	Sign_symptom 270 283	calcification
+E5	Sign_symptom:T14 
+T15	Biological_structure 293 300	orifice
+R7	MODIFY Arg1:T15 Arg2:E5	
+T16	Therapeutic_procedure 323 340	revascularization
+E6	Therapeutic_procedure:T16 
+T17	Detailed_description 310 322	Percutaneous
+R8	MODIFY Arg1:T17 Arg2:E6	
+T18	Detailed_description 354 383	right femoral artery approach
+R9	MODIFY Arg1:T18 Arg2:E6	
+T19	Sign_symptom 405 413	stenosis
+E7	Sign_symptom:T19 
+T20	Biological_structure 396 404	left SCA
+T21	Severity 389 395	severe
+R10	MODIFY Arg1:T20 Arg2:E7	
+R11	MODIFY Arg1:T21 Arg2:E7	
+T22	Therapeutic_procedure 482 490	stenting
+E8	Therapeutic_procedure:T22 
+T23	Biological_structure 498 506	left SCA
+R12	MODIFY Arg1:T23 Arg2:E8	
+T24	Detailed_description 475 481	Direct
+R13	MODIFY Arg1:T24 Arg2:E8	
+T25	Detailed_description 530 574	balloon-expansible Express LD 10×25 mm stent
+R14	MODIFY Arg1:T25 Arg2:E8	
+T26	Lab_value 639 667	8 atmospheres for 13 seconds
+R15	MODIFY Arg1:T26 Arg2:E8	
+T27	Severity 678 684	severe
+T28	Sign_symptom 685 704	shortness of breath
+E9	Sign_symptom:T28 
+T29	Sign_symptom 709 720	hypotension
+E10	Sign_symptom:T29 
+T30	Coreference 737 745	stenting
+E11	Coreference:T30 
+R16	IDENTICAL Arg1:E11 Arg2:E8	
+T31	Diagnostic_procedure 751 765	blood pressure
+E12	Diagnostic_procedure:T31 
+T32	Lab_value 778 783	88/56
+R17	MODIFY Arg1:T32 Arg2:E12	
+T33	Diagnostic_procedure 793 803	heart rate
+E13	Diagnostic_procedure:T33 
+T34	Lab_value 814 816	90
+R18	MODIFY Arg1:T34 Arg2:E13	
+T35	Diagnostic_procedure 822 839	oxygen saturation
+E14	Diagnostic_procedure:T35 
+T36	Lab_value 852 855	74%
+R19	MODIFY Arg1:T36 Arg2:E14	
+T37	Therapeutic_procedure 866 876	intubation
+E15	Therapeutic_procedure:T37 
+T38	Therapeutic_procedure 878 892	fluid infusion
+E16	Therapeutic_procedure:T38 
+T39	Detailed_description 857 865	Emergent
+R20	MODIFY Arg1:T39 Arg2:E15	
+T40	Medication 894 909	inotropic agent
+E17	Medication:T40 
+T41	Medication 915 929	norepinephrine
+E18	Medication:T41 
+T42	Diagnostic_procedure 956 967	angiography
+E19	Diagnostic_procedure:T42 
+T43	Detailed_description 946 955	immediate
+R21	MODIFY Arg1:T43 Arg2:E19	
+T44	Sign_symptom 975 995	vascular perforation
+E20	Sign_symptom:T44 
+T45	Biological_structure 1003 1030	stented segment of left SCA
+R22	MODIFY Arg1:T45 Arg2:E20	
+T46	Therapeutic_procedure 1088 1105	balloon inflation
+E21	Therapeutic_procedure:T46 
+T47	Biological_structure 1106 1122	within the stent
+R23	MODIFY Arg1:T47 Arg2:E21	
+T48	Detailed_description 1140 1155	8×40 mm balloon
+R24	MODIFY Arg1:T48 Arg2:E21	
+T49	Clinical_event 1193 1202	consulted
+E22	Clinical_event:T49 
+T50	Nonbiological_location 1161 1183	cardiovascular surgeon
+R25	MODIFY Arg1:T50 Arg2:E22	
+T51	Therapeutic_procedure 1254 1276	endovascular treatment
+E23	Therapeutic_procedure:T51 
+A1	POLARITY E23 UNCERTAIN
+T52	Sign_symptom 2974 2982	symptoms
+E24	Sign_symptom:T52 
+A2	POLARITY E24 NEG
+T53	Duration 2987 2997	six months
+E25	Duration:T53 
+T54	Clinical_event 2921 2931	discharged
+E26	Clinical_event:T54 
+T55	Therapeutic_procedure 1311 1330	retrograde approach
+E27	Therapeutic_procedure:T55 
+T56	Biological_structure 1343 1363	left brachial artery
+T57	Detailed_description 1364 1384	by surgical cut-down
+R26	MODIFY Arg1:T56 Arg2:E27	
+R27	MODIFY Arg1:T57 Arg2:E27	
+R28	SUB_PROCEDURE Arg1:E27 Arg2:E23	
+T58	Therapeutic_procedure 1814 1836	perforation was sealed
+E28	Therapeutic_procedure:T58 
+T59	Therapeutic_procedure 1751 1762	graft stent
+E29	Therapeutic_procedure:T59 
+R29	SUB_PROCEDURE Arg1:E29 Arg2:E23	
+R30	SUB_PROCEDURE Arg1:E28 Arg2:E23	
+T60	Diagnostic_procedure 1900 1904	flow
+E30	Diagnostic_procedure:T60 
+T61	Lab_value 1895 1899	slow
+R31	MODIFY Arg1:T61 Arg2:E30	
+T62	Biological_structure 1908 1934	left common carotid artery
+T63	Biological_structure 1936 1940	LCCA
+R32	IDENTICAL Arg1:T63 Arg2:T62	
+R33	MODIFY Arg1:T62 Arg2:E30	
+T64	Diagnostic_procedure 1957 1968	angiography
+E31	Diagnostic_procedure:T64 
+T65	Sign_symptom 1994 2003	occlusion
+E32	Sign_symptom:T65 
+T66	Biological_structure 2011 2015	LCCA
+R34	MODIFY Arg1:T66 Arg2:E32	
+T67	Severity 1983 1993	near total
+R35	MODIFY Arg1:T67 Arg2:E32	
+T68	Detailed_description 1501 1524	Endurant II graft stent
+R36	MODIFY Arg1:T68 Arg2:E29	
+T69	Area 1525 1533	10×82 mm
+R37	MODIFY Arg1:T69 Arg2:T68	
+T70	Detailed_description 1535 1572	Medtronic, Inc., Minneapolis, MN, USA
+R38	MODIFY Arg1:T70 Arg2:T68	
+T71	Detailed_description 1486 1500	self-expanding
+R39	MODIFY Arg1:T71 Arg2:T68	
+T72	Detailed_description 1446 1482	modified and cut the iliac extension
+R40	MODIFY Arg1:T72 Arg2:T68	
+T73	Detailed_description 1670 1682	around 30 mm
+R41	MODIFY Arg1:T73 Arg2:T72	
+T74	Detailed_description 2017 2048	occluded by the SCA graft stent
+R42	MODIFY Arg1:T74 Arg2:E32	
+T75	Therapeutic_procedure 2232 2249	balloon dilations
+E33	Therapeutic_procedure:T75 
+T76	Therapeutic_procedure 2098 2107	firm wire
+E34	Therapeutic_procedure:T76 
+T77	Detailed_description 2164 2172	advanced
+T78	Biological_structure 2173 2196	outside the graft stent
+T79	Biological_structure 2210 2214	LCCA
+R43	MODIFY Arg1:T77 Arg2:E34	
+R44	MODIFY Arg1:T78 Arg2:E34	
+R45	MODIFY Arg1:T79 Arg2:E34	
+T80	Diagnostic_procedure 2279 2283	flow
+E35	Diagnostic_procedure:T80 
+T81	Biological_structure 2257 2273	bifurcation site
+R46	MODIFY Arg1:T81 Arg2:E33	
+T82	Biological_structure 2291 2295	LCCA
+R47	MODIFY Arg1:T82 Arg2:E35	
+T83	Lab_value 2306 2310	poor
+R48	MODIFY Arg1:T83 Arg2:E35	
+T84	Diagnostic_procedure 2326 2336	ultrasound
+E36	Diagnostic_procedure:T84 
+T85	Detailed_description 2312 2325	Intravascular
+R49	MODIFY Arg1:T85 Arg2:E36	
+T86	Sign_symptom 2363 2373	compromise
+E37	Sign_symptom:T86 
+T87	Severity 2356 2362	severe
+R50	MODIFY Arg1:T87 Arg2:E37	
+T88	Biological_structure 2381 2392	LCCA ostium
+R51	MODIFY Arg1:T88 Arg2:E37	
+T89	Detailed_description 2403 2428	caused by the graft stent
+R52	MODIFY Arg1:T89 Arg2:E37	
+T90	Therapeutic_procedure 2478 2491	carotid stent
+E38	Therapeutic_procedure:T90 
+T91	Detailed_description 2493 2508	Express 7×37 mm
+R53	MODIFY Arg1:T91 Arg2:E38	
+T92	Detailed_description 2459 2477	balloon-expansible
+R54	MODIFY Arg1:T92 Arg2:E38	
+T93	Detailed_description 2510 2539	Boston Scientific Corporation
+R55	MODIFY Arg1:T93 Arg2:T91	
+T94	Biological_structure 2542 2555	from the LCCA
+T95	Biological_structure 2563 2590	left brachiocephalic artery
+R56	MODIFY Arg1:T94 Arg2:E38	
+R57	MODIFY Arg1:T95 Arg2:E38	
+T96	Diagnostic_procedure 2601 2614	TIMI III flow
+E39	Diagnostic_procedure:T96 
+T97	Biological_structure 2622 2626	LCCA
+R58	MODIFY Arg1:T97 Arg2:E39	
+T98	Lab_value 2631 2639	restored
+R59	MODIFY Arg1:T98 Arg2:E39	
+T99	Diagnostic_procedure 2718 2728	ultrasound
+E40	Diagnostic_procedure:T99 
+T100	Detailed_description 2704 2717	Intravascular
+R60	MODIFY Arg1:T100 Arg2:E40	
+T101	Sign_symptom 2751 2760	expansion
+E41	Sign_symptom:T101 
+T102	Lab_value 2744 2750	proper
+R61	MODIFY Arg1:T102 Arg2:E41	
+T103	Biological_structure 2768 2778	LCCA stent
+R62	MODIFY Arg1:T103 Arg2:E41	
+T104	Clinical_event 2793 2802	follow-up
+E42	Clinical_event:T104 
+T105	Biological_structure 2803 2808	chest
+T106	Diagnostic_procedure 2809 2820	radiography
+E43	Diagnostic_procedure:T106 
+R63	MODIFY Arg1:T105 Arg2:E43	
+T107	Sign_symptom 2840 2850	hemothorax
+E44	Sign_symptom:T107 
+T108	Detailed_description 2830 2839	left-side
+R64	MODIFY Arg1:T108 Arg2:E44	
+R65	BEFORE Arg1:E1 Arg2:E2	
+*	OVERLAP E2 E3 E4 E6 E7 E8
+T109	Detailed_description 576 622	Boston Scientific Corporation, Natick, MA, USA
+R66	MODIFY Arg1:T109 Arg2:T25	
+R67	MODIFY Arg1:T27 Arg2:E9	
+R68	MODIFY Arg1:T27 Arg2:E10	
+R69	BEFORE Arg1:E8 Arg2:E9	
+*	OVERLAP E9 E10 E12 E13 E14
+R70	BEFORE Arg1:E14 Arg2:E15	
+*	OVERLAP E15 E16 E17 E18 E19 E20 E21
+R71	BEFORE Arg1:E21 Arg2:E22	
+R72	BEFORE Arg1:E22 Arg2:E23	
+R73	BEFORE Arg1:E23 Arg2:E30	
+*	OVERLAP E30 E31 E32
+R74	BEFORE Arg1:E32 Arg2:E34	
+*	OVERLAP E34 E33
+R75	BEFORE Arg1:E33 Arg2:E35	
+*	OVERLAP E35 E36 E37
+R76	BEFORE Arg1:E37 Arg2:E38	
+R77	BEFORE Arg1:E38 Arg2:E39	
+*	OVERLAP E39 E40 E41
+R78	BEFORE Arg1:E41 Arg2:E42	
+*	OVERLAP E42 E43 E44
+T110	Therapeutic_procedure 2858 2873	thoracocentesis
+E45	Therapeutic_procedure:T110 
+T111	Detailed_description 2879 2887	drainage
+R79	MODIFY Arg1:T111 Arg2:E45	
+T112	Therapeutic_procedure 2892 2903	proper care
+E46	Therapeutic_procedure:T112 
+R80	BEFORE Arg1:E44 Arg2:E45	
+*	OVERLAP E45 E46
+R81	BEFORE Arg1:E46 Arg2:E26	
+R82	BEFORE Arg1:E26 Arg2:E24	
+*	OVERLAP E24 E25

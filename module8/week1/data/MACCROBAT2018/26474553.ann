@@ -1,0 +1,128 @@
+T1	Age 3 13	8-year-old
+T2	Sex 14 17	boy
+T4	Medication 65 74	ivacaftor
+E2	Medication:T4 
+T5	Dosage 76 89	150 mg b.i.d.
+R1	MODIFY Arg1:T5 Arg2:E2	
+T6	Date 120 135	age of 9 months
+E3	Date:T6 
+T7	Disease_disorder 158 160	CF
+E4	Disease_disorder:T7 
+#1	AnnotatorNotes E4	cystic fibrosis
+T8	Disease_disorder 168 185	failure to thrive
+E5	Disease_disorder:T8 
+T9	History 227 252	recurring nasal polyposis
+T10	History 286 319	exocrine pancreatic insufficiency
+T11	History 365 423	grew with body weight and height along the 10th percentile
+T12	Sign_symptom 454 474	respiratory symptoms
+E6	Sign_symptom:T12 
+T13	Severity 449 453	mild
+R2	MODIFY Arg1:T13 Arg2:E6	
+T14	Sign_symptom 510 515	cough
+E7	Sign_symptom:T14 
+T15	Detailed_description 499 509	productive
+T16	Detailed_description 486 498	intermittent
+R3	MODIFY Arg1:T15 Arg2:E7	
+R4	MODIFY Arg1:T16 Arg2:E7	
+T17	Diagnostic_procedure 541 554	lung function
+E8	Diagnostic_procedure:T17 
+T18	Lab_value 525 540	close to normal
+R5	MODIFY Arg1:T18 Arg2:E8	
+T19	Diagnostic_procedure 599 619	body plethysmography
+E9	Diagnostic_procedure:T19 
+T20	Diagnostic_procedure 624 634	spirometry
+E10	Diagnostic_procedure:T20 
+T21	Lab_value 636 665	minimal z-score of FEV1: −1.2
+R6	MODIFY Arg1:T21 Arg2:E10	
+T22	Diagnostic_procedure 668 683	Sputum cultures
+E11	Diagnostic_procedure:T22 
+T23	Lab_value 689 711	Haemophilus influenzae
+T24	Lab_value 716 737	Staphylococcus aureus
+T25	Detailed_description 741 758	several occasions
+R7	MODIFY Arg1:T25 Arg2:E11	
+R8	MODIFY Arg1:T23 Arg2:E11	
+R9	MODIFY Arg1:T24 Arg2:E11	
+T26	Duration 766 773	6 weeks
+E12	Duration:T26 
+T27	Medication 777 786	ivacaftor
+E13	Medication:T27 
+T28	Sign_symptom 844 849	cough
+E14	Sign_symptom:T28 
+A1	TREND E14 DEC
+T29	Lab_value 819 840	clinical improvements
+R10	MODIFY Arg1:T29 Arg2:E14	
+T30	Sign_symptom 911 924	salt cravings
+E15	Sign_symptom:T30 
+A2	TREND E15 DEC
+T31	Diagnostic_procedure 880 900	physical performance
+E16	Diagnostic_procedure:T31 
+T32	Sign_symptom 861 878	sputum production
+E17	Sign_symptom:T32 
+R11	MODIFY Arg1:T29 Arg2:E17	
+R12	MODIFY Arg1:T29 Arg2:E16	
+T33	Diagnostic_procedure 946 957	body weight
+E18	Diagnostic_procedure:T33 
+T34	Lab_value 929 942	gained 1.4 kg
+R13	MODIFY Arg1:T34 Arg2:E18	
+T35	Medication 991 1020	pancreatic enzyme replacement
+E19	Medication:T35 
+T36	Diagnostic_procedure 1034 1054	sweat chloride level
+E20	Diagnostic_procedure:T36 
+T37	Lab_value 1083 1093	115 mmol/l
+R14	MODIFY Arg1:T37 Arg2:E20	
+T38	Lab_value 1114 1123	40 mmol/l
+R15	MODIFY Arg1:T38 Arg2:E20	
+T39	Detailed_description 1094 1110	before ivacaftor
+R16	MODIFY Arg1:T39 Arg2:T37	
+T40	Date 1124 1137	after 6 weeks
+E21	Date:T40 
+R17	MODIFY Arg1:E21 Arg2:T38	
+T41	Lab_value 1142 1151	52 mmol/l
+R18	MODIFY Arg1:T41 Arg2:E20	
+T42	Date 1152 1166	after 41 weeks
+E22	Date:T42 
+R19	MODIFY Arg1:E22 Arg2:T41	
+T43	Diagnostic_procedure 1211 1215	FEV1
+E23	Diagnostic_procedure:T43 
+T44	Lab_value 1231 1237	1.25 L
+R20	MODIFY Arg1:T44 Arg2:E23	
+T45	Lab_value 1239 1251	−1.2 z-score
+T46	Lab_value 1256 1262	1.65 L
+T47	Lab_value 1264 1276	+0.5 z-score
+R21	MODIFY Arg1:T46 Arg2:E23	
+R22	MODIFY Arg1:T45 Arg2:T44	
+R23	MODIFY Arg1:T47 Arg2:T46	
+T48	Date 1278 1292	after 41 weeks
+E24	Date:T48 
+R24	MODIFY Arg1:E24 Arg2:T46	
+T49	Medication 1296 1305	ivacaftor
+E25	Medication:T49 
+T50	Diagnostic_procedure 1319 1322	LCI
+E26	Diagnostic_procedure:T50 
+T51	Detailed_description 1336 1354	measured by N2-MBW
+R25	MODIFY Arg1:T51 Arg2:E26	
+T52	Lab_value 1370 1374	14.5
+T53	Lab_value 1378 1381	8.3
+R26	MODIFY Arg1:T52 Arg2:E26	
+R27	MODIFY Arg1:T53 Arg2:E26	
+T54	Date 1382 1395	after 6 weeks
+E27	Date:T54 
+R28	MODIFY Arg1:E27 Arg2:T53	
+T55	Lab_value 1400 1403	7.8
+R29	MODIFY Arg1:T55 Arg2:E26	
+T56	Date 1404 1418	after 41 weeks
+E28	Date:T56 
+R30	MODIFY Arg1:E28 Arg2:T55	
+T57	Medication 1422 1431	ivacaftor
+E29	Medication:T57 
+T3	History 23 49	S549R/1717-1G > A genotype
+R31	AFTER Arg1:E2 Arg2:E3	
+*	OVERLAP E3 E4 E5
+R32	BEFORE Arg1:E5 Arg2:E6	
+*	OVERLAP E6 E7 E8 E1 E9 E10 E11
+T58	Date 569 583	previous years
+E1	Date:T58 
+R33	BEFORE Arg1:E11 Arg2:E12	
+*	OVERLAP E12 E13 E14 E17 E16 E15 E18 E19 E20 E23 E25 E26 E29
+T59	History 334 360	enzyme replacement therapy
+T60	History 263 281	endoscopic surgery

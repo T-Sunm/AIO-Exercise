@@ -1,0 +1,262 @@
+T1	Age 2 24	4 and a half years old
+T2	Sex 25 29	male
+T3	Clinical_event 36 45	presented
+E1	Clinical_event:T3 
+T4	Nonbiological_location 53 61	hospital
+R1	MODIFY Arg1:T4 Arg2:E1	
+T5	Sign_symptom 76 84	swelling
+E2	Sign_symptom:T5 
+T6	Biological_structure 66 75	abdominal
+R2	MODIFY Arg1:T6 Arg2:E2	
+T7	Sign_symptom 114 126	stomach ache
+E3	Sign_symptom:T7 
+T8	Detailed_description 96 108	occasionally
+R3	MODIFY Arg1:T8 Arg2:E3	
+T9	Detailed_description 136 158	relieved for no reason
+R4	MODIFY Arg1:T9 Arg2:E3	
+T10	Sign_symptom 188 198	tenderness
+E4	Sign_symptom:T10 
+T11	Sign_symptom 203 210	rebound
+E5	Sign_symptom:T11 
+A1	POLARITY E4 NEG
+A2	POLARITY E5 NEG
+T12	History 219 286	born as a premature baby in the 32nd week of his mother's pregnancy
+T13	History 317 343	inguinal hernia on 2 sides
+T14	History 373 411	operation for the left inguinal hernia
+T15	Family_history 413 451	No family or genetic history was found
+T16	Diagnostic_procedure 453 473	Physical examination
+E6	Diagnostic_procedure:T16 
+T17	Sign_symptom 526 533	bulging
+E7	Sign_symptom:T17 
+T18	Biological_structure 504 511	abdomen
+R5	MODIFY Arg1:T18 Arg2:E7	
+T19	Detailed_description 516 525	obviously
+R6	MODIFY Arg1:T19 Arg2:E7	
+T20	Sign_symptom 539 543	mass
+E8	Sign_symptom:T20 
+T21	Biological_structure 561 576	below umbilicus
+R7	MODIFY Arg1:T21 Arg2:E8	
+T22	Distance 577 592	about 3 fingers
+R8	MODIFY Arg1:T22 Arg2:T21	
+T23	Diagnostic_procedure 645 661	laboratory tests
+E9	Diagnostic_procedure:T23 
+T24	Lab_value 667 680	almost normal
+R9	MODIFY Arg1:T24 Arg2:E9	
+T25	Diagnostic_procedure 692 709	alpha-fetoprotein
+E10	Diagnostic_procedure:T25 
+T26	Diagnostic_procedure 711 714	AFP
+E11	Diagnostic_procedure:T26 
+R10	IDENTICAL Arg1:E11 Arg2:E10	
+R11	MODIFY Arg1:T24 Arg2:E10	
+R12	SUB_PROCEDURE Arg1:E10 Arg2:E9	
+T27	Diagnostic_procedure 727 743	Child–Pugh score
+E12	Diagnostic_procedure:T27 
+T28	Lab_value 748 759	less than 5
+R13	MODIFY Arg1:T28 Arg2:E12	
+T29	Diagnostic_procedure 771 786	ultrasonography
+E13	Diagnostic_procedure:T29 
+T30	Biological_structure 761 770	Abdominal
+R14	MODIFY Arg1:T30 Arg2:E13	
+T31	Sign_symptom 804 810	lesion
+E14	Sign_symptom:T31 
+T32	Detailed_description 797 803	uneven
+R15	MODIFY Arg1:T32 Arg2:E14	
+T33	Biological_structure 818 823	liver
+R16	MODIFY Arg1:T33 Arg2:E14	
+T34	Disease_disorder 843 845	HB
+E15	Disease_disorder:T34 
+A3	POLARITY E15 UNCERTAIN
+#1	AnnotatorNotes E15	hepatoblastoma
+T35	Diagnostic_procedure 874 893	computed tomography
+E16	Diagnostic_procedure:T35 
+T36	Diagnostic_procedure 895 897	CT
+E17	Diagnostic_procedure:T36 
+R17	IDENTICAL Arg1:E17 Arg2:E16	
+T37	Detailed_description 862 873	Enhancement
+R18	MODIFY Arg1:T37 Arg2:E16	
+T38	Sign_symptom 923 927	mass
+E18	Sign_symptom:T38 
+T39	Detailed_description 917 922	large
+R19	MODIFY Arg1:T39 Arg2:E18	
+T40	Biological_structure 935 953	left upper abdomen
+R20	MODIFY Arg1:T40 Arg2:E18	
+T41	Biological_structure 958 980	left lobe of the liver
+T42	Shape 989 1003	irregular edge
+R21	MODIFY Arg1:T41 Arg2:E18	
+R22	MODIFY Arg1:T42 Arg2:E18	
+T43	Coreference 1021 1025	mass
+E19	Coreference:T43 
+T44	Volume 1030 1050	12.3 × 10.2 × 7.2 cm
+R23	MODIFY Arg1:T44 Arg2:E19	
+R24	IDENTICAL Arg1:E19 Arg2:E18	
+T45	Coreference 1129 1133	mass
+E20	Coreference:T45 
+R25	IDENTICAL Arg1:E20 Arg2:E19	
+T46	Detailed_description 1073 1094	uneven nodular shadow
+T47	Detailed_description 1103 1119	edge was obvious
+R26	MODIFY Arg1:T47 Arg2:E20	
+R27	MODIFY Arg1:T46 Arg2:E20	
+T48	Sign_symptom 1148 1161	Calcification
+E21	Sign_symptom:T48 
+A4	POLARITY E21 NEG
+T49	Sign_symptom 1169 1187	expanded bile duct
+E22	Sign_symptom:T49 
+A5	POLARITY E22 NEG
+T50	Biological_structure 1211 1236	left branch of the portal
+T51	Detailed_description 1257 1293	distant part was shown to be unclear
+T52	Detailed_description 1241 1248	pressed
+R28	MODIFY Arg1:T52 Arg2:T50	
+R29	MODIFY Arg1:T51 Arg2:T50	
+T53	Biological_structure 1328 1340	right branch
+R30	MODIFY Arg1:T53 Arg2:T50	
+#2	AnnotatorNotes T53	of the portal
+T54	Sign_symptom 1295 1303	Abnormal
+E23	Sign_symptom:T54 
+A6	POLARITY E23 NEG
+R31	MODIFY Arg1:E23 Arg2:T53	
+T55	Disease_disorder 1393 1395	HB
+E24	Disease_disorder:T55 
+A7	POLARITY E24 UNCERTAIN
+#3	AnnotatorNotes E24	hepatoblastoma
+T56	Diagnostic_procedure 1435 1441	biopsy
+E25	Diagnostic_procedure:T56 
+A8	POLARITY E25 NEG
+T57	Therapeutic_procedure 1513 1522	operation
+E26	Therapeutic_procedure:T57 
+T58	Therapeutic_procedure 1560 1572	DVSS surgery
+E27	Therapeutic_procedure:T58 
+#4	AnnotatorNotes E27	da Vinci Surgical System
+R32	SUB_PROCEDURE Arg1:E27 Arg2:E26	
+T59	Detailed_description 1573 1600	with sufficient preparation
+R33	MODIFY Arg1:T59 Arg2:E27	
+T60	Diagnostic_procedure 1602 1613	Exploration
+E28	Diagnostic_procedure:T60 
+T61	Detailed_description 1624 1636	extrahepatic
+T62	Area 1637 1647	12 × 10 cm
+T63	Sign_symptom 1648 1652	mass
+E29	Sign_symptom:T63 
+T64	Biological_structure 1660 1682	left lobe of the liver
+R34	MODIFY Arg1:T64 Arg2:E29	
+R35	MODIFY Arg1:T61 Arg2:E29	
+R36	MODIFY Arg1:T62 Arg2:E29	
+T65	Disease_disorder 1987 1990	MHL
+E30	Disease_disorder:T65 
+#5	AnnotatorNotes E30	Mesenchymal hamartoma of the liver
+T66	Diagnostic_procedure 2014 2042	Immunohistochemistry results
+E31	Diagnostic_procedure:T66 
+T67	Diagnostic_procedure 2071 2087	mesenchymal CD34
+E32	Diagnostic_procedure:T67 
+T68	Diagnostic_procedure 2093 2098	D2–40
+E33	Diagnostic_procedure:T68 
+T69	Diagnostic_procedure 2104 2109	S-100
+E34	Diagnostic_procedure:T69 
+T70	Diagnostic_procedure 2115 2118	SMA
+E35	Diagnostic_procedure:T70 
+T71	Diagnostic_procedure 2124 2127	CD7
+E36	Diagnostic_procedure:T71 
+T72	Diagnostic_procedure 2133 2148	epithelium CK19
+E37	Diagnostic_procedure:T72 
+T73	Diagnostic_procedure 2154 2157	AFP
+E38	Diagnostic_procedure:T73 
+T74	Diagnostic_procedure 2163 2166	HCG
+E39	Diagnostic_procedure:T74 
+R37	SUB_PROCEDURE Arg1:E32 Arg2:E31	
+R38	SUB_PROCEDURE Arg1:E33 Arg2:E31	
+R39	SUB_PROCEDURE Arg1:E34 Arg2:E31	
+R40	SUB_PROCEDURE Arg1:E35 Arg2:E31	
+R41	SUB_PROCEDURE Arg1:E36 Arg2:E31	
+R42	SUB_PROCEDURE Arg1:E37 Arg2:E31	
+R43	SUB_PROCEDURE Arg1:E38 Arg2:E31	
+R44	SUB_PROCEDURE Arg1:E39 Arg2:E31	
+T75	Lab_value 2089 2090	+
+T76	Lab_value 2100 2101	+
+R45	MODIFY Arg1:T75 Arg2:E32	
+R46	MODIFY Arg1:T76 Arg2:E33	
+T77	Lab_value 2111 2112	-
+R47	MODIFY Arg1:T77 Arg2:E34	
+T78	Lab_value 2120 2121	+
+R48	MODIFY Arg1:T78 Arg2:E35	
+T79	Lab_value 2129 2130	-
+R49	MODIFY Arg1:T79 Arg2:E36	
+T80	Lab_value 2150 2151	+
+R50	MODIFY Arg1:T80 Arg2:E37	
+T81	Lab_value 2159 2160	-
+R51	MODIFY Arg1:T81 Arg2:E38	
+T82	Lab_value 2168 2169	-
+R52	MODIFY Arg1:T82 Arg2:E39	
+T83	Therapeutic_procedure 2188 2196	recovery
+E40	Therapeutic_procedure:T83 
+T84	Duration 2178 2184	9 days
+E41	Duration:T84 
+T85	Clinical_event 2210 2218	returned
+E42	Clinical_event:T85 
+T86	Nonbiological_location 2219 2223	home
+R53	MODIFY Arg1:T86 Arg2:E42	
+T87	Sign_symptom 2232 2245	complications
+E43	Sign_symptom:T87 
+A9	POLARITY E43 NEG
+T88	Diagnostic_procedure 2287 2300	blood routine
+E44	Diagnostic_procedure:T88 
+T89	Diagnostic_procedure 2302 2322	liver renal function
+E45	Diagnostic_procedure:T89 
+T90	Diagnostic_procedure 2324 2343	coagulation routine
+E46	Diagnostic_procedure:T90 
+T91	Diagnostic_procedure 2349 2364	ultrasound scan
+E47	Diagnostic_procedure:T91 
+T92	Date 2368 2375	30 days
+E48	Date:T92 
+T93	Sign_symptom 2394 2405	abnormality
+E49	Sign_symptom:T93 
+A10	POLARITY E49 NEG
+T94	Sign_symptom 2410 2440	adverse or unanticipated event
+E50	Sign_symptom:T94 
+A11	POLARITY E50 NEG
+T95	Coreference 1717 1723	sample
+E51	Coreference:T95 
+R54	IDENTICAL Arg1:E51 Arg2:E29	
+T96	Detailed_description 1728 1733	split
+R55	MODIFY Arg1:T96 Arg2:E51	
+T97	Coreference 1751 1756	tumor
+E52	Coreference:T97 
+R56	IDENTICAL Arg1:E52 Arg2:E51	
+T98	Shape 1739 1743;1761 1766	edge clear
+R57	MODIFY Arg1:T98 Arg2:E52	
+T99	Detailed_description 1771 1782	no envelope
+R58	MODIFY Arg1:T99 Arg2:E52	
+T100	Detailed_description 1784 1794	Tremelloid
+#6	AnnotatorNotes T100	like jelly
+T101	Biological_structure 1795 1805	mesenchyme
+R59	MODIFY Arg1:T100 Arg2:T101	
+T102	Coreference 1885 1891	sample
+E53	Coreference:T102 
+R60	IDENTICAL Arg1:E53 Arg2:E52	
+T103	Color 1896 1904	grey red
+R61	MODIFY Arg1:T103 Arg2:E53	
+T104	Volume 1909 1923	14 × 13 × 7 cm
+R62	MODIFY Arg1:T104 Arg2:E53	
+T105	Coreference 1950 1957	section
+E54	Coreference:T105 
+R63	IDENTICAL Arg1:E54 Arg2:E53	
+T106	Color 1962 1970	grey red
+T107	Color 1975 1985	grey white
+R64	MODIFY Arg1:T106 Arg2:E54	
+R65	MODIFY Arg1:T107 Arg2:E54	
+*	OVERLAP E1 E2
+R66	AFTER Arg1:E2 Arg2:E3	
+R67	BEFORE Arg1:E3 Arg2:E4	
+*	OVERLAP E4 E5 E6 E7 E8 E9 E12
+R68	BEFORE Arg1:E12 Arg2:E13	
+*	OVERLAP E13 E14 E15 E16 E18 E21 E22 E23 E24 E25
+R69	BEFORE Arg1:E25 Arg2:E26	
+*	OVERLAP E26 E28 E29
+R70	BEFORE Arg1:E29 Arg2:E30	
+R71	BEFORE Arg1:E30 Arg2:E31	
+R72	BEFORE Arg1:E31 Arg2:E41	
+R73	MODIFY Arg1:E41 Arg2:E40	
+*	OVERLAP E41 E40
+R74	BEFORE Arg1:E40 Arg2:E42	
+*	OVERLAP E42 E43
+T108	Clinical_event 2249 2258	follow-up
+E55	Clinical_event:T108 
+R75	BEFORE Arg1:E43 Arg2:E55	
+*	OVERLAP E55 E44 E45 E46 E47 E48 E49 E50

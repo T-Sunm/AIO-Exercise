@@ -1,0 +1,367 @@
+T1	Age 3 14	18-year-old
+T2	Sex 15 19	lady
+T3	Clinical_event 20 29	presented
+E1	Clinical_event:T3 
+T4	History 35 109	history of progressive swaying while walking, worse in night since 5 years
+T5	Sign_symptom 151 164	tremulousness
+E2	Sign_symptom:T5 
+A1	POLARITY E2 NEG
+T6	Sign_symptom 58 65	swaying
+E3	Sign_symptom:T6 
+T7	Clinical_event 72 79	walking
+E4	Clinical_event:T7 
+T8	Biological_structure 168 179	upper limbs
+R1	MODIFY Arg1:T8 Arg2:E2	
+T9	Duration 102 109	5 years
+E5	Duration:T9 
+T10	Time 90 95	night
+E6	Time:T10 
+T11	Lab_value 81 86	worse
+R3	MODIFY Arg1:E6 Arg2:T11	
+R4	MODIFY Arg1:E5 Arg2:E6	
+T12	Diagnostic_procedure 111 117	Speech
+E7	Diagnostic_procedure:T12 
+T13	History 197 231	no history of weakness or numbness
+T14	Sign_symptom 211 219	weakness
+E8	Sign_symptom:T14 
+A2	POLARITY E8 NEG
+T15	Sign_symptom 223 231	numbness
+E9	Sign_symptom:T15 
+A3	POLARITY E9 NEG
+T16	Family_history 271 418	her elder sister had similar difficulty in walking of 7-year duration and died because of poorly controlled diabetes mellitus at an age of 20 years
+T17	Duration 325 331	7-year
+E10	Duration:T17 
+T18	Subject 275 287	elder sister
+T19	Outcome 345 349	died
+E11	Outcome:T19 
+T20	Disease_disorder 379 396	diabetes mellitus
+E12	Disease_disorder:T20 
+T21	Age 410 418	20 years
+R6	MODIFY Arg1:T21 Arg2:E11	
+R7	CAUSE Arg1:E12 Arg2:E11	
+R8	MODIFY Arg1:T18 Arg2:E11	
+T22	Family_history 420 461	No other members of the kin were affected
+T23	Family_history 476 518	no history of consanguinity in the parents
+T24	Diagnostic_procedure 524 542	cognitive function
+E13	Diagnostic_procedure:T24 
+T27	Diagnostic_procedure 562 586	Mini Mental Status Score
+E14	Diagnostic_procedure:T27 
+T29	Diagnostic_procedure 598 611	Visual acuity
+E15	Diagnostic_procedure:T29 
+T30	Diagnostic_procedure 616 634	fundus examination
+E16	Diagnostic_procedure:T30 
+T32	Diagnostic_procedure 652 673	extraocular movements
+E17	Diagnostic_procedure:T32 
+T33	Diagnostic_procedure 684 692	saccades
+E18	Diagnostic_procedure:T33 
+T34	Diagnostic_procedure 694 702	pursuits
+E19	Diagnostic_procedure:T34 
+R14	SUB_PROCEDURE Arg1:E18 Arg2:E17	
+R15	SUB_PROCEDURE Arg1:E19 Arg2:E17	
+T35	Disease_disorder 723 742	saccadic intrusions
+E20	Disease_disorder:T35 
+A4	POLARITY E20 NEG
+T36	Disease_disorder 746 755	nystagmus
+E21	Disease_disorder:T36 
+A5	POLARITY E21 NEG
+T38	Diagnostic_procedure 774 778	tone
+E22	Diagnostic_procedure:T38 
+T39	Diagnostic_procedure 783 788	power
+E23	Diagnostic_procedure:T39 
+T41	Biological_structure 804 818	all four limbs
+R19	MODIFY Arg1:T41 Arg2:E23	
+R20	MODIFY Arg1:T41 Arg2:E22	
+T43	Sign_symptom 896 931	bilateral extensor plantar response
+E25	Sign_symptom:T43 
+T44	Diagnostic_procedure 933 942	Vibration
+E26	Diagnostic_procedure:T44 
+T45	Diagnostic_procedure 947 967	joint position sense
+E27	Diagnostic_procedure:T45 
+T47	Diagnostic_procedure 984 993	Romberg's
+E28	Diagnostic_procedure:T47 
+T49	Sign_symptom 1016 1022	swayed
+E29	Sign_symptom:T49 
+T50	Detailed_description 1023 1037	to either side
+R24	MODIFY Arg1:T50 Arg2:E29	
+T51	Activity 1044 1066	performing tandem walk
+E30	Activity:T51 
+T54	Diagnostic_procedure 1127 1136	Haemogram
+E32	Diagnostic_procedure:T54 
+T55	Diagnostic_procedure 1138 1143	renal
+E33	Diagnostic_procedure:T55 
+T56	Diagnostic_procedure 1145 1150	liver
+E34	Diagnostic_procedure:T56 
+T57	Diagnostic_procedure 1155 1177	thyroid function tests
+E35	Diagnostic_procedure:T57 
+T59	Diagnostic_procedure 1191 1208	Serum vitamin B12
+E36	Diagnostic_procedure:T59 
+T60	Diagnostic_procedure 1213 1223	folic acid
+E37	Diagnostic_procedure:T60 
+T62	Diagnostic_procedure 1258 1280	Nerve conduction study
+E38	Diagnostic_procedure:T62 
+T63	Diagnostic_procedure 1453 1456	MRI
+E39	Diagnostic_procedure:T63 
+T64	Sign_symptom 1471 1478	atrophy
+E40	Sign_symptom:T64 
+T65	Severity 1464 1470	marked
+R32	MODIFY Arg1:T65 Arg2:E40	
+T66	Biological_structure 1486 1499	cervical cord
+T67	Biological_structure 1515 1525	cerebellum
+R34	MODIFY Arg1:T66 Arg2:E40	
+T69	Diagnostic_procedure 1559 1574	genetic testing
+E41	Diagnostic_procedure:T69 
+T70	Diagnostic_procedure 1581 1584	PCR
+E42	Diagnostic_procedure:T70 
+R35	SUB_PROCEDURE Arg1:E42 Arg2:E41	
+T71	Sign_symptom 1595 1618	expansion of GAA repeat
+E43	Sign_symptom:T71 
+T73	Diagnostic_procedure 1295 1325	sensory nerve action potential
+E44	Diagnostic_procedure:T73 
+T74	Diagnostic_procedure 1338 1352	distal latency
+E45	Diagnostic_procedure:T74 
+T75	Diagnostic_procedure 1354 1373	conduction velocity
+E46	Diagnostic_procedure:T75 
+T76	Diagnostic_procedure 1378 1423	amplitude of compound muscle action potential
+E47	Diagnostic_procedure:T76 
+T77	Diagnostic_procedure 1425 1429	CMAP
+E48	Diagnostic_procedure:T77 
+R36	IDENTICAL Arg1:E48 Arg2:E47	
+T79	Biological_structure 1438 1451	nerves trunks
+R40	MODIFY Arg1:T79 Arg2:E45	
+R41	MODIFY Arg1:T79 Arg2:E46	
+R42	MODIFY Arg1:T79 Arg2:E47	
+T80	Detailed_description 1622 1660	both alleles (254 and 298) of FXN gene
+R43	MODIFY Arg1:T80 Arg2:E43	
+T81	Disease_disorder 1813 1845	Ataxia with vitamin E deficiency
+E49	Disease_disorder:T81 
+A6	POLARITY E49 UNCERTAIN
+T82	Sign_symptom 1899 1909	titubation
+E50	Sign_symptom:T82 
+A7	POLARITY E50 UNCERTAIN
+T83	Disease_disorder 1768 1772	FRDA
+E51	Disease_disorder:T83 
+T84	Sign_symptom 1914 1926	hyperkinesia
+E52	Sign_symptom:T84 
+A8	POLARITY E52 UNCERTAIN
+T85	Disease_disorder 1847 1851	AVED
+E53	Disease_disorder:T85 
+R44	IDENTICAL Arg1:E53 Arg2:E49	
+T86	Coreference 1946 1950	AVED
+E54	Coreference:T86 
+R45	IDENTICAL Arg1:E54 Arg2:E49	
+T87	Family_history 1955 2024	strong family history of ataxia and diabetes mellitus in elder sister
+T88	Coreference 1886 1890	FRDA
+E55	Coreference:T88 
+R46	IDENTICAL Arg1:E55 Arg2:E51	
+T89	Coreference 2034 2038	FRDA
+E56	Coreference:T89 
+R47	IDENTICAL Arg1:E56 Arg2:E55	
+T90	Disease_disorder 2040 2070	Ataxia with oculomotor apraxia
+E57	Disease_disorder:T90 
+A9	POLARITY E57 NEG
+T91	Disease_disorder 2072 2075	AOA
+E58	Disease_disorder:T91 
+R48	IDENTICAL Arg1:E58 Arg2:E57	
+T92	Sign_symptom 2128 2155	apraxia of ocular movements
+E59	Sign_symptom:T92 
+A10	POLARITY E59 NEG
+T93	Detailed_description 2077 2090	types 1 and 2
+R49	MODIFY Arg1:T93 Arg2:E57	
+T94	Sign_symptom 2157 2174	distal amyotrophy
+E60	Sign_symptom:T94 
+T95	Sign_symptom 2183 2217	axonal sensorimotor polyneuropathy
+E61	Sign_symptom:T95 
+T96	Severity 2176 2182	severe
+R50	MODIFY Arg1:T96 Arg2:E61	
+T97	Sign_symptom 2220 2227	atrophy
+E62	Sign_symptom:T97 
+A11	POLARITY E60 NEG
+A12	POLARITY E61 NEG
+A13	POLARITY E62 NEG
+T98	Biological_structure 2231 2241	cerebellum
+T99	Sign_symptom 2246 2267	involuntary movements
+E63	Sign_symptom:T99 
+A14	POLARITY E63 NEG
+R51	MODIFY Arg1:T98 Arg2:E62	
+T100	Disease_disorder 2270 2291	Ataxia telengiectesia
+E64	Disease_disorder:T100 
+A15	POLARITY E64 NEG
+T101	Sign_symptom 2344 2366	Muco-cutaneous markers
+E65	Sign_symptom:T101 
+A16	POLARITY E65 NEG
+T102	Sign_symptom 2383 2393	infections
+E66	Sign_symptom:T102 
+A17	POLARITY E66 NEG
+T103	Biological_structure 2368 2382	sino-pulmonary
+R52	MODIFY Arg1:T103 Arg2:E66	
+T104	Sign_symptom 2395 2417	hypogammaglobulinaemia
+E67	Sign_symptom:T104 
+A18	POLARITY E67 NEG
+T105	Sign_symptom 2422 2438	radiosensitivity
+E68	Sign_symptom:T105 
+A19	POLARITY E68 NEG
+T106	Sign_symptom 2496 2505	neoplasms
+E69	Sign_symptom:T106 
+A20	POLARITY E69 NEG
+T107	Disease_disorder 2661 2718	autosomal recessive spastic ataxia of Charlevoix-Saguenay
+E70	Disease_disorder:T107 
+A21	POLARITY E70 NEG
+T108	Disease_disorder 2723 2749	Marinesco-Sjögren syndrome
+E71	Disease_disorder:T108 
+A22	POLARITY E71 NEG
+T109	Disease_disorder 2601 2635	autosomal recessive spastic ataxia
+E72	Disease_disorder:T109 
+R53	CAUSE Arg1:E70 Arg2:E72	
+R54	CAUSE Arg1:E71 Arg2:E72	
+T110	Disease_disorder 2751 2778	Charcot-Marie-Tooth disease
+E73	Disease_disorder:T110 
+A23	POLARITY E73 NEG
+T111	Sign_symptom 2812 2823	gait ataxia
+E74	Sign_symptom:T111 
+T112	Disease_disorder 2868 2871	CMT
+E75	Disease_disorder:T112 
+R55	IDENTICAL Arg1:E75 Arg2:E73	
+T113	Sign_symptom 2935 2949	motor weakness
+E76	Sign_symptom:T113 
+A24	POLARITY E76 NEG
+T114	Medication 3054 3063	Idebenone
+E77	Medication:T114 
+T115	Dosage 3089 3107	450 mg twice a day
+T116	Therapeutic_procedure 3157 3170	physiotherapy
+E78	Therapeutic_procedure:T116 
+T117	Therapeutic_procedure 3171 3189	Frenkel's exercise
+E79	Therapeutic_procedure:T117 
+R56	SUB_PROCEDURE Arg1:E79 Arg2:E78	
+T118	Diagnostic_procedure 3205 3218	Blood glucose
+E80	Diagnostic_procedure:T118 
+T119	Date 3246 3254	4 months
+E81	Date:T119 
+T120	Sign_symptom 2951 2968	retained reflexes
+E82	Sign_symptom:T120 
+T121	Sign_symptom 2970 2998	bilaterally extensor plantar
+E83	Sign_symptom:T121 
+T122	Sign_symptom 3003 3026	pure sensory neuropathy
+E84	Sign_symptom:T122 
+T123	Diagnostic_procedure 3030 3052	nerve conduction study
+E85	Diagnostic_procedure:T123 
+T124	Detailed_description 3116 3138	antioxidant properties
+R57	MODIFY Arg1:T124 Arg2:E77	
+T125	Diagnostic_procedure 3295 3310	gait difficulty
+E86	Diagnostic_procedure:T125 
+T126	Severity 3266 3287	no significant change
+R58	MODIFY Arg1:T126 Arg2:E86	
+T127	Frequency 3232 3241	regularly
+R59	MODIFY Arg1:T127 Arg2:E80	
+T128	Coreference 2647 2651	FRDA
+E87	Coreference:T128 
+R60	IDENTICAL Arg1:E87 Arg2:E89	
+T129	Coreference 2839 2843	FRDA
+E88	Coreference:T129 
+R61	IDENTICAL Arg1:E88 Arg2:E87	
+T130	Coreference 2565 2569	FRDA
+E89	Coreference:T130 
+T131	Coreference 2556 2560	AOAs
+E90	Coreference:T131 
+T132	Coreference 2325 2342	AOA types 1 and 2
+E91	Coreference:T132 
+R62	IDENTICAL Arg1:E91 Arg2:E57	
+R63	IDENTICAL Arg1:E90 Arg2:E91	
+R64	IDENTICAL Arg1:E89 Arg2:E56	
+T133	Lab_value 361 378	poorly controlled
+R65	MODIFY Arg1:T133 Arg2:E12	
+T134	Sign_symptom 300 321	difficulty in walking
+E92	Sign_symptom:T134 
+T42	Diagnostic_procedure 867 884	myotatic reflexes
+E24	Diagnostic_procedure:T42 
+T135	Lab_value 851 863	exaggeration
+E93	Lab_value:T135 
+R66	MODIFY Arg1:E93 Arg2:E24	
+T52	Diagnostic_procedure 1093 1106	blood glucose
+E31	Diagnostic_procedure:T52 
+T136	Detailed_description 1068 1075	Fasting
+T137	Detailed_description 1080 1092	postprandial
+R25	MODIFY Arg1:T136 Arg2:E31	
+R67	MODIFY Arg1:T137 Arg2:E31	
+T53	Lab_value 1119 1125	normal
+E94	Lab_value:T53 
+R68	MODIFY Arg1:E94 Arg2:E31	
+R69	MODIFY Arg1:T66 Arg2:E39	
+R70	MODIFY Arg1:T67 Arg2:E39	
+R71	MODIFY Arg1:E4 Arg2:E3	
+T25	Lab_value 122 128	normal
+E95	Lab_value:T25 
+R9	MODIFY Arg1:E95 Arg2:E7	
+R5	MODIFY Arg1:E10 Arg2:E92	
+T26	Lab_value 547 553	normal
+E96	Lab_value:T26 
+R10	MODIFY Arg1:E96 Arg2:E13	
+T28	Lab_value 591 596	30/30
+E97	Lab_value:T28 
+R11	MODIFY Arg1:E97 Arg2:E14	
+T31	Lab_value 640 646	normal
+E98	Lab_value:T31 
+R12	MODIFY Arg1:E98 Arg2:E16	
+R13	MODIFY Arg1:E98 Arg2:E15	
+T37	Lab_value 708 714	normal
+E99	Lab_value:T37 
+R16	MODIFY Arg1:E99 Arg2:E17	
+T40	Lab_value 794 800	normal
+E100	Lab_value:T40 
+R17	MODIFY Arg1:E100 Arg2:E23	
+R18	MODIFY Arg1:E100 Arg2:E22	
+T46	Lab_value 973 979	intact
+E101	Lab_value:T46 
+R21	MODIFY Arg1:E101 Arg2:E27	
+R22	MODIFY Arg1:E101 Arg2:E26	
+T48	Lab_value 998 1006	positive
+E102	Lab_value:T48 
+R23	MODIFY Arg1:E102 Arg2:E28	
+T58	Lab_value 1183 1189	normal
+E103	Lab_value:T58 
+R26	MODIFY Arg1:E103 Arg2:E35	
+R27	MODIFY Arg1:E103 Arg2:E34	
+R28	MODIFY Arg1:E103 Arg2:E33	
+R29	MODIFY Arg1:E103 Arg2:E32	
+T61	Lab_value 1243 1249	normal
+E104	Lab_value:T61 
+R30	MODIFY Arg1:E104 Arg2:E37	
+R31	MODIFY Arg1:E104 Arg2:E36	
+T72	Lab_value 1288 1294	absent
+E105	Lab_value:T72 
+R72	MODIFY Arg1:E105 Arg2:E44	
+T78	Lab_value 1331 1337	normal
+E106	Lab_value:T78 
+R37	MODIFY Arg1:E106 Arg2:E45	
+R38	MODIFY Arg1:E106 Arg2:E46	
+R39	MODIFY Arg1:E106 Arg2:E47	
+T68	Lab_value 1536 1542	normal
+E107	Lab_value:T68 
+R33	MODIFY Arg1:E107 Arg2:T67	
+T138	Disease_disorder 1685 1712	autosomal recessive ataxias
+E108	Disease_disorder:T138 
+T139	Coreference 2522 2543	ataxia telengiectasia
+E109	Coreference:T139 
+R73	IDENTICAL Arg1:E109 Arg2:E64	
+R74	CAUSE Arg1:E87 Arg2:E72	
+T140	Disease_disorder 2793 2807	polyneuropathy
+E110	Disease_disorder:T140 
+T141	Detailed_description 2783 2792	inherited
+R75	MODIFY Arg1:T141 Arg2:E110	
+R76	IDENTICAL Arg1:E110 Arg2:E73	
+R77	AFTER Arg1:E1 Arg2:E3	
+R2	MODIFY Arg1:T11 Arg2:E3	
+R78	BEFORE Arg1:E3 Arg2:E7	
+*	OVERLAP E7 E2
+R79	AFTER Arg1:E2 Arg2:E8	
+*	OVERLAP E8 E9 E92 E11
+R80	MODIFY Arg1:T18 Arg2:E92	
+R81	BEFORE Arg1:E11 Arg2:E13	
+*	OVERLAP E13 E14 E15 E16 E17 E20 E21 E22 E23 E24 E25 E26 E27 E28 E29 E30
+R82	BEFORE Arg1:E30 Arg2:E31	
+*	OVERLAP E31 E32 E33 E34 E35 E36 E37 E38 E44 E45 E46 E47
+R83	BEFORE Arg1:E47 Arg2:E39	
+*	OVERLAP E39 E41 E43
+R84	BEFORE Arg1:E43 Arg2:E77	
+*	OVERLAP E77 E78
+R85	BEFORE Arg1:E78 Arg2:E80	
+*	OVERLAP E80 E81 E86

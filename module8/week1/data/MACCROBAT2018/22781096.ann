@@ -1,0 +1,270 @@
+T1	Age 5 16	16-year-old
+T2	Sex 17 20	boy
+T3	Family_history 44 70	non-consanguineous parents
+T4	Family_history 72 121	His parents and two younger siblings were healthy
+T5	Date 160 174	7 years of age
+E1	Date:T5 
+T6	Sign_symptom 199 214	short in height
+E2	Sign_symptom:T6 
+T7	Sign_symptom 216 231	slightly myopic
+E3	Sign_symptom:T7 
+T8	Sign_symptom 233 243	astigmatic
+E4	Sign_symptom:T8 
+T9	Sign_symptom 256 279	subnormal visual acuity
+E5	Sign_symptom:T9 
+T10	Diagnostic_procedure 281 312	Endocrinological investigations
+E6	Diagnostic_procedure:T10 
+T11	Sign_symptom 374 404	growth hormone (GH) deficiency
+E7	Sign_symptom:T11 
+T12	Lab_value 352 369	borderline values
+R1	MODIFY Arg1:T12 Arg2:E7	
+T13	Medication 452 454	GH
+E8	Medication:T13 
+T14	Clinical_event 426 433	treated
+E9	Clinical_event:T14 
+T15	Sign_symptom 467 499	beneficiary effect on his growth
+E10	Sign_symptom:T15 
+A1	POLARITY E10 NEG
+R2	MODIFY Arg1:E8 Arg2:E9	
+R3	CAUSE Arg1:E8 Arg2:E10	
+T16	Sign_symptom 518 560	height and weight was −3 SD below the mean
+E11	Sign_symptom:T16 
+T17	Date 508 516	16 years
+E12	Date:T17 
+T18	Diagnostic_procedure 612 643	Ophthalmological investigations
+E13	Diagnostic_procedure:T18 
+T19	Date 647 662	10 years of age
+E14	Date:T19 
+T20	Sign_symptom 670 692	pigmentary retinopathy
+E15	Sign_symptom:T20 
+T21	Sign_symptom 697 710	optic atrophy
+E16	Sign_symptom:T21 
+T22	Diagnostic_procedure 715 732	electroretinogram
+E17	Diagnostic_procedure:T22 
+T23	Sign_symptom 767 785	rod cone dystrophy
+E18	Sign_symptom:T23 
+T24	Severity 760 766	severe
+R4	MODIFY Arg1:T24 Arg2:E18	
+T25	Sign_symptom 804 817	visual acuity
+E19	Sign_symptom:T25 
+T26	Sign_symptom 819 832	visual fields
+E20	Sign_symptom:T26 
+T27	Sign_symptom 834 846	color vision
+E21	Sign_symptom:T27 
+T28	Sign_symptom 852 865	dark adaption
+E22	Sign_symptom:T28 
+T29	Lab_value 794 803	decreased
+R5	MODIFY Arg1:T29 Arg2:E19	
+R6	MODIFY Arg1:T29 Arg2:E20	
+R7	MODIFY Arg1:T29 Arg2:E21	
+R8	MODIFY Arg1:T29 Arg2:E22	
+T30	Sign_symptom 867 876	Nystagmus
+E23	Sign_symptom:T30 
+T31	Date 898 913	14 years of age
+E24	Date:T31 
+T32	Sign_symptom 929 940	photophobia
+E25	Sign_symptom:T32 
+T33	Sign_symptom 945 964	bilateral cataracts
+E26	Sign_symptom:T33 
+T34	Therapeutic_procedure 985 1011	cataracts were operated on
+E27	Therapeutic_procedure:T34 
+T35	Date 1015 1030	16 years of age
+E28	Date:T35 
+T36	Date 1052 1067	14 years of age
+E29	Date:T36 
+T37	Diagnostic_procedure 1089 1116	neurological investigations
+E30	Diagnostic_procedure:T37 
+T38	Diagnostic_procedure 1120 1140	clinical examination
+E31	Diagnostic_procedure:T38 
+T39	Sign_symptom 1153 1171	ataxia with tremor
+E32	Sign_symptom:T39 
+T40	Severity 1148 1152	mild
+R13	MODIFY Arg1:T40 Arg2:E32	
+T41	Sign_symptom 1173 1182	dysmetria
+E33	Sign_symptom:T41 
+T42	Sign_symptom 1187 1203	gait instability
+E34	Sign_symptom:T42 
+T43	Sign_symptom 1235 1250	muscle weakness
+E35	Sign_symptom:T43 
+T44	Severity 1218 1234	mild to moderate
+R14	MODIFY Arg1:T44 Arg2:E35	
+T45	Severity 1252 1266	weak to absent
+T46	Sign_symptom 1267 1282	tendon reflexes
+E36	Sign_symptom:T46 
+R15	MODIFY Arg1:T45 Arg2:E36	
+T47	Biological_structure 1290 1307	lower extremities
+T48	Sign_symptom 1313 1333	exercise intolerance
+E37	Sign_symptom:T48 
+T49	Diagnostic_procedure 1335 1361	Audiometric investigations
+E38	Diagnostic_procedure:T49 
+T50	Sign_symptom 1388 1420	sensorineural hearing impairment
+E39	Sign_symptom:T50 
+T51	Detailed_description 1378 1387	bilateral
+T52	Severity 1373 1377	mild
+R16	MODIFY Arg1:T51 Arg2:E39	
+R17	MODIFY Arg1:T52 Arg2:E39	
+T53	Date 1425 1440	15 years of age
+E40	Date:T53 
+T54	Detailed_description 1452 1462	unprovoked
+T55	Sign_symptom 1463 1480	epileptic seizure
+E41	Sign_symptom:T55 
+T56	Clinical_event 1508 1515	treated
+E42	Clinical_event:T56 
+T57	Medication 1521 1534	levetiracetam
+E43	Medication:T57 
+T58	Sign_symptom 1536 1560	Decreased renal function
+E44	Sign_symptom:T58 
+T59	Date 1579 1594	15 years of age
+E45	Date:T59 
+T60	Diagnostic_procedure 1611 1627	serum creatinine
+E46	Diagnostic_procedure:T60 
+T61	Lab_value 1601 1610	increased
+T62	Lab_value 1631 1641	145 μmol/l
+R18	MODIFY Arg1:T61 Arg2:E46	
+R19	MODIFY Arg1:T62 Arg2:E46	
+T63	Sign_symptom 1677 1688	proteinuria
+E47	Sign_symptom:T63 
+T64	Diagnostic_procedure 1694 1708	urine albumine
+E48	Diagnostic_procedure:T64 
+T65	Lab_value 1712 1724	244–538 mg/l
+T66	Diagnostic_procedure 1759 1784	urine albumine/creatinine
+E49	Diagnostic_procedure:T66 
+T67	Lab_value 1794 1805	44–59 g/mol
+T68	Biological_structure 1839 1844	renal
+T69	Diagnostic_procedure 1845 1857	scintigraphy
+E50	Diagnostic_procedure:T69 
+T70	Sign_symptom 1871 1890	reduced kidney size
+E51	Sign_symptom:T70 
+T71	Diagnostic_procedure 1892 1911	Cr51-EDTA clearance
+E52	Diagnostic_procedure:T71 
+T72	Lab_value 1921 1930	decreased
+T73	Diagnostic_procedure 1931 1957	glomerular filtration rate
+E53	Diagnostic_procedure:T73 
+T74	Lab_value 1961 1975	42% of normal.
+T75	Coreference 1980 1995	filtration rate
+E54	Coreference:T75 
+R20	IDENTICAL Arg1:E54 Arg2:E53	
+T76	Lab_value 1996 2005	decreased
+T77	Lab_value 2019 2032	29% of normal
+T78	Date 2036 2051	16 years of age
+E55	Date:T78 
+T79	Diagnostic_procedure 2076 2098	cardiac investigations
+E56	Diagnostic_procedure:T79 
+T80	Sign_symptom 2117 2128	hypertrophy
+E57	Sign_symptom:T80 
+T81	Biological_structure 2136 2163	walls of the left ventricle
+T83	Diagnostic_procedure 2277 2305	Mitochondrial investigations
+E59	Diagnostic_procedure:T83 
+T84	Date 2059 2074	14 years of age
+E60	Date:T84 
+T85	Date 2324 2339	14 years of age
+E61	Date:T85 
+T86	Sign_symptom 2249 2275	obstruction of the outflow
+E62	Sign_symptom:T86 
+A2	POLARITY E62 NEG
+T82	Severity 2198 2204	normal
+T87	Sign_symptom 2205 2236	systolic and diastolic function
+E58	Sign_symptom:T87 
+R21	MODIFY Arg1:T82 Arg2:E58	
+T88	Diagnostic_procedure 2357 2364	lactate
+E63	Diagnostic_procedure:T88 
+T89	Diagnostic_procedure 2369 2377	pyruvate
+E64	Diagnostic_procedure:T89 
+T90	Lab_value 2383 2386	1.6
+T91	Lab_value 2391 2403	0.096 mmol/l
+R22	MODIFY Arg1:T90 Arg2:E63	
+R23	MODIFY Arg1:T91 Arg2:E64	
+T93	Diagnostic_procedure 2341 2353	Blood levels
+E65	Diagnostic_procedure:T93 
+R24	SUB_PROCEDURE Arg1:E63 Arg2:E65	
+R25	SUB_PROCEDURE Arg1:E64 Arg2:E65	
+T94	Diagnostic_procedure 2476 2495	cerebrospinal fluid
+E66	Diagnostic_procedure:T94 
+T95	Diagnostic_procedure 2497 2500	CSF
+E67	Diagnostic_procedure:T95 
+T96	Diagnostic_procedure 2512 2519	lactate
+E68	Diagnostic_procedure:T96 
+T97	Diagnostic_procedure 2524 2532	pyruvate
+E69	Diagnostic_procedure:T97 
+T98	Lab_value 2538 2541	3.6
+T99	Lab_value 2546 2559	0.137 mmol/l,
+T100	Diagnostic_procedure 2587 2612	lactate to pyruvate ratio
+E70	Diagnostic_procedure:T100 
+T92	Diagnostic_procedure 2432 2437	ratio
+E71	Diagnostic_procedure:T92 
+T101	Lab_value 2441 2443	33
+R26	MODIFY Arg1:T101 Arg2:E71	
+R27	IDENTICAL Arg1:E70 Arg2:E71	
+T102	Lab_value 2616 2618	26
+R28	MODIFY Arg1:T102 Arg2:E70	
+R29	MODIFY Arg1:T98 Arg2:E68	
+R30	MODIFY Arg1:T99 Arg2:E69	
+T103	Diagnostic_procedure 2624 2649	urinary lactate excretion
+E72	Diagnostic_procedure:T103 
+T104	Lab_value 2654 2660	normal
+R31	MODIFY Arg1:T104 Arg2:E72	
+T105	Diagnostic_procedure 2666 2677	CSF albumin
+E73	Diagnostic_procedure:T105 
+T106	Lab_value 2695 2703	258 mg/l
+T107	Lab_value 2682 2691	increased
+T108	Diagnostic_procedure 2761 2785	CSF/plasma albumin ratio
+E74	Diagnostic_procedure:T108 
+T109	Lab_value 2789 2792	7.4
+T110	Lab_value 2751 2760	increased
+R32	MODIFY Arg1:T109 Arg2:E74	
+R33	MODIFY Arg1:T110 Arg2:E74	
+R34	MODIFY Arg1:T107 Arg2:E73	
+R35	MODIFY Arg1:T106 Arg2:E73	
+T111	Diagnostic_procedure 2819 2847	serum acyl carnitine profile
+E75	Diagnostic_procedure:T111 
+T112	Diagnostic_procedure 2852 2875	muscle carnitine levels
+E76	Diagnostic_procedure:T112 
+T113	Diagnostic_procedure 2893 2923	serum creatine kinase activity
+E77	Diagnostic_procedure:T113 
+T114	Lab_value 2881 2887	normal
+R36	MODIFY Arg1:T114 Arg2:E76	
+R37	MODIFY Arg1:T114 Arg2:E75	
+T115	Lab_value 2928 2944	mildly increased
+T116	Lab_value 2948 2958	5.4 μkat/l
+R38	MODIFY Arg1:T115 Arg2:E77	
+R39	MODIFY Arg1:T116 Arg2:E77	
+T117	Date 915 927	A year later
+E78	Date:T117 
+T118	Date 1038 1041	now
+E79	Date:T118 
+T119	Sign_symptom 1042 1047	blind
+E80	Sign_symptom:T119 
+*	OVERLAP E1 E2 E3 E4 E5 E6 E7 E8 E10
+R9	BEFORE Arg1:E10 Arg2:E12	
+*	OVERLAP E12 E11
+R10	AFTER Arg1:E11 Arg2:E13	
+*	OVERLAP E13 E14 E15 E16 E17 E18 E19 E20 E21 E22
+R11	BEFORE Arg1:E22 Arg2:E23	
+*	OVERLAP E23 E24
+R12	BEFORE Arg1:E24 Arg2:E78	
+*	OVERLAP E78 E25 E26
+R40	BEFORE Arg1:E26 Arg2:E27	
+*	OVERLAP E27 E28
+R41	BEFORE Arg1:E28 Arg2:E79	
+*	OVERLAP E79 E80
+R42	AFTER Arg1:E80 Arg2:E29	
+*	OVERLAP E29 E30 E31 E32 E33 E34 E35 E36 E37 E38 E39
+R43	BEFORE Arg1:E39 Arg2:E40	
+*	OVERLAP E40 E41 E42 E44 E45 E46 E47 E49 E50 E51 E52 E53
+R44	MODIFY Arg1:E43 Arg2:E42	
+R45	MODIFY Arg1:T65 Arg2:E48	
+R46	MODIFY Arg1:T67 Arg2:E49	
+R47	MODIFY Arg1:E48 Arg2:E47	
+R48	MODIFY Arg1:T68 Arg2:E50	
+R49	MODIFY Arg1:T72 Arg2:E53	
+R50	BEFORE Arg1:E53 Arg2:E54	
+R51	MODIFY Arg1:T76 Arg2:E54	
+R52	MODIFY Arg1:T77 Arg2:E54	
+*	OVERLAP E54 E55
+R53	AFTER Arg1:E55 Arg2:E60	
+*	OVERLAP E60 E56 E57 E58 E62 E59 E61 E65 E67 E66 E72 E73 E74 E75 E76 E77
+R54	MODIFY Arg1:T81 Arg2:E57	
+R55	SUB_PROCEDURE Arg1:E71 Arg2:E65	
+R56	SUB_PROCEDURE Arg1:E68 Arg2:E66	
+R57	SUB_PROCEDURE Arg1:E69 Arg2:E66	
+R58	SUB_PROCEDURE Arg1:E70 Arg2:E66	

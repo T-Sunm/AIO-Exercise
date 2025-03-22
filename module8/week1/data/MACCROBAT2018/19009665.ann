@@ -1,0 +1,257 @@
+T1	Age 2 13	49-year-old
+T2	Sex 14 19	woman
+T3	Clinical_event 24 32	admitted
+E1	Clinical_event:T3 
+T4	Nonbiological_location 40 63	Department of Radiology
+R1	MODIFY Arg1:T4 Arg2:E1	
+T5	Nonbiological_location 71 120	Second Affiliated Hospital of Zhejiang University
+R2	MODIFY Arg1:T5 Arg2:T4	
+T6	Date 124 136	October 2004
+E2	Date:T6 
+T7	Sign_symptom 163 167	pain
+E3	Sign_symptom:T7 
+T8	Sign_symptom 172 183	weight loss
+E4	Sign_symptom:T8 
+T9	Biological_structure 142 162	right upper quadrant
+R3	MODIFY Arg1:T9 Arg2:E3	
+T10	History 195 220	hepatitis B virus carrier
+T11	Disease_disorder 195 206	hepatitis B
+E5	Disease_disorder:T11 
+T12	Diagnostic_procedure 226 239	α-fetoprotein
+E6	Diagnostic_procedure:T12 
+T13	Lab_value 250 262	1185.3 ng/mL
+R4	MODIFY Arg1:T13 Arg2:E6	
+T14	Diagnostic_procedure 264 279	Ultrasonography
+E7	Diagnostic_procedure:T14 
+T15	Diagnostic_procedure 284 303	computed tomography
+E8	Diagnostic_procedure:T15 
+T16	Diagnostic_procedure 305 307	CT
+E9	Diagnostic_procedure:T16 
+R5	IDENTICAL Arg1:E9 Arg2:E8	
+T17	Sign_symptom 326 330	mass
+E10	Sign_symptom:T17 
+T18	Distance 320 325	10-cm
+R6	MODIFY Arg1:T18 Arg2:E10	
+T19	Biological_structure 364 380	right liver lobe
+T20	Biological_structure 338 356	posterior segments
+R7	MODIFY Arg1:T20 Arg2:T19	
+R8	MODIFY Arg1:T19 Arg2:E10	
+T21	Sign_symptom 391 395	mass
+E11	Sign_symptom:T21 
+T22	Biological_structure 418 438	left lateral segment
+R9	MODIFY Arg1:T22 Arg2:E11	
+T23	Distance 384 390	1.5-cm
+R10	MODIFY Arg1:T23 Arg2:E11	
+T24	Disease_disorder 503 506	HCC
+E12	Disease_disorder:T24 
+#1	AnnotatorNotes E12	hepatocellular carcinoma
+T25	Detailed_description 492 502	inoperable
+R11	MODIFY Arg1:T25 Arg2:E12	
+T26	Disease_disorder 530 539	cirrhosis
+E13	Disease_disorder:T26 
+T27	Detailed_description 511 529	Child-Pugh class A
+R12	MODIFY Arg1:T27 Arg2:E13	
+T28	Therapeutic_procedure 541 545	TACE
+E14	Therapeutic_procedure:T28 
+#2	AnnotatorNotes E14	Transcatheter arterial chemoembolization
+T29	Diagnostic_procedure 574 583	Angiogram
+E15	Diagnostic_procedure:T29 
+T30	Sign_symptom 616 636	arterio-venous shunt
+E16	Sign_symptom:T30 
+A1	POLARITY E16 NEG
+T31	Biological_structure 608 615	hepatic
+R13	MODIFY Arg1:T31 Arg2:E16	
+T32	Sign_symptom 659 665	masses
+E17	Sign_symptom:T32 
+T33	Detailed_description 642 650	multiple
+T34	Detailed_description 651 658	smaller
+T35	Biological_structure 669 692	both lobes of the liver
+R14	MODIFY Arg1:T35 Arg2:E17	
+R15	MODIFY Arg1:T34 Arg2:E17	
+R16	MODIFY Arg1:T33 Arg2:E17	
+T36	Medication 709 720	oxaliplatin
+E18	Medication:T36 
+T37	Medication 722 733	pirarubicin
+E19	Medication:T37 
+T38	Medication 735 754	hydroxycamptothecin
+E20	Medication:T38 
+T39	Medication 759 767	lipiodol
+E21	Medication:T39 
+T40	Administration 697 705	emulsion
+R17	MODIFY Arg1:T40 Arg2:E18	
+R18	MODIFY Arg1:T40 Arg2:E19	
+R19	MODIFY Arg1:T40 Arg2:E20	
+R20	MODIFY Arg1:T40 Arg2:E21	
+T41	Dosage 783 788	35 mL
+T42	Dosage 793 797	3 mL
+T43	Medication 805 812	mixture
+E22	Medication:T43 
+R21	MODIFY Arg1:T42 Arg2:E22	
+R22	MODIFY Arg1:T41 Arg2:E22	
+R23	SUB_PROCEDURE Arg1:E21 Arg2:E22	
+R24	SUB_PROCEDURE Arg1:E20 Arg2:E22	
+R25	SUB_PROCEDURE Arg1:E19 Arg2:E22	
+R26	SUB_PROCEDURE Arg1:E18 Arg2:E22	
+#3	AnnotatorNotes E22	this is a tricky situation!
+T44	Administration 831 847	intra-arterially
+R27	MODIFY Arg1:T44 Arg2:E22	
+T45	Biological_structure 855 884	right and left hepatic artery
+R28	MODIFY Arg1:T45 Arg2:T44	
+T46	Sign_symptom 945 949	pain
+E23	Sign_symptom:T46 
+T47	Biological_structure 924 944	right upper quadrant
+R29	MODIFY Arg1:T47 Arg2:E23	
+T48	Diagnostic_procedure 983 991	recovery
+E24	Diagnostic_procedure:T48 
+T49	Lab_value 972 982	uneventful
+R30	MODIFY Arg1:T49 Arg2:E24	
+T50	Date 993 1008	One month later
+E25	Date:T50 
+T51	Therapeutic_procedure 1019 1023	TACE
+E26	Therapeutic_procedure:T51 
+T52	Detailed_description 1012 1018	second
+R31	MODIFY Arg1:T52 Arg2:E26	
+T53	Biological_structure 1056 1076	right hepatic artery
+R32	MODIFY Arg1:T53 Arg2:E26	
+T54	Coreference 1094 1101	mixture
+E27	Coreference:T54 
+R33	IDENTICAL Arg1:E27 Arg2:E22	
+T55	Dosage 1081 1086	40 mL
+R34	MODIFY Arg1:T55 Arg2:E27	
+T56	Date 1127 1135	next day
+E28	Date:T56 
+T57	Sign_symptom 1166 1174	dyspnoea
+E29	Sign_symptom:T57 
+T58	Detailed_description 1160 1165	acute
+T59	Detailed_description 1153 1159	sudden
+R35	MODIFY Arg1:T58 Arg2:E29	
+R36	MODIFY Arg1:T59 Arg2:E29	
+T60	Diagnostic_procedure 1183 1211	peripheral oxygen saturation
+E30	Diagnostic_procedure:T60 
+T61	Lab_value 1212 1221	decreased
+T62	Lab_value 1225 1228	90%
+R37	MODIFY Arg1:T61 Arg2:E30	
+R38	MODIFY Arg1:T62 Arg2:E30	
+T63	Diagnostic_procedure 1240 1245	X-ray
+E31	Diagnostic_procedure:T63 
+T64	Biological_structure 1234 1239	chest
+R39	MODIFY Arg1:T64 Arg2:E31	
+T65	Sign_symptom 1278 1285	shadows
+E32	Sign_symptom:T65 
+T66	Biological_structure 1293 1302	left lung
+R40	MODIFY Arg1:T66 Arg2:E32	
+T67	Detailed_description 1268 1277	reticular
+T68	Detailed_description 1258 1267	increased
+R41	MODIFY Arg1:T67 Arg2:E32	
+R42	MODIFY Arg1:T68 Arg2:E32	
+T69	Biological_structure 1322 1333	lower zones
+R43	MODIFY Arg1:T69 Arg2:E32	
+T70	Diagnostic_procedure 1347 1349	CT
+E33	Diagnostic_procedure:T70 
+T71	Biological_structure 1341 1346	chest
+R44	MODIFY Arg1:T71 Arg2:E33	
+T72	Sign_symptom 1403 1412	materials
+E34	Sign_symptom:T72 
+T73	Detailed_description 1390 1402	high-density
+T74	Detailed_description 1381 1389	oil-like
+T75	Detailed_description 1373 1380	iodized
+T76	Detailed_description 1364 1372	multiple
+R45	MODIFY Arg1:T73 Arg2:E34	
+R46	MODIFY Arg1:T74 Arg2:E34	
+R47	MODIFY Arg1:T75 Arg2:E34	
+R48	MODIFY Arg1:T76 Arg2:E34	
+T77	Biological_structure 1416 1438	parenchyma of the lung
+R49	MODIFY Arg1:T77 Arg2:E34	
+T78	Medication 1464 1477	dexamethasone
+E35	Medication:T78 
+T79	Dosage 1458 1463	10 mg
+T80	Administration 1478 1482	i.v.
+R50	MODIFY Arg1:T79 Arg2:E35	
+R51	MODIFY Arg1:T80 Arg2:E35	
+T81	Therapeutic_procedure 1493 1513	supportive therapies
+E36	Therapeutic_procedure:T81 
+T82	Coreference 1537 1556	respiratory symptom
+E37	Coreference:T82 
+R52	IDENTICAL Arg1:E37 Arg2:E29	
+A2	POLARITY E37 NEG
+T83	Date 1573 1587	Two days later
+E38	Date:T83 
+T84	Sign_symptom 1625 1633	headache
+E39	Sign_symptom:T84 
+T85	Severity 1617 1624	serious
+R53	MODIFY Arg1:T85 Arg2:E39	
+T86	Sign_symptom 1648 1666	consciousness loss
+E40	Sign_symptom:T86 
+T87	Detailed_description 1638 1647	transient
+R54	MODIFY Arg1:T87 Arg2:E40	
+T88	Sign_symptom 1681 1687	nausea
+E41	Sign_symptom:T88 
+T89	Sign_symptom 1692 1700	vomiting
+E42	Sign_symptom:T89 
+T90	Sign_symptom 1713 1722	confusion
+E43	Sign_symptom:T90 
+T91	Sign_symptom 1740 1748	weakness
+E44	Sign_symptom:T91 
+T92	Biological_structure 1724 1739	lower extremity
+R55	MODIFY Arg1:T92 Arg2:E44	
+T93	Diagnostic_procedure 1772 1774	CT
+E45	Diagnostic_procedure:T93 
+T94	Detailed_description 1750 1771	Non-contrast enhanced
+R56	MODIFY Arg1:T94 Arg2:E45	
+T95	Sign_symptom 1827 1834	lesions
+E46	Sign_symptom:T95 
+T96	Detailed_description 1791 1799	multiple
+T97	Detailed_description 1800 1812	disseminated
+T98	Detailed_description 1813 1826	hyper-intense
+R57	MODIFY Arg1:T98 Arg2:E46	
+R58	MODIFY Arg1:T97 Arg2:E46	
+R59	MODIFY Arg1:T96 Arg2:E46	
+T99	Biological_structure 1842 1847	brain
+R60	MODIFY Arg1:T99 Arg2:E46	
+T100	Sign_symptom 1865 1875	deposition
+E47	Sign_symptom:T100 
+T101	Detailed_description 1879 1890	iodized oil
+R61	MODIFY Arg1:T101 Arg2:E47	
+#4	AnnotatorNotes E47	i.e. material where that material shouldn't be.
+T102	Date 1904 1918	One week later
+E48	Date:T102 
+T103	Sign_symptom 1951 1959	symptoms
+E49	Sign_symptom:T103 
+A3	POLARITY E49 NEG
+T104	Biological_structure 1924 1935	respiratory
+T105	Biological_structure 1940 1950	neurologic
+R62	MODIFY Arg1:T105 Arg2:E49	
+R63	MODIFY Arg1:T104 Arg2:E49	
+T106	Clinical_event 1996 2006	discharged
+E50	Clinical_event:T106 
+T107	Therapeutic_procedure 2064 2068	TACE
+E51	Therapeutic_procedure:T107 
+T108	Detailed_description 2052 2063	other three
+R64	MODIFY Arg1:T108 Arg2:E51	
+T109	Sign_symptom 2105 2113	symptoms
+E52	Sign_symptom:T109 
+A4	POLARITY E52 NEG
+T110	Detailed_description 2097 2104	similar
+R65	MODIFY Arg1:T110 Arg2:E52	
+*	OVERLAP E1 E2 E3 E4
+R66	AFTER Arg1:E4 Arg2:E5	
+R67	BEFORE Arg1:E5 Arg2:E6	
+*	OVERLAP E6 E7 E8 E10 E11 E12 E13
+R68	BEFORE Arg1:E13 Arg2:E14	
+*	OVERLAP E14 E15 E16 E17
+R69	BEFORE Arg1:E17 Arg2:E22	
+R70	BEFORE Arg1:E22 Arg2:E23	
+*	OVERLAP E23 E24
+R71	BEFORE Arg1:E24 Arg2:E25	
+*	OVERLAP E25 E26 E27
+R72	BEFORE Arg1:E27 Arg2:E28	
+*	OVERLAP E28 E29 E30 E31 E32 E33 E34
+R73	BEFORE Arg1:E34 Arg2:E35	
+*	OVERLAP E35 E36
+R74	BEFORE Arg1:E36 Arg2:E37	
+R75	BEFORE Arg1:E37 Arg2:E38	
+*	OVERLAP E38 E39 E40 E41 E42 E43 E44 E45 E46 E47
+R76	BEFORE Arg1:E47 Arg2:E48	
+*	OVERLAP E48 E49 E50
+R77	BEFORE Arg1:E50 Arg2:E51	
+*	OVERLAP E51 E52

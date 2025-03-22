@@ -1,0 +1,226 @@
+T1	Age 2 14	27 years old
+T2	Sex 16 20	male
+T3	History 22 34	right handed
+T4	History 74 105	very frequent gelastic seizures
+T5	Duration 55 62	2 years
+E1	Duration:T5 
+T6	Disease_disorder 88 105	gelastic seizures
+E2	Disease_disorder:T6 
+T7	Detailed_description 74 87	very frequent
+R1	MODIFY Arg1:T7 Arg2:E2	
+R2	MODIFY Arg1:E1 Arg2:E2	
+T8	Sign_symptom 129 147	aura–like symptoms
+E3	Sign_symptom:T8 
+T9	Sign_symptom 160 166	warmth
+E4	Sign_symptom:T9 
+T10	Biological_structure 182 186	face
+R3	MODIFY Arg1:T10 Arg2:E4	
+T11	Sign_symptom 191 200	dizziness
+E5	Sign_symptom:T11 
+T12	Sign_symptom 245 266	affective connotation
+E6	Sign_symptom:T12 
+A1	POLARITY E6 NEG
+T13	Sign_symptom 219 226	seizure
+E7	Sign_symptom:T13 
+R4	MODIFY Arg1:E5 Arg2:E7	
+T14	Sign_symptom 280 288	seizures
+E8	Sign_symptom:T14 
+T15	Sign_symptom 325 333	laughter
+E9	Sign_symptom:T15 
+T16	Detailed_description 309 314	brief
+R5	MODIFY Arg1:T16 Arg2:E9	
+T17	Sign_symptom 346 363	motor involvement
+E10	Sign_symptom:T17 
+A2	POLARITY E10 NEG
+T18	Sign_symptom 379 386	seizure
+E11	Sign_symptom:T18 
+T19	Detailed_description 268 272	Some
+R6	MODIFY Arg1:T19 Arg2:E8	
+R7	MODIFY Arg1:E9 Arg2:E8	
+R8	MODIFY Arg1:E10 Arg2:E8	
+T20	Sign_symptom 411 419	laughter
+E12	Sign_symptom:T20 
+T21	Detailed_description 404 410	sudden
+R9	MODIFY Arg1:T21 Arg2:E12	
+T22	Sign_symptom 435 464	simple motor partial seizures
+E13	Sign_symptom:T22 
+T23	Biological_structure 509 517	left arm
+T24	Sign_symptom 527 564	impairment of his consciousness state
+E14	Sign_symptom:T24 
+A3	POLARITY E14 NEG
+R10	MODIFY Arg1:E12 Arg2:E11	
+R11	MODIFY Arg1:E13 Arg2:E11	
+T25	Biological_structure 468 477	both arms
+R12	MODIFY Arg1:T25 Arg2:E13	
+R13	MODIFY Arg1:T23 Arg2:E13	
+R14	MODIFY Arg1:E14 Arg2:E11	
+T26	Detailed_description 579 597	less than 1 minute
+R15	MODIFY Arg1:T26 Arg2:E11	
+#1	AnnotatorNotes T26	Not using a duration here as it describes a frequent event
+T27	History 606 648	no previous past medical or social history
+T28	History 668 674	smoker
+T29	Quantitative_concept 676 700	10–15 cigarettes per day
+R16	MODIFY Arg1:T29 Arg2:T28	
+T30	Sign_symptom 723 731	seizures
+E15	Sign_symptom:T30 
+T31	Frequency 746 749	low
+R17	MODIFY Arg1:T31 Arg2:E15	
+T32	Detailed_description 736 745	initially
+R18	MODIFY Arg1:T32 Arg2:T31	
+T33	Frequency 798 815	8–10 seizures/day
+T34	Therapeutic_procedure 825 849	anti–epileptic treatment
+E16	Therapeutic_procedure:T34 
+R19	MODIFY Arg1:T33 Arg2:E15	
+T35	Detailed_description 755 788	increased progressively over time
+R20	MODIFY Arg1:T35 Arg2:E15	
+T36	Clinical_event 867 876	admission
+E17	Clinical_event:T36 
+T37	Medication 891 897	Keppra
+E18	Medication:T37 
+T38	Medication 900 913	Levetiracetam
+E19	Medication:T38 
+R21	IDENTICAL Arg1:E19 Arg2:E18	
+T39	Dosage 914 928	3 x 250 mg/day
+R22	MODIFY Arg1:T39 Arg2:E19	
+T40	Medication 933 942	Phenytoin
+E20	Medication:T40 
+T41	Dosage 943 957	3 x 100 mg/day
+R23	MODIFY Arg1:T41 Arg2:E20	
+T42	Nonbiological_location 968 1006	Neurology Electrophysiology Department
+T43	Clinical_event 1007 1017	assistance
+E21	Clinical_event:T43 
+R24	MODIFY Arg1:T42 Arg2:E21	
+T44	Diagnostic_procedure 1088 1112	neurological examination
+E22	Diagnostic_procedure:T44 
+T45	Lab_value 1117 1123	normal
+R25	MODIFY Arg1:T45 Arg2:E22	
+T46	Diagnostic_procedure 1154 1161	CT scan
+E23	Diagnostic_procedure:T46 
+T47	Detailed_description 1147 1153	native
+R26	MODIFY Arg1:T47 Arg2:E23	
+T48	Sign_symptom 1206 1212	lesion
+E24	Sign_symptom:T48 
+T49	Biological_structure 1181 1205	frontal right paramedian
+T50	Detailed_description 1171 1180	hypodense
+T51	Detailed_description 1163 1170	minimal
+R27	MODIFY Arg1:T49 Arg2:E24	
+R28	MODIFY Arg1:T50 Arg2:E24	
+R29	MODIFY Arg1:T51 Arg2:E24	
+T52	Diagnostic_procedure 1235 1238	MRI
+E25	Diagnostic_procedure:T52 
+T53	Biological_structure 1226 1234	cerebral
+R30	MODIFY Arg1:T53 Arg2:E25	
+T54	Sign_symptom 1299 1305	lesion
+E26	Sign_symptom:T54 
+T55	Detailed_description 1269 1286	right parenchymal
+T56	Detailed_description 1287 1298	homogeneous
+T57	Detailed_description 1263 1268	small
+R31	MODIFY Arg1:T56 Arg2:E26	
+R32	MODIFY Arg1:T55 Arg2:E26	
+R33	MODIFY Arg1:T57 Arg2:E26	
+T58	Volume 1306 1316	16/22/15mm
+R34	MODIFY Arg1:T58 Arg2:E26	
+T59	Detailed_description 1318 1332	well delimited
+R35	MODIFY Arg1:T59 Arg2:E26	
+T60	Biological_structure 1344 1357	gyrus cinguli
+R36	MODIFY Arg1:T60 Arg2:E26	
+T61	Sign_symptom 1380 1385	edema
+E27	Sign_symptom:T61 
+A4	POLARITY E27 NEG
+T62	Detailed_description 1367 1379	perilesional
+R37	MODIFY Arg1:T62 Arg2:E27	
+T63	Sign_symptom 1390 1401	mass effect
+E28	Sign_symptom:T63 
+A5	POLARITY E28 NEG
+T64	Detailed_description 1448 1478	non–enhancing after Gadolinium
+T65	Detailed_description 1403 1446	hyperintense both on T1 and T2 MR sequences
+R38	MODIFY Arg1:T65 Arg2:E26	
+R39	MODIFY Arg1:T64 Arg2:E26	
+R40	MODIFY Arg1:E27 Arg2:E26	
+R41	MODIFY Arg1:E28 Arg2:E26	
+T66	Sign_symptom 1493 1499	lesion
+E29	Sign_symptom:T66 
+T67	Biological_structure 1484 1492	cerebral
+R42	MODIFY Arg1:T67 Arg2:E29	
+T68	Diagnostic_procedure 1523 1526	EEG
+E30	Diagnostic_procedure:T68 
+T69	Diagnostic_procedure 1531 1540	video–EEG
+E31	Diagnostic_procedure:T69 
+T70	Sign_symptom 1555 1563	seizures
+E32	Sign_symptom:T70 
+T71	Lab_value 1553 1554	3
+R43	MODIFY Arg1:T71 Arg2:E32	
+T72	Detailed_description 1569 1589	medio–frontal origin
+T73	Detailed_description 1594 1631	rare interictal epileptiform elements
+R44	MODIFY Arg1:T72 Arg2:E32	
+R45	MODIFY Arg1:T73 Arg2:E32	
+T74	Therapeutic_procedure 1684 1706	microsurgical approach
+E33	Therapeutic_procedure:T74 
+T75	Biological_structure 1667 1683	interhemispheric
+R46	MODIFY Arg1:T75 Arg2:E33	
+T76	Biological_structure 1708 1733	above the corpus callosum
+T77	Biological_structure 1742 1767	right pericallosal artery
+R47	MODIFY Arg1:T76 Arg2:E33	
+R48	MODIFY Arg1:T77 Arg2:E33	
+T78	Biological_structure 1785 1798	gyrus cinguli
+R49	MODIFY Arg1:T78 Arg2:E33	
+T79	Sign_symptom 1828 1834	tumour
+E34	Sign_symptom:T79 
+T80	Detailed_description 1815 1827	infiltrative
+T81	Color 1802 1813	yellow–gray
+R50	MODIFY Arg1:T80 Arg2:E34	
+R51	MODIFY Arg1:T81 Arg2:E34	
+T82	Detailed_description 1854 1869	vascularisation
+T83	Severity 1845 1853	moderate
+R52	MODIFY Arg1:T83 Arg2:T82	
+R53	MODIFY Arg1:T82 Arg2:E34	
+T84	Therapeutic_procedure 1902 1909	removed
+E35	Therapeutic_procedure:T84 
+R54	SUB_PROCEDURE Arg1:E35 Arg2:E33	
+T85	Diagnostic_procedure 1915 1944	anatomo–pathological analysis
+E36	Diagnostic_procedure:T85 
+T86	Disease_disorder 1964 1975	astrocytoma
+E37	Disease_disorder:T86 
+T87	Lab_value 1956 1963	grade Ⅱ
+R55	MODIFY Arg1:T87 Arg2:E37	
+T88	Sign_symptom 1989 1998	recovered
+E38	Sign_symptom:T88 
+T89	Sign_symptom 2018 2026	deficits
+E39	Sign_symptom:T89 
+A6	POLARITY E39 NEG
+T90	Disease_disorder 2031 2048	gelastic seizures
+E40	Disease_disorder:T90 
+A7	POLARITY E40 NEG
+T91	Sign_symptom 2052 2076	epileptic manifestations
+E41	Sign_symptom:T91 
+A8	POLARITY E41 NEG
+T92	Date 2078 2106	three months after operation
+E42	Date:T92 
+T93	Sign_symptom 2127 2135	seizures
+E43	Sign_symptom:T93 
+A9	POLARITY E43 NEG
+T94	Diagnostic_procedure 2154 2156	CT
+E44	Diagnostic_procedure:T94 
+T95	Sign_symptom 2169 2174	tumor
+E45	Sign_symptom:T95 
+A10	POLARITY E45 NEG
+T96	Clinical_event 40 48	admitted
+E46	Clinical_event:T96 
+R56	AFTER Arg1:E46 Arg2:E1	
+*	OVERLAP E1 E2 E3 E4 E5 E6 E8 E11
+R57	BEFORE Arg1:E11 Arg2:E15	
+*	OVERLAP E15 E16 E17 E18 E20
+R58	BEFORE Arg1:E20 Arg2:E21	
+T97	Sign_symptom 1058 1066	seizures
+E47	Sign_symptom:T97 
+T98	Diagnostic_procedure 1074 1083	Video–EEG
+E48	Diagnostic_procedure:T98 
+*	OVERLAP E21 E47 E48 E22 E23 E24 E25 E26 E29 E30 E31 E32
+R59	BEFORE Arg1:E32 Arg2:E33	
+*	OVERLAP E33 E34 E36 E37
+R60	BEFORE Arg1:E37 Arg2:E38	
+*	OVERLAP E38 E39 E40 E41
+R61	BEFORE Arg1:E41 Arg2:E42	
+*	OVERLAP E42 E43
+R62	AFTER Arg1:E43 Arg2:E44	
+*	OVERLAP E44 E45

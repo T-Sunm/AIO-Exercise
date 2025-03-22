@@ -1,0 +1,287 @@
+T1	Sex 2 8	female
+T3	Clinical_event 45 52	visited
+E1	Clinical_event:T3 
+T4	Nonbiological_location 57 65	hospital
+R1	MODIFY Arg1:T4 Arg2:E1	
+T5	Disease_disorder 77 92	liver cirrhosis
+E2	Disease_disorder:T5 
+T6	Disease_disorder 108 125	hepatitis B virus
+E3	Disease_disorder:T6 
+T7	Disease_disorder 130 149	biliary duct stones
+E4	Disease_disorder:T7 
+R2	CAUSE Arg1:E3 Arg2:E2	
+R3	CAUSE Arg1:E4 Arg2:E2	
+T2	History 77 92	liver cirrhosis
+T8	Date 23 30	her 50s
+E5	Date:T8 
+#1	AnnotatorNotes E5	NOT patient's age in context of case report!
+T9	Age 154 169	65 years of age
+T10	Disease_disorder 189 192	HCC
+E6	Disease_disorder:T10 
+#2	AnnotatorNotes E6	Hepatocellular carcinoma
+T11	Lab_value 198 216	BCLC early stage A
+#3	AnnotatorNotes T11	Barcelona clinic liver cancer staging
+R4	MODIFY Arg1:T11 Arg2:E6	
+T12	Diagnostic_procedure 222 236	liver function
+E7	Diagnostic_procedure:T12 
+T13	Lab_value 241 255	well preserved
+R5	MODIFY Arg1:T13 Arg2:E7	
+T14	Diagnostic_procedure 261 277	Child-Pugh score
+E8	Diagnostic_procedure:T14 
+T15	Lab_value 282 283	A
+R6	MODIFY Arg1:T15 Arg2:E8	
+T16	Therapeutic_procedure 312 325	segmentectomy
+E9	Therapeutic_procedure:T16 
+T17	Detailed_description 299 311	left lateral
+R7	MODIFY Arg1:T17 Arg2:E9	
+T18	Disease_disorder 330 333	HCC
+E10	Disease_disorder:T18 
+T19	Therapeutic_procedure 343 372	other preoperative treatments
+E11	Therapeutic_procedure:T19 
+A1	POLARITY E11 NEG
+T20	Diagnostic_procedure 374 400	Histopathological findings
+E12	Diagnostic_procedure:T20 
+T21	Disease_disorder 432 454	pseudolobule formation
+E13	Disease_disorder:T21 
+T22	Disease_disorder 419 427	fibrosis
+E14	Disease_disorder:T22 
+T23	Detailed_description 410 418	bridging
+R8	MODIFY Arg1:T23 Arg2:E14	
+T24	Diagnostic_procedure 472 489	alpha-fetoprotein
+E15	Diagnostic_procedure:T24 
+T25	Diagnostic_procedure 491 494	AFP
+E16	Diagnostic_procedure:T25 
+R9	IDENTICAL Arg1:E16 Arg2:E15	
+T26	Biological_structure 456 461	Serum
+R10	MODIFY Arg1:T26 Arg2:E15	
+T27	Diagnostic_procedure 500 539	protein induced by vitamin K absence-II
+E17	Diagnostic_procedure:T27 
+T28	Lab_value 540 550	normalized
+R11	MODIFY Arg1:T28 Arg2:E17	
+R12	MODIFY Arg1:T28 Arg2:E15	
+R13	MODIFY Arg1:T26 Arg2:E17	
+T29	Coreference 565 574	resection
+E18	Coreference:T29 
+R14	IDENTICAL Arg1:E18 Arg2:E9	
+T30	Sign_symptom 613 623	metastasis
+E19	Sign_symptom:T30 
+T31	Diagnostic_procedure 590 605	imaging studies
+E20	Diagnostic_procedure:T31 
+T32	Biological_structure 610 612	LN
+#4	AnnotatorNotes T32	lymph node
+R15	MODIFY Arg1:T32 Arg2:E19	
+T33	Coreference 660 669	resection
+E21	Coreference:T33 
+R16	IDENTICAL Arg1:E21 Arg2:E18	
+T34	Date 678 698	Two and a half years
+E22	Date:T34 
+T35	Diagnostic_procedure 730 739	AFP level
+E23	Diagnostic_procedure:T35 
+T36	Lab_value 740 762	increased dramatically
+R17	MODIFY Arg1:T36 Arg2:E23	
+T37	Lab_value 766 777	780.2 ng/ml
+R18	MODIFY Arg1:T37 Arg2:E23	
+T38	Sign_symptom 789 795	lesion
+E24	Sign_symptom:T38 
+T39	Shape 781 788	lobular
+R19	MODIFY Arg1:T39 Arg2:E24	
+T40	Diagnostic_procedure 852 878	magnetic resonance imaging
+E25	Diagnostic_procedure:T40 
+T41	Detailed_description 834 851	contrast-enhanced
+R20	MODIFY Arg1:T41 Arg2:E25	
+T42	Detailed_description 801 817	fine enhancement
+R21	MODIFY Arg1:T42 Arg2:E24	
+T43	Coreference 884 889	tumor
+E26	Coreference:T43 
+R22	IDENTICAL Arg1:E26 Arg2:E24	
+T44	Distance 899 916	27 mm in diameter
+R23	MODIFY Arg1:T44 Arg2:E26	
+T45	Biological_structure 933 960	caudally on the left kidney
+R24	MODIFY Arg1:T45 Arg2:E26	
+T46	Diagnostic_procedure 983 1002	computed tomography
+E27	Diagnostic_procedure:T46 
+T47	Detailed_description 965 982	contrast-enhanced
+R25	MODIFY Arg1:T47 Arg2:E27	
+T48	Coreference 1008 1013	tumor
+E28	Coreference:T48 
+R26	IDENTICAL Arg1:E28 Arg2:E26	
+T49	Sign_symptom 1028 1039	enhancement
+E29	Sign_symptom:T49 
+T50	Detailed_description 1021 1027	strong
+R27	MODIFY Arg1:T50 Arg2:E29	
+T51	Biological_structure 1047 1061	arterial phase
+R28	MODIFY Arg1:T51 Arg2:E29	
+T52	Sign_symptom 1099 1106	density
+E30	Sign_symptom:T52 
+T53	Detailed_description 1084 1098	relatively low
+R29	MODIFY Arg1:T53 Arg2:E30	
+T54	Biological_structure 1114 1126	portal phase
+R30	MODIFY Arg1:T54 Arg2:E30	
+T55	Disease_disorder 1206 1209	HCC
+E31	Disease_disorder:T55 
+T56	Detailed_description 1198 1205	typical
+R31	MODIFY Arg1:T56 Arg2:E31	
+T57	Diagnostic_procedure 1445 1470	Three-dimensional imaging
+E32	Diagnostic_procedure:T57 
+T58	Coreference 1487 1492	tumor
+E33	Coreference:T58 
+R32	IDENTICAL Arg1:E33 Arg2:E28	
+T59	Biological_structure 1497 1553	fed by a main vessel from the inferior mesenteric artery
+R33	MODIFY Arg1:T59 Arg2:E33	
+T60	Biological_structure 1576 1628	accessory feeder from the superior mesenteric artery
+R34	MODIFY Arg1:T60 Arg2:E33	
+T61	Diagnostic_procedure 1641 1700	Fluorine-18-fluorodeoxyglucose positron emission tomography
+E34	Diagnostic_procedure:T61 
+T62	Diagnostic_procedure 1702 1709	FDG-PET
+E35	Diagnostic_procedure:T62 
+R35	IDENTICAL Arg1:E35 Arg2:E34	
+T63	Diagnostic_procedure 1715 1763	positron emission tomography-computed tomography
+E36	Diagnostic_procedure:T63 
+T64	Sign_symptom 1991 2001	metastasis
+E37	Sign_symptom:T64 
+A2	POLARITY E37 NEG
+T65	Biological_structure 1978 1990	extrahepatic
+T66	Biological_structure 1962 1974	intrahepatic
+R36	MODIFY Arg1:T65 Arg2:E37	
+R37	MODIFY Arg1:T66 Arg2:E37	
+T67	Sign_symptom 2068 2078	metastasis
+E38	Sign_symptom:T67 
+T68	Detailed_description 2059 2067	solitary
+R38	MODIFY Arg1:T68 Arg2:E38	
+T69	Biological_structure 2084 2096	mesocolic LN
+R39	MODIFY Arg1:T69 Arg2:E38	
+T70	Disease_disorder 2100 2103	HCC
+E39	Disease_disorder:T70 
+T71	Detailed_description 2104 2117	dissemination
+R40	MODIFY Arg1:T71 Arg2:E39	
+T72	Sign_symptom 2286 2291	tumor
+E40	Sign_symptom:T72 
+T73	Detailed_description 2296 2304	solitary
+R41	MODIFY Arg1:T73 Arg2:E40	
+T74	Sign_symptom 2334 2344	metastases
+E41	Sign_symptom:T74 
+A3	POLARITY E41 NEG
+T75	Detailed_description 2328 2333	other
+R42	MODIFY Arg1:T75 Arg2:E41	
+T76	Therapeutic_procedure 2419 2437	surgical resection
+E42	Therapeutic_procedure:T76 
+T77	Sign_symptom 2455 2476	disseminative nodules
+E43	Sign_symptom:T77 
+A4	POLARITY E43 NEG
+T78	Disease_disorder 2478 2493	lymphadenopathy
+E44	Disease_disorder:T78 
+A5	POLARITY E44 NEG
+T79	Sign_symptom 2498 2505	ascites
+E45	Sign_symptom:T79 
+A6	POLARITY E45 NEG
+T80	Coreference 2539 2544	tumor
+E46	Coreference:T80 
+R43	IDENTICAL Arg1:E46 Arg2:E40	
+T81	Biological_structure 2564 2573	mesocolon
+R44	MODIFY Arg1:T81 Arg2:E46	
+T82	Biological_structure 2581 2616	at the wall of the descending colon
+R45	MODIFY Arg1:T82 Arg2:E46	
+T83	Coreference 2630 2639	resection
+E47	Coreference:T83 
+R46	IDENTICAL Arg1:E47 Arg2:E42	
+T84	Biological_structure 2647 2663	descending colon
+R47	MODIFY Arg1:T84 Arg2:E47	
+T85	Biological_structure 2669 2687	regional mesocolon
+R48	MODIFY Arg1:T85 Arg2:E47	
+T86	Therapeutic_procedure 2717 2737	postoperative course
+E48	Therapeutic_procedure:T86 
+T87	Lab_value 2742 2752	uneventful
+R49	MODIFY Arg1:T87 Arg2:E48	
+T88	Clinical_event 2766 2776	discharged
+E49	Clinical_event:T88 
+T89	Date 2794 2799	day 8
+E50	Date:T89 
+T90	Diagnostic_procedure 2817 2829	tumor marker
+E51	Diagnostic_procedure:T90 
+T91	Biological_structure 2801 2806	Serum
+R50	MODIFY Arg1:T91 Arg2:E51	
+T92	Lab_value 2830 2851	decreased immediately
+R51	MODIFY Arg1:T92 Arg2:E51	
+T93	Diagnostic_procedure 2878 2893	Macroscopically
+E52	Diagnostic_procedure:T93 
+T94	Coreference 2899 2914	mesocolic tumor
+E53	Coreference:T94 
+R52	IDENTICAL Arg1:E53 Arg2:E46	
+T95	Lab_value 2921 2926	solid
+T96	Lab_value 2931 2938	elastic
+T97	Texture 2951 2965	smooth surface
+R53	MODIFY Arg1:T95 Arg2:E53	
+R54	MODIFY Arg1:T96 Arg2:E53	
+R55	MODIFY Arg1:T97 Arg2:E53	
+T98	Sign_symptom 2991 2997	nodule
+E54	Sign_symptom:T98 
+T99	Color 2981 2990	yellowish
+R56	MODIFY Arg1:T99 Arg2:E54	
+T100	Detailed_description 3002 3033	encapsulated in the cut surface
+R57	MODIFY Arg1:T100 Arg2:E54	
+T101	Disease_disorder 3084 3087	HCC
+E55	Disease_disorder:T101 
+T102	Detailed_description 3095 3111	ductal structure
+R58	MODIFY Arg1:T102 Arg2:E55	
+T103	Detailed_description 3073 3083	metastatic
+R59	MODIFY Arg1:T103 Arg2:E55	
+T104	Detailed_description 3051 3062	enlarged LN
+R60	MODIFY Arg1:T104 Arg2:E55	
+T105	Diagnostic_procedure 3129 3150	immunohistochemically
+E56	Diagnostic_procedure:T105 
+T106	Diagnostic_procedure 3179 3182	AFP
+E57	Diagnostic_procedure:T106 
+T107	Lab_value 3166 3174	positive
+R61	MODIFY Arg1:T107 Arg2:E57	
+T108	Diagnostic_procedure 3200 3205	CK-20
+E58	Diagnostic_procedure:T108 
+T109	Lab_value 3187 3195	negative
+R62	MODIFY Arg1:T109 Arg2:E58	
+T110	Disease_disorder 3256 3259	HCC
+E59	Disease_disorder:T110 
+T111	Detailed_description 3248 3255	primary
+R63	MODIFY Arg1:T111 Arg2:E59	
+R64	SUB_PROCEDURE Arg1:E58 Arg2:E56	
+R65	SUB_PROCEDURE Arg1:E57 Arg2:E56	
+T112	Disease_disorder 3320 3323	HCC
+E60	Disease_disorder:T112 
+T113	Detailed_description 3309 3319	metastatic
+R66	MODIFY Arg1:T113 Arg2:E60	
+T114	Biological_structure 3329 3341	mesocolic LN
+R67	MODIFY Arg1:T114 Arg2:E60	
+T115	Sign_symptom 3410 3420	recurrence
+E61	Sign_symptom:T115 
+A7	POLARITY E61 NEG
+T116	Date 3425 3440	13 months after
+E62	Date:T116 
+T117	Clinical_event 3489 3500	followed up
+E63	Clinical_event:T117 
+T118	Medication 3505 3523	adjuvant therapies
+E64	Medication:T118 
+A8	POLARITY E64 NEG
+*	OVERLAP E1 E2 E3 E4
+R68	BEFORE Arg1:E4 Arg2:E6	
+*	OVERLAP E6 E7 E8
+R69	BEFORE Arg1:E8 Arg2:E9	
+*	OVERLAP E9 E10 E11 E12 E14 E13
+R70	BEFORE Arg1:E13 Arg2:E15	
+*	OVERLAP E15 E17 E18 E20 E19 E21
+R71	BEFORE Arg1:E21 Arg2:E22	
+*	OVERLAP E22 E23 E24 E25 E26 E27 E28 E29 E30 E31 E32 E33 E34 E36 E37 E38 E39 E40 E41
+R72	BEFORE Arg1:E41 Arg2:E42	
+*	OVERLAP E42 E43 E44 E45 E65 E46 E47
+T119	Coreference 2526 2533	surgery
+E65	Coreference:T119 
+R73	IDENTICAL Arg1:E65 Arg2:E42	
+R74	BEFORE Arg1:E47 Arg2:E48	
+R75	BEFORE Arg1:E48 Arg2:E49	
+*	OVERLAP E49 E50
+R76	AFTER Arg1:E50 Arg2:E51	
+T120	Coreference 2858 2865	surgery
+E66	Coreference:T120 
+R77	IDENTICAL Arg1:E66 Arg2:E65	
+*	OVERLAP E51 E52 E53 E54 E55 E56 E59 E60
+R78	BEFORE Arg1:E60 Arg2:E61	
+*	OVERLAP E61 E62 E63 E64
+T121	History 108 125	hepatitis B virus
+T122	History 130 149	biliary duct stones

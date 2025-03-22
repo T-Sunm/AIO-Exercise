@@ -1,0 +1,400 @@
+T1	Age 2 13	41-year-old
+T2	Sex 14 17	man
+T3	History 36 46	alcoholism
+T4	Duration 51 59	10 years
+E1	Duration:T4 
+R1	MODIFY Arg1:E1 Arg2:T3	
+T5	History 64 69	sober
+T6	Duration 78 90	last 3 years
+E2	Duration:T6 
+R2	MODIFY Arg1:E2 Arg2:T5	
+T7	History 92 124	recurrent alcoholic pancreatitis
+T8	History 130 152	no known liver disease
+T9	Sign_symptom 189 200	hematemesis
+E3	Sign_symptom:T9 
+T10	Detailed_description 169 185	several episodes
+R3	MODIFY Arg1:T10 Arg2:E3	
+T11	Sign_symptom 215 219	pain
+E4	Sign_symptom:T11 
+T12	Biological_structure 205 214	abdominal
+R4	MODIFY Arg1:T12 Arg2:E4	
+T13	Duration 224 230	2 days
+E5	Duration:T13 
+R5	MODIFY Arg1:E5 Arg2:E4	
+R6	MODIFY Arg1:E5 Arg2:E3	
+T14	Diagnostic_procedure 232 258	Esophagogastroduodenoscopy
+E6	Diagnostic_procedure:T14 
+T15	Diagnostic_procedure 260 263	EGD
+E7	Diagnostic_procedure:T15 
+R7	IDENTICAL Arg1:E7 Arg2:E6	
+T16	Date 276 291	3 years earlier
+E8	Date:T16 
+R8	MODIFY Arg1:E8 Arg2:E6	
+T17	Sign_symptom 306 310	pain
+E9	Sign_symptom:T17 
+T18	Biological_structure 296 305	abdominal
+R9	MODIFY Arg1:T18 Arg2:E9	
+R10	MODIFY Arg1:E8 Arg2:E9	
+T19	Sign_symptom 339 346	varices
+E10	Sign_symptom:T19 
+T20	Sign_symptom 356 363	varices
+E11	Sign_symptom:T20 
+T21	Disease_disorder 385 396	gastropathy
+E12	Disease_disorder:T21 
+T22	Sign_symptom 410 417	lesions
+E13	Sign_symptom:T22 
+T23	Biological_structure 328 338	esophageal
+R11	MODIFY Arg1:T23 Arg2:E10	
+A1	POLARITY E10 NEG
+T24	Biological_structure 348 355	gastric
+R12	MODIFY Arg1:T24 Arg2:E11	
+A2	POLARITY E11 NEG
+T25	Detailed_description 372 384	hypertensive
+T26	Biological_structure 365 371	portal
+R13	MODIFY Arg1:T25 Arg2:E12	
+R14	MODIFY Arg1:T26 Arg2:E12	
+A3	POLARITY E12 NEG
+T27	Biological_structure 407 409	GI
+R15	MODIFY Arg1:T27 Arg2:E13	
+A4	POLARITY E13 NEG
+T28	Diagnostic_procedure 419 439	Physical examination
+E14	Diagnostic_procedure:T28 
+T29	Diagnostic_procedure 451 465	blood pressure
+E15	Diagnostic_procedure:T29 
+T30	Lab_value 468 480	100/60 mm Hg
+R16	MODIFY Arg1:T30 Arg2:E15	
+T31	Diagnostic_procedure 482 487	pulse
+E16	Diagnostic_procedure:T31 
+T33	Sign_symptom 507 515	jaundice
+E17	Sign_symptom:T33 
+A5	POLARITY E17 NEG
+T35	Diagnostic_procedure 682 700	Rectal examination
+E18	Diagnostic_procedure:T35 
+T32	Sign_symptom 520 553	stigmata of chronic liver disease
+E19	Sign_symptom:T32 
+A6	POLARITY E19 NEG
+T34	Sign_symptom 617 627	tenderness
+E20	Sign_symptom:T34 
+A7	POLARITY E20 NEG
+T36	Detailed_description 609 616	rebound
+R17	MODIFY Arg1:T36 Arg2:E20	
+T37	Biological_structure 562 569	abdomen
+R18	MODIFY Arg1:T37 Arg2:E20	
+T38	Sign_symptom 642 647	bruit
+E21	Sign_symptom:T38 
+A8	POLARITY E21 NEG
+T39	Biological_structure 632 641	abdominal
+R19	MODIFY Arg1:T39 Arg2:E21	
+T40	Biological_structure 666 675	abdominal
+T41	Detailed_description 656 665	pulsatile
+T42	Sign_symptom 676 680	mass
+E22	Sign_symptom:T42 
+A9	POLARITY E22 NEG
+R20	MODIFY Arg1:T41 Arg2:E22	
+R21	MODIFY Arg1:T40 Arg2:E22	
+T43	Date 2654 2671	Eight weeks later
+E23	Date:T43 
+T44	Diagnostic_procedure 2698 2708	hemoglobin
+E24	Diagnostic_procedure:T44 
+T45	Lab_value 2691 2697	stable
+R22	MODIFY Arg1:T45 Arg2:E24	
+T46	Sign_symptom 2734 2742	bleeding
+E25	Sign_symptom:T46 
+A10	POLARITY E25 NEG
+T47	Biological_structure 2731 2733	GI
+R23	MODIFY Arg1:T47 Arg2:E25	
+T48	Sign_symptom 557 561	soft
+E26	Sign_symptom:T48 
+R24	MODIFY Arg1:T37 Arg2:E26	
+T49	Sign_symptom 591 601	tenderness
+E27	Sign_symptom:T49 
+T50	Biological_structure 580 590	epigastric
+R25	MODIFY Arg1:T50 Arg2:E27	
+T51	Severity 575 579	mild
+R26	MODIFY Arg1:T51 Arg2:E27	
+T52	Sign_symptom 716 722	melena
+E28	Sign_symptom:T52 
+T53	Diagnostic_procedure 724 740	Laboratory tests
+E29	Diagnostic_procedure:T53 
+T54	Diagnostic_procedure 750 760	hemoglobin
+E30	Diagnostic_procedure:T54 
+T55	Lab_value 763 772	12.5 g/dL
+R27	MODIFY Arg1:T55 Arg2:E30	
+T56	Diagnostic_procedure 774 783	platelets
+E31	Diagnostic_procedure:T56 
+T57	Lab_value 786 796	301,000/mL
+R28	MODIFY Arg1:T57 Arg2:E31	
+T58	Diagnostic_procedure 798 801	INR
+E32	Diagnostic_procedure:T58 
+T59	Diagnostic_procedure 803 833	international normalized ratio
+E33	Diagnostic_procedure:T59 
+R29	IDENTICAL Arg1:E33 Arg2:E32	
+T60	Lab_value 837 840	1.0
+R30	MODIFY Arg1:T60 Arg2:E32	
+T61	Diagnostic_procedure 842 861	blood urea nitrogen
+E34	Diagnostic_procedure:T61 
+T62	Lab_value 864 872	20 mg/dL
+R31	MODIFY Arg1:T62 Arg2:E34	
+T63	Diagnostic_procedure 878 888	creatinine
+E35	Diagnostic_procedure:T63 
+T64	Diagnostic_procedure 1090 1100	hemoglobin
+E36	Diagnostic_procedure:T64 
+T65	Lab_value 1101 1117	declined acutely
+T66	Lab_value 1121 1129	9.3 g/dL
+R32	MODIFY Arg1:T65 Arg2:E36	
+R33	MODIFY Arg1:T66 Arg2:E36	
+T67	Diagnostic_procedure 1147 1170	computerized tomography
+E37	Diagnostic_procedure:T67 
+T68	Diagnostic_procedure 1172 1174	CT
+E38	Diagnostic_procedure:T68 
+R34	IDENTICAL Arg1:E38 Arg2:E37	
+T69	Biological_structure 1131 1146	Abdomino-pelvic
+R35	MODIFY Arg1:T69 Arg2:E37	
+T70	Detailed_description 1182 1203	intravenous contrast,
+R36	MODIFY Arg1:T70 Arg2:E37	
+T71	Distance 1215 1219	5-cm
+T72	Detailed_description 1226 1235	irregular
+T73	Sign_symptom 1263 1267	mass
+E39	Sign_symptom:T73 
+T74	Biological_structure 1237 1247	pancreatic
+T75	Biological_structure 1248 1262	peripancreatic
+R37	MODIFY Arg1:T75 Arg2:E39	
+R38	MODIFY Arg1:T74 Arg2:E39	
+R39	MODIFY Arg1:T72 Arg2:E39	
+R40	MODIFY Arg1:T71 Arg2:E39	
+T76	Sign_symptom 1269 1280	compressing
+E40	Sign_symptom:T76 
+R41	CAUSE Arg1:E39 Arg2:E40	
+T77	Biological_structure 1290 1321	lesser curvature of the stomach
+R42	MODIFY Arg1:T77 Arg2:E40	
+T78	Biological_structure 1330 1332	SV
+#1	AnnotatorNotes T78	splenic vein
+R43	MODIFY Arg1:T78 Arg2:E40	
+T79	Diagnostic_procedure 1355 1366	portal vein
+E41	Diagnostic_procedure:T79 
+T80	Diagnostic_procedure 1379 1395	liver parenchyma
+E42	Diagnostic_procedure:T80 
+T81	Lab_value 1372 1378	normal
+R44	MODIFY Arg1:T81 Arg2:E42	
+T82	Lab_value 1348 1354	normal
+R45	MODIFY Arg1:T82 Arg2:E41	
+T83	Sign_symptom 1404 1415	compression
+E43	Sign_symptom:T83 
+T84	Biological_structure 1401 1403	SV
+R46	MODIFY Arg1:T84 Arg2:E43	
+T85	Lab_value 1420 1452	pathophysiologically significant
+R47	MODIFY Arg1:T85 Arg2:E43	
+T86	Sign_symptom 1481 1491	dilatation
+E44	Sign_symptom:T86 
+T87	Biological_structure 1469 1480	proximal SV
+R48	MODIFY Arg1:T87 Arg2:E44	
+T88	Diagnostic_procedure 1493 1496	EGD
+E45	Diagnostic_procedure:T88 
+T89	Biological_structure 1513 1529	proximal stomach
+R49	MODIFY Arg1:T89 Arg2:E45	
+T90	Disease_disorder 1635 1666	portal hypertensive gastropathy
+E46	Disease_disorder:T90 
+T91	Sign_symptom 1581 1588	network
+E47	Sign_symptom:T91 
+T92	Texture 1594 1611	snakeskin pattern
+R50	MODIFY Arg1:T92 Arg2:E47	
+T93	Biological_structure 1572 1579	mucosal
+T94	Shape 1561 1570	polygonal
+R51	MODIFY Arg1:T94 Arg2:E47	
+R52	MODIFY Arg1:T93 Arg2:E47	
+T95	Color 1549 1559	pale-white
+T96	Detailed_description 1532 1536	fine
+T97	Detailed_description 1538 1547	reticular
+R53	MODIFY Arg1:T95 Arg2:E47	
+R54	MODIFY Arg1:T97 Arg2:E47	
+R55	MODIFY Arg1:T96 Arg2:E47	
+T98	Sign_symptom 1685 1691	oozing
+E48	Sign_symptom:T98 
+T99	Sign_symptom 1718 1729	blood clots
+E49	Sign_symptom:T99 
+T100	Texture 1703 1716	coffee-ground
+R56	MODIFY Arg1:T100 Arg2:E49	
+T101	Severity 1693 1702	extensive
+R57	MODIFY Arg1:T101 Arg2:E49	
+T102	Biological_structure 1737 1744	stomach
+R58	MODIFY Arg1:T102 Arg2:E49	
+T103	Sign_symptom 1779 1786	varices
+E50	Sign_symptom:T103 
+T104	Sign_symptom 1795 1824	stigmata of recent hemorrhage
+E51	Sign_symptom:T104 
+A11	POLARITY E51 NEG
+T105	Sign_symptom 1826 1829	SRH
+E52	Sign_symptom:T105 
+R59	IDENTICAL Arg1:E52 Arg2:E51	
+T106	Biological_structure 1752 1759	gastric
+T107	Biological_structure 1760 1767	cardial
+T108	Biological_structure 1772 1778	fundal
+R60	MODIFY Arg1:T107 Arg2:T106	
+R61	MODIFY Arg1:T108 Arg2:T106	
+R62	MODIFY Arg1:T106 Arg2:E50	
+T109	Sign_symptom 1850 1857	varices
+E53	Sign_symptom:T109 
+A12	POLARITY E53 NEG
+T110	Biological_structure 1839 1849	esophageal
+R63	MODIFY Arg1:T110 Arg2:E53	
+T111	Coreference 1882 1886	mass
+E54	Coreference:T111 
+R64	IDENTICAL Arg1:E54 Arg2:E39	
+T112	Sign_symptom 1911 1916	bulge
+E55	Sign_symptom:T112 
+R65	CAUSE Arg1:E54 Arg2:E55	
+T113	Shape 1905 1910	round
+R66	MODIFY Arg1:T113 Arg2:E55	
+T114	Detailed_description 1898 1903	large
+R67	MODIFY Arg1:T114 Arg2:E55	
+T115	Biological_structure 1917 1970	extending into the lumen of the proximal gastric body
+T116	Biological_structure 1981 1997	lesser curvature
+R68	MODIFY Arg1:T116 Arg2:T115	
+R69	MODIFY Arg1:T115 Arg2:E55	
+T117	Diagnostic_procedure 2007 2051	Magnetic resonance cholangio-pancreatography
+E56	Diagnostic_procedure:T117 
+T118	Diagnostic_procedure 2053 2057	MRCP
+E57	Diagnostic_procedure:T118 
+R70	IDENTICAL Arg1:E57 Arg2:E56	
+T119	Distance 2070 2074	5-cm
+T120	Detailed_description 2081 2090	enhancing
+T121	Sign_symptom 2101 2105	mass
+E58	Sign_symptom:T121 
+T122	Biological_structure 2092 2100	vascular
+R71	MODIFY Arg1:T122 Arg2:E58	
+R72	MODIFY Arg1:T120 Arg2:E58	
+R73	MODIFY Arg1:T119 Arg2:E58	
+T123	Biological_structure 2113 2133	arising from the LGA
+T124	Biological_structure 2146 2209	between the gastric lesser curvature and distal pancreatic body
+R74	MODIFY Arg1:T123 Arg2:E58	
+R75	MODIFY Arg1:T124 Arg2:E58	
+T125	Sign_symptom 2211 2222	compressing
+E59	Sign_symptom:T125 
+T126	Sign_symptom 2236 2247	compressing
+E60	Sign_symptom:T126 
+T127	Biological_structure 2227 2234	stomach
+R76	MODIFY Arg1:T127 Arg2:E59	
+T128	Biological_structure 2252 2261	middle SV
+R77	MODIFY Arg1:T128 Arg2:E60	
+T129	Sign_symptom 2286 2302	collateral veins
+E61	Sign_symptom:T129 
+T130	Detailed_description 2280 2285	large
+R78	MODIFY Arg1:T130 Arg2:E61	
+T131	Biological_structure 2316 2318	SV
+T132	Biological_structure 2328 2352	superior mesenteric vein
+R79	MODIFY Arg1:T131 Arg2:E61	
+R80	MODIFY Arg1:T132 Arg2:E61	
+T133	Diagnostic_procedure 2376 2386	ultrasound
+E62	Diagnostic_procedure:T133 
+T134	Biological_structure 2366 2375	Abdominal
+R81	MODIFY Arg1:T134 Arg2:E62	
+T135	Detailed_description 2392 2407	Doppler studies
+R82	MODIFY Arg1:T135 Arg2:E62	
+T136	Disease_disorder 2496 2498	PA
+E63	Disease_disorder:T136 
+#2	AnnotatorNotes E63	pseudoaneurysm
+T137	Detailed_description 2490 2495	large
+R83	MODIFY Arg1:T137 Arg2:E63	
+T138	Detailed_description 2421 2426	large
+T139	Detailed_description 2428 2437	turbulent
+T140	Sign_symptom 2447 2451	flow
+E64	Sign_symptom:T140 
+T141	Biological_structure 2438 2446	arterial
+R84	MODIFY Arg1:T141 Arg2:E64	
+R85	MODIFY Arg1:T139 Arg2:E64	
+R86	MODIFY Arg1:T138 Arg2:E64	
+T142	Coreference 2471 2475	mass
+E65	Coreference:T142 
+R87	IDENTICAL Arg1:E65 Arg2:E58	
+T143	Biological_structure 2462 2470	vascular
+R88	MODIFY Arg1:T143 Arg2:E65	
+T144	Diagnostic_procedure 2517 2528	arteriogram
+E66	Diagnostic_procedure:T144 
+T145	Detailed_description 2508 2516	Visceral
+R89	MODIFY Arg1:T145 Arg2:E66	
+A13	POLARITY E63 UNCERTAIN
+T146	Disease_disorder 2556 2558	PA
+E67	Disease_disorder:T146 
+T147	Volume 2538 2555	5.3 × 2.2-cm-wide
+R90	MODIFY Arg1:T147 Arg2:E67	
+T148	Biological_structure 2574 2584	LGA branch
+#3	AnnotatorNotes T148	left gastric artery
+R91	MODIFY Arg1:T148 Arg2:E67	
+T149	Therapeutic_procedure 2605 2614	embolized
+E68	Therapeutic_procedure:T149 
+T150	Therapeutic_procedure 2619 2627	occluded
+E69	Therapeutic_procedure:T150 
+T151	Detailed_description 2633 2643	microcoils
+R92	MODIFY Arg1:T151 Arg2:E69	
+R93	MODIFY Arg1:T151 Arg2:E68	
+T152	Diagnostic_procedure 2763 2774	angiography
+E70	Diagnostic_procedure:T152 
+T153	Detailed_description 2760 2762	CT
+R94	MODIFY Arg1:T153 Arg2:E70	
+T154	Biological_structure 2744 2759	Abdomino-pelvic
+R95	MODIFY Arg1:T154 Arg2:E70	
+T155	Disease_disorder 2792 2794	PA
+E71	Disease_disorder:T155 
+T156	Detailed_description 2831 2860	contained numerous microcoils
+R96	MODIFY Arg1:T156 Arg2:E71	
+T157	Lab_value 2808 2829	decreased in diameter
+R97	MODIFY Arg1:T157 Arg2:E71	
+T158	Detailed_description 2870 2883	no blood flow
+R98	MODIFY Arg1:T158 Arg2:E71	
+T159	Clinical_event 154 163	presented
+E72	Clinical_event:T159 
+R99	AFTER Arg1:E72 Arg2:E3	
+*	OVERLAP E3 E4 E5
+R100	AFTER Arg1:E5 Arg2:E6	
+*	OVERLAP E6 E8 E9 E10 E11 E12 E13
+R101	BEFORE Arg1:E13 Arg2:E14	
+R102	SUB_PROCEDURE Arg1:E15 Arg2:E14	
+R103	SUB_PROCEDURE Arg1:E16 Arg2:E14	
+T160	Lab_value 490 502	60 beats/min
+R104	MODIFY Arg1:T160 Arg2:E16	
+*	OVERLAP E14 E17 E19 E26 E27 E20 E21 E22 E18 E28 E29
+R105	SUB_PROCEDURE Arg1:E30 Arg2:E29	
+R106	SUB_PROCEDURE Arg1:E31 Arg2:E29	
+R107	SUB_PROCEDURE Arg1:E32 Arg2:E29	
+R108	SUB_PROCEDURE Arg1:E34 Arg2:E29	
+R109	SUB_PROCEDURE Arg1:E35 Arg2:E29	
+T161	Diagnostic_procedure 902 934	Serum aspartate aminotransferase
+E73	Diagnostic_procedure:T161 
+T163	Diagnostic_procedure 946 970	alanine aminotransferase
+E74	Diagnostic_procedure:T163 
+T164	Lab_value 973 980	16 IU/L
+R111	MODIFY Arg1:T164 Arg2:E74	
+T165	Diagnostic_procedure 982 997	total bilirubin
+E75	Diagnostic_procedure:T165 
+T166	Lab_value 1000 1009	0.6 mg/dL
+R112	MODIFY Arg1:T166 Arg2:E75	
+T167	Lab_value 891 900	1.1 mg/dL
+R113	MODIFY Arg1:T167 Arg2:E35	
+T168	Diagnostic_procedure 1011 1031	alkaline phosphatase
+E76	Diagnostic_procedure:T168 
+T169	Lab_value 1034 1041	64 IU/L
+R114	MODIFY Arg1:T169 Arg2:E76	
+T170	Diagnostic_procedure 1043 1050	albumin
+E77	Diagnostic_procedure:T170 
+T171	Lab_value 1053 1062	4.4 gm/dL
+R115	MODIFY Arg1:T171 Arg2:E77	
+T172	Diagnostic_procedure 1068 1074	lipase
+E78	Diagnostic_procedure:T172 
+T173	Lab_value 1077 1084	32 U/dL
+R116	MODIFY Arg1:T173 Arg2:E78	
+R117	SUB_PROCEDURE Arg1:E73 Arg2:E29	
+R118	SUB_PROCEDURE Arg1:E74 Arg2:E29	
+R119	SUB_PROCEDURE Arg1:E75 Arg2:E29	
+R120	SUB_PROCEDURE Arg1:E76 Arg2:E29	
+R121	SUB_PROCEDURE Arg1:E77 Arg2:E29	
+R122	SUB_PROCEDURE Arg1:E78 Arg2:E29	
+R123	BEFORE Arg1:E29 Arg2:E36	
+*	OVERLAP E36 E37 E39 E40 E41 E42 E43 E44 E45 E47 E46 E48 E49 E50 E51 E53 E54 E55 E56 E58 E59 E60 E61 E62 E64 E63 E66 E67
+R124	BEFORE Arg1:E67 Arg2:E68	
+*	OVERLAP E68 E69
+R125	BEFORE Arg1:E69 Arg2:E23	
+*	OVERLAP E23 E24 E25
+R110	BEFORE Arg1:E25 Arg2:E70	
+*	OVERLAP E70 E71
+T162	Lab_value 936 944	 21 IU/L
+R126	MODIFY Arg1:T162 Arg2:E73	

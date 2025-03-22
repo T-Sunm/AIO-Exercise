@@ -1,0 +1,141 @@
+T1	Age 2 13	60-year-old
+T2	Sex 14 19	woman
+T3	Clinical_event 32 40	admitted
+E1	Clinical_event:T3 
+T4	Date 60 73	Feb. 18, 2016
+E2	Date:T4 
+T5	Nonbiological_location 48 56	hospital
+R1	MODIFY Arg1:T5 Arg2:E1	
+T6	Sign_symptom 106 116	hemoptysis
+E3	Sign_symptom:T6 
+T7	Duration 121 128	2 weeks
+E4	Duration:T7 
+T8	Frequency 85 93	frequent
+R2	MODIFY Arg1:T8 Arg2:E3	
+T9	Date 137 152	previous decade
+E5	Date:T9 
+T10	History 207 217	hemoptysis
+T11	Sign_symptom 207 217	hemoptysis
+E6	Sign_symptom:T11 
+T12	Frequency 170 178	frequent
+T13	Severity 183 194	less severe
+R3	MODIFY Arg1:T13 Arg2:E6	
+R4	MODIFY Arg1:T12 Arg2:E6	
+T14	Disease_disorder 279 288	infection
+E7	Disease_disorder:T14 
+T15	Biological_structure 255 278	upper respiratory tract
+R5	MODIFY Arg1:T15 Arg2:E7	
+T16	Diagnostic_procedure 290 323	Ear, nose, and throat examination
+E8	Diagnostic_procedure:T16 
+T17	Diagnostic_procedure 328 340	laryngoscope
+E9	Diagnostic_procedure:T17 
+T18	Sign_symptom 372 390	source of bleeding
+E10	Sign_symptom:T18 
+A1	POLARITY E10 NEG
+T19	Sign_symptom 418 429	abnormality
+E11	Sign_symptom:T19 
+A2	POLARITY E11 NEG
+T20	Diagnostic_procedure 392 394	CT
+E12	Diagnostic_procedure:T20 
+T21	Biological_structure 395 400	chest
+R6	MODIFY Arg1:T21 Arg2:E12	
+T22	Date 507 518	2 weeks ago
+E13	Date:T22 
+T23	Disease_disorder 497 506	infection
+E14	Disease_disorder:T23 
+T24	Biological_structure 473 496	upper respiratory tract
+R7	MODIFY Arg1:T24 Arg2:E14	
+T25	Sign_symptom 599 609	hemoptysis
+E15	Sign_symptom:T25 
+T26	Volume 560 566	500 mL
+T27	Sign_symptom 570 581	fresh blood
+E16	Sign_symptom:T27 
+R8	MODIFY Arg1:T26 Arg2:E16	
+T28	Sign_symptom 532 539	coughed
+E17	Sign_symptom:T28 
+R9	MODIFY Arg1:E16 Arg2:E17	
+R10	MODIFY Arg1:E17 Arg2:E15	
+T29	Medication 635 655	anti-tussive therapy
+E18	Medication:T29 
+T30	History 669 717	denied a history of smoking and illicit drug use
+T31	Disease_disorder 761 773	coagulopathy
+E19	Disease_disorder:T31 
+A3	POLARITY E19 NEG
+T32	Diagnostic_procedure 719 736	Diagnostic workup
+E20	Diagnostic_procedure:T32 
+T33	Clinical_event 780 789	admission
+E21	Clinical_event:T33 
+T34	Diagnostic_procedure 791 811	physical examination
+E22	Diagnostic_procedure:T34 
+T35	Sign_symptom 830 837	rhonchi
+E23	Sign_symptom:T35 
+T36	Diagnostic_procedure 850 863	breath sounds
+E24	Diagnostic_procedure:T36 
+T37	Lab_value 842 849	reduced
+R11	MODIFY Arg1:T37 Arg2:E24	
+T38	Diagnostic_procedure 865 877	Bronchoscopy
+E25	Diagnostic_procedure:T38 
+T39	Sign_symptom 892 898	lesion
+E26	Sign_symptom:T39 
+T40	Distance 887 891	1-cm
+R12	MODIFY Arg1:T40 Arg2:E26	
+T41	Biological_structure 906 924	membranous trachea
+T42	Distance 925 929	2 cm
+T43	Biological_structure 937 943	carina
+R13	MODIFY Arg1:T42 Arg2:T43	
+R14	MODIFY Arg1:T43 Arg2:T41	
+R15	MODIFY Arg1:T41 Arg2:E26	
+T44	Sign_symptom 945 967	Tortuous blood vessels
+E27	Sign_symptom:T44 
+T45	Biological_structure 997 1021	submucosa of the trachea
+R16	MODIFY Arg1:T45 Arg2:E27	
+T46	Diagnostic_procedure 1031 1045	CT angiography
+E28	Diagnostic_procedure:T46 
+T47	Therapeutic_procedure 1164 1181	Dieulafoy disease
+E29	Therapeutic_procedure:T47 
+T48	Biological_structure 1189 1196	trachea
+A4	POLARITY E29 UNCERTAIN
+R17	MODIFY Arg1:T48 Arg2:E29	
+T49	Sign_symptom 1078 1094	artery extending
+E30	Sign_symptom:T49 
+T50	Biological_structure 1104 1113	submucosa
+T51	Biological_structure 1123 1139	descending aorta
+R18	MODIFY Arg1:T50 Arg2:E30	
+R19	MODIFY Arg1:T51 Arg2:E30	
+T52	Therapeutic_procedure 1295 1316	arterial embolization
+E31	Therapeutic_procedure:T52 
+T53	Detailed_description 1285 1294	selective
+R20	MODIFY Arg1:T53 Arg2:E31	
+T54	Date 1331 1343	1 week later
+E32	Date:T54 
+T55	Coreference 1224 1236	blood vessel
+E33	Coreference:T55 
+R21	IDENTICAL Arg1:E33 Arg2:E30	
+T56	Sign_symptom 1273 1283	hemoptysis
+E34	Sign_symptom:T56 
+R22	CAUSE Arg1:E33 Arg2:E34	
+T57	Sign_symptom 1371 1381	hemoptysis
+E35	Sign_symptom:T57 
+A5	POLARITY E35 NEG
+T58	Detailed_description 1365 1370	acute
+R23	MODIFY Arg1:T58 Arg2:E35	
+T59	Date 1442 1473	the time of writing this report
+E36	Date:T59 
+T60	Clinical_event 1427 1438	followed up
+E37	Clinical_event:T60 
+*	OVERLAP E1 E2
+R24	AFTER Arg1:E2 Arg2:E3	
+*	OVERLAP E3 E4
+R25	AFTER Arg1:E4 Arg2:E5	
+*	OVERLAP E5 E6 E7 E8 E9 E10 E12 E11
+R26	BEFORE Arg1:E11 Arg2:E14	
+*	OVERLAP E14 E13
+R27	BEFORE Arg1:E13 Arg2:E17	
+*	OVERLAP E17 E16 E15
+R28	BEFORE Arg1:E15 Arg2:E18	
+R29	BEFORE Arg1:E18 Arg2:E20	
+*	OVERLAP E20 E19 E21 E22 E23 E24 E25 E26 E27 E28 E30 E29 E33
+R30	BEFORE Arg1:E33 Arg2:E31	
+*	OVERLAP E31 E32
+R31	BEFORE Arg1:E32 Arg2:E35	
+*	OVERLAP E35 E37 E36

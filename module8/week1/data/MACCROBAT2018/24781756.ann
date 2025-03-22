@@ -1,0 +1,393 @@
+T1	Sex 27 31	male
+T2	Subject 107 114	Parents
+T3	Detailed_description 119 132	first cousins
+R1	MODIFY Arg1:T3 Arg2:T2	
+T4	Subject 138 145	sibling
+T5	Family_history 107 132	Parents are first cousins
+T6	Family_history 65 105	Arab Muslim family of Palestinian origin
+T7	Personal_background 65 69	Arab
+T8	Personal_background 70 76	Muslim
+T9	Personal_background 87 98	Palestinian
+T10	Outcome 2795 2799	died
+E1	Outcome:T10 
+T11	Date 2807 2823	age of 30 months
+E2	Date:T11 
+T12	Family_history 134 213	One sibling, a girl died at the age of 1 month due to SIDS according to parents
+T13	Diagnostic_procedure 276 282	biopsy
+E3	Diagnostic_procedure:T13 
+T14	Diagnostic_procedure 293 303	sequencing
+E4	Diagnostic_procedure:T14 
+T15	Disease_disorder 455 459	IUGR
+E5	Disease_disorder:T15 
+A1	POLARITY E5 UNCERTAIN
+#1	AnnotatorNotes E5	Intrauterine growth restriction
+T16	Diagnostic_procedure 529 534	Apgar
+E6	Diagnostic_procedure:T16 
+T17	Lab_value 542 543	9
+E7	Lab_value:T17 
+T18	Lab_value 548 550	10
+E8	Lab_value:T18 
+R2	MODIFY Arg1:E7 Arg2:E6	
+R3	MODIFY Arg1:E8 Arg2:E6	
+T19	Diagnostic_procedure 552 564	Birth weight
+E9	Diagnostic_procedure:T19 
+T20	Lab_value 569 575	2.3 kg
+E10	Lab_value:T20 
+T21	Lab_value 577 592	10th percentile
+E11	Lab_value:T21 
+R4	MODIFY Arg1:E10 Arg2:E9	
+R5	MODIFY Arg1:E11 Arg2:E9	
+T22	Diagnostic_procedure 598 616	head circumference
+E12	Diagnostic_procedure:T22 
+T23	Lab_value 617 622	32 cm
+E13	Lab_value:T23 
+T24	Lab_value 624 639	10th percentile
+E14	Lab_value:T24 
+R6	MODIFY Arg1:E13 Arg2:E12	
+R7	MODIFY Arg1:E14 Arg2:E12	
+T25	Diagnostic_procedure 642 655	Physical exam
+E15	Diagnostic_procedure:T25 
+T26	Clinical_event 662 667	birth
+E16	Clinical_event:T26 
+T27	Sign_symptom 680 695	systolic murmur
+E17	Sign_symptom:T27 
+T28	Lab_value 696 699	3/6
+E18	Lab_value:T28 
+R8	MODIFY Arg1:E18 Arg2:E17	
+T29	Family_history 41 53	fourth child
+T30	Detailed_description 287 292	exome
+R9	MODIFY Arg1:T30 Arg2:E4	
+*	OVERLAP E3 E4
+T31	Biological_structure 271 275	skin
+T32	Biological_structure 263 269	muscle
+R10	MODIFY Arg1:T31 Arg2:E3	
+R11	MODIFY Arg1:T32 Arg2:E3	
+R12	AFTER Arg1:E4 Arg2:E5	
+T33	Clinical_event 468 477	delivered
+E19	Clinical_event:T33 
+T34	Therapeutic_procedure 481 497	Cesarian section
+E20	Therapeutic_procedure:T34 
+T35	Date 501 523	36+2 gestational weeks
+E21	Date:T35 
+R13	BEFORE Arg1:E5 Arg2:E19	
+*	OVERLAP E19 E20 E21
+R14	BEFORE Arg1:E21 Arg2:E6	
+*	OVERLAP E6 E9 E12 E15
+R15	AFTER Arg1:E15 Arg2:E16	
+R16	BEFORE Arg1:E16 Arg2:E17	
+T36	Date 708 725	first day of life
+E22	Date:T36 
+T37	Disease_disorder 749 767	metabolic acidosis
+E23	Disease_disorder:T37 
+T38	Diagnostic_procedure 773 780	lactate
+E24	Diagnostic_procedure:T38 
+T39	Lab_value 790 795	27 mm
+E25	Lab_value:T39 
+R17	MODIFY Arg1:E25 Arg2:E24	
+T40	Diagnostic_procedure 835 842	ammonia
+E26	Diagnostic_procedure:T40 
+T41	Lab_value 826 834	elevated
+E27	Lab_value:T41 
+T42	Lab_value 850 856	277 μm
+E28	Lab_value:T42 
+R18	MODIFY Arg1:E28 Arg2:E26	
+R19	MODIFY Arg1:E27 Arg2:E26	
+T43	Diagnostic_procedure 882 899	Metabolic work up
+E29	Diagnostic_procedure:T43 
+T44	Diagnostic_procedure 914 928	acylcarnitines
+E30	Diagnostic_procedure:T44 
+T45	Lab_value 907 913	normal
+E31	Lab_value:T45 
+R20	MODIFY Arg1:E31 Arg2:E30	
+T46	Diagnostic_procedure 939 946	alanine
+E32	Diagnostic_procedure:T46 
+T47	Lab_value 930 938	elevated
+E33	Lab_value:T47 
+T48	Lab_value 953 960	1400 μm
+E34	Lab_value:T48 
+R21	MODIFY Arg1:E34 Arg2:E32	
+R22	MODIFY Arg1:E33 Arg2:E32	
+T49	Diagnostic_procedure 989 1002	organic acids
+E35	Diagnostic_procedure:T49 
+T50	Detailed_description 983 988	urine
+R23	MODIFY Arg1:T50 Arg2:E35	
+T51	Sign_symptom 1040 1047	ketones
+E36	Sign_symptom:T51 
+T52	Sign_symptom 1020 1035	lactic acidosis
+E37	Sign_symptom:T52 
+R24	SUB_PROCEDURE Arg1:E30 Arg2:E29	
+R25	SUB_PROCEDURE Arg1:E32 Arg2:E29	
+R26	SUB_PROCEDURE Arg1:E35 Arg2:E29	
+T53	Diagnostic_procedure 1055 1060	X-ray
+E38	Diagnostic_procedure:T53 
+T54	Biological_structure 1049 1054	Chest
+R27	MODIFY Arg1:T54 Arg2:E38	
+T55	Sign_symptom 1070 1082	cardiomegaly
+E39	Sign_symptom:T55 
+T56	Diagnostic_procedure 1096 1100	Echo
+E40	Diagnostic_procedure:T56 
+T57	Biological_structure 1088 1095	cardiac
+R28	MODIFY Arg1:T57 Arg2:E40	
+T58	Sign_symptom 1173 1195	pulmonary hypertension
+E41	Sign_symptom:T58 
+T59	Sign_symptom 1151 1168	tricuspid regurge
+E42	Sign_symptom:T59 
+#2	AnnotatorNotes E42	tricuspid regurgitation
+T60	Sign_symptom 1122 1150	left ventricular hypertrophy
+E43	Sign_symptom:T60 
+T61	Detailed_description 1110 1121	symmetrical
+R29	MODIFY Arg1:T61 Arg2:E43	
+T62	Clinical_event 1213 1224	transported
+E44	Clinical_event:T62 
+T63	Nonbiological_location 1232 1236	NICU
+R30	MODIFY Arg1:T63 Arg2:E44	
+T64	Medication 1254 1265	bicarbonate
+E45	Medication:T64 
+T65	Medication 1267 1274	acetate
+E46	Medication:T65 
+T66	Medication 1279 1288	diuretics
+E47	Medication:T66 
+T67	Date 1304 1310	4 days
+E48	Date:T67 
+T68	Diagnostic_procedure 1330 1336	biopsy
+E49	Diagnostic_procedure:T68 
+T69	Biological_structure 1312 1329	quadriceps muscle
+R31	MODIFY Arg1:T69 Arg2:E49	
+T70	Diagnostic_procedure 1352 1361	Pathology
+E50	Diagnostic_procedure:T70 
+T71	Diagnostic_procedure 1379 1405	cytochrome c oxidase stain
+E51	Diagnostic_procedure:T71 
+T72	Lab_value 1369 1378	decreased
+E52	Lab_value:T72 
+R32	MODIFY Arg1:E52 Arg2:E51	
+R33	SUB_PROCEDURE Arg1:E51 Arg2:E50	
+T73	Diagnostic_procedure 1413 1423	ultrasound
+E53	Diagnostic_procedure:T73 
+T74	Biological_structure 1407 1412	Brain
+R34	MODIFY Arg1:T74 Arg2:E53	
+T75	Date 1441 1447	5 days
+E54	Date:T75 
+T76	Lab_value 1452 1458	normal
+E55	Lab_value:T76 
+R35	MODIFY Arg1:E55 Arg2:E53	
+T77	Diagnostic_procedure 1474 1492	head circumference
+E56	Diagnostic_procedure:T77 
+T78	Date 1535 1542	35 days
+E57	Date:T78 
+T79	Lab_value 1493 1505	grew rapidly
+E58	Lab_value:T79 
+T80	Lab_value 1506 1527	adding 13 centimeters
+E59	Lab_value:T80 
+R36	MODIFY Arg1:E58 Arg2:E56	
+R37	MODIFY Arg1:E59 Arg2:E56	
+T81	Diagnostic_procedure 1559 1561	US
+E60	Diagnostic_procedure:T81 
+#3	AnnotatorNotes E60	ultrasound
+T82	Biological_structure 1553 1558	brain
+R38	MODIFY Arg1:T82 Arg2:E60	
+T83	Sign_symptom 1571 1578	dilated
+E61	Sign_symptom:T83 
+T84	Biological_structure 1579 1589	ventricles
+R39	MODIFY Arg1:T84 Arg2:E61	
+T85	Biological_structure 1603 1607	head
+T86	Diagnostic_procedure 1608 1610	CT
+E62	Diagnostic_procedure:T86 
+R40	MODIFY Arg1:T85 Arg2:E62	
+T87	Sign_symptom 1668 1678	hemorrhage
+E63	Sign_symptom:T87 
+T88	Biological_structure 1630 1641	subcortical
+T89	Biological_structure 1646 1667	white matter cortical
+R41	MODIFY Arg1:T88 Arg2:E63	
+R42	MODIFY Arg1:T89 Arg2:E63	
+T90	Biological_structure 1686 1702	occipital region
+R43	MODIFY Arg1:T90 Arg2:E63	
+T91	Date 1707 1715	15 weeks
+E64	Date:T91 
+T92	Therapeutic_procedure 1745 1750	shunt
+E65	Therapeutic_procedure:T92 
+T93	Detailed_description 1719 1739	ventriculoperitoneal
+T94	Detailed_description 1741 1743	VP
+R44	IDENTICAL Arg1:T94 Arg2:T93	
+R45	MODIFY Arg1:T93 Arg2:E65	
+T95	Diagnostic_procedure 1770 1772	CT
+E66	Diagnostic_procedure:T95 
+T96	Biological_structure 1765 1769	Head
+R46	MODIFY Arg1:T96 Arg2:E66	
+T97	Date 1790 1797	2 years
+E67	Date:T97 
+T98	Sign_symptom 1815 1825	dilatation
+E68	Sign_symptom:T98 
+T99	Biological_structure 1833 1843	ventricles
+R47	MODIFY Arg1:T99 Arg2:E68	
+T100	Disease_disorder 1863 1872	hypotonia
+E69	Disease_disorder:T100 
+T101	Disease_disorder 1878 1898	feeding difficulties
+E70	Disease_disorder:T101 
+T102	Disease_disorder 1913 1924	aspirations
+E71	Disease_disorder:T102 
+T103	Detailed_description 1903 1912	recurrent
+R48	MODIFY Arg1:T103 Arg2:E71	
+T104	Diagnostic_procedure 2017 2028	examination
+E72	Diagnostic_procedure:T104 
+T105	Biological_structure 2013 2016	Eye
+R49	MODIFY Arg1:T105 Arg2:E72	
+T106	Date 2043 2051	15 weeks
+E73	Date:T106 
+T107	Therapeutic_procedure 1970 1982	feeding tube
+E74	Therapeutic_procedure:T107 
+T108	Detailed_description 1965 1968	PEG
+T109	Detailed_description 1928 1963	percutaneous endoscopic gastrostomy
+R50	MODIFY Arg1:T108 Arg2:E74	
+R51	IDENTICAL Arg1:T109 Arg2:T108	
+T110	Date 2003 2011	10 weeks
+E75	Date:T110 
+T111	Diagnostic_procedure 2081 2093	Hearing test
+E76	Diagnostic_procedure:T111 
+T112	Diagnostic_procedure 2094 2097	ABR
+E77	Diagnostic_procedure:T112 
+R52	SUB_PROCEDURE Arg1:E77 Arg2:E76	
+T113	Lab_value 2102 2108	normal
+E78	Lab_value:T113 
+R53	MODIFY Arg1:E78 Arg2:E77	
+T114	Diagnostic_procedure 2127 2131	Echo
+E79	Diagnostic_procedure:T114 
+T115	Biological_structure 2119 2126	cardiac
+R54	MODIFY Arg1:T115 Arg2:E79	
+T116	Sign_symptom 2155 2172	tricuspid regurge
+E80	Sign_symptom:T116 
+T117	Severity 2150 2154	mild
+R55	MODIFY Arg1:T117 Arg2:E80	
+T118	Severity 2174 2178	mild
+T119	Sign_symptom 2179 2207	left ventricular hypertrophy
+E81	Sign_symptom:T119 
+T120	Sign_symptom 2209 2212	LVH
+E82	Sign_symptom:T120 
+R56	IDENTICAL Arg1:E82 Arg2:E81	
+T121	Sign_symptom 2218 2240	pulmonary hypertension
+E83	Sign_symptom:T121 
+T122	Sign_symptom 2242 2246	PHTN
+E84	Sign_symptom:T122 
+R57	IDENTICAL Arg1:E84 Arg2:E83	
+T123	Date 2255 2275	first months of life
+E85	Date:T123 
+T124	Date 2291 2299	4 months
+E86	Date:T124 
+T125	Disease_disorder 2348 2362	cardiomyopathy
+E87	Disease_disorder:T125 
+T126	Detailed_description 2336 2347	obstructive
+T127	Detailed_description 2323 2335	hypertrophic
+R58	MODIFY Arg1:T126 Arg2:E87	
+R59	MODIFY Arg1:T127 Arg2:E87	
+T128	Medication 2382 2391	diuretics
+E88	Medication:T128 
+T129	Medication 2396 2409	beta blockers
+E89	Medication:T129 
+T130	Medication 2420 2444	calcium channel blockers
+E90	Medication:T130 
+T131	Diagnostic_procedure 2467 2471	Echo
+E91	Diagnostic_procedure:T131 
+T132	Date 2486 2493	2 years
+E92	Date:T132 
+T133	Sign_symptom 2522 2525	LVH
+E93	Sign_symptom:T133 
+A2	TREND E93 DEC
+T134	Sign_symptom 2533 2537	PHTN
+E94	Sign_symptom:T134 
+A3	POLARITY E94 NEG
+T135	Medication 2539 2551	Coenzyme Q10
+E95	Medication:T135 
+T136	Dosage 2569 2586	60 mg twice daily
+R60	MODIFY Arg1:T136 Arg2:E95	
+T137	Date 2605 2613	4 months
+E96	Date:T137 
+T138	Detailed_description 2618 2630	discontinued
+T139	Subject 2638 2645	parents
+R61	MODIFY Arg1:T138 Arg2:E95	
+R62	MODIFY Arg1:T139 Arg2:T138	
+T140	Duration 2654 2670	following months
+E97	Duration:T140 
+T141	Clinical_event 2688 2696	admitted
+E98	Clinical_event:T141 
+T142	Nonbiological_location 2718 2726	hospital
+R63	MODIFY Arg1:T142 Arg2:E98	
+T143	Disease_disorder 2747 2757	infections
+E99	Disease_disorder:T143 
+T144	Biological_structure 2741 2746	chest
+R64	MODIFY Arg1:T144 Arg2:E99	
+T145	Disease_disorder 2759 2779	shunt malfunctioning
+E100	Disease_disorder:T145 
+T146	Sign_symptom 2784 2790	fevers
+E101	Sign_symptom:T146 
+T147	Disease_disorder 2856 2871	febrile illness
+E102	Disease_disorder:T147 
+T148	Sign_symptom 2838 2847	hypoxemia
+E103	Sign_symptom:T148 
+T149	Severity 2831 2837	severe
+R65	MODIFY Arg1:T149 Arg2:E103	
+T150	Disease_disorder 2883 2892	infection
+E104	Disease_disorder:T150 
+T151	Sign_symptom 2907 2912	edema
+E105	Sign_symptom:T151 
+T152	Biological_structure 2897 2906	pulmonary
+R66	MODIFY Arg1:T152 Arg2:E105	
+T153	Biological_structure 2877 2882	chest
+R67	MODIFY Arg1:T153 Arg2:E104	
+T154	Therapeutic_procedure 2930 2952	mechanical ventilation
+E106	Therapeutic_procedure:T154 
+A4	POLARITY E106 NEG
+T155	Detailed_description 2922 2929	refused
+T156	Subject 2914 2921	parents
+R68	MODIFY Arg1:T156 Arg2:T155	
+R69	MODIFY Arg1:T155 Arg2:E106	
+T157	Therapeutic_procedure 2965 2976	reanimation
+E107	Therapeutic_procedure:T157 
+T158	Detailed_description 2957 2964	refused
+R70	MODIFY Arg1:T156 Arg2:T158	
+R71	MODIFY Arg1:T158 Arg2:E107	
+A5	POLARITY E107 NEG
+*	OVERLAP E17 E22 E23 E24 E26 E29 E37 E36 E38 E39 E40 E43 E42 E41
+R72	BEFORE Arg1:E41 Arg2:E44	
+R73	BEFORE Arg1:E44 Arg2:E45	
+*	OVERLAP E45 E46 E47
+R74	BEFORE Arg1:E47 Arg2:E48	
+*	OVERLAP E48 E49 E50
+R75	BEFORE Arg1:E50 Arg2:E53	
+*	OVERLAP E53 E54
+R76	BEFORE Arg1:E54 Arg2:E56	
+*	OVERLAP E56 E57 E60 E61 E62 E63
+R77	BEFORE Arg1:E63 Arg2:E64	
+*	OVERLAP E64 E65
+R78	BEFORE Arg1:E65 Arg2:E66	
+*	OVERLAP E66 E67 E68
+R79	AFTER Arg1:E68 Arg2:E69	
+*	OVERLAP E69 E70 E71
+R80	BEFORE Arg1:E71 Arg2:E74	
+*	OVERLAP E74 E75
+R81	BEFORE Arg1:E75 Arg2:E72	
+T159	Disease_disorder 2070 2079	blindness
+E108	Disease_disorder:T159 
+T160	Biological_structure 2061 2069	cortical
+R82	MODIFY Arg1:T160 Arg2:E108	
+*	OVERLAP E72 E73 E108 E76
+R83	BEFORE Arg1:E76 Arg2:E79	
+*	OVERLAP E79 E80 E81 E83 E85
+R84	BEFORE Arg1:E85 Arg2:E86	
+*	OVERLAP E86 E87
+R85	BEFORE Arg1:E87 Arg2:E88	
+*	OVERLAP E88 E89
+R86	BEFORE Arg1:E89 Arg2:E90	
+R87	BEFORE Arg1:E90 Arg2:E91	
+*	OVERLAP E91 E92 E93 E94
+R88	AFTER Arg1:E94 Arg2:E95	
+*	OVERLAP E95 E96
+R89	BEFORE Arg1:E96 Arg2:E97	
+*	OVERLAP E97 E98 E99 E100 E101
+T161	Frequency 2697 2710	several times
+R90	MODIFY Arg1:T161 Arg2:E98	
+R91	BEFORE Arg1:E101 Arg2:E1	
+*	OVERLAP E1 E2
+R92	AFTER Arg1:E2 Arg2:E103	
+R93	AFTER Arg1:E103 Arg2:E102	
+*	OVERLAP E102 E104 E105
+R94	BEFORE Arg1:E105 Arg2:E106	
+*	OVERLAP E106 E107

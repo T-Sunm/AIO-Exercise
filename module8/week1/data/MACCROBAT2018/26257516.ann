@@ -1,0 +1,354 @@
+T1	Age 2 13	62-year-old
+T2	Sex 14 18	male
+T3	Activity 19 28	presented
+E1	Activity:T3 
+T4	Duration 36 50	15-day history
+E2	Duration:T4 
+T5	Sign_symptom 54 61	dyspnea
+E3	Sign_symptom:T5 
+T6	Detailed_description 65 73	exertion
+T7	Sign_symptom 112 117	edema
+E4	Sign_symptom:T7 
+T8	Biological_structure 91 111	both lower extremity
+R2	MODIFY Arg1:T8 Arg2:E4	
+T9	Outcome 2945 2949	died
+E5	Outcome:T9 
+T10	Nonbiological_location 2953 2957	home
+R3	MODIFY Arg1:T10 Arg2:E5	
+T11	Date 2958 2972	after 3 months
+E6	Date:T11 
+T12	Medication 2724 2733	melphalan
+E7	Medication:T12 
+T13	Medication 2693 2705	chemotherapy
+E8	Medication:T13 
+T14	Medication 2735 2748	dexamethasone
+E9	Medication:T14 
+T15	Medication 2766 2778	lenalidomide
+E10	Medication:T15 
+R4	SUB_PROCEDURE Arg1:E7 Arg2:E8	
+R5	SUB_PROCEDURE Arg1:E9 Arg2:E8	
+R6	SUB_PROCEDURE Arg1:E10 Arg2:E8	
+T16	Therapeutic_procedure 2784 2802	supportive therapy
+E11	Therapeutic_procedure:T16 
+T17	Medication 2813 2828	montmorillonite
+E12	Medication:T17 
+T18	Medication 2863 2873	furosemide
+E13	Medication:T18 
+R7	SUB_PROCEDURE Arg1:E12 Arg2:E11	
+R8	SUB_PROCEDURE Arg1:E13 Arg2:E11	
+T19	Sign_symptom 2929 2940	deteriorate
+E14	Sign_symptom:T19 
+T20	Dosage 2854 2862	low-dose
+R9	MODIFY Arg1:T20 Arg2:E13	
+T21	Sign_symptom 2887 2902	fluid retention
+E15	Sign_symptom:T21 
+T22	Sign_symptom 2841 2849	diarrhea
+E16	Sign_symptom:T22 
+T23	Disease_disorder 2653 2667	AL amyloidosis
+E17	Disease_disorder:T23 
+#1	AnnotatorNotes E17	immunoglobulin light chain amyloidosis
+T24	Sign_symptom 178 186	bloating
+E18	Sign_symptom:T24 
+T25	Sign_symptom 191 200	tasteless
+E19	Sign_symptom:T25 
+T26	Biological_structure 168 177	abdominal
+R10	MODIFY Arg1:T26 Arg2:E18	
+T27	Duration 201 211	for a year
+E20	Duration:T27 
+T28	Sign_symptom 233 244	weight loss
+E21	Sign_symptom:T28 
+T29	Quantitative_concept 263 274	up to 20 kg
+R11	MODIFY Arg1:T29 Arg2:E21	
+T30	Duration 277 299	Over the past 6 months
+E22	Duration:T30 
+T31	Disease_disorder 316 340	multiple system disorder
+E23	Disease_disorder:T31 
+T32	Sign_symptom 366 378	paresthesias
+E24	Sign_symptom:T32 
+T33	Detailed_description 357 365	painless
+R12	MODIFY Arg1:T33 Arg2:E24	
+T34	Biological_structure 386 397	lower limbs
+R13	MODIFY Arg1:T34 Arg2:E24	
+T35	Disease_disorder 399 419	erectile dysfunction
+E25	Disease_disorder:T35 
+T36	Sign_symptom 433 441	diarrhea
+E26	Sign_symptom:T36 
+T37	Disease_disorder 425 441	chronic diarrhea
+E27	Disease_disorder:T37 
+T38	Detailed_description 425 432	chronic
+R14	MODIFY Arg1:T38 Arg2:E26	
+T39	Diagnostic_procedure 461 476	stool frequency
+E28	Diagnostic_procedure:T39 
+T40	Quantitative_concept 480 503	up to ten times per day
+R15	MODIFY Arg1:T40 Arg2:E28	
+T41	Sign_symptom 553 557	pain
+E29	Sign_symptom:T41 
+A1	POLARITY E29 NEG
+T42	Biological_structure 543 552	abdominal
+R16	MODIFY Arg1:T42 Arg2:E29	
+T43	Family_history 686 717	family history was unremarkable
+T44	Diagnostic_procedure 748 762	blood pressure
+E30	Diagnostic_procedure:T44 
+T45	Lab_value 767 777	82/56 mmHg
+R17	MODIFY Arg1:T45 Arg2:E30	
+T46	Diagnostic_procedure 782 792	heart rate
+E31	Diagnostic_procedure:T46 
+T47	Lab_value 797 803	52 bpm
+R18	MODIFY Arg1:T47 Arg2:E31	
+T48	Sign_symptom 832 842	distention
+E32	Sign_symptom:T48 
+T49	Biological_structure 817 831	jugular venous
+R19	MODIFY Arg1:T49 Arg2:E32	
+T50	Severity 805 816	Significant
+R20	MODIFY Arg1:T50 Arg2:E32	
+T51	Sign_symptom 853 865	hepatomegaly
+E33	Sign_symptom:T51 
+T52	Severity 844 852	moderate
+R21	MODIFY Arg1:T52 Arg2:E33	
+T53	Sign_symptom 887 892	edema
+E34	Sign_symptom:T53 
+T54	Biological_structure 871 886	lower extremity
+R22	MODIFY Arg1:T54 Arg2:E34	
+T55	Diagnostic_procedure 614 620	biopsy
+E35	Diagnostic_procedure:T55 
+T56	Biological_structure 595 602	stomach
+T57	Biological_structure 607 613	rectum
+R23	MODIFY Arg1:T57 Arg2:E35	
+R24	MODIFY Arg1:T56 Arg2:E35	
+T58	Diagnostic_procedure 658 680	amyloid fibril protein
+E36	Diagnostic_procedure:T58 
+A2	POLARITY E36 NEG
+T59	Diagnostic_procedure 2584 2590	biopsy
+E37	Diagnostic_procedure:T59 
+T60	Biological_structure 2577 2583	Rectum
+R25	MODIFY Arg1:T60 Arg2:E37	
+T61	Sign_symptom 2609 2619	infiltrate
+E38	Sign_symptom:T61 
+T62	Detailed_description 2601 2608	amyloid
+R26	MODIFY Arg1:T62 Arg2:E38	
+T63	Diagnostic_procedure 1323 1338	laboratory data
+E39	Diagnostic_procedure:T63 
+T64	Diagnostic_procedure 1353 1369	full blood count
+E40	Diagnostic_procedure:T64 
+T65	Diagnostic_procedure 1371 1383	transaminase
+E41	Diagnostic_procedure:T65 
+T66	Diagnostic_procedure 1385 1395	creatinine
+E42	Diagnostic_procedure:T66 
+T67	Diagnostic_procedure 1397 1409	electrolytes
+E43	Diagnostic_procedure:T67 
+T68	Diagnostic_procedure 1411 1427	cardiac troponin
+E44	Diagnostic_procedure:T68 
+T69	Diagnostic_procedure 1433 1449	thyroid function
+E45	Diagnostic_procedure:T69 
+R27	SUB_PROCEDURE Arg1:E40 Arg2:E39	
+R28	SUB_PROCEDURE Arg1:E41 Arg2:E39	
+R29	SUB_PROCEDURE Arg1:E42 Arg2:E39	
+R30	SUB_PROCEDURE Arg1:E43 Arg2:E39	
+R31	SUB_PROCEDURE Arg1:E44 Arg2:E39	
+R32	SUB_PROCEDURE Arg1:E45 Arg2:E39	
+T70	Lab_value 1455 1461	normal
+E46	Lab_value:T70 
+T71	Lab_value 1465 1473	negative
+E47	Lab_value:T71 
+R33	MODIFY Arg1:E46 Arg2:E39	
+R34	MODIFY Arg1:E47 Arg2:E39	
+T72	Diagnostic_procedure 1475 1527	N-terminal fragment of pro-brain natriuretic peptide
+E48	Diagnostic_procedure:T72 
+T73	Diagnostic_procedure 1529 1538	NT-proBNP
+E49	Diagnostic_procedure:T73 
+R35	IDENTICAL Arg1:E49 Arg2:E48	
+T74	Lab_value 1544 1555	3,996 pg/mL
+E50	Lab_value:T74 
+R36	MODIFY Arg1:E50 Arg2:E48	
+T75	Diagnostic_procedure 1557 1581	Nerve conduction studies
+E51	Diagnostic_procedure:T75 
+T76	Disease_disorder 1602 1626	sensory-motor neuropathy
+E52	Disease_disorder:T76 
+T77	Detailed_description 1592 1601	bilateral
+R37	MODIFY Arg1:T77 Arg2:E52	
+T78	Diagnostic_procedure 1641 1663	electromyography study
+E53	Diagnostic_procedure:T78 
+T79	Sign_symptom 1684 1695	denervation
+E54	Sign_symptom:T79 
+T80	Sign_symptom 1708 1729	reinnervation changes
+E55	Sign_symptom:T80 
+T81	Biological_structure 1737 1754	tibialis anterior
+T82	Biological_structure 1759 1772	gastrocnemius
+R38	MODIFY Arg1:T81 Arg2:E55	
+R39	MODIFY Arg1:T81 Arg2:E54	
+R40	MODIFY Arg1:T82 Arg2:E54	
+R41	MODIFY Arg1:T82 Arg2:E55	
+T83	Diagnostic_procedure 2239 2259	Coronary angiography
+E56	Diagnostic_procedure:T83 
+T84	Lab_value 2274 2280	normal
+E57	Lab_value:T84 
+R42	MODIFY Arg1:E57 Arg2:E56	
+T85	Diagnostic_procedure 2158 2165	Doppler
+E58	Diagnostic_procedure:T85 
+T86	Disease_disorder 2430 2441	amyloidosis
+E59	Disease_disorder:T86 
+A3	POLARITY E59 MAYBE_POS
+T87	Biological_structure 2422 2429	cardiac
+R43	MODIFY Arg1:T87 Arg2:E59	
+T88	Diagnostic_procedure 1774 1791	Electrocardiogram
+E60	Diagnostic_procedure:T88 
+T89	Diagnostic_procedure 1793 1796	ECG
+E61	Diagnostic_procedure:T89 
+R44	IDENTICAL Arg1:E61 Arg2:E60	
+T90	Lab_value 1807 1819	sinus rhythm
+E62	Lab_value:T90 
+T91	Diagnostic_procedure 1837 1847	limb leads
+E63	Diagnostic_procedure:T91 
+T92	Lab_value 1821 1833	low voltages
+E64	Lab_value:T92 
+R45	MODIFY Arg1:E64 Arg2:E63	
+T93	Diagnostic_procedure 1861 1890	precordial and inferior leads
+E65	Diagnostic_procedure:T93 
+R46	MODIFY Arg1:E62 Arg2:E60	
+R47	SUB_PROCEDURE Arg1:E63 Arg2:E60	
+R48	SUB_PROCEDURE Arg1:E65 Arg2:E60	
+T94	Lab_value 1849 1857	QS waves
+E66	Lab_value:T94 
+R49	MODIFY Arg1:E66 Arg2:E65	
+T95	Sign_symptom 1905 1927	atrioventricular block
+E67	Sign_symptom:T95 
+T96	Detailed_description 1892 1904	first-degree
+R50	MODIFY Arg1:T96 Arg2:E67	
+T97	Diagnostic_procedure 1943 1946	QTc
+E68	Diagnostic_procedure:T97 
+T98	Lab_value 1933 1942	prolonged
+E69	Lab_value:T98 
+R51	MODIFY Arg1:E69 Arg2:E68	
+T99	Diagnostic_procedure 1975 1991	echocardiography
+E70	Diagnostic_procedure:T99 
+T100	Detailed_description 1959 1974	Two-dimensional
+R52	MODIFY Arg1:T100 Arg2:E70	
+T101	Sign_symptom 2023 2032	thickened
+E71	Sign_symptom:T101 
+T102	Sign_symptom 2037 2056	speckled appearance
+E72	Sign_symptom:T102 
+T103	Detailed_description 2008 2022	concentrically
+R53	MODIFY Arg1:T103 Arg2:E71	
+T104	Biological_structure 2060 2077	ventricular walls
+R54	MODIFY Arg1:T104 Arg2:E72	
+R55	MODIFY Arg1:T104 Arg2:E71	
+T105	Sign_symptom 2088 2098	dilatation
+E73	Sign_symptom:T105 
+T106	Biological_structure 2079 2087	biatrial
+R56	MODIFY Arg1:T106 Arg2:E73	
+T107	Diagnostic_procedure 2104 2138	left ventricular ejection fraction
+E74	Diagnostic_procedure:T107 
+T108	Lab_value 2142 2145	70%
+E75	Lab_value:T108 
+R57	MODIFY Arg1:E75 Arg2:E74	
+T109	Sign_symptom 2184 2218	restrictive mitral filling pattern
+E76	Sign_symptom:T109 
+T110	Severity 2177 2183	severe
+R58	MODIFY Arg1:T110 Arg2:E76	
+T111	Diagnostic_procedure 2224 2233	E/A ratio
+E77	Diagnostic_procedure:T111 
+T112	Lab_value 2234 2237	2.1
+E78	Lab_value:T112 
+R59	MODIFY Arg1:E78 Arg2:E77	
+T113	Diagnostic_procedure 2332 2335	ECG
+E79	Diagnostic_procedure:T113 
+T114	Diagnostic_procedure 2313 2324	QRS voltage
+E80	Diagnostic_procedure:T114 
+T115	Lab_value 2309 2312	low
+E81	Lab_value:T115 
+R60	MODIFY Arg1:E81 Arg2:E80	
+R61	SUB_PROCEDURE Arg1:E80 Arg2:E79	
+T116	Sign_symptom 2349 2359	thickening
+E82	Sign_symptom:T116 
+T117	Biological_structure 2337 2348	ventricular
+R62	MODIFY Arg1:T117 Arg2:E82	
+T118	Sign_symptom 2374 2395	diastolic dysfunction
+E83	Sign_symptom:T118 
+T119	Diagnostic_procedure 2463 2490	λ light-chain concentration
+E84	Diagnostic_procedure:T119 
+T120	Detailed_description 2457 2462	serum
+R63	MODIFY Arg1:T120 Arg2:E84	
+T121	Lab_value 2495 2500	1,763
+E85	Lab_value:T121 
+R64	MODIFY Arg1:E85 Arg2:E84	
+T122	Diagnostic_procedure 2537 2564	κ light-chain concentration
+E86	Diagnostic_procedure:T122 
+T123	Lab_value 2569 2575	normal
+E87	Lab_value:T123 
+R65	MODIFY Arg1:E87 Arg2:E86	
+T124	Diagnostic_procedure 907 931	neurological examination
+E88	Diagnostic_procedure:T124 
+T125	Sign_symptom 941 949	weakness
+E89	Sign_symptom:T125 
+T126	Sign_symptom 963 970	atrophy
+E90	Sign_symptom:T126 
+T127	Biological_structure 954 962	muscular
+R66	MODIFY Arg1:T127 Arg2:E90	
+T128	Biological_structure 978 1005	bilateral tibialis anterior
+T129	Biological_structure 1010 1023	gastrocnemius
+R67	MODIFY Arg1:T128 Arg2:E90	
+R68	MODIFY Arg1:T129 Arg2:E90	
+T130	Sign_symptom 1025 1037	Hyporeflexia
+E91	Sign_symptom:T130 
+T131	Biological_structure 1051 1061	both knees
+T132	Biological_structure 1066 1072	ankles
+R69	MODIFY Arg1:T131 Arg2:E91	
+R70	MODIFY Arg1:T132 Arg2:E91	
+T133	Diagnostic_procedure 521 526	blood
+E92	Diagnostic_procedure:T133 
+#2	AnnotatorNotes E92	in the stool
+T134	Diagnostic_procedure 530 535	mucus
+E93	Diagnostic_procedure:T134 
+#3	AnnotatorNotes E93	in the stool
+T135	Lab_value 510 520	no obvious
+E94	Lab_value:T135 
+R71	MODIFY Arg1:E94 Arg2:E92	
+R72	MODIFY Arg1:E94 Arg2:E93	
+T136	Sign_symptom 561 569	tenesmus
+E95	Sign_symptom:T136 
+A4	POLARITY E95 NEG
+T137	Diagnostic_procedure 722 742	physical examination
+E96	Diagnostic_procedure:T137 
+T138	Diagnostic_procedure 1074 1093	Sensory examination
+E97	Diagnostic_procedure:T138 
+T139	Diagnostic_procedure 1114 1140	tactile and pain sensation
+E98	Diagnostic_procedure:T139 
+T140	Lab_value 1103 1113	diminished
+E99	Lab_value:T140 
+R73	MODIFY Arg1:E99 Arg2:E98	
+T141	Diagnostic_procedure 1177 1196	vibratory sensation
+E100	Diagnostic_procedure:T141 
+T142	Lab_value 1146 1172	stocking and glove pattern
+E101	Lab_value:T142 
+R74	MODIFY Arg1:E101 Arg2:E98	
+T143	Lab_value 1201 1217	distally reduced
+E102	Lab_value:T143 
+T144	Biological_structure 1225 1236	lower limbs
+R75	MODIFY Arg1:T144 Arg2:E102	
+R76	MODIFY Arg1:E102 Arg2:E100	
+R77	SUB_PROCEDURE Arg1:E98 Arg2:E97	
+R78	SUB_PROCEDURE Arg1:E100 Arg2:E97	
+T145	Diagnostic_procedure 1242 1269	motor and sensory functions
+E103	Diagnostic_procedure:T145 
+T146	Biological_structure 1273 1290	upper extremities
+R79	MODIFY Arg1:T146 Arg2:E103	
+T147	Lab_value 1296 1313	relatively spared
+E104	Lab_value:T147 
+R80	MODIFY Arg1:E104 Arg2:E103	
+T148	Detailed_description 2750 2765	immunomodulator
+R81	MODIFY Arg1:T148 Arg2:E10	
+R82	AFTER Arg1:E1 Arg2:E2	
+*	OVERLAP E2 E3 E4
+R1	MODIFY Arg1:T6 Arg2:E3	
+R83	AFTER Arg1:E4 Arg2:E18	
+T149	History 178 186	bloating
+T150	History 191 200	tasteless
+*	OVERLAP E18 E19 E20 E21
+R84	BEFORE Arg1:E21 Arg2:E22	
+*	OVERLAP E22 E23 E24 E25 E27 E26 E28 E92 E93 E29 E95 E35 E36
+R85	BEFORE Arg1:E36 Arg2:E96	
+*	OVERLAP E96 E30 E31 E32 E33 E34 E88 E89 E90 E91 E97 E103 E39 E48 E51 E52 E53 E54 E55 E60 E67 E68 E70 E71 E72 E74 E58 E76 E77 E56 E79 E82 E83 E59 E84 E86 E37 E38 E17
+R86	BEFORE Arg1:E17 Arg2:E8	
+*	OVERLAP E8 E11 E16 E15
+R87	BEFORE Arg1:E15 Arg2:E14	
+*	OVERLAP E14 E5 E6

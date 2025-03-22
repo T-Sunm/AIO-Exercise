@@ -1,0 +1,196 @@
+T1	Sex 2 7	woman
+T2	Age 15 18	60s
+T3	Outcome 2048 2052	died
+E1	Outcome:T3 
+T4	Date 2053 2073	several months later
+E2	Date:T4 
+T5	Therapeutic_procedure 2031 2043	chemotherapy
+E3	Therapeutic_procedure:T5 
+T6	Detailed_description 2020 2030	palliative
+R1	MODIFY Arg1:T6 Arg2:E3	
+T7	Diagnostic_procedure 37 43	screen
+E4	Diagnostic_procedure:T7 
+T8	Disease_disorder 70 86	breast carcinoma
+E5	Disease_disorder:T8 
+T9	Detailed_description 62 69	lobular
+T10	Detailed_description 53 61	invasive
+R2	MODIFY Arg1:T9 Arg2:E5	
+R3	MODIFY Arg1:T10 Arg2:E5	
+T11	Biological_structure 94 106	right breast
+R4	MODIFY Arg1:T11 Arg2:E5	
+T12	Disease_disorder 120 136	ductal carcinoma
+E6	Disease_disorder:T12 
+T13	Detailed_description 111 119	invasive
+R5	MODIFY Arg1:T13 Arg2:E6	
+T14	Detailed_description 138 153	no special type
+R6	MODIFY Arg1:T14 Arg2:E6	
+T15	Biological_structure 162 173	left breast
+R7	MODIFY Arg1:T15 Arg2:E6	
+T16	Diagnostic_procedure 183 193	CT imaging
+E7	Diagnostic_procedure:T16 
+T17	Therapeutic_procedure 203 213	mastectomy
+E8	Therapeutic_procedure:T17 
+T18	Sign_symptom 236 240	mass
+E9	Sign_symptom:T18 
+T19	Biological_structure 229 235	pelvic
+R8	MODIFY Arg1:T19 Arg2:E9	
+T20	Distance 223 228	12 cm
+R9	MODIFY Arg1:T20 Arg2:E9	
+T21	Sign_symptom 289 296	fibroid
+E10	Sign_symptom:T21 
+A1	POLARITY E10 UNCERTAIN
+T22	Biological_structure 297 303	uterus
+R10	MODIFY Arg1:T22 Arg2:E10	
+T23	Sign_symptom 331 339	bleeding
+E11	Sign_symptom:T23 
+T24	Detailed_description 316 330	postmenopausal
+R11	MODIFY Arg1:T24 Arg2:E11	
+T25	Diagnostic_procedure 383 389	biopsy
+E12	Diagnostic_procedure:T25 
+T26	Diagnostic_procedure 366 378	hysteroscopy
+E13	Diagnostic_procedure:T26 
+T27	Diagnostic_procedure 354 364	ultrasound
+E14	Diagnostic_procedure:T27 
+T28	Biological_structure 347 353	pelvic
+R12	MODIFY Arg1:T28 Arg2:E14	
+T29	Diagnostic_procedure 395 401	biopsy
+E15	Diagnostic_procedure:T29 
+T30	Disease_disorder 426 433	sarcoma
+E16	Disease_disorder:T30 
+T31	Detailed_description 409 425	undifferentiated
+R13	MODIFY Arg1:T31 Arg2:E16	
+T32	Diagnostic_procedure 455 475	immunohistochemistry
+E17	Diagnostic_procedure:T32 
+T33	Lab_value 435 449	unclassifiable
+R14	MODIFY Arg1:T33 Arg2:E17	
+R15	MODIFY Arg1:E16 Arg2:E17	
+T34	Sign_symptom 563 569	tumour
+E18	Sign_symptom:T34 
+T35	Biological_structure 555 562	uterine
+R16	MODIFY Arg1:T35 Arg2:E18	
+T36	Detailed_description 585 603	primary malignancy
+R17	MODIFY Arg1:T36 Arg2:E18	
+T37	Disease_disorder 616 626	metastasis
+E19	Disease_disorder:T37 
+A2	POLARITY E19 MAYBE_NEG
+T38	Biological_structure 636 642	breast
+R18	MODIFY Arg1:T38 Arg2:E19	
+T39	Therapeutic_procedure 644 656	Hysterectomy
+E20	Therapeutic_procedure:T39 
+T40	Therapeutic_procedure 671 692	salpingo-oophorectomy
+E21	Therapeutic_procedure:T40 
+T41	Detailed_description 661 670	bilateral
+R19	MODIFY Arg1:T41 Arg2:E21	
+T42	Diagnostic_procedure 809 833	Histological examination
+E22	Diagnostic_procedure:T42 
+T43	Sign_symptom 888 894	tumour
+E23	Sign_symptom:T43 
+T44	Detailed_description 869 887	partially necrotic
+R20	MODIFY Arg1:T44 Arg2:E23	
+T45	Detailed_description 902 918	discrete outline
+R21	MODIFY Arg1:T45 Arg2:E23	
+T46	Biological_structure 963 973	myometrium
+R22	MODIFY Arg1:T46 Arg2:E23	
+T47	Coreference 979 985	tumour
+E24	Coreference:T47 
+R23	IDENTICAL Arg1:E24 Arg2:E23	
+T48	Detailed_description 1002 1025	malignant spindle cells
+R24	MODIFY Arg1:T48 Arg2:E24	
+T49	Detailed_description 1073 1090	pleomorphic cells
+R25	MODIFY Arg1:T49 Arg2:E24	
+T50	Detailed_description 1105 1127	eosinophilic cytoplasm
+R26	MODIFY Arg1:T50 Arg2:T49	
+T51	Sign_symptom 1155 1166	giant cells
+E25	Sign_symptom:T51 
+T52	Detailed_description 1129 1138	Plentiful
+R27	MODIFY Arg1:T52 Arg2:E25	
+T53	Detailed_description 1139 1154	osteoclast-like
+R28	MODIFY Arg1:T53 Arg2:E25	
+T54	Diagnostic_procedure 1193 1200	Mitoses
+E26	Diagnostic_procedure:T54 
+T55	Lab_value 1206 1214	numerous
+R29	MODIFY Arg1:T55 Arg2:E26	
+T56	Sign_symptom 1219 1246	structurally abnormal forms
+E27	Sign_symptom:T56 
+T57	Diagnostic_procedure 1558 1577	immunohistochemical
+E28	Diagnostic_procedure:T57 
+T58	Coreference 1260 1276	Neoplastic cells
+E29	Coreference:T58 
+T59	Coreference 1538 1550	Tumour cells
+E30	Coreference:T59 
+T60	Diagnostic_procedure 1593 1601	vimentin
+E31	Diagnostic_procedure:T60 
+T61	Diagnostic_procedure 1603 1622	smooth muscle actin
+E32	Diagnostic_procedure:T61 
+T62	Diagnostic_procedure 1624 1627	SMA
+E33	Diagnostic_procedure:T62 
+R30	IDENTICAL Arg1:E33 Arg2:E32	
+T63	Diagnostic_procedure 1630 1636	desmin
+E34	Diagnostic_procedure:T63 
+T65	Diagnostic_procedure 1651 1655	CD99
+E36	Diagnostic_procedure:T65 
+T66	Diagnostic_procedure 1657 1675	Epithelial markers
+E37	Diagnostic_procedure:T66 
+T67	Lab_value 1681 1694	not expressed
+R32	MODIFY Arg1:T67 Arg2:E37	
+T68	Lab_value 1578 1588	expression
+R33	SUB_PROCEDURE Arg1:E31 Arg2:E28	
+R34	SUB_PROCEDURE Arg1:E32 Arg2:E28	
+R35	SUB_PROCEDURE Arg1:E34 Arg2:E28	
+R31	SUB_PROCEDURE Arg1:E36 Arg2:E28	
+T64	Lab_value 1638 1645	focally
+R36	MODIFY Arg1:T64 Arg2:E34	
+R37	MODIFY Arg1:T68 Arg2:E31	
+R38	MODIFY Arg1:T68 Arg2:E32	
+R39	MODIFY Arg1:T68 Arg2:E34	
+R40	MODIFY Arg1:T68 Arg2:E36	
+T69	Disease_disorder 1811 1823	osteosarcoma
+E35	Disease_disorder:T69 
+T70	Detailed_description 1771 1807	primary uterine osteoblastic variant
+R41	MODIFY Arg1:T70 Arg2:E35	
+T71	Diagnostic_procedure 1867 1877	CT imaging
+E38	Diagnostic_procedure:T71 
+T72	Sign_symptom 1938 1946	deposits
+E39	Sign_symptom:T72 
+T73	Biological_structure 1928 1937	pulmonary
+T74	Biological_structure 1913 1923	peritoneal
+T75	Detailed_description 1904 1912	multiple
+R42	MODIFY Arg1:T73 Arg2:E39	
+R43	MODIFY Arg1:T74 Arg2:E39	
+R44	MODIFY Arg1:T75 Arg2:E39	
+T76	Disease_disorder 1985 1997	osteosarcoma
+E40	Disease_disorder:T76 
+T77	Detailed_description 1974 1984	metastatic
+R45	MODIFY Arg1:T77 Arg2:E40	
+T78	Diagnostic_procedure 1961 1967	biopsy
+E41	Diagnostic_procedure:T78 
+R46	BEFORE Arg1:E4 Arg2:E5	
+*	OVERLAP E5 E6
+R47	BEFORE Arg1:E6 Arg2:E7	
+R48	BEFORE Arg1:E7 Arg2:E8	
+R49	AFTER Arg1:E8 Arg2:E9	
+*	OVERLAP E9 E10 E11
+R50	BEFORE Arg1:E11 Arg2:E14	
+*	OVERLAP E14 E13 E12 E15 E16 E17
+R51	BEFORE Arg1:E17 Arg2:E18	
+*	OVERLAP E18 E19
+R52	BEFORE Arg1:E19 Arg2:E20	
+*	OVERLAP E20 E21
+T79	Therapeutic_procedure 791 807	adjuvant therapy
+E42	Therapeutic_procedure:T79 
+R53	BEFORE Arg1:E21 Arg2:E42	
+R54	BEFORE Arg1:E42 Arg2:E22	
+*	OVERLAP E22 E23 E24 E25 E26 E27 E29 E43 E44 E30 E28 E37 E35
+R55	IDENTICAL Arg1:E29 Arg2:E24	
+T80	Sign_symptom 1423 1453	neoplastic epithelial elements
+E43	Sign_symptom:T80 
+A3	POLARITY E43 NEG
+T81	Disease_disorder 1503 1535	malignant mixed Müllerian tumour
+E44	Disease_disorder:T81 
+A4	POLARITY E44 NEG
+R56	IDENTICAL Arg1:E30 Arg2:E29	
+R57	BEFORE Arg1:E35 Arg2:E38	
+*	OVERLAP E38 E39 E41 E40
+R58	BEFORE Arg1:E40 Arg2:E3	
+R59	BEFORE Arg1:E3 Arg2:E1	
+*	OVERLAP E1 E2

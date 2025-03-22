@@ -1,0 +1,252 @@
+T1	Age 2 13	26-year-old
+T2	Sex 14 17	man
+T3	Personal_background 21 39	Portuguese descent
+T4	History 45 80	no significant past medical history
+T5	Sign_symptom 125 136	hemiparesis
+E1	Sign_symptom:T5 
+T6	Disease_disorder 141 148	aphasia
+E2	Disease_disorder:T6 
+T7	Disease_disorder 173 180	aphasia
+E3	Disease_disorder:T7 
+T8	Sign_symptom 216 234	paraphrasic errors
+E4	Sign_symptom:T8 
+T9	Frequency 211 215	rare
+R1	MODIFY Arg1:T9 Arg2:E4	
+T10	Detailed_description 113 124	right-sided
+R2	MODIFY Arg1:T10 Arg2:E1	
+T11	Severity 155 161	marked
+T12	Detailed_description 162 172	expressive
+R3	MODIFY Arg1:T11 Arg2:E3	
+R4	MODIFY Arg1:T12 Arg2:E3	
+T13	Sign_symptom 182 205	word-finding difficulty
+E5	Sign_symptom:T13 
+T14	Diagnostic_procedure 236 247	Examination
+E6	Diagnostic_procedure:T14 
+T15	Sign_symptom 282 290	weakness
+E7	Sign_symptom:T15 
+T16	Biological_structure 261 281	right central facial
+R5	MODIFY Arg1:T16 Arg2:E7	
+T17	Diagnostic_procedure 298 306	strength
+E8	Diagnostic_procedure:T17 
+T18	Lab_value 292 297	2–3/5
+R6	MODIFY Arg1:T18 Arg2:E8	
+T19	Biological_structure 320 323	arm
+T20	Biological_structure 328 331	leg
+T21	Detailed_description 314 319	right
+R7	MODIFY Arg1:T21 Arg2:T19	
+R8	MODIFY Arg1:T21 Arg2:T20	
+R9	MODIFY Arg1:T19 Arg2:E8	
+R10	MODIFY Arg1:T20 Arg2:E8	
+T22	Sign_symptom 337 346	dysmetria
+E9	Sign_symptom:T22 
+T23	Biological_structure 376 387	extremities
+T24	Detailed_description 354 359	right
+T25	Detailed_description 360 365	upper
+T26	Detailed_description 370 375	lower
+R11	MODIFY Arg1:T26 Arg2:T23	
+R12	MODIFY Arg1:T25 Arg2:T23	
+R13	MODIFY Arg1:T24 Arg2:T23	
+R14	MODIFY Arg1:T23 Arg2:E9	
+T27	Diagnostic_procedure 389 397	Reflexes
+E10	Diagnostic_procedure:T27 
+T28	Lab_value 403 414	hyperactive
+T29	Detailed_description 422 427	right
+R15	MODIFY Arg1:T29 Arg2:T28	
+T30	Diagnostic_procedure 447 464	Babinski response
+E11	Diagnostic_procedure:T30 
+T31	Lab_value 435 446	right-sided
+R16	MODIFY Arg1:T31 Arg2:E11	
+R17	SUB_PROCEDURE Arg1:E11 Arg2:E10	
+R18	MODIFY Arg1:T28 Arg2:E10	
+T32	Diagnostic_procedure 466 469	MRI
+E12	Diagnostic_procedure:T32 
+T33	Biological_structure 477 482	brain
+R19	MODIFY Arg1:T33 Arg2:E12	
+T34	Sign_symptom 530 540	structures
+E13	Sign_symptom:T34 
+T35	Shape 520 529	ring-like
+T36	Detailed_description 509 519	concentric
+T37	Detailed_description 499 508	bilateral
+T38	Detailed_description 490 498	multiple
+R20	MODIFY Arg1:T35 Arg2:E13	
+R21	MODIFY Arg1:T36 Arg2:E13	
+R22	MODIFY Arg1:T37 Arg2:E13	
+R23	MODIFY Arg1:T38 Arg2:E13	
+T39	Biological_structure 548 565	centrum semiovale
+T40	Biological_structure 574 588	corona radiata
+R24	MODIFY Arg1:T39 Arg2:E13	
+R25	MODIFY Arg1:T40 Arg2:E13	
+T41	Diagnostic_procedure 592 602	T2 imaging
+E14	Diagnostic_procedure:T41 
+R26	SUB_PROCEDURE Arg1:E14 Arg2:E12	
+T42	Disease_disorder 646 671	Balo concentric sclerosis
+E15	Disease_disorder:T42 
+T43	Sign_symptom 720 727	lesions
+E16	Sign_symptom:T43 
+T44	Sign_symptom 765 771	lesion
+E17	Sign_symptom:T44 
+T45	Detailed_description 683 714	associated restricted diffusion
+T46	Lab_value 718 719	3
+R27	MODIFY Arg1:T46 Arg2:E16	
+R28	MODIFY Arg1:T45 Arg2:E16	
+T47	Detailed_description 732 759	incomplete ring enhancement
+T48	Lab_value 763 764	1
+R29	MODIFY Arg1:T48 Arg2:E17	
+R30	MODIFY Arg1:T47 Arg2:E17	
+T49	Diagnostic_procedure 773 785	CSF analysis
+E18	Diagnostic_procedure:T49 
+T50	Diagnostic_procedure 796 806	leukocytes
+E19	Diagnostic_procedure:T50 
+T51	Diagnostic_procedure 812 823	lymphocytes
+E20	Diagnostic_procedure:T51 
+T52	Diagnostic_procedure 828 837	monocytes
+E21	Diagnostic_procedure:T52 
+T53	Diagnostic_procedure 840 851	erythrocyte
+E22	Diagnostic_procedure:T53 
+T54	Diagnostic_procedure 871 888	oligoclonal bands
+E23	Diagnostic_procedure:T54 
+R31	SUB_PROCEDURE Arg1:E19 Arg2:E18	
+T55	Lab_value 793 795	30
+R32	MODIFY Arg1:T55 Arg2:E19	
+R33	SUB_PROCEDURE Arg1:E20 Arg2:E19	
+R34	SUB_PROCEDURE Arg1:E21 Arg2:E19	
+T56	Lab_value 808 811	79%
+R35	MODIFY Arg1:T56 Arg2:E20	
+T57	Lab_value 825 827	4%
+R36	MODIFY Arg1:T57 Arg2:E21	
+R37	SUB_PROCEDURE Arg1:E22 Arg2:E18	
+T58	Lab_value 862 865	850
+R38	MODIFY Arg1:T58 Arg2:E22	
+T59	Lab_value 894 900	absent
+R39	MODIFY Arg1:T59 Arg2:E23	
+R40	SUB_PROCEDURE Arg1:E23 Arg2:E18	
+T60	Medication 932 950	methylprednisolone
+E24	Medication:T60 
+T61	Dosage 922 925	1 g
+T62	Dosage 951 956	daily
+T63	Administration 929 931	IV
+R41	MODIFY Arg1:T63 Arg2:E24	
+R42	MODIFY Arg1:T61 Arg2:E24	
+R43	MODIFY Arg1:T62 Arg2:E24	
+T64	Duration 961 967	5 days
+E25	Duration:T64 
+T67	Therapeutic_procedure 1014 1038	plasmapheresis exchanges
+E27	Therapeutic_procedure:T67 
+T68	Lab_value 1012 1013	5
+R45	MODIFY Arg1:T68 Arg2:E27	
+T65	Diagnostic_procedure 1072 1077	motor
+E26	Diagnostic_procedure:T65 
+T66	Diagnostic_procedure 1079 1086	sensory
+E28	Diagnostic_procedure:T66 
+T69	Diagnostic_procedure 1109 1113	gait
+E29	Diagnostic_procedure:T69 
+T70	Lab_value 1045 1068	significant improvement
+R44	MODIFY Arg1:T70 Arg2:E26	
+R46	MODIFY Arg1:T70 Arg2:E28	
+R47	MODIFY Arg1:T70 Arg2:E29	
+T71	Disease_disorder 1088 1103	speech deficits
+E30	Disease_disorder:T71 
+A1	TREND E30 DEC
+T72	Date 1115 1136	Forty-five days after
+E31	Date:T72 
+T73	Clinical_event 1137 1146	discharge
+E32	Clinical_event:T73 
+T74	Diagnostic_procedure 1152 1163	examination
+E33	Diagnostic_procedure:T74 
+T75	Diagnostic_procedure 1176 1184	strength
+E34	Diagnostic_procedure:T75 
+T76	Lab_value 1171 1175	4+/5
+R48	MODIFY Arg1:T76 Arg2:E34	
+T77	Biological_structure 1192 1227	right intrinsic muscles of the hand
+R49	MODIFY Arg1:T77 Arg2:E34	
+T78	Sign_symptom 1246 1263	positional tremor
+E35	Sign_symptom:T78 
+T79	Detailed_description 1234 1245	right-sided
+R50	MODIFY Arg1:T79 Arg2:E35	
+T80	Diagnostic_procedure 1265 1269	Gait
+E36	Diagnostic_procedure:T80 
+T81	Diagnostic_procedure 1281 1285	gait
+E37	Diagnostic_procedure:T81 
+T82	Detailed_description 1274 1280	tandem
+R51	MODIFY Arg1:T82 Arg2:E37	
+T83	Lab_value 1291 1297	normal
+R52	MODIFY Arg1:T83 Arg2:E37	
+R53	MODIFY Arg1:T83 Arg2:E36	
+T84	Medication 1316 1331	β-interferon-1a
+E38	Medication:T84 
+T85	Dosage 1332 1337	44 μg
+T86	Dosage 1353 1367	3 times a week
+T87	Administration 1338 1352	subcutaneously
+R54	MODIFY Arg1:T85 Arg2:E38	
+R55	MODIFY Arg1:T86 Arg2:E38	
+R56	MODIFY Arg1:T87 Arg2:E38	
+T88	Disease_disorder 1395 1423	clinically isolated syndrome
+E39	Disease_disorder:T88 
+T89	Diagnostic_procedure 1435 1443	response
+E40	Diagnostic_procedure:T89 
+T90	Lab_value 1430 1434	good
+R57	MODIFY Arg1:T90 Arg2:E40	
+T91	Date 1445 1459	One year later
+E41	Date:T91 
+T92	Diagnostic_procedure 1465 1487	neurologic examination
+E42	Diagnostic_procedure:T92 
+T93	Lab_value 1492 1510	essentially normal
+R58	MODIFY Arg1:T93 Arg2:E42	
+T94	Family_history 1522 1580	no family history of demyelinating or autoimmune disorders
+T95	Subject 1586 1592	mother
+T96	Family_history 1622 1631	headaches
+T97	Family_history 1636 1655	early-onset strokes
+R59	MODIFY Arg1:T95 Arg2:T96	
+R60	MODIFY Arg1:T95 Arg2:T97	
+T98	Family_history 1679 1709	carrier of the Notch3 mutation
+T99	Family_history 1726 1816	cerebral autosomal dominant arteriopathy with subcortical infarcts and leukoencephalopathy
+T100	Family_history 1818 1825	CADASIL
+R61	IDENTICAL Arg1:T100 Arg2:T99	
+R62	MODIFY Arg1:T95 Arg2:T98	
+R63	MODIFY Arg1:T95 Arg2:T99	
+T101	Subject 1832 1838	sister
+T102	Family_history 1845 1862	stroke in her 30s
+T103	Family_history 1881 1899	migraine headaches
+T104	Family_history 1909 1941	not undergone medical evaluation
+R64	MODIFY Arg1:T101 Arg2:T102	
+R65	MODIFY Arg1:T101 Arg2:T103	
+R66	MODIFY Arg1:T101 Arg2:T104	
+T105	Diagnostic_procedure 1943 1962	Testing for CADASIL
+E43	Diagnostic_procedure:T105 
+T106	Diagnostic_procedure 1989 2004	Notch3 mutation
+E44	Diagnostic_procedure:T106 
+T107	Lab_value 1978 1984	showed
+R67	MODIFY Arg1:T107 Arg2:E44	
+R68	SUB_PROCEDURE Arg1:E44 Arg2:E43	
+T108	Detailed_description 2005 2028	associated with CADASIL
+T109	Detailed_description 2030 2081	transition C>T, nucleotide position 1750, codon 558
+R69	MODIFY Arg1:T108 Arg2:E44	
+R70	MODIFY Arg1:T109 Arg2:E44	
+T110	Diagnostic_procedure 2089 2095	biopsy
+E45	Diagnostic_procedure:T110 
+T111	Biological_structure 2084 2088	Skin
+R71	MODIFY Arg1:T111 Arg2:E45	
+T112	Sign_symptom 2132 2140	material
+E46	Sign_symptom:T112 
+T113	Detailed_description 2118 2131	extracellular
+T114	Detailed_description 2103 2117	electron-dense
+R72	MODIFY Arg1:T113 Arg2:E46	
+R73	MODIFY Arg1:T114 Arg2:E46	
+T115	Biological_structure 2168 2203	smooth muscle of the vascular media
+R74	MODIFY Arg1:T115 Arg2:E46	
+T116	Clinical_event 81 89	presents
+E47	Clinical_event:T116 
+*	OVERLAP E47 E1 E2 E3 E5 E4 E6 E7 E8 E9 E10 E12 E13 E15 E16 E17 E18
+R75	BEFORE Arg1:E18 Arg2:E24	
+*	OVERLAP E24 E25
+R76	BEFORE Arg1:E25 Arg2:E27	
+*	OVERLAP E27 E26 E28 E30 E29
+R77	BEFORE Arg1:E29 Arg2:E31	
+R78	AFTER Arg1:E31 Arg2:E32	
+R79	BEFORE Arg1:E32 Arg2:E33	
+*	OVERLAP E33 E34 E35 E36 E37
+R80	BEFORE Arg1:E37 Arg2:E38	
+*	OVERLAP E38 E39
+R81	BEFORE Arg1:E39 Arg2:E40	
+R82	BEFORE Arg1:E40 Arg2:E41	
+*	OVERLAP E41 E42 E43 E45 E46

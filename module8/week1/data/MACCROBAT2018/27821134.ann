@@ -1,0 +1,413 @@
+T1	Age 17 28	59-year-old
+T2	Sex 29 32	man
+T3	Date 58 73	age of 49 years
+E1	Date:T3 
+T4	Disease_disorder 48 50	PD
+E2	Disease_disorder:T4 
+#1	AnnotatorNotes E2	Parkinson's disease
+T5	Date 3988 4000	7 days later
+E3	Date:T5 
+T6	Diagnostic_procedure 180 195	quality of life
+E4	Diagnostic_procedure:T6 
+T7	Lab_value 155 165	diminished
+E5	Lab_value:T7 
+R1	MODIFY Arg1:E5 Arg2:E4	
+T8	Therapeutic_procedure 264 267	DBS
+E6	Therapeutic_procedure:T8 
+#2	AnnotatorNotes E6	Deep Brain Stimulation
+T9	Detailed_description 252 263	subthalamic
+T10	Detailed_description 242 251	bilateral
+R2	MODIFY Arg1:T9 Arg2:E6	
+R3	MODIFY Arg1:T10 Arg2:E6	
+T11	Diagnostic_procedure 269 297	Multidisciplinary evaluation
+E7	Diagnostic_procedure:T11 
+T12	Diagnostic_procedure 333 359	standardized levodopa test
+E8	Diagnostic_procedure:T12 
+T13	Lab_value 303 316	75 % positive
+E9	Lab_value:T13 
+R4	MODIFY Arg1:E9 Arg2:E8	
+T14	Disease_disorder 374 391	cognitive decline
+E10	Disease_disorder:T14 
+A1	POLARITY E10 NEG
+T15	Disease_disorder 395 418	psychiatric comorbitity
+E11	Disease_disorder:T15 
+A2	POLARITY E11 NEG
+T16	Disease_disorder 446 458	brain damage
+E12	Disease_disorder:T16 
+A3	POLARITY E12 NEG
+T17	Therapeutic_procedure 536 539	DBS
+E13	Therapeutic_procedure:T17 
+T18	Medication 637 645	levodopa
+E14	Medication:T18 
+T19	Medication 660 669	piribedil
+E15	Medication:T19 
+T20	Dosage 624 633	1112.5 mg
+T21	Dosage 650 656	150 mg
+R5	MODIFY Arg1:T21 Arg2:E15	
+R6	MODIFY Arg1:T20 Arg2:E14	
+T22	Diagnostic_procedure 3923 3937	Cardiac workup
+E16	Diagnostic_procedure:T22 
+T23	Lab_value 3942 3950	negative
+E17	Lab_value:T23 
+R7	MODIFY Arg1:E17 Arg2:E16	
+T24	History 681 725	no history of orofacial or cervical dystonia
+T25	Disease_disorder 717 725	dystonia
+E18	Disease_disorder:T25 
+T26	Biological_structure 708 716	cervical
+T27	Biological_structure 695 704	orofacial
+R8	MODIFY Arg1:T26 Arg2:E18	
+R9	MODIFY Arg1:T27 Arg2:E18	
+A4	POLARITY E18 NEG
+T28	Disease_disorder 130 141	dyskinesias
+E19	Disease_disorder:T28 
+T29	Sign_symptom 75 87	Fluctuations
+E20	Sign_symptom:T29 
+T31	Disease_disorder 4048 4050	PD
+E21	Disease_disorder:T31 
+T32	Diagnostic_procedure 813 839	Neuropsychological testing
+E22	Diagnostic_procedure:T32 
+T33	Lab_value 844 852	adequate
+E23	Lab_value:T33 
+R11	MODIFY Arg1:E23 Arg2:E22	
+T34	Other_event 734 744	“on” state
+E24	Other_event:T34 
+T35	Sign_symptom 761 766	alert
+E25	Sign_symptom:T35 
+T36	Sign_symptom 779 811	signs of psychiatric comorbidity
+E26	Sign_symptom:T36 
+A5	POLARITY E26 NEG
+T37	Diagnostic_procedure 895 905	swallowing
+E27	Diagnostic_procedure:T37 
+T38	Lab_value 910 916	normal
+E28	Lab_value:T38 
+R12	MODIFY Arg1:E28 Arg2:E27	
+T39	Sign_symptom 865 879	nerve deficits
+E29	Sign_symptom:T39 
+A6	POLARITY E29 NEG
+T40	Biological_structure 857 864	cranial
+R13	MODIFY Arg1:T40 Arg2:E29	
+T41	Diagnostic_procedure 927 945	postural stability
+E30	Diagnostic_procedure:T41 
+T42	Diagnostic_procedure 918 922	Gait
+E31	Diagnostic_procedure:T42 
+T43	Lab_value 950 956	normal
+E32	Lab_value:T43 
+R14	MODIFY Arg1:E32 Arg2:E30	
+R15	MODIFY Arg1:E32 Arg2:E31	
+T44	Sign_symptom 970 978	rigidity
+E33	Sign_symptom:T44 
+T45	Severity 962 969	minimal
+R16	MODIFY Arg1:T45 Arg2:E33	
+T46	Biological_structure 986 990	neck
+T47	Biological_structure 995 1004	right arm
+R17	MODIFY Arg1:T46 Arg2:E33	
+R18	MODIFY Arg1:T47 Arg2:E33	
+T48	Diagnostic_procedure 1006 1031	Coordinative motor skills
+E34	Diagnostic_procedure:T48 
+T49	Lab_value 1071 1081	restricted
+E35	Lab_value:T49 
+T50	Biological_structure 1089 1098	left hand
+R19	MODIFY Arg1:T50 Arg2:E35	
+T51	Diagnostic_procedure 1046 1065	pro- and supination
+E36	Diagnostic_procedure:T51 
+R20	SUB_PROCEDURE Arg1:E36 Arg2:E34	
+R21	MODIFY Arg1:E35 Arg2:E34	
+T52	Sign_symptom 1100 1111	Dyskinesias
+E37	Sign_symptom:T52 
+T53	Sign_symptom 1139 1149	impairment
+E38	Sign_symptom:T53 
+T54	Severity 1130 1138	moderate
+R22	MODIFY Arg1:T54 Arg2:E38	
+T55	Other_event 1158 1169	“off” state
+E39	Other_event:T55 
+T56	Medication 1180 1190	medication
+E40	Medication:T56 
+A7	POLARITY E40 NEG
+T57	Duration 1204 1208	12 h
+E41	Duration:T57 
+T58	Sign_symptom 1234 1244	dysarthria
+E42	Sign_symptom:T58 
+T59	Sign_symptom 1249 1258	dysphonia
+E43	Sign_symptom:T59 
+T60	Severity 1229 1233	mild
+R23	MODIFY Arg1:T60 Arg2:E42	
+R24	MODIFY Arg1:T60 Arg2:E43	
+T61	Sign_symptom 1268 1274	tremor
+E44	Sign_symptom:T61 
+T62	Detailed_description 1260 1267	resting
+R25	MODIFY Arg1:T62 Arg2:E44	
+T63	Biological_structure 1282 1291	right arm
+T64	Biological_structure 1296 1299	leg
+T65	Sign_symptom 1326 1332	tremor
+E45	Sign_symptom:T65 
+T66	Detailed_description 1319 1325	action
+T67	Severity 1312 1318	slight
+R26	MODIFY Arg1:T67 Arg2:E45	
+R27	MODIFY Arg1:T66 Arg2:E45	
+T68	Biological_structure 1340 1350	right hand
+R28	MODIFY Arg1:T68 Arg2:E45	
+T69	Sign_symptom 1352 1360	Rigidity
+E46	Sign_symptom:T69 
+T70	Severity 1365 1371	severe
+R29	MODIFY Arg1:T70 Arg2:E46	
+T71	Biological_structure 1379 1383	neck
+R30	MODIFY Arg1:T71 Arg2:T70	
+T72	Biological_structure 1399 1404	right
+T73	Biological_structure 1422 1431	left side
+T74	Severity 1385 1391	marked
+T75	Severity 1410 1414	mild
+R31	MODIFY Arg1:T72 Arg2:T74	
+R32	MODIFY Arg1:T73 Arg2:T75	
+R33	MODIFY Arg1:T74 Arg2:E46	
+R34	MODIFY Arg1:T75 Arg2:E46	
+T76	Diagnostic_procedure 1433 1445	Motor skills
+E47	Diagnostic_procedure:T76 
+T77	Biological_structure 1453 1458	hands
+R35	MODIFY Arg1:T77 Arg2:E47	
+T78	Lab_value 1473 1481	impaired
+E48	Lab_value:T78 
+R36	MODIFY Arg1:E48 Arg2:E47	
+T79	Diagnostic_procedure 1483 1487	Gait
+E49	Diagnostic_procedure:T79 
+T80	Lab_value 1492 1496	slow
+E50	Lab_value:T80 
+T81	Lab_value 1501 1508	unaided
+E51	Lab_value:T81 
+R37	MODIFY Arg1:E50 Arg2:E49	
+R38	MODIFY Arg1:E51 Arg2:E49	
+T82	Sign_symptom 1542 1550	freezing
+E52	Sign_symptom:T82 
+T83	Frequency 1529 1541	intermittent
+R39	MODIFY Arg1:T83 Arg2:E52	
+T84	Sign_symptom 1567 1585	dystonic posturing
+E53	Sign_symptom:T84 
+T85	Severity 1562 1566	mild
+R40	MODIFY Arg1:T85 Arg2:E53	
+T86	Biological_structure 1593 1603	right foot
+R41	MODIFY Arg1:T86 Arg2:E53	
+T87	Sign_symptom 1638 1644	spasms
+E54	Sign_symptom:T87 
+A8	POLARITY E54 NEG
+T88	Biological_structure 1628 1637	laryngeal
+R42	MODIFY Arg1:T88 Arg2:E54	
+T89	Therapeutic_procedure 1673 1680	surgery
+E55	Therapeutic_procedure:T89 
+T90	Medication 1699 1722	dopaminergic medication
+E56	Medication:T90 
+T91	Time 1743 1752	07:00 p.m
+E57	Time:T91 
+T92	Medication 1775 1783	levodopa
+E58	Medication:T92 
+A9	POLARITY E58 NEG
+T93	Diagnostic_procedure 1807 1829	intraoperative testing
+E59	Diagnostic_procedure:T93 
+T94	Administration 1759 1771	bedtime dose
+R43	MODIFY Arg1:T94 Arg2:E58	
+T95	Date 1838 1844	day of
+E60	Date:T95 
+T96	Therapeutic_procedure 1849 1858	operation
+E61	Therapeutic_procedure:T96 
+T97	Medication 1924 1941	local anaesthesia
+E62	Medication:T97 
+T98	Time 1949 1958	09:00 a.m
+E63	Time:T98 
+T99	Therapeutic_procedure 1899 1917	stereotactic frame
+E64	Therapeutic_procedure:T99 
+R44	SUB_PROCEDURE Arg1:E64 Arg2:E61	
+T100	Activity 2046 2067	semi-sitting position
+E65	Activity:T100 
+T101	Activity 2173 2179	flexed
+E66	Activity:T101 
+T102	Detailed_description 2180 2190	anteriorly
+T103	Biological_structure 2155 2159	head
+R45	MODIFY Arg1:T103 Arg2:E66	
+R46	MODIFY Arg1:T102 Arg2:E66	
+T104	Therapeutic_procedure 2213 2222	electrode
+E67	Therapeutic_procedure:T104 
+T105	Detailed_description 2208 2212	left
+R47	MODIFY Arg1:T105 Arg2:E67	
+T106	Therapeutic_procedure 2268 2276	bur hole
+E68	Therapeutic_procedure:T106 
+T107	Biological_structure 2284 2294	right side
+R48	MODIFY Arg1:T107 Arg2:E68	
+T108	Sign_symptom 2322 2330	cramping
+E69	Sign_symptom:T108 
+T109	Biological_structure 2338 2342	neck
+R49	MODIFY Arg1:T109 Arg2:E69	
+T110	Biological_structure 2347 2361	facial muscles
+R50	MODIFY Arg1:T110 Arg2:E69	
+T111	Sign_symptom 2373 2395	difficulties breathing
+E70	Sign_symptom:T111 
+T112	Diagnostic_procedure 2420 2434	pulse oximetry
+E71	Diagnostic_procedure:T112 
+T113	Lab_value 2442 2457	good saturation
+E72	Lab_value:T113 
+T114	Lab_value 2470 2475	≥95 %
+E73	Lab_value:T114 
+R51	MODIFY Arg1:E72 Arg2:E71	
+R52	MODIFY Arg1:E73 Arg2:E71	
+T115	Sign_symptom 2494 2513	dystonic dysarthria
+E74	Sign_symptom:T115 
+T116	Diagnostic_procedure 2519 2544	Microelectrode recordings
+E75	Diagnostic_procedure:T116 
+T117	Diagnostic_procedure 2571 2602	macroelectrode test stimulation
+E76	Diagnostic_procedure:T117 
+T118	Sign_symptom 2672 2679	stridor
+E77	Sign_symptom:T118 
+T119	Detailed_description 2660 2671	inspiratory
+T120	Detailed_description 2647 2659	high-pitched
+R53	MODIFY Arg1:T119 Arg2:E77	
+R54	MODIFY Arg1:T120 Arg2:E77	
+T121	Diagnostic_procedure 2681 2695	Pulse oximetry
+E78	Diagnostic_procedure:T121 
+T122	Lab_value 2703 2731	decreasing oxygen saturation
+E79	Lab_value:T122 
+T123	Time 2735 2744	02:15 p.m
+E80	Time:T123 
+R55	MODIFY Arg1:E79 Arg2:E78	
+T124	Sign_symptom 2786 2797	tachycardia
+E81	Sign_symptom:T124 
+T125	Detailed_description 2771 2777	narrow
+T126	Detailed_description 2778 2785	complex
+R56	MODIFY Arg1:T126 Arg2:E81	
+R57	MODIFY Arg1:T125 Arg2:E81	
+T127	Sign_symptom 2845 2857	unresponsive
+E82	Sign_symptom:T127 
+T128	Time 2809 2824	Within a minute
+E83	Time:T128 
+T129	Therapeutic_procedure 2859 2880	Cardiac resuscitation
+E84	Therapeutic_procedure:T129 
+T130	Therapeutic_procedure 2930 2939	intubated
+E85	Therapeutic_procedure:T130 
+T131	Detailed_description 2915 2929	fiberoptically
+R58	MODIFY Arg1:T131 Arg2:E85	
+T132	Therapeutic_procedure 2978 2996	stereotactic frame
+E86	Therapeutic_procedure:T132 
+T133	Therapeutic_procedure 2961 2970	front bar
+E87	Therapeutic_procedure:T133 
+A11	POLARITY E87 NEG
+R59	MODIFY Arg1:E87 Arg2:E86	
+T134	Therapeutic_procedure 3016 3026	intubation
+E88	Therapeutic_procedure:T134 
+T135	Detailed_description 3005 3015	fiberoptic
+R60	MODIFY Arg1:T135 Arg2:E88	
+T136	Sign_symptom 3037 3042	spasm
+E89	Sign_symptom:T136 
+T138	Biological_structure 3027 3036	laryngeal
+R61	MODIFY Arg1:T138 Arg2:E89	
+T137	Diagnostic_procedure 3069 3097	transthoracic echocardiogram
+E90	Diagnostic_procedure:T137 
+T139	Sign_symptom 3168 3177	pathology
+E91	Sign_symptom:T139 
+A10	POLARITY E91 NEG
+T140	Biological_structure 3160 3167	cardiac
+R62	MODIFY Arg1:T140 Arg2:E91	
+T141	Sign_symptom 3185 3196	air bubbles
+E92	Sign_symptom:T141 
+A12	POLARITY E92 NEG
+T142	Therapeutic_procedure 3198 3209	Stimulation
+E93	Therapeutic_procedure:T142 
+A13	POLARITY E93 NEG
+T143	Therapeutic_procedure 3386 3395	electrode
+E94	Therapeutic_procedure:T143 
+T144	Detailed_description 3376 3385	permanent
+T145	Detailed_description 3370 3375	right
+R63	MODIFY Arg1:T144 Arg2:E94	
+R64	MODIFY Arg1:T145 Arg2:E94	
+T146	Diagnostic_procedure 3444 3469	microelectrode recordings
+E95	Diagnostic_procedure:T146 
+A14	POLARITY E95 NEG
+T147	Medication 3477 3485	levodopa
+E96	Medication:T147 
+T148	Dosage 3471 3476	50 mg
+R65	MODIFY Arg1:T148 Arg2:E96	
+T149	Administration 3510 3526	nasogastric tube
+R66	MODIFY Arg1:T149 Arg2:E96	
+T150	Dosage 3527 3542	every two hours
+R67	MODIFY Arg1:T150 Arg2:E96	
+T151	Diagnostic_procedure 3565 3585	postoperative period
+E97	Diagnostic_procedure:T151 
+T152	Diagnostic_procedure 3606 3608	CT
+E98	Diagnostic_procedure:T152 
+T153	Biological_structure 3601 3605	head
+R68	MODIFY Arg1:T153 Arg2:E98	
+T154	Clinical_event 3679 3690	transferred
+E99	Clinical_event:T154 
+T155	Nonbiological_location 3698 3717	intensive care unit
+R69	MODIFY Arg1:T155 Arg2:E99	
+T156	Therapeutic_procedure 3726 3735	extubated
+E100	Therapeutic_procedure:T156 
+T157	Time 3739 3748	02:00 p.m
+E101	Time:T157 
+T158	Date 3754 3767	following day
+E102	Date:T158 
+T159	Sign_symptom 3780 3800	neurological deficit
+E103	Sign_symptom:T159 
+A15	POLARITY E103 NEG
+T160	Sign_symptom 3823 3829	spasms
+E104	Sign_symptom:T160 
+A16	POLARITY E104 NEG
+T161	Biological_structure 3813 3822	laryngeal
+R70	MODIFY Arg1:T161 Arg2:E104	
+T162	Therapeutic_procedure 3844 3860	nasogastric tube
+E105	Therapeutic_procedure:T162 
+A17	POLARITY E105 NEG
+T163	Medication 3899 3909	medication
+E106	Medication:T163 
+T164	Therapeutic_procedure 588 595	surgery
+E107	Therapeutic_procedure:T164 
+T165	Medication 600 610	medication
+E108	Medication:T165 
+R71	SUB_PROCEDURE Arg1:E14 Arg2:E108	
+R72	SUB_PROCEDURE Arg1:E15 Arg2:E108	
+T166	Detailed_description 120 129	peak dose
+R73	MODIFY Arg1:T166 Arg2:E19	
+R74	BEFORE Arg1:E4 Arg2:E6	
+R75	AFTER Arg1:E6 Arg2:E7	
+*	OVERLAP E7 E8 E10 E11 E12
+R76	BEFORE Arg1:E12 Arg2:E13	
+R77	AFTER Arg1:E13 Arg2:E107	
+*	OVERLAP E107 E108
+R78	AFTER Arg1:E108 Arg2:E18	
+R79	BEFORE Arg1:E18 Arg2:E24	
+T167	Other_event 103 115	“off” states
+E109	Other_event:T167 
+*	OVERLAP E2 E1 E20 E109 E19 E4
+*	OVERLAP E24 E25 E26 E22 E29 E27 E31 E30 E33 E34 E37 E38
+R10	BEFORE Arg1:E38 Arg2:E39	
+*	OVERLAP E39 E40 E41 E42 E43 E44 E45 E46 E47 E49 E52 E53 E54
+R80	MODIFY Arg1:T63 Arg2:E44	
+R81	MODIFY Arg1:T64 Arg2:E44	
+T30	Date 1662 1672	day before
+E110	Date:T30 
+R82	BEFORE Arg1:E54 Arg2:E110	
+R83	BEFORE Arg1:E110 Arg2:E55	
+R84	AFTER Arg1:E55 Arg2:E56	
+*	OVERLAP E56 E57
+R85	BEFORE Arg1:E57 Arg2:E58	
+*	OVERLAP E58 E59
+R86	BEFORE Arg1:E59 Arg2:E60	
+*	OVERLAP E60 E61 E62 E63 E65 E66 E67 E68 E69 E70 E71 E74 E75 E76
+T168	Nonbiological_location 2075 2079	O.R.
+R87	MODIFY Arg1:T168 Arg2:E65	
+A18	POLARITY E76 UNCERTAIN
+R88	BEFORE Arg1:E76 Arg2:E77	
+*	OVERLAP E77 E78 E80
+R89	BEFORE Arg1:E80 Arg2:E81	
+*	OVERLAP E81 E83 E82
+R90	BEFORE Arg1:E82 Arg2:E84	
+*	OVERLAP E84 E85 E87 E88 E89 E90 E91 E92 E93 E94 E95
+R91	BEFORE Arg1:E95 Arg2:E96	
+*	OVERLAP E96 E97 E98
+R92	BEFORE Arg1:E98 Arg2:E99	
+R93	BEFORE Arg1:E99 Arg2:E100	
+*	OVERLAP E100 E101 E102 E103 E104 E105 E106 E16
+T169	Therapeutic_procedure 3956 3973	impulse generator
+E111	Therapeutic_procedure:T169 
+R94	BEFORE Arg1:E16 Arg2:E111	
+*	OVERLAP E111 E3 E112 E21
+T170	Diagnostic_procedure 4029 4044	symptom control
+E112	Diagnostic_procedure:T170 
+T171	Lab_value 4024 4028	good
+E113	Lab_value:T171 
+R95	MODIFY Arg1:E113 Arg2:E112	

@@ -1,0 +1,241 @@
+T1	Age 2 13	48 year-old
+T2	Sex 14 20	female
+T3	Sign_symptom 44 52	bleeding
+E1	Sign_symptom:T3 
+T4	Biological_structure 36 43	vaginal
+R1	MODIFY Arg1:T4 Arg2:E1	
+T5	Diagnostic_procedure 66 76	Pap smears
+E2	Diagnostic_procedure:T5 
+T6	Lab_value 57 65	abnormal
+R2	MODIFY Arg1:T6 Arg2:E2	
+T7	Disease_disorder 122 125	SCC
+E3	Disease_disorder:T7 
+#1	AnnotatorNotes E3	Squamous cell carcinoma
+T8	Biological_structure 133 139	cervix
+R3	MODIFY Arg1:T8 Arg2:E3	
+T9	Detailed_description 105 121	non-keratinizing
+R4	MODIFY Arg1:T9 Arg2:E3	
+T10	Detailed_description 96 104	invasive
+R5	MODIFY Arg1:T10 Arg2:E3	
+T11	Therapeutic_procedure 165 177	hysterectomy
+E4	Therapeutic_procedure:T11 
+T12	Detailed_description 157 164	radical
+R6	MODIFY Arg1:T12 Arg2:E4	
+T13	Therapeutic_procedure 183 204	salpingo-oophorectomy
+E5	Therapeutic_procedure:T13 
+R7	SUB_PROCEDURE Arg1:E5 Arg2:E4	
+T14	Biological_structure 247 265	pelvic lymph nodes
+T15	Biological_structure 274 285	parametrium
+T16	Sign_symptom 224 239	positive spread
+E6	Sign_symptom:T16 
+R8	MODIFY Arg1:T14 Arg2:E6	
+R9	MODIFY Arg1:T15 Arg2:E6	
+T17	Biological_structure 367 388	lower uterine segment
+T18	Coreference 330 336	tumour
+E7	Coreference:T18 
+R10	IDENTICAL Arg1:E7 Arg2:E3	
+T19	Diagnostic_procedure 287 311	Pathological examination
+E8	Diagnostic_procedure:T19 
+T20	Date 390 417	5 months after this surgery
+E9	Date:T20 
+T21	Therapeutic_procedure 453 465	radiotherapy
+E10	Therapeutic_procedure:T21 
+T22	Detailed_description 439 452	external beam
+R11	MODIFY Arg1:T22 Arg2:E10	
+T23	Therapeutic_procedure 484 497	brachytherapy
+E11	Therapeutic_procedure:T23 
+T24	Detailed_description 470 483	intracavitary
+R12	MODIFY Arg1:T24 Arg2:E11	
+T25	Date 499 514	Two years later
+E12	Date:T25 
+T26	Duration 545 556	three-month
+E13	Duration:T26 
+T27	Sign_symptom 581 586	cough
+E14	Sign_symptom:T27 
+T28	Detailed_description 570 580	productive
+R13	MODIFY Arg1:T28 Arg2:E14	
+T29	Sign_symptom 588 607	shortness of breath
+E15	Sign_symptom:T29 
+T30	Duration 615 623	2-3 week
+E16	Duration:T30 
+T31	Sign_symptom 658 665	dyspnea
+E17	Sign_symptom:T31 
+T32	Detailed_description 647 657	exertional
+R14	MODIFY Arg1:T32 Arg2:E17	
+T33	Detailed_description 635 646	progressive
+R15	MODIFY Arg1:T33 Arg2:E17	
+T34	Diagnostic_procedure 667 673	X-rays
+E18	Diagnostic_procedure:T34 
+T35	Biological_structure 681 686	chest
+R16	MODIFY Arg1:T35 Arg2:E18	
+T36	Diagnostic_procedure 733 741	CT scans
+E19	Diagnostic_procedure:T36 
+T37	Diagnostic_procedure 989 1001	bronchoscopy
+E20	Diagnostic_procedure:T37 
+T38	Diagnostic_procedure 1008 1020	thoracoscopy
+E21	Diagnostic_procedure:T38 
+T39	Detailed_description 1003 1007	left
+R17	MODIFY Arg1:T39 Arg2:E21	
+T40	Diagnostic_procedure 1050 1056	biopsy
+E22	Diagnostic_procedure:T40 
+T41	Biological_structure 1040 1049	left lung
+R18	MODIFY Arg1:T41 Arg2:E22	
+T42	Detailed_description 1029 1039	open wedge
+R19	MODIFY Arg1:T42 Arg2:E22	
+T43	Diagnostic_procedure 1058 1082	Pathological examination
+E23	Diagnostic_procedure:T43 
+T44	Disease_disorder 1708 1735	lymphangitic carcinomatosis
+E24	Disease_disorder:T44 
+T45	Biological_structure 1743 1747	lung
+R20	MODIFY Arg1:T45 Arg2:E24	
+T46	Medication 1822 1827	Taxol
+E25	Medication:T46 
+T47	Medication 1816 1821	Carbo
+E26	Medication:T47 
+T48	Medication 1834 1849	corticosteroids
+E27	Medication:T48 
+T49	Clinical_event 1881 1891	discharged
+E28	Clinical_event:T49 
+T50	Coreference 1100 1106	biopsy
+E29	Coreference:T50 
+R21	IDENTICAL Arg1:E29 Arg2:E22	
+T51	Biological_structure 1090 1099	left lung
+R22	MODIFY Arg1:T51 Arg2:E29	
+R23	MODIFY Arg1:E29 Arg2:E23	
+T52	Biological_structure 1184 1208	along the septal vessels
+T53	Biological_structure 1210 1222	perivascular
+T54	Biological_structure 1224 1237	peribronchial
+T55	Biological_structure 1254 1264	lymphatics
+T56	Biological_structure 1243 1253	subpleural
+R24	MODIFY Arg1:T56 Arg2:T55	
+R25	MODIFY Arg1:T54 Arg2:T55	
+R26	MODIFY Arg1:T53 Arg2:T55	
+T57	Sign_symptom 1133 1159	neoplastic sheets of cells
+E30	Sign_symptom:T57 
+R27	MODIFY Arg1:T55 Arg2:E30	
+R28	MODIFY Arg1:T52 Arg2:E30	
+T58	Diagnostic_procedure 1974 1994	radiographic imaging
+E31	Diagnostic_procedure:T58 
+T59	Outcome 2172 2176	died
+E32	Outcome:T59 
+T60	Date 2177 2214	13 months after the initial diagnosis
+E33	Date:T60 
+T61	Disease_disorder 927 936	pneumonia
+E34	Disease_disorder:T61 
+T62	Detailed_description 914 926	interstitial
+R29	MODIFY Arg1:T62 Arg2:E34	
+T63	Sign_symptom 960 965	edema
+E35	Sign_symptom:T63 
+T64	Detailed_description 944 959	non-cardiogenic
+R30	MODIFY Arg1:T64 Arg2:E35	
+A1	POLARITY E34 UNCERTAIN
+A2	POLARITY E35 UNCERTAIN
+T65	Detailed_description 760 782	bilateral patchy areas
+T66	Texture 786 806	ground glass opacity
+T67	Sign_symptom 807 815	scarring
+E36	Sign_symptom:T67 
+R31	MODIFY Arg1:T66 Arg2:E36	
+R32	MODIFY Arg1:T65 Arg2:E36	
+T68	Sign_symptom 849 860	atelectasis
+E37	Sign_symptom:T68 
+T69	Detailed_description 836 848	subsegmental
+R33	MODIFY Arg1:T69 Arg2:E37	
+T70	Biological_structure 868 878	both lungs
+R34	MODIFY Arg1:T70 Arg2:E37	
+T71	Coreference 1327 1343	neoplastic cells
+E38	Coreference:T71 
+R35	IDENTICAL Arg1:E38 Arg2:E30	
+T72	Sign_symptom 1277 1284	nodules
+E39	Sign_symptom:T72 
+T73	Biological_structure 1266 1276	Subpleural
+R36	MODIFY Arg1:T73 Arg2:E39	
+T74	Disease_disorder 1392 1394	LC
+E40	Disease_disorder:T74 
+#2	AnnotatorNotes E40	Lung cancer, or lymphangitic carcinomatosis
+T75	Biological_structure 1359 1380	subpleural lymphatics
+R37	MODIFY Arg1:T75 Arg2:E38	
+T76	Diagnostic_procedure 1420 1448	immunohistochemical analysis
+E41	Diagnostic_procedure:T76 
+T77	Diagnostic_procedure 1495 1498	p16
+E42	Diagnostic_procedure:T77 
+T78	Diagnostic_procedure 1512 1550	high and low molecular weight keratins
+E43	Diagnostic_procedure:T78 
+T79	Diagnostic_procedure 1564 1577	cytokeratin-7
+E44	Diagnostic_procedure:T79 
+T80	Diagnostic_procedure 1597 1601	CK19
+E45	Diagnostic_procedure:T80 
+T81	Diagnostic_procedure 1607 1618	pan keratin
+E46	Diagnostic_procedure:T81 
+T82	Diagnostic_procedure 1636 1640	CK20
+E47	Diagnostic_procedure:T82 
+T83	Diagnostic_procedure 1642 1645	p63
+E48	Diagnostic_procedure:T83 
+T84	Diagnostic_procedure 1651 1655	EGFR
+E49	Diagnostic_procedure:T84 
+R38	SUB_PROCEDURE Arg1:E42 Arg2:E41	
+R39	SUB_PROCEDURE Arg1:E43 Arg2:E41	
+R40	SUB_PROCEDURE Arg1:E44 Arg2:E41	
+R41	SUB_PROCEDURE Arg1:E45 Arg2:E41	
+R42	SUB_PROCEDURE Arg1:E46 Arg2:E41	
+R43	SUB_PROCEDURE Arg1:E47 Arg2:E41	
+R44	SUB_PROCEDURE Arg1:E48 Arg2:E41	
+R45	SUB_PROCEDURE Arg1:E49 Arg2:E41	
+T85	Lab_value 1483 1491	positive
+R46	MODIFY Arg1:T85 Arg2:E42	
+R47	MODIFY Arg1:T85 Arg2:E43	
+R48	MODIFY Arg1:T85 Arg2:E44	
+R49	MODIFY Arg1:T85 Arg2:E45	
+R50	MODIFY Arg1:T85 Arg2:E46	
+T86	Lab_value 1624 1632	negative
+R51	MODIFY Arg1:T86 Arg2:E47	
+R52	MODIFY Arg1:T86 Arg2:E48	
+R53	MODIFY Arg1:T86 Arg2:E49	
+T87	Sign_symptom 1748 1758	metastatic
+E50	Sign_symptom:T87 
+T88	Disease_disorder 1764 1767	SCC
+E51	Disease_disorder:T88 
+T89	Biological_structure 1775 1781	cervix
+R54	MODIFY Arg1:T89 Arg2:E51	
+R55	MODIFY Arg1:E50 Arg2:E24	
+R56	MODIFY Arg1:E51 Arg2:E50	
+T90	Sign_symptom 2073 2096	interstitial thickening
+E52	Sign_symptom:T90 
+T91	Sign_symptom 2042 2064	nodular opacifications
+E53	Sign_symptom:T91 
+T92	Lab_value 2023 2034	improvement
+R57	MODIFY Arg1:T92 Arg2:E53	
+R58	MODIFY Arg1:T92 Arg2:E52	
+T93	Sign_symptom 1938 1955	clinical symptoms
+E54	Sign_symptom:T93 
+T94	Lab_value 1923 1934	improvement
+R59	MODIFY Arg1:T94 Arg2:E54	
+*	OVERLAP E1 E2 E57
+R60	AFTER Arg1:E2 Arg2:E3	
+*	OVERLAP E3 E4 E6 E8
+R61	MODIFY Arg1:T17 Arg2:E8	
+R62	BEFORE Arg1:E8 Arg2:E9	
+*	OVERLAP E9 E10 E11
+R63	BEFORE Arg1:E11 Arg2:E12	
+R64	MODIFY Arg1:E13 Arg2:E14	
+*	OVERLAP E12 E14 E15 E17
+R65	MODIFY Arg1:E16 Arg2:E17	
+R66	BEFORE Arg1:E17 Arg2:E18	
+*	OVERLAP E18 E19 E36 E37 E34 E35
+R67	BEFORE Arg1:E35 Arg2:E20	
+*	OVERLAP E20 E21 E22 E23 E30 E39 E40 E41 E24 E50 E51
+T95	Medication 1802 1814	chemotherapy
+E55	Medication:T95 
+R69	SUB_PROCEDURE Arg1:E26 Arg2:E55	
+R70	SUB_PROCEDURE Arg1:E25 Arg2:E55	
+R68	BEFORE Arg1:E51 Arg2:E55	
+*	OVERLAP E55 E27
+R71	BEFORE Arg1:E27 Arg2:E28	
+T96	Date 1892 1906	ten days later
+E56	Date:T96 
+*	OVERLAP E28 E56
+R72	BEFORE Arg1:E56 Arg2:E54	
+*	OVERLAP E54 E31 E53 E52
+R73	BEFORE Arg1:E52 Arg2:E32	
+*	OVERLAP E32 E33
+T97	Clinical_event 21 30	presented
+E57	Clinical_event:T97 

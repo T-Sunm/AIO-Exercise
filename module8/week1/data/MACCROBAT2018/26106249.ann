@@ -1,0 +1,236 @@
+T1	Age 18 29	38-year-old
+T2	Personal_background 30 39	Caucasian
+T3	Sex 40 43	man
+T4	Personal_background 47 61	Spanish origin
+T5	Height 78 84	165 cm
+T6	Family_history 93 113	parents were cousins
+T7	Subject 247 254	sisters
+T8	Detailed_description 239 246	healthy
+R1	MODIFY Arg1:T8 Arg2:T7	
+T9	Family_history 219 254	The patient had two healthy sisters
+T10	Family_history 115 217	Both parents were of normal height and neither showed any minor anomalies of the EvC syndrome spectrum
+T11	Subject 120 127	parents
+T12	Detailed_description 136 149	normal height
+R2	MODIFY Arg1:T12 Arg2:T11	
+T13	Detailed_description 154 217	neither showed any minor anomalies of the EvC syndrome spectrum
+R3	MODIFY Arg1:T13 Arg2:T11	
+T14	Diagnostic_procedure 260 282	morphological features
+E1	Diagnostic_procedure:T14 
+T18	Diagnostic_procedure 387 413	cardiothoracic examination
+E2	Diagnostic_procedure:T18 
+T21	Sign_symptom 530 551	sensory-motor deficit
+E3	Sign_symptom:T21 
+A1	POLARITY E3 NEG
+T22	Disease_disorder 595 613	mental retardation
+E4	Disease_disorder:T22 
+T23	Detailed_description 590 594	mild
+R10	MODIFY Arg1:T23 Arg2:E4	
+T24	Diagnostic_procedure 615 631	Genetic analysis
+E5	Diagnostic_procedure:T24 
+T25	Subject 795 802	parents
+T26	Detailed_description 808 829	heterozygous carriers
+R11	MODIFY Arg1:T26 Arg2:T25	
+T27	Sign_symptom 702 710	mutation
+E6	Sign_symptom:T27 
+T28	Detailed_description 693 701	nonsense
+T29	Detailed_description 682 692	homozygous
+R12	MODIFY Arg1:T28 Arg2:E6	
+R13	MODIFY Arg1:T29 Arg2:E6	
+T30	Detailed_description 711 740	c.1195 C1T, p.Arg399X of EvC2
+R14	MODIFY Arg1:T30 Arg2:E6	
+T31	Detailed_description 755 786	loss of function of the protein
+R15	MODIFY Arg1:T31 Arg2:E6	
+T32	Coreference 837 845	mutation
+E7	Coreference:T32 
+R16	IDENTICAL Arg1:E7 Arg2:E6	
+T33	Date 850 854	1998
+E8	Date:T33 
+T34	Therapeutic_procedure 903 931	atrial septal defect closure
+E9	Therapeutic_procedure:T34 
+T35	Biological_structure 889 902	ostium primum
+R17	MODIFY Arg1:T35 Arg2:E9	
+T36	Therapeutic_procedure 942 955	midsternotomy
+E10	Therapeutic_procedure:T36 
+R18	SUB_PROCEDURE Arg1:E10 Arg2:E9	
+T37	Clinical_event 960 972	re-presented
+E11	Clinical_event:T37 
+T38	Sign_symptom 995 1000	ictus
+E12	Sign_symptom:T38 
+T39	Biological_structure 986 994	cerebral
+T40	Detailed_description 978 985	embolic
+R19	MODIFY Arg1:T39 Arg2:E12	
+R20	MODIFY Arg1:T40 Arg2:E12	
+T41	Date 1004 1008	2007
+E13	Date:T41 
+T42	Therapeutic_procedure 1036 1044	ablation
+E14	Therapeutic_procedure:T42 
+T43	Biological_structure 1014 1035	cavotricuspid isthmus
+R21	MODIFY Arg1:T43 Arg2:E14	
+T44	Disease_disorder 1056 1070	atrial flutter
+E15	Disease_disorder:T44 
+T45	Detailed_description 1049 1055	common
+R22	MODIFY Arg1:T45 Arg2:E15	
+T46	Sign_symptom 1121 1133	aftereffects
+E16	Sign_symptom:T46 
+A2	POLARITY E16 NEG
+T47	Severity 1113 1120	serious
+R23	MODIFY Arg1:T47 Arg2:E16	
+T48	Diagnostic_procedure 1152 1163	examination
+E17	Diagnostic_procedure:T48 
+T49	Date 1167 1171	2012
+E18	Date:T49 
+T50	Sign_symptom 1197 1203	murmur
+E19	Sign_symptom:T50 
+T51	Detailed_description 1188 1196	systolic
+T52	Detailed_description 1175 1187	high-pitched
+R24	MODIFY Arg1:T51 Arg2:E19	
+R25	MODIFY Arg1:T52 Arg2:E19	
+T53	Diagnostic_procedure 1220 1239	Electrocardiography
+E20	Diagnostic_procedure:T53 
+T54	Disease_disorder 1279 1304	right bundle branch block
+E21	Disease_disorder:T54 
+T55	Disease_disorder 1265 1274	hemiblock
+E22	Disease_disorder:T55 
+T56	Lab_value 1247 1259	sinus rhythm
+R26	MODIFY Arg1:T56 Arg2:E20	
+T57	Diagnostic_procedure 1312 1328	echocardiography
+E23	Diagnostic_procedure:T57 
+T58	Sign_symptom 1340 1347	dilated
+E24	Sign_symptom:T58 
+T59	Sign_symptom 1352 1364	hypertrophic
+E25	Sign_symptom:T59 
+T60	Biological_structure 1365 1379	left ventricle
+R27	MODIFY Arg1:T60 Arg2:E25	
+R28	MODIFY Arg1:T60 Arg2:E24	
+T61	Sign_symptom 1483 1509	mitral valve regurgitation
+E26	Sign_symptom:T61 
+T62	Sign_symptom 1412 1416	flow
+E27	Sign_symptom:T62 
+T63	Biological_structure 1426 1463	directed to the left atrial appendage
+R29	MODIFY Arg1:T63 Arg2:E27	
+#1	AnnotatorNotes E27	a bit awkward to annotate
+T64	Diagnostic_procedure 1534 1559	pulmonary artery pressure
+E28	Diagnostic_procedure:T64 
+T65	Detailed_description 1525 1533	systolic
+R30	MODIFY Arg1:T65 Arg2:E28	
+T66	Lab_value 1564 1571	50 mmHg
+R31	MODIFY Arg1:T66 Arg2:E28	
+T67	Sign_symptom 1580 1603	aortic valve was normal
+E29	Sign_symptom:T67 
+T15	Sign_symptom 355 366	small chest
+E30	Sign_symptom:T15 
+T16	Sign_symptom 442 459	short extremities
+E31	Sign_symptom:T16 
+T17	Sign_symptom 469 495	additional postaxial digit
+E32	Sign_symptom:T17 
+T19	Detailed_description 465 468	one
+T20	Biological_structure 499 508	each hand
+R4	MODIFY Arg1:T19 Arg2:E32	
+R5	MODIFY Arg1:T20 Arg2:E32	
+T68	Sign_symptom 293 313	normal mouth opening
+E33	Sign_symptom:T68 
+T69	Sign_symptom 319 341	missing lower incisors
+E34	Sign_symptom:T69 
+T70	Medication 1636 1644	ramipril
+E35	Medication:T70 
+T71	Medication 1646 1656	duloxetine
+E36	Medication:T71 
+T72	Medication 1658 1668	alprazolam
+E37	Medication:T72 
+T73	Medication 1673 1685	acenocumarol
+E38	Medication:T73 
+T74	Therapeutic_procedure 1717 1737	mitral valve surgery
+E39	Therapeutic_procedure:T74 
+T75	Therapeutic_procedure 1804 1814	cannulated
+E40	Therapeutic_procedure:T75 
+T76	Biological_structure 1779 1799	right femoral artery
+R6	MODIFY Arg1:T76 Arg2:E40	
+R8	SUB_PROCEDURE Arg1:E40 Arg2:E39	
+T77	Therapeutic_procedure 1824 1835	thoracotomy
+E41	Therapeutic_procedure:T77 
+R9	SUB_PROCEDURE Arg1:E41 Arg2:E39	
+T78	Detailed_description 1818 1823	right
+R32	MODIFY Arg1:T78 Arg2:E41	
+T79	Biological_structure 1857 1881	fourth intercostal space
+R33	MODIFY Arg1:T79 Arg2:E41	
+T80	Therapeutic_procedure 1894 1905	cannulation
+E42	Therapeutic_procedure:T80 
+T81	Detailed_description 1886 1893	bicaval
+R34	MODIFY Arg1:T81 Arg2:E42	
+R35	SUB_PROCEDURE Arg1:E42 Arg2:E39	
+T82	Detailed_description 1923 1947	Both veins were excluded
+R36	MODIFY Arg1:T82 Arg2:E42	
+T83	Therapeutic_procedure 1983 2005	cardiopulmonary bypass
+E43	Therapeutic_procedure:T83 
+T84	Detailed_description 1970 1982	normothermic
+R37	MODIFY Arg1:T84 Arg2:E43	
+T85	Detailed_description 2006 2062	without cross-clamping of the aorta in the beating heart
+R38	MODIFY Arg1:T85 Arg2:E43	
+R39	SUB_PROCEDURE Arg1:E43 Arg2:E39	
+T86	Therapeutic_procedure 2088 2134	continuous carbon dioxide (CO2) field flooding
+E44	Therapeutic_procedure:T86 
+T87	Detailed_description 2155 2177	CarbonAid CO2 diffuser
+T88	Detailed_description 2179 2218	Cardia Innovation AB, Stockholm, Sweden
+R40	MODIFY Arg1:T88 Arg2:T87	
+R41	MODIFY Arg1:T87 Arg2:E44	
+T89	Therapeutic_procedure 2246 2265	mitral valve repair
+E45	Therapeutic_procedure:T89 
+A3	POLARITY E45 NEG
+T90	Therapeutic_procedure 2328 2337	implanted
+E46	Therapeutic_procedure:T90 
+T91	Detailed_description 2289 2315	bileaflet mechanical valve
+R42	MODIFY Arg1:T91 Arg2:E46	
+T92	Detailed_description 2317 2322	no.29
+R43	MODIFY Arg1:T92 Arg2:T91	
+T93	Sign_symptom 2342 2355	complications
+E47	Sign_symptom:T93 
+A4	POLARITY E47 NEG
+T94	Detailed_description 2356 2383	associated with anaesthesia
+R44	MODIFY Arg1:T94 Arg2:E47	
+T95	Therapeutic_procedure 2408 2430	postoperative recovery
+E48	Therapeutic_procedure:T95 
+T96	Lab_value 2435 2445	uneventful
+R45	MODIFY Arg1:T96 Arg2:E48	
+T97	Clinical_event 2457 2467	discharged
+E49	Clinical_event:T97 
+T98	Date 2471 2491	postoperative day 10
+E50	Date:T98 
+T99	Clinical_event 2512 2521	follow-up
+E51	Clinical_event:T99 
+T100	Duration 2499 2508	two years
+E52	Duration:T100 
+T101	Diagnostic_procedure 2523 2539	echocardiography
+E53	Diagnostic_procedure:T101 
+T102	Lab_value 2549 2565	optimal function
+T103	Biological_structure 2573 2585	mitral valve
+R46	MODIFY Arg1:T103 Arg2:T102	
+R47	MODIFY Arg1:T102 Arg2:E53	
+T104	Diagnostic_procedure 2613 2638	pulmonary artery pressure
+E54	Diagnostic_procedure:T104 
+T105	Detailed_description 2604 2612	systolic
+R48	MODIFY Arg1:T105 Arg2:E54	
+T106	Lab_value 2592 2600	decrease
+R49	MODIFY Arg1:T106 Arg2:E54	
+T107	Lab_value 2640 2647	30 mmHg
+R50	MODIFY Arg1:T107 Arg2:E54	
+*	OVERLAP E1 E33 E34 E30 E2 E31 E32 E3 E4
+R7	AFTER Arg1:E4 Arg2:E5	
+*	OVERLAP E5 E6 E7
+R51	MODIFY Arg1:E7 Arg2:T25	
+R52	BEFORE Arg1:E7 Arg2:E8	
+*	OVERLAP E8 E9
+R53	BEFORE Arg1:E9 Arg2:E11	
+*	OVERLAP E11 E12 E13 E14 E15 E16
+R54	BEFORE Arg1:E16 Arg2:E17	
+*	OVERLAP E17 E18 E19 E20 E22 E21 E23 E24 E25 E27 E26 E28 E29 E35 E36 E37 E38
+R55	BEFORE Arg1:E38 Arg2:E39	
+*	OVERLAP E39 E44
+R56	BEFORE Arg1:E44 Arg2:E45	
+*	OVERLAP E45 E46 E47
+R57	BEFORE Arg1:E47 Arg2:E48	
+R58	BEFORE Arg1:E48 Arg2:E49	
+*	OVERLAP E49 E50
+R59	BEFORE Arg1:E50 Arg2:E52	
+*	OVERLAP E52 E51
+R60	BEFORE Arg1:E51 Arg2:E53	
+*	OVERLAP E53 E54

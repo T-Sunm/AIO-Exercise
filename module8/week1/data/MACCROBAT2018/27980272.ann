@@ -1,0 +1,538 @@
+T1	Age 2 13	76-year-old
+T2	Personal_background 14 22	Japanese
+T3	Sex 23 26	man
+T4	Sign_symptom 45 63	decreased appetite
+E1	Sign_symptom:T4 
+T5	Sign_symptom 65 71	nausea
+E2	Sign_symptom:T5 
+T6	Sign_symptom 87 97	distension
+E3	Sign_symptom:T6 
+T7	Biological_structure 77 86	abdominal
+R1	MODIFY Arg1:T7 Arg2:E3	
+T8	Date 98 122	since late February 2011
+E4	Date:T8 
+T9	Diagnostic_procedure 155 161	stools
+E5	Diagnostic_procedure:T9 
+T10	Lab_value 150 154	soft
+T11	Lab_value 143 148	loose
+R2	MODIFY Arg1:T10 Arg2:E5	
+R3	MODIFY Arg1:T11 Arg2:E5	
+T12	Lab_value 172 182	not watery
+R4	MODIFY Arg1:T12 Arg2:E5	
+T13	Frequency 183 193	once daily
+R5	MODIFY Arg1:T13 Arg2:E5	
+T14	Diagnostic_procedure 210 221	blood tests
+E6	Diagnostic_procedure:T14 
+T15	Nonbiological_location 239 261	primary care physician
+T16	Nonbiological_location 263 266	PCP
+R6	IDENTICAL Arg1:T16 Arg2:T15	
+R7	MODIFY Arg1:T15 Arg2:E6	
+T17	Date 268 290	between April and June
+E7	Date:T17 
+T18	Lab_value 300 306	normal
+R8	MODIFY Arg1:T18 Arg2:E6	
+T19	Diagnostic_procedure 328 354	gastrointestinal endoscopy
+E8	Diagnostic_procedure:T19 
+T20	Detailed_description 312 327	upper and lower
+R9	MODIFY Arg1:T20 Arg2:E8	
+T21	Disease_disorder 371 380	gastritis
+E9	Disease_disorder:T21 
+T22	Detailed_description 362 370	atrophic
+R10	MODIFY Arg1:T22 Arg2:E9	
+T23	Diagnostic_procedure 421 451	Helicobacter pylori antibodies
+E10	Diagnostic_procedure:T23 
+T24	Diagnostic_procedure 470 487	rapid urease test
+E11	Diagnostic_procedure:T24 
+T25	Diagnostic_procedure 494 522	histopathological evaluation
+E12	Diagnostic_procedure:T25 
+T26	Lab_value 542 550	negative
+R11	MODIFY Arg1:T26 Arg2:E12	
+R12	MODIFY Arg1:T26 Arg2:E11	
+R13	MODIFY Arg1:T26 Arg2:E10	
+T27	Medication 582 592	medication
+E13	Medication:T27 
+T28	Date 555 559	June
+E14	Date:T28 
+T29	Nonbiological_location 600 620	mental health clinic
+R14	MODIFY Arg1:T29 Arg2:E13	
+T30	Diagnostic_procedure 671 682	body weight
+E15	Diagnostic_procedure:T30 
+T31	Lab_value 691 709	decreased by 23 kg
+R15	MODIFY Arg1:T31 Arg2:E15	
+T32	Medication 726 736	medication
+E16	Medication:T32 
+A1	POLARITY E16 NEG
+T33	Clinical_event 745 753	referred
+E17	Clinical_event:T33 
+T34	Nonbiological_location 761 771	department
+R16	MODIFY Arg1:T34 Arg2:E17	
+T35	Date 775 783	November
+E18	Date:T35 
+T36	Sign_symptom 638 646	symptoms
+E19	Sign_symptom:T36 
+A2	TREND E19 STAY
+T37	History 821 847	hypertension since his 30s
+T38	Medication 849 859	Amlodipine
+E20	Medication:T38 
+T39	Dosage 861 869	5 mg/day
+R17	MODIFY Arg1:T39 Arg2:E20	
+T40	Medication 913 923	olmesartan
+E21	Medication:T40 
+T41	Date 903 907	2005
+E22	Date:T41 
+T42	Coreference 987 997	olmesartan
+E23	Coreference:T42 
+R18	IDENTICAL Arg1:E23 Arg2:E21	
+T43	Dosage 974 983	30 mg/day
+R19	MODIFY Arg1:T43 Arg2:E21	
+T44	Date 929 937	May 2008
+E24	Date:T44 
+T45	Medication 1030 1045	new medications
+E25	Medication:T45 
+A3	POLARITY E25 NEG
+T46	Medication 1049 1085	nonsteroidal anti-inflammatory drugs
+E26	Medication:T46 
+A4	POLARITY E26 NEG
+T47	History 1094 1138	no history of smoking or alcohol consumption
+T48	Diagnostic_procedure 1140 1160	Physical examination
+E27	Diagnostic_procedure:T48 
+T49	Height 1201 1207	165 cm
+T50	Weight 1226 1231	47 kg
+T51	Diagnostic_procedure 1237 1252	body mass index
+E28	Diagnostic_procedure:T51 
+T52	Lab_value 1256 1264	17 kg/m2
+R20	MODIFY Arg1:T52 Arg2:E28	
+T53	Diagnostic_procedure 1270 1286	body temperature
+E29	Diagnostic_procedure:T53 
+T54	Lab_value 1291 1296	36.3℃
+R21	MODIFY Arg1:T54 Arg2:E29	
+T55	Diagnostic_procedure 1298 1308	pulse rate
+E30	Diagnostic_procedure:T55 
+T56	Lab_value 1310 1317	101/min
+R22	MODIFY Arg1:T56 Arg2:E30	
+T57	Diagnostic_procedure 1319 1333	blood pressure
+E31	Diagnostic_procedure:T57 
+T58	Lab_value 1335 1346	101/81 mmHg
+R23	MODIFY Arg1:T58 Arg2:E31	
+T59	Diagnostic_procedure 1348 1364	respiratory rate
+E32	Diagnostic_procedure:T59 
+T60	Lab_value 1366 1380	12 breaths/min
+R24	MODIFY Arg1:T60 Arg2:E32	
+T61	Diagnostic_procedure 1386 1416	saturation from pulse oximetry
+E33	Diagnostic_procedure:T61 
+T62	Diagnostic_procedure 1418 1422	SpO2
+E34	Diagnostic_procedure:T62 
+R25	IDENTICAL Arg1:E34 Arg2:E33	
+T63	Lab_value 1428 1431	98%
+R26	MODIFY Arg1:T63 Arg2:E33	
+T64	Sign_symptom 1452 1464	heart murmur
+E35	Sign_symptom:T64 
+A5	POLARITY E35 NEG
+T65	Sign_symptom 1466 1483	third heart sound
+E36	Sign_symptom:T65 
+A6	POLARITY E36 NEG
+T66	Sign_symptom 1502 1512	distension
+E37	Sign_symptom:T66 
+A7	POLARITY E37 NEG
+T67	Biological_structure 1487 1501	jugular venous
+R27	MODIFY Arg1:T67 Arg2:E37	
+T68	Sign_symptom 1548 1553	edema
+E38	Sign_symptom:T68 
+T69	Biological_structure 1561 1571	lower legs
+R28	MODIFY Arg1:T69 Arg2:E38	
+T70	Detailed_description 1540 1547	pitting
+T71	Detailed_description 1530 1539	bilateral
+R29	MODIFY Arg1:T70 Arg2:E38	
+R30	MODIFY Arg1:T71 Arg2:E38	
+T72	Sign_symptom 1614 1623	nystagmus
+E39	Sign_symptom:T72 
+T73	Detailed_description 1602 1613	gaze-evoked
+T74	Detailed_description 1591 1601	unilateral
+R31	MODIFY Arg1:T73 Arg2:E39	
+R32	MODIFY Arg1:T74 Arg2:E39	
+T75	Sign_symptom 1644 1669	reduced tactile sensation
+E40	Sign_symptom:T75 
+T76	Severity 1637 1643	mildly
+R33	MODIFY Arg1:T76 Arg2:E40	
+T77	Sign_symptom 1682 1693	nociception
+E41	Sign_symptom:T77 
+T78	Detailed_description 1674 1681	thermal
+R34	MODIFY Arg1:T78 Arg2:E41	
+T79	Biological_structure 1701 1705	toes
+T80	Biological_structure 1710 1737	dorsal regions of both feet
+R35	MODIFY Arg1:T79 Arg2:E41	
+R36	MODIFY Arg1:T80 Arg2:E41	
+T81	Diagnostic_procedure 1753 1772	finger-to-nose test
+E42	Diagnostic_procedure:T81 
+T82	Diagnostic_procedure 1785 1796	tandem gait
+E43	Diagnostic_procedure:T82 
+T83	Lab_value 1802 1806	poor
+R37	MODIFY Arg1:T83 Arg2:E43	
+R38	MODIFY Arg1:T83 Arg2:E42	
+T84	Diagnostic_procedure 1845 1853	reflexes
+E44	Diagnostic_procedure:T84 
+T85	Biological_structure 1829 1844	Achilles tendon
+T86	Biological_structure 1816 1824	patellar
+R39	MODIFY Arg1:T85 Arg2:E44	
+R40	MODIFY Arg1:T86 Arg2:E44	
+T87	Lab_value 1858 1869	disappeared
+R41	MODIFY Arg1:T87 Arg2:E44	
+T88	Sign_symptom 1871 1884	Confabulation
+E45	Sign_symptom:T88 
+T89	Diagnostic_procedure 1930 1953	Hasegawa Dementia Scale
+E46	Diagnostic_procedure:T89 
+T90	Diagnostic_procedure 1955 1960	HDS-R
+E47	Diagnostic_procedure:T90 
+R42	IDENTICAL Arg1:E47 Arg2:E46	
+T91	Lab_value 1972 1977	17/30
+R43	MODIFY Arg1:T91 Arg2:E46	
+T92	Diagnostic_procedure 2003 2023	hematologic findings
+E48	Diagnostic_procedure:T92 
+T93	Diagnostic_procedure 2041 2063	white blood cell count
+E49	Diagnostic_procedure:T93 
+T94	Lab_value 2065 2074	6,200 /μL
+R44	MODIFY Arg1:T94 Arg2:E49	
+T95	Diagnostic_procedure 2076 2092	hemoglobin level
+E50	Diagnostic_procedure:T95 
+T96	Lab_value 2094 2103	12.5 g/dL
+R45	MODIFY Arg1:T96 Arg2:E50	
+T97	Diagnostic_procedure 2105 2128	mean corpuscular volume
+E51	Diagnostic_procedure:T97 
+T98	Lab_value 2130 2134	88.4
+R46	MODIFY Arg1:T98 Arg2:E51	
+T99	Diagnostic_procedure 2136 2150	platelet count
+E52	Diagnostic_procedure:T99 
+T100	Lab_value 2152 2163	230,000 /μL
+R47	MODIFY Arg1:T100 Arg2:E52	
+T101	Diagnostic_procedure 2165 2177	sodium level
+E53	Diagnostic_procedure:T101 
+T102	Lab_value 2179 2188	136 mEq/L
+R48	MODIFY Arg1:T102 Arg2:E53	
+T103	Diagnostic_procedure 2190 2205	potassium level
+E54	Diagnostic_procedure:T103 
+T104	Lab_value 2207 2216	3.8 mEq/L
+R49	MODIFY Arg1:T104 Arg2:E54	
+T105	Diagnostic_procedure 2218 2232	chlorine level
+E55	Diagnostic_procedure:T105 
+T106	Lab_value 2234 2243	103 mEq/L
+R50	MODIFY Arg1:T106 Arg2:E55	
+T107	Diagnostic_procedure 2245 2255	iron level
+E56	Diagnostic_procedure:T107 
+T108	Lab_value 2257 2265	57 μg/dL
+R51	MODIFY Arg1:T108 Arg2:E56	
+T109	Diagnostic_procedure 2299 2313	ferritin level
+E57	Diagnostic_procedure:T109 
+T110	Lab_value 2315 2324	366 ng/mL
+R52	MODIFY Arg1:T110 Arg2:E57	
+T111	Diagnostic_procedure 2358 2384	B-type natriuretic peptide
+E58	Diagnostic_procedure:T111 
+T112	Diagnostic_procedure 2386 2389	BNP
+E59	Diagnostic_procedure:T112 
+R53	IDENTICAL Arg1:E59 Arg2:E58	
+T113	Lab_value 2398 2409	125.3 pg/mL
+R54	MODIFY Arg1:T113 Arg2:E59	
+T114	Diagnostic_procedure 2446 2462	vitamin B1 level
+E60	Diagnostic_procedure:T114 
+T115	Lab_value 2464 2471	8 ng/mL
+R55	MODIFY Arg1:T115 Arg2:E60	
+R56	SUB_PROCEDURE Arg1:E49 Arg2:E48	
+R57	SUB_PROCEDURE Arg1:E50 Arg2:E48	
+R58	SUB_PROCEDURE Arg1:E51 Arg2:E48	
+R59	SUB_PROCEDURE Arg1:E52 Arg2:E48	
+R60	SUB_PROCEDURE Arg1:E53 Arg2:E48	
+R61	SUB_PROCEDURE Arg1:E54 Arg2:E48	
+R62	SUB_PROCEDURE Arg1:E55 Arg2:E48	
+R63	SUB_PROCEDURE Arg1:E56 Arg2:E48	
+R64	SUB_PROCEDURE Arg1:E57 Arg2:E48	
+R65	SUB_PROCEDURE Arg1:E58 Arg2:E48	
+R66	SUB_PROCEDURE Arg1:E60 Arg2:E48	
+T116	Diagnostic_procedure 2507 2524	electrocardiogram
+E61	Diagnostic_procedure:T116 
+T117	Lab_value 2529 2535	normal
+R67	MODIFY Arg1:T117 Arg2:E61	
+T118	Diagnostic_procedure 2546 2552	X-rays
+E62	Diagnostic_procedure:T118 
+T119	Biological_structure 2540 2545	chest
+R68	MODIFY Arg1:T119 Arg2:E62	
+T120	Diagnostic_procedure 2569 2589	cardiothoracic ratio
+E63	Diagnostic_procedure:T120 
+T121	Lab_value 2562 2568	normal
+T122	Lab_value 2591 2596	40.8%
+R69	MODIFY Arg1:T122 Arg2:E63	
+R70	MODIFY Arg1:T121 Arg2:E63	
+T123	Sign_symptom 2613 2633	pulmonary congestion
+E64	Sign_symptom:T123 
+A8	POLARITY E64 NEG
+T124	Disease_disorder 2637 2653	pleural effusion
+E65	Disease_disorder:T124 
+A9	POLARITY E65 NEG
+T125	Diagnostic_procedure 2699 2725	magnetic resonance imaging
+E66	Diagnostic_procedure:T125 
+T126	Detailed_description 2663 2698	fluid-attenuated inversion recovery
+R71	MODIFY Arg1:T126 Arg2:E66	
+T127	Biological_structure 2655 2662	Cranial
+R72	MODIFY Arg1:T127 Arg2:E66	
+T128	Sign_symptom 2759 2775	hyperintensities
+E67	Sign_symptom:T128 
+T129	Biological_structure 2744 2758	periaqueductal
+R73	MODIFY Arg1:T129 Arg2:E67	
+T130	Disease_disorder 2796 2819	Wernicke encephalopathy
+E68	Disease_disorder:T130 
+T131	Sign_symptom 2854 2865	tachycardia
+E69	Sign_symptom:T131 
+T132	Detailed_description 2848 2853	sinus
+R74	MODIFY Arg1:T132 Arg2:E69	
+T133	Sign_symptom 2889 2900	hypotension
+E70	Sign_symptom:T133 
+T134	Disease_disorder 2934 2947	heart failure
+E71	Disease_disorder:T134 
+A10	POLARITY E71 NEG
+T135	Sign_symptom 2951 2962	dehydration
+E72	Sign_symptom:T135 
+A11	POLARITY E72 NEG
+T136	Disease_disorder 3008 3029	vitamin B1 deficiency
+E73	Disease_disorder:T136 
+T137	Medication 3086 3109	antihypertensive agents
+E74	Medication:T137 
+A12	POLARITY E74 NEG
+T138	Date 3133 3146	10 days after
+E75	Date:T138 
+T139	Medication 3181 3191	vitamin B1
+E76	Medication:T139 
+T140	Administration 3151 3162	intravenous
+R75	MODIFY Arg1:T140 Arg2:E76	
+T141	Sign_symptom 3207 3223	loss of appetite
+E77	Sign_symptom:T141 
+A13	POLARITY E77 NEG
+T142	Sign_symptom 3225 3231	nausea
+E78	Sign_symptom:T142 
+A14	POLARITY E78 NEG
+T143	Sign_symptom 3237 3253	gait disturbance
+E79	Sign_symptom:T143 
+A15	POLARITY E79 NEG
+T144	Diagnostic_procedure 3275 3286	body weight
+E80	Diagnostic_procedure:T144 
+T145	Lab_value 3287 3304	increased by 3 kg
+R76	MODIFY Arg1:T145 Arg2:E80	
+T146	Sign_symptom 3306 3315	Nystagmus
+E81	Sign_symptom:T146 
+A16	POLARITY E81 NEG
+T147	Diagnostic_procedure 3335 3355	physical examination
+E82	Diagnostic_procedure:T147 
+T148	Sign_symptom 3383 3397	confabulations
+E83	Sign_symptom:T148 
+T149	Diagnostic_procedure 3407 3418	HDS-R score
+E84	Diagnostic_procedure:T149 
+T150	Lab_value 3455 3470	did not improve
+R77	MODIFY Arg1:T150 Arg2:E84	
+T151	Diagnostic_procedure 3446 3454	reflexes
+E85	Diagnostic_procedure:T151 
+T152	Lab_value 3423 3430	absence
+R78	MODIFY Arg1:T152 Arg2:E85	
+T153	Biological_structure 3434 3445	deep tendon
+R79	MODIFY Arg1:T153 Arg2:E85	
+T154	Sign_symptom 3482 3507	gastrointestinal symptoms
+E86	Sign_symptom:T154 
+A17	POLARITY E86 NEG
+T155	Diagnostic_procedure 3533 3547	blood pressure
+E87	Diagnostic_procedure:T155 
+T156	Lab_value 3548 3557	increased
+T157	Lab_value 3561 3572	160/90 mmHg
+R80	MODIFY Arg1:T157 Arg2:E87	
+R81	MODIFY Arg1:T156 Arg2:E87	
+T158	Medication 3612 3622	olmesartan
+E88	Medication:T158 
+T159	Date 3626 3645	late December, 2011
+E89	Date:T159 
+T160	Nonbiological_location 3578 3581	PCP
+R82	MODIFY Arg1:T160 Arg2:E88	
+T161	Date 3647 3661	One week later
+E90	Date:T161 
+T162	Sign_symptom 3699 3717	decreased appetite
+E91	Sign_symptom:T162 
+T163	Sign_symptom 3722 3728	nausea
+E92	Sign_symptom:T163 
+T164	Sign_symptom 3749 3757	diarrhea
+E93	Sign_symptom:T164 
+T165	Lab_value 3759 3801	five bowel movements during a 2-day period
+R83	MODIFY Arg1:T165 Arg2:E93	
+T166	Diagnostic_procedure 3819 3825	stools
+E94	Diagnostic_procedure:T166 
+T167	Lab_value 3814 3818	soft
+R84	MODIFY Arg1:T167 Arg2:E94	
+T168	Frequency 3826 3836	once daily
+R85	MODIFY Arg1:T168 Arg2:E94	
+T169	Diagnostic_procedure 3846 3857	body weight
+E95	Diagnostic_procedure:T169 
+T170	Lab_value 3858 3867	decreased
+R86	MODIFY Arg1:T170 Arg2:E95	
+T171	Lab_value 3871 3876	47 kg
+R87	MODIFY Arg1:T171 Arg2:E95	
+T172	Clinical_event 3883 3887	came
+E96	Clinical_event:T172 
+T173	Nonbiological_location 3895 3903	hospital
+R88	MODIFY Arg1:T173 Arg2:E96	
+T174	Date 3910 3923	3 weeks after
+E97	Date:T174 
+T175	Medication 3942 3952	olmesartan
+E98	Medication:T175 
+T176	Diagnostic_procedure 3972 3983	vital signs
+E99	Diagnostic_procedure:T176 
+T177	Diagnostic_procedure 4001 4017	body temperature
+E100	Diagnostic_procedure:T177 
+T178	Lab_value 4019 4024	35.1℃
+R89	MODIFY Arg1:T178 Arg2:E100	
+T179	Diagnostic_procedure 4026 4036	pulse rate
+E101	Diagnostic_procedure:T179 
+T180	Lab_value 4038 4044	93/min
+R90	MODIFY Arg1:T180 Arg2:E101	
+T181	Diagnostic_procedure 4050 4064	blood pressure
+E102	Diagnostic_procedure:T181 
+T182	Lab_value 4066 4077	132/75 mmHg
+R91	MODIFY Arg1:T182 Arg2:E102	
+T183	Diagnostic_procedure 4083 4102	neurologic findings
+E103	Diagnostic_procedure:T183 
+T184	Lab_value 4110 4122	no worsening
+R92	MODIFY Arg1:T184 Arg2:E103	
+R93	SUB_PROCEDURE Arg1:E100 Arg2:E99	
+R94	SUB_PROCEDURE Arg1:E101 Arg2:E99	
+R95	SUB_PROCEDURE Arg1:E102 Arg2:E99	
+T185	Diagnostic_procedure 4144 4163	laboratory findings
+E104	Diagnostic_procedure:T185 
+T186	Diagnostic_procedure 4181 4193	sodium level
+E105	Diagnostic_procedure:T186 
+T187	Diagnostic_procedure 4206 4221	potassium level
+E106	Diagnostic_procedure:T187 
+T188	Diagnostic_procedure 4238 4252	chlorine level
+E107	Diagnostic_procedure:T188 
+T189	Lab_value 4195 4204	139 mEq/L
+R96	MODIFY Arg1:T189 Arg2:E105	
+T190	Lab_value 4223 4232	2.9 mEq/L
+R97	MODIFY Arg1:T190 Arg2:E106	
+T191	Lab_value 4254 4263	116 mEq/L
+R98	MODIFY Arg1:T191 Arg2:E107	
+R99	SUB_PROCEDURE Arg1:E105 Arg2:E104	
+R100	SUB_PROCEDURE Arg1:E106 Arg2:E104	
+R101	SUB_PROCEDURE Arg1:E107 Arg2:E104	
+T192	Sign_symptom 4265 4279	Hyperchloremia
+E108	Sign_symptom:T192 
+T193	Lab_value 4299 4361	serum sodium level minus chloride level (139-116) was 23 mEq/L
+R102	MODIFY Arg1:T193 Arg2:E108	
+T194	Diagnostic_procedure 4381 4408	arterial blood gas findings
+E109	Diagnostic_procedure:T194 
+T195	Diagnostic_procedure 4426 4428	pH
+E110	Diagnostic_procedure:T195 
+T196	Lab_value 4430 4434	7.25
+R103	MODIFY Arg1:T196 Arg2:E110	
+T197	Diagnostic_procedure 4436 4440	PCO2
+E111	Diagnostic_procedure:T197 
+T198	Lab_value 4442 4449	25 mmHg
+T199	Diagnostic_procedure 4455 4459	HCO3
+E112	Diagnostic_procedure:T199 
+T200	Lab_value 4461 4470	11 mmol/L
+R104	MODIFY Arg1:T200 Arg2:E112	
+R105	MODIFY Arg1:T198 Arg2:E111	
+R106	SUB_PROCEDURE Arg1:E110 Arg2:E109	
+R107	SUB_PROCEDURE Arg1:E111 Arg2:E109	
+R108	SUB_PROCEDURE Arg1:E112 Arg2:E109	
+T201	Diagnostic_procedure 4476 4486	urinalysis
+E113	Diagnostic_procedure:T201 
+T202	Diagnostic_procedure 4513 4525	sodium level
+E114	Diagnostic_procedure:T202 
+T203	Lab_value 4527 4535	15 mEq/L
+R109	MODIFY Arg1:T203 Arg2:E114	
+T204	Diagnostic_procedure 4537 4552	potassium level
+E115	Diagnostic_procedure:T204 
+T205	Lab_value 4554 4562	13 mEq/L
+R110	MODIFY Arg1:T205 Arg2:E115	
+T206	Diagnostic_procedure 4564 4578	chlorine level
+E116	Diagnostic_procedure:T206 
+T207	Lab_value 4580 4589	100 mEq/L
+R111	MODIFY Arg1:T207 Arg2:E116	
+T208	Diagnostic_procedure 4595 4610	urine anion gap
+E117	Diagnostic_procedure:T208 
+T209	Lab_value 4612 4621	-72 mEq/L
+R112	MODIFY Arg1:T209 Arg2:E117	
+R113	SUB_PROCEDURE Arg1:E114 Arg2:E113	
+R114	SUB_PROCEDURE Arg1:E115 Arg2:E113	
+R115	SUB_PROCEDURE Arg1:E116 Arg2:E113	
+R116	SUB_PROCEDURE Arg1:E117 Arg2:E113	
+T210	Diagnostic_procedure 4661 4676	bowel movements
+E118	Diagnostic_procedure:T210 
+T211	Lab_value 4637 4657	no apparent increase
+R117	MODIFY Arg1:T211 Arg2:E118	
+T212	Sign_symptom 4716 4732	absence of HCO3-
+E119	Sign_symptom:T212 
+T213	Biological_structure 4742 4764	gastrointestinal tract
+R118	MODIFY Arg1:T213 Arg2:E119	
+T214	Diagnostic_procedure 4786 4797	radiography
+E120	Diagnostic_procedure:T214 
+T215	Biological_structure 4776 4785	abdominal
+R119	MODIFY Arg1:T215 Arg2:E120	
+T216	Diagnostic_procedure 4812 4831	computed tomography
+E121	Diagnostic_procedure:T216 
+T217	Biological_structure 4802 4811	abdominal
+R120	MODIFY Arg1:T217 Arg2:E121	
+T218	Disease_disorder 4956 4985	intestinal pseudo-obstruction
+E122	Disease_disorder:T218 
+T219	Sign_symptom 4865 4873	dilation
+E123	Sign_symptom:T219 
+T220	Detailed_description 4854 4864	continuous
+R121	MODIFY Arg1:T220 Arg2:E123	
+T221	Biological_structure 4881 4904	entire intestinal tract
+R122	MODIFY Arg1:T221 Arg2:E123	
+T222	Medication 5007 5017	olmesartan
+E124	Medication:T222 
+A18	POLARITY E124 NEG
+T223	Sign_symptom 5023 5029	nausea
+E125	Sign_symptom:T223 
+A19	POLARITY E125 NEG
+T224	Sign_symptom 5034 5055	body weight decreases
+E126	Sign_symptom:T224 
+A20	POLARITY E126 NEG
+T225	Diagnostic_procedure 5092 5098	biopsy
+E127	Diagnostic_procedure:T225 
+T226	Biological_structure 5083 5091	Duodenal
+R123	MODIFY Arg1:T226 Arg2:E127	
+T227	Medication 5128 5138	olmesartan
+E128	Medication:T227 
+A21	POLARITY E128 NEG
+T228	Sign_symptom 5155 5167	inflammation
+E129	Sign_symptom:T228 
+A22	POLARITY E129 NEG
+T229	Sign_symptom 5215 5229	fold structure
+E130	Sign_symptom:T229 
+*	OVERLAP E1 E2 E3 E4 E5
+R124	BEFORE Arg1:E5 Arg2:E6	
+*	OVERLAP E6 E7 E8 E9
+R125	BEFORE Arg1:E9 Arg2:E10	
+*	OVERLAP E10 E11 E12
+R126	BEFORE Arg1:E12 Arg2:E14	
+*	OVERLAP E14 E13 E19 E15
+R127	BEFORE Arg1:E15 Arg2:E16	
+R128	BEFORE Arg1:E16 Arg2:E17	
+*	OVERLAP E17 E18
+R129	AFTER Arg1:E18 Arg2:E20	
+*	OVERLAP E20 E22
+R130	BEFORE Arg1:E22 Arg2:E21	
+*	OVERLAP E21 E24
+R131	BEFORE Arg1:E24 Arg2:E25	
+*	OVERLAP E25 E26 E27 E28 E29 E30 E31 E32 E33 E35 E36 E37 E38 E39 E40 E41 E42 E43 E44 E45 E46 E48 E61 E62 E63 E64 E65 E66 E67 E68 E69 E70 E71 E72 E73
+R132	BEFORE Arg1:E73 Arg2:E74	
+R133	BEFORE Arg1:E74 Arg2:E75	
+R134	AFTER Arg1:E75 Arg2:E76	
+R135	BEFORE Arg1:E76 Arg2:E77	
+*	OVERLAP E77 E78 E79 E80 E81 E82 E83 E84 E85 E86 E87
+R136	BEFORE Arg1:E87 Arg2:E88	
+*	OVERLAP E88 E89
+R137	BEFORE Arg1:E89 Arg2:E90	
+*	OVERLAP E90 E91 E92
+R138	BEFORE Arg1:E92 Arg2:E93	
+R139	BEFORE Arg1:E93 Arg2:E94	
+*	OVERLAP E94 E95
+R140	BEFORE Arg1:E95 Arg2:E96	
+*	OVERLAP E96 E97 E98 E99 E103 E104 E108 E109 E113 E119 E120 E121 E123 E122
+R141	BEFORE Arg1:E122 Arg2:E124	
+*	OVERLAP E124 E125 E126
+R142	BEFORE Arg1:E126 Arg2:E127	
+*	OVERLAP E127 E128 E129 E130

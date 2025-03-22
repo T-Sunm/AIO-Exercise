@@ -1,0 +1,203 @@
+T1	Age 2 13	30-year-old
+T2	Sex 14 20	female
+T4	Therapeutic_procedure 39 50	rhinoplasty
+E1	Therapeutic_procedure:T4 
+T5	Medication 57 76	general anaesthesia
+E2	Medication:T5 
+T6	Medication 130 142	Remifentanyl
+E3	Medication:T6 
+T7	Medication 159 167	Propofol
+E4	Medication:T7 
+T8	Dosage 144 153	0.5 μg/kg
+T9	Dosage 168 175	2 mg/kg
+R1	MODIFY Arg1:T8 Arg2:E3	
+R2	MODIFY Arg1:T9 Arg2:E4	
+R3	SUB_PROCEDURE Arg1:E3 Arg2:E2	
+R4	SUB_PROCEDURE Arg1:E4 Arg2:E2	
+T10	Medication 212 225	Cisatracurium
+E5	Medication:T10 
+T11	Dosage 227 237	0.15 μg/kg
+R5	MODIFY Arg1:T11 Arg2:E5	
+T12	Disease_disorder 177 193	Muscle paralysis
+E6	Disease_disorder:T12 
+#1	AnnotatorNotes E6	Intentional
+R6	CAUSE Arg1:E5 Arg2:E6	
+T13	Therapeutic_procedure 250 260	intubation
+E7	Therapeutic_procedure:T13 
+T14	Detailed_description 240 249	Transoral
+R7	MODIFY Arg1:T14 Arg2:E7	
+T15	Therapeutic_procedure 282 297	Macintosh blade
+E8	Therapeutic_procedure:T15 
+T16	Detailed_description 299 303	No.3
+R8	MODIFY Arg1:T16 Arg2:E8	
+R9	SUB_PROCEDURE Arg1:E8 Arg2:E7	
+T17	Therapeutic_procedure 341 354	tracheal tube
+E9	Therapeutic_procedure:T17 
+T18	Biological_structure 391 398	trachea
+R10	MODIFY Arg1:T18 Arg2:E9	
+T19	Detailed_description 330 340	reinforced
+T20	Detailed_description 316 329	7 mm diameter
+R11	MODIFY Arg1:T19 Arg2:E9	
+R12	MODIFY Arg1:T20 Arg2:E9	
+R13	SUB_PROCEDURE Arg1:E9 Arg2:E7	
+T21	Biological_structure 447 472	right corner of the mouth
+R14	MODIFY Arg1:T21 Arg2:E9	
+T22	Disease_disorder 477 485	problems
+E10	Disease_disorder:T22 
+A1	POLARITY E10 NEG
+T23	Therapeutic_procedure 510 522	laryngoscopy
+E11	Therapeutic_procedure:T23 
+T24	Coreference 527 537	intubation
+E12	Coreference:T24 
+R15	IDENTICAL Arg1:E12 Arg2:E7	
+T25	Coreference 555 559	tube
+E13	Coreference:T25 
+R16	IDENTICAL Arg1:E13 Arg2:E9	
+T26	Lab_value 580 600	pressure ≤ 20 cm H2O
+R17	MODIFY Arg1:T26 Arg2:E13	
+T27	Therapeutic_procedure 605 630	adjustment of cuff volume
+E14	Therapeutic_procedure:T27 
+A2	POLARITY E14 NEG
+T28	Medication 659 662	N2O
+E15	Medication:T28 
+A3	POLARITY E15 NEG
+T29	Therapeutic_procedure 708 719	throat pack
+E16	Therapeutic_procedure:T29 
+T30	Biological_structure 738 745	pharynx
+R18	MODIFY Arg1:T30 Arg2:E16	
+T31	Medication 845 857	Sevofluorane
+E17	Medication:T31 
+T32	Medication 805 824	General anaesthesia
+E18	Medication:T32 
+T33	Administration 858 871	in oxygen/air
+R19	MODIFY Arg1:T33 Arg2:E17	
+T34	Medication 876 888	Remifentanyl
+E19	Medication:T34 
+T35	Administration 892 911	continuous infusion
+R20	MODIFY Arg1:T35 Arg2:E19	
+T36	Dosage 912 926	0.25 μg/kg/min
+R21	MODIFY Arg1:T36 Arg2:E19	
+R22	SUB_PROCEDURE Arg1:E17 Arg2:E18	
+R23	SUB_PROCEDURE Arg1:E19 Arg2:E18	
+T37	Sign_symptom 937 957	arterial hypotension
+E20	Sign_symptom:T37 
+T38	Severity 928 936	Moderate
+R24	MODIFY Arg1:T38 Arg2:E20	
+#2	AnnotatorNotes E20	Intentional
+T39	Diagnostic_procedure 985 1009	systolic artery pressure
+E21	Diagnostic_procedure:T39 
+T40	Lab_value 1027 1034	90 mmHg
+R25	MODIFY Arg1:T40 Arg2:E21	
+T41	Therapeutic_procedure 1071 1091	semi-supine position
+E22	Therapeutic_procedure:T41 
+T42	Detailed_description 1101 1131	head slightly inclined forward
+T43	Detailed_description 1150 1173	trunk slightly elevated
+R26	MODIFY Arg1:T42 Arg2:E22	
+R27	MODIFY Arg1:T43 Arg2:E22	
+T44	Duration 1205 1216	100 minutes
+E23	Duration:T44 
+T45	Therapeutic_procedure 1191 1200	operation
+E24	Therapeutic_procedure:T45 
+T46	Therapeutic_procedure 1234 1243	extubated
+E25	Therapeutic_procedure:T46 
+T47	Therapeutic_procedure 1266 1277	throat pack
+E26	Therapeutic_procedure:T47 
+A4	POLARITY E26 NEG
+T48	Sign_symptom 1340 1364	difficulty in swallowing
+E27	Sign_symptom:T48 
+T49	Sign_symptom 1366 1375	dysphonia
+E28	Sign_symptom:T49 
+T50	Sign_symptom 1380 1390	hoarseness
+E29	Sign_symptom:T50 
+T51	Disease_disorder 1286 1294	problems
+E30	Disease_disorder:T51 
+A5	POLARITY E30 NEG
+T52	Sign_symptom 1413 1422	deviation
+E31	Sign_symptom:T52 
+T53	Biological_structure 1430 1436	tongue
+R28	MODIFY Arg1:T53 Arg2:E31	
+T54	Disease_disorder 1470 1479	paralysis
+E32	Disease_disorder:T54 
+T55	Biological_structure 1459 1469	vocal cord
+R29	MODIFY Arg1:T55 Arg2:E32	
+T56	Detailed_description 1444 1454	right side
+R30	MODIFY Arg1:T56 Arg2:E31	
+T57	Disease_disorder 1531 1543	nerve injury
+E33	Disease_disorder:T57 
+T58	Biological_structure 1495 1506	hypoglossal
+T59	Biological_structure 1521 1530	laryngeal
+R31	MODIFY Arg1:T59 Arg2:E33	
+R32	MODIFY Arg1:T58 Arg2:E33	
+T60	Detailed_description 1511 1520	recurrent
+R33	MODIFY Arg1:T60 Arg2:T59	
+T61	Sign_symptom 1558 1564	oedema
+E34	Sign_symptom:T61 
+A6	POLARITY E34 NEG
+T62	Sign_symptom 1568 1577	haematoma
+E35	Sign_symptom:T62 
+A7	POLARITY E35 NEG
+T63	Detailed_description 1552 1557	local
+R34	MODIFY Arg1:T63 Arg2:E34	
+T64	Diagnostic_procedure 1583 1592	movements
+E36	Diagnostic_procedure:T64 
+T65	Lab_value 1629 1635	normal
+R35	MODIFY Arg1:T65 Arg2:E36	
+T66	Biological_structure 1600 1607	pharynx
+T67	Biological_structure 1612 1623	soft palate
+R36	MODIFY Arg1:T66 Arg2:E36	
+R37	MODIFY Arg1:T67 Arg2:E36	
+T68	Diagnostic_procedure 1648 1672	neurological examination
+E37	Diagnostic_procedure:T68 
+T69	Diagnostic_procedure 1689 1715	magnetic resonance imaging
+E38	Diagnostic_procedure:T69 
+T70	Diagnostic_procedure 1717 1720	MRN
+E39	Diagnostic_procedure:T70 
+#3	AnnotatorNotes E39	specifically, Magnetic resonance neurography
+R38	IDENTICAL Arg1:E39 Arg2:E38	
+T71	Sign_symptom 1771 1788	nerve involvement
+E40	Sign_symptom:T71 
+A8	POLARITY E40 NEG
+T72	Biological_structure 1763 1770	cranial
+T73	Biological_structure 1752 1759	central
+R39	MODIFY Arg1:T72 Arg2:E40	
+R40	MODIFY Arg1:T73 Arg2:E40	
+T74	Medication 1823 1831	steroids
+E41	Medication:T74 
+T75	Medication 1833 1841	vitamins
+E42	Medication:T75 
+T76	Therapeutic_procedure 1878 1885	therapy
+E43	Therapeutic_procedure:T76 
+T77	Detailed_description 1867 1877	swallowing
+T78	Detailed_description 1856 1862	speech
+R41	MODIFY Arg1:T77 Arg2:E43	
+R42	MODIFY Arg1:T78 Arg2:E43	
+T79	Diagnostic_procedure 1926 1935	functions
+E44	Diagnostic_procedure:T79 
+T80	Biological_structure 1916 1925	laryngeal
+T81	Biological_structure 1904 1911	lingual
+R43	MODIFY Arg1:T80 Arg2:E44	
+R44	MODIFY Arg1:T81 Arg2:E44	
+T83	Date 1949 1973	within four months after
+E45	Date:T83 
+*	OVERLAP E1 E2 E6 E5 E7 E10 E11 E12 E13 E14 E15 E16 E18 E20 E21 E22 E24 E23
+R46	BEFORE Arg1:E23 Arg2:E25	
+R47	AFTER Arg1:E25 Arg2:E26	
+R48	BEFORE Arg1:E26 Arg2:E30	
+T84	Date 1300 1313	following day
+E46	Date:T84 
+R49	BEFORE Arg1:E30 Arg2:E46	
+*	OVERLAP E46 E27 E28 E29
+T85	Diagnostic_procedure 1392 1403	Examination
+E47	Diagnostic_procedure:T85 
+R50	BEFORE Arg1:E29 Arg2:E47	
+*	OVERLAP E47 E31 E32 E33 E34 E35 E36 E37 E38 E40
+R51	BEFORE Arg1:E40 Arg2:E41	
+*	OVERLAP E41 E42 E43
+R52	BEFORE Arg1:E43 Arg2:E44	
+*	OVERLAP E44 E45
+T3	Outcome 1887 1900	Full recovery
+E48	Outcome:T3 
+T82	Lab_value 1887 1900	Full recovery
+E49	Lab_value:T82 
+R45	MODIFY Arg1:E49 Arg2:E44	
+R53	MODIFY Arg1:E48 Arg2:E44	

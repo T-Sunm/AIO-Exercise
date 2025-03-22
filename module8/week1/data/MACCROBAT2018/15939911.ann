@@ -1,0 +1,159 @@
+T1	Age 8 19	28-year-old
+T2	History 20 38	previously healthy
+T3	Sex 39 42	man
+T4	Clinical_event 43 52	presented
+E1	Clinical_event:T4 
+T5	Sign_symptom 31 38	healthy
+E2	Sign_symptom:T5 
+T6	Duration 60 66	6-week
+E3	Duration:T6 
+T7	Sign_symptom 78 90	palpitations
+E4	Sign_symptom:T7 
+T8	Coreference 96 104	symptoms
+E5	Coreference:T8 
+R1	IDENTICAL Arg1:E5 Arg2:E4	
+T9	Clinical_event 121 125	rest
+E6	Clinical_event:T9 
+R2	MODIFY Arg1:E6 Arg2:E5	
+T10	Frequency 127 145	2–3 times per week
+R3	MODIFY Arg1:T10 Arg2:E5	
+T12	Sign_symptom 206 213	dyspnea
+E8	Sign_symptom:T12 
+T11	Detailed_description 154 180	up to 30 minutes at a time
+R4	MODIFY Arg1:T11 Arg2:E5	
+T13	Sign_symptom 261 281	regurgitation murmur
+E7	Sign_symptom:T13 
+T14	Biological_structure 251 260	tricuspid
+T15	Detailed_description 238 250	holosystolic
+T16	Lab_value 228 237	grade 2/6
+R5	MODIFY Arg1:T14 Arg2:E7	
+R6	MODIFY Arg1:T15 Arg2:E7	
+R7	MODIFY Arg1:T16 Arg2:E7	
+T17	Biological_structure 301 320	left sternal border
+R8	MODIFY Arg1:T17 Arg2:E7	
+T18	Detailed_description 326 350	inspiratory accentuation
+R9	MODIFY Arg1:T18 Arg2:E7	
+T19	Diagnostic_procedure 353 373	physical examination
+E9	Diagnostic_procedure:T19 
+T21	Diagnostic_procedure 408 425	electrocardiogram
+E10	Diagnostic_procedure:T21 
+T22	Diagnostic_procedure 427 430	ECG
+E11	Diagnostic_procedure:T22 
+R11	IDENTICAL Arg1:E11 Arg2:E10	
+T23	Diagnostic_procedure 448 460	sinus rhythm
+E12	Diagnostic_procedure:T23 
+R12	SUB_PROCEDURE Arg1:E12 Arg2:E10	
+T25	Sign_symptom 467 513	Wolff– Parkinson– White pre-excitation pattern
+E13	Sign_symptom:T25 
+T26	Disease_disorder 554 571	accessory pathway
+E14	Disease_disorder:T26 
+R14	CAUSE Arg1:E14 Arg2:E13	
+T27	Detailed_description 542 553	right-sided
+R15	MODIFY Arg1:T27 Arg2:E14	
+T28	Diagnostic_procedure 587 603	echocardiography
+E15	Diagnostic_procedure:T28 
+T29	Biological_structure 573 586	Transthoracic
+R16	MODIFY Arg1:T29 Arg2:E15	
+T30	Disease_disorder 633 650	Ebstein's anomaly
+E16	Disease_disorder:T30 
+T31	Biological_structure 658 673	tricuspid valve
+R17	MODIFY Arg1:T31 Arg2:E16	
+T32	Sign_symptom 680 699	apical displacement
+E17	Sign_symptom:T32 
+T33	Coreference 707 712	valve
+E18	Coreference:T33 
+R18	IDENTICAL Arg1:E18 Arg2:T31	
+R19	MODIFY Arg1:E18 Arg2:E17	
+T34	Disease_disorder 734 744	atrialized
+E19	Disease_disorder:T34 
+T35	Biological_structure 746 761	right ventricle
+R20	MODIFY Arg1:T35 Arg2:E19	
+T36	Biological_structure 793 805	right atrium
+T37	Biological_structure 844 859	right ventricle
+T38	Biological_structure 814 819	inlet
+R21	MODIFY Arg1:T38 Arg2:T37	
+R22	MODIFY Arg1:T37 Arg2:E19	
+R23	MODIFY Arg1:T36 Arg2:E19	
+T39	Sign_symptom 911 920	elongated
+E20	Sign_symptom:T39 
+T40	Biological_structure 874 906	anterior tricuspid valve leaflet
+R24	MODIFY Arg1:T40 Arg2:E20	
+T41	Sign_symptom 969 980	rudimentary
+E21	Sign_symptom:T41 
+T42	Biological_structure 950 964	septal leaflet
+R25	MODIFY Arg1:T42 Arg2:E21	
+T43	Diagnostic_procedure 1011 1027	echocardiography
+E22	Diagnostic_procedure:T43 
+T44	Detailed_description 1002 1010	Contrast
+R26	MODIFY Arg1:T44 Arg2:E22	
+T45	Detailed_description 1028 1040	using saline
+R27	MODIFY Arg1:T45 Arg2:E22	
+T46	Disease_disorder 1052 1072	patent foramen ovale
+E23	Disease_disorder:T46 
+T47	Sign_symptom 1078 1100	right-to-left shunting
+E24	Sign_symptom:T47 
+T48	Sign_symptom 1105 1112	bubbles
+E25	Sign_symptom:T48 
+T49	Biological_structure 1120 1131	left atrium
+R28	MODIFY Arg1:T49 Arg2:E25	
+T50	Diagnostic_procedure 1167 1191	electrophysiologic study
+E26	Diagnostic_procedure:T50 
+T51	Diagnostic_procedure 1197 1204	mapping
+E27	Diagnostic_procedure:T51 
+T52	Biological_structure 1212 1229	accessory pathway
+R29	MODIFY Arg1:T52 Arg2:E27	
+T53	Therapeutic_procedure 1258 1266	ablation
+E28	Therapeutic_procedure:T53 
+T54	Detailed_description 1243 1257	radiofrequency
+R30	MODIFY Arg1:T54 Arg2:E28	
+T55	Therapeutic_procedure 1363 1380	ablation catheter
+E29	Therapeutic_procedure:T55 
+R31	SUB_PROCEDURE Arg1:E29 Arg2:E28	
+T56	Diagnostic_procedure 1401 1404	ECG
+E30	Diagnostic_procedure:T56 
+T57	Diagnostic_procedure 1424 1435	PR interval
+E31	Diagnostic_procedure:T57 
+T59	Diagnostic_procedure 1456 1467	QRS complex
+E32	Diagnostic_procedure:T59 
+T62	Detailed_description 1471 1495	leads III, aVF and V2–V4
+R35	MODIFY Arg1:T62 Arg2:E32	
+T63	Disease_disorder 1528 1555	abnormal impulse conduction
+E33	Disease_disorder:T63 
+T64	Disease_disorder 1564 1574	atrialized
+E34	Disease_disorder:T64 
+T65	Biological_structure 1576 1591	right ventricle
+R36	MODIFY Arg1:T65 Arg2:E34	
+T66	Sign_symptom 1631 1643	palpitations
+E35	Sign_symptom:T66 
+A1	POLARITY E35 NEG
+T67	Clinical_event 1647 1656	follow-up
+E36	Clinical_event:T67 
+T68	Date 1657 1671	6 months after
+E37	Date:T68 
+R37	BEFORE Arg1:E2 Arg2:E1	
+R38	AFTER Arg1:E1 Arg2:E3	
+*	OVERLAP E3 E4 E5 E6 E8
+R39	BEFORE Arg1:E8 Arg2:E7	
+*	OVERLAP E7 E9 E10 E13 E14 E15 E16 E17 E19 E20 E21 E22 E23 E24 E25
+R40	BEFORE Arg1:E25 Arg2:E26	
+*	OVERLAP E26 E27
+R41	BEFORE Arg1:E27 Arg2:E28	
+R42	BEFORE Arg1:E28 Arg2:E30	
+*	OVERLAP E30 E31 E32 E33 E34
+R43	BEFORE Arg1:E34 Arg2:E35	
+*	OVERLAP E35 E36 E37
+T20	Lab_value 382 394	unremarkable
+E38	Lab_value:T20 
+R10	MODIFY Arg1:E38 Arg2:E9	
+T24	Lab_value 441 447	normal
+E39	Lab_value:T24 
+R13	MODIFY Arg1:E39 Arg2:E12	
+T58	Lab_value 1414 1423	prolonged
+E40	Lab_value:T58 
+R32	MODIFY Arg1:E40 Arg2:E31	
+T60	Lab_value 1447 1455	“second”
+E41	Lab_value:T60 
+T61	Lab_value 1443 1446	odd
+E42	Lab_value:T61 
+R33	MODIFY Arg1:E41 Arg2:E32	
+R34	MODIFY Arg1:E42 Arg2:E32	

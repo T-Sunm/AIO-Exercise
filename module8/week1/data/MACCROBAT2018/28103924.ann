@@ -1,0 +1,233 @@
+T1	Age 18 28	7-year-old
+T2	Personal_background 29 36	Italian
+T3	Sex 37 40	boy
+T4	History 41 94	born after an uneventful gestation of normal duration
+T5	Date 96 119	At the age of 16 months
+E1	Date:T5 
+T6	Clinical_event 124 133	presented
+E2	Clinical_event:T6 
+T7	Sign_symptom 160 168	enlarged
+E3	Sign_symptom:T7 
+T8	Biological_structure 169 176	abdomen
+R1	MODIFY Arg1:T8 Arg2:E3	
+T9	Detailed_description 141 159	clinically evident
+R2	MODIFY Arg1:T9 Arg2:E3	
+T10	Clinical_event 185 193	referred
+E4	Clinical_event:T10 
+T11	Nonbiological_location 198 221	oncological examination
+R3	MODIFY Arg1:T11 Arg2:E4	
+T12	Sign_symptom 246 252	anemia
+E5	Sign_symptom:T12 
+T13	Sign_symptom 254 270	thrombocytopenia
+E6	Sign_symptom:T13 
+T14	Sign_symptom 276 288	splenomegaly
+E7	Sign_symptom:T14 
+T15	Diagnostic_procedure 304 310	biopsy
+E8	Diagnostic_procedure:T15 
+T16	Biological_structure 292 303	bone marrow
+R4	MODIFY Arg1:T16 Arg2:E8	
+T17	Sign_symptom 336 346	foam cells
+E9	Sign_symptom:T17 
+T18	Disease_disorder 374 399	lysosomal storage disease
+E10	Disease_disorder:T18 
+T19	Diagnostic_procedure 401 420	Biochemical testing
+E11	Diagnostic_procedure:T19 
+T20	Diagnostic_procedure 448 464	acid phosphatase
+E12	Diagnostic_procedure:T20 
+T21	Lab_value 466 475	47.8 IU/L
+R5	MODIFY Arg1:T21 Arg2:E12	
+T22	Lab_value 430 438	elevated
+R6	MODIFY Arg1:T22 Arg2:E12	
+T23	Diagnostic_procedure 505 529	chitotriosidase activity
+E13	Diagnostic_procedure:T23 
+R7	MODIFY Arg1:T22 Arg2:E13	
+T24	Lab_value 531 550	508 nmol/mg protein
+R8	MODIFY Arg1:T24 Arg2:E13	
+T25	Diagnostic_procedure 612 637	beta-glucosidase activity
+E14	Diagnostic_procedure:T25 
+T26	Lab_value 604 611	reduced
+R9	MODIFY Arg1:T26 Arg2:E14	
+T27	Lab_value 639 656	2 nmol/mg/protein
+R10	MODIFY Arg1:T27 Arg2:E14	
+T28	Diagnostic_procedure 699 717	Molecular analysis
+E15	Diagnostic_procedure:T28 
+T29	Disease_disorder 829 832	NGD
+E16	Disease_disorder:T29 
+#1	AnnotatorNotes E16	neuronopathic Gaucher disease
+T30	Sign_symptom 742 767	mutations in the GBA gene
+E17	Sign_symptom:T30 
+T31	Detailed_description 736 741	L444P
+T32	Detailed_description 725 735	homozygous
+R11	MODIFY Arg1:T31 Arg2:E17	
+R12	MODIFY Arg1:T32 Arg2:E17	
+T33	Therapeutic_procedure 852 855	ERT
+E18	Therapeutic_procedure:T33 
+#2	AnnotatorNotes E18	Enzyme replacement therapy
+T34	Dosage 871 892	60 U/kg every 2 weeks
+R13	MODIFY Arg1:T34 Arg2:E18	
+T35	Date 893 916	at the age of 18 months
+E19	Date:T35 
+T36	Date 959 975	age of 30 months
+E20	Date:T36 
+T37	Therapeutic_procedure 999 1002	ERT
+E21	Therapeutic_procedure:T37 
+T38	Therapeutic_procedure 1008 1011	SRT
+E22	Therapeutic_procedure:T38 
+#3	AnnotatorNotes E22	substrate reduction therapy
+T39	Medication 1017 1026	miglustat
+E23	Medication:T39 
+R14	SUB_PROCEDURE Arg1:E23 Arg2:E22	
+T40	Medication 1215 1224	miglustat
+E24	Medication:T40 
+T41	Detailed_description 1229 1282	adjusted according to the patient’s body surface area
+R15	MODIFY Arg1:T41 Arg2:E24	
+T42	Dosage 1466 1490	100 mg three times daily
+T43	Date 1492 1505	after 1 month
+E25	Date:T43 
+R16	MODIFY Arg1:T42 Arg2:E24	
+T44	Therapeutic_procedure 1590 1611	dietary modifications
+E26	Therapeutic_procedure:T44 
+T45	Date 1507 1526	From 2 weeks before
+E27	Date:T45 
+T46	Medication 1536 1545	miglustat
+E28	Medication:T46 
+T47	Detailed_description 1613 1681	avoiding high intake of carbohydrate-containing food in single meals
+R17	MODIFY Arg1:T47 Arg2:E26	
+T48	Sign_symptom 1836 1844	diarrhea
+E29	Sign_symptom:T48 
+T49	Severity 1819 1823	mild
+R18	MODIFY Arg1:T49 Arg2:E29	
+T50	Medication 1862 1871	miglustat
+E30	Medication:T50 
+T51	Detailed_description 1694 1750	foods high in disaccharides, such as sucrose and maltose
+R19	MODIFY Arg1:T51 Arg2:T47	
+T52	Lab_value 1887 1928	decreased in frequency/severity over time
+R20	MODIFY Arg1:T52 Arg2:E29	
+T53	Sign_symptom 2012 2024	splenomegaly
+E31	Sign_symptom:T53 
+A1	TREND E31 DEC
+T54	Diagnostic_procedure 2056 2076	hematological values
+E32	Diagnostic_procedure:T54 
+T55	Lab_value 2039 2052	normalization
+R21	MODIFY Arg1:T55 Arg2:E32	
+T56	Diagnostic_procedure 2081 2126	plasma angiotensin-converting enzyme activity
+E33	Diagnostic_procedure:T56 
+R22	MODIFY Arg1:T55 Arg2:E33	
+T57	Diagnostic_procedure 2138 2160	Plasma chitotriosidase
+E34	Diagnostic_procedure:T57 
+T58	Frequency 2223 2237	every 6 months
+R23	MODIFY Arg1:T58 Arg2:E34	
+T59	Clinical_event 2245 2254	follow-up
+E35	Clinical_event:T59 
+T60	Lab_value 2273 2290	initial reduction
+T61	Lab_value 2348 2366	sustained decrease
+R24	MODIFY Arg1:T60 Arg2:E34	
+R25	MODIFY Arg1:T61 Arg2:E34	
+T62	Detailed_description 2291 2313	after the start of ERT
+T63	Detailed_description 2367 2398	after commencement of miglustat
+R26	MODIFY Arg1:T62 Arg2:T60	
+R27	MODIFY Arg1:T63 Arg2:T61	
+T64	Clinical_event 2439 2447	followed
+E36	Clinical_event:T64 
+T65	Detailed_description 2448 2490	according to recommended guidelines for GD
+R28	MODIFY Arg1:T65 Arg2:E36	
+T66	Diagnostic_procedure 2517 2541	neurological examination
+E37	Diagnostic_procedure:T66 
+T67	Diagnostic_procedure 2552 2582	evaluation of ocular movements
+E38	Diagnostic_procedure:T67 
+T68	Diagnostic_procedure 2588 2613	psychological evaluations
+E39	Diagnostic_procedure:T68 
+T69	Frequency 2614 2631	every 6–12 months
+R29	MODIFY Arg1:T69 Arg2:E39	
+T70	Duration 2644 2651	5 years
+E40	Duration:T70 
+T71	Therapeutic_procedure 2655 2674	combination therapy
+E41	Therapeutic_procedure:T71 
+T72	Clinical_event 2679 2688	follow-up
+E42	Clinical_event:T72 
+R30	MODIFY Arg1:E40 Arg2:E41	
+R31	MODIFY Arg1:E40 Arg2:E42	
+T73	Sign_symptom 2728 2751	neurological impairment
+E43	Sign_symptom:T73 
+A2	POLARITY E43 NEG
+T74	Date 2759 2772	February 2016
+E44	Date:T74 
+T75	Sign_symptom 2799 2815	epileptic crises
+E45	Sign_symptom:T75 
+A3	POLARITY E45 NEG
+T76	Sign_symptom 2837 2857	clinical performance
+E46	Sign_symptom:T76 
+T77	Activity 2862 2873	cooperation
+E47	Activity:T77 
+T78	Diagnostic_procedure 2890 2916	muscular tone and trophism
+E48	Diagnostic_procedure:T78 
+T79	Lab_value 2885 2889	good
+R32	MODIFY Arg1:T79 Arg2:E48	
+T80	Diagnostic_procedure 2925 2933	reflexes
+E49	Diagnostic_procedure:T80 
+T81	Lab_value 2918 2924	normal
+R33	MODIFY Arg1:T81 Arg2:E49	
+T82	Sign_symptom 2948 2961	hyperreflexia
+E50	Sign_symptom:T82 
+T83	Severity 2941 2947	slight
+R34	MODIFY Arg1:T83 Arg2:E50	
+T84	Biological_structure 2969 2973	legs
+R35	MODIFY Arg1:T84 Arg2:E50	
+T85	Diagnostic_procedure 2990 3002	Romberg sign
+E51	Diagnostic_procedure:T85 
+T86	Lab_value 2981 2989	negative
+R36	MODIFY Arg1:T86 Arg2:E51	
+T87	Diagnostic_procedure 3008 3033	toe and heel deambulation
+E52	Diagnostic_procedure:T87 
+T88	Lab_value 3038 3044	normal
+R37	MODIFY Arg1:T88 Arg2:E52	
+T89	Diagnostic_procedure 3061 3079	ocular evaluations
+E53	Diagnostic_procedure:T89 
+T90	Sign_symptom 3104 3140	saccadic movement velocity reduction
+E54	Sign_symptom:T90 
+A4	POLARITY E54 NEG
+T91	Diagnostic_procedure 3152 3176	visual evoked potentials
+E55	Diagnostic_procedure:T91 
+R38	SUB_PROCEDURE Arg1:E55 Arg2:E53	
+T92	Lab_value 3145 3151	normal
+R39	MODIFY Arg1:T92 Arg2:E55	
+T93	Diagnostic_procedure 3192 3216	auditory brain responses
+E56	Diagnostic_procedure:T93 
+T94	Lab_value 3227 3233	normal
+R40	MODIFY Arg1:T94 Arg2:E56	
+T95	Sign_symptom 3276 3296	cognitive impairment
+E57	Sign_symptom:T95 
+A5	POLARITY E57 NEG
+T96	Activity 3319 3334	attended school
+E58	Activity:T96 
+T97	Detailed_description 3340 3356	good performance
+R41	MODIFY Arg1:T97 Arg2:E58	
+T98	Detailed_description 3309 3318	regularly
+R42	MODIFY Arg1:T98 Arg2:E58	
+T99	Date 3357 3381	since the age of 5 years
+E59	Date:T99 
+*	OVERLAP E1 E2 E3
+R43	BEFORE Arg1:E3 Arg2:E4	
+*	OVERLAP E4 E5 E6 E7 E8 E9 E10 E11 E12 E13 E14 E15 E17 E16
+R44	BEFORE Arg1:E16 Arg2:E18	
+*	OVERLAP E18 E19
+R45	BEFORE Arg1:E19 Arg2:E20	
+*	OVERLAP E20 E21 E22
+R46	BEFORE Arg1:E22 Arg2:E24	
+*	OVERLAP E24 E25
+R47	AFTER Arg1:E25 Arg2:E27	
+*	OVERLAP E27 E28 E26
+R48	BEFORE Arg1:E26 Arg2:E29	
+*	OVERLAP E29 E30
+R49	BEFORE Arg1:E30 Arg2:E31	
+*	OVERLAP E31 E32 E33
+R50	AFTER Arg1:E33 Arg2:E34	
+R51	BEFORE Arg1:E34 Arg2:E35	
+R52	BEFORE Arg1:E35 Arg2:E36	
+*	OVERLAP E36 E37 E38 E39
+R53	MODIFY Arg1:T69 Arg2:E38	
+R54	MODIFY Arg1:T69 Arg2:E37	
+R55	BEFORE Arg1:E39 Arg2:E40	
+*	OVERLAP E40 E41 E42 E43
+R56	BEFORE Arg1:E43 Arg2:E44	
+*	OVERLAP E44 E45 E46 E47 E48 E49 E50 E51 E52 E53 E54 E56 E57 E58 E59

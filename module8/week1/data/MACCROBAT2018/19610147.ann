@@ -1,0 +1,238 @@
+T1	Age 2 13	46-year-old
+T2	Sex 14 19	woman
+T3	Clinical_event 20 29	presented
+E1	Clinical_event:T3 
+T4	Severity 35 41	severe
+T5	Detailed_description 42 47	acute
+T6	Sign_symptom 48 52	pain
+E2	Sign_symptom:T6 
+T7	Biological_structure 60 77	right iliac fossa
+T8	Biological_structure 82 102	periumbilical region
+T9	Diagnostic_procedure 104 114	Ultrasound
+E3	Diagnostic_procedure:T9 
+T10	Diagnostic_procedure 121 145	computed tomography scan
+E4	Diagnostic_procedure:T10 
+T11	Sign_symptom 157 165	mucocele
+E5	Sign_symptom:T11 
+T12	Biological_structure 173 191	vermiform appendix
+T13	Sign_symptom 213 219	lesion
+E6	Sign_symptom:T13 
+T14	Detailed_description 200 212	well defined
+R1	MODIFY Arg1:T14 Arg2:E6	
+T15	Biological_structure 235 259	mid zone of the appendix
+R2	MODIFY Arg1:T4 Arg2:E2	
+R3	MODIFY Arg1:T5 Arg2:E2	
+R4	MODIFY Arg1:T7 Arg2:E2	
+R5	MODIFY Arg1:T8 Arg2:E2	
+R6	MODIFY Arg1:T12 Arg2:E5	
+R7	MODIFY Arg1:T15 Arg2:E6	
+T16	Therapeutic_procedure 283 302	right hemicolectomy
+E7	Therapeutic_procedure:T16 
+T17	Diagnostic_procedure 358 375	Gross examination
+E8	Diagnostic_procedure:T17 
+T18	Biological_structure 383 400	surgical specimen
+R8	MODIFY Arg1:T18 Arg2:E8	
+T19	Lab_value 411 419	enlarged
+T20	Biological_structure 420 428	appendix
+R9	MODIFY Arg1:T19 Arg2:T20	
+T21	Biological_structure 458 475	mucinous material
+T22	Texture 452 457	thick
+R10	MODIFY Arg1:T22 Arg2:T21	
+R11	MODIFY Arg1:T21 Arg2:T20	
+R12	MODIFY Arg1:T19 Arg2:E8	
+T23	Coreference 488 494	lesion
+E9	Coreference:T23 
+T24	Detailed_description 479 487	distinct
+R13	MODIFY Arg1:T24 Arg2:E9	
+T25	Biological_structure 514 530	appendiceal wall
+T26	Distance 545 551	1.5 cm
+R14	IDENTICAL Arg1:E9 Arg2:E6	
+T27	Biological_structure 585 612	mid-portion of the appendix
+R15	MODIFY Arg1:T25 Arg2:E9	
+R16	MODIFY Arg1:T26 Arg2:E9	
+R17	MODIFY Arg1:T27 Arg2:E9	
+T28	Sign_symptom 639 650	perforation
+E10	Sign_symptom:T28 
+A1	POLARITY E10 NEG
+T29	Sign_symptom 652 665	extravasation
+E11	Sign_symptom:T29 
+A2	POLARITY E11 NEG
+T30	Biological_structure 669 674	mucin
+T31	Biological_structure 684 706	periappendiceal tissue
+T32	Disease_disorder 711 733	pseudomyxoma peritonei
+E12	Disease_disorder:T32 
+A3	POLARITY E12 NEG
+T33	Diagnostic_procedure 750 779	Histopathological examination
+E13	Diagnostic_procedure:T33 
+T34	Disease_disorder 796 799	GCC
+E14	Disease_disorder:T34 
+T35	Disease_disorder 804 807	MCA
+E15	Disease_disorder:T35 
+T36	Biological_structure 815 833	vermiform appendix
+R18	MODIFY Arg1:T36 Arg2:E15	
+R19	MODIFY Arg1:T36 Arg2:E14	
+T37	Biological_structure 852 869	appendiceal lumen
+T38	Sign_symptom 874 881	dilated
+E16	Sign_symptom:T38 
+R20	MODIFY Arg1:T37 Arg2:E16	
+T39	Biological_structure 912 937	columnar epithelial cells
+T40	Sign_symptom 895 911	mucin-containing
+E17	Sign_symptom:T40 
+R21	MODIFY Arg1:E17 Arg2:T39	
+R22	MODIFY Arg1:T39 Arg2:T37	
+T41	Sign_symptom 976 992	cytologic atypia
+E18	Sign_symptom:T41 
+A4	POLARITY E18 NEG
+T42	Sign_symptom 1001 1016	mitotic figures
+E19	Sign_symptom:T42 
+A5	POLARITY E19 NEG
+T43	Sign_symptom 1034 1064	Focal papillary configurations
+E20	Sign_symptom:T43 
+T44	Biological_structure 1072 1089	lining epithelium
+R23	MODIFY Arg1:T44 Arg2:E20	
+T45	Sign_symptom 1100 1131	epithelial pseudostratification
+E21	Sign_symptom:T45 
+T46	Severity 1095 1099	mild
+R24	MODIFY Arg1:T46 Arg2:E21	
+T47	Sign_symptom 1199 1219	glandular structures
+E22	Sign_symptom:T47 
+T48	Biological_structure 1163 1179	appendiceal wall
+R25	MODIFY Arg1:T48 Arg2:E22	
+T49	Area 1223 1236	various sizes
+R26	MODIFY Arg1:T49 Arg2:E22	
+T50	Shape 1260 1265	nests
+T51	Shape 1270 1277	tubules
+R27	MODIFY Arg1:T50 Arg2:E22	
+R28	MODIFY Arg1:T51 Arg2:E22	
+T52	Coreference 1285 1305	glandular structures
+E23	Coreference:T52 
+R29	IDENTICAL Arg1:E23 Arg2:E22	
+T53	Biological_structure 1386 1406	neuroendocrine cells
+T54	Detailed_description 1375 1385	monotonous
+T55	Area 1347 1374	small to intermediate sized
+T56	Sign_symptom 1479 1497	cytonuclear atypia
+E24	Sign_symptom:T56 
+T57	Severity 1474 1478	mild
+R30	MODIFY Arg1:T57 Arg2:E24	
+T58	Detailed_description 1414 1468	small amount of finely granular eosinophilic cytoplasm
+R31	MODIFY Arg1:T58 Arg2:T53	
+R32	MODIFY Arg1:T54 Arg2:T53	
+R33	MODIFY Arg1:T55 Arg2:T53	
+R34	MODIFY Arg1:T53 Arg2:E22	
+T59	Biological_structure 1566 1578	goblet cells
+T60	Detailed_description 1527 1539	mucin-filled
+T61	Area 1540 1558	intermediate sized
+T62	Sign_symptom 1628 1649	hyperchromatic nuclei
+E25	Sign_symptom:T62 
+T63	Shape 1614 1627	crescent-like
+R35	MODIFY Arg1:T63 Arg2:E25	
+T64	Area 1607 1612	small
+R36	MODIFY Arg1:T64 Arg2:E25	
+T65	Detailed_description 1586 1606	peripherally located
+R37	MODIFY Arg1:T65 Arg2:E25	
+R38	MODIFY Arg1:T61 Arg2:T59	
+R39	MODIFY Arg1:T60 Arg2:T59	
+T66	Biological_structure 1666 1674	nucleoli
+T67	Detailed_description 1655 1665	indistinct
+R40	MODIFY Arg1:T67 Arg2:T66	
+R41	MODIFY Arg1:T59 Arg2:E25	
+R42	MODIFY Arg1:T66 Arg2:E25	
+T68	Sign_symptom 1759 1774	focally present
+E26	Sign_symptom:T68 
+T69	Biological_structure 1730 1753	goblet neoplastic cells
+T70	Detailed_description 1723 1729	single
+T71	Detailed_description 1710 1722	infiltrating
+T72	Texture 1700 1709	Scattered
+R43	MODIFY Arg1:T70 Arg2:T69	
+R44	MODIFY Arg1:T71 Arg2:T69	
+R45	MODIFY Arg1:T72 Arg2:T69	
+R46	MODIFY Arg1:T69 Arg2:E26	
+T73	Sign_symptom 1960 1983	lymphovascular invasion
+E27	Sign_symptom:T73 
+A6	POLARITY E27 NEG
+T74	Sign_symptom 2009 2029	intraneural invasion
+E28	Sign_symptom:T74 
+T75	Sign_symptom 1994 2004;2021 2029	perineural invasion
+E29	Sign_symptom:T75 
+T76	Sign_symptom 1807 1818	tumor nests
+E30	Sign_symptom:T76 
+T77	Biological_structure 1874 1891	intestinal crypts
+T78	Biological_structure 1846 1866	basiglandular region
+R47	MODIFY Arg1:T78 Arg2:T77	
+R48	MODIFY Arg1:T77 Arg2:E30	
+T79	Disease_disorder 1918 1921	MCA
+E31	Disease_disorder:T79 
+T80	Detailed_description 1895 1917	close proximity to the
+R49	MODIFY Arg1:T80 Arg2:E31	
+R50	MODIFY Arg1:T80 Arg2:E30	
+T81	Coreference 2047 2052	tumor
+E32	Coreference:T81 
+R51	IDENTICAL Arg1:E32 Arg2:E30	
+R52	IDENTICAL Arg1:E30 Arg2:E22	
+T82	Biological_structure 2091 2107	appendiceal wall
+T83	Biological_structure 2069 2083	full thickness
+R53	MODIFY Arg1:T83 Arg2:T82	
+R54	MODIFY Arg1:T82 Arg2:E32	
+T84	Biological_structure 2128 2140	mesoappendix
+R55	MODIFY Arg1:T84 Arg2:E32	
+T85	Disease_disorder 2221 2231	malignancy
+E33	Disease_disorder:T85 
+A7	POLARITY E33 NEG
+T86	Biological_structure 2146 2157	lymph nodes
+T87	Lab_value 2142 2145	Ten
+R56	MODIFY Arg1:T87 Arg2:T86	
+R57	MODIFY Arg1:T86 Arg2:E33	
+T88	Diagnostic_procedure 2163 2188	histologically identified
+E34	Diagnostic_procedure:T88 
+R58	MODIFY Arg1:T86 Arg2:E34	
+T89	Diagnostic_procedure 2233 2254	Immunohistochemically
+E35	Diagnostic_procedure:T89 
+T90	Sign_symptom 2271 2282	tumor cells
+E36	Sign_symptom:T90 
+T91	Disease_disorder 2290 2293	GCC
+E37	Disease_disorder:T91 
+R59	MODIFY Arg1:E36 Arg2:E37	
+T92	Diagnostic_procedure 2312 2324	chromogranin
+E38	Diagnostic_procedure:T92 
+T93	Diagnostic_procedure 2326 2339	synaptophysin
+E39	Diagnostic_procedure:T93 
+T94	Diagnostic_procedure 2345 2354	serotonin
+E40	Diagnostic_procedure:T94 
+T95	Lab_value 2299 2307	positive
+R60	MODIFY Arg1:T95 Arg2:E38	
+R61	MODIFY Arg1:T95 Arg2:E39	
+R62	MODIFY Arg1:T95 Arg2:E40	
+T96	Detailed_description 2366 2388	neuroendocrine markers
+R63	MODIFY Arg1:T96 Arg2:E40	
+R64	MODIFY Arg1:T96 Arg2:E39	
+R65	MODIFY Arg1:T96 Arg2:E38	
+T97	Diagnostic_procedure 2411 2422	cytokeratin
+E41	Diagnostic_procedure:T97 
+T98	Diagnostic_procedure 2444 2449	CK19,
+E42	Diagnostic_procedure:T98 
+T99	Diagnostic_procedure 2454 2458	CD99
+E43	Diagnostic_procedure:T99 
+T100	Lab_value 2390 2406	Diffuse staining
+R66	MODIFY Arg1:T100 Arg2:E41	
+R67	MODIFY Arg1:T100 Arg2:E42	
+R68	MODIFY Arg1:T100 Arg2:E43	
+T101	Diagnostic_procedure 2481 2505	Ki67 proliferating index
+E44	Diagnostic_procedure:T101 
+T102	Diagnostic_procedure 2599 2603	CK7.
+E45	Diagnostic_procedure:T102 
+A8	POLARITY E45 NEG
+T103	Lab_value 2549 2552	15%
+T104	Sign_symptom 2560 2571	tumor cells
+E46	Sign_symptom:T104 
+R69	MODIFY Arg1:T103 Arg2:E46	
+T105	Sign_symptom 2515 2531	nuclear staining
+E47	Sign_symptom:T105 
+R70	MODIFY Arg1:E47 Arg2:E46	
+*	OVERLAP E1 E2
+R71	BEFORE Arg1:E2 Arg2:E3	
+*	OVERLAP E3 E4 E5 E6
+R72	BEFORE Arg1:E6 Arg2:E7	
+R73	BEFORE Arg1:E7 Arg2:E8	
+*	OVERLAP E8 E9 E10 E11 E12 E13 E14 E15 E16 E18 E19 E20 E21 E22 E24 E25 E26 E30 E27 E29 E28 E32 E34 E35 E36 E38 E39 E40 E41 E42 E43 E44 E47 E45
+R74	MODIFY Arg1:T30 Arg2:E11	
+R75	MODIFY Arg1:T31 Arg2:E11	

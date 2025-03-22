@@ -1,0 +1,483 @@
+T1	Date 3 20	December 28, 2014
+E1	Date:T1 
+T2	Age 24 35	70-year-old
+T3	Sex 36 39	man
+T4	Sign_symptom 65 69	pain
+E2	Sign_symptom:T4 
+T5	Biological_structure 55 64	abdominal
+R1	MODIFY Arg1:T5 Arg2:E2	
+T6	Sign_symptom 71 80	dizziness
+E3	Sign_symptom:T6 
+T7	Sign_symptom 86 92	nausea
+E4	Sign_symptom:T7 
+T8	Nonbiological_location 113 149	Hebei General Hospital, Hebei, China
+T9	Diagnostic_procedure 151 162	Gastroscopy
+E5	Diagnostic_procedure:T9 
+T10	Disease_disorder 192 210	ulcerative lesions
+E6	Disease_disorder:T10 
+T11	Shape 170 179	irregular
+T12	Detailed_description 180 191	hemorrhagic
+R2	MODIFY Arg1:T12 Arg2:E6	
+R3	MODIFY Arg1:T11 Arg2:E6	
+T13	Biological_structure 230 242	gastric body
+T14	Biological_structure 250 266	lesser curvature
+R4	MODIFY Arg1:T13 Arg2:E6	
+R5	MODIFY Arg1:T14 Arg2:E6	
+T15	Disease_disorder 271 287	pyloric stenosis
+E7	Disease_disorder:T15 
+T16	Biological_structure 295 302	stomach
+R6	MODIFY Arg1:T16 Arg2:E7	
+T17	Diagnostic_procedure 312 318	biopsy
+E8	Diagnostic_procedure:T17 
+T18	Biological_structure 304 311	Gastric
+R7	MODIFY Arg1:T18 Arg2:E8	
+T19	Disease_disorder 328 342	adenocarcinoma
+E9	Disease_disorder:T19 
+T20	Date 347 362	January 7, 2015
+E10	Date:T20 
+T21	Therapeutic_procedure 375 386	gastrectomy
+E11	Therapeutic_procedure:T21 
+T22	Detailed_description 364 374	palliative
+R8	MODIFY Arg1:T22 Arg2:E11	
+T23	Therapeutic_procedure 392 401	Roux-en-Y
+E12	Therapeutic_procedure:T23 
+T24	Therapeutic_procedure 407 426	esophagojejunostomy
+E13	Therapeutic_procedure:T24 
+R9	MODIFY Arg1:E12 Arg2:E13	
+T25	Biological_structure 494 516	pancreatic lymph nodes
+T26	Biological_structure 476 484	anterior
+T27	Biological_structure 485 493	superior
+T28	Biological_structure 460 471	para-aortic
+R10	MODIFY Arg1:T27 Arg2:T25	
+R11	MODIFY Arg1:T26 Arg2:T25	
+R12	MODIFY Arg1:T28 Arg2:T25	
+T29	Therapeutic_procedure 588 596	resected
+E14	Therapeutic_procedure:T29 
+A1	POLARITY E14 NEG
+R13	MODIFY Arg1:T25 Arg2:E14	
+T30	Biological_structure 529 540	lymph nodes
+T31	Qualitative_concept 443 450	Diffuse
+T32	Qualitative_concept 451 459	enlarged
+R14	MODIFY Arg1:T32 Arg2:T25	
+R15	MODIFY Arg1:T31 Arg2:T25	
+T33	Biological_structure 552 573	common hepatic artery
+R16	MODIFY Arg1:T33 Arg2:T30	
+R17	MODIFY Arg1:T30 Arg2:E14	
+T34	Diagnostic_procedure 612 621	pathology
+E15	Diagnostic_procedure:T34 
+T35	Disease_disorder 661 683	gastric adenocarcinoma
+E16	Disease_disorder:T35 
+T36	Severity 635 660	moderately differentiated
+R18	MODIFY Arg1:T36 Arg2:E16	
+T37	Diagnostic_procedure 694 714	Immunohistochemistry
+E17	Diagnostic_procedure:T37 
+T38	Diagnostic_procedure 737 777	human epidermal growth factor receptor 2
+E18	Diagnostic_procedure:T38 
+T39	Diagnostic_procedure 779 784	HER-2
+E19	Diagnostic_procedure:T39 
+R19	IDENTICAL Arg1:E19 Arg2:E18	
+R20	SUB_PROCEDURE Arg1:E18 Arg2:E17	
+T40	Lab_value 787 788	+
+E20	Lab_value:T40 
+R21	MODIFY Arg1:E20 Arg2:E18	
+T41	Diagnostic_procedure 791 825	vascular endothelial growth factor
+E21	Diagnostic_procedure:T41 
+T42	Diagnostic_procedure 827 831	VEGF
+E22	Diagnostic_procedure:T42 
+T43	Lab_value 834 835	+
+E23	Lab_value:T43 
+R22	BEFORE Arg1:E23 Arg2:E21	
+R23	IDENTICAL Arg1:E22 Arg2:E21	
+R24	SUB_PROCEDURE Arg1:E21 Arg2:E17	
+T44	Diagnostic_procedure 838 842	CD31
+E24	Diagnostic_procedure:T44 
+T45	Lab_value 844 845	+
+E25	Lab_value:T45 
+T46	Diagnostic_procedure 848 853	CD105
+E26	Diagnostic_procedure:T46 
+T47	Lab_value 855 856	+
+E27	Lab_value:T47 
+R25	MODIFY Arg1:E27 Arg2:E26	
+R26	SUB_PROCEDURE Arg1:E26 Arg2:E17	
+R27	MODIFY Arg1:E25 Arg2:E24	
+R28	SUB_PROCEDURE Arg1:E24 Arg2:E17	
+T48	Diagnostic_procedure 870 885	triple positive
+E28	Diagnostic_procedure:T48 
+T49	Diagnostic_procedure 887 889	TP
+E29	Diagnostic_procedure:T49 
+T50	Lab_value 892 893	+
+E30	Lab_value:T50 
+R29	IDENTICAL Arg1:E29 Arg2:E28	
+R30	MODIFY Arg1:E30 Arg2:E28	
+R31	SUB_PROCEDURE Arg1:E28 Arg2:E17	
+T51	Diagnostic_procedure 896 923	glutathione S-transferase π
+E31	Diagnostic_procedure:T51 
+T52	Diagnostic_procedure 925 930	GST-π
+E32	Diagnostic_procedure:T52 
+T53	Lab_value 933 936	+++
+E33	Lab_value:T53 
+R32	MODIFY Arg1:E33 Arg2:E31	
+R33	IDENTICAL Arg1:E32 Arg2:E31	
+R34	SUB_PROCEDURE Arg1:E31 Arg2:E17	
+T54	Diagnostic_procedure 939 964	topoisomerase enzyme II α
+E34	Diagnostic_procedure:T54 
+T55	Diagnostic_procedure 966 974	TOPOII α
+E35	Diagnostic_procedure:T55 
+R35	IDENTICAL Arg1:E35 Arg2:E34	
+T56	Diagnostic_procedure 977 980	P53
+E36	Diagnostic_procedure:T56 
+T57	Lab_value 982 983	–
+E37	Lab_value:T57 
+T58	Diagnostic_procedure 990 995	Ki-67
+E38	Diagnostic_procedure:T58 
+T59	Lab_value 997 1000	70%
+E39	Lab_value:T59 
+R36	MODIFY Arg1:E37 Arg2:E36	
+R37	MODIFY Arg1:E39 Arg2:E38	
+R38	SUB_PROCEDURE Arg1:E34 Arg2:E17	
+R39	SUB_PROCEDURE Arg1:E36 Arg2:E17	
+R40	SUB_PROCEDURE Arg1:E38 Arg2:E17	
+T60	Disease_disorder 1030 1052	gastric adenocarcinoma
+E40	Disease_disorder:T60 
+T61	Severity 1021 1029	stage IV
+R41	MODIFY Arg1:T61 Arg2:E40	
+T62	Qualitative_concept 1058 1066	multiple
+T63	Biological_structure 1067 1077	lymphnodes
+T64	Disease_disorder 1078 1088	metastases
+E41	Disease_disorder:T64 
+T65	Severity 1090 1096	T4N2M1
+R42	MODIFY Arg1:T65 Arg2:E40	
+R43	MODIFY Arg1:T63 Arg2:E41	
+R44	MODIFY Arg1:T62 Arg2:E41	
+T66	Therapeutic_procedure 1130 1151	cycle of chemotherapy
+E42	Therapeutic_procedure:T66 
+T67	Dosage 1128 1129	1
+R45	MODIFY Arg1:T67 Arg2:E42	
+T68	Medication 1157 1168	oxaliplatin
+E43	Medication:T68 
+T69	Medication 1173 1176	S-1
+E44	Medication:T69 
+R46	MODIFY Arg1:E43 Arg2:E42	
+R47	MODIFY Arg1:E44 Arg2:E42	
+T70	Sign_symptom 1266 1295	gastrointestinal disturbances
+E45	Sign_symptom:T70 
+T71	Detailed_description 1205 1215	terminated
+R48	MODIFY Arg1:E45 Arg2:T71	
+R49	MODIFY Arg1:T71 Arg2:E42	
+T72	Date 1300 1316	February 2, 2015
+E46	Date:T72 
+T73	Therapeutic_procedure 1318 1339	adjuvant radiotherapy
+E47	Therapeutic_procedure:T73 
+T74	Diagnostic_procedure 1379 1427	positron-emission tomography computed tomography
+E48	Diagnostic_procedure:T74 
+T75	Diagnostic_procedure 1429 1435	PET-CT
+E49	Diagnostic_procedure:T75 
+R50	IDENTICAL Arg1:E49 Arg2:E48	
+T76	Severity 1444 1453	extensive
+T77	Detailed_description 1454 1461	distant
+T78	Disease_disorder 1462 1472	metastasis
+E50	Disease_disorder:T78 
+R51	MODIFY Arg1:T77 Arg2:E50	
+R52	MODIFY Arg1:T76 Arg2:E50	
+T79	Biological_structure 1511 1522	lymph nodes
+T80	Biological_structure 1474 1494	left supraclavicular
+T81	Biological_structure 1499 1510	mediastinal
+R53	MODIFY Arg1:T81 Arg2:T79	
+R54	MODIFY Arg1:T80 Arg2:T79	
+T82	Biological_structure 1528 1539	lymph nodes
+T83	Biological_structure 1555 1571	abdominal cavity
+R55	MODIFY Arg1:T83 Arg2:T82	
+R56	MODIFY Arg1:T79 Arg2:E50	
+R57	MODIFY Arg1:T82 Arg2:E50	
+T84	Diagnostic_procedure 1588 1622	Eastern Cooperative Oncology Group
+E51	Diagnostic_procedure:T84 
+T85	Diagnostic_procedure 1624 1628	ECOG
+E52	Diagnostic_procedure:T85 
+R58	IDENTICAL Arg1:E52 Arg2:E51	
+T86	Lab_value 1653 1654	2
+E53	Lab_value:T86 
+R59	MODIFY Arg1:E53 Arg2:E51	
+T87	Diagnostic_procedure 1664 1679	body mass index
+E54	Diagnostic_procedure:T87 
+T88	Diagnostic_procedure 1681 1684	BMI
+E55	Diagnostic_procedure:T88 
+R60	IDENTICAL Arg1:E55 Arg2:E54	
+T89	Lab_value 1690 1692	19
+E56	Lab_value:T89 
+R61	MODIFY Arg1:E56 Arg2:E54	
+T90	Sign_symptom 1740 1752	malnutrition
+E57	Sign_symptom:T90 
+A2	POLARITY E57 UNCERTAIN
+T91	Administration 1754 1758	Oral
+T92	Medication 1759 1767	apatinib
+E58	Medication:T92 
+T93	Dosage 1768 1774	850 mg
+T94	Frequency 1775 1785	once a day
+T95	Therapeutic_procedure 1814 1826	radiotherapy
+E59	Therapeutic_procedure:T95 
+R62	MODIFY Arg1:T91 Arg2:E58	
+R63	MODIFY Arg1:T93 Arg2:E58	
+R64	MODIFY Arg1:T94 Arg2:E58	
+T96	Therapeutic_procedure 1970 2007	intensity modulated radiation therapy
+E60	Therapeutic_procedure:T96 
+T97	Therapeutic_procedure 2009 2013	IMRT
+E61	Therapeutic_procedure:T97 
+R65	IDENTICAL Arg1:E61 Arg2:E60	
+T98	Detailed_description 1959 1969	palliative
+R66	MODIFY Arg1:T98 Arg2:E60	
+T99	Clinical_event 1831 1841	prescribed
+E62	Clinical_event:T99 
+R67	MODIFY Arg1:E58 Arg2:E62	
+R68	MODIFY Arg1:E59 Arg2:E62	
+T100	Dosage 2056 2077	64 Gy in 30 fractions
+T101	Biological_structure 2085 2096	mediastinum
+T102	Dosage 2110 2131	52 Gy in 26 fractions
+T103	Disease_disorder 2155 2173	metastatic lesions
+E63	Disease_disorder:T103 
+T104	Biological_structure 2145 2154	abdominal
+R69	MODIFY Arg1:T104 Arg2:E63	
+R70	MODIFY Arg1:T100 Arg2:T101	
+R71	MODIFY Arg1:T102 Arg2:T104	
+T105	Biological_structure 2208 2218	lymph node
+T106	Biological_structure 2187 2207	left supraclavicular
+R72	MODIFY Arg1:T106 Arg2:T105	
+T107	Medication 2236 2244	apatinib
+E64	Medication:T107 
+R73	MODIFY Arg1:E64 Arg2:T105	
+R74	MODIFY Arg1:E60 Arg2:T100	
+R75	MODIFY Arg1:E60 Arg2:T102	
+T108	Diagnostic_procedure 2272 2278	PET-CT
+E65	Diagnostic_procedure:T108 
+T109	Date 2294 2320	2 weeks after radiotherapy
+E66	Date:T109 
+T110	Lab_value 2331 2344	80% reduction
+E67	Lab_value:T110 
+T111	Diagnostic_procedure 2352 2385	maximum standardized uptake value
+E68	Diagnostic_procedure:T111 
+T112	Diagnostic_procedure 2387 2393	SUVmax
+E69	Diagnostic_procedure:T112 
+R76	IDENTICAL Arg1:E69 Arg2:E68	
+T113	Diagnostic_procedure 2398 2431	2-deoxy-2-[[18]F]fluoro-d-glucose
+E70	Diagnostic_procedure:T113 
+T114	Diagnostic_procedure 2433 2436	FDG
+E71	Diagnostic_procedure:T114 
+R77	IDENTICAL Arg1:E71 Arg2:E70	
+R78	MODIFY Arg1:E70 Arg2:E68	
+R79	MODIFY Arg1:E67 Arg2:E68	
+T115	Diagnostic_procedure 2439 2449	FDG uptake
+E72	Diagnostic_procedure:T115 
+T116	Lab_value 2454 2460	higher
+E73	Lab_value:T116 
+T117	Biological_structure 2489 2499	lymph node
+T118	Biological_structure 2468 2488	left supraclavicular
+R80	MODIFY Arg1:T118 Arg2:T117	
+R81	MODIFY Arg1:E73 Arg2:E72	
+R82	MODIFY Arg1:T117 Arg2:E72	
+T119	Biological_structure 2516 2534	metastatic regions
+T120	Medication 2559 2567	apatinib
+E74	Medication:T120 
+T121	Therapeutic_procedure 2572 2589	radiation therapy
+E75	Therapeutic_procedure:T121 
+T122	Diagnostic_procedure 2604 2648	Response Evaluation Criteria in Solid Tumors
+E76	Diagnostic_procedure:T122 
+R83	MODIFY Arg1:E74 Arg2:T119	
+R84	MODIFY Arg1:E75 Arg2:T119	
+T123	Diagnostic_procedure 2650 2656	RECIST
+E77	Diagnostic_procedure:T123 
+R85	IDENTICAL Arg1:E77 Arg2:E76	
+T124	Lab_value 2683 2699	partial response
+E78	Lab_value:T124 
+R86	MODIFY Arg1:E78 Arg2:E76	
+T125	Therapeutic_procedure 2738 2750	radiotherapy
+E79	Therapeutic_procedure:T125 
+T126	Dosage 2752 2773	66 Gy in 28 fractions
+R87	MODIFY Arg1:T126 Arg2:E79	
+T127	Biological_structure 2803 2813	lymph node
+T128	Biological_structure 2782 2802	left supraclavicular
+R88	MODIFY Arg1:T128 Arg2:T127	
+T129	Disease_disorder 2821 2840	residual metastasis
+E80	Disease_disorder:T129 
+R89	CAUSE Arg1:E80 Arg2:E79	
+R90	MODIFY Arg1:T127 Arg2:E79	
+T130	Diagnostic_procedure 2842 2855	Tumor markers
+E81	Diagnostic_procedure:T130 
+T131	Diagnostic_procedure 2860 2880	biochemical analyses
+E82	Diagnostic_procedure:T131 
+T132	Frequency 2896 2910	every 2 months
+R91	MODIFY Arg1:T132 Arg2:E82	
+R92	MODIFY Arg1:T132 Arg2:E81	
+T133	Date 2912 2936	Two months after therapy
+E83	Date:T133 
+T134	Diagnostic_procedure 2959 2967	CT scans
+E84	Diagnostic_procedure:T134 
+T135	Biological_structure 2938 2943	chest
+T136	Biological_structure 2949 2958	abdominal
+R93	MODIFY Arg1:T136 Arg2:E84	
+R94	MODIFY Arg1:T135 Arg2:E84	
+T137	Disease_disorder 2985 2992	disease
+E85	Disease_disorder:T137 
+T138	Detailed_description 2978 2984	stable
+R95	MODIFY Arg1:T138 Arg2:E85	
+T139	Sign_symptom 2994 3000	anemia
+E86	Sign_symptom:T139 
+T140	Sign_symptom 3005 3030	gastrointestinal symptoms
+E87	Sign_symptom:T140 
+T141	Qualitative_concept 3035 3043	improved
+R96	MODIFY Arg1:T141 Arg2:E87	
+R97	MODIFY Arg1:T141 Arg2:E86	
+T142	Diagnostic_procedure 3045 3049	ECOG
+E88	Diagnostic_procedure:T142 
+T143	Diagnostic_procedure 3080 3083	BMI
+E89	Diagnostic_procedure:T143 
+T144	Lab_value 3073 3074	0
+E90	Lab_value:T144 
+T145	Lab_value 3088 3090	22
+E91	Lab_value:T145 
+R98	MODIFY Arg1:E90 Arg2:E88	
+R99	MODIFY Arg1:E91 Arg2:E89	
+T146	Sign_symptom 3092 3112	Hematologic toxicity
+E92	Sign_symptom:T146 
+A3	POLARITY E92 NEG
+T147	Sign_symptom 3114 3126	hypertension
+E93	Sign_symptom:T147 
+A4	POLARITY E93 NEG
+T148	Sign_symptom 3128 3145	renal dysfunction
+E94	Sign_symptom:T148 
+A5	POLARITY E94 NEG
+T149	Sign_symptom 3147 3158	proteinuria
+E95	Sign_symptom:T149 
+A6	POLARITY E95 NEG
+T150	Sign_symptom 3164 3182	hand–foot syndrome
+E96	Sign_symptom:T150 
+A7	POLARITY E96 NEG
+T151	Medication 3208 3216	apatinib
+E97	Medication:T151 
+T152	Date 3229 3243	September 2015
+E98	Date:T152 
+T153	Diagnostic_procedure 3247 3268	follow-up examination
+E99	Diagnostic_procedure:T153 
+T154	Lab_value 3276 3285	increased
+E100	Lab_value:T154 
+T155	Diagnostic_procedure 3286 3315	carbohydrate antigen (CA) 125
+E101	Diagnostic_procedure:T155 
+T156	Diagnostic_procedure 3320 3328	ferritin
+E102	Diagnostic_procedure:T156 
+T157	Diagnostic_procedure 3339 3350	gastroscopy
+E103	Diagnostic_procedure:T157 
+T158	Diagnostic_procedure 3365 3367	CT
+E104	Diagnostic_procedure:T158 
+T159	Biological_structure 3355 3364	abdominal
+R100	MODIFY Arg1:E100 Arg2:E101	
+R101	MODIFY Arg1:E100 Arg2:E102	
+R102	MODIFY Arg1:T159 Arg2:E104	
+T160	Sign_symptom 3380 3393	abnormalities
+E105	Sign_symptom:T160 
+A8	POLARITY E105 NEG
+R103	MODIFY Arg1:E105 Arg2:E104	
+R104	MODIFY Arg1:E105 Arg2:E103	
+T161	Date 3398 3411	November 2015
+E106	Date:T161 
+T162	Sign_symptom 3429 3450	difficulty swallowing
+E107	Sign_symptom:T162 
+T163	Sign_symptom 3480 3492	hematochezia
+E108	Sign_symptom:T163 
+T164	Detailed_description 3467 3479	intermittent
+R105	MODIFY Arg1:T164 Arg2:E108	
+T165	Diagnostic_procedure 3552 3563	Gastroscopy
+E109	Diagnostic_procedure:T165 
+T166	Medication 3494 3502	Apatinib
+E110	Medication:T166 
+T167	Sign_symptom 3525 3550	gastrointestinal bleeding
+E111	Sign_symptom:T167 
+T168	Detailed_description 3507 3517	terminated
+R106	MODIFY Arg1:T168 Arg2:E110	
+R107	CAUSE Arg1:E111 Arg2:T168	
+T169	Sign_symptom 3573 3593	anastomotic stenosis
+E112	Sign_symptom:T169 
+T170	Disease_disorder 3601 3615	gastric cancer
+E113	Disease_disorder:T170 
+T171	Disease_disorder 3620 3642	intragastric hemorrhag
+E114	Disease_disorder:T171 
+R108	CAUSE Arg1:E113 Arg2:E112	
+R109	CAUSE Arg1:E114 Arg2:E112	
+T172	Therapeutic_procedure 3691 3708	chemoradiotherapy
+E115	Therapeutic_procedure:T172 
+A9	POLARITY E115 NEG
+T173	Medication 3739 3754	hemostatic drug
+E116	Medication:T173 
+T174	Therapeutic_procedure 3764 3779	supportive care
+E117	Therapeutic_procedure:T174 
+T175	Date 3797 3809	After 1 week
+E118	Date:T175 
+T176	Disease_disorder 3822 3834	hemorrhaging
+E119	Disease_disorder:T176 
+A10	POLARITY E119 NEG
+T177	Date 3849 3865	One month later,
+E120	Date:T177 
+T178	Detailed_description 3896 3908	intermittent
+T179	Sign_symptom 3909 3921	hematochezia
+E121	Sign_symptom:T179 
+R110	MODIFY Arg1:T178 Arg2:E121	
+T180	Date 3926 3943	December 20, 2015
+E122	Date:T180 
+T181	Diagnostic_procedure 3945 3951	PET-CT
+E123	Diagnostic_procedure:T181 
+T182	Disease_disorder 3975 3985	metastasis
+E124	Disease_disorder:T182 
+T183	Severity 3965 3974	extensive
+R111	MODIFY Arg1:T183 Arg2:E124	
+T184	Therapeutic_procedure 4029 4044	supportive care
+E125	Therapeutic_procedure:T184 
+T185	Date 4049 4063	April 16, 2016
+E126	Date:T185 
+T186	Outcome 4077 4081	died
+E127	Outcome:T186 
+T187	Disease_disorder 4099 4108	infection
+E128	Disease_disorder:T187 
+T188	Biological_structure 4089 4098	pulmonary
+R112	MODIFY Arg1:T188 Arg2:E128	
+*	OVERLAP E1 E2 E3 E4 E129
+T189	Clinical_event 97 105	referred
+E129	Clinical_event:T189 
+R113	MODIFY Arg1:T8 Arg2:E129	
+R114	BEFORE Arg1:E129 Arg2:E5	
+*	OVERLAP E5 E6 E7 E8 E9
+R115	BEFORE Arg1:E9 Arg2:E10	
+*	OVERLAP E10 E11 E13 E14
+R116	BEFORE Arg1:E14 Arg2:E15	
+*	OVERLAP E15 E16 E17 E40 E41
+R117	BEFORE Arg1:E41 Arg2:E42	
+R118	BEFORE Arg1:E42 Arg2:E46	
+*	OVERLAP E46 E47 E48 E50
+R119	BEFORE Arg1:E50 Arg2:E51	
+*	OVERLAP E51 E54 E57 E62
+R120	BEFORE Arg1:E62 Arg2:E60	
+*	OVERLAP E60 E64
+R121	BEFORE Arg1:E64 Arg2:E65	
+*	OVERLAP E65 E66 E68 E72 E74 E76
+R122	BEFORE Arg1:E76 Arg2:E79	
+R123	BEFORE Arg1:E79 Arg2:E81	
+*	OVERLAP E81 E82
+R124	BEFORE Arg1:E82 Arg2:E83	
+*	OVERLAP E83 E84 E85 E86 E87 E88 E89 E97
+R125	CAUSE Arg1:E97 Arg2:E96	
+R126	CAUSE Arg1:E97 Arg2:E95	
+R127	CAUSE Arg1:E97 Arg2:E94	
+R128	CAUSE Arg1:E97 Arg2:E93	
+R129	CAUSE Arg1:E97 Arg2:E92	
+R130	BEFORE Arg1:E97 Arg2:E98	
+*	OVERLAP E98 E99 E101 E102 E103 E104
+R131	BEFORE Arg1:E104 Arg2:E106	
+*	OVERLAP E106 E107 E108 E110 E109 E112 E115 E130
+T190	Clinical_event 3785 3795	prescribed
+E130	Clinical_event:T190 
+R132	MODIFY Arg1:E130 Arg2:E117	
+R133	MODIFY Arg1:E130 Arg2:E116	
+R134	BEFORE Arg1:E130 Arg2:E118	
+*	OVERLAP E118 E119
+R135	BEFORE Arg1:E119 Arg2:E120	
+*	OVERLAP E120 E121
+R136	BEFORE Arg1:E121 Arg2:E122	
+*	OVERLAP E122 E123 E124 E125
+R137	BEFORE Arg1:E125 Arg2:E126	
+*	OVERLAP E126 E127 E128

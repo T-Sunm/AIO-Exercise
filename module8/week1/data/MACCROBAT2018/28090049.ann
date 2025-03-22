@@ -1,0 +1,354 @@
+T1	Age 2 13	46-year-old
+T2	Sex 14 19	woman
+T3	History 38 58	Graves' disease (GD)
+T4	Clinical_event 63 74	transferred
+E1	Clinical_event:T4 
+T5	Nonbiological_location 82 102	emergency department
+T6	Disease_disorder 119 122	DKA
+E2	Disease_disorder:T6 
+#1	AnnotatorNotes E2	Diabetic ketoacidosis
+R1	MODIFY Arg1:T5 Arg2:E1	
+T7	Sign_symptom 140 150	polydipsia
+E3	Sign_symptom:T7 
+T8	Sign_symptom 152 160	polyuria
+E4	Sign_symptom:T8 
+T9	Sign_symptom 166 173	fatigue
+E5	Sign_symptom:T9 
+T10	Duration 188 218	four months prior to admission
+E6	Duration:T10 
+T11	Duration 255 262	1-month
+E7	Duration:T11 
+T12	Sign_symptom 276 289	appetite loss
+E8	Sign_symptom:T12 
+T13	Sign_symptom 310 321	weight loss
+E9	Sign_symptom:T13 
+T14	Lab_value 305 309	7 kg
+R2	MODIFY Arg1:T14 Arg2:E9	
+T15	Sign_symptom 323 330	fatigue
+E10	Sign_symptom:T15 
+T16	Sign_symptom 332 338	nausea
+E11	Sign_symptom:T16 
+T17	Sign_symptom 344 352	sweating
+E12	Sign_symptom:T17 
+T18	History 383 444	GD, diagnosed at 42 years of age and managed with methimazole
+T19	Disease_disorder 383 385	GD
+E13	Disease_disorder:T19 
+#2	AnnotatorNotes E13	This is labeled as a disease_disorder here and not above because a date is specified here.
+T20	Date 387 415	diagnosed at 42 years of age
+E14	Date:T20 
+T21	Medication 433 444	methimazole
+E15	Medication:T21 
+T22	Medication 484 502	anti-thyroid drugs
+E16	Medication:T22 
+T23	Lab_value 463 478	poor compliance
+R3	MODIFY Arg1:T23 Arg2:E16	
+T24	History 508 563	denied a family history of thyroid diseases or diabetes
+T25	Date 565 592	Three days before admission
+E17	Date:T25 
+T26	Disease_disorder 622 633	influenza A
+E18	Disease_disorder:T26 
+T27	Nonbiological_location 639 654	nearby hospital
+T28	Medication 660 681	oseltamivir phosphate
+E19	Medication:T28 
+T29	Nonbiological_location 705 725	emergency department
+T30	Clinical_event 731 740	presented
+E20	Clinical_event:T30 
+T31	Sign_symptom 746 756	drowsiness
+E21	Sign_symptom:T31 
+T32	Diagnostic_procedure 763 779	body temperature
+E22	Diagnostic_procedure:T32 
+T33	Lab_value 783 788	37.0℃
+R4	MODIFY Arg1:T33 Arg2:E22	
+T34	Diagnostic_procedure 790 804	blood pressure
+E23	Diagnostic_procedure:T34 
+T35	Lab_value 808 818	90/60 mmHg
+R5	MODIFY Arg1:T35 Arg2:E23	
+T36	Diagnostic_procedure 820 830	heart rate
+E24	Diagnostic_procedure:T36 
+T37	Lab_value 834 841	200 bpm
+R6	MODIFY Arg1:T37 Arg2:E24	
+T38	Diagnostic_procedure 843 859	respiratory rate
+E25	Diagnostic_procedure:T38 
+T39	Lab_value 863 877	32 breaths/min
+T40	Diagnostic_procedure 879 896	oxygen saturation
+E26	Diagnostic_procedure:T40 
+T41	Lab_value 900 903	99%
+R7	MODIFY Arg1:T41 Arg2:E26	
+T42	Lab_value 907 920	5 L nasal air
+R8	MODIFY Arg1:T42 Arg2:E26	
+T43	Diagnostic_procedure 928 946	Glasgow coma scale
+E27	Diagnostic_procedure:T43 
+T44	Diagnostic_procedure 948 951	GCS
+E28	Diagnostic_procedure:T44 
+R9	IDENTICAL Arg1:E28 Arg2:E27	
+T45	Lab_value 962 964	14
+R10	MODIFY Arg1:T45 Arg2:E27	
+T46	Diagnostic_procedure 970 990	clinical examination
+E29	Diagnostic_procedure:T46 
+T47	Sign_symptom 1010 1016	goiter
+E30	Sign_symptom:T47 
+T48	Detailed_description 1002 1009	diffuse
+R11	MODIFY Arg1:T48 Arg2:E30	
+T49	Detailed_description 1022 1046	bilateral exophthalmoses
+R12	MODIFY Arg1:T49 Arg2:E30	
+T50	Diagnostic_procedure 1074 1085	auscultated
+E31	Diagnostic_procedure:T50 
+T51	Biological_structure 1052 1057	lungs
+T52	Lab_value 1063 1068	clear
+R13	MODIFY Arg1:T52 Arg2:T51	
+R14	MODIFY Arg1:T51 Arg2:E31	
+T53	Biological_structure 1091 1098	abdomen
+T54	Biological_structure 1128 1132	skin
+T55	Lab_value 1103 1107	soft
+T56	Sign_symptom 1116 1122	tender
+E32	Sign_symptom:T56 
+A1	POLARITY E32 NEG
+T57	Lab_value 1137 1141	warm
+T58	Lab_value 1146 1149	wet
+R15	MODIFY Arg1:T57 Arg2:T54	
+R16	MODIFY Arg1:T58 Arg2:T54	
+T59	Sign_symptom 1178 1183	edema
+E33	Sign_symptom:T59 
+A2	POLARITY E33 NEG
+T60	Biological_structure 1162 1177	lower extremity
+R17	MODIFY Arg1:T60 Arg2:E33	
+T61	Diagnostic_procedure 1189 1206	electrocardiogram
+E34	Diagnostic_procedure:T61 
+T62	Sign_symptom 1221 1232	tachycardia
+E35	Sign_symptom:T62 
+T63	Detailed_description 1214 1220	marked
+R18	MODIFY Arg1:T63 Arg2:E35	
+T64	Disease_disorder 1238 1257	atrial fibrillation
+E36	Disease_disorder:T64 
+T65	Diagnostic_procedure 1271 1281	radiograph
+E37	Diagnostic_procedure:T65 
+T66	Biological_structure 1265 1270	chest
+R19	MODIFY Arg1:T66 Arg2:E37	
+T67	Lab_value 1286 1292	normal
+R20	MODIFY Arg1:T67 Arg2:E37	
+T68	Diagnostic_procedure 1298 1313	laboratory data
+E38	Diagnostic_procedure:T68 
+T69	Sign_symptom 1384 1402	metabolic acidosis
+E39	Sign_symptom:T69 
+T70	Diagnostic_procedure 1417 1431	plasma glucose
+E40	Diagnostic_procedure:T70 
+T71	Lab_value 1441 1450	472 mg/dL
+R21	MODIFY Arg1:T71 Arg2:E40	
+T72	Lab_value 1407 1416	increased
+R22	MODIFY Arg1:T72 Arg2:E40	
+T73	Diagnostic_procedure 1465 1470	HbA1c
+E41	Diagnostic_procedure:T73 
+T74	Lab_value 1480 1485	13.7%
+R23	MODIFY Arg1:T74 Arg2:E41	
+T75	Lab_value 1455 1464	increased
+R24	MODIFY Arg1:T75 Arg2:E41	
+T76	Diagnostic_procedure 1500 1521	free triiodothyronine
+E42	Diagnostic_procedure:T76 
+T77	Lab_value 1490 1499	increased
+R25	MODIFY Arg1:T77 Arg2:E42	
+T78	Lab_value 1531 1542	6.440 pg/mL
+R26	MODIFY Arg1:T78 Arg2:E42	
+T79	Diagnostic_procedure 1550 1564	free thyroxine
+E43	Diagnostic_procedure:T79 
+T80	Lab_value 1574 1585	2.830 ng/dL
+R27	MODIFY Arg1:T80 Arg2:E43	
+T81	Diagnostic_procedure 1594 1616	suppressed thyrotropin
+E44	Diagnostic_procedure:T81 
+T82	Lab_value 1632 1644	0.005 μIU/mL
+R28	MODIFY Arg1:T82 Arg2:E44	
+T83	Disease_disorder 1841 1855	thyrotoxicosis
+E45	Disease_disorder:T83 
+T84	Sign_symptom 1857 1902	symptoms involving the central nervous system
+E46	Sign_symptom:T84 
+T85	Sign_symptom 1904 1915	tachycardia
+E47	Sign_symptom:T85 
+T86	Sign_symptom 1921 1946	gastrointestinal symptoms
+E48	Sign_symptom:T86 
+T87	Disease_disorder 1988 1991	DKA
+E49	Disease_disorder:T87 
+T88	Disease_disorder 1996 2009	thyroid storm
+E50	Disease_disorder:T88 
+T89	Diagnostic_procedure 1667 1725	diagnostic criteria of Burch & Wartofsky for thyroid storm
+E51	Diagnostic_procedure:T89 
+T90	Lab_value 1657 1659	55
+#3	AnnotatorNotes T90	Diagnostic score
+R29	MODIFY Arg1:T90 Arg2:E51	
+T91	Diagnostic_procedure 1735 1805	diagnostic criteria of the Japan Thyroid Association for thyroid storm
+E52	Diagnostic_procedure:T91 
+T92	Lab_value 1816 1825	satisfied
+R30	MODIFY Arg1:T92 Arg2:E52	
+T93	Clinical_event 2014 2022	admitted
+E53	Clinical_event:T93 
+T94	Nonbiological_location 2030 2057	medical intensive care unit
+T95	Diagnostic_procedure 2070 2080	monitoring
+E54	Diagnostic_procedure:T95 
+T96	Therapeutic_procedure 2085 2094	treatment
+E55	Therapeutic_procedure:T96 
+R31	MODIFY Arg1:T94 Arg2:E53	
+T97	Medication 2172 2179	insulin
+E56	Medication:T97 
+T98	Administration 2160 2171	intravenous
+T99	Administration 2180 2184	drip
+R32	MODIFY Arg1:T98 Arg2:E56	
+R33	MODIFY Arg1:T99 Arg2:E56	
+T100	Therapeutic_procedure 2212 2225	fluid therapy
+E57	Therapeutic_procedure:T100 
+T101	Administration 2200 2211	intravenous
+R34	MODIFY Arg1:T101 Arg2:E57	
+T102	Detailed_description 2189 2199	aggressive
+R35	MODIFY Arg1:T102 Arg2:E57	
+T103	Disease_disorder 2231 2244	thyroid storm
+E58	Disease_disorder:T103 
+T104	Disease_disorder 2250 2252	GD
+E59	Disease_disorder:T104 
+T105	Medication 2282 2296	hydrocortisone
+E60	Medication:T105 
+T106	Administration 2270 2281	intravenous
+R36	MODIFY Arg1:T106 Arg2:E60	
+T107	Dosage 2297 2317	100 mg every 8 hours
+R37	MODIFY Arg1:T107 Arg2:E60	
+T108	Medication 2324 2340	potassium iodine
+E61	Medication:T108 
+T109	Administration 2319 2323	oral
+R38	MODIFY Arg1:T109 Arg2:E61	
+T110	Dosage 2341 2360	50 mg every 6 hours
+R39	MODIFY Arg1:T110 Arg2:E61	
+T111	Medication 2371 2382	methimazole
+E62	Medication:T111 
+T112	Dosage 2383 2402	20 mg every 6 hours
+R40	MODIFY Arg1:T112 Arg2:E62	
+T113	Administration 2366 2370	oral
+R41	MODIFY Arg1:T113 Arg2:E62	
+T114	History 2431 2437	asthma
+T115	Medication 2439 2462	landiolol hydrochloride
+E63	Medication:T115 
+T116	Dosage 2518 2532	4-12 μg/kg/min
+R42	MODIFY Arg1:T116 Arg2:E63	
+T117	Date 2563 2568	Day 3
+E64	Date:T117 
+T118	Sign_symptom 2574 2585	tachycardia
+E65	Sign_symptom:T118 
+A3	POLARITY E65 NEG
+T119	Medication 2604 2627	landiolol hydrochloride
+E66	Medication:T119 
+A4	POLARITY E66 NEG
+T120	Date 2649 2654	Day 6
+E67	Date:T120 
+T121	Diagnostic_procedure 2660 2682	white blood cell count
+E68	Diagnostic_procedure:T121 
+T122	Lab_value 2700 2715	2,800 cells/mm3
+R43	MODIFY Arg1:T122 Arg2:E68	
+T123	Lab_value 2717 2753	neutrophils, 44.2% (1,238 cells/mm3)
+R44	MODIFY Arg1:T123 Arg2:E68	
+T124	Medication 2756 2767	Methimazole
+E69	Medication:T124 
+A5	POLARITY E69 NEG
+T125	Sign_symptom 2813 2824	neutropenia
+E70	Sign_symptom:T125 
+A6	POLARITY E70 UNCERTAIN
+T126	Clinical_event 2856 2864	referred
+E71	Clinical_event:T126 
+T127	Nonbiological_location 2871 2888	endocrine surgeon
+R45	MODIFY Arg1:T127 Arg2:E71	
+T128	Therapeutic_procedure 2894 2907	thyroidectomy
+E72	Therapeutic_procedure:T128 
+T129	Date 2925 2931	Day 32
+E73	Date:T129 
+T130	Clinical_event 2941 2951	discharged
+E74	Clinical_event:T130 
+T131	Date 2973 2979	Day 37
+E75	Date:T131 
+T132	Medication 3013 3020	insulin
+E76	Medication:T132 
+T133	Administration 3021 3029	infusion
+T134	Dosage 2998 3012	multiple daily
+R46	MODIFY Arg1:T133 Arg2:E76	
+R47	MODIFY Arg1:T134 Arg2:E76	
+T135	Medication 3034 3062	levothyroxine sodium hydrate
+E77	Medication:T135 
+T136	Diagnostic_procedure 3072 3099	immunological investigation
+E78	Diagnostic_procedure:T136 
+T137	Diagnostic_procedure 3128 3175	anti-glutamic acid decarboxylase (GAD) antibody
+E79	Diagnostic_procedure:T137 
+T138	Diagnostic_procedure 3177 3218	anti-insulinoma antigen 2 (IA-2) antibody
+E80	Diagnostic_procedure:T138 
+T139	Diagnostic_procedure 3224 3244	insulin autoantibody
+E81	Diagnostic_procedure:T139 
+T140	Lab_value 3109 3124	elevated levels
+R48	MODIFY Arg1:T140 Arg2:E79	
+R49	MODIFY Arg1:T140 Arg2:E80	
+R50	MODIFY Arg1:T140 Arg2:E81	
+R51	SUB_PROCEDURE Arg1:E79 Arg2:E78	
+R52	SUB_PROCEDURE Arg1:E80 Arg2:E78	
+R53	SUB_PROCEDURE Arg1:E81 Arg2:E78	
+T141	Disease_disorder 3262 3265	T1D
+E82	Disease_disorder:T141 
+T142	Diagnostic_procedure 3271 3308	intravenous glucagon stimulation test
+E83	Diagnostic_procedure:T142 
+T143	Diagnostic_procedure 3405 3419	plasma glucose
+E84	Diagnostic_procedure:T143 
+T144	Lab_value 3432 3435	139
+T145	Lab_value 3440 3449	152 mg/dL
+R54	MODIFY Arg1:T144 Arg2:E84	
+R55	MODIFY Arg1:T145 Arg2:E84	
+T146	Detailed_description 3453 3461	baseline
+R56	MODIFY Arg1:T146 Arg2:T144	
+T147	Detailed_description 3466 3475	6 minutes
+#4	AnnotatorNotes T147	Not a time, but part of a diagnostic
+R57	MODIFY Arg1:T147 Arg2:T145	
+T148	Diagnostic_procedure 3509 3524	serum C-peptide
+E85	Diagnostic_procedure:T148 
+T149	Lab_value 3537 3540	0.8
+T150	Lab_value 3545 3554	1.3 ng/mL
+R58	MODIFY Arg1:T149 Arg2:E85	
+R59	MODIFY Arg1:T150 Arg2:E85	
+T151	Detailed_description 3558 3566	baseline
+T152	Detailed_description 3571 3580	6 minutes
+R60	MODIFY Arg1:T151 Arg2:T149	
+R61	MODIFY Arg1:T152 Arg2:T150	
+T153	Biological_structure 3328 3341	blood samples
+R62	MODIFY Arg1:T153 Arg2:E83	
+T154	Detailed_description 3342 3399	for glucose and C-peptide taken at baseline and 6 minutes
+R63	MODIFY Arg1:T154 Arg2:E83	
+A7	POLARITY E2 UNCERTAIN
+*	OVERLAP E1 E2
+R64	AFTER Arg1:E2 Arg2:E3	
+*	OVERLAP E3 E4 E5 E6
+R65	BEFORE Arg1:E6 Arg2:E7	
+*	OVERLAP E7 E8 E9 E10 E11 E12
+R66	AFTER Arg1:E12 Arg2:E13	
+*	OVERLAP E13 E14 E15 E16
+R67	BEFORE Arg1:E16 Arg2:E17	
+T155	Clinical_event 607 616	diagnosed
+E86	Clinical_event:T155 
+R68	MODIFY Arg1:T27 Arg2:E86	
+*	OVERLAP E17 E86 E18 E19
+R69	MODIFY Arg1:T29 Arg2:E20	
+R70	BEFORE Arg1:E19 Arg2:E20	
+*	OVERLAP E20 E21 E22 E23 E24 E25 E26 E27 E29 E30 E31 E32 E33 E34 E35 E36 E37 E38 E87 E39 E40 E41 E42 E43 E44 E51 E52 E45 E46 E47 E48
+R71	MODIFY Arg1:T39 Arg2:E25	
+#5	AnnotatorNotes T45	Diagnostic criteria
+R72	MODIFY Arg1:T53 Arg2:E32	
+R73	MODIFY Arg1:T55 Arg2:T53	
+T156	Diagnostic_procedure 1348 1363	laboratory data
+E87	Diagnostic_procedure:T156 
+T157	Clinical_event 1973 1982	diagnosed
+E88	Clinical_event:T157 
+R74	BEFORE Arg1:E48 Arg2:E88	
+*	OVERLAP E88 E49 E50
+R75	BEFORE Arg1:E50 Arg2:E53	
+*	OVERLAP E53 E54 E55 E56 E57 E58 E59 E60 E61 E62 E63
+R76	BEFORE Arg1:E63 Arg2:E64	
+*	OVERLAP E64 E65 E66
+R77	BEFORE Arg1:E66 Arg2:E67	
+*	OVERLAP E67 E68 E69 E70
+T158	Detailed_description 2793 2812	methimazole-induced
+R78	MODIFY Arg1:T158 Arg2:E70	
+R79	BEFORE Arg1:E70 Arg2:E71	
+*	OVERLAP E71 E72 E73
+R80	BEFORE Arg1:E73 Arg2:E74	
+T159	Nonbiological_location 2961 2969	hospital
+R81	MODIFY Arg1:T159 Arg2:E74	
+*	OVERLAP E74 E75 E76 E77
+R82	BEFORE Arg1:E77 Arg2:E78	
+*	OVERLAP E78 E82 E83 E84 E85

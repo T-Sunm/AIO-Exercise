@@ -1,0 +1,410 @@
+T1	Age 2 13	28-year-old
+T2	Personal_background 14 30	African American
+T3	Sex 31 36	woman
+T4	Clinical_event 37 46	presented
+E1	Clinical_event:T4 
+T5	Nonbiological_location 54 88	R Adams Cowley Shock Trauma Center
+R1	MODIFY Arg1:T5 Arg2:E1	
+T6	Nonbiological_location 92 111	Baltimore, Maryland
+R2	MODIFY Arg1:T6 Arg2:T5	
+T7	Diagnostic_procedure 117 127	evaluation
+E2	Diagnostic_procedure:T7 
+T8	Disease_disorder 143 152	paralysis
+E3	Disease_disorder:T8 
+T9	Detailed_description 131 142	right-sided
+R3	MODIFY Arg1:T9 Arg2:E3	
+T10	Sign_symptom 168 180	paresthesias
+E4	Sign_symptom:T10 
+T11	Detailed_description 157 167	left-sided
+R4	MODIFY Arg1:T11 Arg2:E4	
+T12	Clinical_event 193 198	found
+E5	Clinical_event:T12 
+T13	Activity 277 283	eating
+E6	Activity:T13 
+T14	Activity 313 330	consuming alcohol
+E7	Activity:T14 
+T15	Activity 336 343	smoking
+E8	Activity:T15 
+T17	Sign_symptom 404 416	asymptomatic
+E9	Sign_symptom:T17 
+T18	Time 417 427	that night
+E10	Time:T18 
+T19	Sign_symptom 452 465	complications
+E11	Sign_symptom:T19 
+A1	POLARITY E11 NEG
+T20	Activity 432 443	went to bed
+E12	Activity:T20 
+T21	Clinical_event 475 480	found
+E13	Clinical_event:T21 
+T22	Time 502 523	the following morning
+E14	Time:T22 
+T23	Sign_symptom 524 538	unable to move
+E15	Sign_symptom:T23 
+T24	Disease_disorder 563 578	physical trauma
+E16	Disease_disorder:T24 
+A2	POLARITY E16 NEG
+T25	Sign_symptom 590 597	falling
+E17	Sign_symptom:T25 
+T26	History 620 709	no history of seizures, sickle cell anemia, fever, urinary or bowel incontinence, or pain
+T27	Disease_disorder 740 756	viral meningitis
+E18	Disease_disorder:T27 
+T28	Detailed_description 757 782	without residual deficits
+R6	MODIFY Arg1:T28 Arg2:E18	
+T29	Date 783 800	eight years prior
+E19	Date:T29 
+T30	History 802 824	gastric bypass surgery
+T31	History 830 845	cholecystectomy
+T32	Disease_disorder 882 905	urinary tract infection
+E20	Disease_disorder:T32 
+T33	Date 906 921	five days prior
+E21	Date:T33 
+T34	Therapeutic_procedure 859 866	treated
+E22	Therapeutic_procedure:T34 
+T35	Nonbiological_location 941 960	outside institution
+R7	MODIFY Arg1:T35 Arg2:E22	
+T36	Nonbiological_location 211 215	home
+R8	MODIFY Arg1:T36 Arg2:E5	
+T37	Detailed_description 216 250	between her nightstand and her bed
+#1	AnnotatorNotes T37	this is a challenging example for computational parsing - this is implicitly not where you'd expect to find a sleeping person
+R9	MODIFY Arg1:T37 Arg2:T36	
+T38	Nonbiological_location 289 311	local restaurant chain
+R10	MODIFY Arg1:T38 Arg2:E6	
+T42	Diagnostic_procedure 973 984	vital signs
+E25	Diagnostic_procedure:T42 
+T43	Diagnostic_procedure 1002 1013	temperature
+E26	Diagnostic_procedure:T43 
+T44	Lab_value 1014 1020	36.8°C
+T16	Detailed_description 348 357	cigarette
+R5	MODIFY Arg1:T16 Arg2:E8	
+T39	Detailed_description 375 388	phencyclidine
+T40	Detailed_description 390 393	PCP
+R11	IDENTICAL Arg1:T40 Arg2:T39	
+R12	MODIFY Arg1:T39 Arg2:E8	
+T41	Diagnostic_procedure 1022 1036	blood pressure
+E23	Diagnostic_procedure:T41 
+T45	Lab_value 1037 1050	155/100 mm Hg
+R13	MODIFY Arg1:T44 Arg2:E26	
+R14	MODIFY Arg1:T45 Arg2:E23	
+R15	SUB_PROCEDURE Arg1:E26 Arg2:E25	
+R16	SUB_PROCEDURE Arg1:E23 Arg2:E25	
+T46	Diagnostic_procedure 1052 1062	heart rate
+E24	Diagnostic_procedure:T46 
+T47	Lab_value 1063 1082	90 beats per minute
+R17	MODIFY Arg1:T47 Arg2:E24	
+R18	SUB_PROCEDURE Arg1:E24 Arg2:E25	
+T48	Diagnostic_procedure 1084 1100	respiratory rate
+E27	Diagnostic_procedure:T48 
+R19	SUB_PROCEDURE Arg1:E27 Arg2:E25	
+T49	Lab_value 1101 1122	16 breaths per minute
+R20	MODIFY Arg1:T49 Arg2:E27	
+T50	Diagnostic_procedure 1131 1148	oxygen saturation
+E28	Diagnostic_procedure:T50 
+T51	Lab_value 1152 1155	95%
+T52	Detailed_description 1159 1167	room air
+R21	MODIFY Arg1:T52 Arg2:E28	
+R22	MODIFY Arg1:T51 Arg2:E28	
+R23	SUB_PROCEDURE Arg1:E28 Arg2:E25	
+T53	Diagnostic_procedure 1172 1185	physical exam
+E29	Diagnostic_procedure:T53 
+T54	Sign_symptom 1203 1208	alert
+E30	Sign_symptom:T54 
+T55	Sign_symptom 1213 1221	oriented
+E31	Sign_symptom:T55 
+T56	Detailed_description 1225 1231	person
+T57	Detailed_description 1233 1238	place
+T58	Detailed_description 1244 1248	time
+R24	MODIFY Arg1:T56 Arg2:E31	
+R25	MODIFY Arg1:T57 Arg2:E31	
+R26	MODIFY Arg1:T58 Arg2:E31	
+T59	Diagnostic_procedure 1431 1440	sensation
+E32	Diagnostic_procedure:T59 
+T60	Lab_value 1445 1451	intact
+R27	MODIFY Arg1:T60 Arg2:E32	
+T61	Diagnostic_procedure 1578 1596	Glasgow Coma Scale
+E33	Diagnostic_procedure:T61 
+T62	Lab_value 1606 1608	15
+R28	MODIFY Arg1:T62 Arg2:E33	
+T63	Diagnostic_procedure 2130 2147	toxicology screen
+E34	Diagnostic_procedure:T63 
+T64	Diagnostic_procedure 2165 2168	PCP
+E35	Diagnostic_procedure:T64 
+R29	SUB_PROCEDURE Arg1:E35 Arg2:E34	
+T65	Lab_value 2152 2160	positive
+R30	MODIFY Arg1:T65 Arg2:E35	
+T66	Detailed_description 368 374	liquid
+R31	MODIFY Arg1:T66 Arg2:T39	
+T67	Diagnostic_procedure 1254 1275	cranial nerves II–XII
+E36	Diagnostic_procedure:T67 
+T68	Lab_value 1281 1295	grossly intact
+R32	MODIFY Arg1:T68 Arg2:E36	
+T69	Diagnostic_procedure 1309 1317	strength
+E37	Diagnostic_procedure:T69 
+T70	Biological_structure 1325 1346	right lower extremity
+R33	MODIFY Arg1:T70 Arg2:T71	
+T71	Lab_value 1305 1308	2/5
+R34	MODIFY Arg1:T71 Arg2:E37	
+T72	Lab_value 1348 1351	3/5
+T73	Biological_structure 1359 1379	left lower extremity
+R35	MODIFY Arg1:T73 Arg2:T72	
+R36	MODIFY Arg1:T72 Arg2:E37	
+T74	Lab_value 1385 1388	4/5
+R37	MODIFY Arg1:T74 Arg2:E37	
+T75	Biological_structure 1389 1425	bilaterally in her upper extremities
+R38	MODIFY Arg1:T75 Arg2:T74	
+T76	Diagnostic_procedure 1492 1507	verbal response
+E38	Diagnostic_procedure:T76 
+T77	Lab_value 1512 1520	oriented
+T78	Lab_value 1525 1536	appropriate
+R39	MODIFY Arg1:T77 Arg2:E38	
+R40	MODIFY Arg1:T78 Arg2:E38	
+T79	Diagnostic_procedure 1468 1472	eyes
+E39	Diagnostic_procedure:T79 
+T80	Lab_value 1457 1463	opened
+R41	MODIFY Arg1:T80 Arg2:E39	
+T81	Detailed_description 1473 1486	spontaneously
+R42	MODIFY Arg1:T81 Arg2:T80	
+T82	Diagnostic_procedure 1553 1561	commands
+E40	Diagnostic_procedure:T82 
+T83	Lab_value 1546 1552	obeyed
+R43	MODIFY Arg1:T83 Arg2:E40	
+T84	Diagnostic_procedure 1610 1616	Pupils
+E41	Diagnostic_procedure:T84 
+T85	Detailed_description 1622 1627	equal
+T86	Shape 1629 1634	round
+T87	Lab_value 1640 1657	reactive to light
+R44	MODIFY Arg1:T85 Arg2:E41	
+R45	MODIFY Arg1:T86 Arg2:E41	
+R46	MODIFY Arg1:T87 Arg2:E41	
+T88	Sign_symptom 1667 1677	tenderness
+E42	Sign_symptom:T88 
+T89	Detailed_description 1681 1690	palpation
+R47	MODIFY Arg1:T89 Arg2:E42	
+T90	Biological_structure 1731 1736	spine
+T91	Biological_structure 1724 1730	lumbar
+T92	Biological_structure 1710 1718	thoracic
+T93	Biological_structure 1700 1708	cervical
+R48	MODIFY Arg1:T91 Arg2:T90	
+R49	MODIFY Arg1:T92 Arg2:T90	
+R50	MODIFY Arg1:T93 Arg2:T90	
+R51	MODIFY Arg1:T90 Arg2:E42	
+T94	Sign_symptom 1762 1777	signs of trauma
+E43	Sign_symptom:T94 
+A3	POLARITY E43 NEG
+T95	Diagnostic_procedure 1783 1802	anal sphincter tone
+E44	Diagnostic_procedure:T95 
+T96	Lab_value 1807 1813	intact
+R52	MODIFY Arg1:T96 Arg2:E44	
+T97	Diagnostic_procedure 1824 1834	laboratory
+E45	Diagnostic_procedure:T97 
+T98	Lab_value 1835 1848	abnormalities
+R53	MODIFY Arg1:T98 Arg2:E45	
+T99	Sign_symptom 1884 1897	hyperlactemia
+E46	Sign_symptom:T99 
+T100	Diagnostic_procedure 1908 1922	liver function
+E47	Diagnostic_procedure:T100 
+T101	Lab_value 1899 1907	elevated
+R54	MODIFY Arg1:T101 Arg2:E47	
+T102	Sign_symptom 1934 1958	electrolyte derangements
+E48	Sign_symptom:T102 
+T103	Diagnostic_procedure 1964 1984	complete blood count
+E49	Diagnostic_procedure:T103 
+T104	Diagnostic_procedure 2006 2030	complete metabolic panel
+E50	Diagnostic_procedure:T104 
+T105	Lab_value 2036 2056	within normal limits
+R55	MODIFY Arg1:T105 Arg2:E50	
+R56	MODIFY Arg1:T105 Arg2:E49	
+T106	Other_entity 2058 2124	These values are summarized along with reference ranges in Table 1
+#2	AnnotatorNotes T106	Ignored as reference to figure
+T107	Diagnostic_procedure 2170 2184	Blood cultures
+E51	Diagnostic_procedure:T107 
+T110	Detailed_description 2250 2266	serotype 4,12: i
+T111	Diagnostic_procedure 2277 2292	repeat cultures
+E53	Diagnostic_procedure:T111 
+T112	Date 2299 2313	two days later
+E54	Date:T112 
+T113	Disease_disorder 2327 2340	streptococcus
+E55	Disease_disorder:T113 
+T108	Disease_disorder 2230 2249	Salmonella enterica
+E52	Disease_disorder:T108 
+T109	Detailed_description 2213 2229	aerobic bacteria
+R57	MODIFY Arg1:T109 Arg2:E52	
+T114	Detailed_description 2342 2349	aerobic
+T115	Detailed_description 2354 2365	non-aerobic
+R58	MODIFY Arg1:T114 Arg2:E55	
+R59	MODIFY Arg1:T115 Arg2:E55	
+T116	Detailed_description 2319 2326	group B
+R60	MODIFY Arg1:T116 Arg2:E55	
+T117	Diagnostic_procedure 2417 2431	stool cultures
+E56	Diagnostic_procedure:T117 
+T118	Diagnostic_procedure 2379 2393	blood cultures
+E57	Diagnostic_procedure:T118 
+T119	Lab_value 2399 2407	negative
+R61	MODIFY Arg1:T119 Arg2:E56	
+R62	MODIFY Arg1:T119 Arg2:E57	
+T120	Medication 2433 2446	Metronidazole
+E58	Medication:T120 
+T121	Medication 2451 2461	vancomycin
+E59	Medication:T121 
+T122	Medication 2516 2527	ceftriaxone
+E60	Medication:T122 
+T123	Diagnostic_procedure 2598 2617	autoimmunity workup
+E61	Diagnostic_procedure:T123 
+T124	Diagnostic_procedure 2628 2649	anti-nuclear antibody
+E62	Diagnostic_procedure:T124 
+T125	Diagnostic_procedure 2660 2667	HLA-B27
+E63	Diagnostic_procedure:T125 
+T126	Lab_value 2691 2711	within normal limits
+R63	MODIFY Arg1:T126 Arg2:E61	
+T127	Diagnostic_procedure 2651 2654	ANA
+E64	Diagnostic_procedure:T127 
+R64	IDENTICAL Arg1:E64 Arg2:E62	
+R65	SUB_PROCEDURE Arg1:E62 Arg2:E61	
+R66	SUB_PROCEDURE Arg1:E63 Arg2:E61	
+T128	Diagnostic_procedure 2723 2746	computerized tomography
+E65	Diagnostic_procedure:T128 
+T129	Biological_structure 2790 2795	spine
+T130	Disease_disorder 2815 2824	fractures
+E66	Disease_disorder:T130 
+A4	POLARITY E66 NEG
+T131	Biological_structure 2783 2789	lumbar
+T132	Biological_structure 2769 2777	thoracic
+T133	Biological_structure 2759 2767	cervical
+R67	MODIFY Arg1:T131 Arg2:T129	
+R68	MODIFY Arg1:T132 Arg2:T129	
+R69	MODIFY Arg1:T133 Arg2:T129	
+R70	MODIFY Arg1:T129 Arg2:E65	
+T134	Biological_structure 2808 2814	spinal
+R71	MODIFY Arg1:T134 Arg2:E66	
+T135	Diagnostic_procedure 2826 2852	Magnetic resonance imaging
+E67	Diagnostic_procedure:T135 
+T136	Diagnostic_procedure 2854 2857	MRI
+E68	Diagnostic_procedure:T136 
+R72	IDENTICAL Arg1:E68 Arg2:E67	
+T137	Sign_symptom 2890 2903	abnormalities
+E69	Sign_symptom:T137 
+A5	POLARITY E69 NEG
+T138	Biological_structure 2877 2889	intracranial
+R73	MODIFY Arg1:T138 Arg2:E69	
+T139	Sign_symptom 2978 2983	edema
+E70	Sign_symptom:T139 
+T140	Biological_structure 2966 2977	spinal cord
+R74	MODIFY Arg1:T140 Arg2:E70	
+T141	Sign_symptom 2985 3001	disc protrusions
+E71	Sign_symptom:T141 
+T142	Biological_structure 3005 3009	C3–4
+T143	Biological_structure 3011 3015	C4–5
+T144	Biological_structure 3021 3025	C5–6
+R75	MODIFY Arg1:T142 Arg2:E71	
+R76	MODIFY Arg1:T143 Arg2:E71	
+R77	MODIFY Arg1:T144 Arg2:E71	
+T145	Diagnostic_procedure 2909 2955	enhancement within the central aspect of C3–T2
+E72	Diagnostic_procedure:T145 
+R78	SUB_PROCEDURE Arg1:E72 Arg2:E67	
+T146	Sign_symptom 3063 3068	edema
+E73	Sign_symptom:T146 
+T147	Biological_structure 3031 3062	bilateral posterior neck muscle
+R79	MODIFY Arg1:T147 Arg2:E73	
+T148	Therapeutic_procedure 3072 3087	lumbar puncture
+E74	Therapeutic_procedure:T148 
+A6	POLARITY E74 NEG
+T149	Time 3213 3229	Four hours after
+E75	Time:T149 
+T150	Diagnostic_procedure 3248 3256	strength
+E76	Diagnostic_procedure:T150 
+T151	Lab_value 3275 3287	deteriorated
+T152	Lab_value 3291 3294	1/5
+R80	MODIFY Arg1:T151 Arg2:E76	
+R81	MODIFY Arg1:T152 Arg2:E76	
+T153	Biological_structure 3298 3313	all extremities
+R82	MODIFY Arg1:T153 Arg2:E76	
+T154	Diagnostic_procedure 3324 3338	proprioception
+E77	Diagnostic_procedure:T154 
+T155	Lab_value 3319 3323	lost
+T156	Biological_structure 3346 3350	toes
+T157	Detailed_description 3351 3362	bilaterally
+R83	MODIFY Arg1:T157 Arg2:T155	
+R84	MODIFY Arg1:T155 Arg2:E77	
+R85	MODIFY Arg1:T156 Arg2:E77	
+T158	Diagnostic_procedure 3384 3403	anal sphincter tone
+E78	Diagnostic_procedure:T158 
+T159	Lab_value 3377 3383	absent
+R86	MODIFY Arg1:T159 Arg2:E78	
+T160	Clinical_event 3421 3429	admitted
+E79	Clinical_event:T160 
+T161	Nonbiological_location 3437 3468	neurotrauma intensive care unit
+R87	MODIFY Arg1:T161 Arg2:E79	
+T162	Therapeutic_procedure 3530 3540	intubation
+E80	Therapeutic_procedure:T162 
+T163	Detailed_description 3517 3529	endotracheal
+R88	MODIFY Arg1:T163 Arg2:E80	
+T164	Disease_disorder 3548 3567	respiratory failure
+E81	Disease_disorder:T164 
+T165	Therapeutic_procedure 3610 3625	lumbar puncture
+E82	Therapeutic_procedure:T165 
+T166	Disease_disorder 3686 3689	ATM
+E83	Disease_disorder:T166 
+#3	AnnotatorNotes E83	acute transverse myelitis
+T167	Diagnostic_procedure 3752 3784	workup for infectious etiologies
+E84	Diagnostic_procedure:T167 
+T168	Therapeutic_procedure 3845 3868	Plasma exchange therapy
+E85	Therapeutic_procedure:T168 
+T169	Disease_disorder 3913 3916	ATM
+E86	Disease_disorder:T169 
+T170	Therapeutic_procedure 3942 3949	therapy
+E87	Therapeutic_procedure:T170 
+T171	Disease_disorder 3971 3983	quadriplegic
+E88	Disease_disorder:T171 
+T172	Sign_symptom 4012 4016	pain
+E89	Sign_symptom:T172 
+T173	Biological_structure 4001 4011	neurologic
+R89	MODIFY Arg1:T173 Arg2:E89	
+T174	Therapeutic_procedure 4029 4041	tracheostomy
+E90	Therapeutic_procedure:T174 
+T175	Disease_disorder 4059 4078	respiratory failure
+E91	Disease_disorder:T175 
+T176	Detailed_description 4049 4058	prolonged
+R90	MODIFY Arg1:T176 Arg2:E91	
+T177	Detailed_description 3926 3933	maximal
+R91	MODIFY Arg1:T177 Arg2:E87	
+T178	Therapeutic_procedure 4103 4119	jejunostomy tube
+E92	Therapeutic_procedure:T178 
+*	OVERLAP E1 E2 E3 E4
+R92	AFTER Arg1:E4 Arg2:E5	
+T179	Detailed_description 199 203	down
+R93	MODIFY Arg1:T179 Arg2:E5	
+R94	AFTER Arg1:E5 Arg2:E6	
+*	OVERLAP E6 E7 E8
+R95	BEFORE Arg1:E8 Arg2:E9	
+*	OVERLAP E9 E10 E12 E11
+R96	BEFORE Arg1:E11 Arg2:E13	
+T180	Detailed_description 481 485	down
+T181	Nonbiological_location 486 501	next to the bed
+R97	MODIFY Arg1:T180 Arg2:E13	
+R98	MODIFY Arg1:T181 Arg2:E13	
+*	OVERLAP E13 E14 E15 E16 E17
+R99	AFTER Arg1:E17 Arg2:E18	
+*	OVERLAP E18 E19
+R100	BEFORE Arg1:E19 Arg2:E22	
+*	OVERLAP E22 E20 E21
+R101	BEFORE Arg1:E21 Arg2:E25	
+*	OVERLAP E25 E29 E30 E31 E36 E37 E32 E39 E38 E40 E33 E41 E42 E43 E44 E45 E46 E47 E48 E49 E50 E34
+R102	MODIFY Arg1:T110 Arg2:E52	
+R103	AFTER Arg1:E34 Arg2:E51	
+*	OVERLAP E51 E52
+R104	BEFORE Arg1:E52 Arg2:E53	
+*	OVERLAP E53 E54 E55
+R105	BEFORE Arg1:E55 Arg2:E57	
+*	OVERLAP E57 E56
+R106	BEFORE Arg1:E56 Arg2:E58	
+*	OVERLAP E58 E59
+R107	BEFORE Arg1:E59 Arg2:E60	
+*	OVERLAP E60 E61 E65 E66 E67 E69 E70 E71 E73
+R108	AFTER Arg1:E73 Arg2:E74	
+R109	BEFORE Arg1:E74 Arg2:E75	
+*	OVERLAP E75 E76 E77 E78
+R110	BEFORE Arg1:E78 Arg2:E79	
+*	OVERLAP E79 E80 E81 E82 E83 E84
+R111	BEFORE Arg1:E84 Arg2:E85	
+*	OVERLAP E85 E86
+R112	BEFORE Arg1:E86 Arg2:E87	
+*	OVERLAP E87 E88 E89 E90 E91 E92

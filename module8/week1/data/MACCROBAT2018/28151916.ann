@@ -1,0 +1,183 @@
+T1	Age 2 13	18-year-old
+T2	Sex 14 17	man
+T3	Clinical_event 18 27	presented
+E1	Clinical_event:T3 
+T4	Sign_symptom 57 61	lump
+E2	Sign_symptom:T4 
+T5	Detailed_description 48 56	palpable
+R1	MODIFY Arg1:T5 Arg2:E2	
+T6	Biological_structure 69 84	presternal area
+R2	MODIFY Arg1:T6 Arg2:E2	
+T7	Sign_symptom 121 137	weight reduction
+E3	Sign_symptom:T7 
+T8	History 155 198	no other relevant medical or trauma history
+T9	Diagnostic_procedure 203 223	physical examination
+E4	Diagnostic_procedure:T9 
+T10	Coreference 229 235	lesion
+E5	Coreference:T10 
+R3	IDENTICAL Arg1:E5 Arg2:E2	
+T11	Sign_symptom 271 275	mass
+E6	Sign_symptom:T11 
+T12	Texture 266 270	firm
+R4	MODIFY Arg1:T12 Arg2:E6	
+T13	Detailed_description 254 264	nonmovable
+R5	MODIFY Arg1:T13 Arg2:E6	
+T14	Sign_symptom 284 294	tenderness
+E7	Sign_symptom:T14 
+A1	POLARITY E7 NEG
+T15	Sign_symptom 309 321	skin changes
+E8	Sign_symptom:T15 
+A2	POLARITY E8 NEG
+T16	Biological_structure 339 372	midline position over the sternum
+T17	Biological_structure 381 396	manubrium level
+R6	MODIFY Arg1:T17 Arg2:T16	
+R7	MODIFY Arg1:T16 Arg2:E6	
+T18	Sign_symptom 420 437	fistulous opening
+E9	Sign_symptom:T18 
+A3	POLARITY E9 NEG
+T19	Sign_symptom 441 450	discharge
+E10	Sign_symptom:T19 
+A4	POLARITY E10 NEG
+T20	Coreference 460 466	lesion
+E11	Coreference:T20 
+R8	IDENTICAL Arg1:E11 Arg2:E6	
+T21	Diagnostic_procedure 471 486	ultrasonography
+E12	Diagnostic_procedure:T21 
+T22	Sign_symptom 537 541	mass
+E13	Sign_symptom:T22 
+T23	Detailed_description 502 520	well-circumscribed
+T24	Shape 522 526	oval
+T25	Lab_value 528 536	anechoic
+R9	MODIFY Arg1:T25 Arg2:E13	
+R10	MODIFY Arg1:T24 Arg2:E13	
+R11	MODIFY Arg1:T23 Arg2:E13	
+T26	Detailed_description 548 578	posterior acoustic enhancement
+R12	MODIFY Arg1:T26 Arg2:E13	
+T27	Volume 600 618	3.3 × 1.7 × 3.1 cm
+R13	MODIFY Arg1:T27 Arg2:E13	
+T28	Biological_structure 643 665	subcutaneous fat layer
+R14	MODIFY Arg1:T28 Arg2:E13	
+T29	Biological_structure 675 682	sternum
+R15	MODIFY Arg1:T29 Arg2:T28	
+T30	Sign_symptom 797 803	lesion
+E14	Sign_symptom:T30 
+T31	Shape 786 796	egg-shaped
+T32	Lab_value 774 784	hypoechoic
+T33	Detailed_description 758 773	heterogeneously
+R16	MODIFY Arg1:T33 Arg2:T32	
+T34	Detailed_description 738 756	well-circumscribed
+T35	Detailed_description 728 736	internal
+R17	MODIFY Arg1:T31 Arg2:E14	
+T36	Detailed_description 829 867	movement according to patient movement
+R18	MODIFY Arg1:T36 Arg2:E14	
+R19	MODIFY Arg1:T32 Arg2:E14	
+R20	MODIFY Arg1:T34 Arg2:E14	
+R21	MODIFY Arg1:T35 Arg2:E14	
+T37	Coreference 716 720	mass
+E15	Coreference:T37 
+R22	IDENTICAL Arg1:E15 Arg2:E13	
+T38	Biological_structure 691 708	dependent portion
+R23	MODIFY Arg1:E15 Arg2:T38	
+R24	MODIFY Arg1:T38 Arg2:E14	
+T39	Therapeutic_procedure 908 925	linear transducer
+E16	Therapeutic_procedure:T39 
+T40	Diagnostic_procedure 950 963	Doppler study
+E17	Diagnostic_procedure:T40 
+T41	Detailed_description 944 949	color
+R25	MODIFY Arg1:T41 Arg2:E17	
+T42	Sign_symptom 974 985	vascularity
+E18	Sign_symptom:T42 
+A5	POLARITY E18 NEG
+T43	Disease_disorder 1815 1832	bronchogenic cyst
+E19	Disease_disorder:T43 
+T44	Disease_disorder 1555 1579	epidermal inclusion cyst
+E20	Disease_disorder:T44 
+A6	POLARITY E20 UNCERTAIN
+T45	Disease_disorder 1581 1603	thyroglossal duct cyst
+E21	Disease_disorder:T45 
+A7	POLARITY E21 UNCERTAIN
+T46	Disease_disorder 1605 1625	branchial cleft cyst
+E22	Disease_disorder:T46 
+A8	POLARITY E22 UNCERTAIN
+T47	Disease_disorder 1631 1643	dermoid cyst
+E23	Disease_disorder:T47 
+A9	POLARITY E23 UNCERTAIN
+T48	Coreference 873 877	mass
+E24	Coreference:T48 
+R26	IDENTICAL Arg1:E24 Arg2:E15	
+T49	Lab_value 887 897	compressed
+R27	MODIFY Arg1:T49 Arg2:E24	
+R28	MODIFY Arg1:E16 Arg2:T49	
+T50	Coreference 997 1008	cystic mass
+E25	Coreference:T50 
+R29	IDENTICAL Arg1:E25 Arg2:E24	
+T51	Coreference 1036 1042	lesion
+E26	Coreference:T51 
+R30	IDENTICAL Arg1:E26 Arg2:E14	
+T52	Lab_value 1025 1035	hypoechoic
+T53	Detailed_description 1016 1024	internal
+R31	MODIFY Arg1:T53 Arg2:E26	
+R32	MODIFY Arg1:T52 Arg2:E26	
+R33	MODIFY Arg1:E25 Arg2:E18	
+R34	MODIFY Arg1:E26 Arg2:E18	
+T54	Therapeutic_procedure 1053 1070	Surgical excision
+E27	Therapeutic_procedure:T54 
+T55	Sign_symptom 1078 1082	mass
+E28	Sign_symptom:T55 
+R35	MODIFY Arg1:E28 Arg2:E27	
+T56	Disease_disorder 1105 1132	postoperative complications
+E29	Disease_disorder:T56 
+A10	POLARITY E29 NEG
+T57	Coreference 1155 1159	mass
+E30	Coreference:T57 
+R36	IDENTICAL Arg1:E30 Arg2:E28	
+T58	Lab_value 1166 1178	well-defined
+R37	MODIFY Arg1:T58 Arg2:E30	
+T59	Shape 1180 1185	ovoid
+R38	MODIFY Arg1:T59 Arg2:E30	
+T60	Lab_value 1187 1193	cystic
+R39	MODIFY Arg1:T60 Arg2:E30	
+T61	Color 1199 1207	gray-tan
+R40	MODIFY Arg1:T61 Arg2:E30	
+T62	Coreference 1230 1232	it
+E31	Coreference:T62 
+R41	IDENTICAL Arg1:E31 Arg2:E30	
+T63	Sign_symptom 1262 1266	cyst
+E32	Sign_symptom:T63 
+T64	Lab_value 1251 1261	unilocular
+R42	MODIFY Arg1:T64 Arg2:E32	
+T65	Sign_symptom 1287 1302	mucous material
+E33	Sign_symptom:T65 
+T66	Color 1279 1286	whitish
+R43	MODIFY Arg1:T66 Arg2:E33	
+R44	MODIFY Arg1:E33 Arg2:E32	
+T67	Sign_symptom 1472 1480	fibrosis
+E34	Sign_symptom:T67 
+T68	Detailed_description 1460 1471	collagenous
+T69	Lab_value 1448 1459	nonspecific
+R45	MODIFY Arg1:T68 Arg2:E34	
+R46	MODIFY Arg1:T69 Arg2:E34	
+T70	Sign_symptom 1658 1679	histological evidence
+E35	Sign_symptom:T70 
+A11	POLARITY E35 NEG
+T71	Detailed_description 1683 1702	squamous epithelium
+T72	Detailed_description 1704 1711	keratin
+T73	Detailed_description 1713 1727	thyroid tissue
+T74	Detailed_description 1732 1746	skin appendage
+T75	Coreference 1325 1329	mass
+E36	Coreference:T75 
+R47	IDENTICAL Arg1:E36 Arg2:E31	
+*	OVERLAP E1 E2
+R48	AFTER Arg1:E2 Arg2:E3	
+R49	BEFORE Arg1:E3 Arg2:E4	
+*	OVERLAP E4 E6 E7 E8 E9 E10 E12 E13 E14 E24 E16 E17 E18
+R50	BEFORE Arg1:E18 Arg2:E27	
+*	OVERLAP E27 E28
+R51	BEFORE Arg1:E28 Arg2:E29	
+R52	BEFORE Arg1:E29 Arg2:E30	
+*	OVERLAP E30 E31 E32 E33 E36 E34 E20 E21 E22 E23 E35
+R53	MODIFY Arg1:T71 Arg2:E35	
+R54	MODIFY Arg1:T72 Arg2:E35	
+R55	MODIFY Arg1:T73 Arg2:E35	
+R56	MODIFY Arg1:T74 Arg2:E35	
+R57	BEFORE Arg1:E35 Arg2:E19	

@@ -1,0 +1,119 @@
+T1	Age 24 35	68-year-old
+T2	Sex 36 42	female
+T3	History 48 71	no past medical history
+T4	Sign_symptom 114 122	bleeding
+E1	Sign_symptom:T4 
+T5	Biological_structure 91 113	upper gastrointestinal
+R1	MODIFY Arg1:T5 Arg2:E1	
+T6	Sign_symptom 127 131	pain
+E2	Sign_symptom:T6 
+T7	Biological_structure 135 153	left upper abdomen
+R2	MODIFY Arg1:T7 Arg2:E2	
+T8	Sign_symptom 184 196	splenomegaly
+E3	Sign_symptom:T8 
+T9	Diagnostic_procedure 155 175	Physical examination
+E4	Diagnostic_procedure:T9 
+T10	Disease_disorder 210 244	portosystemic collateral formation
+E5	Disease_disorder:T10 
+T11	Sign_symptom 270 283	dilated veins
+E6	Sign_symptom:T11 
+T12	Biological_structure 255 269	abdominal wall
+R3	MODIFY Arg1:T12 Arg2:E6	
+T13	Sign_symptom 295 307	haemorrhoids
+E7	Sign_symptom:T13 
+T14	Biological_structure 288 294	rectal
+R4	MODIFY Arg1:T14 Arg2:E7	
+T15	Sign_symptom 312 336	biological abnormalities
+E8	Sign_symptom:T15 
+A1	POLARITY E8 NEG
+T16	Disease_disorder 369 382	hypersplenism
+E9	Disease_disorder:T16 
+T17	Sign_symptom 384 391	anaemia
+E10	Sign_symptom:T17 
+T18	Sign_symptom 396 412	thrombocytopenia
+E11	Sign_symptom:T18 
+T19	Diagnostic_procedure 460 469	endoscopy
+E12	Diagnostic_procedure:T19 
+T20	Biological_structure 437 459	upper gastrointestinal
+R6	MODIFY Arg1:T20 Arg2:E12	
+T21	Sign_symptom 504 511	varices
+E13	Sign_symptom:T21 
+T22	Biological_structure 492 503	oesophageal
+R7	MODIFY Arg1:T22 Arg2:E13	
+T23	Detailed_description 482 491	stage III
+R8	MODIFY Arg1:T23 Arg2:E13	
+T24	Disease_disorder 517 548	portal hypertensive gastropathy
+E14	Disease_disorder:T24 
+T25	Sign_symptom 553 562	red signs
+E15	Sign_symptom:T25 
+T26	Diagnostic_procedure 564 579	Ultrasonography
+E16	Diagnostic_procedure:T26 
+T27	Sign_symptom 591 610	fusiform dilatation
+E17	Sign_symptom:T27 
+T28	Biological_structure 618 636	portal bifurcation
+R9	MODIFY Arg1:T28 Arg2:E17	
+T29	Distance 647 652	40 mm
+R10	MODIFY Arg1:T29 Arg2:E17	
+T30	Detailed_description 670 686	dilated branches
+R11	MODIFY Arg1:T30 Arg2:E17	
+T31	Sign_symptom 691 717	signs of portal thrombosis
+E18	Sign_symptom:T31 
+A2	POLARITY E18 NEG
+T32	Diagnostic_procedure 755 768	Doppler study
+E19	Diagnostic_procedure:T32 
+T33	Biological_structure 748 754	portal
+R12	MODIFY Arg1:T33 Arg2:E19	
+T34	Lab_value 778 801	normal hepatopetal flow
+R13	MODIFY Arg1:T34 Arg2:E19	
+T35	Sign_symptom 803 837	Other signs of portal hypertension
+E20	Sign_symptom:T35 
+T36	Sign_symptom 860 872	splenomegaly
+E21	Sign_symptom:T36 
+T37	Sign_symptom 874 886	repermeation
+E22	Sign_symptom:T37 
+T38	Biological_structure 894 908	umbilical vein
+R14	MODIFY Arg1:T38 Arg2:E22	
+T39	Sign_symptom 927 949	collateral circulation
+E23	Sign_symptom:T39 
+T40	Diagnostic_procedure 973 975	CT
+E24	Diagnostic_procedure:T40 
+T41	Biological_structure 967 972	angio
+R15	MODIFY Arg1:T41 Arg2:E24	
+T42	Sign_symptom 1045 1064	thin calcifications
+E25	Sign_symptom:T42 
+T43	Biological_structure 1072 1087	aneurysmal wall
+R16	MODIFY Arg1:T43 Arg2:E25	
+T44	Biological_structure 1096 1113	main portal trunk
+R17	MODIFY Arg1:T44 Arg2:E25	
+T45	Sign_symptom 1146 1180	Other signs of portal hypertension
+E26	Sign_symptom:T45 
+T46	Sign_symptom 1224 1231	varices
+E27	Sign_symptom:T46 
+T47	Biological_structure 1216 1223	gastric
+T48	Biological_structure 1200 1211	oesophageal
+R18	MODIFY Arg1:T47 Arg2:E27	
+R19	MODIFY Arg1:T48 Arg2:E27	
+T49	Coreference 1279 1294	ultrasonography
+E28	Coreference:T49 
+T50	Sign_symptom 1242 1264	collateral circulation
+E29	Sign_symptom:T50 
+T51	Biological_structure 915 926	splenorenal
+T52	Biological_structure 1233 1241	parietal
+R20	MODIFY Arg1:T52 Arg2:E29	
+R21	MODIFY Arg1:T51 Arg2:E23	
+R22	IDENTICAL Arg1:E28 Arg2:E16	
+T53	Disease_disorder 1305 1320	Liver cirrhosis
+E30	Disease_disorder:T53 
+T54	Diagnostic_procedure 1338 1360	transcient elastometry
+E31	Diagnostic_procedure:T54 
+T55	Diagnostic_procedure 1365 1371	biopsy
+E32	Diagnostic_procedure:T55 
+T56	Clinical_event 73 82	presented
+E33	Clinical_event:T56 
+*	OVERLAP E33 E1 E2
+R23	BEFORE Arg1:E2 Arg2:E4	
+*	OVERLAP E4 E3 E5 E6 E7 E8 E9 E10 E11
+R5	BEFORE Arg1:E11 Arg2:E12	
+*	OVERLAP E12 E13 E14 E15 E16 E17 E18 E19 E20 E21 E22 E23 E24 E25 E26 E27 E29
+R24	BEFORE Arg1:E29 Arg2:E30	
+*	OVERLAP E30 E31 E32
