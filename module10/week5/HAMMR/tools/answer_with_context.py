@@ -2,9 +2,11 @@ from langchain_google_vertexai import VertexAI
 import os
 from google.cloud import aiplatform
 from autogen_core.tools import FunctionTool
-from autogen_core import CancellationToken
+from pathlib import Path
 
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "../credentials/bwa-agents-54872988b93e.json"
+CREDENTIALS_PATH = Path(__file__).parent.parent / \
+    "credentials" / "bwa-agents-54872988b93e.json"
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = str(CREDENTIALS_PATH.resolve())
 aiplatform.init(project='bwa-agents',
                 location='us-central1')
 
@@ -21,11 +23,9 @@ def answer_with_context(question: str, context: str) -> str:
       f"Question:\n{question}\n"
       "Answer:"
   )
-  # Call Gemini or other LLM (vertex_ai_llm ở ngoài hàm để dùng lại)
   return vertex_ai_llm.invoke(prompt)
 
 
-# Đăng ký tool với FunctionTool (cần description rõ ràng)
 answer_with_context_tool = FunctionTool(
     answer_with_context,
     description="Answer a question using ONLY the provided context (no outside knowledge)."
