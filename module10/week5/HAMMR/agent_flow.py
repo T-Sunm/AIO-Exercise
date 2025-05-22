@@ -30,35 +30,33 @@ config = {
 
 client = ChatCompletionClient.load_component(config)
 
+dispatcher_system_message = """
+    You are the top‐level VQA dispatcher.  
+    1. Always hand off the user's raw question to SingleHopEncyclopedicAgent by replying:
+    Handing off to SingleHopEncyclopedicAgent. Original request: [the user’s exact message]
+    2. When you later receive a message whose content is exactly 'HANDOFF_TO_DISPATCHER',
+    that means SingleHop has already sent the answer just before it.  
+    Your task now is to:
+        a) Take the immediately preceding message (the answer) and deliver it back to the user.
+        b) Then output the word TERMINATE (by itself) and stop.
+    3. Do not call any tools yourself.  
+"""
+
 dispatcher = AssistantAgent(
     name="Dispatcher",
-    system_message=("""
-        You are a VQA question dispatcher agent in a hierarchical multi-agent system.
-
-        Your task is to:
-        1. Analyze the user question and determine the type of VQA task (e.g., encyclopedic, OCR, counting, etc.)
-        2. Based on your analysis, hand off the question to the appropriate specialist agent.
-
-        You may only hand off to one of the following agents:
-        - SingleHopEncyclopedicAgent
-
-        Never invent tool names. Never attempt to call tools directly.
-
-        Always:
-        - Describe your plan first
-        - Use a handoff to one of the listed agents (not a tool)
-        - Use TERMINATE when research is complete.
-        """),
-
+    system_message=dispatcher_system_message,
     model_client=client,
-    handoffs=["SingleHopEncyclopedicAgent"]
+    handoffs=["SingleHopEncyclopedicAgent"],
+    tools=[],
 )
 
 text_termination = TextMentionTermination("TERMINATE")
-termination = text_termination
+max_messages_limit = 10
+termination_conditions = text_termination | MaxMessageTermination(
+    max_messages=max_messages_limit)
 vqa_team = Swarm(
     participants=[dispatcher,
-                  singlehop_encyclopedic], termination_condition=termination
+                  singlehop_encyclopedic], termination_condition=termination_conditions
 )
 
 # Đọc ảnh từ file
@@ -73,11 +71,9 @@ image = Image.from_file(image_path)
 #     source="user"
 # )
 message = "Question: What breed is this cat?, Image_url: https://images.pexels.com/photos/2071882/pexels-photo-2071882.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+message = "What is the capital of France?"
 async def main():
-  # Bind the console to the async-stream
   await Console(vqa_team.run_stream(task=message))
-
-  # Close the client when done
   await client.close()
 
 if __name__ == "__main__":
