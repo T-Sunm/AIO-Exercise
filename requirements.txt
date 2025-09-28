@@ -21,3 +21,5 @@ seqeval==1.2.2
 sacrebleu==2.5.1
 sentencepiece==0.2.0
 wget==3.2
+streamlit==1.44.1
+python-multipart==0.0.20
